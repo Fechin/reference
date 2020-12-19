@@ -1,0 +1,32 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+nohup.out
+
+
+.python-version
+.env
+.venv
+.ipynb_checkpoints
+*.log
+uploads/
+.idea
+
+
+# templates files #
+######################
+node_modules/
+dist/
+public/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+db.json
+
