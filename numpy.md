@@ -25,6 +25,8 @@ import numpy as np
 
 ### Importing/exporting
 
+
+| - | - |
 |-----|-----|
 | `np.loadtxt('file.txt')` | From a text file |
 | `np.genfromtxt('file.csv',delimiter=',')` | From a CSV file |
@@ -34,6 +36,8 @@ import numpy as np
 
 ### Creating Arrays {.row-span-2}
 
+
+| - | - |
 |-----|-----|
 | `np.array([1,2,3])` | One dimensional array |
 | `np.array([(1,2,3),(4,5,6)])` | Two dimensional array |
@@ -50,6 +54,8 @@ import numpy as np
 
 ### Inspecting Properties
 
+
+| - | - |
 |-----|-----|
 | `arr.size` | Returns number of elements in arr |
 | `arr.shape` | Returns dimensions of arr (rows,columns)
@@ -61,6 +67,8 @@ import numpy as np
 
 ### Copying/sorting/reshaping
 
+
+| - | - |
 |-----|-----|
 | `np.copy(arr)` | Copies arr to new memory |
 | `arr.view(dtype)` | Creates view of arr elements with type dtype |
@@ -74,6 +82,8 @@ import numpy as np
 
 ### Adding/removing Elements
 
+
+| - | - |
 |-----|-----|
 | `np.append(arr,values)` | Appends values to end of arr |
 | `np.insert(arr,2,values)` | Inserts values into arr before index 2 |
@@ -83,6 +93,8 @@ import numpy as np
 
 ### Combining/splitting
 
+
+| - | - |
 |-----|-----|
 | `np.concatenate((arr1,arr2),axis=0)` | Adds arr2 as rows to the end of arr1 |
 | `np.concatenate((arr1,arr2),axis=1)` | Adds arr2 as columns to end of arr1 |
@@ -92,6 +104,8 @@ import numpy as np
 
 ### Indexing/slicing/subsetting
 
+
+| - | - |
 |-----|-----|
 | `arr[5]` | Returns the element at index 5 |
 | `arr[2,5]` | Returns the 2D array element on index [2][5]
@@ -110,6 +124,8 @@ import numpy as np
 
 ### Vector Math
 
+
+| - | - |
 |-----|-----|
 | `np.add(arr1,arr2)` | Elementwise add arr2 to arr1 |
 | `np.subtract(arr1,arr2)` | Elementwise subtract arr2 from arr1 |
@@ -128,6 +144,8 @@ import numpy as np
 
 ### Scalar Math
 
+
+| - | - |
 |-----|-----|
 | `np.add(arr,1)` | Add 1 to each array element |
 | `np.subtract(arr,2)` | Subtract 2 from each array element |
@@ -138,6 +156,8 @@ import numpy as np
 
 ### Statistics
 
+
+| - | - |
 |-----|-----|
 | `np.mean(arr,axis=0)` | Returns mean along specific axis |
 | `arr.sum()` | Returns sum of arr |

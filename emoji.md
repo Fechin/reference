@@ -13,6 +13,8 @@ Get Started {.cols-3}
 ----------
 
 ### People
+
+| - | - |
 |-----|-----|
 | :smile: | `:smile:` |
 | :laughing: | `:laughing:` |
@@ -197,6 +199,8 @@ Get Started {.cols-3}
 
 
 ### Symbols
+
+| - | - |
 |-----|-----|
 | :one: | `:one:` |
 | :two: | `:two:` |
@@ -394,6 +398,8 @@ Get Started {.cols-3}
 
 
 ### Objects {.row-span-2}
+
+| - | - |
 |-----|-----|
 | :bamboo: | `:bamboo:` |
 | :gift_heart: | `:gift_heart:` |
@@ -660,6 +666,8 @@ Get Started {.cols-3}
 
 
 ### Places
+
+| - | - |
 |-----|-----|
 | :house: | `:house:` |
 | :house_with_garden: | `:house_with_garden:` |
@@ -774,6 +782,8 @@ Get Started {.cols-3}
 
 
 ### Nature
+
+| - | - |
 |-----|-----|
 | :sunny: | `:sunny:` |
 | :umbrella: | `:umbrella:` |

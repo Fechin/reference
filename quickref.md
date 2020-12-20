@@ -13,6 +13,8 @@ Variants {.cols-3}
 --------
 
 ### H2 section
+
+| - | - |
 |---------------|---------------------------------|
 | `cols-1`    |  one column _(default)_           |
 | `cols-2`    |                                   |
@@ -27,15 +29,21 @@ See: [H2 section](#h2-section-2)
 
 ### H3 section
 
+
+| - | - |
 |-------------------|-------------------------------------|
 | `primary` | Primary section |
 | `secondary` | Secondary section |
 #### Span n columns.
+
+| - | - |
 |---------------|-----------------------------------|
 | `col-span-1`  |                                   |
 | ...           |                                   |
 | `col-span-12` |                                   |
 #### Span n rows.
+
+| - | - |
 |---------------|-----------------------------------|
 | `row-span-1`  |                                   |
 | ...           |                                   |
@@ -46,6 +54,8 @@ See: [H3 section](#h3-section-2)
 
 ### Tables 
 
+
+| - | - |
 |---------------|----------------|
 | `bold-first` | Bold first column |
 | `plus-first` | Plus first column |
@@ -59,9 +69,13 @@ See: [Tables](#tables-2)
 
 ### Lists {.row-span-2}
 
+
+| - | - |
 |---------------|----------------|
 | `style-none` | No marker is shown	|
 #### Layout
+
+| - | - |
 |---------------|----------------|
 | `cols-1`    |  one column _(default)_  |
 | `cols-2`    |                          |
@@ -74,6 +88,8 @@ See: [Tables](#tables-2)
 
 ### Code
 
+
+| - | - |
 |---------------|----------------|
 | `wrap` | Enables line-wrapping |
 
@@ -81,6 +97,8 @@ See: [Code](#code-2)
 
 ### Paragraphs
 
+
+| - | - |
 |---------------|----------------|
 | `link-arrow` | Pretty links with arrows |
 
@@ -91,6 +109,8 @@ See: [Paragraphs](#paragraphs-2)
 See: [Lists](#lists-2) 
 
 ### Global
+
+| - | - |
 |---------------|----------------|
 | `hidden`      | Hide an element|
 
@@ -242,6 +262,8 @@ A basic table with heading level 4.
 
 ### Shortcuts
 
+
+| - | - |
 |------|-------|
 | `V` | Vector |
 | `P` | Pencil |
@@ -296,34 +318,6 @@ Add `{.show-header}` to add headers.
 
 QuickRef uses markdown-it-multimd-table to render the table, See：[markdown-it-multimd-table](https://www.npmjs.com/package/markdown-it-multimd-table#rowspan-optional)
 
-
-
-### Headerless
-
-|---|---|---|---|---|---|---|---|
-| ♜ |   | ♝ | ♛ | ♚ | ♝ | ♞ | ♜ |
-|   | ♟ | ♟ | ♟ |   | ♟ | ♟ | ♟ |
-| ♟ |   | ♞ |   |   |   |   |   |
-|   | ♗ |   |   | ♟ |   |   |   |
-|   |   |   |   | ♙ |   |   |   |
-|   |   |   |   |   | ♘ |   |   |
-| ♙ | ♙ | ♙ | ♙ |   | ♙ | ♙ | ♙ |
-| ♖ | ♘ | ♗ | ♕ | ♔ |   |   | ♖ |
-
-#### Source Code
-
-```
-|---|---|---|---|---|---|---|---|
-| ♜ |   | ♝ | ♛ | ♚ | ♝ | ♞ | ♜ |
-|   | ♟ | ♟ | ♟ |   | ♟ | ♟ | ♟ |
-| ♟ |   | ♞ |   |   |   |   |   |
-|   | ♗ |   |   | ♟ |   |   |   |
-|   |   |   |   | ♙ |   |   |   |
-|   |   |   |   |   | ♘ |   |   |
-| ♙ | ♙ | ♙ | ♙ |   | ♙ | ♙ | ♙ |
-| ♖ | ♘ | ♗ | ♕ | ♔ |   |   | ♖ |
-```
-See：[markdown-it-multimd-table](https://www.npmjs.com/package/markdown-it-multimd-table#headerless-optional)
 
 
 

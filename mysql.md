@@ -31,6 +31,8 @@ mysql -h <host> -u <user> -p [db_name]
 ### Commons {.row-span-2} 
 
 #### Database
+
+| - | - |
 |------------------------|-------------------------|
 | `create database` db `;`      | Create database      |
 | `show databases;`      | List databases      |
@@ -38,6 +40,8 @@ mysql -h <host> -u <user> -p [db_name]
 | `drop database` db`;`              | Delete db            |
 
 #### Table
+
+| - | - |
 |------------------------|-------------------------|
 | `show tables;`         | List tables for current db	|
 | `show fields from` t`;`  | List fields for a table  |
@@ -46,10 +50,14 @@ mysql -h <host> -u <user> -p [db_name]
 | `truncate table `t`;` | Remove all data in a table |
 | `drop table `t`;` | Delete table |
 #### Proccess
+
+| - | - |
 |------------------------|-------------------------|
 | `show processlist;`    | List processes        |
 | `kill` pid`;`            | kill process            |
 #### Other
+
+| - | - |
 |------------------------|-------------------------|
 | `exit` or `\q`         | Exit MySQL session      |
 
@@ -501,17 +509,23 @@ ON table_name TRIGGER_TYPE
 EXECUTE stored_procedure;
 ```
 #### WHEN
+
+| - | - |
 |----------|--------------------------------|
 | `BEFORE` | invoke before the event occurs |
 | `AFTER`  | invoke after the event occurs  |
 
 #### EVENT
+
+| - | - |
 |----------|-------------------|
 | `INSERT` | invoke for INSERT |
 | `UPDATE` | invoke for UPDATE |
 | `DELETE` | invoke for DELETE |
 
 #### TRIGGER_TYPE
+
+| - | - |
 |----------------------|---|
 | `FOR EACH ROW`       |   |
 | `FOR EACH STATEMENT` |   |
@@ -549,6 +563,8 @@ Data Types {.cols-3}
 
 
 ### Strings
+
+| - | - |
 |---------------|-------------------------------|
 | `CHAR`        | String (0 - 255)              |
 | `VARCHAR`     | String (0 - 255)              |
@@ -574,6 +590,8 @@ Data Types {.cols-3}
 
 
 ### Numeric
+
+| - | - |
 |---------------|---------------------------------------------------------------|
 | `TINYINT x`   | Integer (-128 to 127)                                         |
 | `SMALLINT x`  | Integer (-32768 to 32767)                                     |

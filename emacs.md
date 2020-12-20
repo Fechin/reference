@@ -24,6 +24,7 @@ $ emacs
 
 ------
 
+| - | - |
 |-------------|---------------------------------------------|
 | `C-z`       | Suspend Emacs <br>_(or iconify it under X)_ |
 | `C-x` `C-c` | Exit Emacs permanently                      |
@@ -50,6 +51,8 @@ $ emacs
 
 
 ### Case Change
+
+| - | - |
 |-----------|------------------|
 | `M-u`     | Uppercase word   |
 | `M-l`     | Lowercase word   |
@@ -61,6 +64,8 @@ $ emacs
 
 
 ### Files
+
+| - | - |
 |-------------|--------------------------------------------------|
 | `C-x` `C-f` | Read a file into Emacs                           |
 | `C-x` `C-s` | Save a file back to disk                         |
@@ -75,6 +80,8 @@ $ emacs
 
 
 ### Error Recovery
+
+| - | - |
 |-----------------------|--------------------------------------------|
 | `C-g`                 | Abort partially typed or executing command |
 | `M-x` recover-session | Recover files lost by a system crash       |
@@ -87,6 +94,8 @@ $ emacs
 
 
 ### Transposing {.row-span-2}
+
+| - | - |
 |-----------|----------------------|
 | `C-t`     | Transpose characters |
 | `M-t`     | Transpose words      |
@@ -95,6 +104,8 @@ $ emacs
 {.shortcuts}
 
 #### Scroll
+
+| - | - |
 |---------|--------------------------------------------------|
 | `C-v`   | Scroll to next screen                            |
 | `M-v`   | Scroll to previous screen                        |
@@ -104,6 +115,8 @@ $ emacs
 {.shortcuts .show-header}
 
 #### Goto
+
+| - | - |
 |---------|----------------------|
 | `M-g g` | Goto line            |
 | `M-g c` | Goto char            |
@@ -115,6 +128,8 @@ $ emacs
 
 
 ### Marking
+
+| - | - |
 |----------------|-------------------------|
 | `C-@` \/ `C-SPC`| Uet mark here           |
 | `C-x C-x`      | Exchange point and mark |
@@ -140,6 +155,8 @@ $ emacs
 | `M-- C-M-k` | `C-M-k`    | Sexp                                 |
 {.shortcuts .show-header}
 #### Killing
+
+| - | - |
 |------------|--------------------------------------|
 | `C-W`      | Kill region C-w                      |
 | `M-w`      | Copy region to kill ring             |
@@ -153,6 +170,8 @@ $ emacs
 
 
 ### Getting Help
+
+| - | - |
 |---------|------------------------------------------|
 | `C-x 1` | Remove help window                       |
 | `C-M-v` | Scroll help window                       |
@@ -169,6 +188,7 @@ The help system is simple. Type `C-h` (or `F1`) and follow the directions. If yo
 
 ### Multiple Windows {.col-span-2}
 When two commands are shown, the second is a similar command for a frame instead of a window.
+| - | - | - |
 |-------------|-------------|-------------------------------------|
 | `C-x 5 1`   | `C-x 1`     | Delete all other windows            |
 | `C-x 5 2`   | `C-x 2`     | Split window, above and below       |
@@ -194,6 +214,8 @@ When two commands are shown, the second is a similar command for a frame instead
 
 
 ### Formatting
+
+| - | - |
 |-----------|------------------------------------------|
 | `TAB`     | Indent current line (mode-dependent)     |
 | `C-M-\`   | Indent region (mode-dependent)           |
@@ -216,12 +238,16 @@ When two commands are shown, the second is a similar command for a frame instead
 
 
 ### Info {.row-span-2}
+
+| - | - |
 |---------|---------------------------------------------|
 | `C-h i` | Enter the Info documentation reader         |
 | `C-h S` | Find specified function or variable in Info |
 {.shortcuts}
 
 #### Moving within a node
+
+| - | - |
 |---------|---------------------------------------------|
 | `SPC`   | Scroll forward                              |
 | `DEL`   | Scroll reverse                              |
@@ -229,6 +255,8 @@ When two commands are shown, the second is a similar command for a frame instead
 {.shortcuts}
 
 #### Moving between nodes
+
+| - | - |
 |---------|---------------------------------------------|
 | `n`     | Next node                                   |
 | `p`     | Previous node                               |
@@ -243,6 +271,8 @@ When two commands are shown, the second is a similar command for a frame instead
 {.shortcuts}
 
 #### Other
+
+| - | - |
 |---------|---------------------------------------------|
 | `h`     | Run Info tutorial                           |
 | `i`     | Look up a subject in the indices            |
@@ -255,6 +285,7 @@ When two commands are shown, the second is a similar command for a frame instead
 
 ### Minibuffer
 The following keys are defined in the minibuffer.
+| - | - |
 |-------|-----------------------------------------|
 | `TAB` | Complete as much as possible            |
 | `SPC` | Complete up to one word                 |
@@ -274,6 +305,8 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 
 ### Tags
+
+| - | - |
 |--------------------------|--------------------------------------------|
 | `M-.`                    | Find a tag (a definition)                  |
 | `C-u M-.`                | Find next occurrence of tag                |
@@ -286,6 +319,8 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 
 ### Rectangles
+
+| - | - |
 |-----------|-------------------------------------|
 | `C-x r r` | Copy rectangle to register          |
 | `C-x r k` | Kill rectangle                      |
@@ -298,6 +333,8 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 
 ### Keyboard Macros
+
+| - | - |
 |---------------------------|-------------------------------------|
 | `C-x (`                   | Start defining a keyboard macro     |
 | `C-x )`                   | End keyboard macro definition       |
@@ -311,6 +348,8 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 
 ### Buffers
+
+| - | - |
 |-----------|-----------------------|
 | `C-x b`   | Select another buffer |
 | `C-x C-b` | List all buffers      |
@@ -325,6 +364,8 @@ Search{.cols-3}
 
 
 ### Regex (common) {.row-span-2}
+
+| - | - |
 |-------------------|----------------------------------------------|
 | `. (dot)`         | Any single character except a newline        |
 | `*`               | Zero or more repeats                         |
@@ -361,6 +402,8 @@ Search{.cols-3}
 
 
 ### Incremental Search
+
+| - | - |
 |---------|-----------------------------------|
 | `C-s`   | Search forward                    |
 | `C-r`   | Search backward                   |
@@ -379,6 +422,8 @@ Use `C-s` or `C-r` again to repeat the search in either direction. If Emacs is s
 
 
 ### Query Replace
+
+| - | - |
 |----------------------------|--------------------------------------|
 | `M-%`                      | Interactively replace a text string  |
 | `M-x` regexp               | Using regular expressions            |
@@ -398,6 +443,8 @@ Misc {.cols-3}
 
 
 ### Shells
+
+| - | - |
 |-------------|----------------------------------------|
 | `M-!`       | Execute a shell command                |
 | `M-&`       | Execute a shell command asynchronously |
@@ -409,6 +456,8 @@ Misc {.cols-3}
 
 
 ### International Character Sets {.col-span-2}
+
+| - | - |
 |----------------------------|------------------------------------|
 | `C-x RET l`                | specify principal language         |
 | `M-x` list-input-methods   | show all input methods             |
@@ -420,6 +469,8 @@ Misc {.cols-3}
 
 
 ### Registers
+
+| - | - |
 |-------------|--------------------------------------|
 | `C-x r s`   | Save region in register              |
 | `C-x r i`   | Insert register contents into buffer |
@@ -431,6 +482,8 @@ Misc {.cols-3}
 
 
 ### Miscellaneous
+
+| - | - |
 |------------|-------------------|
 | `C-u` num  | Numeric argument  |
 | `M--`      | Negative argument |
@@ -440,6 +493,8 @@ Misc {.cols-3}
 
 
 ### Commands Dealing with Emacs Lisp
+
+| - | - |
 |--------------------|------------------------------------|
 | `C-x C-e`          | Eval sexp before point             |
 | `C-M-x`            | Eval current defun                 |
@@ -452,6 +507,8 @@ Misc {.cols-3}
 
 
 ### Simple Customization
+
+| - | - |
 |-----------------|-------------------------------|
 | `M-x customize` | customize variables and faces |
 
@@ -466,6 +523,8 @@ Making global key bindings in Emacs Lisp:
 
 
 ### Abbrevs
+
+| - | - |
 |-------------|------------------------------------------|
 | `C-x a g`   | Add global abbrev                        |
 | `C-x a l`   | Add mode-local abbrev                    |
@@ -479,6 +538,8 @@ Making global key bindings in Emacs Lisp:
 
 
 ### Spelling Check
+
+| - | - |
 |---------------------|---------------------------------------|
 | `M-$`               | Check spelling of current word        |
 | `M-x` ispell-region | Check spelling of all words in region |

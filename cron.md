@@ -86,6 +86,8 @@ Min  Hour Day  Mon  Weekday
 
 ### Crontab command
 
+
+| - | - |
 |------|-------------------------------------------------------------------------|
 | `crontab -e` | Edit or create a crontab file if doesn’t already exist.         |
 | `crontab -l` | Display the crontab file.                                       |

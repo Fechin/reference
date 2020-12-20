@@ -195,6 +195,8 @@ Escape these special characters with `\`
 
 ### Assertions
 
+
+| - | - |
 |------------|--------------------------------------|
 |`(?(1)yes|no)`    |  Conditional statement|
 |`(?(R)yes|no)`    |  Conditional statement|
@@ -206,6 +208,8 @@ Escape these special characters with `\`
 
 
 ### Lookarounds
+
+| - | - |
 |------------|--------------------------------------|
 |`(?=...)`    |  Positive Lookahead|
 |`(?!...)`    |  Negative Lookahead|
@@ -234,6 +238,8 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 
 
 ### Recurse
+
+| - | - |
 |------------|--------------------------------------|
 |`(?R)`    |  Recurse entire pattern|
 |`(?1)`    |  Recurse first subpattern|
@@ -271,6 +277,8 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 
 
 ### Control verb 
+
+| - | - |
 |------------|--------------------------------------|
 |`(*ACCEPT)`    |  Control verb|
 |`(*FAIL)`    |  Control verb|
@@ -384,6 +392,8 @@ False
 
 ### Flags
 
+
+| - | - | - |
 |--------|-----------------|-------------------------------------------|
 | `re.I` | `re.IGNORECASE` | Ignore case                               |
 | `re.M` | `re.MULTILINE`  | Multiline                                 |
@@ -510,6 +520,8 @@ Regex in PHP {.cols-3}
 
 ### Functions {.col-span-2}
 
+
+| - | - |
 |---------------------------|------------------------------------------------------------------|
 | `preg_match()`            | performs a regex match                                           |
 | `preg_match_all()`        | perform a global regular expression match                        |
@@ -613,6 +625,8 @@ System.out.println(s3);   // Outputs: false
 
 ### Pattern Fields
 
+
+| - | - |
 |----------------------|-----------------------------------------------|
 | `CANON_EQ`           | Canonical equivalence                         |
 | `CASE_INSENSITIVE`   | Case-insensitive matching                     |
