@@ -87,22 +87,6 @@ or
 ```
 
 
-### Emphasis
-
-```markdown
-*italic*
-_italic_
-```
-
-```markdown
-**bold**
-__bold__
-```
-
-```markdown
-`inline code`
-~~struck out~~
-```
 
 ### Links
 
@@ -120,65 +104,119 @@ __bold__
 ```
 
 
+
+
+
+
+### Emphasis
+
+```markdown
+*italic*
+_italic_
+```
+
+```markdown
+**bold**
+__bold__
+```
+
+```markdown
+`inline code`
+~~struck out~~
+```
+
+
+
+
 ### Horizontal line
 
+Hyphens
 ```markdown
-----
+---
 ```
-or
+
+Asterisks
 ```markdown
-****
+***
+```
+
+Underscores
+```markdown
+___
+```
+
+
+
+
+
+### Code
+~~~markdown
+```javascript
+console.log("This is a block code")
+```
+~~~
+
+```markdown
+~~~css
+.button { border: none; }
+~~~
 ```
 
 
-### Tables
-
 ```markdown
-| Column 1 Heading | Column 2 Heading |
-| ---------------- | ---------------- |
-| Some content     | Other content    |
+    4 space indent makes a code block
 ```
 
-or
+
+#### inline code
 ```markdown
-Column 1 Heading | Column 2 Heading
---- | ---
-Some content | Other content
+`Inline code` has back-ticks around it
 ```
+
+
+
+### Tables {.col-span-2}
+
+```markdown
+| Left column | Center column | Right column |
+|:------------|:-------------:|-------------:|
+| Cell 1      | Centered      | $1600        |
+| Cell 2      | Cell 3        | $12          |
+```
+
+Simple style
+```markdown
+Left column | Center column | Right column 
+:---:|:---:|:---:
+Cell 1 | Centered | $1600 
+Cell 2 | Cell 3 | $12 
+```
+A markdown table generator: [tableconvert.com](https://tableconvert.com/)
+
 
 
 ### Images {.col-span-2}
 
 ```markdown
-![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg "title")
-![Alt text][img]
+![GitHub Logo](/images/logo.png)
+
+![Alt Text](url)
 ```
 
+#### Image with link
 ```markdown
-[img]: http://foo.com/img.jpg
+[![GitHub Logo](/images/logo.png)](https://github.com/)
+
+[![Alt Text](image_url)](link_url)
 ```
 
-### Code
+#### Reference style
+```markdown
+![alt text][/images/logo.png]
 
-```
-    4 space indent
-    makes a code block
+[logo]: /images/logo.png "Logo Title"
 ```
 
-~~~markdown
-```p­ython
-def print (str)
- ­ ­ ­ ­pri­nt(str)
-```
-~~~
-
-
-~~~markdown
-```js
-codeFences.withLanguage()
-```
-~~~
 
 ### Backslash escapes
 
