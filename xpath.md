@@ -8,7 +8,7 @@ tags:
 categories:
   - Toolkit
 intro: |
-    XPath or (XML Path Language) is a language that can help you navigate through an XML document using "path like" syntax.
+    [XPath](https://en.wikipedia.org/wiki/XPath) or (XML Path Language) is a language that can help you navigate through an XML document using "path like" syntax.
 ---
 
 Testing {.cols-2}
