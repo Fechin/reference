@@ -8,7 +8,7 @@ tags:
     - Markup
 categories:
     - Toolkit
-intro: A quick reference cheatsheet to the Markdown syntax.
+intro: This is a quick reference cheat sheet to the Markdown syntax.
 ---
 
 Quick Reference {.cols-3}

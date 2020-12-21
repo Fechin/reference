@@ -8,7 +8,8 @@ tags:
     - computing
 categories:
     - Python
-intro: The fundamental package for scientific computing with Python
+intro: |
+    [NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.
 ---
 
 Getting started {.cols-2}

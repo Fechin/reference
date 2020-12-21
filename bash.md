@@ -10,7 +10,7 @@ tags:
     - linux
 categories:
     - Linux
-intro: This is a quick reference to getting started with Bash scripting.
+intro: This is a quick reference (cheat sheet) to getting started with Bash scripting.
 ---
 
 Getting started {.cols-3}
