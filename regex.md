@@ -309,6 +309,171 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 
 
 
+Regex examples{.cols-3}
+--------------
+
+### Characters
+| Pattern       | Matches                           |
+|---------------|-----------------------------------|
+| `ring        `| Match <yel>ring</yel> sp<yel>ring</yel>board etc. |
+| `.           `| Match <yel>a</yel>,  <yel>9</yel>,  <yel>+</yel> etc.      |
+| `h.o         `| Match <yel>hoo</yel>, <yel>h2o</yel>, <yel>h/o</yel>  etc.               |
+| `ring\?      `| Match <yel>ing?    </yel>                         |
+| `\(quiet\)   `| Match <yel>quiet) </yel>                          |
+| `c:\\windows `| Match <yel>c:\windows  </yel>                      |
+
+Use `\` to search for these special characters: <br> `[ \ ^ $ . | ? * + ( ) { }`
+
+
+### Alternatives
+
+| Pattern        | Matches                |
+|----------------|------------------------|
+| `cat|dog     `| Match <yel>cat</yel> or <yel>dog</yel>             |
+| `id|identity `| Match <yel>id</yel> or <yel>id</yel>entity         |
+| `identity|id `| Match <yel>id</yel> or <yel>identity</yel> |
+
+Order longer to shorter when alternatives overlap
+
+### Character classes
+| Pattern       | Matches                           |
+|---------------|-----------------------------------|
+| `[aeiou]`     | Match any vowel                   |
+| `[^aeiou]`    | Match a NON vowel                 |
+| `r[iau]ng`    | Match <yel>ring</yel>, w<yel>rang</yel>le, sp<yel>rung</yel>, etc. |
+| `gr[ae]y`     | Match <yel>gray</yel> or <yel>grey</yel>                |
+| `[a-zA-Z0-9]` | Match any letter or digit         |
+
+In `[ ]` always escape `. \ ]` and sometimes `^ - .`
+
+
+### Shorthand classes
+| Pattern          | Meaning                                         |
+|------------------|-------------------------------------------------|
+| `\w            ` | "Word" character <br>_(letter, digit, or underscore)_ |
+| `\d            ` | Digit                                           |
+| `\s            ` | Whitespace <br>_(space, tab, vtab, newline)_          |
+| `\W, \D, or \S ` | Not word, digit, or whitespace                |
+| `[\D\S]        ` | Means not digit or whitespace, both match       |
+| `[^\d\s]       ` | Disallow digit and whitespace                   |
+
+
+### Occurrences
+| Pattern             | Matches                           |
+|---------------------|-----------------------------------|
+| `colou?r`           | match <yel>color</yel> or <yel>colour</yel>             |
+| `[BW]ill[ieamy's]*` | match <yel>Bill</yel>, <yel>Willy</yel>, <yel>William's</yel> etc. |
+| `[a-zA-Z]+`         | match 1 or more letters           |
+| `\d{3}-\d{2}-\d{4}` | match a SSN                       |
+| `[a-z]\w{1,7}`      | match a UW NetID                  |
+
+
+
+### Greedy versus lazy
+| Pattern                   | Meaning                          |
+|---------------------------|----------------------------------|
+| `*  + {n,}`<br>_greedy_ | match as much as possible        |
+| `<.+>   `                   | finds 1 big match in <yel>\<b>bold\<\/b></yel> |
+| `*?  +? {n,}?`<br>_lazy_ | match as little as possible      |
+| `<.+?>`                     | finds 2 matches in \<<yel>b</yel>>bold\<<yel>\/b</yel>>   |
+
+
+### Scope {.col-span-2}
+| Pattern            | Meaning                                     |
+|--------------------|---------------------------------------------|
+| `\b              ` | "Word" edge (next to non "word" character)  |
+| `\bring          ` | Word starts with "ring", ex <yel>ringtone</yel>   |
+| `ring\b          ` | Word ends with "ring", ex <yel>spring</yel>  |
+| `\b9\b           ` | Match single digit <yel>9</yel>, not 19, 91, 99, etc.. |
+| `\b[a-zA-Z]{6}\b ` | Match 6-letter words                        |
+| `\B              ` | Not word edge                               |
+| `\Bring\B        ` | Match <yel>springs</yel> and <yel>wringer</yel> |
+| `^\d*$           ` | Entire string must be digits                |
+| `^[a-zA-Z]{4,20}$` | String must have 4-20 letters               |
+| `^[A-Z]          ` | String must begin with capital letter       |
+| `[\.!?"')]$      ` | String must end with terminal puncutation   |
+
+
+
+### Modifiers 
+| Pattern           | Meaning                                          |
+|-------------------|--------------------------------------------------|
+| `(?i)`[a-z]*`(?-i)` | Ignore case ON / OFF                             |
+| `(?s)`.*`(?-s)`     | Match multiple lines (causes . to match newline) |
+| `(?m)`^.*;$`(?-m)`  | <yel>^</yel> & <yel>$</yel> match lines not whole string               |
+| `(?x)`            | #free-spacing mode, this EOL comment ignored     |
+| `(?-x)`           | free-spacing mode OFF                        |
+| /regex/`ismx`     | Modify mode for entire string                    |
+
+
+
+### Groups
+| Pattern          | Meaning                      |
+|------------------|------------------------------|
+| `(in\|out)put  ` | Match <yel>input</yel> or <yel>output</yel> |
+| `\d{5}(-\d{4})?` | US zip code _("+ 4" optional)_ |
+Parser tries EACH alternative if match fails after group.
+<br>
+Can lead to catastrophic backtracking.
+
+
+
+
+### Back references
+| Pattern                  | Matches                                          |
+|--------------------------|--------------------------------------------------|
+| `(to) (be) or not \1 \2` | match <yel>to be or not to be</yel>                         |
+| `([^\s])\1{2}`           | match non-space, then same twice more &nbsp; <yel>aaa</yel>, <yel>...</yel> |
+| `\b(\w+)\s+\1\b`         | match doubled words                              |
+
+
+
+### Non-capturing group
+| Pattern             | Meaning                     |
+|---------------------|-----------------------------|
+| `on(?:click\|load)` | Faster than: <br>`on(click\|load)` |
+
+Use non-capturing or atomic groups when possible
+
+
+
+### Atomic groups 
+| Pattern                | Meaning                    |
+|------------------------|----------------------------|
+| `(?>red\|green\|blue)` | faster than non-capturing  |
+| `(?>id\|identity)\b`   | match <yel>id</yel>, but not <yel>id</yel>entity |
+
+"id" matches, but `\b` fails after atomic group,
+parser doesn't backtrack into group to retry 'identity'
+<br>
+<br>
+If alternatives overlap, order longer to shorter.
+
+
+
+### Lookaround {.row-span-2 .col-span-2}
+| Pattern                 | Meaning                              |
+|-------------------------|--------------------------------------|
+| `(?= )`           | Lookahead, if you can find ahead                            |
+| `(?! )`           | Lookahead,if you can not find ahead                           |
+| `(?<= )`         | Lookbehind, if you can find behind                           |
+| `(?<! )`         | Lookbehind, if you can NOT find behind                           |
+| `\b\w+?(?=ing\b)`       | Match <yel>warbl</yel>ing, <yel>str</yel>ing, <yel>fish</yel>ing, ... |
+| `\b(?!\w+ing\b)\w+\b`   | Words NOT ending in "ing"            |
+| `(?<=\bpre).*?\b `      | Match pre<yel>tend</yel>, pre<yel>sent</yel>, pre<yel>fix</yel>, ...  |
+| `\b\w{3}(?<!pre)\w*?\b` | Words NOT starting with "pre"        |
+| `\b\w+(?<!ing)\b`       | Match words NOT ending in "ing"      |
+
+
+### If-then-else
+Match "Mr." or "Ms." if word "her" is later in string
+
+```
+M(?(?=.*?\bher\b)s|r)\.
+```
+requires lookaround for IF condition
+
+
 RegEx in Python {.cols-3}
 ---------------
 
@@ -321,7 +486,7 @@ import re
 ```
 
 
-### Example  {.col-span-2 .row-span-3}
+### Examples  {.col-span-2 .row-span-3}
 
 #### re.search()
 ```python
