@@ -6,7 +6,7 @@ background: bg-blue-400
 tags:
   - Go
 categories:
-  - Programming language
+  - Programming
 intro: |
     This cheat sheet provided basic syntax and methods to help you using [Golang](https://golang.org/). 
 ---

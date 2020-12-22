@@ -9,7 +9,7 @@ tags:
     - echo
     - linux
 categories:
-    - Programming language
+    - Programming
 intro: This is a quick reference (cheat sheet) to getting started with Bash scripting.
 ---
 
