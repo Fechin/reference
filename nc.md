@@ -1,5 +1,5 @@
 ---
-title: Netcat
+title: nc - netcat
 date: 2020-11-25 18:28:43
 icon: icon-netcat
 background: bg-blue-600
@@ -10,10 +10,10 @@ categories:
 intro:  This cheat sheet provides various for using Netcat on both Linux and Unix.
 ---
 
-Getting started {.cols-3}
+Getting started {.cols-5}
 ---------------
 
-### Usage
+### Usage {.col-span-2}
 
 Connect to a host located anywhere
 
@@ -30,7 +30,7 @@ Arbitrary TCP and UDP connections and listens.
 
 
 
-### Option examples {.col-span-2}
+### Option examples {.col-span-3}
 
 | Option | Description                 | Example                                            |
 |--------|-----------------------------|----------------------------------------------------|
@@ -38,14 +38,13 @@ Arbitrary TCP and UDP connections and listens.
 | `-z`     | nc -z 192.168.1.100 1-100        | Port scan for a host or IP address                 |
 | `-v`     | nc -zv 192.168.1.100 1-100     |   Provide verbose output   | 
 | `-n`     | nc -zn 192.168.1.100 1-100     | Fast scan by disabling DNS resolution              |
-| `-l`     | nc -lp 50                 | TCP server mode                                    |
+| `-l`     | nc -lp 8090                 | TCP Listen mode _(for inbound connects)_                                   |
 | `-w`     | nc -w 180 192.168.1.100 8090     | Define timeout value                               |
 | `-k`     | nc -kl 8090 | Continue listening after disconnection |
 | `-u`     | nc -u 192.168.1.100 8090 | Use UDP instead of TCP |
 | `-q`     | nc -q 1 192.168.1.100 8090 | Client stay up after EOF |
 | `-4`     | nc -4 -l 8090 | IPv4 only                                          |
 | `-6`     | nc -6 -l 8090 | IPv6 only                                          |
-{.shortcuts}
 
 
 Examples {.cols-3}
