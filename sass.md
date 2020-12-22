@@ -6,7 +6,7 @@ background: bg-pink-500
 tags:
   - css
 categories:
-  - Toolkit
+  - Programming language
 intro: |
     This is a quick reference to [Sass stylesheets](https://sass-lang.com).
 ---

@@ -8,7 +8,7 @@ tags:
     - gitlab
     - command
 categories:
-    - Toolkit
+    - Command
 intro: This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 ---
 

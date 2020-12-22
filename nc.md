@@ -1,12 +1,12 @@
 ---
 title: Netcat
 date: 2020-11-25 18:28:43
-icon: icon-style
-background: bg-gray-600
+icon: icon-netcat
+background: bg-blue-600
 tags: 
     - nc
 categories:
-    - Toolkit
+    - Command
 intro:  This cheat sheet provides various for using Netcat on both Linux and Unix.
 ---
 

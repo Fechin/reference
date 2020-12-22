@@ -7,7 +7,7 @@ tags:
     - schedule
     - crontab
 categories:
-    - Toolkit
+    - Command
 intro: |
     [Cron](https://en.wikipedia.org/wiki/Cron) is most suitable for scheduling repetitive tasks. Scheduling one-time tasks can be accomplished using the associated at utility.
 ---
