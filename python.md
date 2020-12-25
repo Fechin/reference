@@ -713,6 +713,22 @@ for i in range(4, 10, 2):
 ```
 
 
+### With zip()
+```python
+name = ['Pete', 'John', 'Elizabeth']
+age = [6, 23, 44]
+for n, a in zip(name, age):
+    print('%s is %d years old' %(n, a))
+```
+
+### List Comprehension {.col-span-2}
+```python
+result = [x**2 for x in range(10) if x % 2 == 0]
+ 
+print(result)
+# [0, 4, 16, 36, 64]
+```
+
 
 
 
