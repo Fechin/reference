@@ -27,6 +27,7 @@ JavaScript is a lightweight, interpreted programming language.
 ### console.log()
 
 ```javascript
+alert('Hello world!');
 console.log('Hello world!');
 // => Hello world!
 ```
