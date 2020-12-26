@@ -881,7 +881,8 @@ Grid Layout {.cols-3}
 
 ### CSS grid-row
 
-grid-row: grid-row-start / grid-row-end;
+CSS syntax: 
+- grid-row: grid-row-start / grid-row-end;
 #### Example
 ```css
 .item {
@@ -912,9 +913,9 @@ grid-row: grid-row-start / grid-row-end;
 
 ### grid-row-start & grid-row-end
 
-CSS syntax: <br>
-grid-row-start: auto|row-line;<br>
-grid-row-end: auto|row-line|span n;
+CSS syntax: 
+- grid-row-start: auto|row-line;<br>
+- grid-row-end: auto|row-line|span n;
 
 #### Example
 ```css
