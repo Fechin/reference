@@ -8,6 +8,8 @@ categories:
 date: 2020-12-26 16:09:09
 intro: |
     The http status codes cheat sheet. a quick reference to every HTTP status code.
+plugins:
+    - tooltip
 ---
 
 Status code {.cols-3}
