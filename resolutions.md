@@ -11,7 +11,7 @@ intro: |
 Resolutions {.cols-1}
 ------------
 
-### Mobile
+### Apple iPhone
 | Resolution | DPPX | Actual resolution | DPPI    | Actual PPI | Size | Devices                  |
 |------------|------|-------------------|---------|------------|------|--------------------------|
 | 320 x 480  | @1x  | 320 x 480         | 163 ppi | 163 ppi    | 3.5" | iPhone 2G/3G/3GS         |
@@ -26,6 +26,11 @@ Resolutions {.cols-1}
 | 360 x 780  | @3x  | 1080 x 2340       | -       | 476 ppi    | 5.4" | iPhone 12 Mini           |
 | 390 x 844  | @3x  | 1170 x 2532       | -       | 460 ppi    | 6.1" | iPhone 12/12 Pro        |
 | 428 x 926  | @3x  | 1284 x 2778       | -       | 458 ppi    | 6.7" | iPhone 12 Max            |
+{.show-header}
+
+### Samsung Galaxy
+| Resolution | DPPX | Actual resolution | DPPI    | Actual PPI | Size | Devices                  |
+|------------|------|-------------------|---------|------------|------|--------------------------|
 | 360 x 640  | @2x  | 720 x 1280        | 153 ppi | 306 ppi    | 4.8" | Galaxy S3                |
 | 360 x 640  | @3x  | 1080 x 1920       | 147 ppi | 441 ppi    | 5"   | Galaxy S4                |
 | 360 x 640  | @3x  | 1080 x 1920       | 144 ppi | 432 ppi    | 5.1" | Galaxy S5                |
