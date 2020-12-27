@@ -1,5 +1,5 @@
 ---
-title: redis
+title: Redis
 icon: icon-redis
 background: bg-red-600
 tags:
