@@ -7,7 +7,7 @@ tags:
     - md
     - Markup
 categories:
-    - Toolkit
+    - Programming
 intro: This is a quick reference cheat sheet to the Markdown syntax.
 ---
 
