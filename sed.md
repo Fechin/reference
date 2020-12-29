@@ -1,12 +1,12 @@
 ---
-title: sed command
+title: Sed
 date: 2020-12-27 18:34:08
 icon: icon-sed
 background: bg-red-400
 tags:
   - null
 categories:
-  - Toolkit
+  - Linux Command
 intro: |
     [Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.
 ---
@@ -120,7 +120,7 @@ $ sed 's/old/new/[flags]' [input-file]
 | `1,2...`         | Substitute the nth occurrence               |
 | `p`              | Print only the substituted line             |
 | `w`              | Write only the substituted line to a file   |
-| `i`              | Ignore case while searching                 |
+| `I`              | Ignore case while searching                 |
 | `e`              | Substitute and execute in the command line  |
 
 

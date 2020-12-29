@@ -1,12 +1,12 @@
 ---
-title: Grep
+title: grep
 date: 2020-11-25 18:28:43
 icon: icon-grep
 background: bg-green-400
 tags: 
     - egrep
 categories:
-    - Command
+    - Linux Command
 intro: This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program grep and assumes you already understand its usage.
 ---
 
