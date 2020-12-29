@@ -7,7 +7,7 @@ tags:
 categories:
   - Programming
 intro: |
-    This is a quick reference cheat sheet to the toml file syntax.
+    This is a quick reference cheat sheet to the TOML config file syntax.
 ---
 
 
