@@ -1446,7 +1446,7 @@ const getSuggestions = async () => {
   const wordQuery = inputField.value;
   const endpoint = `${url}${queryParams}${wordQuery}`;
   try{
-const response = __~await~__ __~fetch(endpoint, {cache: 'no-cache'});
+const response = await fetch(endpoint, {cache: 'no-cache'});
     if(response.ok){
       const jsonResponse = await response.json()
     }
