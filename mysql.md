@@ -947,3 +947,7 @@ Functions & Operators {.cols-3}
 - [VALUES()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_values){data-tooltip="Define the values to be used during an INSERT"}
 {.cols-2}
 
+
+Also see {.cols-1}
+--------
+- [Regex in MySQL](/regex#regex-in-mysql) _(quickref.me)_

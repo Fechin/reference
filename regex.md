@@ -24,6 +24,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 - [Regex in JavaScript](#regex-in-javascript) _(quickref.me)_
 - [Regex in PHP](#regex-in-php) _(quickref.me)_
 - [Regex in Java](#regex-in-java) _(quickref.me)_
+- [Regex in MySQL](#regex-in-mysql) _(quickref.me)_
 - [Regex in Emacs](/emacs#search) _(quickref.me)_
 - [Online regex tester](https://regex101.com/) _(regex101.com)_
 {.cols-2}
@@ -861,3 +862,101 @@ while (m.find()) {
 // Outputs: [sells, seashells, Seashore]
 System.out.println(matches);
 ```
+
+
+Regex in MySQL {.cols-2}
+-------------
+
+### Functions
+| Name               | Description                                             |
+|--------------------|---------------------------------------------------------|
+| `REGEXP          ` | Whether string matches regex               |
+| `REGEXP_INSTR()  ` | Starting index of substring matching regex <br>_(NOTE: Only MySQL 8.0+)_ |
+| `REGEXP_LIKE()   ` | Whether string matches regex  <br>_(NOTE: Only MySQL 8.0+)_               |
+| `REGEXP_REPLACE()` | Replace substrings matching regex <br>_(NOTE: Only MySQL 8.0+)_           |
+| `REGEXP_SUBSTR() ` | Return substring matching regex  <br>_(NOTE: Only MySQL 8.0+)_           |
+
+
+
+### REGEXP
+```sql {.wrap}
+expr REGEXP pat 
+```
+#### Examples
+```sql
+mysql> SELECT 'abc' REGEXP '^[a-d]';
+1
+mysql> SELECT name FROM cities WHERE name REGEXP '^A';
+mysql> SELECT name FROM cities WHERE name NOT REGEXP '^A';
+mysql> SELECT name FROM cities WHERE name REGEXP 'A|B|R';
+mysql> SELECT 'a' REGEXP 'A', 'a' REGEXP BINARY 'A';
+1   0
+```
+
+
+### REGEXP_REPLACE
+``` {.wrap}
+REGEXP_REPLACE(expr, pat, repl[, pos[, occurrence[, match_type]]])
+```
+#### Examples
+```sql
+mysql> SELECT REGEXP_REPLACE('a b c', 'b', 'X');
+a X c
+mysql> SELECT REGEXP_REPLACE('abc ghi', '[a-z]+', 'X', 1, 2);
+abc X
+```
+
+
+
+
+### REGEXP_SUBSTR
+``` {.wrap}
+REGEXP_SUBSTR(expr, pat[, pos[, occurrence[, match_type]]])
+```
+#### Examples
+```sql
+mysql> SELECT REGEXP_SUBSTR('abc def ghi', '[a-z]+');
+abc
+mysql> SELECT REGEXP_SUBSTR('abc def ghi', '[a-z]+', 1, 3);
+ghi
+```
+
+
+### REGEXP_LIKE 
+```
+REGEXP_LIKE(expr, pat[, match_type])
+```
+#### Examples
+```sql
+mysql> SELECT regexp_like('aba', 'b+')
+1
+mysql> SELECT regexp_like('aba', 'b{2}')
+0
+mysql> # i: case-insensitive
+mysql> SELECT regexp_like('Abba', 'ABBA', 'i');
+1
+mysql> # m: multi-line
+mysql> SELECT regexp_like('a\nb\nc', '^b$', 'm');
+1
+```
+
+
+
+
+### REGEXP_INSTR
+``` {.wrap}
+REGEXP_INSTR(expr, pat[, pos[, occurrence[, return_option[, match_type]]]])
+```
+#### Examples
+```sql
+mysql> SELECT regexp_instr('aa aaa aaaa', 'a{3}');
+2
+mysql> SELECT regexp_instr('abba', 'b{2}', 2);
+2
+mysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 2);
+5
+mysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 3, 1);
+7
+```
+
+
