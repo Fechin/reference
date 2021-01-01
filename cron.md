@@ -112,5 +112,6 @@ Min  Hour Day  Mon  Weekday
 
 ## Also see {.cols-1}
 
+* [Devhints](https://devhints.io/cron) _(devhints.io)_
 * [Crontab Generator](https://crontab-generator.org/) _(crontab-generator.org)_
 * [Crontab guru](https://crontab.guru/) _(crontab.guru)_

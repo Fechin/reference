@@ -437,6 +437,7 @@ References
 ----------
 {.one-column}
 
+* [Devhints](https://devhints.io/xpath) _(devhints.io)_
 * [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
 
 

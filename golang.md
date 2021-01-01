@@ -761,6 +761,7 @@ References {.cols-2}
 ### Official resources
 
 
+- [Devhints](https://devhints.io/go) _(devhints.io)_
 - [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
 - [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
 - [Effective Go](https://golang.org/doc/effective_go.html) _(golang.org)_
