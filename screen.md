@@ -1,5 +1,5 @@
 ---
-title: screen
+title: Screen
 date: 2021-01-02 20:03:55
 background: bg-green-500
 tags:
