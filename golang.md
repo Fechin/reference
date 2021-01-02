@@ -15,61 +15,86 @@ intro: |
 Getting started {.cols-3}
 --------
 
-### Introduction 
-
-- [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
-- [Go repl](https://repl.it/languages/go) _(repl.it)_
-- [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
-
-### Hello world {.row-span-2}
 
 
-#### hello.go {.file}
-
+### hello.go
 ```go
 package main
 
 import "fmt"
 
 func main() {
-  message := greetMe("world")
-  fmt.Println(message)
-}
-
-func greetMe(name string) string {
-  return "Hello, " + name + "!"
+    fmt.Println("Hello, world!")
 }
 ```
-
-```bash
-$ go build
+Run directly
+```shell script
+$ go run hello.go
+Hello, world!
 ```
+Or try it out in the [Go repl](https://repl.it/languages/go)
 
-Or try it out in the [Go repl](https://repl.it/languages/go), or [A Tour of Go](https://tour.golang.org/welcome/1).
+
 
 ### Variables
-
-#### Variable declaration
-
 ```go
-var msg string
-msg = "Hello"
+var s1 string
+s1 = "Learn Go!"
+
+// declare multiple variables at once
+var b, c int = 1, 2
+var d = true
+```
+Short declaration
+```go
+s1 := "Learn Go!"        // string
+b, c := 1, 2             // int
+d := true                // bool
 ```
 
-#### Shortcut of above (Infers type)
+See: [Basic types](#basic-types)
 
+
+
+### Functions
 ```go
-msg := "Hello"
+package main
+
+import "fmt"
+
+// The entry point of the programs
+func main() {
+    fmt.Println("Hello world!")
+    say("Hello Go!")
+}
+
+func say(message string) {
+    fmt.Println("You said: ", message)
+}
+```
+See: [Functions](#functions-2)
+
+
+
+### Comments
+```go
+// Single line comment
+
+/* Multi-
+ line comment */
 ```
 
-### Constants
-Constants can be character, string, boolean, or numeric values.
 
+
+### If statement
 ```go
-const Phi = 1.618
+if true {
+    fmt.Println("Yes!")
+}
 ```
+See: [Flow control](#flow-control)
 
-See: [Constants](https://tour.golang.org/basics/15)
+
 
 Basic types {.cols-3}
 --------
@@ -77,62 +102,39 @@ Basic types {.cols-3}
 ### Strings
 
 ```go
-str := "Hello"
+s1 := "Hello" + "World"
 
-str := `Multiline
-string`
-```
+s2 := `A "raw" string literal
+can include line breaks.`
 
-#### Operators
-```go
 // Outputs: 11
-fmt.Println(len("Hello World"))
+fmt.Println(len(s1))
 
 // Outputs: Hello
-fmt.Println(string("Hello World"[0:5]))
-
-// Outputs: Hello World
-fmt.Println("Hello " + "World")
+fmt.Println(string(s1[0:5]))
 ```
-
 Strings are of type `string`.
 
+
 ### Numbers 
-
-
-#### Typical types
 
 ```go
 num := 3         // int
 num := 3.        // float64
 num := 3 + 4i    // complex128
 num := byte('a') // byte (alias: uint8)
-```
 
-#### Other types
-
-```go
 var u uint = 7        // uint (unsigned)
 var p float32 = 22.7  // 32-bit float
 ```
 #### Operators
 ```go
-// Outputs: 1 + 1 = 2
-fmt.Println("1 + 1 =", 1.0 + 1.0)
+x := 5
+x++
+fmt.Println("x + 4 =", x + 4)
+fmt.Println("x * 4 =", x * 4) 
 ```
-
------
-
-| - | - |
-|------|----------------|
-| `+`  | addition       |
-| `-`  | subtraction    |
-| `*`  | multiplication |
-| `/`  | division       |
-| `%`  | remainder      |
-
-Slices have a dynamic size, unlike arrays.
-
+See: [More Operators](#operators-and-punctuation)
 
 
 
@@ -146,36 +148,30 @@ isFalse  := false
 
 #### Operators 
 ```go
-// Outputs: true
-fmt.Println(true && true)
-
-// Outputs: false
-fmt.Println(true && false)
-
-// Outputs: true
-fmt.Println(true || true)
-
-// Outputs: true
-fmt.Println(true || false)
-
-// Outputs: false
-fmt.Println(!true)
+fmt.Println(true && true)   // true 
+fmt.Println(true && false)  // false
+fmt.Println(true || true)   // true
+fmt.Println(true || false)  // true
+fmt.Println(!true)          // false
 ```
+See: [More Operators](#operators-and-punctuation)
+
+
+
 
 ### Arrays {.row-span-2}
+```go
+┌────┬────┬────┬────┬─────┬─────┐
+| 2  | 3  | 5  | 7  | 11  | 13  |
+└────┴────┴────┴────┴─────┴─────┘
+  0    1    2    3     4     5
+```
+
+---
 
 ```go
-var a [2]string
-a[0] = "Hello"
-a[1] = "World"
-
-// Outputs: Hello World
-fmt.Println(a[0], a[1])
-
-// Outputs: [Hello World]
-fmt.Println(a)
-
-primes := [6]int{2, 3, 5, 7, 11, 13}
+primes := [...]int{2, 3, 5, 7, 11, 13}
+fmt.Println(len(primes)) // => 6
 
 // Outputs: [2 3 5 7 11 13]
 fmt.Println(primes)
@@ -183,12 +179,30 @@ fmt.Println(primes)
 // Same as [:3], Outputs: [2 3 5]
 fmt.Println(primes[0:3])
 ```
+---
+```go
+var a [2]string
+a[0] = "Hello"
+a[1] = "World"
 
-Arrays have a fixed size.
+fmt.Println(a[0], a[1]) //=> Hello World
+fmt.Println(a)   // => [Hello World]
+```
+#### 2d array
+```go
+var twoDimension [2][3]int
+for i := 0; i < 2; i++ {
+    for j := 0; j < 3; j++ {
+        twoDimension[i][j] = i + j
+    }
+}
+// => 2d:  [[0 1 2] [1 2 3]]
+fmt.Println("2d: ", twoDimension)
+```
 
 
 
-### Pointers {.row-span-2}
+### Pointers
 
 ```go
 func main () {
@@ -211,10 +225,44 @@ a := new(int)
 *a = 234
 ```
 
-
-Pointers point to a memory location of a variable. Go is fully garbage-collected.
-<br><br>
 See: [Pointers](https://tour.golang.org/moretypes/1)
+
+
+### Slices
+
+```go
+s := make([]string, 3)
+s[0] = "a"
+s[1] = "b"
+s = append(s, "d")
+s = append(s, "e", "f")
+
+fmt.Println(s)
+fmt.Println(s[1])
+fmt.Println(len(s))
+fmt.Println(s[1:3])
+
+slice := []int{2, 3, 4}
+```
+
+See also: [Slices example](https://gobyexample.com/slices)
+
+
+
+
+
+
+### Constants
+```go
+const s string = "constant"
+const Phi = 1.618
+const n = 500000000
+const d = 3e20 / n
+fmt.Println(d)
+```
+
+
+
 
 ### Type conversions
 
@@ -237,19 +285,103 @@ s := strconv.Itoa(i)
 fmt.Println(s) // Outputs: 90
 ```
 
-See: [Type conversions](https://tour.golang.org/basics/13)
 
 
 
-### Slices
+Strings {.cols-3}
+--------
 
+### Strings function
 ```go
-slice := []int{2, 3, 4}
+package main
+
+import (
+	"fmt"
+	s "strings"
+)
+
+func main() {
+    /* Need to import strings as s */
+	fmt.Println(s.Contains("test", "e"))
+
+    /* Build in */
+    fmt.Println(len("hello"))  // => 5
+    // Outputs: 101
+	fmt.Println("hello"[1])
+    // Outputs: e
+	fmt.Println(string("hello"[1]))
+
+}
 ```
 
+
+
+### fmt.Printf {.row-span-2 .col-span-2}
 ```go
-slice := []byte("Hello")
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+type point struct {
+	x, y int
+}
+
+func main() {
+	p := point{1, 2}
+	fmt.Printf("%v\n", p)                        // => {1 2}
+	fmt.Printf("%+v\n", p)                       // => {x:1 y:2}
+	fmt.Printf("%#v\n", p)                       // => main.point{x:1, y:2}
+	fmt.Printf("%T\n", p)                        // => main.point
+	fmt.Printf("%t\n", true)                     // => TRUE
+	fmt.Printf("%d\n", 123)                      // => 123
+	fmt.Printf("%b\n", 14)                       // => 1110
+	fmt.Printf("%c\n", 33)                       // => !
+	fmt.Printf("%x\n", 456)                      // => 1c8
+	fmt.Printf("%f\n", 78.9)                     // => 78.9
+	fmt.Printf("%e\n", 123400000.0)              // => 1.23E+08
+	fmt.Printf("%E\n", 123400000.0)              // => 1.23E+08
+	fmt.Printf("%s\n", "\"string\"")             // => "string"
+	fmt.Printf("%q\n", "\"string\"")             // => "\"string\""
+	fmt.Printf("%x\n", "hex this")               // => 6.86578E+15
+	fmt.Printf("%p\n", &p)                       // => 0xc00002c040
+	fmt.Printf("|%6d|%6d|\n", 12, 345)           // => |    12|   345|
+	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)     // => |  1.20|  3.45|
+	fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)   // => |1.20  |3.45  |
+	fmt.Printf("|%6s|%6s|\n", "foo", "b")        // => |   foo|     b|
+	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")      // => |foo   |b     |
+
+	s := fmt.Sprintf("a %s", "string")
+	fmt.Println(s)
+
+	fmt.Fprintf(os.Stderr, "an %s\n", "error")
+}
+
 ```
+See also: [fmt](https://golang.org/pkg/fmt/)
+
+
+
+
+### Function examples
+| Example                       |   Result      |
+|-------------------------------|---------------|
+| Contains("test", "es")        | true        |
+| Count("test", "t")            | 2           |
+| HasPrefix("test", "te")       | true        |
+| HasSuffix("test", "st")       | true        |
+| Index("test", "e")            | 1           |
+| Join([]string{"a", "b"}, "-") | a-b         |
+| Repeat("a", 5)                | aaaaa       |
+| Replace("foo", "o", "0", -1)  | f00         |
+| Replace("foo", "o", "0", 1)   | f0o         |
+| Split("a-b-c-d-e", "-")       | [a b c d e] |
+| ToLower("TEST")               | test        |
+| ToUpper("test")               | TEST        |
+
+
 
 Flow control {.cols-3}
 --------
@@ -257,44 +389,49 @@ Flow control {.cols-3}
 ### Conditional
 
 ```go
-if day == "sunday"||day == "saturday" {
-  rest()
-} else if day == "monday" && isTired() {
-  groan()
+
+a := 10
+
+if a > 20 {
+    fmt.Println(">")
+} else if a < 20 {
+    fmt.Println("<")
 } else {
-  work()
+    fmt.Println("=")
 }
 ```
-
-
-See: [If](https://tour.golang.org/flowcontrol/5)
 
 ### Statements in if
 
 ```go
+x := "hello go!"
+
+if count := len(x); count > 0 {
+    fmt.Println("Yes")
+}
+
+```
+---
+```go
+
 if _, err := doThing(); err != nil {
-  fmt.Println("Uh oh")
+    fmt.Println("Uh oh")
 }
 ```
 
-
-A condition in an `if` statement can be preceded with a statement before a `;`. Variables declared by the statement are only in scope until the end of the `if`.
-<br><br>
-See: [If with a short statement](https://tour.golang.org/flowcontrol/6)
-
 ### Switch
-
 ```go {.wrap}
-switch day {
-  case "sunday":
-    // cases don't "fall through" by default!
-    fallthrough
-
-  case "saturday":
-    rest()
-
-  default:
-    work()
+x := 42.0
+switch x {
+case 0:
+case 1, 2:
+    fmt.Println("Multiple matches")
+case 42:   // Don't "fall through".
+    fmt.Println("reached")
+case 43:
+    fmt.Println("Unreached")
+default:
+    fmt.Println("Optional")
 }
 ```
 
@@ -303,65 +440,165 @@ See: [Switch](https://github.com/golang/go/wiki/Switch)
 ### For loop
 
 ```go
-for count := 0; count <= 10; count++ {
-  fmt.Println("My counter is at", count)
+for i := 0; i <= 10; i++ {
+  fmt.Println("i: ", i)
 }
 ```
-
-See: [For loops](https://tour.golang.org/flowcontrol/1)
 
 ### For-Range loop
 
 ```go {.wrap}
-entry := []string{"Jack","John","Jones"}
-for i, val := range entry {
-  fmt.Printf("At position %d, the character %s is present\n", i, val)
+nums := []int{2, 3, 4}
+sum := 0
+for _, num := range nums {
+    sum += num
 }
+fmt.Println("sum:", sum)
 ```
-
-See: [For-Range loops](https://gobyexample.com/range)
 
 ### While loop
 
 ```go
-n := 0
-x := 42
-for n != x {
-  n := guess()
+i := 1
+for i <= 3 {
+    fmt.Println(i)
+    i++
 }
 ```
 
-See: [Go's "while"](https://tour.golang.org/flowcontrol/3)
+### Continue keyword
+```go
+for i := 0; i <= 5; i++ {
+    if i % 2 == 0 {
+        continue
+    }
+    fmt.Println(i)
+}
+```
+### Break keyword
+```go
+for {
+    fmt.Println("loop")
+    break
+}
+```
+
+
+
+Structs & Maps {.cols-3}
+--------
+
+### Defining {.row-span-2}
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+type Vertex struct {
+	X int
+	Y int
+}
+
+func main() {
+	v := Vertex{1, 2}
+	v.X = 4
+	fmt.Println(v.X, v.Y) // => 4 2
+}
+```
+
+See: [Structs](https://tour.golang.org/moretypes/2)
+
+### Literals
+
+```go
+v := Vertex{X: 1, Y: 2}
+// Field names can be omitted
+v := Vertex{1, 2}
+// Y is implicit
+v := Vertex{X: 1}
+```
+
+You can also put field names.
+
+
+### Maps {.row-span-2}
+```go
+m := make(map[string]int)
+m["k1"] = 7
+m["k2"] = 13
+fmt.Println(m) // => map[k1:7 k2:13]
+
+v1 := m["k1"]
+fmt.Println(v1)     // => 7
+fmt.Println(len(m)) // => 2
+
+delete(m, "k2")
+fmt.Println(m) // => map[k1:7]
+
+_, prs := m["k2"]
+fmt.Println(prs) // => false
+
+n := map[string]int{"foo": 1, "bar": 2}
+fmt.Println(n) // => map[bar:2 foo:1]
+```
+
+
+### Pointers to structs
+
+```go
+v := &Vertex{1, 2}
+v.X = 2
+```
+
+Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
+
+
+
+
 
 Functions {.cols-3}
 --------
 
-### Lambdas
 
+### Multiple arguments
 ```go
-myfunc := func() bool {
-  return x > 10000
+func plus(a int, b int) int {
+    return a + b
 }
-```
-
-
-Functions are first class objects.
-
-### Multiple return types
-
-```go
-a, b := getMessage()
-```
-
-```go
-func getMessage() (a string, b string) {
-  return "Hello", "World"
+func plusPlus(a, b, c int) int {
+    return a + b + c
 }
+fmt.Println(plus(1, 2))
+fmt.Println(plusPlus(1, 2, 3))
 ```
 
+### Multiple return
 
+```go
+func vals() (int, int) {
+    return 3, 7
+}
 
-### Named return values
+a, b := vals()
+fmt.Println(a)    // => 3
+fmt.Println(b)    // => 7
+```
+
+### Anonymous function
+```go
+r1, r2 := func() (string, string) {
+    x := []string{"hello", "world"}
+    return x[0], x[1]
+}()
+
+// => hello world
+fmt.Println(r1, r2)
+```
+
+### Named return
 
 ```go
 func split(sum int) (x, y int) {
@@ -369,24 +606,93 @@ func split(sum int) (x, y int) {
   y = sum - x
   return
 }
+
+x, y := split(17)
+fmt.Println(x)   // => 7
+fmt.Println(y)   // => 10
+```
+
+### Variadic functions
+```go
+func sum(nums ...int) {
+    fmt.Print(nums, " ")
+    total := 0
+    for _, num := range nums {
+        total += num
+    }
+    fmt.Println(total)
+}
+sum(1, 2)     //=> [1 2] 3
+sum(1, 2, 3)  // => [1 2 3] 6
+
+nums := []int{1, 2, 3, 4}
+sum(nums...)  // => [1 2 3 4] 10
 ```
 
 
-By defining the return value names in the signature, a `return` (no args) will return variables with those names.
+### init function
+```go
+import --> const --> var --> init()
+```
+---
+```go
+var num = setNumber()
 
-See: [Named return values](https://tour.golang.org/basics/7)
+func setNumber() int {
+    return 42
+}
+func init() {
+    num = 0
+}
+func main() {
+    fmt.Println(num) // => 0
+}
+```
+
+
+### Functions as values
+```go
+func main() {
+    // assign a function to a name
+    add := func(a, b int) int {
+        return a + b
+    }
+    // use the name to call the function
+    fmt.Println(add(3, 4)) // => 7
+}
+```
+
+### Closures 1
+```go
+func scope() func() int{
+    outer_var := 2
+    foo := func() int {return outer_var}
+    return foo
+}
+
+// Outpus: 2
+fmt.Println(scope()())
+```
+
+### Closures 2
+```go
+func outer() (func() int, int) {
+    outer_var := 2
+    inner := func() int {
+        outer_var += 99
+        return outer_var
+    }
+    inner()
+    return inner, outer_var
+}
+inner, val := outer()
+fmt.Println(inner()) // => 200
+fmt.Println(val)     // => 101
+```
+
 
 Packages {.cols-3}
 --------
-
-
-### Packages
-
-```go
-package hello
-```
-
-Every package file has to start with `package`.
 
 
 ### Importing {.row-span-2}
@@ -395,7 +701,7 @@ Every package file has to start with `package`.
 import "fmt"
 import "math/rand"
 ```
-
+#### Same as
 ```go
 import (
   "fmt"        // gives fmt.Println
@@ -403,107 +709,115 @@ import (
 )
 ```
 
-Both are the same.
-<br>
-<br>
 See: [Importing](https://tour.golang.org/basics/1)
+
+
+
+
+### Aliases {.row-span-2}
+
+```go
+import r "math/rand"
+```
+---
+```go
+import (
+    "fmt"
+    r "math/rand"
+)
+```
+---
+```go
+r.Intn()
+```
+
+
+### Packages
+
+```go
+package main
+```
 
 
 ### Exporting names
 
 ```go
+// Begin with a capital letter
 func Hello () {
   ···
 }
 ```
 
-Exported names begin with capital letters.
-<br><br>
 See: [Exported names](https://tour.golang.org/basics/3)
-
-
-### Aliases
-
-```go
-import r "math/rand"
-```
-
-
-```go
-r.Intn()
-```
 
 
 
 Concurrency {.cols-3}
 --------
 
-### Goroutines
+### Goroutines {.row-span-2}
 
 ```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func f(from string) {
+	for i := 0; i < 3; i++ {
+		fmt.Println(from, ":", i)
+	}
+}
+
 func main() {
-  // A "channel"
-  ch := make(chan string)
+	f("direct")
+	go f("goroutine")
 
-  // Start concurrent routines
-  go push("Moe", ch)
-  go push("Larry", ch)
-  go push("Curly", ch)
+	go func(msg string) {
+		fmt.Println(msg)
+	}("going")
 
-  // Read 3 results
-  //(Since our goroutines are concurrent
-  //        the order isn't guaranteed!)
-  fmt.Println(<-ch, <-ch, <-ch)
+	time.Sleep(time.Second)
+	fmt.Println("done")
 }
 ```
 
 
-```go
-func push(name string, ch chan string) {
-  msg := "Hey, " + name
-  ch <- msg
-}
-```
-
-
-Channels are concurrency-safe communication objects, used in goroutines.
-<br>
-<br>
 See: [Goroutines](https://tour.golang.org/concurrency/1), [Channels](https://tour.golang.org/concurrency/2)
 
 
 
 
-### WaitGroup
+### WaitGroup  {.row-span-2}
 
 ```go
-import "sync"
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+func w(id int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	fmt.Printf("%d starting\n", id)
+
+	time.Sleep(time.Second)
+	fmt.Printf("%d done\n", id)
+}
 
 func main() {
-  var wg sync.WaitGroup
-  
-  for _, item := range itemList {
-    // Increment WaitGroup Counter
-    wg.Add(1)
-    go doOperation(item)
-  }
-  // Wait for goroutines to finish
-  wg.Wait()
-  
+	var wg sync.WaitGroup
+	for i := 1; i <= 5; i++ {
+		wg.Add(1)
+		go w(i, &wg)
+	}
+	wg.Wait()
 }
 ```
-
-
-```go
-func doOperation(item string) {
-  defer wg.Done()
-  // do operation on item
-  // ...
-}
-```
-
-
-A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. The goroutine calls `wg.Done()` when it finishes.
 See: [WaitGroup](https://golang.org/pkg/sync/#WaitGroup)
 
 
@@ -511,28 +825,22 @@ See: [WaitGroup](https://golang.org/pkg/sync/#WaitGroup)
 
 ### Closing channels
 
-#### Closes a channel
-
 ```go
 ch <- 1
 ch <- 2
 ch <- 3
-close(ch)
+close(ch) // Closes a channel
 ```
-
-
-#### Iterates across a channel until its closed
-
+---
 ```go
+// Iterate the channel until closed
 for i := range ch {
   ···
 }
 ```
-
-
-#### Closed if `ok == false`
-
+---
 ```go
+// Closed if `ok == false`
 v, ok := <- ch
 ```
 
@@ -551,19 +859,16 @@ ch <- 3
 // all goroutines are asleep - deadlock
 ```
 
-Buffered channels limit the amount of messages it can keep.
-<br>
-<br>
 See: [Buffered channels](https://tour.golang.org/concurrency/3)
 
 
 
 
 
-Error control {.cols-2}
+Error control {.cols-3}
 --------
 
-### Deferring functions {.row-span-2}
+### Deferring functions 
 
 ```go
 func main() {
@@ -575,7 +880,7 @@ func main() {
 ```
 
 
-Lambdas are better suited for defer blocks.
+### Lambda defer
 
 ```go
 func main() {
@@ -602,65 +907,9 @@ func main() {
 }
 ```
 
-
-Defers running a function until the surrounding function returns.
-The arguments are evaluated immediately, but the function call is not ran until later.
-<br>
-<br>
 See: [Defer, panic and recover](https://blog.golang.org/defer-panic-and-recover)
 
 
-
-
-Structs {.cols-3}
---------
-
-### Defining
-
-```go
-type Vertex struct {
-  X int
-  Y int
-}
-```
-
-
-```go
-func main() {
-  v := Vertex{1, 2}
-  v.X = 4
-  fmt.Println(v.X, v.Y)
-}
-```
-
-See: [Structs](https://tour.golang.org/moretypes/2)
-
-### Literals
-
-```go
-v := Vertex{X: 1, Y: 2}
-```
-
-```go
-// Field names can be omitted
-v := Vertex{1, 2}
-```
-
-```go
-// Y is implicit
-v := Vertex{X: 1}
-```
-
-You can also put field names.
-
-### Pointers to structs
-
-```go
-v := &Vertex{1, 2}
-v.X = 2
-```
-
-Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
 Methods  {.cols-2}
 --------
@@ -685,8 +934,6 @@ v := Vertex{1, 2}
 v.Abs()
 ```
 
-There are no classes, but you can define functions with _receivers_.
-
 See: [Methods](https://tour.golang.org/methods/1)
 
 ### Mutation
@@ -705,9 +952,6 @@ v.Scale(0.5)
 // `v` is updated
 ```
 
-By defining your receiver as a pointer (`*Vertex`), you can do mutations.
-<br>
-<br>
 See: [Pointer receivers](https://tour.golang.org/methods/4)
 
 Interfaces {.cols-2}
@@ -748,27 +992,62 @@ The methods defined in `Shape` are implemented in `Rectangle`.
 
 ### Interface example
 
-```go
+```go {.wrap}
 func main() {
   var r Shape = Rectangle{Length: 3, Width: 4}
   fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
 }
 ```
 
-References {.cols-2}
+Miscellaneous {.cols-3}
+-------------
+
+### Keywords
+- break
+- default
+- func
+- interface
+- select
+- case
+- defer
+- go
+- map
+- struct
+- chan
+- else
+- goto
+- package
+- switch
+- const
+- fallthrough
+- if
+- range
+- type
+- continue
+- for
+- import
+- return
+- var
+{.cols-3 .style-none}
+
+### Operators and punctuation
+|   |    |     |     |      |    |     |    |   |
+|---|----|-----|-----|------|----|-----|----|---|
+| +  | &   | +=  | &=   | && | ==  | != | ( | ) |
+| - | \| | -=  | \|= | \|\| | <  | <=  | [  | ] |
+| * | ^  | *=  | ^=  | <-   | >  | >=  | {  | } |
+| / | << | /=  | <<= | ++   | =  | :=  | ,  | ; |
+| % | >> | %=  | >>= | --   | !  | ... | .  | : |
+|   | &^ | &^= |     |      |    |     |    |   |
+
+
+
+References {.cols-1}
 --------
-
-### Official resources
-
-
 - [Devhints](https://devhints.io/go) _(devhints.io)_
 - [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
 - [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
 - [Effective Go](https://golang.org/doc/effective_go.html) _(golang.org)_
-
-### Other links
-
-
 - [Go by Example](https://gobyexample.com/) _(gobyexample.com)_
 - [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_
 - [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_
