@@ -15,18 +15,18 @@ Getting started {.cols-5}
 
 ### Usage {.col-span-2}
 Search standard output (i.e. a stream of text)
-```
-grep [options] search_string
+```shell script
+$ grep [options] search_string
 ```
 
 Search for an exact string in file:
-```
-grep [options] search_string path/to/file
+```shell script
+$ grep [options] search_string path/to/file
 ```
 
-Print every line in myfile.txt containing the string 'mellon'
-```
-grep 'mellon' myfile.txt
+Print lines in myfile.txt containing the string "mellon"
+```shell script
+$ grep 'mellon' myfile.txt
 ```
 
 Wildcards are accepted in filename.
