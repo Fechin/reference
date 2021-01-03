@@ -10,7 +10,7 @@ tags:
     - linux
 categories:
     - Programming
-intro: This is a quick reference (cheat sheet) to getting started with Bash scripting.
+intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
 ---
 
 Getting started {.cols-3}
@@ -488,7 +488,7 @@ fi
 
 | Condition            | Description              |
 | -------------------- | ------------------------ |
-| `[[ -o noclobber ]]` | If OPTIONNAME is enabled |
+| `[[ -o noclobber ]]` | If OPTION is enabled |
 | `[[ ! EXPR ]]`       | Not |
 | `[[ X && Y ]]`       | And |
 | `[[ X || Y ]]`       | Or  |
