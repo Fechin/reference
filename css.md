@@ -1064,6 +1064,18 @@ li::before {
 ```
 
 
+Css 3 tricks {.cols-3}
+------------
+
+### Scrollbar smooth
+```css
+html {
+    scroll-behavior: smooth;
+}
+```
+[Click me](#getting-started), the page will scroll smoothly to Getting started
+
+
 
 
 See also {.cols-1}
