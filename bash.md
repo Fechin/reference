@@ -1,5 +1,5 @@
 ---
-title: Bash scripting
+title: Bash
 date: 2020-11-25 18:28:43
 icon: icon-bash
 background: bg-gray-400
@@ -16,57 +16,74 @@ intro: This is a quick reference (cheat sheet) to getting started with Bash scri
 Getting started {.cols-3}
 ---------------
 
-### Introduction {.-intro}
-
-This is a quick reference to getting started with Bash scripting.
-
-- [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
-- [Bash Guide](http://mywiki.wooledge.org/BashGuide) _(mywiki.wooledge.org)_
-
-### Example
+### hello.sh
 
 ```bash
-#!/usr/bin/env bash
+#!/bin/bash
 
-NAME="John"
-echo "Hello $NAME!"
+VAR="world"
+echo "Hello $VAR!" # => Hello world!
 ```
+Execute the script
+```shell script
+$ bash hello.sh
+```
+
 
 ### Variables
 
 ```bash
 NAME="John"
-echo $NAME
-echo "$NAME"
-echo "${NAME}!"
+
+echo ${NAME}    # => John
+echo $NAME      # => John
+echo "$NAME"    # => John
+echo '$NAME'    # => $NAME
+echo "${NAME}!" # => John!
+
+NAME = "John" # => Error (about space)
 ```
 
-### String quotes
+
+
+### Comments
 
 ```bash
-NAME="John"
-echo "Hi $NAME"  #=> Hi John
-echo 'Hi $NAME'  #=> Hi $NAME
+# This is an inline Bash comment.
 ```
-
-### Shell execution
 
 ```bash
-echo "I'm in $(pwd)"
-echo "I'm in `pwd`"
-# Same
+: '
+This is a
+very neat comment
+in bash
+'
 ```
+Multi-line comments use `:'` to open and `'` to close
 
-See [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsubst)
 
-### Conditional execution
 
-```bash
-git commit && git push
-git commit || echo "Commit failed"
-```
 
-### Functions {#functions-example}
+### Arguments {.row-span-2}
+
+| Expression | Description                            |
+| ---        | ---                                    |
+| `$1` … `$9`| Parameter 1 ... 9                      |
+| `$0`       | Name of the script itself              |
+| `$1`       | First argument                         |
+| `${10}`	 | Positional parameter 10                |
+| `$#`       | Number of arguments                    |
+| `$$`       | Process id of the shell                |
+| `$*`       | All arguments                          |
+| `$@`       | All arguments, starting from first     |
+| `$-`       | Current options                        |
+| `$_`       | Last argument of the previous command  |
+
+See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
+
+
+
+### Functions
 
 ```bash
 get_name() {
@@ -90,20 +107,12 @@ fi
 
 See: [Conditionals](#conditionals-2)
 
-### Strict mode
-
-```bash
-set -euo pipefail
-IFS=$'\n\t'
-```
-
-See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-
 ### Brace expansion
 
 ```bash
 echo {A,B}.js
 ```
+---
 
 | Expression | Description         |
 | ---------- | ------------------- |
@@ -113,30 +122,60 @@ echo {A,B}.js
 
 See: [Brace expansion](http://wiki.bash-hackers.org/syntax/expansion/brace)
 
+### Shell execution
+
+```bash
+echo "I'm in $(PWD)"
+# Same
+echo "I'm in `pwd`"
+```
+
+See: [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsubst)
+
+
 
 Parameter expansions {.cols-3}
 --------------------
 
-### Basics {.row-span-4}
+
+
+### Syntax {.row-span-2}
+
+| Code              | Description         |
+| ----------------- | ------------------- |
+| `${FOO%suffix}`   | Remove suffix       |
+| `${FOO#prefix}`   | Remove prefix       |
+| `${FOO%%suffix}`  | Remove long suffix  |
+| `${FOO##prefix}`  | Remove long prefix  |
+| `${FOO/from/to}`  | Replace first match |
+| `${FOO//from/to}` | Replace all         |
+| `${FOO/%from/to}` | Replace suffix      |
+| `${FOO/#from/to}` | Replace prefix      |
+#### Substrings
+| Expression      | Description                    |
+| --------------- | ------------------------------ |
+| `${FOO:0:3}`    | Substring _(position, length)_ |
+| `${FOO:(-3):3}` | Substring from the right       |
+#### Length
+| Expression | Description      |
+| ---------- | ---------------- |
+| `${#FOO}`  | Length of `$FOO` |
+#### Default values
+| Expression        | Description                                              |
+| ----------------- | -------------------------------------------------------- |
+| `${FOO:-val}`     | `$FOO`, or `val` if unset                                |
+| `${FOO:=val}`     | Set `$FOO` to `val` if unset                             |
+| `${FOO:+val}`     | `val` if `$FOO` is set                                   |
+| `${FOO:?message}` | Show message and exit if `$FOO` is unset           |
+
+
+
+### Substitution
 
 ```bash
-name="John"
-echo ${name}
-echo ${name/J/j}    #=> "john" (substitution)
-echo ${name:0:2}    #=> "Jo" (slicing)
-echo ${name::2}     #=> "Jo" (slicing)
-echo ${name::-1}    #=> "Joh" (slicing)
-echo ${name:(-1)}   #=> "n" (slicing from right)
-echo ${name:(-2):1} #=> "h" (slicing from right)
 echo ${food:-Cake}  #=> $food or "Cake"
 ```
 
-```bash
-length=2
-echo ${name:0:length}  #=> "Jo"
-```
-
-See: [Parameter expansion](http://wiki.bash-hackers.org/syntax/pe)
 
 ```bash
 STR="/path/to/foo.cpp"
@@ -153,81 +192,320 @@ echo ${STR##*/}     # foo.cpp
 echo ${STR/foo/bar} # /path/to/bar.cpp
 ```
 
-```bash
-STR="Hello world"
-echo ${STR:6:5}   # "world"
-echo ${STR: -5:5}  # "world"
-```
 
+### Slicing
+
+```bash
+name="John"
+echo ${name}           # => John
+echo ${name:0:2}       # => Jo
+echo ${name::2}        # => Jo
+echo ${name::-1}       # => Joh
+echo ${name:(-1)}      # => n
+echo ${name:(-2)}      # => hn
+echo ${name:(-2):2}    # => hn
+
+length=2
+echo ${name:0:length}  # => Jo
+```
+See: [Parameter expansion](http://wiki.bash-hackers.org/syntax/pe)
+
+
+
+### basepath & dirpath
 ```bash
 SRC="/path/to/foo.cpp"
-BASE=${SRC##*/}   #=> "foo.cpp" (basepath)
-DIR=${SRC%$BASE}  #=> "/path/to/" (dirpath)
-```
-
-### Substitution {.row-span-3}
-
-| Code              | Description         |
-| ----------------- | ------------------- |
-| `${FOO%suffix}`   | Remove suffix       |
-| `${FOO#prefix}`   | Remove prefix       |
-| `${FOO%%suffix}`  | Remove long suffix  |
-| `${FOO##prefix}`  | Remove long prefix  |
-
-| `${FOO/from/to}`  | Replace first match |
-| `${FOO//from/to}` | Replace all         |
-| `${FOO/%from/to}` | Replace suffix      |
-| `${FOO/#from/to}` | Replace prefix      |
-
-### Comments
-
-```bash
-# Single line comment
 ```
 
 ```bash
-: '
-This is a
-multi line
-comment
-'
+BASEPATH=${SRC##*/}   
+echo $BASEPATH  # => "foo.cpp"
+
+
+DIRPATH=${SRC%$BASEPATH}
+echo $DIRPATH   # => "/path/to/"
 ```
 
-### Substrings
 
-| Expression      | Description                    |
-| --------------- | ------------------------------ |
-| `${FOO:0:3}`    | Substring _(position, length)_ |
-| `${FOO:(-3):3}` | Substring from the right       |
 
-### Length
 
-| Expression | Description      |
-| ---------- | ---------------- |
-| `${#FOO}`  | Length of `$FOO` |
 
-### Manipulation
+
+### Transform 
 
 ```bash
 STR="HELLO WORLD!"
-echo ${STR,}   #=> "hELLO WORLD!" (lowercase 1st letter)
-echo ${STR,,}  #=> "hello world!" (all lowercase)
+echo ${STR,}   # => hELLO WORLD!
+echo ${STR,,}  # => hello world!
 
 STR="hello world!"
-echo ${STR^}   #=> "Hello world!" (uppercase 1st letter)
-echo ${STR^^}  #=> "HELLO WORLD!" (all uppercase)
+echo ${STR^}   # => Hello world!
+echo ${STR^^}  # => HELLO WORLD!
+
+ARR=(hello World)
+echo "${ARR[@],}" # => hello world
+echo "${ARR[@]^}" # => Hello World
 ```
 
-### Default values
 
-| Expression        | Description                                              |
-| ----------------- | -------------------------------------------------------- |
-| `${FOO:-val}`     | `$FOO`, or `val` if unset (or null)                      |
-| `${FOO:=val}`     | Set `$FOO` to `val` if unset (or null)                   |
-| `${FOO:+val}`     | `val` if `$FOO` is set (and not null)                    |
-| `${FOO:?message}` | Show error message and exit if `$FOO` is unset (or null) |
 
-Omitting the `:` removes the (non)nullity checks, e.g. `${FOO-val}` expands to `val` if unset otherwise `$FOO`.
+
+Arrays  {.cols-3}
+------
+
+### Defining arrays
+
+```bash
+Fruits=('Apple' 'Banana' 'Orange')
+
+Fruits[0]="Apple"
+Fruits[1]="Banana"
+Fruits[2]="Orange"
+
+ARRAY2=(foo{1..2}) # => foo1 foo2
+ARRAY3=({A..D})    # => A B C D
+
+# declare construct
+declare -a Numbers=(1 2 3 4 5 6)
+```
+
+
+
+### Indexing
+
+|         -          |         -             |
+|--------------------|-----------------------|
+| `${Fruits[0]}`     | First element         |
+| `${Fruits[-1]}`    | Last element          |
+| `${Fruits[*]}`     | All elements          |
+| `${Fruits[@]}`     | All elements          |
+| `${#Fruits[@]}`    | Number of all         |
+| `${#Fruits}`       | Length of 1st         |
+| `${#Fruits[3]}`    | Length of nth         |
+| `${Fruits[@]:3:2}` | Range                 |
+| `${!Fruits[@]}`    | Keys of all           |
+
+
+
+### Iteration
+
+```bash
+Fruits=('Apple' 'Banana' 'Orange')
+
+for e in "${Fruits[@]}"; do
+    echo $e
+done
+```
+#### With index
+```bash
+for i in "${!Fruits[@]}"; do
+  printf "%s\t%s\n" "$i" "${Fruits[$i]}"
+done
+
+```
+
+
+### Operations {.col-span-2}
+
+```bash
+Fruits=("${Fruits[@]}" "Watermelon")     # Push
+Fruits+=('Watermelon')                   # Also Push
+Fruits=( ${Fruits[@]/Ap*/} )             # Remove by regex match
+unset Fruits[2]                          # Remove one item
+Fruits=("${Fruits[@]}")                  # Duplicate
+Fruits=("${Fruits[@]}" "${Veggies[@]}")  # Concatenate
+lines=(`cat "logfile"`)                  # Read from file
+```
+
+### Arrays as arguments
+```bash
+function extract()
+{
+    local -n myarray=$1
+    local idx=$2
+    echo "${myarray[$idx]}"
+}
+Fruits=('Apple' 'Banana' 'Orange')
+extract Fruits 2     # => Orangle
+```
+
+
+
+
+
+Dictionaries {.cols-3}
+------------
+
+### Defining
+
+```bash
+declare -A sounds
+```
+
+```bash
+sounds[dog]="bark"
+sounds[cow]="moo"
+sounds[bird]="tweet"
+sounds[wolf]="howl"
+```
+
+
+### Working with dictionaries
+
+```bash
+echo ${sounds[dog]} # Dog's sound
+echo ${sounds[@]}   # All values
+echo ${!sounds[@]}  # All keys
+echo ${#sounds[@]}  # Number of elements
+unset sounds[dog]   # Delete dog
+```
+
+### Iteration
+
+```bash
+for val in "${sounds[@]}"; do
+    echo $val
+done
+```
+---
+```bash
+for key in "${!sounds[@]}"; do
+    echo $key
+done
+```
+
+
+
+
+
+Conditionals {.cols-3}
+------------
+
+### Integer conditions
+
+| Condition                | Description           |
+| ---                      | ---                   |
+| `[[ NUM -eq NUM ]]`      | <yel>Eq</yel>ual                 |
+| `[[ NUM -ne NUM ]]`      | <yel>N</yel>ot <yel>e</yel>qual             |
+| `[[ NUM -lt NUM ]]`      | <yel>L</yel>ess <yel>t</yel>han             |
+| `[[ NUM -le NUM ]]`      | <yel>L</yel>ess than or <yel>e</yel>qual    |
+| `[[ NUM -gt NUM ]]`      | <yel>G</yel>reater <yel>t</yel>han          |
+| `[[ NUM -ge NUM ]]`      | <yel>G</yel>reater than or <yel>e</yel>qual |
+| `(( NUM < NUM ))`        | Less than             |
+| `(( NUM <= NUM ))`       | Less than or equal    |
+| `(( NUM > NUM ))`        | Greater than          |
+| `(( NUM >= NUM ))`       | Greater than or equal |
+
+
+### String conditions
+
+| Condition                | Description           |
+| ---                      | ---                   |
+| `[[ -z STR ]]`        | Empty string          |
+| `[[ -n STR ]]`        | <yel>N</yel>ot empty string      |
+| `[[ STR == STR ]]` | Equal                 |
+| `[[ STR = STR ]]` | Equal (Same above)                 |
+| `[[ STR < STR ]]` | Less than _(ASCII)_                 |
+| `[[ STR > STR ]]` | Greater than _(ASCII)_                 |
+| `[[ STR != STR ]]` | Not Equal             |
+| `[[ STR =~ STR ]]` | Regexp                |
+
+
+
+
+
+
+### Example {.row-span-3}
+
+#### String
+```bash
+if [[ -z "$string" ]]; then
+    echo "String is empty"
+elif [[ -n "$string" ]]; then
+    echo "String is not empty"
+else
+    echo "This never happens"
+fi
+```
+
+#### Combinations
+```bash
+if [[ X && Y ]]; then
+    ...
+fi
+```
+
+#### Equal
+```bash
+if [[ "$A" == "$B" ]]; then
+    ...
+fi
+```
+
+#### Regex
+```bash
+if [[ '1. abc' =~ ([a-z]+) ]]; then
+    echo ${BASH_REMATCH[1]}
+fi
+```
+
+#### Smaller
+```bash
+if (( $a < $b )); then
+   echo "$a is smaller than $b"
+fi
+```
+
+#### Exists
+```bash
+if [[ -e "file.txt" ]]; then
+    echo "file exists"
+fi
+```
+
+
+
+
+
+### File conditions {.row-span-2}
+
+| Condition               | Description             |
+| ---                     | ---                     |
+| `[[ -e FILE ]]`         | <yel>E</yel>xists                  |
+| `[[ -d FILE ]]`         | <yel>D</yel>irectory               |
+| `[[ -f FILE ]]`         | <yel>F</yel>ile                    |
+| `[[ -h FILE ]]`         | Symlink                 |
+| `[[ -s FILE ]]`         | Size is > 0 bytes       |
+| `[[ -r FILE ]]`         | <yel>R</yel>eadable                |
+| `[[ -w FILE ]]`         | <yel>W</yel>ritable                |
+| `[[ -x FILE ]]`         | Executable              |
+| `[[ f1 -nt f2 ]]` | f1 <yel>n</yel>ewer <yel>t</yel>han f2         |
+| `[[ f1 -ot f2 ]]` | f2 <yel>o</yel>lder <yel>t</yel>han f1         |
+| `[[ f1 -ef f2 ]]` | Same files              |
+
+
+### More conditions
+
+| Condition            | Description              |
+| -------------------- | ------------------------ |
+| `[[ -o noclobber ]]` | If OPTIONNAME is enabled |
+| `[[ ! EXPR ]]`       | Not |
+| `[[ X && Y ]]`       | And |
+| `[[ X || Y ]]`       | Or  |
+
+
+### logical and, or
+```bash
+if [ "$1" = 'y' -a $2 -gt 0 ]; then
+    echo "yes"
+fi
+
+if [ "$1" = 'n' -o $2 -lt 0 ]; then
+    echo "no"
+fi
+```
+
+
 
 Loops {.cols-3}
 -----
@@ -288,14 +566,14 @@ done
 ```
 
 
-### Continue {.col-span-2}
+### Continue
 
 ```bash {data=3,5}
 for number in $(seq 1 3); do
     if [[ $number == 2 ]]; then
-        continue;   # Skip rest of this particular loop iteration.
+        continue;
     fi
-    echo "$number"  # This will not print 2
+    echo "$number"
 done
 ```
 
@@ -313,6 +591,30 @@ for number in $(seq 1 3); do
 done
 ```
 
+### Until
+```bash
+count=0
+until [ $count -gt 10 ]; do
+    echo "$count"
+    ((count++))
+done
+```
+
+
+### Forever 
+
+```bash
+while true; do
+    # here is some code.
+done
+```
+
+### Forever (shorthand)
+```bash
+while :; do
+    # here is some code.
+done
+```
 
 
 ### Reading lines
@@ -323,19 +625,8 @@ cat file.txt | while read line; do
 done
 ```
 
-### Forever
 
-```bash
-while true; do
-    # here is some code.
-done
-```
-or
-```bash
-while :; do
-    # here is some code.
-done
-```
+
 
 
 Functions {.cols-3}
@@ -390,213 +681,6 @@ fi
 ```
 
 
-### Arguments
-
-| Expression | Description                            |
-| ---        | ---                                    |
-| `$#`       | Number of arguments                    |
-| `$*`       | All arguments                          |
-| `$@`       | All arguments, starting from first     |
-| `$1`       | First argument                         |
-| `$_`       | Last argument of the previous command  |
-
-See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
-
-Conditionals {.cols-3}
-------------
-
-### Conditions
-
-Note that `[[` is actually a command/program that returns either `0` (true) or `1` (false). Any program that obeys the same logic (like all base utils, such as `grep(1)` or `ping(1)`) can be used as condition, see examples.
-
-| Condition                | Description           |
-| ---                      | ---                   |
-| `[[ -z STRING ]]`        | Empty string          |
-| `[[ -n STRING ]]`        | Not empty string      |
-| `[[ STRING == STRING ]]` | Equal                 |
-| `[[ STRING != STRING ]]` | Not Equal             |
-
-| `[[ NUM -eq NUM ]]`      | Equal                 |
-| `[[ NUM -ne NUM ]]`      | Not equal             |
-| `[[ NUM -lt NUM ]]`      | Less than             |
-| `[[ NUM -le NUM ]]`      | Less than or equal    |
-| `[[ NUM -gt NUM ]]`      | Greater than          |
-| `[[ NUM -ge NUM ]]`      | Greater than or equal |
-
-| `[[ STRING =~ STRING ]]` | Regexp                |
-
-| `(( NUM < NUM ))`        | Numeric conditions    |
-
-#### More conditions
-
-| Condition            | Description              |
-| -------------------- | ------------------------ |
-| `[[ -o noclobber ]]` | If OPTIONNAME is enabled |
-
-| `[[ ! EXPR ]]`       | Not                      |
-| `[[ X && Y ]]`       | And                      |
-| `[[ X || Y ]]`       | Or                       |
-
-### File conditions
-
-| Condition               | Description             |
-| ---                     | ---                     |
-| `[[ -e FILE ]]`         | Exists                  |
-| `[[ -r FILE ]]`         | Readable                |
-| `[[ -h FILE ]]`         | Symlink                 |
-| `[[ -d FILE ]]`         | Directory               |
-| `[[ -w FILE ]]`         | Writable                |
-| `[[ -s FILE ]]`         | Size is > 0 bytes       |
-| `[[ -f FILE ]]`         | File                    |
-| `[[ -x FILE ]]`         | Executable              |
-
-| `[[ FILE1 -nt FILE2 ]]` | 1 is more recent than 2 |
-| `[[ FILE1 -ot FILE2 ]]` | 2 is more recent than 1 |
-| `[[ FILE1 -ef FILE2 ]]` | Same files              |
-
-### Example
-
-#### String
-```bash
-if [[ -z "$string" ]]; then
-    echo "String is empty"
-elif [[ -n "$string" ]]; then
-    echo "String is not empty"
-else
-    echo "This never happens"
-fi
-```
-
-#### Combinations
-```bash
-if [[ X && Y ]]; then
-    ...
-fi
-```
-
-#### Equal
-```bash
-if [[ "$A" == "$B" ]]; then
-    ...
-fi
-```
-
-#### Regex
-```bash
-if [[ '1. abc' =~ ([a-z]+) ]]; then
-    echo ${BASH_REMATCH[1]}
-fi
-```
-
-#### Smaller
-```bash
-if (( $a < $b )); then
-   echo "$a is smaller than $b"
-fi
-```
-
-#### Exists
-```bash
-if [[ -e "file.txt" ]]; then
-    echo "file exists"
-fi
-```
-
-Arrays  {.cols-2}
-------
-
-### Defining arrays
-
-```bash
-Fruits=('Apple' 'Banana' 'Orange')
-```
-
-```bash
-Fruits[0]="Apple"
-Fruits[1]="Banana"
-Fruits[2]="Orange"
-```
-
-
-### Iteration
-
-```bash
-for i in "${arrayName[@]}"; do
-    echo $i
-done
-```
-
-
-### Working with arrays
-
-```bash
-echo ${Fruits[0]}      # Element #0
-echo ${Fruits[-1]}     # Last element
-echo ${Fruits[@]}      # All elements, space-separated
-echo ${#Fruits[@]}     # Number of elements
-echo ${#Fruits}        # String length of the 1st element
-echo ${#Fruits[3]}     # String length of the Nth element
-echo ${Fruits[@]:3:2}  # Range (from position 3, length 2)
-echo ${!Fruits[@]}     # Keys of all elements, space-separated
-```
-
-### Operations
-
-```bash
-Fruits=("${Fruits[@]}" "Watermelon")    # Push
-Fruits+=('Watermelon')                  # Also Push
-Fruits=( ${Fruits[@]/Ap*/} )            # Remove by regex match
-unset Fruits[2]                         # Remove one item
-Fruits=("${Fruits[@]}")                 # Duplicate
-Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
-lines=(`cat "logfile"`)                 # Read from file
-```
-
-Dictionaries {.cols-3}
-------------
-
-### Defining
-
-```bash
-declare -A sounds
-```
-
-```bash
-sounds[dog]="bark"
-sounds[cow]="moo"
-sounds[bird]="tweet"
-sounds[wolf]="howl"
-```
-
-Declares `sound` as a Dictionary object (aka associative array).
-
-### Working with dictionaries
-
-```bash
-echo ${sounds[dog]} # Dog's sound
-echo ${sounds[@]}   # All values
-echo ${!sounds[@]}  # All keys
-echo ${#sounds[@]}  # Number of elements
-unset sounds[dog]   # Delete dog
-```
-
-### Iteration
-
-#### Iterate over values
-
-```bash
-for val in "${sounds[@]}"; do
-    echo $val
-done
-```
-
-#### Iterate over keys
-
-```bash
-for key in "${!sounds[@]}"; do
-    echo $key
-done
-```
 
 Options  {.cols-2}
 -------
@@ -604,24 +688,43 @@ Options  {.cols-2}
 ### Options
 
 ```bash
-set -o noclobber # Avoid overlay files (echo "hi" > foo)
-set -o errexit   # Used to exit upon error, avoiding cascading errors
-set -o pipefail  # Unveils hidden failures
-set -o nounset   # Exposes unset variables
+# Avoid overlay files
+# (echo "hi" > foo)
+set -o noclobber
+
+# Used to exit upon error
+# avoiding cascading errors
+set -o errexit   
+
+# Unveils hidden failures
+set -o pipefail  
+
+# Exposes unset variables
+set -o nounset
 ```
 
 ### Glob options
 
 ```bash
-shopt -s nullglob   # Non-matching globs are removed  ('*.foo' => '')
-shopt -s failglob   # Non-matching globs throw errors
-shopt -s nocaseglob # Case insensitive globs
-shopt -s dotglob    # Wildcards match dotfiles ("*.sh" => ".foo.sh")
-shopt -s globstar   # Allow ** for recursive matches ('lib/**/*.rb' => 'lib/a/b/c.rb')
+# Non-matching globs are removed  
+# ('*.foo' => '')
+shopt -s nullglob   
+
+# Non-matching globs throw errors
+shopt -s failglob  
+
+# Case insensitive globs
+shopt -s nocaseglob 
+
+# Wildcards match dotfiles 
+# ("*.sh" => ".foo.sh")
+shopt -s dotglob    
+
+# Allow ** for recursive matches 
+# ('lib/**/*.rb' => 'lib/a/b/c.rb')
+shopt -s globstar   
 ```
 
-Set `GLOBIGNORE` as a colon-separated list of patterns to be removed from glob
-matches.
 
 History {.cols-2}
 -------
@@ -767,8 +870,8 @@ printf "Hello %s, I'm %s" Sven Olga
 printf "1 + 1 = %d" 2
 #=> "1 + 1 = 2"
 
-printf "This is how you print a float: %f" 2
-#=> "This is how you print a float: 2.000000"
+printf "Print a float: %f" 2
+#=> "Print a float: 2.000000"
 ```
 
 ### Getting options {.col-span-2}
@@ -883,6 +986,25 @@ echo $ans
 ```bash
 read -n 1 ans    # Just one character
 ```
+
+
+### Conditional execution
+
+```bash
+git commit && git push
+git commit || echo "Commit failed"
+```
+
+
+### Strict mode
+
+```bash
+set -euo pipefail
+IFS=$'\n\t'
+```
+
+See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+
 
 ## Also see {.cols-1}
 * [Devhints](https://devhints.io/bash) _(devhints.io)_
