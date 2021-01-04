@@ -20,8 +20,10 @@ Getting started {.cols-3}
 ### Visualization
 
 ```bash
-        ▼|► Cursor     ▽|▷ Target
-
+▼/▶ Cursor   ▽/▷ Target
+```
+---
+```bash
 ┌───────────── 0      $ ──────────────┐
 │  ┌────────── ^      fe ────────┐    │
 │  │  ┌─────── Fo     te ───────┐│    │
@@ -30,7 +32,6 @@ Getting started {.cols-3}
 │  │  ││ │    ┌h      l┐ │ │    ││    │
 ▽  ▽  ▽▽ ▽    ▽▼      ▼▽ ▽ ▽    ▽▽    ▽
    echo "A cheatsheet from quickref.me"
-
 ```
 ---
 ```bash
@@ -38,11 +39,11 @@ Getting started {.cols-3}
    ┌─┬─────────▷ #!/usr/bin/python
    │ │     ┌───▷     
    │ │     │     print("Hello")
-   │ │     { } ► print("Vim")
+   │ │     { } ▶ print("Vim")
    │ │       │   print("!")
    │ │       └─▷    
    │ │ ┌───┬───▷ print("Welcome")
-G gg H M L k j ► print("to")
+G gg H M L k j ▶ print("to")
 │        │   └─▷ print("quickref.me")
 │        │       print("/vim")
 │        │     
@@ -81,8 +82,8 @@ G gg H M L k j ► print("to")
 
 | Shortcut | Description    |
 | ---      | ---            |
-| `fc`  | Go forward to character `c`  |
-| `Fc`  | Go backward to character `c` |
+| `fe`  | Go forward to character `e`  |
+| `Fo`  | Go backward to character `o` |
 {.shortcuts}
 
 #### Document
