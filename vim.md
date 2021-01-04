@@ -11,12 +11,45 @@ tags:
 categories:
     - Toolkit
 intro: |
- [Vim](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.   
- For shortcut notation.
+ [Vim](http://www.vim.org/) is a very efficient text editor. This quick reference cheat sheet was made for Vim 8.0.   
 ---
 
 Getting started {.cols-3}
 ---------------
+
+### Visualization
+
+```bash
+        ▼|► Cursor     ▽|▷ Target
+
+┌───────────── 0      $ ──────────────┐
+│  ┌────────── ^      fe ────────┐    │
+│  │  ┌─────── Fo     te ───────┐│    │
+│  │  │┌────── To     w ───┐    ││    │
+│  │  ││ ┌──── ge     e ─┐ │    ││    │
+│  │  ││ │    ┌h      l┐ │ │    ││    │
+▽  ▽  ▽▽ ▽    ▽▼      ▼▽ ▽ ▽    ▽▽    ▽
+   echo "A cheatsheet from quickref.me"
+
+```
+---
+```bash
+                 - SCREEN 1 START
+   ┌─┬─────────▷ #!/usr/bin/python
+   │ │     ┌───▷     
+   │ │     │     print("Hello")
+   │ │     { } ► print("Vim")
+   │ │       │   print("!")
+   │ │       └─▷    
+   │ │ ┌───┬───▷ print("Welcome")
+G gg H M L k j ► print("to")
+│        │   └─▷ print("quickref.me")
+│        │       print("/vim")
+│        │     
+│        └─────▷ 
+│                - SCREEN 1 END
+└──────────────▷ print("SCREEN 2")
+``` 
 
 ### Navigating {.row-span-3}
 
