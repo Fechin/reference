@@ -148,13 +148,27 @@ See: [Functions](#functions-3)
 
 ### Constants
 ```php
-define("MY_CONST", "hello");
+const MY_CONST = "hello";
 
 echo MY_CONST;   # => hello
 
 # => MY_CONST is: hello
 echo 'MY_CONST is: ' . MY_CONST; 
 ```
+
+
+
+### Runtime defined Constants
+```php
+define("CURRENT_DATE", date('Y-m-d'));
+
+// One possible representation
+echo CURRENT_DATE;   # => 2021-01-05
+
+# => CURRENT_DATE is: 2021-01-05
+echo 'CURRENT_DATE is: ' . CURRENT_DATE; 
+```
+
 
 
 ### Classes
