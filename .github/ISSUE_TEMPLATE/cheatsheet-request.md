@@ -7,5 +7,4 @@ assignees: Randy8080
 
 ---
 
-## Refer URL
-[1]
+
