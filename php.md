@@ -107,8 +107,9 @@ echo $fruit . "\n";   # => apple
 cause an error if cannot be included*/
 require 'vars.php';
 
-// Import only once
-include_once 'vars.php';
+// Also works
+include('vars.php');
+require('vars.php');
 
 // Include through HTTP
 include 'http://x.com/file.php';
@@ -157,17 +158,6 @@ echo 'MY_CONST is: ' . MY_CONST;
 ```
 
 
-
-### Runtime defined Constants
-```php
-define("CURRENT_DATE", date('Y-m-d'));
-
-// One possible representation
-echo CURRENT_DATE;   # => 2021-01-05
-
-# => CURRENT_DATE is: 2021-01-05
-echo 'CURRENT_DATE is: ' . CURRENT_DATE; 
-```
 
 
 
@@ -467,7 +457,7 @@ foo(...$array);
 ```
 
 
-### Rest parameters
+### Splat Operator
 ```php
 function foo($first, ...$other) {
 	var_dump($first); # => a
@@ -614,6 +604,33 @@ echo $a ?? 'a is unset';
 echo $b ?? 'b is unset';
 ```
 
+### Match
+```php
+$statusCode = 500;
+$message = match($statusCode) {
+  200, 300 => null,
+  400 => 'not found',
+  500 => 'server error',
+  default => 'known status code',
+};
+echo $message; # => server error
+```
+See: [Match](https://www.php.net/manual/en/control-structures.match.php)
+
+
+### Match expressions
+```php
+$age = 23;
+
+$result = match (true) {
+    $age >= 65 => 'senior',
+    $age >= 25 => 'adult',
+    $age >= 18 => 'young adult',
+    default => 'kid',
+};
+
+echo $result; # => young adult
+```
 
 
 Loops {.cols-3}
@@ -691,11 +708,44 @@ function square($x)
 {
     return $x * $x;
 }
+
 echo square(4);  # => 16
 ```
 
+### Return types
+```php
+// Basic return type declaration
+function sum($a, $b): float {/*...*/}
+function get_item(): string {/*...*/}
 
+class C {}
+// Returning an object
+function getC(): C { return new C; }
+```
 
+### Nullable return types
+```php
+// Available in PHP 7.1
+function nullOrString(int $v) : ?string
+{
+    return $v % 2 ? "odd" : null;
+}
+echo nullOrString(3);       # => odd
+var_dump(nullOrString(4));  # => NULL
+```
+See: [Nullable types](https://www.php.net/manual/en/migration71.new-features.php)
+
+### Void functions
+```php
+// Available in PHP 7.1
+function voidFunction(): void
+{
+	echo 'Hello';
+	return;
+}
+
+voidFunction();  # => Hello
+```
 
 ### Variable functions
 ```php
@@ -719,10 +769,24 @@ $greet = function($name)
     printf("Hello %s\r\n", $name);
 };
 
-$greet('World');
-$greet('PHP');
+$greet('World'); # => Hello World
+$greet('PHP');   # => Hello PHP
 ```
 
+
+
+
+### Recursive functions
+```php
+function recursion($x)
+{
+    if ($x < 5) {
+        echo "$x";
+        recursion($x + 1);
+    }
+}
+recursion(1);  # => 1234
+```
 
 
 
@@ -757,20 +821,6 @@ echo $fn2(5);   # => 6
 ```
 
 
-
-
-### Recursive functions
-```php
-function recursion($x)
-{
-    if ($x < 5) {
-        echo "$x";
-        recursion($x + 1);
-    }
-}
-
-echo recursion(1);  # => 1234
-```
 
 
 Classes {.cols-3}
@@ -956,10 +1006,22 @@ See: [Regex in PHP](/regex#regex-in-php)
 
 
 
+### Runtime defined Constants
+```php
+define("CURRENT_DATE", date('Y-m-d'));
+
+// One possible representation
+echo CURRENT_DATE;   # => 2021-01-05
+
+# => CURRENT_DATE is: 2021-01-05
+echo 'CURRENT_DATE is: ' . CURRENT_DATE; 
+```
+
+
 Also see 
 -------
 
-- [PHP Docs](https:#www.php.net/manual/en/index.php)
+- [PHP Docs](https://www.php.net/manual/en/index.php)
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/php/)
 
 
