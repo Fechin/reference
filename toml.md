@@ -7,7 +7,7 @@ tags:
 categories:
   - Programming
 intro: |
-    This is a quick reference cheat sheet to the TOML config file syntax.
+    This is a quick reference cheat sheet to the TOML format configuration file syntax.
 ---
 
 
@@ -131,8 +131,10 @@ Strings {.cols-3}
 ### Multiline String
 ```toml
 multiLineString = """
-are surrounded by three quotation marks
-on each side and allow newlines."""
+Multi-line basic strings are surrounded
+by three quotation marks on each side
+and allow newlines. 
+"""
 ```
 
 

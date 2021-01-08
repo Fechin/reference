@@ -7,7 +7,7 @@ tags:
 categories:
   - Programming
 intro: |
-   This is a quick reference cheat sheet for understanding and writing in YAML. 
+   This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
 ---
 
 Getting started {.cols-3}
@@ -45,7 +45,7 @@ d: 2015-04-05    # date type
   "d": "2015-04-05"
 }
 ```
-
+Use spaces to indent. There must be space between the element parts.
 
 
 
