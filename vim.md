@@ -264,12 +264,12 @@ Combine operators with *motions* to use them.
 
 | Shortcut               | Description                               |
 | ---                    | ---                                       |
-| `d`_d_                 | _(repeat the letter)_ Delete current line |
+| `d`_d_                 | Delete current line |
 | `d`_w_                 | Delete to next word                       |
 | `d`_b_                 | Delete to beginning of word               |
 | _2_`dd`                | Delete 2 lines                            |
 | `d`_ip_                | Delete a text object _(inside paragraph)_ |
-| _(in visual mode)_ `d` | Delete selection                          |
+| `d`                    | Delete selection _(in visual mode)_       |
 
 See `:help motion.txt`
 
