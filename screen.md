@@ -19,30 +19,30 @@ Getting started {.cols-3}
 ```shell script
 $ screen 
 ```
-Press `Ctrl-a d` to detach session
+1\. Press `Ctrl-a d` to detach session
 
 ---
 
-List all screen sessions
+2\. List all screen sessions
 ```shell script
 $ screen -ls
 ```
-Re-attach a screen Session
+3\. Re-attach a screen Session
 ```shell script
-screen -r <name/pid>
+$ screen -r <name/pid>
 ```
 
 
 ### Options {.col-span-2}
 | Options | Example                                 | Description                           |
 |---------|-----------------------------------------|---------------------------------------|
-| `-S`    | `screen -S debug`                       | Start a new session with session name |
-| `-ls`   | `screen -ls`                            | List running sessions / screens       |
-| `-x`    | `screen -x`                             | Attach to a running session           |
-| `-r`    | `screen -r debug`                       | Attach to a running session with name |
-| `-R`    | `screen -R debug`                       | Attach to a session <br>_(Will create if it doesn't exist)_           |
-| `-d`    | `screen -d -m wget xxxx.com/large.file` | Start screen in detached mode         |
-| `-X`    | `screen -X -S debug kill`               | Kill a running session                |
+| `-S`    | screen -S debug                        | Start a new session with session name |
+| `-ls`   | screen -ls                             | List running sessions / screens       |
+| `-x`    | screen -x                              | Attach to a running session           |
+| `-r`    | screen -r debug                        | Attach to a running session with name |
+| `-R`    | screen -R debug                        | Attach to a session _(Will create if it doesn't exist)_           |
+| `-d`    | screen -d -m wget xxxx.com/large.file  | Start screen in detached mode         |
+| `-X`    | screen -X -S debug kill                | Kill a running session                |
 {.show-header}
 
 
@@ -94,7 +94,7 @@ screen -r <name/pid>
 | `Ctrl-a` `S`   | Split display horizontally             |
 | `Ctrl-a` `V`   | Split display vertically               |
 | `Ctrl-a` `|`   | Split display vertically               |
-| `Ctrl-a` `tab` | Jump to next display region            |
+| `Ctrl-a` `TAB` | Jump to next display region            |
 | `Ctrl-a` `X`   | Remove current region                  |
 | `Ctrl-a` `Q`   | Remove all regions but the current one |
 {.shortcuts}
