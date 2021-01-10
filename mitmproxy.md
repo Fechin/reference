@@ -42,8 +42,8 @@ h ◀ ─── + ─── ▶ l           ││ page
 | -                  | -                     |
 |--------------------|-----------------------|
 | `h`, `j`, `k` ,`l` | Left, Down, Up, Right |
-| `Ctrl b`           | Page up               |
-| `Space` / `Ctrl f` | Page down             |
+| `Ctrl` `b`           | Page up             |
+| `Space` / `Ctrl` `f` | Page down           |
 | `g` / `G`          | Go to beginning / end |
 | `Arrows`           | Up, Down, Left, Right |
 {.shortcuts}
@@ -79,8 +79,8 @@ h ◀ ─── + ─── ▶ l           ││ page
 | `Q`          | Exit immediately          |
 | `W`          | Stream to file            |
 | `i`          | Set intercept             |
-| `Ctrl right` | Focus next layout pane    |
-| `Shift tab`  | Focus next layout pane    |
+| `Ctrl` `right` | Focus next layout pane    |
+| `Shift` `tab`  | Focus next layout pane    |
 {.shortcuts}
 
 
@@ -113,7 +113,7 @@ h ◀ ─── + ─── ▶ l           ││ page
 | `v`      | Reverse flow list order      |
 | `w`      | Save listed flows to file    |
 | `|`       | Run a script on this flow    |
-| `Ctrl l` | Send cuts to clipboard       |
+| `Ctrl` `l` | Send cuts to clipboard       |
 
 {.shortcuts}
 
@@ -152,27 +152,27 @@ The regex are Python-style, it can be specified as quoted strings
 | - | - |
 |--------------|------------------------------------------------------------|
 | `~a`         | Match asset in response: CSS, Javascript, Flash, images.   |
-| `~b regex`   | Body                                                       |
-| `~bq regex`  | Request body                                               |
-| `~bs regex`  | Response body                                              |
-| `~c int`     | HTTP response code                                         |
-| `~d regex`   | Domain                                                     |
-| `~dst regex` | Match destination address                                  |
+| `~b` `regex`   | Body                                                       |
+| `~bq` `regex`  | Request body                                               |
+| `~bs` `regex`  | Response body                                              |
+| `~c` `int`     | HTTP response code                                         |
+| `~d` `regex`   | Domain                                                     |
+| `~dst` `regex` | Match destination address                                  |
 | `~e`         | Match error                                                |
-| `~h regex`   | Header                                                     |
-| `~hq regex`  | Request header                                             |
-| `~hs regex`  | Response header                                            |
+| `~h` `regex`   | Header                                                     |
+| `~hq` `regex`  | Request header                                             |
+| `~hs` `regex`  | Response header                                            |
 | `~http`      | Match HTTP flows                                           |
-| `~m regex`   | Method                                                     |
+| `~m` `regex`   | Method                                                     |
 | `~marked`    | Match marked flows                                         |
 | `~q`         | Match request with no response                             |
 | `~s`         | Match response                                             |
-| `~src regex` | Match source address                                       |
-| `~t regex`   | Content-type header                                        |
+| `~src` `regex` | Match source address                                       |
+| `~t` `regex`   | Content-type header                                        |
 | `~tcp`       | Match TCP flows                                            |
-| `~tq regex`  | Request Content-Type header                                |
-| `~ts regex`  | Response Content-Type header                               |
-| `~u regex`   | URL                                                        |
+| `~tq` `regex`  | Request Content-Type header                                |
+| `~ts` `regex`  | Response Content-Type header                               |
+| `~u` `regex`   | URL                                                        |
 | `~websocket` | Match WebSocket flows (and HTTP-WebSocket handshake flows) |
 
 ### Flow selectors
