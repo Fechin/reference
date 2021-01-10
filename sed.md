@@ -44,7 +44,7 @@ $ echo '123abc' | sed 's/[0-9]+//g'
 
 ### Multiple commands
 ```shell script {.wrap}
-$ echo "hello world" | sed -e 's/hello/Hello/g' -e 's/world/World/g'
+$ echo "hello world" | sed -e 's/h/H/g' -e 's/w/W/g'
 Hello World
 ```
 Use `-e` to execute multiple sed commands
@@ -53,8 +53,8 @@ Use `-e` to execute multiple sed commands
 
 ### Sed script
 ```shell script
-$ echo 's/hello/Hello/g' >> hello.sed
-$ echo 's/world/World/g' >> hello.sed
+$ echo 's/h/H/g' >> hello.sed
+$ echo 's/w/W/g' >> hello.sed
 $ echo "hello world" | sed -f hello.sed
 Hello World
 ```
@@ -83,11 +83,12 @@ Sed commands {.cols-3}
 
 | Command | Example                                 | Description                  |
 | ------- | --------------------------------------- |----------------------------- |
-| `p`     | sed -n '1,4 p' input.txt                | Print pattern space          |
-| `d`     | sed -n '1,4 d' input.txt                | Delete lines                 |
+| `p`     | sed -n '1,4 p' input.txt                | Print lines 1-4            |
+| `p`     | sed -n -e '1,4 p' -e '6,7 p' input.txt   | Print lines 1-4 and 6-7  |
+| `d`     | sed '1,4 d' input.txt                | Print lines except 1-4 |
 | `w`     | sed -n '1,4 w output.txt' input.txt     | Write pattern space to file  |
 | `a`     | sed '2 a new-line' input.txt            | Append line after            |
-| `a`     | sed '2 i new-line' input.txt            | Insert line before           |
+| `i`     | sed '2 i new-line' input.txt            | Insert line before           |
 {.show-header}
 
 
