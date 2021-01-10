@@ -316,7 +316,7 @@ $ find . -type f -name 'file*' -exec sh -c 'x="{}"; mv "$x" "${x}.bak"' \;
 
 ### Find and move
 ```shell script
-find . -name '*.mp3' -exec mv {} /tmp/music \;
+$ find . -name '*.mp3' -exec mv {} /tmp/music \;
 ```
 Find and move it to a specific directory
 
