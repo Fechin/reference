@@ -18,7 +18,7 @@ intro: |
 
 ### Starting Emacs
 To enter GNU Emacs 27, just type its name: 
-```bash
+```shell script
 $ emacs
 ```
 
@@ -39,13 +39,13 @@ $ emacs
 | `C-b`      | `C-f`     | Haracter                         |
 | `M-b`      | `M-f`     | Word                             |
 | `C-p`      | `C-n`     | Line                             |
-| `C-a`      | `C-e`     | To line beginning<br>_(or end)_  |
+| `C-a`      | `C-e`     | Line beginning<br/>_(or end)_  |
 | `M-a`      | `M-e`     | Sentence                         |
 | `M-{`      | `M-}`     | Paragraph                        |
-| `C-x [`    | `C-x ]`   | Page                             |
+| `C-x` `[`  | `C-x` `]`   | Page                             |
 | `C-M-b`    | `C-M-f`   | Sexp                             |
 | `C-M-a`    | `C-M-e`   | Function                         |
-| `M-<`      | `M->`     | To buffer beginning<br>_(or end)_|
+| `M-<`      | `M->`     | Buffer beginning<br>_(or end)_|
 {.shortcuts .show-header}
 
 
@@ -57,8 +57,8 @@ $ emacs
 | `M-u`     | Uppercase word   |
 | `M-l`     | Lowercase word   |
 | `M-c`     | Capitalize word  |
-| `C-x C-u` | Uppercase region |
-| `C-x C-l` | Lowercase region |
+| `C-x` `C-u` | Uppercase region |
+| `C-x` `C-l` | Lowercase region |
 {.shortcuts}
 
 
@@ -85,7 +85,7 @@ $ emacs
 |-----------------------|--------------------------------------------|
 | `C-g`                 | Abort partially typed or executing command |
 | `M-x` recover-session | Recover files lost by a system crash       |
-| `C-x u` / `C-_` / `C-/`   | Undo an unwanted change                    |
+| `C-x` `u`<br>`C-_`<br>`C-/`   | Undo an unwanted change                    |
 | `M-x` revert-buffer   | Restore a buffer to its original contents  |
 | `C-l`                 | Redraw garbaged screen                     |
 {.shortcuts}
@@ -99,7 +99,7 @@ $ emacs
 |-----------|----------------------|
 | `C-t`     | Transpose characters |
 | `M-t`     | Transpose words      |
-| `C-x C-t` | Transpose lines      |
+| `C-x` `C-t` | Transpose lines      |
 | `C-M-t`   | Transpose sexps      |
 {.shortcuts}
 
@@ -109,19 +109,19 @@ $ emacs
 |---------|--------------------------------------------------|
 | `C-v`   | Scroll to next screen                            |
 | `M-v`   | Scroll to previous screen                        |
-| `C-x <` | Scroll left                                      |
-| `C-x >` | Scroll right                                     |
+| `C-x` `<` | Scroll left                                      |
+| `C-x` `>` | Scroll right                                     |
 | `C-l`   | Scroll current line to <br>_center, top, bottom_ |
-{.shortcuts .show-header}
+{.shortcuts}
 
 #### Goto
 
 | - | - |
 |---------|----------------------|
-| `M-g g` | Goto line            |
-| `M-g c` | Goto char            |
+| `M-g` `g` | Goto line            |
+| `M-g` `c` | Goto char            |
 | `M-m`   | Back to indentation  |
-{.shortcuts .show-header}
+{.shortcuts}
 
 
 
@@ -131,14 +131,14 @@ $ emacs
 
 | - | - |
 |----------------|-------------------------|
-| `C-@` \/ `C-SPC`| Uet mark here           |
-| `C-x C-x`      | Exchange point and mark |
+| `C-@`<br/>`C-SPC`| Uet mark here           |
+| `C-x` `C-x`      | Exchange point and mark |
 | `M-@`          | Set mark arg words away |
 | `M-h`          | Mark paragraph          |
-| `C-x C-p`      | Mark page               |
+| `C-x` `C-p`      | Mark page               |
 | `C-M-@`        | Mark sexp               |
 | `C-M-h`        | Mark function           |
-| `C-x h`        | Mark entire buffer      |
+| `C-x` `h`        | Mark entire buffer      |
 {.shortcuts}
 
 
@@ -148,11 +148,11 @@ $ emacs
 
 | Backward    |   Forward  | Entity to kill                       |
 |-------------|------------|--------------------------------------|
-| `DEL`       | `C-d`      | Character <br>_(delete, not kill)_   |
+| `DEL`       | `C-d`      | Character <br>_(delete)_   |
 | `M-DEL`     | `M-d`      | Word                                 |
-| `M-0 C-k`   | `C-k`      | Line (to end of)                     |
-| `C-x DEL`   | `M-k`      | Sentence                             |
-| `M-- C-M-k` | `C-M-k`    | Sexp                                 |
+| `M-0` `C-k`   | `C-k`      | Line <br/> _(to end of)_           |
+| `C-x` `DEL`   | `M-k`      | Sentence                             |
+| `M--` `C-M-k` | `C-M-k`    | Sexp                                 |
 {.shortcuts .show-header}
 #### Killing
 
@@ -173,15 +173,15 @@ $ emacs
 
 | - | - |
 |---------|------------------------------------------|
-| `C-x 1` | Remove help window                       |
+| `C-x` `1` | Remove help window                       |
 | `C-M-v` | Scroll help window                       |
-| `C-h a` | Apropos: show commands matching a string |
-| `C-h k` | Describe the function a key runs         |
-| `C-h f` | Describe a function                      |
-| `C-h m` | Get mode-specific information            |
+| `C-h` `a` | Apropos: show commands matching a string |
+| `C-h` `k` | Describe the function a key runs         |
+| `C-h` `f` | Describe a function                      |
+| `C-h` `m` | Get mode-specific information            |
 {.shortcuts}
 
-The help system is simple. Type `C-h` (or `F1`) and follow the directions. If you are a first-time user, type `C-h t` for a tutorial.
+The help system is simple. Type `C-h` (or `F1`) and follow the directions. If you are a first-time user, type `C-h` `t` for a tutorial.
 
 
 
@@ -190,24 +190,24 @@ The help system is simple. Type `C-h` (or `F1`) and follow the directions. If yo
 When two commands are shown, the second is a similar command for a frame instead of a window.
 | - | - | - |
 |-------------|-------------|-------------------------------------|
-| `C-x 5 1`   | `C-x 1`     | Delete all other windows            |
-| `C-x 5 2`   | `C-x 2`     | Split window, above and below       |
-| `C-x 5 0`   | `C-x 0`     | Delete this window                  |
+| `C-x` `5` `1`   | `C-x` `1`     | Delete all other windows            |
+| `C-x` `5` `2`   | `C-x` `2`     | Split window, above and below       |
+| `C-x` `5` `0`   | `C-x` `0`     | Delete this window                  |
 
-| `C-x 3`     ||              Split window, side by side          |
+| `C-x` `3`     ||              Split window, side by side          |
 | `C-M-v`     ||              Scroll other window                 |
 
-| `C-x 5 o`   | `C-x o`     | Switch cursor to another window     |
-| `C-x 5 b`   | `C-x 4 b`   | Select buffer in other window       |
-| `C-x 5 C-o` | `C-x 4 C-o` | Display buffer in other window      |
-| `C-x 5 f`   | `C-x 4 f`   | Find file in other window           |
-| `C-x 5 r`   | `C-x 4 r`   | Find file read-only in other window |
-| `C-x 5 d`   | `C-x 4 d`   | Run Dired in other window           |
-| `C-x 5 .`   | `C-x 4 .`   | Find tag in other window            |
+| `C-x` `5` `o`   | `C-x` `o`     | Switch cursor to another window     |
+| `C-x` `5` `b`   | `C-x` `4` `b`   | Select buffer in other window       |
+| `C-x` `5` `C-o` | `C-x` `4` `C-o` | Display buffer in other window      |
+| `C-x` `5` `f`   | `C-x` `4` `f`   | Find file in other window           |
+| `C-x` `5` `r`   | `C-x` `4` `r`   | Find file read-only in other window |
+| `C-x` `5` `d`   | `C-x` `4` `d`   | Run Dired in other window           |
+| `C-x` `5` `.`   | `C-x` `4` `.`   | Find tag in other window            |
 
-| `C-x ^`     ||              Grow window taller                  |
-| `C-x {`     ||              Shrink window narrower              |
-| `C-x }`     ||              Grow window wider                   |
+| `C-x` `^`     ||              Grow window taller                  |
+| `C-x` `{`     ||              Shrink window narrower              |
+| `C-x` `}`     ||              Grow window wider                   |
 {.shortcuts}
 
 
@@ -220,17 +220,17 @@ When two commands are shown, the second is a similar command for a frame instead
 | `TAB`     | Indent current line (mode-dependent)     |
 | `C-M-\`   | Indent region (mode-dependent)           |
 | `C-M-q`   | Indent sexp (mode-dependent)             |
-| `C-x TAB` | Indent region rigidly arg columns        |
+| `C-x` `TAB` | Indent region rigidly arg columns        |
 | `M-;`     | Indent for comment                       |
 | `C-o`     | Insert newline after point               |
 | `C-M-o`   | Move rest of line vertically down        |
-| `C-x C-o` | Delete blank lines around point          |
+| `C-x` `C-o` | Delete blank lines around point          |
 | `M-^`     | Join line with previous (with arg, next) |
 | `M-\`     | Delete all white space around point      |
 | `M-SPC`   | Put exactly one space at point           |
 | `M-q`     | Fill paragraph                           |
-| `C-x f`   | Set fill column to arg                   |
-| `C-x .`   | Set prefix each line starts with         |
+| `C-x` `f`   | Set fill column to arg                   |
+| `C-x` `.`   | Set prefix each line starts with         |
 | `M-o`     | Set face                                 |
 {.shortcuts}
 
@@ -241,8 +241,8 @@ When two commands are shown, the second is a similar command for a frame instead
 
 | - | - |
 |---------|---------------------------------------------|
-| `C-h i` | Enter the Info documentation reader         |
-| `C-h S` | Find specified function or variable in Info |
+| `C-h` `i` | Enter the Info documentation reader         |
+| `C-h` `S` | Find specified function or variable in Info |
 {.shortcuts}
 
 #### Moving within a node
@@ -298,7 +298,7 @@ The following keys are defined in the minibuffer.
 | `C-g` | Abort command                           |
 {.shortcuts}
 
-Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer. Type `F10` to activate menu bar items on text terminals.
+Type `C-x` `ESC` `ESC` to edit and repeat the last command that used the minibuffer. Type `F10` to activate menu bar items on text terminals.
 
 
 
@@ -309,7 +309,7 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 | - | - |
 |--------------------------|--------------------------------------------|
 | `M-.`                    | Find a tag (a definition)                  |
-| `C-u M-.`                | Find next occurrence of tag                |
+| `C-u` `M-.`                | Find next occurrence of tag                |
 | `M-x` visit-tags-table   | Specify a new tags file                    |
 | `M-x` tags-search        | Regexp search on all files in tags table   |
 | `M-x` tags-query-replace | Run query-replace on all the files         |
@@ -322,12 +322,12 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 | - | - |
 |-----------|-------------------------------------|
-| `C-x r r` | Copy rectangle to register          |
-| `C-x r k` | Kill rectangle                      |
-| `C-x r y` | Yank rectangle                      |
-| `C-x r o` | Open rectangle, shifting text right |
-| `C-x r c` | Blank out rectangle                 |
-| `C-x r t` | Prefix each line with a string      |
+| `C-x` `r` `r` | Copy rectangle to register          |
+| `C-x` `r` `k` | Kill rectangle                      |
+| `C-x` `r` `y` | Yank rectangle                      |
+| `C-x` `r` `o` | Open rectangle, shifting text right |
+| `C-x` `r` `c` | Blank out rectangle                 |
+| `C-x` `r` `t` | Prefix each line with a string      |
 {.shortcuts}
 
 
@@ -336,10 +336,10 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 | - | - |
 |---------------------------|-------------------------------------|
-| `C-x (`                   | Start defining a keyboard macro     |
-| `C-x )`                   | End keyboard macro definition       |
-| `C-x e`                   | Execute last-defined keyboard macro |
-| `C-u C-x (`               | Append to last keyboard macro       |
+| `C-x` `(`                   | Start defining a keyboard macro     |
+| `C-x` `)`                   | End keyboard macro definition       |
+| `C-x` `e`                   | Execute last-defined keyboard macro |
+| `C-u` `C-x` `(`               | Append to last keyboard macro       |
 | `M-x` name-last-kbd-macro | Name last keyboard macro            |
 | `M-x` insert-kbd-macro    | Insert Lisp definition in buffer    |
 {.shortcuts}
@@ -351,9 +351,9 @@ Type `C-x ESC ESC` to edit and repeat the last command that used the minibuffer.
 
 | - | - |
 |-----------|-----------------------|
-| `C-x b`   | Select another buffer |
-| `C-x C-b` | List all buffers      |
-| `C-x k`   | Kill a buffer         |
+| `C-x` `b`   | Select another buffer |
+| `C-x` `C-b` | List all buffers      |
+| `C-x` `k`   | Kill a buffer         |
 {.shortcuts}
 
 
@@ -367,7 +367,7 @@ Search{.cols-3}
 
 | - | - |
 |-------------------|----------------------------------------------|
-| `. (dot)`         | Any single character except a newline        |
+| `.` `(dot)`         | Any single character except a newline        |
 | `*`               | Zero or more repeats                         |
 | `+`               | One or more repeats                          |
 | `?`               | Zero or one repeat                           |
@@ -449,8 +449,8 @@ Misc {.cols-3}
 | `M-!`       | Execute a shell command                |
 | `M-&`       | Execute a shell command asynchronously |
 | `M-`        | Run a shell command on the region      |
-| `C-u M-`    | Filter region through a shell command  |
-| `M-x` shell | Start a shell in window **shell**        |
+| `C-u` `M-`    | Filter region through a shell command  |
+| `M-x` shell | Start a shell in window shell        |
 {.shortcuts}
 
 
@@ -459,10 +459,10 @@ Misc {.cols-3}
 
 | - | - |
 |----------------------------|------------------------------------|
-| `C-x RET l`                | specify principal language         |
+| `C-x` `RET` `l`                | specify principal language         |
 | `M-x` list-input-methods   | show all input methods             |
 | `C-\`                      | enable or disable input method     |
-| `C-x RET c`                | set coding system for next command |
+| `C-x` `RET` `c`                | set coding system for next command |
 | `M-x` list-coding-systems  | show all coding systems            |
 | `M-x` prefer-coding-system | choose preferred coding system     |
 {.shortcuts}
@@ -472,10 +472,10 @@ Misc {.cols-3}
 
 | - | - |
 |-------------|--------------------------------------|
-| `C-x r s`   | Save region in register              |
-| `C-x r i`   | Insert register contents into buffer |
-| `C-x r SPC` | Save value of point in register      |
-| `C-x r j`   | Jump to point saved in register      |
+| `C-x` `r` `s`   | Save region in register              |
+| `C-x` `r` `i`   | Insert register contents into buffer |
+| `C-x` `r` `SPC` | Save value of point in register      |
+| `C-x` `r` `j`   | Jump to point saved in register      |
 {.shortcuts}
 
 
@@ -496,7 +496,7 @@ Misc {.cols-3}
 
 | - | - |
 |--------------------|------------------------------------|
-| `C-x C-e`          | Eval sexp before point             |
+| `C-x` `C-e`          | Eval sexp before point             |
 | `C-M-x`            | Eval current defun                 |
 | `M-x` eval-region  | Eval region                        |
 | `M-:`              | Read and eval minibuffer           |
@@ -510,7 +510,7 @@ Misc {.cols-3}
 
 | - | - |
 |-----------------|-------------------------------|
-| `M-x customize` | customize variables and faces |
+| `M-x` `customize` | customize variables and faces |
 
 Making global key bindings in Emacs Lisp: 
 
@@ -526,11 +526,11 @@ Making global key bindings in Emacs Lisp:
 
 | - | - |
 |-------------|------------------------------------------|
-| `C-x a g`   | Add global abbrev                        |
-| `C-x a l`   | Add mode-local abbrev                    |
-| `C-x a i g` | Add global expansion for this abbrev     |
-| `C-x a i l` | Add mode-local expansion for this abbrev |
-| `C-x a e`   | Explicitly expand abbrev                 |
+| `C-x` `a` `g`   | Add global abbrev                        |
+| `C-x` `a` `l`   | Add mode-local abbrev                    |
+| `C-x` `a` `i` `g` | Add global expansion for this abbrev     |
+| `C-x` `a` `i` `l` | Add mode-local expansion for this abbrev |
+| `C-x` `a` `e`   | Explicitly expand abbrev                 |
 | `M-/`       | Expand previous word dynamically         |
 {.shortcuts}
 
@@ -574,7 +574,7 @@ With prefix argument LINE, put point on LINE."
 
 
 
-The interactive spec says how to read arguments interactively. Type `C-h f` interactive `RET` for more details.
+The interactive spec says how to read arguments interactively. Type `C-h` `f` interactive `RET` for more details.
 
 
 
