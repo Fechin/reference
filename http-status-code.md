@@ -18,11 +18,11 @@ Status code {.cols-3}
 
 ### Means 
 
-- [1xx: Informational](#){data-tooltip="It means the request has been received and the process is continuing."}
-- [2xx: Succes](#){data-tooltip="It means the action was successfully received, understood, and accepted."}
-- [3xx: Redirection](#){data-tooltip="It means further action must be taken in order to complete the request."}
-- [4xx: Client Error](#){data-tooltip="It means the request contains incorrect syntax or cannot be fulfilled."}
-- [5xx: Server Error](#){data-tooltip="It means the server failed to fulfill an apparently valid request."}
+- [1xx: Informational](#1xx-information){data-tooltip="It means the request has been received and the process is continuing."}
+- [2xx: Success](#2xx-successful){data-tooltip="It means the action was successfully received, understood, and accepted."}
+- [3xx: Redirection](#3xx-redirection){data-tooltip="It means further action must be taken in order to complete the request."}
+- [4xx: Client Error](#4xx-client-error){data-tooltip="It means the request contains incorrect syntax or cannot be fulfilled."}
+- [5xx: Server Error](#5xx-server-error){data-tooltip="It means the server failed to fulfill an apparently valid request."}
 
 
 
