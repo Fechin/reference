@@ -11,7 +11,7 @@ tags:
 categories:
     - Toolkit
 intro: |
- [Vim](http://www.vim.org/) is a very efficient text editor. This quick reference cheat sheet was made for Vim 8.0.   
+  A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.
 ---
 
 Getting started {.cols-3}
@@ -30,7 +30,7 @@ Getting started {.cols-3}
 │  │  ┌─────── Fo     te ───────┐│    │
 │  │  │┌────── To     30| ───┐  ││    │
 │  │  ││ ┌──── ge     w ───┐ │  ││    │
-│  │  ││ │ ┌── b      e ─┐ │ │  ││    │ 
+│  │  ││ │ ┌── b      e ─┐ │ │  ││    │
 │  │  ││ │ │  ┌h      l┐ │ │ │  ││    │
 ▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽ ▽  ▽▽    ▽
    echo "A cheatsheet from quickref.me"
