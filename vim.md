@@ -17,24 +17,25 @@ intro: |
 Getting started {.cols-3}
 ---------------
 
-### Visualization
+### Motion Diagrams {.row-span-2}
 
 ```bash
 ▼/▶ Cursor   ▽/▷ Target
 ```
----
+#### Left-right motions
 ```bash
-┌───────────── 0      
-│  ┌────────── ^      $ ──────────────┐
-│  │  ┌─────── Fo     fe ────────┐    │
-│  │  │┌────── To     te ───────┐│    │
-│  │  ││ ┌──── ge     w ───┐    ││    │
-│  │  ││ │ ┌── b      e ─┐ │    ││    │ 
-│  │  ││ │ │  ┌h      l┐ │ │    ││    │
-▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽    ▽▽    ▽
+┌───────────── |      
+├───────────── 0      $ ──────────────┐ 
+│  ┌────────── ^      fe ────────┐    │
+│  │  ┌─────── Fo     te ───────┐│    │
+│  │  │┌────── To     30| ───┐  ││    │
+│  │  ││ ┌──── ge     w ───┐ │  ││    │
+│  │  ││ │ ┌── b      e ─┐ │ │  ││    │ 
+│  │  ││ │ │  ┌h      l┐ │ │ │  ││    │
+▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽ ▽  ▽▽    ▽
    echo "A cheatsheet from quickref.me"
 ```
----
+#### Up-down motions
 ```bash
                  - SCREEN 1 START
    ┌─┬─────────▷ #!/usr/bin/python
@@ -53,176 +54,159 @@ G gg H M L k j ▶ print("to")
 └──────────────▷ print("SCREEN 2")
 ``` 
 
-### Navigating {.row-span-3}
+### Motions {.row-span-2}
 
-| Shortcut            | Description        |
-| ---                 | ---                |
-| `h` `j` `k` `l`     | Arrow keys         |
-| `<C-U>` _\|_ `<C-D>` | Half-page up/down |
-| `<C-B>` _\|_ `<C-F>` | Page up/down      |
+| Shortcut                       | Description       |
+|--------------------------------|-------------------|
+| `h` _\|_ `j` _\|_ `k` _\|_ `l` | Arrow keys        |
+| `<C-u>` _/_ `<C-d>`            | Half-page up/down |
+| `<C-b>` _/_ `<C-f>`            | Page up/down      |
 {.shortcuts}
 
-#### Words
-
-| Shortcut     | Description               |
-| ---          | ---                       |
-| `b` _\|_ `w`  | Previous/next word        |
-| `ge` _\|_ `e` | Previous/next end of word |
+#### Words{.left-text}
+| Shortcut      | Description               |
+|---------------|---------------------------|
+| `b` _/_ `w`   | Previous/Next word        |
+| `ge` _/_ `e`  | Previous/Next end of word |
 {.shortcuts}
 
 #### Line
 
-| Shortcut     | Description                        |
-| ---          | ---                                |
-| `0` _(zero)_ | Start of line                      |
-| `^`          | Start of line _(after whitespace)_ |
-| `$`          | End of line                        |
+| Shortcut             | Description                 |
+|----------------------|-----------------------------|
+| `0` _(zero)_ _/_ `$` | Start/End of line           |
+| `^`                  | Start of line _(non-blank)_ |
 {.shortcuts}
 
 #### Character
 
-| Shortcut | Description    |
-| ---      | ---            |
-| `fe`  | Go forward to character `e`  |
-| `Fo`  | Go backward to character `o` |
+| Shortcut       | Description                         |
+|----------------|-------------------------------------|
+| `Fe` _/_ `fe`  | Move to previous/next `e`           |
+| `To` _/_ `to`  | Move before/after previous/next `o` |
+| `|` _/_ `n|`   | Go to first/`n`th column            |
 {.shortcuts}
 
 #### Document
 
-| Shortcut | Description    |
-| ---      | ---            |
-| `gg`     | First line     |
-| `G`      | Last line      |
-| `:n`     | Go to line `n` |
-| `nG`     | Go to line `n` |
+| Shortcut     | Description                |
+|--------------|----------------------------|
+| `gg` _/_ `G` | First/Last line            |
+| `:n` _\|_ `nG`        | Go to line `n` |
+| `}` _/_ `{`        | Next/Previous empty line |
 {.shortcuts}
 
 #### Window
 
-| Shortcut | Description              |
-| ---      | ---                      |
-| `zz`     | Center this line         |
-| `zt`     | Top this line            |
-| `zb`     | Bottom this line         |
-| `H`      | Move to top of screen    |
-| `M`      | Move to middle of screen |
-| `L`      | Move to bottom of screen |
-{.shortcuts}
-
-#### Search
-
-| Shortcut  | Description                         |
-| ---       | ---                                 |
-| `n`       | Next matching search pattern        |
-| `N`       | Previous match                      |
-| `*`       | Next whole word under cursor        |
-| `#`       | Previous whole word under cursor    |
-{.shortcuts}
-
-#### Tab pages
-
-| Shortcut              | Description                     |
-| ---                   | ---                             |
-| `:tabedit [file]`     | Edit file in a new tab          |
-| `:tabfind [file]`     | Open file if exists in new tab  |
-| `:tabclose`           | Close current tab               |
-| `:tabs`               | List all tabs                   | 
-| `:tabfirst`           | Go to first tab                 |
-| `:tablast`            | Go to last tab                  |
-| `:tabn    `           | Go to next tab                  |
-| `:tabp    `           | Go to previous tab              |
-
-
-### Editing
-
-| Shortcut | Description                         |
-| ---      | ---                                 |
-| `a`      | Append                              |
-| `A`      | Append from end of line             |
-| `i`      | Insert                              |
-| `o`      | Next line                           |
-| `O`      | Previous line                       |
-
-| `s`      | Delete char and insert              |
-| `S`      | Delete line and insert              |
-| `C`      | Delete until end of line and insert |
-
-| `r`      | Replace one character               |
-| `R`      | Enter Replace mode                  |
-
-| `u`      | Undo changes                        |
-| `<C-R>`  | Redo changes                        |
+| Shortcut                | Description                 |
+|-------------------------|-----------------------------|
+| `H` _/_ `M`_/_ `L`      | Top/Middle/Bottom of screen |
+| `zt` _/_ `zz` _/_  `zb` | Top/Center/Bottom this line |
 {.shortcuts}
 
 
-### Exiting
-
-| Shortcut       | Description                      |
-| -------------- | -------------------------------- |
-| `:qa`          | Close all files                  |
-| `:qa!`         | Close all files, abandon changes |
-
-| `:w`           | Save                             |
-| `:wq` _\|_ `:x` | Save and close file              |
-
-| `:q`           | Close file                       |
-| `:q!`          | Close file, abandon changes      |
-
-| `ZZ`           | Save and quit                    |
-| `ZQ`           | Quit without checking changes    |
+### Insert Mode
+| Shortcut               | Description                 |
+|------------------------|-----------------------------|
+| `i` _/_ `a`            | Insert before/after cursor  |
+| `I` _/_ `A`            | Insert start/end of line    |
+| `o` _/_ `O` _(letter)_ | Insert new line below/above |
+| `s` _/_ `S`            | Delete char/line and insert |
+| `C`                    | Change to end of line       |
+| `gi`                   | Insert at last insert point |
+| `Esc` _\|_ `<C-[>`     | Exit insert mode            |
 {.shortcuts}
 
 
-### Clipboard
 
-| Shortcut        | Description                 |
-| ---             | ---                         |
-| `x`             | Delete character            |
-
-| `dd`            | Delete line _(Cut)_         |
-| `yy`            | Yank line _(Copy)_          |
-
-| `p`             | Paste                       |
-| `P`             | Paste before                |
-
-| `"*p` _\|_ `"+p` | Paste from system clipboard |
-| `"*y` _\|_ `"+y` | Paste to system clipboard   |
+### Saving and Exiting
+| Shortcut                  | Description                     |
+|---------------------------|---------------------------------|
+| `:w`                      | Save                            |
+| `:q`                      | Close file                      |
+| `:wqa`                    | Save and quit on all tabs       |
+| `:wq` _\|_ `:x` _\|_ `ZZ` | Save and close file             |
+| `:q!` _\|_ `ZQ`           | Close file, ignore changes      |
+| `:qa`                     | Close all files                 |
+| `:qa!`                    | Close all files, ignore changes |
+| `:w new.txt`              | Save as `new.txt`               |
+| `:w !sudo tee %`          | Write file readonly             |
 {.shortcuts}
 
-### Visual mode
 
-| Shortcut | Description             |
-| ---      | ---                     |
-| `v`      | Enter visual mode       |
-| `V`      | Enter visual line mode  |
-| `<C-V>`  | Enter visual block mode |
+
+### Normal Mode
+| Shortcut              | Description              |
+|-----------------------|--------------------------|
+| `r`                   | Replace one character    |
+| `R`                   | Enter Replace mode       |
+| `u` _/_ `3u`          | Undo changes `1` / `3` times |
+| `U`                   | Undo changes on one line |
+| `J`                   | Join with next line      |
+| `<C-r>` _/_ 5 `<C-r>` | Redo changes `1` / `5` times |
+{.shortcuts}
+
+
+### Cut and paste {.row-span-2}
+| Shortcut         | Description                   |
+|------------------|-------------------------------|
+| `x`              | Delete character _(Cut)_      |
+| `p` _/_ `P`      | Paste after/before            |
+| `xp`             | Swap two characters           |
+| `D`              | Delete to end of line _(Cut)_ |
+| `dw`             | Delete word _(Cut)_           |
+| `dd`             | Delete line _(Cut)_           |
+| `ddp`            | Swap two lines                |
+| `yy`             | Yank line _(Copy)_            |
+| `"*p` _\|_ `"+p` | Paste from system clipboard   |
+| `"*y` _\|_ `"+y` | Paste to system clipboard     |
 {.shortcuts}
 
 
 #### In visual mode
+| Shortcut     | Description               |
+|--------------|---------------------------|
+| `d` _\|_ `x` | Delete selection  _(Cut)_ |
+| `s`          | Replace selection         |
+| `y`          | Yank selection _(Copy)_   |
+{.shortcuts}
 
+
+
+### Repeating
+| Shortcut | Description                                 |
+|----------|---------------------------------------------|
+| `.`      | Repeat last command                         |
+| `;`      | Repeat latest `f`, `t`, `F` or `T`          |
+| `,`      | Repeat latest `f`, `t`, `F` or `T` reversed |
+| `&`      | Repeat last `:s`                            |
+| `@:`     | Repeat a command-line command               |
+{.shortcuts}
+
+
+
+### Visual mode
 | Shortcut    | Description             |
-| ---         | ---                     |
-| `d` _\|_ `x` | Delete selection        |
-| `s`         | Replace selection       |
-| `y`         | Yank selection _(Copy)_ |
+|-------------|-------------------------|
+| `v`         | Enter visual mode       |
+| `V`         | Enter visual line mode  |
+| `<C-v>`     | Enter visual block mode |
+| `ggVG`      | Select all text         |
+| `>` _/_ `<` | Shift text right/left   |
+
 {.shortcuts}
 
 
-### Exiting insert mode
 
-| Shortcut          | Description |
-| ---               | ---         |
-| `Esc` _\|_ `<C-[>` | Exit insert mode |
-| `<C-C>`           | Exit insert mode, and abort current command |
+### Macros
+| -     | -                     |
+|-------|-----------------------|
+| `qi`  | Record macro `i`      |
+| `q`   | Stop recording macro  |
+| `@i`  | Run macro `i`         |
+| `7@i` | Run macro `i` 7 times |
+| `@@`  | Repeat last macro     |
 {.shortcuts}
-
-See [Operators](#operators) for other things you can do.
-
-
-
-
-
 
 
 Operators {.cols-3}
@@ -230,188 +214,490 @@ Operators {.cols-3}
 
 ### Usage {.secondary}
 
-Operators let you operate in a range of text (defined by *motion*). These are performed in normal mode.
-| Shortcut | Description                     |
-| ---      | ---                             |
-| `d`      | `w`    |
-| Operator | Motion |
+| Shortcut | Description  |
+|----------|--------------|
+| `d`      | <yel>w</yel> |
+| Operator | Motion       |
 
-### Operators list 
+Combine [operators](#available-operators) with [motions](#motions) to use them
 
+
+
+
+### Available Operators {.row-span-2}
 | Shortcut | Description                     |
-| ---      | ---                             |
+|----------|---------------------------------|
 | `d`      | Delete                          |
 | `y`      | Yank _(copy)_                   |
 | `c`      | Change _(delete then insert)_   |
-
-| `>`      | Indent right                    |
-| `<`      | Indent left                     |
-| `=`      | Autoindent                      |
-
-| `g~`     | Swap case                       |
+| `p`      | Paste                           |
+| `=`      | Formats code                    |
+| `g~`     | Toggle case                     |
 | `gU`     | Uppercase                       |
 | `gu`     | Lowercase                       |
-
+| `>`      | Indent right                    |
+| `<`      | Indent left                     |
 | `!`      | Filter through external program |
-{.shortcuts}
 
-See `:help operator`
 
-### Examples
+### Examples {.row-span-2}
 
-Combine operators with *motions* to use them.
-{.setup}
+| Combination          | Description                 |
+|----------------------|-----------------------------|
+| `d`<yel>d</yel>      | Delete current line         |
+| `d`<yel>j</yel>      | Delete two lines            |
+| `d`<yel>w</yel>      | Delete to next word         |
+| `d`<yel>b</yel>      | Delete to beginning of word |
+| `d`<yel>fa</yel>     | Delete until `a` char       |
+| `d`<yel>/hello</yel> | Delete until `hello`        |
+| `c`<yel>c</yel>      | Change current line         |
+| `y`<yel>y</yel>      | Copy current line           |
+| `>`<yel>j</yel>      | Indent 2 lines              |
+| gg`d`<yel>G</yel>    | Delete a complete document  |
+| gg`=`<yel>G</yel>    | Indent a complete document  |
+| gg`y`<yel>G</yel>    | Copy a whole document       |
+{.show-header}
 
-| Shortcut               | Description                               |
-| ---                    | ---                                       |
-| `d`_d_                 | Delete current line |
-| `d`_w_                 | Delete to next word                       |
-| `d`_b_                 | Delete to beginning of word               |
-| _2_`dd`                | Delete 2 lines                            |
-| `d`_ip_                | Delete a text object _(inside paragraph)_ |
-| `d`                    | Delete selection _(in visual mode)_       |
 
-See `:help motion.txt`
+
+### Counts
+```
+[count] <operator> <motion>
+<operator> [count] <motion>
+```
+---
+
+| Combination      | Description                |
+|------------------|----------------------------|
+| 2`d`<yel>d</yel> | Delete `2` lines           |
+| 6`y`<yel>y</yel> | Copy `6` lines             |
+| `d`3<yel>w</yel> | Delete `3` words           |
+| `d`5<yel>j</yel> | Delete `5` lines downwards |
+| `>`4<yel>k</yel> | Indent `4` lines upwards   |
+
+
 
 Text objects {.cols-3}
 ------------
 
 ### Usage {.secondary}
 
-Text objects let you operate (with an *operator*) in or around text blocks (*objects*).
-{.setup}
+| Shortcut | Description                                               | -            |
+|----------|-----------------------------------------------------------|--------------|
+| `v`      | &nbsp; &nbsp; &nbsp; &nbsp; <pur>i</pur> _/_ <pur>a</pur> | <yel>p</yel> |
+| Operator | <pur>i</pur>nner _/_ <pur>a</pur>round                    | Text object  |
 
-| Shortcut               | Description          |
-| -----------            | ---------            |
-| `v`      | `i`                  | `p`         |
-| Operator | [i]nside or [a]round | Text object |
-{.css-breakdown}
+Operate with an [operator](#available-operators) inner or around text blocks
+
+
+
 
 ### Text objects {.row-span-2}
 
-| Shortcut               | Description           |
-| ---                    | ---                   |
-| `p`                    | Paragraph             |
-| `w`                    | Word                  |
-| `s`                    | Sentence              |
+| Shortcut                                             | Description                            |
+|------------------------------------------------------|----------------------------------------|
+| <yel>p</yel>                                         | Paragraph                              |
+| <yel>w</yel>                                         | Word                                   |
+| <yel>W</yel>                                         | WORD <br/>_(surrounded by whitespace)_ |
+| <yel>s</yel>                                         | Sentence                               |
+| <yel>[</yel> <yel>(</yel> <yel>{</yel> <yel>\<</yel> | A [], (), or {} block                  |
+| <yel>]</yel> <yel>)</yel> <yel>}</yel> <yel>\></yel> | A [], (), or {} block                  |
+| <yel>'</yel> <yel>"</yel> <yel>\`</yel>              | A quoted string                        |
+| <yel>b</yel>                                         | A block [(                             |
+| <yel>B</yel>                                         | A block in [{                          |
+| <yel>t</yel>                                         | A HTML tag block                       |
 
-| `[` `(` `{` `<`        | A [], (), or {} block |
-| `'` `"` <code>\`</code>     | A quoted string       |
+See `:help text-objects`
 
-| `b`                    | A block [(            |
-| `B`                    | A block in [{         |
-| `t`                    | A XML tag block       |
+
+
+### Delete
+
+| Shortcut                    | Description                           |
+|-----------------------------|---------------------------------------|
+| `d`<pur>i</pur><yel>w</yel> | Delete inner word                     |
+| `d`<pur>i</pur><yel>s</yel> | Delete inner sentence                 |
+| `d`<pur>i</pur><yel>"</yel> | Delete in quotes                      |
+| `d`<pur>a</pur><yel>"</yel> | Delete in quotes _(including quotes)_ |
+| `d`<pur>i</pur><yel>p</yel> | Delete a paragraph                    |
+
+
+
+### Selections
+| Shortcut                                            | Description                               |
+|-----------------------------------------------------|-------------------------------------------|
+| `v`<pur>i</pur><yel>"</yel>                         | Select inner quotes "`...`{.underline}"   |
+| `v`<pur>a</pur><yel>"</yel>                         | Select quotes `"..."`{.underline}         |
+| `v`<pur>i</pur><yel>[</yel>                         | Select inner brackets [`...`{.underline}] |
+| `v`<pur>a</pur><yel>[</yel>                         | Select brackets `[...]`{.underline}       |
+| `v`<pur>i</pur><yel>w</yel>                         | Select inner word                         |
+| `v`<pur>i</pur><yel>p</yel>                         | Select inner paragraph                    |
+| `v`<pur>i</pur><yel>p</yel><pur>i</pur><yel>p</yel> | Select more paragraph                     |
+
+
+### Misc
+
+| Shortcut                    | Description                          |
+|-----------------------------|--------------------------------------|
+| `c`<pur>i</pur><yel>w</yel> | Change inner word                    |
+| `c`<pur>i</pur><yel>"</yel> | Change inner quotes                  |
+| `c`<pur>i</pur><yel>t</yel> | Change inner tags (HTML)             |
+| `c`<pur>i</pur><yel>p</yel> | Change inner paragraph               |
+| `y`<pur>i</pur><yel>p</yel> | Yank inner paragraph                 |
+| `y`<pur>a</pur><yel>p</yel> | Yank paragraph _(including newline)_ |
+
+
+
+
+Multiple files {.cols-3}
+-------------
+
+
+
+### Buffers
+| -           | -                                |
+|-------------|----------------------------------|
+| `:e file`   | Edit a file in a new buffer      |
+| `:bn`       | Go to the next buffer            |
+| `:bp`       | Go to the previous buffer        |
+| `:bd`       | Remove file from buffer list     |
+| `:b 5`      | Open buffer #5                   |
+| `:b file`   | Go to a buffer by file           |
+| `:ls`       | List all open buffers            |
+| `:sp file`  | Open and split window            |
+| `:vs file`  | Open and vertically split window |
+| `:hid`      | Hide this buffer                 |
+| `:wn`       | Write file and move to next      |
+| `:tab ba`   | Edit all buffers as tabs         |
+
+
+
+### Windows
+| -                    | -                           |
+|----------------------|-----------------------------|
+| `<C-w>` `s`          | Split window                |
+| `<C-w>` `v`          | Split window vertically     |
+| `<C-w>` `w`          | Switch windows              |
+| `<C-w>` `q`          | Quit a window               |
+| `<C-w>` `T`          | Break out into a new tab    |
+| `<C-w>` `x`          | Swap current with next      |
+| `<C-w>` `-`  _/_ `+` | Decrease/Increase height    |
+| `<C-w>` `<`  _/_ `>` | Decrease/Increase width     |
+| `<C-w>` `|`         | Max out the width           |
+| `<C-w>` `=`          | Equally high and wide       |
+| `<C-w>` `h` _/_ `l`  | Go to the left/right window |
+| `<C-w>` `j` _/_ `k`  | Go to the up/down window    |
 {.shortcuts}
 
-### Examples {.row-span-2}
 
-| Shortcut    | Description                        |
-| ---         | ---                                |
-| `vip`       | Select paragraph                   |
-| `vipipipip` | Select more                        |
 
-| `yip`       | Yank inner paragraph               |
-| `yap`       | Yank paragraph (including newline) |
+### Tabs
+| Shortcut           | Description                       |
+|--------------------|-----------------------------------|
+| `:tabe [file]`     | <yel>E</yel>dit file in a new tab |
+| `:tabf [file]`     | Open if exists in new tab         |
+| `:tabc`            | <yel>C</yel>lose current tab      |
+| `:tabo`            | Close <yel>o</yel>ther tabs       |
+| `:tabs`            | List all <yel>tabs</yel>          |
+| `:tabr`            | Go to fi<yel>r</yel>st tab        |
+| `:tabl`            | Go to <yel>l</yel>ast tab         |
+| `:tabm 0`          | <yel>M</yel>ove to position `0`   |
+| `:tabn`            | Go to <yel>n</yel>ext tab         |
+| `:tabp`            | Go to <yel>p</yel>revious tab     |
 
-| `dip`       | Delete inner paragraph             |
-| `cip`       | Change inner paragraph             |
+
+#### Normal mode
+| Shortcut | Description                   |
+|----------|-------------------------------|
+| `gt`     | Go to <yel>n</yel>ext tab     |
+| `gT`     | Go to <yel>p</yel>revious tab |
+| `2gt`    | Go to tab number `2`          |
 {.shortcuts}
 
-See [Operators](#operators) for other things you can do.
-
-### Diff
 
 
+
+
+Search and Replace {.cols-3}
+------------------
+
+### Search
+| -        | -                                               |
+|----------|-------------------------------------------------|
+| `/foo`   | Search forward                                  |
+| `/foo\c` | Search forward _(case insensitive)_             |
+| `?foo`   | Search backward                                 |
+| `/\v\d+` | Search with [regex](/regex)                     |
+| `n`      | Next matching search pattern                    |
+| `N`      | Previous match                                  |
+| `*`      | Search for current word forward                 |
+| `#`      | Search for current word backward                |
+{.shortcuts}
+
+
+
+### Replace LINE
+```vim
+:[range]s/{pattern}/{str}/[flags]
 ```
-vimdiff file1 file2 [file3]
+
+---
+
+|                   |                                 |
+|-------------------|---------------------------------|
+| `:s/old/new`      | Replace first                   |
+| `:s/old/new/g`    | Replace all                     |
+| `:s/\vold/new/g`  | Replace all with [regex](/regex)|
+| `:s/old/new/gc`   | replace all _(Confirm)_         |
+| `:s/old/new/i`    | Ignore case replace first       |
+| `:2,6s/old/new/g` | Replace between lines `2`-`6`   |
+
+### Replace FILE
+```vim
+:%s/{pattern}/{str}/[flags]
 ```
 
-See differences between files.
- 
+---
 
-Misc {.cols-3}
-----
+|                   |                             |
+|-------------------|-----------------------------|
+| `:%s/old/new`     | Replace first               |
+| `:%s/old/new/g`   | Replace all                 |
+| `:%s/old/new/gc`  | Replace all _(Confirm)_     |
+| `:%s/old/new/gi`  | Replace all _(ignore case)_ |
+| `:%s/\vold/new/g` | Replace all with [regex](/regex)|
 
-### Folds {.row-span-3}
+
+
+### Ranges {.row-span-2}
+| -       | -                  |
+|---------|--------------------|
+| `%`     | Entire file        |
+| `’<,’>` | Current selection  |
+| `5`     | Line `5`           |
+| `5,10`  | Lines `5` to `10`  |
+| `$`     | Last line          |
+| `2,$`   | Lines `2` to Last  |
+| `.`     | Current line       |
+| `,3`    | Next `3` lines     |
+| `-3,`   | Forward `3` lines  |
+
+
+
+
+### Global command {.row-span-2}
+```vim
+:[range]g/{pattern}/[command]
+```
+---
+
+|              |                                    |
+|--------------|------------------------------------|
+| `:g/foo/d`   | Delete lines containing `foo`      |
+| `:g/foo/d`   | Delete lines containing `foo`      |
+| `:g!/foo/d`  | Delete lines not containing `foo`  |
+| `:g/^\s*$/d` | Delete all blank lines             |
+| `:g/foo/t$`  | Copy lines containing `foo` to EOF |
+| `:g/foo/m$`  | Move lines containing `foo` to EOF |
+| `:g/^/m0`    | Reverse a file                     |
+
+
+
+### Inverse :g
+```vim
+:[range]v/{pattern}/[command]
+```
+---
+
+|               |                                                            |
+|---------------|------------------------------------------------------------|
+| `:v/foo/d`    | Delete lines not containing `foo`<br/>_(also `:g!/foo/d`)_ |
+
+
+
+
+### Flags
+
+| -   | -                         |
+|-----|---------------------------|
+| `g` | Replace all occurrences   |
+| `i` | Ignore case               |
+| `I` | Don't ignore case         |
+| `c` | Confirm each substitution |
+
+
+
+### Substitute expression (magic)
+| -            | -                                |
+|--------------|----------------------------------|
+| `&` _\|_ `\0`| Replace with the whole matched   |
+| `\1`...`\9`  | Replace with the group 0-9       |
+| `\u`         | Uppercase next letter            |
+| `\U`         | Uppercase following characters   |
+| `\l`         | Lowercase next letter            |
+| `\L`         | Lowercase following characters   |
+| `\e`         | End of `\u`, `\U`, `\l` and `\L` |
+| `\E`         | End of `\u`, `\U`, `\l` and `\L` |
+
+
+
+### Examples {.col-span-2}
+```c {.wrap}
+:s/a\|b/xxx\0xxx/g		         # Modifies "a b"      to "xxxaxxx xxxbxxx"
+:s/test/\U& file/                # Modifies "test"     to "TEST FILE"
+:s/\(test\)/\U\1\e file/         # Modifies "test"     to "TEST file"
+:s/\v([abc])([efg])/\2\1/g	     # Modifies "af fa bg" to "fa fa gb"
+:s/\v\w+/\u\0/g		             # Modifies "bla bla"  to "Bla Bla"
+:s/\v([ab])|([cd])/\1x/g         # Modifies "a b c d"  to "ax bx x x"
+:%s/.*/\L&/                      # Modifies "HTML"     to "html"
+:s/\v<(.)(\w*)/\u\1\L\2/g        # Make every first letter of a word uppercase
+:%s/^\(.*\)\n\1/\1/              # Remove duplicate lines
+:%s/<\/\=\(\w\+\)\>/\U&/g        # Convert HTML-Tags to uppercase
+:g/^pattern/s/$/mytext           # Find and append text to the end
+:g/pattern/normal @q             # Run a macro on matching lines
+/^\(.*\)\(\r\?\n\1\)\+$          # View the duplicates lines
+:v/./,/./-j                      # Compress blank lines into a blank line
+:g/<p1>/,/<p2>/d                 # Delete inclusively from <p1> to <p2>
+```
+
+
+
+Vimdiff {.cols-3}
+-------
+
+
+### Usage {.secondary}
+
+```shell script
+
+$ vimdiff file1 file2 [file3]
+$ vim -d file1 file2 [file3]
+```
+
+
+
+### Editing {.row-span-2}
+```
+:[range]diffget [bufspec]
+:[range]diffput [bufspec]
+```
+---
+| Shortcut            | Description             |
+|---------------------|-------------------------|
+| `do` _/_ `:diffget` | Obtain (get) difference |
+| `dp` _/_ `:diffput` | Put difference          |
+| `:dif`              | Re-scan differences     |
+| `:diffo`            | Switch off diff mode    |
+| `:1,$+1diffget`     | Get all differences     |
+| `ZQ`                | Quit without changes    |
+{.shortcuts}
+
+See: [Ranges](#ranges)
+
+
+
+### Folds {.row-span-2}
 
 | Shortcut      | Description                  |
 | ---           | ---                          |
-| `zo` _\|_ `zO` | Open                         |
-| `zc` _\|_ `zC` | Close                        |
-| `za` _\|_ `zA` | Toggle                       |
-
+| `zo` _/_ `zO` | Open                         |
+| `zc` _/_ `zC` | Close                        |
+| `za` _/_ `zA` | Toggle                       |
 | `zv`          | Open folds for this line     |
-
 | `zM`          | Close all                    |
 | `zR`          | Open all                     |
-
 | `zm`          | Fold more _(foldlevel += 1)_ |
 | `zr`          | Fold less _(foldlevel -= 1)_ |
-
 | `zx`          | Update folds                 |
 {.shortcuts}
 
-Uppercase ones are recursive (eg, `zO` is open recursively).
 
-### Navigation
 
-| Shortcut            | Description                |
-| ---                 | ---                        |
-| `%`                 | Nearest/matching `{[()]}`  |
-| `[(` `[{` `[<`      | Previous `(` or `{` or `<` |
-| `])`                | Next                       |
+### Jumping
+<br>
 
-| `[m`                | Previous method start      |
-| `[M`                | Previous method end        |
+| Shortcut       | Description                      |
+| ---            | ---                              |
+| `]c`           | Next difference                  |
+| `[c`           | Previous difference              |
 {.shortcuts}
 
 
-### Case
 
-| Shortcut | Description                          |
-| ---      | ---                                  |
-| `~`      | Toggle case (Case => cASE)           |
-| `gU`     | Uppercase                            |
-| `gu`     | Lowercase                            |
 
-| `gUU`    | Uppercase current line (also `gUgU`) |
-| `guu`    | Lowercase current line (also `gugu`) |
+
+
+Miscellaneous {.cols-3}
+-------------
+
+
+### Case {.row-span-2}
+
+| Shortcut       | Description             |
+|----------------|-------------------------|
+| `vU`           | _Uppercase_ character   |
+| `vu`           | _Lowercase_ character   |
+| `~`            | _Toggle case_ character |
+| `viw` `U`      | _Uppercase_ word        |
+| `viw` `u`      | _Lowercase_ word        |
+| `viw` `~`      | _Toggle case_ word      |
+| `VU` _/_ `gUU` | _Uppercase_ line        |
+| `Vu` _/_ `guu` | _Lowercase_ line        |
+| `V~` _/_ `g~~` | _Toggle case_ line      |
+| `gggUG`        | _Uppercase_ all text    |
+| `ggguG`        | _Lowercase_ all text    |
+| `ggg~G`        | _Toggle case_  all text |
 {.shortcuts}
 
-Do these in visual or normal mode.
+
+
+
+### Jumping
+
+| Shortcut | Description          |
+|----------|----------------------|
+| `<C-o>`  | Go back to previous  |
+| `<C-i>`  | Go forward           |
+| `gf`     | Go to file in cursor |
+| `ga`     | Display hex, ascii value |
+{.shortcuts}
+
+
+
+
+### Misc command-lines {.row-span-2}
+| -                      | -                             |
+|------------------------|-------------------------------|
+| `:h`                   | Help open help view           |
+| `:edit!`               | Reload current file           |
+| `:2,8m0`               | Move lines `2`-`8` to `0`     |
+| `:noh`                 | Clear search highlights       |
+| `:sort`                | Sort lines                    |
+| `:ter`                 | Open a terminal window        |
+| `:set paste`           | Enable Insert Paste sub-mode  |
+| `:set nopaste`         | disable Insert Paste sub-mode |
+| `:cq`                  | Exiting with an error<br/>_(aborting Git)_ |
+
+
+### Navigating
+
+| Shortcut                 | Description               |
+|--------------------------|---------------------------|
+| `%`                      | Nearest/matching `{[()]}` |
+| `[(` _\|_ `[{` _\|_ `[<` | Previous `(`, `{` or `<`  |
+| `])` _\|_ `]{` _\|_ `]>` | Next `)`, `}` or `>`      |
+| `[m`                     | Previous method start     |
+| `[M`                     | Previous method end       |
+{.shortcuts}
 
 
 ### Counters
 
 | Shortcut | Description      |
 | ---      | ---              |
-| `<C-A>`  | Increment number |
-| `<C-X>`  | Decrement        |
+| `<C-a>`  | Increase number |
+| `<C-x>`  | Decrease number |
 {.shortcuts}
-
-### Windows
-
-| Shortcut              | Description                                     |
-| ---                   | ---                                             |
-| `z{height}<Cr>` | Resize pane to `{height}` lines tall |
-
-
-### Text alignment {.row-span-1}
-
-    :center [width]
-    :right [width]
-    :left
-
-See `:help formatting`
-
-
-### Calculator
-
-| Shortcut      | Description                               |
-| ---           | ---                                       |
-| `<C-R>=128/2` | Shows the result of the division : '64'   |
-
-Do this in insert mode.
 
 
 ### Tags {.row-span-2 .col-span-2}
@@ -419,35 +705,28 @@ Do this in insert mode.
 | Shortcut              | Description                                     |
 | ---                   | ---                                             |
 | `:tag Classname`      | Jump to first definition of Classname           |
-
 | `<C-]>`               | Jump to definition                              |
 | `g]`                  | See all definitions                             |
-| `<C-T>`               | Go back to last tag                             |
-| `<C-O> <C-I>`         | Back/forward                                    |
-
+| `<C-t>`               | Go back to last tag                             |
+| `<C-o> <C-i>`         | Back/forward                                    |
 | `:tselect Classname`  | Find definitions of Classname                   |
 | `:tjump Classname`    | Find definitions of Classname (auto-select 1st) |
 {.shortcuts}
 
-### Exiting with an error
 
-    :cq
-    :cquit
+### Formatting
+| -               | - |
+|-----------------|---|
+| `:ce 8` |  Center lines between `8` columns |
+| `:ri 4`  | Right-align lines at `4` columns   |
+| `:le`           | Left-align lines  |
 
-Works like `:qa`, but throws an error. Great for aborting Git commands.
+See `:help formatting`
 
 
-### Jumping
 
-| Shortcut | Description                  |
-| ---      | ---                          |
-| `<C-O>`  | Go back to previous location |
-| `<C-I>`  | Go forward                   |
 
-| `gf`     | Go to file in cursor         |
-{.shortcuts}
-
-### Marks {.col-span-2 .row-span-2}
+### Marks {.col-span-2 .row-span-4}
 
 | Shortcut           | Description                                          |
 | ---                | ---                                                  |
@@ -476,41 +755,57 @@ Works like `:qa`, but throws an error. Great for aborting Git commands.
 | `:delm abc`        | Delete marks `a`, `b`, `c`                           |
 {.shortcuts}
 
-### Misc
 
-| Shortcut   | Description                                       |
-| ---        | ---                                               |
-| `.`        | Repeat last command                               |
-| `]p`       | Paste under the current indentation level         |
 
-| `:set ff=unix` | Convert Windows line endings to Unix line endings |
+### Calculator
+
+| Shortcut      | Description                               |
+| ---           | ---                                       |
+| `<C-r>` `=` 7*7 | Shows the result   |
+| `<C-r>` `=` 10/2 | Shows the result   |
 {.shortcuts}
+
+Do this in INSERT mode
+
+
+
+
+### Shell
+| -                      | -                             |
+|------------------------|-------------------------------|
+| `:!<shell>`            | Interpret Shell Command       |
+| `:r!<shell>`           | Read in output of shell                 |
+| `:r!date`              | Insert date                |
+| `:!!date`              | Replace current line with date                |
+
+
+
 
 ### Command line
 
 | Shortcut     | Description                               |
 | ---          | ---                                       |
-| `<C-R><C-W>` | Insert current word into the command line |
-| `<C-R>"`     | Paste from " register                     |
-| `<C-X><C-F>` | Auto-completion of path in insert mode    |
+| `<C-r><C-w>` | Insert current word into the command line |
+| `<C-r>"`     | Paste from " register                     |
+| `<C-x><C-f>` | Auto-completion of path in insert mode    |
 {.shortcuts}
 
 
-
-### Spell checking {.col-span-3}
-
-| Shortcut                     | Description                                             |
-| ---                          | ---                                                     |
-| `:set spell spelllang=en_us` | Turn on US English spell checking                       |
-| `]s`                         | Move to next misspelled word after the cursor           |
-| `[s`                         | Move to previous misspelled word before the cursor      |
-| `z=`                         | Suggest spellings for the word under/after the cursor   |
-| `zg`                         | Add word to spell list                                  |
-| `zw`                         | Mark word as bad/mispelling                             |
-| `zu` / `C-X (Insert Mode)`   | Suggest words for bad word under cursor from spellfile  |
-{.shortcuts}
-
-See `:help spell`
+### Tricks
+Remove duplicate lines
+```shell script
+:sort | %!uniq -u
+```
+To number the lines in the file
+```shell script
+:%!cat -n
+```
+Copy whole doc to clipboard
+```shell script
+:%w !pbcopy            # Mac OS X
+:%w !xclip -i -sel c   # GNU/Linux
+:%w !xsel -i -b        # GNU/Linux
+```
 
 
 Also see
