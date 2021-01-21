@@ -825,6 +825,7 @@ Get Started {.cols-3}
 | :penguin: | `:penguin:` |
 | :turtle: | `:turtle:` |
 | :bug: | `:bug:` |
+| :beetle: | `:beetle:` |
 | :honeybee: | `:honeybee:` |
 | :ant: | `:ant:` |
 | :beetle: | `:beetle:` |
