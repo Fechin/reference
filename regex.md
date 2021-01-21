@@ -10,8 +10,7 @@ tags:
 categories:
     - Toolkit
 intro: |
-    A quick reference guide for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
-    This cheat sheet was made for [PCRE](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions).
+    A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
 ---
 
 Get Started {.cols-3}
@@ -20,6 +19,7 @@ Get Started {.cols-3}
 ### Introduction
 
 This is a quick cheat sheet to getting started with regular expressions.
+
 - [Regex in Python](#regex-in-python) _(quickref.me)_
 - [Regex in JavaScript](#regex-in-javascript) _(quickref.me)_
 - [Regex in PHP](#regex-in-php) _(quickref.me)_
@@ -320,9 +320,9 @@ Regex examples{.cols-3}
 | `ring        `| Match <yel>ring</yel> sp<yel>ring</yel>board etc. |
 | `.           `| Match <yel>a</yel>,  <yel>9</yel>,  <yel>+</yel> etc.      |
 | `h.o         `| Match <yel>hoo</yel>, <yel>h2o</yel>, <yel>h/o</yel>  etc.               |
-| `ring\?      `| Match <yel>ing?    </yel>                         |
-| `\(quiet\)   `| Match <yel>quiet) </yel>                          |
-| `c:\\windows `| Match <yel>c:\windows  </yel>                      |
+| `ring\?      `| Match <yel>ring?</yel>                         |
+| `\(quiet\)   `| Match <yel>(quiet)</yel>                          |
+| `c:\\windows `| Match <yel>c:\windows</yel>                      |
 
 Use `\` to search for these special characters: <br> `[ \ ^ $ . | ? * + ( ) { }`
 
@@ -363,21 +363,21 @@ In `[ ]` always escape `. \ ]` and sometimes `^ - .`
 ### Occurrences
 | Pattern             | Matches                           |
 |---------------------|-----------------------------------|
-| `colou?r`           | match <yel>color</yel> or <yel>colour</yel>             |
-| `[BW]ill[ieamy's]*` | match <yel>Bill</yel>, <yel>Willy</yel>, <yel>William's</yel> etc. |
-| `[a-zA-Z]+`         | match 1 or more letters           |
-| `\d{3}-\d{2}-\d{4}` | match a SSN                       |
-| `[a-z]\w{1,7}`      | match a UW NetID                  |
+| `colou?r`           | Match <yel>color</yel> or <yel>colour</yel>             |
+| `[BW]ill[ieamy's]*` | Match <yel>Bill</yel>, <yel>Willy</yel>, <yel>William's</yel> etc. |
+| `[a-zA-Z]+`         | Match 1 or more letters           |
+| `\d{3}-\d{2}-\d{4}` | Match a SSN                       |
+| `[a-z]\w{1,7}`      | Match a UW NetID                  |
 
 
 
 ### Greedy versus lazy
 | Pattern                   | Meaning                          |
 |---------------------------|----------------------------------|
-| `*  + {n,}`<br>_greedy_ | match as much as possible        |
-| `<.+>   `                   | finds 1 big match in <yel>\<b>bold\<\/b></yel> |
-| `*?  +? {n,}?`<br>_lazy_ | match as little as possible      |
-| `<.+?>`                     | finds 2 matches in \<<yel>b</yel>>bold\<<yel>\/b</yel>>   |
+| `*  + {n,}`<br>_greedy_ | Match as much as possible        |
+| `<.+>   `                   | Finds 1 big match in <yel>\<b>bold\<\/b></yel> |
+| `*?  +? {n,}?`<br>_lazy_ | Match as little as possible      |
+| `<.+?>`                     | Finds 2 matches in \<<yel>b</yel>>bold\<<yel>\/b</yel>>   |
 
 
 ### Scope {.col-span-2}
@@ -424,9 +424,9 @@ Can lead to catastrophic backtracking.
 ### Back references
 | Pattern                  | Matches                                          |
 |--------------------------|--------------------------------------------------|
-| `(to) (be) or not \1 \2` | match <yel>to be or not to be</yel>                         |
-| `([^\s])\1{2}`           | match non-space, then same twice more &nbsp; <yel>aaa</yel>, <yel>...</yel> |
-| `\b(\w+)\s+\1\b`         | match doubled words                              |
+| `(to) (be) or not \1 \2` | Match <yel>to be or not to be</yel>                         |
+| `([^\s])\1{2}`           | Match non-space, then same twice more &nbsp; <yel>aaa</yel>, <yel>...</yel> |
+| `\b(\w+)\s+\1\b`         | Match doubled words                              |
 
 
 
@@ -442,8 +442,8 @@ Use non-capturing or atomic groups when possible
 ### Atomic groups 
 | Pattern                | Meaning                    |
 |------------------------|----------------------------|
-| `(?>red\|green\|blue)` | faster than non-capturing  |
-| `(?>id\|identity)\b`   | match <yel>id</yel>, but not <yel>id</yel>entity |
+| `(?>red\|green\|blue)` | Faster than non-capturing  |
+| `(?>id\|identity)\b`   | Match <yel>id</yel>, but not <yel>id</yel>entity |
 
 "id" matches, but `\b` fails after atomic group,
 parser doesn't backtrack into group to retry 'identity'
