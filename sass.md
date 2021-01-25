@@ -4,11 +4,11 @@ date: 2020-12-20 22:15:43
 icon: icon-sass
 background: bg-pink-500
 tags:
-  - css
+    - css
 categories:
-  - Programming
+    - Programming
 intro: |
-    This is a quick reference to [Sass stylesheets](https://sass-lang.com).
+      This is a quick reference to [Sass stylesheets](https://sass-lang.com).
 ---
 
 Basics {.cols-3}
@@ -16,89 +16,36 @@ Basics {.cols-3}
 
 ### Introduction
 
-This is a quick reference to [Sass stylesheets](https://sass-lang.com).
+- [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
 
-- [Sass documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
 
 ### Variables
 
 ```scss
-$red: #833;
+$defaultLinkColor: #46EAC2;
+
+a {
+  color: $defaultLinkColor;
+}
 ```
 
+### String interpolation
+
 ```scss
-body {
-  color: $red;
+$wk: -webkit-;
+
+.rounded-box {
+  #{$wk}border-radius: 4px;
 }
 ```
 
 
-### Mixins {.row-span-3}
-
-```scss
-@mixin heading-font {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-```
-
-```scss
-h1 {
-  @include heading-font;
-}
-```
-
-#### with parameters
-
-```scss
-@mixin font-size($n) {
-  font-size: $n * 1.2em;
-}
-```
-
-```scss
-body {
-  @include font-size(2);
-}
-```
-
-#### with default values
-
-```scss
-@mixin pad($n: 10px) {
-  padding: $n;
-}
-```
-
-```scss
-body {
-  @include pad(15px);
-}
-```
-
-#### with a default variable
-
-```scss
-// Set a default value
-$default-padding: 10px;
-```
-
-```scss
-@mixin pad($n: $default-padding) {
-  padding: $n;
-}
-```
-
-```scss
-body {
-  @include pad(15px);
-}
-```
 
 ### Comments
 
 ```scss
 /*
+ Block comments
  Block comments
  Block comments
 */
@@ -108,26 +55,42 @@ body {
 
 
 
-### Nesting
+
+### Mixins
+
+```scss
+@mixin heading-font {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+h1 {
+    @include heading-font;
+}
+```
+See: [Mixins](#mixins-2)
+
+
+
+### Nesting {.row-span-2}
 
 ```scss
 .markdown-body {
-  a {
-    color: blue;
-    &:hover {
-      color: red;
+    a {
+      color: blue;
+      &:hover {
+        color: red;
+      }
     }
-  }
 }
 ```
 
 #### to properties
 ```scss
 text: {
-  // like text-align: center
-  align: center;          
-  // like text-transform: uppercase
-  transform: uppercase; 
+    // like text-align: center
+    align: center;          
+    // like text-transform: uppercase
+    transform: uppercase; 
 }
 ```
 
@@ -136,23 +99,76 @@ text: {
 
 ```scss
 .button {
-  ···
+    ···
 }
 ```
 
 ```scss
 .push-button {
-  @extend .button;
+    @extend .button;
 }
 ```
 
-### Composing
+### @import
 
 ```scss
 @import './other_sass_file';
+@import '/code', 'lists';
+
+// Plain CSS @imports
+@import "theme.css";
+@import url(theme);
 ```
 
-The `.scss` or `.sass` extension is optional.
+The `.sass` or `.sass` extension is optional.
+
+
+Mixins {.cols-3}
+------
+
+
+### Parameters
+
+```scss
+@mixin font-size($n) {
+    font-size: $n * 1.2em;
+}
+```
+
+```scss
+body {
+    @include font-size(2);
+}
+```
+
+### Default values
+
+```scss
+@mixin pad($n: 10px) {
+    padding: $n;
+}
+```
+
+```scss
+body {
+    @include pad(15px);
+}
+```
+
+### Default variable
+
+```scss
+$default-padding: 10px;
+
+@mixin pad($n: $default-padding) {
+    padding: $n;
+}
+
+body {
+    @include pad(15px);
+}
+```
+
 
 Color functions {.cols-2}
 --------
@@ -324,37 +340,38 @@ feature-exists(global-variable-shadowing)
 * units-level-3
 * at-error
 
-Loops {.cols-2}
+Loops {.cols-3}
 --------
 
 ### For loops
 
 ```scss
 @for $i from 1 through 4 {
-  .item-#{$i} { left: 20px * $i; }
+    .item-#{$i} { left: 20px * $i; }
 }
 ```
 
 ### Each loops (simple)
 
 ```scss
-$menu-items: home about services contact;
+$menu-items: home about contact;
 
 @each $item in $menu-items {
-  .photo-#{$item} {
-    background: url('images/#{$item}.jpg');
-  }
+    .photo-#{$item} {
+      background: url('#{$item}.jpg');
+    }
 }
 ```
 
 ### Each loops (nested)
 ```scss
-$backgrounds: (home, 'home.jpg'), (about, 'about.jpg');
+$backgrounds: (home, 'home.jpg'),
+              (about, 'about.jpg');
 
 @each $id, $image in $backgrounds {
-  .photo-#{$id} {
-    background: url($image);
-  }
+    .photo-#{$id} {
+      background: url($image);
+    }
 }
 ```
 
@@ -363,27 +380,27 @@ $backgrounds: (home, 'home.jpg'), (about, 'about.jpg');
 ```scss
 $i: 6;
 @while $i > 0 {
-  .item-#{$i} { width: 2em * $i; }
-  $i: $i - 2;
+    .item-#{$i} { width: 2em * $i; }
+    $i: $i - 2;
 }
 ```
 
 Other features {.cols-3}
 --------
 
-### Conditionals
+### Conditionals {.row-span-2}
 
 ```scss
 @if $position == 'left' {
-   position: absolute;
-   left: 0;
+     position: absolute;
+     left: 0;
 }
 @else if $position == 'right' {
-   position: absolute;
-   right: 0;
+     position: absolute;
+     right: 0;
 }
 @else {
-   position: static;
+     position: static;
 }
 ```
 
@@ -418,8 +435,3 @@ map-get($map, key1)
 ```
 
 
-See also
---------
-
-- <http://sass-lang.com/documentation/Sass/Script/Functions.html>
-- <http://sass-lang.com/documentation/file.SASS_REFERENCE.html#sassscript>
