@@ -207,9 +207,9 @@ invert($color)
 ```
 
 ```scss
-fade-in($color, .5) // aka opacify()
-fade-out($color, .5)// aka transparentize() - halves the opacity
-rgba($color, .5)    // sets alpha to .5
+fade-in($color, .5)   // aka opacify()
+fade-out($color, .5)  // aka transparentize()
+rgba($color, .5)      // sets alpha to .5
 ```
 
 ### Getting individual values
@@ -217,16 +217,16 @@ rgba($color, .5)    // sets alpha to .5
 #### HSLA
 
 ```scss
-hue($color)         // → 0deg..360deg
-saturation($color)  // → 0%..100%
-lightness($color)   // → 0%..100%
-alpha($color)       // → 0..1 (aka opacity())
+hue($color)         // 0deg..360deg
+saturation($color)  // 0%..100%
+lightness($color)   // 0%..100%
+alpha($color)       // 0..1 (aka opacity())
 ```
 
 #### RGB
 
 ```scss
-red($color)         // → 0..255
+red($color)         // 0..255
 green($color)
 blue($color)
 ```
@@ -238,9 +238,9 @@ See: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-i
 ```scss
 // Changes by fixed amounts
 adjust-color($color, $blue: 5)
-adjust-color($color, $lightness: -30%) // like darken(_, 30%)
-adjust-color($color, $alpha: -0.4)     // like fade-out(_, .4)
-adjust-color($color, $hue: 30deg)      // like adjust-hue(_, 15deg)
+adjust-color($color, $lightness: -30%) // darken(_, 30%)
+adjust-color($color, $alpha: -0.4)     // fade-out(_, .4)
+adjust-color($color, $hue: 30deg)      // adjust-hue(_, 15deg)
 ```
 
 ```scss
@@ -254,7 +254,7 @@ change-color($color, $hue: 180deg)
 change-color($color, $blue: 250)
 ```
 
-Supported: `$red` `$green` `$blue` `$hue` `$saturation` `$lightness` `$alpha`
+Supported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
 
 Other functions {.cols-2}
 --------
