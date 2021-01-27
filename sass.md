@@ -8,7 +8,7 @@ tags:
 categories:
     - Programming
 intro: |
-      This is a quick reference to [Sass stylesheets](https://sass-lang.com).
+      This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
 ---
 
 Basics {.cols-3}
@@ -17,6 +17,7 @@ Basics {.cols-3}
 ### Introduction
 
 - [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
+- [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_
 
 
 ### Variables
