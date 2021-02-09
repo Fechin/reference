@@ -129,9 +129,9 @@ G gg H M L k j ▶ print("to")
 | `:q!` _\|_ `ZQ`           | Force quit                 |
 | `:qa`                     | Close all files            |
 | `:qa!`                    | Force quit all files       |
-| `:w new.txt`              | Save as `new.txt`          |
-| `:sav new.txt`            | Write and switch to `new.txt` |
-| `:w !sudo tee %`          | Write file readonly        |
+| `:w new.txt`              | Write to `new.txt`         |
+| `:sav new.txt`            | Save and edit `new.txt`    |
+| `:w !sudo tee %`          | Write to readonly file     |
 {.shortcuts}
 
 
