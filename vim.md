@@ -120,17 +120,18 @@ G gg H M L k j ▶ print("to")
 
 
 ### Saving and Exiting
-| Shortcut                  | Description                     |
-|---------------------------|---------------------------------|
-| `:w`                      | Save                            |
-| `:q`                      | Close file                      |
-| `:wqa`                    | Save and quit on all tabs       |
-| `:wq` _\|_ `:x` _\|_ `ZZ` | Save and close file             |
-| `:q!` _\|_ `ZQ`           | Close file, ignore changes      |
-| `:qa`                     | Close all files                 |
-| `:qa!`                    | Close all files, ignore changes |
-| `:w new.txt`              | Save as `new.txt`               |
-| `:w !sudo tee %`          | Write file readonly             |
+| Shortcut                  | Description                |
+|---------------------------|----------------------------|
+| `:w`                      | Save                       |
+| `:q`                      | Close file                 |
+| `:wq` _\|_ `:x` _\|_ `ZZ` | Save and quit              |
+| `:wqa`                    | Save and quit all files    |
+| `:q!` _\|_ `ZQ`           | Force quit                 |
+| `:qa`                     | Close all files            |
+| `:qa!`                    | Force quit all files       |
+| `:w new.txt`              | Save as `new.txt`          |
+| `:sav new.txt`            | Write and switch to `new.txt` |
+| `:w !sudo tee %`          | Write file readonly        |
 {.shortcuts}
 
 
