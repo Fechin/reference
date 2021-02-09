@@ -1,11 +1,11 @@
 ---
 title: Netstat
+date: 2021-01-27 11:44:21
 icon: icon-netstat
 background: bg-gray-800
 tags:
 categories:
     - Linux Command
-date: 2021-01-27 11:44:21
 intro: |
     This quick reference cheat sheet provides various for using netstat command.
 ---
