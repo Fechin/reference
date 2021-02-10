@@ -84,19 +84,19 @@ See: [Lists](#lists-3)
 ```python
 a = 200
 if a > 0:
-  print("a is greater than 0")
+    print("a is greater than 0")
 else:
-  print("a is not greater than 0")
+    print("a is not greater than 0")
 ```
 See: [Flow control](#flow-control)
 
 ### Loops
 ```python
 for x in range(6):
-  if x == 3: break
-  print(x)
+    if x == 3: break
+    print(x)
 else:
-  print("Finally finished!")
+    print("Finally finished!")
 ```
 See: [Loops](#loops-2)
 
@@ -128,7 +128,7 @@ See: [File Handling](#file-handling-2)
 ```python
 result = 10 + 30  # =>  40
 result = 40 - 10  # =>  30
-result = 50 * 5   # =>  150
+result = 50 * 5   # =>  250
 result = 16 / 4   # =>  4
 result = 25 % 2   # =>  1
 result = 5 ** 3   # =>  125
@@ -219,7 +219,7 @@ Set of unique items/objects
 
 
 ### Dictionary
-```python
+```python {.wrap}
 >>> empty_dict = {}
 >>> a = {"one": 1, "two": 2, "three": 3}
 >>> a["one"]
@@ -228,9 +228,9 @@ Set of unique items/objects
 dict_keys(['one', 'two', 'three'])
 >>> a.values()
 dict_values([1, 2, 3])
->>> a.update({"four":4})
+>>> a.update({"four": 4})
 >>> a.keys()
-dict_keys(['brand', 'colors', 'four'])
+dict_keys(['one', 'two', 'three', 'four'])
 >>> a['four']
 4
 ```
@@ -637,11 +637,11 @@ a
 ```python
 value = True
 if not value:
-  print("Value is False")
+    print("Value is False")
 elif value is None:
-  print("Value is None")
+    print("Value is None")
 else:
-  print("Value is True")
+    print("Value is True")
 ```
 
 
@@ -797,7 +797,7 @@ add(5, 20)  # => 25
 # => True
 (lambda x: x > 2)(3)
 
- # => 5
+# => 5
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
 ```
 
@@ -915,9 +915,9 @@ os.remove("myfile.txt")
 ```python
 import os
 if os.path.exists("myfile.txt"):
-  os.remove("myfile.txt")
+    os.remove("myfile.txt")
 else:
-  print("The file does not exist")
+    print("The file does not exist")
 ```
 
 
@@ -953,7 +953,7 @@ my = MyNewClass()
 
 ```python
 class Animal:
-  def __init__(self, voice):
+    def __init__(self, voice):
     self.voice = voice
  
 cat = Animal('Meow')
@@ -969,8 +969,8 @@ print(dog.voice)    # => Woof
 ```python
 class Dog:
 
-  # Method of the class
-  def bark(self):
+    # Method of the class
+    def bark(self):
     print("Ham-Ham")
  
 charlie = Dog()
@@ -983,7 +983,7 @@ charlie.bark()   # => "Ham-Ham"
 
 ```python
 class my_class:
-  class_variable = "A class variable!"
+    class_variable = "A class variable!"
   
 x = my_class()
 y = my_class()
@@ -1001,14 +1001,14 @@ print(y.class_variable)
 
 ```python
 class ParentClass:
-  def print_test(self):
-    print("Parent Method")
+    def print_test(self):
+        print("Parent Method")
  
 class ChildClass(ParentClass):
-  def print_test(self):
-    print("Child Method")
-    # Calls the parent's print_test()
-    super().print_test() 
+    def print_test(self):
+        print("Child Method")
+        # Calls the parent's print_test()
+        super().print_test() 
 ```          
 --- 
 
@@ -1026,11 +1026,11 @@ Parent Method
 
 ```python
 class Employee:
-  def __init__(self, name):
-    self.name = name
+    def __init__(self, name):
+        self.name = name
  
-  def __repr__(self):
-    return self.name
+    def __repr__(self):
+        return self.name
  
 john = Employee('John')
 print(john)  # => John
@@ -1040,7 +1040,7 @@ print(john)  # => John
 ### User-defined exceptions
 ```python
 class CustomError(Exception):
-  pass
+    pass
 ```
 
 
@@ -1049,12 +1049,12 @@ class CustomError(Exception):
 
 ```python
 class ParentClass:
-  def print_self(self):
-    print('A')
+    def print_self(self):
+        print('A')
  
 class ChildClass(ParentClass):
-  def print_self(self):
-    print('B')
+    def print_self(self):
+        print('B')
  
 obj_A = ParentClass()
 obj_B = ChildClass()
@@ -1066,12 +1066,12 @@ obj_B.print_self() # B
 ### Overriding 
 ```python
 class ParentClass:
-  def print_self(self):
-    print("Parent")
+    def print_self(self):
+        print("Parent")
  
 class ChildClass(ParentClass):
-  def print_self(self):
-    print("Child")
+    def print_self(self):
+        print("Child")
  
 child_instance = ChildClass()
 child_instance.print_self() # => Child
@@ -1080,13 +1080,13 @@ child_instance.print_self() # => Child
 ### Inheritance
 ```python
 class Animal: 
-  def __init__(self, name, legs):
-    self.name = name
-    self.legs = legs
+    def __init__(self, name, legs):
+        self.name = name
+        self.legs = legs
         
 class Dog(Animal):
-  def sound(self):
-    print("Woof!")
+    def sound(self):
+        print("Woof!")
  
 Yoki = Dog("Yoki", 4)
 print(Yoki.name) # YOKI
