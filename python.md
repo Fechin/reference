@@ -104,7 +104,7 @@ See: [Loops](#loops-2)
 ### Functions
 ```python
 >>> def my_function():
-...   print("Hello from a function")
+...     print("Hello from a function")
 ...
 >>> my_function()
 Hello from a function
@@ -117,7 +117,7 @@ See: [Functions](#functions-2)
 ```python
 with open("myfile.txt", "r", encoding='utf8') as file:
     for x in file:
-      print(x)
+        print(x)
 ```
 
 See: [File Handling](#file-handling-2)
