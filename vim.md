@@ -495,7 +495,6 @@ Search and Replace {.cols-3}
 |              |                                    |
 |--------------|------------------------------------|
 | `:g/foo/d`   | Delete lines containing `foo`      |
-| `:g/foo/d`   | Delete lines containing `foo`      |
 | `:g!/foo/d`  | Delete lines not containing `foo`  |
 | `:g/^\s*$/d` | Delete all blank lines             |
 | `:g/foo/t$`  | Copy lines containing `foo` to EOF |
