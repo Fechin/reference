@@ -301,7 +301,7 @@ Loop through the letters in the word "banana"
 
 ---
 
-```
+```python
 >>> s = 'mybacon'
 >>> s[2:5]
 'bac'
@@ -412,7 +412,7 @@ txt3 = "My name is {}, I'm {}".format("John",36)
 ```
 
 ### Input
-```
+```python
 >>> name = input("Enter your name: ")
 Enter your name: Tom
 >>> name
