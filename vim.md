@@ -500,6 +500,7 @@ Search and Replace {.cols-3}
 | `:g/foo/t$`  | Copy lines containing `foo` to EOF |
 | `:g/foo/m$`  | Move lines containing `foo` to EOF |
 | `:g/^/m0`    | Reverse a file                     |
+| `:g/^/t.`    | Duplicate every line               |
 
 
 
@@ -554,7 +555,7 @@ Search and Replace {.cols-3}
 :%s/^\(.*\)\n\1/\1/              # Remove duplicate lines
 :%s/<\/\=\(\w\+\)\>/\U&/g        # Convert HTML-Tags to uppercase
 :g/^pattern/s/$/mytext           # Find and append text to the end
-:g/pattern/normal @q             # Run a macro on matching lines
+:g/pattern/norm! @i              # Run a macro on matching lines
 /^\(.*\)\(\r\?\n\1\)\+$          # View the duplicates lines
 :v/./,/./-j                      # Compress blank lines into a blank line
 :g/<p1>/,/<p2>/d                 # Delete inclusively from <p1> to <p2>
