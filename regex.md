@@ -690,12 +690,12 @@ Regex in PHP {.cols-3}
 
 | - | - |
 |---------------------------|------------------------------------------------------------------|
-| `preg_match()`            | performs a regex match                                           |
-| `preg_match_all()`        | perform a global regular expression match                        |
-| `preg_replace_callback()` | perform a regular expression search and replace using a callback |
-| `preg_replace()`          | perform a regular expression search and replace                  |
-| `preg_split()`            | splits a string by regex pattern                                 |
-| `preg_grep()`             | returns array entries that match a pattern                       |
+| `preg_match()`            | Performs a regex match                                           |
+| `preg_match_all()`        | Perform a global regular expression match                        |
+| `preg_replace_callback()` | Perform a regular expression search and replace using a callback |
+| `preg_replace()`          | Perform a regular expression search and replace                  |
+| `preg_split()`            | Splits a string by regex pattern                                 |
+| `preg_grep()`             | Returns array entries that match a pattern                       |
 
 
 
