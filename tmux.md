@@ -7,7 +7,7 @@ tags:
 categories:
     - Linux Command
 intro: |
-    Tmux cheat sheet quick reference of most commonly used shortcuts and commands
+    The tmux cheat sheet quick reference of most commonly used shortcuts and commands
 ---
 
 
