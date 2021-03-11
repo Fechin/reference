@@ -111,19 +111,19 @@ $ tmux info
 
 ### Panes (Splits) {.row-span-2}
 
-| Shortcuts                | Description  |
-|--------------------------|--------------|
-| `Ctrl+b` `"` _/_ `%`            | Split Horiz/Vert|
-| `Ctrl+b` `!`             | Pane -> Window |
-| `Ctrl+b` `x`             | Kill pane        |
-| `Ctrl+b` <arrow\> | Navigate panes |
-| `Ctrl+b` <h j k l\>       | Goto _(vim-style)_|
-| `Ctrl+b` `{` _/_ `}`             | Previous/Next pane    |
-| `Ctrl+b` `o`             | Goto next panes      |
-| `Ctrl+b` `z`             | toggle full-screen     |
-| `Ctrl+b` `;`             | Toggle Last pane        |
-| `Ctrl+b` `q`             | Show numbers       |
-| `Ctrl+b` `q` `0`...`9` | Goto # pane |
+| Shortcuts              | Description        |
+|------------------------|--------------------|
+| `Ctrl+b` `"` _/_ `%`   | Split Horiz/Vert   |
+| `Ctrl+b` `!`           | Pane -> Window     |
+| `Ctrl+b` `x`           | Kill pane          |
+| `Ctrl+b` <Arrow\>      | Navigate panes     |
+| `Ctrl+b` <Space\>      | Toggle layouts     |
+| `Ctrl+b` `{` _/_ `}`   | Move to Left/Right |
+| `Ctrl+b` `o`           | Goto next panes    |
+| `Ctrl+b` `z`           | toggle full-screen |
+| `Ctrl+b` `;`           | Toggle Last pane   |
+| `Ctrl+b` `q`           | Show numbers       |
+| `Ctrl+b` `q` `0`...`9` | Goto # pane        |
 {.shortcuts}
 
 
