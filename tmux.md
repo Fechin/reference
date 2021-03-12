@@ -131,7 +131,7 @@ $ tmux info
 ### Window (Tabs) {.row-span-2}
 | -                  | -                              |
 |--------------------|--------------------------------|
-| `Ctrl+b` `c` _/_ `N`       | Create window                  |
+| `Ctrl+b` `c`       | Create window                  |
 | `Ctrl+b` `p` _/_ `n`      | Previous/Next window                |
 | `Ctrl+b` `"` _/_ `%`            | Split Horiz/Vert|
 | `Ctrl+b` `w`       | List window                  |
