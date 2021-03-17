@@ -13,7 +13,7 @@ Resolutions
 
 ### Mobile Phones
 
-| SCREEN SIZE                        | RESOLUTION           | VIEWPORT                  | DENSITY                  | DEVICE DENSITY     | RATIO              | OS                      | DEVICES       |
+| DEVICES                            | SCREEN SIZE          | RESOLUTION                | VIEWPORT                 | DENSITY            | DEVICE DENSITY     | RATIO                   | OS            | 
 |------------------------------------|----------------------|---------------------------|--------------------------|--------------------|--------------------|-------------------------|---------------|
 | Apple iPhone 11 (2019)             | 6.1 <sub>inch</sub>  | 828 x 1792 <sub>px</sub>  | 414 x 896 <sub>px</sub>  | 326 <sub>ppi</sub> | 163 <sub>ppi</sub> | 2 <sub>xhdpi</sub>      | iOS 13.0      |
 | Apple iPhone 11 Pro (2019)         | 5.8 <sub>inch</sub>  | 1125 x 2436 <sub>px</sub> | 375 x 812 <sub>px</sub>  | 458 <sub>ppi</sub> | 153 <sub>ppi</sub> | 3 <sub>xxhdpi</sub>     | iOS 13.0      |
@@ -123,13 +123,14 @@ Resolutions
 | Xiaomi Redmi Note 7 (2019)         | 6.3 <sub>inch</sub>  | 1080 x 2340 <sub>px</sub> | 393 x 851 <sub>px</sub>  | 409 <sub>ppi</sub> | 149 <sub>ppi</sub> | 2.75 <sub>xxhdpi</sub>  | Android 9.0   |
 | Xiaomi Redmi Note 8 (2019)         | 6.3 <sub>inch</sub>  | 1080 x 2340 <sub>px</sub> | 393 x 851 <sub>px</sub>  | 409 <sub>ppi</sub> | 149 <sub>ppi</sub> | 2.75 <sub>xxhdpi</sub>  | Android 9.0   |
 | Xiaomi Redmi Note 8 Pro (2019)     | 6.53 <sub>inch</sub> | 1080 x 2340 <sub>px</sub> | 393 x 851 <sub>px</sub>  | 395 <sub>ppi</sub> | 144 <sub>ppi</sub> | 2.75 <sub>xxhdpi</sub>  | Android 9.0   |
+
 {.show-header}
 
 
 ### Tablets
 
-| SCREEN SIZE                 | RESOLUTION           | VIEWPORT                  | DENSITY                   | DEVICE DENSITY     | RATIO              | OS                   | DEVICES         |
-|-----------------------------|----------------------|---------------------------|---------------------------|--------------------|--------------------|----------------------|-----------------|
+| DEVICES                     | SCREEN SIZE          | RESOLUTION                | VIEWPORT                  | DENSITY            | DEVICE DENSITY     | RATIO                | OS             |
+|-----------------------------|----------------------|---------------------------|---------------------------|--------------------|--------------------|----------------------|----------------|
 | Apple iPad 10.2" (2019)     | 10.2 <sub>inch</sub> | 1620 x 2160 <sub>px</sub> | 810 x 1080 <sub>px</sub>  | 264 <sub>ppi</sub> | 132 <sub>ppi</sub> | 2 <sub>xhdpi</sub>   | iPadOS  13.1.2  |
 | Apple iPad 10.2" (2020)     | 10.2 <sub>inch</sub> | 1620 x 2160 <sub>px</sub> | 810 x 1080 <sub>px</sub>  | 264 <sub>ppi</sub> | 132 <sub>ppi</sub> | 2 <sub>xhdpi</sub>   | iPadOS  14      |
 | Apple iPad Air              | 9.7 <sub>inch</sub>  | 1536 x 2048 <sub>px</sub> | 768 x 1024 <sub>px</sub>  | 264 <sub>ppi</sub> | 132 <sub>ppi</sub> | 2.0 <sub>xhdpi</sub> | iOS 7           |
@@ -153,7 +154,7 @@ Resolutions
 
 ### Laptops
 
-| SCREEN SIZE           | RESOLUTION           | VIEWPORT                  | DENSITY                  | DEVICE DENSITY     | RATIO              | OS                   | DEVICES         |
+| DEVICES               | SCREEN SIZE          | RESOLUTION                | VIEWPORT                 | DENSITY            | DEVICE DENSITY     | RATIO                | OS              |
 |-----------------------|----------------------|---------------------------|--------------------------|--------------------|--------------------|----------------------|-----------------|
 | MacBook 2015 12"      | 12 <sub>inch</sub>   | 2304 x 1440 <sub>px</sub> | 1280 x 800 <sub>px</sub> | 226 <sub>ppi</sub> | 113 <sub>ppi</sub> | 2.0 <sub>xhdpi</sub> | macOS Sierra    |
 | MacBook 2016 12"      | 12 <sub>inch</sub>   | 2304 x 1440 <sub>px</sub> | 1280 x 800 <sub>px</sub> | 226 <sub>ppi</sub> | 113 <sub>ppi</sub> | 2.0 <sub>xhdpi</sub> | macOS Sierra    |
@@ -181,8 +182,8 @@ Resolutions
 
 ### Smart Watch
 
-| SCREEN SIZE                         | RESOLUTION           | VIEWPORT                | DENSITY                 | DEVICE DENSITY     | RATIO              | OS                  | DEVICES                      |
-|-------------------------------------|----------------------|-------------------------|-------------------------|--------------------|--------------------|---------------------|------------------------------|
+| DEVICES                             | SCREEN SIZE          | RESOLUTION              | VIEWPORT                | DENSITY            | DEVICE DENSITY     | RATIO               | OS                          |
+|-------------------------------------|----------------------|-------------------------|-------------------------|--------------------|--------------------|---------------------|-----------------------------|
 | Apple Watch SE (40mm) (2020)        | 1.57 <sub>inch</sub> | 394 x 324 <sub>px</sub> | 197 x 162 <sub>px</sub> | 326 <sub>ppi</sub> | 163 <sub>ppi</sub> | 2 <sub>xhdpi</sub>  | watchOS 7.0                  |
 | Apple Watch SE (44mm) (2020)        | 1.78 <sub>inch</sub> | 448 x 368 <sub>px</sub> | 224 x 184 <sub>px</sub> | 326 <sub>ppi</sub> | 163 <sub>ppi</sub> | 2 <sub>xhdpi</sub>  | watchOS 7.0                  |
 | Apple Watch Series 3 (38mm)         | 1.5 <sub>inch</sub>  | 340 x 272 <sub>px</sub> | 170 x 136 <sub>px</sub> | 290 <sub>ppi</sub> | 145 <sub>ppi</sub> | 2 <sub>xhdpi</sub>  | watchOS 4.0                  |
@@ -202,7 +203,7 @@ Resolutions
 | LG Watch Sport (2017)               | 1.38 <sub>inch</sub> | 480 x 480 <sub>px</sub> | 240 x 240 <sub>px</sub> | 348 <sub>ppi</sub> | 174 <sub>ppi</sub> | 2 <sub>xhdpi</sub>  | Android Wear 2.0             |
 | LG Watch Urbane 2nd Edition (2016)  | 1.38 <sub>inch</sub> | 480 x 480 <sub>px</sub> | 240 x 240 <sub>px</sub> | 348 <sub>ppi</sub> | 174 <sub>ppi</sub> | 2 <sub>xhdpi</sub>  | Android Wear 2.0             |
 | LG Watch W7 (2018)                  | 1.2 <sub>inch</sub>  | 360 x 360 <sub>px</sub> | 240 x 240 <sub>px</sub> | 300 <sub>ppi</sub> | 200 <sub>ppi</sub> | 1.5 <sub>hdpi</sub> | Android Wear OS 2.0          |
-| Samsung Galaxy Watch (2018)         | 1.3 <sub>inch</sub>  | 360 x 360 <sub>px</sub> | 240 x 240 <sub>px</sub> | 278 <sub>ppi</sub> | 185 <sub>ppi</sub> | 1.5 <sub>hdpi</sub> | Tizen-based wearable OS 4.0  |
+| Samsung Galaxy Watch (2018)         | 1.3 <sub>inch</sub>  | 360 x 360 <sub>px</sub> | 240 x 240 <sub>px</sub> | 278 <sub>ppi</sub> | 185 <sub>ppi</sub> | 1.5 <sub>hdpi</sub> | Tizen-based <br/>wearable OS 4.0  |
 {.show-header}
 
 
