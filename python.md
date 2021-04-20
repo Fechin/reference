@@ -291,7 +291,7 @@ Loop through the letters in the word "banana"
 
 
 ### Slicing string {.row-span-4}
-```
+```java
  ┌───┬───┬───┬───┬───┬───┬───┐
  | m | y | b | a | c | o | n |
  └───┴───┴───┴───┴───┴───┴───┘
