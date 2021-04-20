@@ -533,6 +533,118 @@ for (int i = 0; i < 5; i++) {
 // Outputs: 0123
 ```
 
+Collections Framework {.cols-3}
+--------------------
+
+### Java Collections {.col-span-2}
+
+| Collection                                                                              | Interface   | Ordered | Sorted | Thread safe | Duplicate | Nullable           |
+|-----------------------------------------------------------------------------------------|-------------|---------|--------|-------------|-----------|--------------------|
+| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)         | List        | Y       | _N_    | _N_         | Y         | Y                  |
+| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)               | List        | Y       | _N_    | Y           | Y         | Y                  |
+| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)       | List, Deque | Y       | _N_    | _N_         | Y         | Y                  |
+| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)             | Set         | _N_     | _N_    | _N_         | _N_       | One `null`         |
+| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html) | Set         | Y       | _N_    | _N_         | _N_       | One `null`         |
+| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)             | Set         | Y       | Y      | _N_         | _N_       | _N_                |
+| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)             | Map         | _N_     | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
+| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)         | Map         | _N_     | _N_    | Y           | _N (key)_ | _N (key)_          |
+| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html) | Map         | Y       | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
+| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)             | Map         | Y       | Y      | _N_         | _N (key)_ | _N (key)_          |
+| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)       | Deque       | Y       | _N_    | _N_         | Y         | _N_                |
+| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html) | Queue       | Y       | _N_    | _N_         | Y         | _N_                |
+{.show-header .left-text}
+
+
+### ArrayList
+```java
+List<Integer> nums = new ArrayList<>();
+
+// Adding
+nums.add(2);
+nums.add(5);
+nums.add(8);
+
+// Retrieving
+System.out.println(nums.get(0));
+
+// Indexed for loop iteration
+for (int i = 0; i < nums.size(); i++) {
+    System.out.println(nums.get(i));
+}
+
+nums.remove(nums.size() - 1);
+nums.remove(0); // VERY slow
+
+for (Integer value : nums) {
+    System.out.println(value);
+}
+```
+
+### HashMap
+```java
+Map<Integer, String> m = new HashMap<>();
+m.put(5, "Five");
+m.put(8, "Eight");
+m.put(6, "Six");
+m.put(4, "Four");
+m.put(2, "Two");
+
+// Retrieving
+System.out.println(m.get(6));
+
+// Lambda forEach
+m.forEach((key, value) -> {
+    String msg = key + ": " + value;
+    System.out.println(msg);
+});
+```
+
+### HashSet
+```java
+Set<String> set = new HashSet<>();
+if (set.isEmpty()) {
+    System.out.println("Empty!");
+}
+
+set.add("dog");
+set.add("cat");
+set.add("mouse");
+set.add("snake");
+set.add("bear");
+
+if (set.contains("cat")) {
+    System.out.println("Contains cat");
+}
+
+set.remove("cat");
+for (String element : set) {
+    System.out.println(element);
+}
+```
+
+### ArrayDeque
+```java
+Deque<String> a = new ArrayDeque<>();
+
+// Using add()
+a.add("Dog");
+
+// Using addFirst()
+a.addFirst("Cat");
+
+// Using addLast()
+a.addLast("Horse");
+
+// [Cat, Dog, Horse]
+System.out.println(a);
+
+// Access element
+System.out.println(a.peek());
+
+// Remove element
+System.out.println(a.pop());
+```
+
 Misc {.cols-3}
 ----
 
@@ -630,3 +742,32 @@ multi-line comment!
 - super
 - while
 {.style-none .cols-7}
+
+### Math methods 
+
+| Method                | Description                 |
+|-----------------------|-----------------------------|
+| `Math.max(a,b)`       | Maximum of a and b          |
+| `Math.min(a,b)`       | Minimum of a and b          |
+| `Math.abs(a)`         | Absolute value a            |
+| `Math.sqrt(a)`        | Square-root of a            |
+| `Math.pow(a,b)`       | Power of b                  |
+| `Math.round(a)`       | Closest integer             |
+| `Math.sin(ang)`       | Sine of ang                 |
+| `Math.cos(ang)`       | Cosine of ang               |
+| `Math.tan(ang)`       | Tangent of ang              |
+| `Math.asin(ang)`      | Inverse sine of ang         |
+| `Math.log(a)`         | Natural logarithm of a      |
+| `Math.toDegrees(rad)` | Angle rad in degrees        |
+| `Math.toRadians(deg)` | Angle deg in radians        |
+
+### Try/Catch/Finally
+```java
+try {
+  // something
+} catch (Exception e) {
+  e.printStackTrace();
+} finally {
+  System.out.println("always printed");
+}
+```
