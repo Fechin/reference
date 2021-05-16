@@ -129,9 +129,9 @@ $ sed 's/old/new/[flags]' [input-file]
 
 | Command    | Description                                                        |
 | ---------- |------------------------------------------------------------------- |
-| `b lablel` | Branch to a label (for looping)                                    |
-| `t lablel` | Branch to a label only on successful substitution<br>(for looping) |
-| `:lablel`  | Label for the b and t commands (for looping)                       |
+| `b label` | Branch to a label (for looping)                                    |
+| `t label` | Branch to a label only on successful substitution<br>(for looping) |
+| `:label`  | Label for the b and t commands (for looping)                       |
 | `N`        | Append next line to pattern space                                  |
 | `P`        | Print 1st line in multi-line                                       |
 | `D`        | Delete 1st line in multi-line                                      |
