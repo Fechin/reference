@@ -1,14 +1,8 @@
-# Contributing notes
-It is a good practice to refer to the source code of the existing cheat sheet!
+# Contributing 
 
-## Step 1. 
-Please fork this repo, if you'd like to submit a PR. 
+Thanks for your interest on contributing to reference 👍👍, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Randy8080/reference/issues/new?assignee=Randy8080) and enhancement requests. 
 
-## Step 2. 
-
-A `{filename}.md` file will be processed into a cheat sheet page, you can visit it via https://quickref/{filename} after it is released.
-
-Create a markdown file, or edit an existing markdown file.
+A `{filename}.md` file will be processed into a cheat sheet, let's create or edit a markdown file:
 
 #### Front Matter
 ```markdown
@@ -23,15 +17,10 @@ categories:
 intro: This is a reference of styles that you can use on quickref cheatsheets!
 ---
 ```
-Just need its `title` and `intro`, and ignore other options. I will complete it, if it can be released
+Just need `title` and `intro`, and ignore other options. I will complete it if it can be released.
 
 #### CSS classes
-QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs), and supports adding classes via its syntax.
-
-There is a reference of styles that you can use on `quickref.me` cheat sheets: 
-https://quickref.me/quickref
+QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) and supports adding classes via its syntax. Also, there is a reference of styles that you can use on `quickref.me` cheat sheets:  https://quickref.me/quickref
 
 
-
-## Step 3. 
-Submit a Pull Request and wait for the author to publish!
+At last, It's a good practice to refer to the source code of the existing cheat sheet!
