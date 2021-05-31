@@ -8,8 +8,8 @@
 
 
 
-## Contribute
-See [CONTRIBUTING.md](https://github.com/Randy8080/reference/blob/main/CONTRIBUTING.md) for ways to get started.
+## Contributing
+See [the contribution guide](https://github.com/Randy8080/reference/blob/main/CONTRIBUTING.md) for ways to get started.
 
 
 ## License
