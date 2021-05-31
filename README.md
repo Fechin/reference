@@ -2,7 +2,7 @@
 
 > Share quick reference cheat sheet for developers.
  
-**[LiveView](https://quickref.me/)** _(_https://quickref.me_)_
+**[LiveView](https://quickref.me/)** _(quickref.me)_
 
 [![Quick reference](https://quickref.me/assets/image/preview.png)](https://quickref.me/)
 
