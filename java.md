@@ -55,7 +55,7 @@ String site = "quickref.me";
 | `float`   | 4 byte | 0.0f    | NA                  |
 | `double`  | 8 byte | 0.0d    | NA                  |
 | `char`    | 2 byte | \\u0000 | 0 ^to^ 65535        |
-| `boolean` | 1 bit  | false   | true / false        |
+| `boolean` | NA     | false   | true / false        |
 {.show-header}
 
 
