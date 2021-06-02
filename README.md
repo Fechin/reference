@@ -1,8 +1,11 @@
-# reference
+# Reference
 
-> Share quick reference cheat sheet for developers.
- 
-**[Live DEMO](https://quickref.me/)** (quickref.me)
+Share quick reference cheat sheet for developers.
+If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a PR.
+
+
+## Live demo
+Read the cheatsheet gracefully https://quickref.me
 
 [![Quick reference](https://quickref.me/assets/image/preview.png)](https://quickref.me/)
 
