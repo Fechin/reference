@@ -1059,8 +1059,8 @@ class ChildClass(ParentClass):
 obj_A = ParentClass()
 obj_B = ChildClass()
  
-obj_A.print_self() # A
-obj_B.print_self() # B
+obj_A.print_self() # => A
+obj_B.print_self() # => B
 ```
 
 ### Overriding 
@@ -1089,9 +1089,9 @@ class Dog(Animal):
         print("Woof!")
  
 Yoki = Dog("Yoki", 4)
-print(Yoki.name) # YOKI
-print(Yoki.legs) # 4
-Yoki.sound() # Woof!
+print(Yoki.name) # => YOKI
+print(Yoki.legs) # => 4
+Yoki.sound()     # => Woof!
 ```
 
 
@@ -1150,6 +1150,6 @@ except (TypeError, NameError):
     pass                 # Multiple exceptions can be handled together, if required.
 else:                    # Optional clause to the try/except block. Must follow all except blocks
     print("All good!")   # Runs only if the code in try raises no exceptions
-finally:                 #  Execute under all circumstances
+finally:                 # Execute under all circumstances
     print("We can clean up resources here")
 ```
