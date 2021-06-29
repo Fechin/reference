@@ -160,14 +160,28 @@ std::cout << "ri=" << ri;
 ```
 `ri` and `i` refer to the same memory location.
 
-### Vectors
-```cpp
 
-```
-### Vectors
+### Namespaces
 ```cpp
-
+#include <iostream>
+namespace ns1 {int val(){return 5;}}
+int main()
+{
+    std::cout << ns1::val();
+}
 ```
+---
+```cpp
+#include <iostream>
+namespace ns1 {int val(){return 5;}}
+using namespace ns1;
+using namespace std;
+int main()
+{
+    cout << val(); 
+}
+```
+Namespaces allow global identifiers under a name
 
 Arrays {.cols-3}
 ------
@@ -532,6 +546,7 @@ int main() {
     std::cout << add(10, 20); 
 }
 ```
+`add` is a function taking 2 ints and returning int
 
 ### Overloading
 ```cpp
@@ -582,6 +597,93 @@ Classes & Objects {.cols-3}
 
 ```
 
+Preprocessor {.cols-3}
+------------
+
+### Preprocessor {.row-span-3}
+- [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [else](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [endif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [ifdef](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [ifndef](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [define](https://en.cppreference.com/w/cpp/preprocessor/replace)
+- [undef](https://en.cppreference.com/w/cpp/preprocessor/replace)
+- [include](https://en.cppreference.com/w/cpp/preprocessor/include)
+- [line](https://en.cppreference.com/w/cpp/preprocessor/line)
+- [error](https://en.cppreference.com/w/cpp/preprocessor/error)
+- [pragma](https://en.cppreference.com/w/cpp/preprocessor/impl)
+- [defined](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [__has_include](https://en.cppreference.com/w/cpp/feature_test)
+- [__has_cpp_attribute](https://en.cppreference.com/w/cpp/feature_test)
+- [export](https://en.cppreference.com/w/cpp/keyword/export)
+- [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
+- [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
+{.style-none .cols-2}
+
+
+### Includes
+
+```cpp
+#include "iostream"
+#include <iostream>
+```
+
+### Defines
+
+```cpp
+#define FOO
+#define FOO "hello"
+
+#undef FOO
+```
+
+### If {.row-span-2}
+```cpp
+#ifdef DEBUG
+  console.log('hi');
+#elif defined VERBOSE
+  ...
+#else
+  ...
+#endif
+```
+
+### Error
+
+```cpp
+#if VERSION == 2.0
+  #error Unsupported
+  #warning Not really supported
+#endif
+```
+
+### Macro
+
+```cpp
+#define DEG(x) ((x) * 57.29)
+```
+
+### Token concat
+
+```cpp
+#define DST(name) name##_s name##_t
+DST(object);   #=> object_s object_t;
+```
+
+### Stringification
+
+```cpp
+#define STR(name) #name
+char * a = STR(object);   #=> char * a = "object";
+```
+
+### file and line
+
+```cpp
+#define LOG(msg) console.log(__FILE__, __LINE__, msg)
+#=> console.log("file.txt", 3, "hey")
+```
 
 
 Miscellaneous {.cols-3}
@@ -604,6 +706,130 @@ Miscellaneous {.cols-3}
 | `\0`              | Null Character        |
 
 
+### Keywords  {.col-span-2 .row-span-2}
+- [alignas](https://en.cppreference.com/w/cpp/keyword/alignas)
+- [alignof](https://en.cppreference.com/w/cpp/keyword/alignof)
+- [and](https://en.cppreference.com/w/cpp/keyword/and)
+- [and_eq](https://en.cppreference.com/w/cpp/keyword/and_eq)
+- [asm](https://en.cppreference.com/w/cpp/keyword/asm)
+- [atomic_cancel](https://en.cppreference.com/w/cpp/keyword/atomic_cancel)
+- [atomic_commit](https://en.cppreference.com/w/cpp/keyword/atomic_commit)
+- [atomic_noexcept](https://en.cppreference.com/w/cpp/keyword/atomic_noexcept)
+- [auto](https://en.cppreference.com/w/cpp/keyword/auto)
+- [bitand](https://en.cppreference.com/w/cpp/keyword/bitand)
+- [bitor](https://en.cppreference.com/w/cpp/keyword/bitor)
+- [bool](https://en.cppreference.com/w/cpp/keyword/bool)
+- [break](https://en.cppreference.com/w/cpp/keyword/break)
+- [case](https://en.cppreference.com/w/cpp/keyword/case)
+- [catch](https://en.cppreference.com/w/cpp/keyword/catch)
+- [char](https://en.cppreference.com/w/cpp/keyword/char)
+- [char8_t](https://en.cppreference.com/w/cpp/keyword/char8_t)
+- [char16_t](https://en.cppreference.com/w/cpp/keyword/char16_t)
+- [char32_t](https://en.cppreference.com/w/cpp/keyword/char32_t)
+- [class](https://en.cppreference.com/w/cpp/keyword/class)
+- [compl](https://en.cppreference.com/w/cpp/keyword/compl)
+- [concept](https://en.cppreference.com/w/cpp/keyword/concept)
+- [const](https://en.cppreference.com/w/cpp/keyword/const)
+- [consteval](https://en.cppreference.com/w/cpp/keyword/consteval)
+- [constexpr](https://en.cppreference.com/w/cpp/keyword/constexpr)
+- [constinit](https://en.cppreference.com/w/cpp/keyword/constinit)
+- [const_cast](https://en.cppreference.com/w/cpp/keyword/const_cast)
+- [continue](https://en.cppreference.com/w/cpp/keyword/continue)
+- [co_await](https://en.cppreference.com/w/cpp/keyword/co_await)
+- [co_return](https://en.cppreference.com/w/cpp/keyword/co_return)
+- [co_yield](https://en.cppreference.com/w/cpp/keyword/co_yield)
+- [decltype](https://en.cppreference.com/w/cpp/keyword/decltype)
+- [default](https://en.cppreference.com/w/cpp/keyword/default)
+- [delete](https://en.cppreference.com/w/cpp/keyword/delete)
+- [do](https://en.cppreference.com/w/cpp/keyword/do)
+- [double](https://en.cppreference.com/w/cpp/keyword/double)
+- [dynamic_cast](https://en.cppreference.com/w/cpp/keyword/dynamic_cast)
+- [else](https://en.cppreference.com/w/cpp/keyword/else)
+- [enum](https://en.cppreference.com/w/cpp/keyword/enum)
+- [explicit](https://en.cppreference.com/w/cpp/keyword/explicit)
+- [export](https://en.cppreference.com/w/cpp/keyword/export)
+- [extern](https://en.cppreference.com/w/cpp/keyword/extern)
+- [false](https://en.cppreference.com/w/cpp/keyword/false)
+- [float](https://en.cppreference.com/w/cpp/keyword/float)
+- [for](https://en.cppreference.com/w/cpp/keyword/for)
+- [friend](https://en.cppreference.com/w/cpp/keyword/friend)
+- [goto](https://en.cppreference.com/w/cpp/keyword/goto)
+- [if](https://en.cppreference.com/w/cpp/keyword/if)
+- [inline](https://en.cppreference.com/w/cpp/keyword/inline)
+- [int](https://en.cppreference.com/w/cpp/keyword/int)
+- [long](https://en.cppreference.com/w/cpp/keyword/long)
+- [mutable](https://en.cppreference.com/w/cpp/keyword/mutable)
+- [namespace](https://en.cppreference.com/w/cpp/keyword/namespace)
+- [new](https://en.cppreference.com/w/cpp/keyword/new)
+- [noexcept](https://en.cppreference.com/w/cpp/keyword/noexcept)
+- [not](https://en.cppreference.com/w/cpp/keyword/not)
+- [not_eq](https://en.cppreference.com/w/cpp/keyword/not_eq)
+- [nullptr](https://en.cppreference.com/w/cpp/keyword/nullptr)
+- [operator](https://en.cppreference.com/w/cpp/keyword/operator)
+- [or](https://en.cppreference.com/w/cpp/keyword/or)
+- [or_eq](https://en.cppreference.com/w/cpp/keyword/or_eq)
+- [private](https://en.cppreference.com/w/cpp/keyword/private)
+- [protected](https://en.cppreference.com/w/cpp/keyword/protected)
+- [public](https://en.cppreference.com/w/cpp/keyword/public)
+- [reflexpr](https://en.cppreference.com/w/cpp/keyword/reflexpr)
+- [register](https://en.cppreference.com/w/cpp/keyword/register)
+- [reinterpret_cast](https://en.cppreference.com/w/cpp/keyword/reinterpret_cast)
+- [requires](https://en.cppreference.com/w/cpp/keyword/requires)
+- [return](https://en.cppreference.com/w/cpp/language/return)
+- [short](https://en.cppreference.com/w/cpp/keyword/short)
+- [signed](https://en.cppreference.com/w/cpp/keyword/signed)
+- [sizeof](https://en.cppreference.com/w/cpp/keyword/sizeof)
+- [static](https://en.cppreference.com/w/cpp/keyword/static)
+- [static_assert](https://en.cppreference.com/w/cpp/keyword/static_assert)
+- [static_cast](https://en.cppreference.com/w/cpp/keyword/static_cast)
+- [struct](https://en.cppreference.com/w/cpp/keyword/struct)
+- [switch](https://en.cppreference.com/w/cpp/keyword/switch)
+- [synchronized](https://en.cppreference.com/w/cpp/keyword/synchronized)
+- [template](https://en.cppreference.com/w/cpp/keyword/template)
+- [this](https://en.cppreference.com/w/cpp/keyword/this)
+- [thread_local](https://en.cppreference.com/w/cpp/keyword/thread_local)
+- [throw](https://en.cppreference.com/w/cpp/keyword/throw)
+- [true](https://en.cppreference.com/w/cpp/keyword/true)
+- [try](https://en.cppreference.com/w/cpp/keyword/try)
+- [typedef](https://en.cppreference.com/w/cpp/keyword/typedef)
+- [typeid](https://en.cppreference.com/w/cpp/keyword/typeid)
+- [typename](https://en.cppreference.com/w/cpp/keyword/typename)
+- [union](https://en.cppreference.com/w/cpp/keyword/union)
+- [unsigned](https://en.cppreference.com/w/cpp/keyword/unsigned)
+- [using](https://en.cppreference.com/w/cpp/keyword/using)
+- [virtual](https://en.cppreference.com/w/cpp/keyword/virtual)
+- [void](https://en.cppreference.com/w/cpp/keyword/void)
+- [volatile](https://en.cppreference.com/w/cpp/keyword/volatile)
+- [wchar_t](https://en.cppreference.com/w/cpp/keyword/wchar_t)
+- [while](https://en.cppreference.com/w/cpp/keyword/while)
+- [xor](https://en.cppreference.com/w/cpp/keyword/xor)
+- [xor_eq](https://en.cppreference.com/w/cpp/keyword/xor_eq)
+- [final](https://en.cppreference.com/w/cpp/language/final)
+- [override](https://en.cppreference.com/w/cpp/language/override)
+- [transaction_safe](https://en.cppreference.com/w/cpp/language/transactional_memory)
+- [transaction_safe_dynamic](https://en.cppreference.com/w/cpp/language/transactional_memory)
+{.style-none .cols-5}
+
+### Preprocessor
+- [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [else](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [endif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [ifdef](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [ifndef](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [define](https://en.cppreference.com/w/cpp/preprocessor/replace)
+- [undef](https://en.cppreference.com/w/cpp/preprocessor/replace)
+- [include](https://en.cppreference.com/w/cpp/preprocessor/include)
+- [line](https://en.cppreference.com/w/cpp/preprocessor/line)
+- [error](https://en.cppreference.com/w/cpp/preprocessor/error)
+- [pragma](https://en.cppreference.com/w/cpp/preprocessor/impl)
+- [defined](https://en.cppreference.com/w/cpp/preprocessor/conditional)
+- [__has_include](https://en.cppreference.com/w/cpp/feature_test)
+- [__has_cpp_attribute](https://en.cppreference.com/w/cpp/feature_test)
+- [export](https://en.cppreference.com/w/cpp/keyword/export)
+- [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
+- [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
+{.style-none .cols-2}
 
 
 ## Also see
