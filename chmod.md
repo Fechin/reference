@@ -2,7 +2,7 @@
 title: Chmod
 date: 2021-07-01 10:51:44
 icon: icon-permission
-background: bg-blue-800
+background: bg-green-600
 tags:
 categories:
   - Linux Command
