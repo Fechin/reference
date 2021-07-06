@@ -17,19 +17,27 @@ intro: |
 
 
 ### Starting Emacs
-To enter GNU Emacs 27, just type its name: 
+To enter Emacs, just type its name: 
 ```shell script
 $ emacs
 ```
 
 ------
 
-| - | - |
-|-------------|---------------------------------------------|
-| `C-z`       | Suspend Emacs <br>_(or iconify it under X)_ |
-| `C-x` `C-c` | Exit Emacs permanently                      |
+| -           | -                                        |
+|-------------|------------------------------------------|
+| `C-z`       | Suspend Emacs                            |
+| `C-x` `C-c` | Exit Emacs permanently                   |
 {.shortcuts}
 
+### Global Description {.secondary}
+| -           | -                                        |
+|-------------|------------------------------------------|
+| `C-<key>`   | Means hold the control, and press `<key>`      |
+| `M-<key>`   | Means press the Esc once, and press `<key>`    |
+{.shortcuts}
+
+NOTICE: This cheatsheet follows the above rules.
 
 
 ### Motion {.row-span-2}
