@@ -10,6 +10,7 @@ categories:
   - IDE
 intro: |
     This quick reference cheat sheet lists the default keyboard shortcuts for WebStorm running on Windows/Linux or Mac
+---
 
 Windows & Linux Keymap {.cols-3}
 --------
