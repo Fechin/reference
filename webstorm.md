@@ -5,7 +5,10 @@ icon: icon-webstorm
 background: bg-gradient-to-r from-green-300 to-blue-400 hover:from-green-400 hover:to-blue-500
 tags:
   - JetBrains
-  - Java
+  - JavaScript
+  - Node js
+  - CSS
+  - HTML
 categories:
   - IDE
 intro: |
