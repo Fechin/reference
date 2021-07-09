@@ -275,10 +275,10 @@ See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_s
 |---------------------------|-----------------------------------|
 | `a[target]`               | With a <yel>target</yel> attribute     |
 | `a[target="_blank"]`      | Open in new tab       |
-| `[title~="chair"]`        | Containing <yel>chair</yel>   |
 | `a[href^="/index"]`       | Starts with <yel>/index</yel> |
 | `[class|="chair"]`        | Starts with <yel>chair</yel> |
-| `[class*="chair"]`        | Contains <yel>chair</yel>    |
+| `[class*="chair"]`        | containing <yel>chair</yel>   |
+| `[title~="chair"]`        | Contains the word <yel>chair</yel>   |
 | `a[href$=".doc"]`         | Ends with <yel>.doc</yel>    |
 | `[type="button"]`         | Specified type               |
 

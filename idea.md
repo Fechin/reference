@@ -179,8 +179,8 @@ Windows & Linux Keymap {.cols-3}
 |----|---------|
 `Ctrl` `F9`|  Make project
 `Ctrl` `Shift` `F9`|  Compile selected file, package or module
-`Alt` `Shift` `F10/F9`|  Select configuration and run/and debug
-`Shift` `F10/F9`|  Run/Debug
+`Alt` `Shift` `F10` _/_ `F9`|  Select configuration and run/and debug
+`Shift` `F10` _/_ `F9`|  Run/Debug
 `Ctrl` `Shift` `F10`|  Run context configuration from editor
 {.shortcuts}
 
