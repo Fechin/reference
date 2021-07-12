@@ -5,6 +5,9 @@ icon: icon-grep
 background: bg-green-400
 tags: 
     - egrep
+    - search
+    - pattern
+    - text
 categories:
     - Linux Command
 intro: This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program grep and assumes you already understand its usage.

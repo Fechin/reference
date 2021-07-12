@@ -4,8 +4,10 @@ date: 2020-12-29 20:36:35
 icon: icon-toml
 background: bg-red-700
 tags:
+    - config
+    - format
 categories:
-  - Programming
+    - Programming
 intro: |
     This is a quick reference cheat sheet to the TOML format configuration file syntax.
 ---

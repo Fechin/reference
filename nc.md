@@ -5,6 +5,10 @@ icon: icon-netcat
 background: bg-blue-600
 tags: 
     - ncat
+    - nc
+    - utility
+    - network
+    - traffic
 categories:
     - Linux Command
 intro:  This cheat sheet provides various for using Netcat on both Linux and Unix.

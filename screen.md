@@ -3,9 +3,11 @@ title: Screen
 date: 2021-01-02 20:03:55
 background: bg-green-500
 tags:
-  - session
+    - terminal
+    - session
+    - utility
 categories:
-  - Linux Command
+    - Linux Command
 intro: |
     This is a quick reference guide cheat sheet for the screen command.
 ---

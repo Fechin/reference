@@ -3,7 +3,8 @@ title: PostgreSQL
 icon: icon-postgres
 background: bg-blue-800
 tags:
-  - null
+    - DB
+    - RDBMS
 categories:
   - Database
 date: 2021-01-11 14:19:24

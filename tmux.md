@@ -4,6 +4,9 @@ date: 2021-02-20 14:31:24
 icon: icon-tmux
 background: bg-green-600
 tags:
+    - utility
+    - terminal
+    - session
 categories:
     - Linux Command
 intro: |

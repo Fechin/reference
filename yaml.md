@@ -4,10 +4,12 @@ date: 2020-12-29 18:26:55
 icon: icon-yaml
 background: bg-gray-700
 tags:
+   - config
+   - format
 categories:
-  - Programming
+   - Programming
 intro: |
-   This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
+    This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
 ---
 
 Getting started {.cols-3}

@@ -4,9 +4,10 @@ date: 2020-12-25 20:22:47
 icon: icon-css
 background: bg-blue-500
 tags:
-  - CSS 3
+    - css
+    - style
 categories:
-  - Programming
+    - Programming
 intro: |
     This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.
 ---

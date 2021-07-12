@@ -4,9 +4,10 @@ date: 2020-12-17 16:21:49
 icon: icon-emacs
 background: bg-purple-500
 tags:
-  - editor
+    - editor
+    - text
 categories:
-  - Toolkit
+    - Toolkit
 intro: |
     [Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.
     This reference was made for Emacs 27.

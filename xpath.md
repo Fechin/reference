@@ -4,9 +4,11 @@ date: 2020-12-19 22:15:43
 icon: icon-xpath
 background: bg-blue-600
 tags:
-  - HTML
+    - document
+    - expression
+    - selector
 categories:
-  - Toolkit
+    - Toolkit
 intro: |
     This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors
 ---

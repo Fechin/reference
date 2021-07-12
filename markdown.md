@@ -6,6 +6,8 @@ background: bg-purple-500
 tags:
     - md
     - Markup
+    - text
+    - format
 categories:
     - Programming
 intro: This is a quick reference cheat sheet to the Markdown syntax.

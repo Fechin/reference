@@ -2,6 +2,9 @@
 title: Resolutions
 date: 2020-12-27 17:21:54
 tags:
+    - design
+    - screen
+    - size
 categories:
     - Other
 intro: |

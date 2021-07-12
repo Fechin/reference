@@ -4,6 +4,9 @@ date: 2021-01-27 11:44:21
 icon: icon-netstat
 background: bg-gray-800
 tags:
+    - network
+    - utility
+    - port
 categories:
     - Linux Command
 intro: |

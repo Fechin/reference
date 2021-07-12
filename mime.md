@@ -2,8 +2,7 @@
 title: MIME types
 date: 2020-04-03 17:28:43
 tags:
-    - MIME
-    - Media
+    - media type
 categories:
     - Other
 intro: |

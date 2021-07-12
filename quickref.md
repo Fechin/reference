@@ -4,6 +4,8 @@ date: 2020-11-25 18:28:43
 icon: icon-style
 background: bg-green-600
 tags:
+    - guide
+    - reference
 categories:
     - Other
 intro: This is a reference of styles that you can use on quickref cheatsheets!

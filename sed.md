@@ -4,9 +4,12 @@ date: 2020-12-27 18:34:08
 icon: icon-sed
 background: bg-red-400
 tags:
-  - null
+    - editor
+    - replace
+    - text
+    - utility
 categories:
-  - Linux Command
+    - Linux Command
 intro: |
     [Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.
 ---

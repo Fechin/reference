@@ -4,8 +4,9 @@ date: 2021-07-01 10:51:44
 icon: icon-permission
 background: bg-green-600
 tags:
+    - permissions
 categories:
-  - Linux Command
+    - Linux Command
 intro: |
     This quick reference cheat sheet provides a brief overview of file permissions, and the operation of the chmod command
 ---

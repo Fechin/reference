@@ -4,8 +4,9 @@ date: 2021-01-04 15:23:28
 icon: icon-php
 background: bg-purple-900
 tags:
+    - web
 categories:
-  - Programming
+    - Programming
 intro: |
     This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference for quickly looking up the correct syntax for the code you use most frequently. 
 ---

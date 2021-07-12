@@ -4,9 +4,12 @@ date: 2020-12-22 20:10:08
 icon: icon-mitmproxy
 background: bg-blue-400
 tags:
-  - 
+    - capture
+    - traffic
+    - network
+    - utility
 categories:
-  - Toolkit
+    - Toolkit
 intro: |
     [mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.
 ---

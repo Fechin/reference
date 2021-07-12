@@ -4,6 +4,10 @@ date: 2021-01-27 11:48:05
 icon: icon-style
 background: bg-blue-400
 tags:
+    - protocol
+    - remote
+    - network
+    - 22
 categories:
     - Linux Command
 intro: |

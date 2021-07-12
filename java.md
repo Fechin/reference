@@ -4,8 +4,10 @@ date: 2021-03-10 19:50:01
 icon: icon-java
 background: bg-red-700
 tags:
+    - object-oriented
+    - class
 categories:
-  - Programming
+    - Programming
 intro: |
     This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.
 plugins:

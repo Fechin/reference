@@ -7,6 +7,7 @@ tags:
     - shell
     - sh
     - echo
+    - script
     - linux
 categories:
     - Programming

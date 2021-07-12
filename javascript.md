@@ -4,7 +4,8 @@ date: 2020-12-24 17:12:25
 icon: icon-javascript
 background: bg-yellow-500
 tags:
-  - js
+    - js
+    - web
 categories:
   - Programming
 intro: |

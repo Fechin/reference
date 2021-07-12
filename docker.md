@@ -4,8 +4,10 @@ date: 2020-12-30 10:55:24
 icon: icon-docker
 background: bg-blue-500
 tags:
+    - container
+    - virtual
 categories:
-  - Programming
+    - Programming
 intro: |
     This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
 ---

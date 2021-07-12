@@ -4,6 +4,9 @@ date: 2021-02-05 16:12:47
 icon: icon-style
 background: bg-blue-400
 tags:
+    - port
+    - processes
+    - utility
 categories:
     - Linux Command
 intro: |

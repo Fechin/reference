@@ -4,11 +4,9 @@ date: 2020-12-17 21:51:44
 icon: icon-webstorm
 background: bg-gradient-to-r from-green-300 to-blue-400 hover:from-green-400 hover:to-blue-500
 tags:
-  - JetBrains
-  - JavaScript
-  - Node js
-  - CSS
-  - HTML
+    - jetbrains
+    - web
+    - frontend
 categories:
   - IDE
 intro: |

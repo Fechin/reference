@@ -3,8 +3,9 @@ title: Redis
 icon: icon-redis
 background: bg-red-600
 tags:
+    - cache
 categories:
-  - Database
+    - Database
 date: 2020-12-26 19:33:15
 intro: |
     This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands

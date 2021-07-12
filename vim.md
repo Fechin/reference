@@ -5,9 +5,9 @@ icon: icon-vim
 background: bg-green-600
 tags: 
     - vi
+    - text
     - editor
     - terminal
-    - text
 categories:
     - Toolkit
 intro: |

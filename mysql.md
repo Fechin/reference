@@ -4,7 +4,8 @@ date: 2020-12-16 18:28:43
 icon: icon-mysql
 background: bg-blue-400
 tags:
-    - sql
+    - RDBMS
+    - DB
 categories:
     - Database
 intro: The SQL cheat sheet provides you with the most commonly used SQL statements for your reference. 

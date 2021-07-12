@@ -4,6 +4,8 @@ icon: icon-search
 date: 2020-12-28 16:52:20
 tags:
     - search
+    - file
+    - directory
 categories:
     - Linux Command
 intro: |

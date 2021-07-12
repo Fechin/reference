@@ -6,7 +6,8 @@ background: bg-gray-400
 tags:
     - github
     - gitlab
-    - command
+    - version
+    - CVS
 categories:
     - Linux Command
 intro: This cheat sheet summarizes commonly used Git command line instructions for quick reference.

@@ -4,9 +4,10 @@ date: 2020-12-23 18:41:20
 icon: icon-python
 background: bg-blue-600
 tags:
-  - python
+    - script
+    - interpreted
 categories:
-  - Programming
+    - Programming
 intro: |
     The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.
 ---

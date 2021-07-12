@@ -2,10 +2,12 @@
 title: HTTP Status Code
 icon: icon-style
 background: bg-pink-400
-tags:
-categories:
-  - Other
 date: 2020-12-26 16:09:09
+tags:
+    - response
+    - server
+categories:
+    - Other
 intro: |
     The http status codes cheat sheet. a quick reference to every HTTP status code.
 plugins:

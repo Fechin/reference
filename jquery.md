@@ -4,8 +4,11 @@ date: 2020-12-24 21:08:21
 icon: icon-jquery
 background: bg-blue-700
 tags:
+    - js
+    - javascript
+    - library
 categories:
-  - Programming
+    - Programming
 intro: |
     This [jQuery](https://jquery.com/) cheat sheet is a great reference for both beginners and experienced developers. 
 plugins:
