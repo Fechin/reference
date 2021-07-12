@@ -8,6 +8,7 @@ tags:
     - text
     - editor
     - terminal
+    - shortcut
 categories:
     - Toolkit
 intro: |

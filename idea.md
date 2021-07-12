@@ -6,6 +6,7 @@ background: bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 hover:from
 tags:
     - jetbrains
     - java
+    - shortcut
 categories:
     - IDE
 intro: |

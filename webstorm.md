@@ -6,9 +6,9 @@ background: bg-gradient-to-r from-green-300 to-blue-400 hover:from-green-400 hov
 tags:
     - jetbrains
     - web
-    - frontend
+    - shortcut
 categories:
-  - IDE
+    - IDE
 intro: |
     This quick reference cheat sheet lists the default keyboard shortcuts for WebStorm running on Windows/Linux or Mac
 ---

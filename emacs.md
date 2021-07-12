@@ -6,6 +6,7 @@ background: bg-purple-500
 tags:
     - editor
     - text
+    - shortcut
 categories:
     - Toolkit
 intro: |
