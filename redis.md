@@ -904,7 +904,7 @@ List command {.cols-3}
 
 
 
-### BLPOP ](https://redis.io/commands/blpop) | 
+### BLPOP
 ``` {.wrap}
 BLPOP key [key ...] timeout
 ```
@@ -922,7 +922,7 @@ Remove and get the first element in a list, or block until one is available |
 
 
 
-### BRPOP ](https://redis.io/commands/brpop) | 
+### BRPOP
 ``` {.wrap}
 BRPOP key [key ...] timeout
 ```
