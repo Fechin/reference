@@ -21,7 +21,7 @@ Getting started {.cols-3}
 ```shell script
 $ screen 
 ```
-1\. Press `Ctrl-a d` to detach session
+1\. Press <kbd>Ctrl-A</kbd> <kbd>D</kbd> to detach session
 
 ---
 
@@ -54,7 +54,7 @@ $ screen -r <name/pid>
 
 | Command      | Description                     |
 |--------------|---------------------------------|
-| `Ctrl-a` `?` | See help _(Lists keybindings)_  |
+| `Ctrl-A` `?` | See help _(Lists keybindings)_  |
 {.shortcuts}
 
 
@@ -62,17 +62,17 @@ $ screen -r <name/pid>
 ### Window Management {.col-span-2 .row-span-2}
 | Command                              | Description                                   |
 |--------------------------------------|-----------------------------------------------|
-| `Ctrl-a` `c`                         | Create new window                             |
-| `Ctrl-a` `Ctrl-a`                    | Change to last-visited active window          |
-| `Ctrl-a` `0...9`                     | Change to window by number                    |
-| `Ctrl-a` `'` `<0...9 or title>`      | Change to window by number or name            |
-| `Ctrl-a` `n` or `Ctrl-a` `<space>`     | Change to next window in list               |
-| `Ctrl-a` `p` or `Ctrl-a` `<backspace>` | Change to previous window in list           |
-| `Ctrl-a` `"`                         | See window list                               |
-| `Ctrl-a` `w`                         | Show window bar                               |
-| `Ctrl-a` `k`                         | Kill current window _(not recommended)_       |
-| `Ctrl-a` `\`                         | Kill all windows _(not recommended)_          |
-| `Ctrl-a` `A`                         | Rename current window                         |
+| `Ctrl-A` `C`                         | Create new window                             |
+| `Ctrl-A` `Ctrl-A`                    | Change to last-visited active window          |
+| `Ctrl-A` `0...9`                     | Change to window by number                    |
+| `Ctrl-A` `'` `<0...9 or title>`      | Change to window by number or name            |
+| `Ctrl-A` `N` or `Ctrl-A` `<space>`     | Change to next window in list               |
+| `Ctrl-A` `P` or `Ctrl-A` `<backspace>` | Change to previous window in list           |
+| `Ctrl-A` `"`                         | See window list                               |
+| `Ctrl-A` `W`                         | Show window bar                               |
+| `Ctrl-A` `K`                         | Kill current window _(not recommended)_       |
+| `Ctrl-A` `\`                         | Kill all windows _(not recommended)_          |
+| `Ctrl-A` `A`                         | Rename current window                         |
 {.shortcuts}
 
 
@@ -81,10 +81,10 @@ $ screen -r <name/pid>
 
 | Command      | Description                           |
 |--------------|---------------------------------------|
-| `Ctrl-a` `d`   | Detach                                |
-| `Ctrl-a` `D` `D` | Detach and logout <br>_(quick exit)_        |
-| `Ctrl-a` `:`   | Exit all session                      |
-| `Ctrl-a` `C-\` | Force-exit screen <br>_(not recommended)_ |
+| `Ctrl-A` `D`   | Detach                                |
+| `Ctrl-A` `D` `D` | Detach and logout <br>_(quick exit)_        |
+| `Ctrl-A` `:`   | Exit all session                      |
+| `Ctrl-A` `C-\` | Force-exit screen <br>_(not recommended)_ |
 {.shortcuts}
 
 
@@ -93,12 +93,12 @@ $ screen -r <name/pid>
 ### Split screen
 | Command        | Description                            |
 |----------------|----------------------------------------|
-| `Ctrl-a` `S`   | Split display horizontally             |
-| `Ctrl-a` `V`   | Split display vertically               |
-| `Ctrl-a` `|`   | Split display vertically               |
-| `Ctrl-a` `TAB` | Jump to next display region            |
-| `Ctrl-a` `X`   | Remove current region                  |
-| `Ctrl-a` `Q`   | Remove all regions but the current one |
+| `Ctrl-A` `S`   | Split display horizontally             |
+| `Ctrl-A` `V`   | Split display vertically               |
+| `Ctrl-A` `|`   | Split display vertically               |
+| `Ctrl-A` `TAB` | Jump to next display region            |
+| `Ctrl-A` `X`   | Remove current region                  |
+| `Ctrl-A` `Q`   | Remove all regions but the current one |
 {.shortcuts}
 
 
@@ -108,21 +108,21 @@ $ screen -r <name/pid>
 
 | Command           | Description                          |
 |-------------------|--------------------------------------|
-| `Ctrl-a` `C-l`    | Redraw window                        |
-| `Ctrl-a` `[`      | Copy mode                            |
-| `Ctrl-a` `<esc>`  | Copy mode                            |
-| `Ctrl-a` `]`      | Paste                                |
-| `Ctrl-a` `M`      | Monitor window for activity          |
-| `Ctrl-a` `_`      | Monitor window for silence           |
-| `Ctrl-a` `Ctrl-v` | Enter digraph <br>_(non-ASCII characters)_ |
-| `Ctrl-a` `x`      | Lock (password protect) display      |
-| `Ctrl-a` `:`      | Enter screen command                 |
-| `Ctrl-a` `H`      | Enable logging in the screen session |
+| `Ctrl-A` `C-l`    | Redraw window                        |
+| `Ctrl-A` `[`      | Copy mode                            |
+| `Ctrl-A` `ESC`  | Copy mode                            |
+| `Ctrl-A` `]`      | Paste                                |
+| `Ctrl-A` `M`      | Monitor window for activity          |
+| `Ctrl-A` `_`      | Monitor window for silence           |
+| `Ctrl-A` `Ctrl-V` | Enter digraph <br>_(non-ASCII characters)_ |
+| `Ctrl-A` `X`      | Lock (password protect) display      |
+| `Ctrl-A` `:`      | Enter screen command                 |
+| `Ctrl-A` `H`      | Enable logging in the screen session |
 {.shortcuts}
 
 
 ### Screen tricks
-Ssh and attach in one line.
+SSH and attach in one line
 ```shell script
 $ ssh -t user@host screen -x <name/pid>
 ```
