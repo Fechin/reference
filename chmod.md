@@ -62,13 +62,13 @@ drwxr-xr-x  2 root root 2 Jun 30 18:06 dir
 ```
 #### Permission analysis of "dir"
 ```text
-d   rwx  r-x  r-x
-┬   ─┬─  ─┬─  ─┬─  
-│    │    │    │  
-│    │    │    └─ Other｜5 (4+0+1)
-│    │    └────── Group｜5 (4+0+1)
-│    └─────────── User ｜7 (4+2+1)
-└──────────────── File Type | directory
+d  rwx  r-x  r-x
+┬  ─┬─  ─┬─  ─┬─  
+│   │    │    │  
+│   │    │    └─ 4. Other｜5 (4+0+1)
+│   │    └────── 3. Group｜5 (4+0+1)
+│   └─────────── 2. User ｜7 (4+2+1)
+└─────────────── 1. File Type | directory
 ```
 
 
@@ -206,6 +206,36 @@ $ chmod u=rwx,g=rx,o=r foo.sh
 ```
 
 
+
+Practices {.cols-3}
+---------------
+
+### SSH Permissions
+```shell script
+$ chmod 700 ~/.ssh
+$ chmod 600 ~/.ssh/authorized_keys
+$ chmod 600 ~/.ssh/id_rsa
+$ chmod 600 ~/.ssh/id_rsa.pub
+$ chmod 400 /path/to/access_key.pem
+```
+
+### Web Permissions
+```shell script
+$ chmod -R 644 /var/www/html/
+$ chmod 644 .htaccess
+$ chmod 644 robots.txt
+$ chmod 755 /var/www/uploads/
+$ chmod 755 `find /var/www/html -type d`
+```
+
+### Batch Change
+```shell script
+$ chmod -R 644 /your_path
+$ find /path -type d -exec chmod 755 {} \;
+$ find /path -type f -exec chmod 644 {} \;
+$ chmod 644 `find /your_path -type f`
+```
+See: [Command Substitution](https://tldp.org/LDP/abs/html/commandsub.html)
 
 
 ## Also see
