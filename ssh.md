@@ -26,10 +26,11 @@ Connect on a specific port
 ```shell script
 $ ssh root@192.168.1.5 -p 6222
 ```
-Connect via pem file (0600 permissions)
+Connect via pem file (0400 permissions)
 ```shell script
 $ ssh -i /path/file.pem root@192.168.1.5
 ```
+See: [SSH Permissions](/chmod#ssh-permissions)
 
 ### Executing
 Executes remote command
@@ -47,7 +48,7 @@ $ ssh root@192.168.1.5 "tar cvzf - ~/source" > output.tgz
 
 
 
-### scp {.row-span-2}
+### SCP {.row-span-2}
 
 Copies from remote to local
 ```shell script
@@ -76,23 +77,26 @@ $ scp user@server:/dir/* .
 
 
 ### Config location
-System-wide ssh config
-```shell script
-/etc/ssh/ssh_config
-```
-User-specific ssh config
-```shell script
-~/.ssh/config
-```
+| File Path                | Description          |
+|--------------------------|----------------------|
+| `/etc/ssh/ssh_config`    | System-wide config   |
+| `~/.ssh/config`          | User-specific config |
+| `~/.ssh/id_{type}`       | Private key          |
+| `~/.ssh/id_{type}.pub`   | Public key           |
+| `~/.ssh/known_hosts`     | Logged in host       |
+| `~/.ssh/authorized_keys` | Authorized login key |
 
 
 ### SCP Options
 
-| Options       | Description          |
-|---------------|----------------------|
-| scp `-C`      | <yel>C</yel>ompresses data      |
-| scp `-v`      | Prints <yel>v</yel>erbose info  |
-| scp `-P` 8080 | Uses a specific <yel>P</yel>ort |
+| Options       | Description                                    |
+|---------------|------------------------------------------------|
+| scp `-r`      | <yel>R</yel>ecursively copy entire directories |
+| scp `-C`      | <yel>C</yel>ompresses data                     |
+| scp `-v`      | Prints <yel>v</yel>erbose info                 |
+| scp `-P` 8080 | Uses a specific <yel>P</yel>ort                |
+| scp `-B`      | <yel>B</yel>atch mode _(Prevents password)_    |
+| scp `-p`      | <yel>P</yel>reserves times and modes           |
 
 
 ### Config sample
@@ -148,17 +152,17 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 SSH keygen {.cols-5}
 ---------------
 
-### Explain {.col-span-2}
+### ssh-keygen {.col-span-2}
 
 ```shell script
 $ ssh-keygen -t rsa -b 4096 -C "your@mail.com" 
 ```
 ----
-|-  | -             | -                         |
-|---|---------------|---------------------------|
-|   | `-t`         |  [Type](#key-type) of key  |
-|   | `-b`       | The number of bits in the key |
-|   | `-C`       | Provides a new comment |
+| - | -    | -                             |
+|---|------|-------------------------------|
+|   | `-t` | [Type](#key-type) of key      |
+|   | `-b` | The number of bits in the key |
+|   | `-C` | Provides a new comment        |
 {.left-text}
 
 Generate an RSA 4096 bit key with email as a comment
