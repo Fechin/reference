@@ -4,7 +4,7 @@ date: 2021-07-01 10:51:44
 icon: icon-permission
 background: bg-green-600
 tags:
-    - permissions
+    - permission
 categories:
     - Linux Command
 intro: |
@@ -177,19 +177,19 @@ $ chmod =rwx,g+s chmodExampleScript.sh
 ### Removing Permissions  {.row-span-3}
 In order to remove read write permissions given to a file, use the following syntax:
 ```shell
-chmod o-rw example.txt
+$ chmod o-rw example.txt
 ```
 For our file example.txt, we can remove read write permissions using chmod for group by running the following command:
 ```shell
-chmod  g-rx example.txt
+$ chmod  g-rx example.txt
 ```
 To remove chmod read write permissions from the group while adding read write permission to public/others, we can use the following command:
 ```shell
-chmod g-rx, o+rx example.txt
+$ chmod g-rx, o+rx example.txt
 ```
 But, if you wish to remove all permissions for group and others, you can do so using the go= instead:
 ```shell
-chmod go= example.txt
+$ chmod go= example.txt
 ```
 
 ### Executable

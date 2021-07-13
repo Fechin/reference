@@ -4,7 +4,7 @@ date: 2020-12-16 18:28:43
 icon: icon-cron
 background: bg-red-500
 tags:
-    - scheduler
+    - schedule
     - crontab
     - time
 categories:

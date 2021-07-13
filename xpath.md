@@ -6,7 +6,7 @@ background: bg-blue-600
 tags:
     - document
     - expression
-    - selector
+    - select
 categories:
     - Toolkit
 intro: |

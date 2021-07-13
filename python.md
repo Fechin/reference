@@ -5,7 +5,7 @@ icon: icon-python
 background: bg-blue-600
 tags:
     - script
-    - interpreted
+    - interpret
 categories:
     - Programming
 intro: |
