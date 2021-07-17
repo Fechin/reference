@@ -18,12 +18,12 @@ Variants {.cols-3}
 
 | - | - |
 |---------------|---------------------------------|
-| `cols-1`    |  one column _(default)_           |
-| `cols-2`    |                                   |
-| `cols-3`    |  three column                     |
-| ...           |                                 |
-| `cols-11`   |                                   |
-| `cols-12`   |                                   |
+| `.cols-1`    |  one column _(default)_           |
+| `.cols-2`    |                                   |
+| `.cols-3`    |  three column                     |
+| ...         |                                   |
+| `.cols-11`   |                                   |
+| `.cols-12`   |                                   |
 
 
 
@@ -33,38 +33,36 @@ See: [H2 section](#h2-section-2)
 
 
 | - | - |
-|-------------------|-------------------------------------|
-| `primary` | Primary section |
-| `secondary` | Secondary section |
-#### Span n columns.
-
+|----------------|---------------------|
+| `.primary`      | Primary section     |
+| `.secondary`    | Secondary section   |
+#### Span n columns
 | - | - |
-|---------------|-----------------------------------|
-| `col-span-1`  |                                   |
-| ...           |                                   |
-| `col-span-12` |                                   |
-#### Span n rows.
-
+|---------------|----------------------|
+| `.col-span-1`  |                      |
+| ...           |                      |
+| `.col-span-12` |                      |
+#### Span n rows
 | - | - |
-|---------------|-----------------------------------|
-| `row-span-1`  |                                   |
-| ...           |                                   |
-| `row-span-12` |                                   |
-|               |                                   |
+|---------------|----------------------|
+| `.row-span-1`  |                      |
+| ...           |                      |
+| `.row-span-12` |                      |
+|               |                      |
 
 See: [H3 section](#h3-section-2)
 
 ### Tables 
 
 
-| - | - |
-|---------------|----------------|
-| `bold-first` | Bold first column |
-| `plus-first` | Plus first column |
-| `show-header` | Show headers |
-| `left-text` | Align the last column left |
-| `no-wrap` | Don't wrap text |
-| `shortcuts` | Shortcut keys |
+| -             | -                          |
+|---------------|----------------------------|
+| `.bold-first`  | Bold first column          |
+| `.plus-first`  | Plus first column          |
+| `.show-header` | Show headers               |
+| `.left-text`   | Align the last column left |
+| `.no-wrap`     | Don't wrap text            |
+| `.shortcuts`   | Shortcut keys style        |
 
 See: [Tables](#tables-2)
 
@@ -74,17 +72,19 @@ See: [Tables](#tables-2)
 
 | - | - |
 |---------------|----------------|
-| `style-none` | No marker is shown	|
+| `.style-none`  | No marker      |
 #### Layout
 
 | - | - |
 |---------------|----------------|
-| `cols-1`    |  one column _(default)_  |
-| `cols-2`    |                          |
-| `cols-3`    |  three column            |
+| `.cols-1`    |  one column _(default)_  |
+| `.cols-2`    |                          |
+| `.cols-3`    |  three column            |
 | ...           |                        |
-| `cols-11`   |                          |
-| `cols-12`   |                          |
+| `.cols-11`   |                          |
+| `.cols-12`   |                          |
+
+See: [Lists](#lists-2)
 
 
 
@@ -93,7 +93,7 @@ See: [Tables](#tables-2)
 
 | - | - |
 |---------------|----------------|
-| `wrap` | Enables line-wrapping |
+| `.wrap` | Enables line-wrapping |
 
 See: [Code](#code-2)
 
@@ -102,19 +102,17 @@ See: [Code](#code-2)
 
 | - | - |
 |---------------|----------------|
-| `link-arrow` | Pretty links with arrows |
+| `.link-arrow` | Pretty links with arrows |
 
 See: [Paragraphs](#paragraphs-2) 
 
 
 
-See: [Lists](#lists-2) 
-
 ### Global
 
 | - | - |
 |---------------|----------------|
-| `hidden`      | Hide an element|
+| `.hidden`      | Hide an element|
 
 
 
@@ -171,21 +169,6 @@ here.is.some.more()
 
 Code blocks can have headings.
 
-### Setup blocks
-
-```js
-import React from 'react'
-```
-
-```js
-class Hello extends React.Component {
-  render () {
-    return <span>Hello</span>
-  }
-}
-```
-
-Add `{.bg-gray}` to a `pre` or `table` or `ul`__.
 
 ### Line wrapping
 
@@ -232,6 +215,8 @@ When paragraphs appear after `pre`/`table`/`ul`, they appear with a gray backgro
 Add `{.link-arrow}` to make big loud external links:
 
 ```
+···
+···
 ···
 ```
 
@@ -331,7 +316,7 @@ Lists {.cols-3}
 - Item 2
 - Item 3
 
-### Five column 
+### Four column 
 - Item 1
 - Item 2
 - Item 3
@@ -343,7 +328,7 @@ Lists {.cols-3}
 - Item 9
 {.cols-4}
 
-### No marker is shown	
+### No marker
 - Item 1
 - Item 2
 - Item 3
