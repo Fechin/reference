@@ -16,14 +16,14 @@ Variants {.cols-3}
 
 ### H2 section
 
-| - | - |
-|---------------|---------------------------------|
-| `.cols-1`    |  one column _(default)_           |
-| `.cols-2`    |                                   |
-| `.cols-3`    |  three column                     |
-| ...         |                                   |
-| `.cols-11`   |                                   |
-| `.cols-12`   |                                   |
+| -          | -                      |
+|------------|------------------------|
+| `.cols-1`  | one column _(default)_ |
+| `.cols-2`  |                        |
+| `.cols-3`  | three column           |
+| ...        |                        |
+| `.cols-11` |                        |
+| `.cols-12` |                        |
 
 
 
@@ -32,31 +32,31 @@ See: [H2 section](#h2-section-2)
 ### H3 section
 
 
-| - | - |
-|----------------|---------------------|
-| `.primary`      | Primary section     |
-| `.secondary`    | Secondary section   |
+| -            | -                 |
+|--------------|-------------------|
+| `.primary`   | Primary section   |
+| `.secondary` | Secondary section |
 #### Span n columns
-| - | - |
-|---------------|----------------------|
-| `.col-span-1`  |                      |
-| ...           |                      |
-| `.col-span-12` |                      |
+| -              | - |
+|----------------|---|
+| `.col-span-1`  |   |
+| ...            |   |
+| `.col-span-12` |   |
 #### Span n rows
-| - | - |
-|---------------|----------------------|
-| `.row-span-1`  |                      |
-| ...           |                      |
-| `.row-span-12` |                      |
-|               |                      |
+| -              | - |
+|----------------|---|
+| `.row-span-1`  |   |
+| ...            |   |
+| `.row-span-12` |   |
+|                |   |
 
 See: [H3 section](#h3-section-2)
 
 ### Tables 
 
 
-| -             | -                          |
-|---------------|----------------------------|
+| -              | -                          |
+|----------------|----------------------------|
 | `.bold-first`  | Bold first column          |
 | `.plus-first`  | Plus first column          |
 | `.show-header` | Show headers               |
@@ -70,19 +70,22 @@ See: [Tables](#tables-2)
 ### Lists {.row-span-2}
 
 
-| - | - |
-|---------------|----------------|
-| `.style-none`  | No marker      |
+| -                 | -              |
+|-------------------|----------------|
+| `.style-none`     | No marker      |
+| `.style-round`    | Round style    |
+| `.style-timeline` | Timeline style |
+
 #### Layout
 
-| - | - |
-|---------------|----------------|
-| `.cols-1`    |  one column _(default)_  |
-| `.cols-2`    |                          |
-| `.cols-3`    |  three column            |
-| ...           |                        |
-| `.cols-11`   |                          |
-| `.cols-12`   |                          |
+| -          | -                      |
+|------------|------------------------|
+| `.cols-1`  | one column _(default)_ |
+| `.cols-2`  |                        |
+| `.cols-3`  | three column           |
+| ...        |                        |
+| `.cols-11` |                        |
+| `.cols-12` |                        |
 
 See: [Lists](#lists-2)
 
@@ -91,8 +94,8 @@ See: [Lists](#lists-2)
 ### Code
 
 
-| - | - |
-|---------------|----------------|
+| -       | -                     |
+|---------|-----------------------|
 | `.wrap` | Enables line-wrapping |
 
 See: [Code](#code-2)
@@ -100,8 +103,8 @@ See: [Code](#code-2)
 ### Paragraphs
 
 
-| - | - |
-|---------------|----------------|
+| -             | -                        |
+|---------------|--------------------------|
 | `.link-arrow` | Pretty links with arrows |
 
 See: [Paragraphs](#paragraphs-2) 
@@ -110,9 +113,9 @@ See: [Paragraphs](#paragraphs-2)
 
 ### Global
 
-| - | - |
-|---------------|----------------|
-| `.hidden`      | Hide an element|
+| -         | -               |
+|-----------|-----------------|
+| `.hidden` | Hide an element |
 
 
 
@@ -233,32 +236,31 @@ Tables {.cols-3}
 #### Date
 
 | Example         | Output                 |
-| ---             | ---                    |
+|-----------------|------------------------|
 | `%m/%d/%Y`      | `06/05/2013`           |
 | `%A, %B %e, %Y` | `Sunday, June 5, 2013` |
 | `%b %e %a`      | `Jun 5 Sun`            |
 
 #### Time
 
-| Example         | Output                 |
-| ---             | ---                    |
-| `%H:%M`         | `23:05`                |
-| `%I:%M %p`      | `11:05 PM`             |
+| Example    | Output     |
+|------------|------------|
+| `%H:%M`    | `23:05`    |
+| `%I:%M %p` | `11:05 PM` |
 
 A basic table with heading level 4.
 
 ### Shortcuts
 
-
-| - | - |
-|------|-------|
-| `V` | Vector |
-| `P` | Pencil |
-| `T` | Text |
-| `L` | Line |
+| -   | -         |
+|-----|-----------|
+| `V` | Vector    |
+| `P` | Pencil    |
+| `T` | Text      |
+| `L` | Line      |
 | `R` | Rectangle |
-| `O` | Oval |
-| `U` | Rounded |
+| `O` | Oval      |
+| `U` | Rounded   |
  {.shortcuts}
 
 
@@ -328,6 +330,23 @@ Lists {.cols-3}
 - Item 9
 {.cols-4}
 
+
+### Rename branch {.row-span-2}
+- #### **Renamed** to `new_name`
+    ```shell script
+    $ git branch -m <new_name>
+    ```
+- #### **Push** and reset
+    ```shell script
+    $ git push origin -u <new_name>
+    ```
+- #### **Delete** remote branch
+    ```shell script
+    $ git push origin --delete <old>
+    ```
+{.style-timeline}
+
+
 ### No marker
 - Item 1
 - Item 2
@@ -335,7 +354,15 @@ Lists {.cols-3}
 - Item 4
 - Item 5
 - Item 6
-{.cols-2 .style-none}
+  {.cols-2 .style-none}
+
+
+### Round Style
+- Item 1
+- Item 2
+- Item 3
+{.style-round}
+
 
 
 H2 section {.cols-5}
