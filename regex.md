@@ -28,7 +28,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 - [Regex in Vim](/vim#search-and-replace) _(quickref.me)_
 - [Regex in Emacs](/emacs#search) _(quickref.me)_
 - [Online regex tester](https://regex101.com/) _(regex101.com)_
-{.cols-2}
+{.cols-2 .style-round}
 
 ### Character Classes
 
