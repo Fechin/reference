@@ -300,19 +300,21 @@ A `.gitignore` file specifies intentionally untracked files that Git should igno
 Tricks {.cols-3}
 ------
 
-### Rename branch
-1\. Rename the local branch
-```shell script
-$ git branch -m <new_name>
-```
-2\. Push and reset the upstream branch
-```shell script
-$ git push origin -u <new_name>
-```
-3\. Delete the <old_name> remote branch
-```shell script
-$ git push origin --delete <old_name>
-```
+### Rename branch 
+- #### **Renamed** to `new_name`
+    ```shell script
+    $ git branch -m <new_name>
+    ```
+- #### **Push** and reset
+    ```shell script
+    $ git push origin -u <new_name>
+    ```
+- #### **Delete** remote branch
+    ```shell script
+    $ git push origin --delete <old>
+    ```
+{.style-timeline}
+
 
 ### Log
 Search change by content
