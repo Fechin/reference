@@ -35,7 +35,7 @@ b: false         # boolean type
 
 d: 2015-04-05    # date type
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "n1": 1,
@@ -58,7 +58,7 @@ Use spaces to indent. There must be space between the element parts.
 some_thing: &VAR_NAME foobar
 other_thing: *VAR_NAME
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "some_thing": "foobar",
@@ -76,7 +76,7 @@ object:
     - a3
   methods: [getter, setter]
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "object": {
@@ -92,7 +92,7 @@ my_sequences:
   - [1, 2, 3]
   - [4, 5, 6]
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "my_sequences": [
@@ -122,7 +122,7 @@ description: |
   hello
   world
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {"description": "hello\nworld\n"}
 ```
@@ -135,7 +135,7 @@ description: >
   hello
   world
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {"description": "hello world\n"}
 ```
@@ -153,7 +153,7 @@ jack:
     - b
   loc: {country: "A", city: "A-A"}
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "jack": {
@@ -179,7 +179,7 @@ Employee:
     name: "Sales"
     depid: "11"
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "Employee": {
@@ -204,7 +204,7 @@ children:
   - name: Jenny Smith
     age: 12
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "children": [
@@ -223,7 +223,7 @@ set1: !!set
   ? two
 set2: !!set {'one', "two"}
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "set1": {"one": null, "two": null},
@@ -243,7 +243,7 @@ child:
   <<: *defaults
   b: 4
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "parent": {"a": 2, "b": 3},
@@ -262,7 +262,7 @@ values: &ref
 other_values:
   i_am_ref: *ref
 ```
-#### Equavalent JSON
+#### ↓ Equavalent JSON
 ```json {.wrap}
 {
   "values": [
