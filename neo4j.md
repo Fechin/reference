@@ -9,20 +9,31 @@ tags:
 categories:
   - Database
 intro: |
-    A Neo4j cheat sheet with getting started resources and a list of commonly used Cypher commands
+    A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
 ---
 
-Getting started {.cols-1}
+Getting started {.cols-2}
 ---------------
 
 ### Getting Started with Neo4j
 
-Neo4j is a Graph Database consisting of nodes connected together via relationships.  You might consider using a Graph database where you have
+Neo4j is a Graph Database consisting of nodes connected together by relationships.  You might consider using a Graph database if you have a highly connected dataset or have queries with many joins.
 
 - [Download Neo4j Desktop](https://neo4j.com/download) _download Neo4j desktop or server editions_
 - [Neo4j Sandbox](https://sandbox.neo4j.com) _pick a data set - no installation required_
 - [Neo4j Aura](https://neo4j.com/aura) _free Neo4j instance in the cloud_
 - [Neo4j GraphAcademy](https://neo4j.com/graphacademy) _free, self-paced, hands-on online training_
+- [GraphGists](https://neo4j.com/graphgists) _use ase and industry specific example graphs_
+
+### Graph Database Concepts
+
+| | |
+| -- | -- |
+| **Nodes** | Nodes are commonly used to represent _entities_ or _things_ in your data.  For example, a **Person** or **Movie**  |
+| **Relationships** | Relationships are used to connect two nodes together and organise the data into structure.  For example, a Person **acted in** a movie.  A relationship has a _type_ and _direction_, although the direction can be ignored at query time.
+| **Labels** | Labels are used to group nodes into categories.  For example, a person may have `Person` and `Actor` labels.
+| **Relationship Type** | Each relationship has a type.  Relationships allow you to explore smaller sections of a graph. |
+| **Properties** | Both nodes and relationships can have properties set against them.  Properties are [name-value pairs](https://neo4j.com/docs/cypher-manual/4.3/syntax/values/#cypher-values). |
 
 
 Syntax {.cols-3}
@@ -500,40 +511,26 @@ Returns the line number that LOAD CSV is currently processing, returns null if c
 
 ### Operators
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| | |
+| -- | -- |
+| **General** | DISTINCT, ., [] |
+| **Mathematical** | +, -, *, /, %, ^ |
+| **Comparison** | =, <>, <, >, <=, >=, IS NULL, IS NOT NULL |
+| **Boolean** | AND, OR, XOR, NOT |
+| **String** | + |
+| **List** | +, IN, [x], [x .. y] |
+| **Regular Expression** | =~ |
+| **String matching** | STARTS WITH, ENDS WITH, CONTAINS |
 
 
 ### null
 
+* `null` is used to represent missing/undefined values.
+
+* `null` is not equal to `null`. Not knowing two values does not imply that they are the same value. So the expression `null = null` yields `null` and not `true`. To check if an expression is `null`, use `IS NULL`.
+* Arithmetic expressions, comparisons and function calls (except `coalesce`) will return `null` if any argument is `null`.
+* An attempt to access a missing element in a list or a property that doesn’t exist yields `null`.
+* In `OPTIONAL MATCH` clauses, `nulls` will be used for missing parts of the pattern.
 
 
 ### Patterns
@@ -915,7 +912,7 @@ Non-existing property returns null, which is not equal to anything.
 
 
 ```cypher
-n[\"property\"] = $value
+n["property"] = $value
 ```
 Properties may also be accessed using a dynamically computed property name.
 
@@ -1057,7 +1054,7 @@ A list comprehension that filters a list and extracts the value of the expressio
 
 
 ```cypher
-reduce(s = \"\", x IN list | s + x.prop)
+reduce(s = "", x IN list | s + x.prop)
 ```
 Evaluate expression for each element in the list, accumulate the results.
 
@@ -1195,38 +1192,40 @@ Returns the geodesic distance between two points in meters. It can be used for 3
 
 
 
+Functions
+---------
 ### Temporal functions
 
 ```cypher
-date(\"2018-04-05\")
+date("2018-04-05")
 ```
 Returns a date parsed from a string.
 
 
 
 ```cypher
-localtime(\"12:45:30.25\")
+localtime("12:45:30.25")
 ```
 Returns a time with no time zone.
 
 
 
 ```cypher
-time(\"12:45:30.25+01:00\")
+time("12:45:30.25+01:00")
 ```
 Returns a time in a specified time zone.
 
 
 
 ```cypher
-localdatetime(\"2018-04-05T12:34:00\")
+localdatetime("2018-04-05T12:34:00")
 ```
 Returns a datetime with no time zone.
 
 
 
 ```cypher
-datetime(\"2018-04-05T12:34:00[Europe/Berlin]\")
+datetime("2018-04-05T12:34:00[Europe/Berlin]")
 ```
 Returns a datetime in the specified time zone.
 
@@ -1261,7 +1260,7 @@ Temporal types can be created by selecting from more complex types, as well as o
 
 
 ```cypher
-WITH date(\"2018-04-05\") AS d
+WITH date("2018-04-05") AS d
 RETURN d.year, d.month, d.day, d.week, d.dayOfWeek
 ```
 Accessors allow extracting components of temporal types.
@@ -1271,7 +1270,7 @@ Accessors allow extracting components of temporal types.
 ### Duration functions
 
 ```cypher
-duration(\"P1Y2M10DT12H45M30.25S\")
+duration("P1Y2M10DT12H45M30.25S")
 ```
 Returns a duration of 1 year, 2 months, 10 days, 12 hours, 45 minutes and 30.25 seconds.
 
@@ -1285,7 +1284,7 @@ Returns a duration between two temporal instances.
 
 
 ```cypher
-WITH duration(\"P1Y2M10DT12H45M\") AS d
+WITH duration("P1Y2M10DT12H45M") AS d
 RETURN d.years, d.months, d.days, d.hours, d.minutes
 ```
 Returns 1 year, 14 months, 10 days, 12 hours and 765 minutes.
@@ -1293,7 +1292,7 @@ Returns 1 year, 14 months, 10 days, 12 hours and 765 minutes.
 
 
 ```cypher
-WITH duration(\"P1Y2M10DT12H45M\") AS d
+WITH duration("P1Y2M10DT12H45M") AS d
 RETURN d.years, d.monthsOfYear, d.days, d.hours, d.minutesOfHour
 ```
 Returns 1 year, 2 months, 10 days, 12 hours and 45 minutes.
@@ -1301,14 +1300,14 @@ Returns 1 year, 2 months, 10 days, 12 hours and 45 minutes.
 
 
 ```cypher
-date(\"2015-01-01\") + duration(\"P1Y1M1D\")
+date("2015-01-01") + duration("P1Y1M1D")
 ```
 Returns a date of 2016-02-02. It is also possible to subtract durations from temporal instances.
 
 
 
 ```cypher
-duration(\"PT30S\") * 10
+duration("PT30S") * 10
 ```
 Returns a duration of 5 minutes. It is also possible to divide a duration by a number.
 
@@ -1519,6 +1518,9 @@ stDev(n.property)
 Standard deviation for a sample of a population. For an entire population use stDevP().
 
 
+
+Schema Operations
+------
 
 ### INDEX
 
@@ -1747,7 +1749,14 @@ Drop the constraint with the name uniqueness if it exists, does nothing if it do
 
 ### Performance
 
+* Use parameters instead of literals when possible. This allows Cypher to re-use your queries instead of having to parse and build new execution plans.
+* Always set an upper limit for your variable length patterns. It’s possible to have a query go wild and touch all nodes in a graph by mistake.
+* Return only the data you need. Avoid returning whole nodes and relationships — instead, pick the data you need and return only that.
+* Use `PROFILE` / `EXPLAIN` to analyze the performance of your queries. See [Query Tuning](https://neo4j.com/docs/cypher-manual/4.3/query-tuning) for more information on these and other topics, such as planner hints.
 
+
+Multidatabase
+-------------
 
 ### Database management
 
@@ -1815,6 +1824,9 @@ DROP DATABASE myDatabase IF EXISTS
 (★) Delete the database myDatabase, if it exists.
 
 
+
+Security
+--------
 
 ### User management
 
@@ -2412,3 +2424,9 @@ GRANT ALL ON DBMS TO my_role
 ```
 Grant privilege to perform all role management, user management, database management and privilege management to a role.
 
+
+
+★ Note
+----
+
+(★) Functionality available in Neo4j Enterprise Edition.
