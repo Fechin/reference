@@ -558,6 +558,7 @@ Search and Replace {.cols-3}
 :g/^pattern/s/$/mytext           # Find and append text to the end
 :g/pattern/norm! @i              # Run a macro on matching lines
 /^\(.*\)\(\r\?\n\1\)\+$          # View the duplicates lines
+/\v^(.*)(\r?\n\1)+$              # View the duplicates lines (very magic)
 :v/./,/./-j                      # Compress blank lines into a blank line
 :g/<p1>/,/<p2>/d                 # Delete inclusively from <p1> to <p2>
 ```
