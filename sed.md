@@ -327,7 +327,7 @@ Insert a blank line around line which matches "regex"
 $ sed '/regex/{x;p;x;G;}'
 ```
 
-See also {.cols-1}
+Also see {.cols-1}
 ----------
 - [sed cheatsheet](https://gist.github.com/ssstonebraker/6140154) _(gist.github.com)_
 

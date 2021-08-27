@@ -218,7 +218,7 @@ $ find . -type f -empty -delete
 ```
 
 
-Date and Time {.cols-3}
+Find Date and Time {.cols-3}
 -------------
 
 

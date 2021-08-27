@@ -203,7 +203,7 @@ element {
 See: [Dynamic content](#dynamic-content)
 
 
-Selectors {.cols-3}
+CSS Selectors {.cols-3}
 -----------
 
 
@@ -350,7 +350,7 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 
 
-Fonts {.cols-3}
+CSS Fonts {.cols-3}
 ------
 
 
@@ -416,7 +416,7 @@ text-transform: lowercase;
 
 
 
-Colors {.cols-3}
+CSS Colors {.cols-3}
 ------------
 
 
@@ -480,7 +480,7 @@ color: currentcolor; /* keyword */
 
 
 
-Backgrounds {.cols-3}
+CSS Backgrounds {.cols-3}
 ----------
 
 ### Properties {.row-span-2}
@@ -520,7 +520,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,232,230,1) 35%, rg
 
 
 
-The Box Model {.cols-3}
+CSS The Box Model {.cols-3}
 ------------
 
 
@@ -590,7 +590,7 @@ See also: [Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 
 
 
-Animation {.cols-5}
+CSS Animation {.cols-5}
 ---------
 
 
@@ -647,7 +647,7 @@ animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 
 
 
-Flexbox {.cols-2}
+CSS Flexbox {.cols-2}
 -------
 
 
@@ -730,7 +730,7 @@ Flexbox {.cols-2}
 }
 
 
-Flexbox Tricks {.cols-3}
+CSS Flexbox Tricks {.cols-3}
 --------------
 
 ### Vertical center
@@ -832,7 +832,7 @@ Vertically-center all items.
 
 
 
-Grid Layout {.cols-3}
+CSS Grid Layout {.cols-3}
 ------------
 
 
@@ -997,7 +997,7 @@ The grid items are positioned to the right (end) of the row.
 
 
 
-Dynamic Content {.cols-3}
+CSS Dynamic Content {.cols-3}
 ------------
 
 ### Variable
@@ -1079,7 +1079,7 @@ html {
 
 
 
-See also {.cols-1}
+Also see {.cols-1}
 ---------
 
 - [CSS selectors cheatsheet](https://frontend30.com/css-selectors-cheatsheet/) _(frontend30.com)_

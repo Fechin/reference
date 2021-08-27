@@ -145,7 +145,7 @@ See: [Functions](#functions-2)
 
 
 
-Variables {.cols-3}
+Awk Variables {.cols-3}
 ---------
 
 
@@ -261,7 +261,7 @@ awk -v varName="$PWD" '
 
 
 
-Operators {.cols-3}
+Awk Operators {.cols-3}
 ---------
 
 ### Operators
@@ -340,7 +340,7 @@ awk 'BEGIN {
 
 
 
-Functions {.cols-3}
+Awk Functions {.cols-3}
 ----------
 ### Common functions {.col-span-2}
 | Function              | Description                                                                     |
@@ -394,7 +394,7 @@ awk '
 
 
 
-Arrays {.cols-3}
+Awk Arrays {.cols-3}
 ---------
 
 
@@ -469,7 +469,7 @@ awk 'BEGIN {
 
 
 
-Conditions {.cols-3}
+Awk Conditions {.cols-3}
 ----------
 
 ### if-else statement
@@ -531,7 +531,7 @@ awk -F: '{
 ```
 
 
-Loops {.cols-3}
+Awk Loops {.cols-3}
 ----------
 
 ### for...i
@@ -662,7 +662,7 @@ awk 'BEGIN {
 
 
 
-Formatted Printing {.cols-3}
+Awk Formatted Printing {.cols-3}
 ---------
 
 ### Usage

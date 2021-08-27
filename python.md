@@ -150,7 +150,7 @@ message += "Part 2."
 
 
                                             
-Data Types {.cols-3}
+Python Data Types {.cols-3}
 ---------------
 
 
@@ -264,7 +264,7 @@ z = str(3.0)  # z will be '3.0'
 
 
 
-Strings {.cols-3}
+Python Strings {.cols-3}
 ------------
 
 ### Array-like
@@ -435,7 +435,7 @@ True
 ```
 
 
-Lists {.cols-3}
+Python Lists {.cols-3}
 ------------
 
 
@@ -610,7 +610,7 @@ IndexError: list index out of range
 ['re', 're', 're']
 ```
 
-Flow control {.cols-3}
+Python Flow control {.cols-3}
 ------------
 
 ### Basic
@@ -647,7 +647,7 @@ else:
 
 
 
-Loops {.cols-3}
+Python Loops {.cols-3}
 --------
 
 ### Basic
@@ -734,7 +734,7 @@ print(result)
 
 
 
-Functions {.cols-3}
+Python Functions {.cols-3}
 --------
 
 ### Basic
@@ -804,7 +804,7 @@ add(5, 20)  # => 25
 
 
 
-Modules {.cols-3}
+Python Modules {.cols-3}
 --------
 
 
@@ -850,7 +850,7 @@ dir(math)
 
 
 
-File Handling {.cols-3}
+Python File Handling {.cols-3}
 ----------
 
 
@@ -933,7 +933,7 @@ os.rmdir("myfolder")
 
 
 
-Classes & Inheritance {.cols-3}
+Python Classes & Inheritance {.cols-3}
 --------
 
 

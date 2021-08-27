@@ -86,7 +86,7 @@ mysql -u user -p db_name < db.sql
 
 
 
-Examples {.cols-3}
+MySQL Examples {.cols-3}
 --------------
 
 
@@ -561,7 +561,7 @@ DROP INDEX idx_name;
 ```
 
 
-Data Types {.cols-3}
+MySQL Data Types {.cols-3}
 ---------
 
 
@@ -608,7 +608,7 @@ Data Types {.cols-3}
 
 
 
-Functions & Operators {.cols-3}
+MySQL Functions & Operators {.cols-3}
 ---------
 
 

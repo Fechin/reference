@@ -14,7 +14,7 @@ intro: |
     [mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.
 ---
 
-Getting stared {.cols-3}
+Getting started {.cols-3}
 ---------------
 
 ### Usage {.col-span-2}
@@ -123,7 +123,7 @@ h ◀ ─── + ─── ▶ l           ││ page
 
 
 
-Filter {.cols-3}
+Mitmproxy Filter {.cols-3}
 ---------------
 
 ### Filter
@@ -220,7 +220,7 @@ Replace entire GET string in a request (quotes required to make it work):
 
 
 
-Scripts  {.cols-2}
+Mitmproxy Scripts  {.cols-2}
 -------
 
 
@@ -260,7 +260,7 @@ addons = [
 ```
 Add an HTTP header to each response
 
-See also
+Also see
 -------
 - [mitmproxy addons](https://github.com/mitmproxy/mitmproxy/tree/master/examples/addons) _(github.com)_
 - [mitmproxy docs](https://docs.mitmproxy.org/) _(mitmproxy.org)_

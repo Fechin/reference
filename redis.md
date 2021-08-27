@@ -61,7 +61,7 @@ Redis supports 5 basic data types
 
 
 
-String command{.cols-3}
+Redis String command{.cols-3}
 ------------
 
 
@@ -526,7 +526,7 @@ Run algorithms (currently LCS) against strings
 
 
 
-Set command {.cols-3}
+Redis Set command {.cols-3}
 ------------
 
 
@@ -892,7 +892,7 @@ Add multiple sets and store the resulting set in a key
 
 
 
-List command {.cols-3}
+Redis List command {.cols-3}
 ------------
 
 ### Misc
@@ -1293,7 +1293,7 @@ Append an element to a list, only if the list exists
 
 
 
-Hash command {.cols-3}
+Redis Hash command {.cols-3}
 ------------
 
 
@@ -1552,7 +1552,7 @@ Get all the values in a hash
 
 
 
-Sorted set command {.cols-3}
+Redis Sorted set command {.cols-3}
 ------------
 
 ### BZPOPMIN
@@ -2256,7 +2256,7 @@ Add multiple sorted sets and store the resulting sorted set in a new key
 
 
 
-Geo command{.cols-2}
+Redis Geo command{.cols-2}
 ------------
 
 
@@ -2419,7 +2419,7 @@ Query a sorted set representing a geospatial index to fetch members inside an ar
 
 
 
-Hyperloglog command{.cols-3}
+Redis Hyperloglog command{.cols-3}
 ------------
 
 
@@ -2482,7 +2482,7 @@ Merge N different HyperLogLogs into a single one.
 
 
 
-Server command{.cols-3}
+Redis Server command{.cols-3}
 ------------
 
 ### COMMAND
@@ -2700,7 +2700,7 @@ redis> TIME
 Return the current server time
 
 
-Generic command{.cols-3}
+Redis Generic command{.cols-3}
 ------------
 
 ### Misc
@@ -3022,7 +3022,7 @@ Delete a key asynchronously in another thread. Otherwise it is just as DEL, but 
 
 
 
-Connection command{.cols-3}
+Redis Connection command{.cols-3}
 ------------
 
 ### Misc
@@ -3107,7 +3107,7 @@ Ping the server
 
 
 
-Stream command{.cols-2}
+Redis Stream command{.cols-2}
 ------------
 
 ### Misc

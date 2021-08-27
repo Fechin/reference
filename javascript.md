@@ -145,7 +145,7 @@ numberOfColumns = 8;
 
 
 
-Conditionals {.cols-3}
+JavaScript Conditionals {.cols-3}
 ------------
 
 
@@ -245,7 +245,7 @@ switch (food) {
 
 
 
-Functions {.cols-3}
+JavaScript Functions {.cols-3}
 ------------
 
 
@@ -368,7 +368,7 @@ function add(num1, num2) {
 
 
 
-Scope  {.cols-3}
+JavaScript Scope  {.cols-3}
 ------------
 
 
@@ -416,7 +416,7 @@ printColor(); // => blue
 
 
 
-Arrays  {.cols-3}
+JavaScript Arrays  {.cols-3}
 ------------
 
 
@@ -483,7 +483,7 @@ names.push('Carl');
 
 
 
-Loops  {.cols-3}
+JavaScript Loops  {.cols-3}
 ------------
 
 
@@ -598,7 +598,7 @@ for (let key in mobile) {
 
 
 
-Iterators {.cols-2}
+JavaScript Iterators {.cols-2}
 ------------
 
 
@@ -683,7 +683,7 @@ const filteredArray = randomNumbers.filter(n => {
 
 
 
-Objects {.cols-2}
+JavaScript Objects {.cols-2}
 ------------
 
 
@@ -895,7 +895,7 @@ myCat.name = 'Yankee';
 
 
 
-Classes {.cols-3}
+JavaScript Classes {.cols-3}
 ------------
 
 
@@ -1003,7 +1003,7 @@ const mySong = new Song({
 
 
 
-Modules {.cols-2}
+JavaScript Modules {.cols-2}
 ------------
 
 
@@ -1061,7 +1061,7 @@ console.log(add(2, 3)); // 5
 
 
 
-Promises {.cols-2}
+JavaScript Promises {.cols-2}
 ------------
 
 
@@ -1216,7 +1216,7 @@ promise.then(res => {
 
 
 
-Async-Await {.cols-2}
+JavaScript Async-Await {.cols-2}
 ------------
 
 
@@ -1317,7 +1317,7 @@ msg(); // Message: Hello World! <-- after 2 seconds
 
 
 
-Requests {.cols-3}
+JavaScript Requests {.cols-3}
 ------------
 
 ### JSON 

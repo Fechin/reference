@@ -96,7 +96,7 @@ See: [Flow control](#flow-control)
 
 
 
-Basic types {.cols-3}
+Golang Basic types {.cols-3}
 --------
 
 ### Strings
@@ -288,7 +288,7 @@ fmt.Println(s) // Outputs: 90
 
 
 
-Strings {.cols-3}
+Golang Strings {.cols-3}
 --------
 
 ### Strings function
@@ -383,7 +383,7 @@ See also: [fmt](https://golang.org/pkg/fmt/)
 
 
 
-Flow control {.cols-3}
+Golang Flow control {.cols-3}
 --------
 
 ### Conditional
@@ -485,7 +485,7 @@ for {
 
 
 
-Structs & Maps {.cols-3}
+Golang Structs & Maps {.cols-3}
 --------
 
 ### Defining {.row-span-2}
@@ -559,7 +559,7 @@ Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
 
 
-Functions {.cols-3}
+Golang Functions {.cols-3}
 --------
 
 
@@ -691,7 +691,7 @@ fmt.Println(val)     // => 101
 ```
 
 
-Packages {.cols-3}
+Golang Packages {.cols-3}
 --------
 
 
@@ -752,7 +752,7 @@ See: [Exported names](https://tour.golang.org/basics/3)
 
 
 
-Concurrency {.cols-3}
+Golang Concurrency {.cols-3}
 --------
 
 ### Goroutines {.row-span-2}
@@ -865,7 +865,7 @@ See: [Buffered channels](https://tour.golang.org/concurrency/3)
 
 
 
-Error control {.cols-3}
+Golang Error control {.cols-3}
 --------
 
 ### Deferring functions 
@@ -911,7 +911,7 @@ See: [Defer, panic and recover](https://blog.golang.org/defer-panic-and-recover)
 
 
 
-Methods  {.cols-2}
+Golang Methods  {.cols-2}
 --------
 
 ### Receivers
@@ -954,7 +954,7 @@ v.Scale(0.5)
 
 See: [Pointer receivers](https://tour.golang.org/methods/4)
 
-Interfaces {.cols-2}
+Golang Interfaces {.cols-2}
 --------
 
 ### A basic interface
@@ -1042,7 +1042,7 @@ Miscellaneous {.cols-3}
 
 
 
-References {.cols-1}
+Also see {.cols-1}
 --------
 - [Devhints](https://devhints.io/go) _(devhints.io)_
 - [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_

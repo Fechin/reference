@@ -153,7 +153,7 @@ int num = in.nextInt();
 System.out.println(num);
 ```
 
-Strings {.cols-3}
+Java Strings {.cols-3}
 -------
 
 ### Basic
@@ -283,7 +283,7 @@ Once created cannot be modified, any modification creates a new String
 
 
 
-Arrays {.cols-3}
+Java Arrays {.cols-3}
 -------
 
 
@@ -362,7 +362,7 @@ Arrays.toString(chars);
 
 
 
-Conditionals {.cols-3}
+Java Conditionals {.cols-3}
 -----------
 
 
@@ -459,7 +459,7 @@ System.out.println(max);
 ```
 
 
-Loops {.cols-3}
+Java Loops {.cols-3}
 ----
 
 ### For Loop
@@ -535,7 +535,7 @@ for (int i = 0; i < 5; i++) {
 // Outputs: 0123
 ```
 
-Collections Framework {.cols-3}
+Java Collections Framework {.cols-3}
 --------------------
 
 ### Java Collections {.col-span-2}

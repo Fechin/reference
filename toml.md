@@ -125,7 +125,7 @@ array3 = [
 
 
 
-Strings {.cols-3}
+TOML Strings {.cols-3}
 -----
 
 
@@ -164,7 +164,7 @@ is preserved.
 
 
 
-Tables {.cols-3}
+TOML Tables {.cols-3}
 -----
 ### Basic
 ```toml

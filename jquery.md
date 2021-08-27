@@ -68,7 +68,7 @@ $(function(){
 
 
 
-Selectors {.cols-3}
+jQuery Selectors {.cols-3}
 ----------
 
 ### Examples {.secondary}
@@ -166,7 +166,7 @@ $("selector1, selector2 ...selectorn")
 
 
 
-Attributes {.cols-3}
+jQuery Attributes {.cols-3}
 ------------
 
 
@@ -243,7 +243,7 @@ $('.choice').toggleClass('highlighted');
 
 
 
-Manipulation {.cols-3}
+jQuery Manipulation {.cols-3}
 ------------
 
 ### Examples {.secondary .row-span-3}
@@ -301,7 +301,7 @@ $('span').wrap('<p></p>');
 {.style-none .cols-3}
 
 
-Traversing {.cols-3}
+jQuery Traversing {.cols-3}
 ------------
 
 
@@ -343,7 +343,7 @@ Traversing {.cols-3}
 {.style-none .cols-3}
 
 
-Events {.cols-3}
+jQuery Events {.cols-3}
 ------------
 
 
@@ -475,7 +475,7 @@ $( "p" ).click(function( event ) {
 
 
 
-Effects {.cols-3}
+jQuery Effects {.cols-3}
 ------------
 
 ### Examples {.secondary .row-span-2}
@@ -535,7 +535,7 @@ $('#menu-button').on('click', () => {
 
 
 
-Ajax {.cols-3}
+jQuery Ajax {.cols-3}
 ------------
 
 ### Examples {.secondary .row-span-2}

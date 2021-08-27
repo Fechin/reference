@@ -183,7 +183,7 @@ int main()
 ```
 Namespaces allow global identifiers under a name
 
-Arrays {.cols-3}
+C++ Arrays {.cols-3}
 ------
 
 ### Declaration
@@ -261,7 +261,7 @@ for (int i = 0; i < 2; ++i) {
 // Outputs: 1 2 3 4 5 6 6 5 4 3 2 1 
 ```
 
-Conditionals {.cols-3}
+C++ Conditionals {.cols-3}
 ------------
 
 
@@ -408,7 +408,7 @@ switch (num) {
 
 
 
-Loops {.cols-3}
+C++ Loops {.cols-3}
 ------------
 
 
@@ -530,7 +530,7 @@ for (int i = 0, j = 2; i < 3; i++, j--){
 
 
 
-Functions {.cols-3}
+C++ Functions {.cols-3}
 ------------
 
 
@@ -573,7 +573,7 @@ int main() {
 ```
 
 
-Classes & Objects {.cols-3}
+C++ Classes & Objects {.cols-3}
 -----------------
 
 
@@ -597,7 +597,7 @@ Classes & Objects {.cols-3}
 
 ```
 
-Preprocessor {.cols-3}
+C++ Preprocessor {.cols-3}
 ------------
 
 ### Preprocessor {.row-span-3}

@@ -135,7 +135,7 @@ See: [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsub
 
 
 
-Parameter expansions {.cols-3}
+Bash Parameter expansions {.cols-3}
 --------------------
 
 
@@ -251,7 +251,7 @@ echo "${ARR[@]^}" # => Hello World
 
 
 
-Arrays  {.cols-3}
+Bash Arrays  {.cols-3}
 ------
 
 ### Defining arrays
@@ -334,7 +334,7 @@ extract Fruits 2     # => Orangle
 
 
 
-Dictionaries {.cols-3}
+Bash Dictionaries {.cols-3}
 ------------
 
 ### Defining
@@ -379,7 +379,7 @@ done
 
 
 
-Conditionals {.cols-3}
+Bash Conditionals {.cols-3}
 ------------
 
 ### Integer conditions
@@ -508,7 +508,7 @@ fi
 
 
 
-Loops {.cols-3}
+Bash Loops {.cols-3}
 -----
 
 ### Basic for loop
@@ -630,7 +630,7 @@ done
 
 
 
-Functions {.cols-3}
+Bash Functions {.cols-3}
 ---------
 
 ### Defining functions
@@ -683,7 +683,7 @@ fi
 
 
 
-Options  {.cols-2}
+Bash Options  {.cols-2}
 -------
 
 ### Options
@@ -727,7 +727,7 @@ shopt -s globstar
 ```
 
 
-History {.cols-2}
+Bash History {.cols-2}
 -------
 
 ### Commands

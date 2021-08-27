@@ -117,7 +117,7 @@ d  rwx  r-x  r-x
 
 
 
-Examples {.cols-3}
+Chmod Examples {.cols-3}
 --------
 
 
@@ -207,7 +207,7 @@ $ chmod u=rwx,g=rx,o=r foo.sh
 
 
 
-Practices {.cols-3}
+Chmod Practices {.cols-3}
 ---------------
 
 ### SSH Permissions

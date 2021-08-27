@@ -13,7 +13,7 @@ intro: |
     This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors
 ---
 
-Selectors {.cols-6}
+XPath Selectors {.cols-6}
 --------
 
 ### Getting started {.col-span-2}
@@ -107,7 +107,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 
 
-Expressions {.cols-3}
+XPath Expressions {.cols-3}
 -----------
 
 ### Steps and axes {.secondary}
@@ -140,7 +140,7 @@ Expressions {.cols-3}
 
 
 
-Predicates {.cols-3}
+XPath Predicates {.cols-3}
 ----------
 
 ### Predicates
@@ -213,7 +213,7 @@ Order is significant, these two are different.
 
 This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
 
-Functions {.cols-2}
+XPath Functions {.cols-2}
 ---------
 
 ### Node functions
@@ -265,7 +265,7 @@ number()
 boolean()
 ```
 
-Axes {.cols-2}
+XPath Axes {.cols-2}
 ----
 
 ### Using axes
@@ -357,7 +357,7 @@ There are other axes you can use.
 
 Use `|` to join two expressions.
 
-More examples {.cols-2}
+XPath More examples {.cols-2}
 -------------
 
 ### Examples
@@ -401,7 +401,7 @@ Works like jQuery's `$().closest('.box')`.
 
 Finds `<item>` and check its attributes
 
-See also
+Also see
 --------
 * [Devhints](https://devhints.io/xpath) _(devhints.io)_
 * [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_

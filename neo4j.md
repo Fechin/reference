@@ -36,7 +36,7 @@ Neo4j is a Graph Database consisting of nodes connected together by relationship
 | **Properties** | Both nodes and relationships can have properties set against them.  Properties are [name-value pairs](https://neo4j.com/docs/cypher-manual/4.3/syntax/values/#cypher-values). |
 
 
-Syntax {.cols-3}
+Neo4j Syntax {.cols-3}
 ------
 
 ### Read query structure
@@ -72,7 +72,7 @@ RETURN [ORDER BY] [SKIP] [LIMIT]
 ```
 
 
-Reading Data
+Neo4j Reading Data
 ------------
 
 ### MATCH
@@ -245,7 +245,7 @@ Returns the union of all query results, including duplicated rows.
 
 
 
-Writing Data
+Neo4j Writing Data
 -------------
 
 
@@ -1192,7 +1192,7 @@ Returns the geodesic distance between two points in meters. It can be used for 3
 
 
 
-Functions
+Neo4j Functions
 ---------
 ### Temporal functions
 
@@ -1519,7 +1519,7 @@ Standard deviation for a sample of a population. For an entire population use st
 
 
 
-Schema Operations
+Neo4j Schema Operations
 ------
 
 ### INDEX
@@ -1755,7 +1755,7 @@ Drop the constraint with the name uniqueness if it exists, does nothing if it do
 * Use `PROFILE` / `EXPLAIN` to analyze the performance of your queries. See [Query Tuning](https://neo4j.com/docs/cypher-manual/4.3/query-tuning) for more information on these and other topics, such as planner hints.
 
 
-Multidatabase
+Neo4j Multidatabase
 -------------
 
 ### Database management
@@ -1825,7 +1825,7 @@ DROP DATABASE myDatabase IF EXISTS
 
 
 
-Security
+Neo4j Security
 --------
 
 ### User management

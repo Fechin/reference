@@ -66,7 +66,7 @@ Parameter `<container>` can be container id or name
 
 
 
-Containers {.cols-2}
+Docker Containers {.cols-2}
 ----------
 
 
@@ -137,7 +137,7 @@ docker update --cpu-shares 512 -m 300M nginx-server
 
 
 
-Images {.cols-2}
+Docker Images {.cols-2}
 ------
 
 ### Manipulating
@@ -167,7 +167,7 @@ $ curl example.com/remote/Dockerfile | docker build -f - .
 
 
 
-Networking {.cols-2}
+Docker Networking {.cols-2}
 ----------
 
 

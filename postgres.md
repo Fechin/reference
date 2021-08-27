@@ -68,7 +68,7 @@ Run in PostgreSQL console
 
 
 
-Working {.cols-3}
+PostgreSQL Working {.cols-3}
 -------
 
 ### Recon
@@ -334,7 +334,7 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 
 
 
-Commands {.cols-3}
+PostgreSQL Commands {.cols-3}
 -----------
 
 ### Tables
@@ -537,6 +537,6 @@ Import CSV file into table
 ```
 See also: [Copy](https://www.postgresql.org/docs/current/sql-copy.html)
 
-See Also
+Also see
 --------
 - [Posgres-cheatsheet](https://gist.github.com/apolloclark/ea5466d5929e63043dcf#posgres-cheatsheet) _(gist.github.com)_

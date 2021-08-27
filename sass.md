@@ -11,7 +11,7 @@ intro: |
       This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
 ---
 
-Basics {.cols-3}
+Sass Basics {.cols-3}
 --------
 
 ### Introduction
@@ -124,7 +124,7 @@ text: {
 The `.sass` or `.sass` extension is optional.
 
 
-Mixins {.cols-3}
+Sass Mixins {.cols-3}
 ------
 
 
@@ -171,7 +171,7 @@ body {
 ```
 
 
-Color functions {.cols-2}
+Sass Color functions {.cols-2}
 --------
 
 ### rgba
@@ -257,7 +257,7 @@ change-color($color, $blue: 250)
 
 Supported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
 
-Other functions {.cols-2}
+Sass Other functions {.cols-2}
 --------
 
 ### Strings
@@ -325,7 +325,7 @@ selector-replace(...)
 selector-unify(...)
 ```
 
-Feature checks {.cols-2}
+Sass Feature checks {.cols-2}
 --------
 
 ### Feature check
@@ -341,7 +341,7 @@ feature-exists(global-variable-shadowing)
 * units-level-3
 * at-error
 
-Loops {.cols-3}
+Sass Loops {.cols-3}
 --------
 
 ### For loops
@@ -386,7 +386,7 @@ $i: 6;
 }
 ```
 
-Other features {.cols-3}
+Sass Other features {.cols-3}
 --------
 
 ### Conditionals {.row-span-2}

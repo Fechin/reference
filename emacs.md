@@ -368,7 +368,7 @@ Type `C-x` `ESC` `ESC` to edit and repeat the last command that used the minibuf
 
 
 
-Search{.cols-3}
+Emacs Search{.cols-3}
 ------
 
 

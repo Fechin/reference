@@ -16,7 +16,7 @@ intro: |
 ---
 
 
-Syntax {.cols-3}
+Emmet Syntax {.cols-3}
 ---------------
 
 

@@ -13,7 +13,7 @@ intro: |
     A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
 ---
 
-Get Started {.cols-3}
+Getting Started {.cols-3}
 --------
 
 ### Introduction

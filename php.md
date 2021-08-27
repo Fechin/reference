@@ -177,7 +177,7 @@ See: [Classes](#classes-2)
 
 
 
-Types {.cols-3}
+PHP Types {.cols-3}
 ---------------
 
 
@@ -268,7 +268,7 @@ foreach (bar() as $value) {
 ```
 
 
-Strings {.cols-3}
+PHP Strings {.cols-3}
 ---------------
 
 
@@ -329,7 +329,7 @@ See: [String Functions](https://www.php.net/manual/en/ref.strings.php)
 
 
 
-Arrays {.cols-3}
+PHP Arrays {.cols-3}
 ---------------
 
 ### Defining {.row-span-2}
@@ -471,7 +471,7 @@ function foo($first, string ...$other){}
 
 
 
-Operators {.cols-4}
+PHP Operators {.cols-4}
 ---------------
 
 
@@ -554,7 +554,7 @@ $num /= $float;  // Divide and assign the quotient to $num
 
 
 
-Conditionals {.cols-3}
+PHP Conditionals {.cols-3}
 ---------------
 
 ### If elseif else
@@ -634,7 +634,7 @@ echo $result; # => young adult
 ```
 
 
-Loops {.cols-3}
+PHP Loops {.cols-3}
 ---------------
 
 
@@ -699,7 +699,7 @@ See: [Array iteration](#value-iteration)
 
 
 
-Functions {.cols-3}
+PHP Functions {.cols-3}
 ---------------
 
 
@@ -824,7 +824,7 @@ echo $fn2(5);   # => 6
 
 
 
-Classes {.cols-3}
+PHP Classes {.cols-3}
 ---------------
 
 

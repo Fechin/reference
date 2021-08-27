@@ -226,7 +226,7 @@ $ ssh-keygen -R <ip/hostname>
 
 
 
-See also
+Also see
 --------
 
 - [OpenSSH Config File Examples](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/) _(cyberciti.biz)_

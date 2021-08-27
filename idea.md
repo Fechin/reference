@@ -15,7 +15,7 @@ intro: |
 
 
 
-Windows & Linux Keymap {.cols-3}
+IDEA Windows & Linux Keymap {.cols-3}
 --------
 
 

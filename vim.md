@@ -211,7 +211,7 @@ G gg H M L k j ▶ print("to")
 {.shortcuts}
 
 
-Operators {.cols-3}
+Vim Operators {.cols-3}
 ---------
 
 ### Usage {.secondary}
@@ -279,7 +279,7 @@ Combine [operators](#available-operators) with [motions](#motions) to use them
 
 
 
-Text objects {.cols-3}
+Vim Text objects {.cols-3}
 ------------
 
 ### Usage {.secondary}
@@ -351,7 +351,7 @@ See `:help text-objects`
 
 
 
-Multiple files {.cols-3}
+Vim Multiple files {.cols-3}
 -------------
 
 
@@ -420,7 +420,7 @@ Multiple files {.cols-3}
 
 
 
-Search and Replace {.cols-3}
+Vim Search and Replace {.cols-3}
 ------------------
 
 ### Search

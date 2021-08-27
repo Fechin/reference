@@ -159,7 +159,7 @@ $ tmux info
 
 
 
-Command Mode {.cols-3}
+Tmux Command Mode {.cols-3}
 -----------
 
 ### Usage {.secondary}
