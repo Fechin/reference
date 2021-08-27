@@ -15,11 +15,18 @@ intro: |
 Getting started {.cols-3}
 ---------------
 
+
 ### Introduction
+
 [YAML](https://yaml.org/) is a data serialisation language designed to be directly writable and readable by humans
-- [Refcard](https://yaml.org/refcard.html) _(yaml.org)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/) _(learnxinyminutes.com)_
-- [YAML lint](http://www.yamllint.com/) _(yamllint.com)_
+
+- YAML does not allow the use of tabs
+- Must be space between the element parts
+- YAML is CASE sensitive
+- End your YAML file with the `.yaml` or `.yml` extension
+- YAML is a superset of JSON
+- Ansible playbooks are YAML files
+{.style-round}
 
 
 ### Scalar types {.row-span-2}
@@ -50,9 +57,6 @@ d: 2015-04-05    # date type
 Use spaces to indent. There must be space between the element parts.
 
 
-
-
-
 ### Variables
 ```yaml
 some_thing: &VAR_NAME foobar
@@ -66,41 +70,6 @@ other_thing: *VAR_NAME
 }
 ```
 
-
-### Sequence
-```yaml
-object:
-  attributes:
-    - a1
-    - a2
-    - a3
-  methods: [getter, setter]
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{
-  "object": {
-    "attributes": ["a1", "a2", "a3"],
-    "methods": ["getter", "setter"]
- }
-}
-```
-
-### Sequence of sequences
-```yaml
-my_sequences:
-  - [1, 2, 3]
-  - [4, 5, 6]
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{
-  "my_sequences": [
-    [1, 2, 3], 
-    [4, 5, 6]
-  ]
-}
-```
 
 
 
@@ -129,110 +98,6 @@ description: |
 
 
 
-### Folded text
-```yaml
-description: >
-  hello
-  world
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{"description": "hello world\n"}
-```
-
-
-
-### Hashes
-```yaml
-jack:
-  id: 1
-  name: Franc
-  salary: 5000
-  hobby:
-    - a
-    - b
-  loc: {country: "A", city: "A-A"}
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{
-  "jack": {
-    "id": 1,
-    "name": "Franc",
-    "salary": 5000,
-    "hobby": ["a", "b"],
-    "loc": {
-        "country": "A", "city": "A-A"
-    }
-  }
-}
-```
-
-
-
-### Nested dictionaries
-```yaml
-Employee:
-  id: 1
-  name: "Franc"
-  department:
-    name: "Sales"
-    depid: "11"
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{
-  "Employee": {
-    "id": 1,
-    "name": "Franc",
-    "department": {
-      "name": "Sales",
-      "depid": "11"
-    }
-  }
-}
-```
-
-
-
-
-### Sequence of dictionaries
-```yaml
-children:
-  - name: Jimmy Smith
-    age: 15
-  - name: Jenny Smith
-    age: 12
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{
-  "children": [
-    {"name": "Jimmy Smith", "age": 15},
-    {"name": "Jenny Smith", "age": 12}
-  ]
-}
-```
-
-
-
-### Set
-```yaml
-set1: !!set
-  ? one
-  ? two
-set2: !!set {'one', "two"}
-```
-#### ↓ Equavalent JSON
-```json {.wrap}
-{
-  "set1": {"one": null, "two": null},
-  "set2": {"one": null, "two": null}
-}
-```
-
-
-
 ### Inheritance {.row-span-2}
 ```yaml
 parent: &defaults
@@ -246,8 +111,14 @@ child:
 #### ↓ Equavalent JSON
 ```json {.wrap}
 {
-  "parent": {"a": 2, "b": 3},
-  "child": {"a": 2, "b": 4}
+  "parent": {
+    "a": 2,
+    "b": 3
+  },
+  "child": {
+    "a": 2,
+    "b": 4
+  }
 }
 ```
 
@@ -256,8 +127,8 @@ child:
 ### Reference {.row-span-2}
 ```yaml
 values: &ref
-  - These values
-  - will be reused below
+  - Will be
+  - reused below
   
 other_values:
   i_am_ref: *ref
@@ -266,15 +137,94 @@ other_values:
 ```json {.wrap}
 {
   "values": [
-    "These values",
-    "will be reused below"
+    "Will be",
+    "reused below"
   ],
   "other_values": {
     "i_am_ref": [
-      "These values",
-      "will be reused below"
+      "Will be",
+      "reused below"
     ]
   }
+}
+```
+
+
+### Folded strings
+```yaml
+description: >
+  hello
+  world
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{"description": "hello world\n"}
+```
+
+
+
+### Two Documents
+```yaml
+---
+document: this is doc 1
+---
+document: this is doc 2
+```
+YAML uses `---` to separate directives from document content.
+
+
+
+
+
+
+YAML Collections {.cols-3}
+-----------
+
+### Sequence
+```yaml
+- Mark McGwire
+- Sammy Sosa
+- Ken Griffey
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+[
+  "Mark McGwire",
+  "Sammy Sosa",
+  "Ken Griffey"
+]
+```
+
+
+### Mapping
+```yaml
+hr:  65       # Home runs
+avg: 0.278    # Batting average
+rbi: 147      # Runs Batted In
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "hr": 65,
+  "avg": 0.278,
+  "rbi": 147
+}
+```
+
+
+
+### Mapping to Sequences
+```yaml
+attributes:
+  - a1
+  - a2
+methods: [getter, setter]
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "attributes": ["a1", "a2"],
+  "methods": ["getter", "setter"]
 }
 ```
 
@@ -282,12 +232,296 @@ other_values:
 
 
 
-### Documents
+### Sequence of Mappings
 ```yaml
----
-document: this is doc 1
----
-document: this is doc 2
-...
+children:
+  - name: Jimmy Smith
+    age: 15
+  - name: Jimmy Smith
+    age: 15
+  -
+    name: Sammy Sosa
+    age: 12
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "children": [
+    {"name": "Jimmy Smith", "age": 15},
+    {"name": "Jimmy Smith", "age": 15},
+    {"name": "Sammy Sosa", "age": 12}
+  ]
+}
 ```
 
+
+### Sequence of Sequences
+```yaml
+my_sequences:
+  - [1, 2, 3]
+  - [4, 5, 6]
+  -  
+    - 7
+    - 8
+    - 9
+    - 0 
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "my_sequences": [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9, 0]
+  ]
+}
+```
+
+
+### Mapping of Mappings
+```yaml
+Mark McGwire: {hr: 65, avg: 0.278}
+Sammy Sosa: {
+    hr: 63,
+    avg: 0.288
+  }
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "Mark McGwire": {
+    "hr": 65,
+    "avg": 0.278
+  },
+  "Sammy Sosa": {
+    "hr": 63,
+    "avg": 0.288
+  }
+}
+```
+
+
+
+### Nested Collections
+```yaml
+Jack:
+  id: 1
+  name: Franc
+  salary: 25000
+  hobby:
+    - a
+    - b
+  location: {country: "A", city: "A-A"}
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "Jack": {
+    "id": 1,
+    "name": "Franc",
+    "salary": 25000,
+    "hobby": ["a", "b"],
+    "location": {
+        "country": "A", "city": "A-A"
+    }
+  }
+}
+```
+
+
+### Unordered Sets
+```yaml
+set1: !!set
+  ? one
+  ? two
+set2: !!set {'one', "two"}
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "set1": {"one": null, "two": null},
+  "set2": {"one": null, "two": null}
+}
+```
+Sets are represented as a Mapping where each key is associated with a null value
+
+
+### Ordered Mappings
+```yaml
+ordered: !!omap
+- Mark McGwire: 65
+- Sammy Sosa: 63
+- Ken Griffy: 58
+```
+#### ↓ Equavalent JSON
+```json {.wrap}
+{
+  "ordered": [
+     {"Mark McGwire": 65},
+     {"Sammy Sosa": 63},
+     {"Ken Griffy": 58}
+  ]
+}
+```
+
+
+
+
+
+
+YAML Reference {.cols-3}
+--------------
+
+### Terms
+
+- Sequences aka arrays or lists
+- Scalars aka strings or numbers
+- Mappings aka hashes or dictionaries
+{.style-round}
+
+Based on the YAML.org [refcard](https://yaml.org/refcard.html).
+
+
+### Document indicators
+
+|       |                     |
+|-------|---------------------|
+| `%`   | Directive indicator |
+| `---` | Document header     |
+| `...` | Document terminator |
+
+
+
+### Collection indicators {.row-span-2}
+
+|      |                                 |
+|------|---------------------------------|
+| `?`  | Key indicator                   |
+| `:`  | Value indicator                 |
+| `-`  | Nested series entry indicator   |
+| `,`  | Separate in-line branch entries |
+| `[]` | Surround in-line series branch  |
+| `{}` | Surround in-line keyed branch   |
+
+
+### Alias indicators
+
+|              |                                                             |
+|--------------|-------------------------------------------------------------|
+| `&`          | Anchor property                                             |
+| `*`          | Alias indicator                                             |
+
+
+### Special keys
+
+|      |                                 |
+|------|---------------------------------|
+| `=`  | Default "value" mapping key     |
+| `<<` | Merge keys from another mapping |
+
+
+### Scalar indicators
+
+|      |                                                 |
+|------|-------------------------------------------------|
+| `''` | Surround in-line unescaped scalar               |
+| `"`  | Surround in-line escaped scalar                 |
+| `|`  | Block scalar indicator                          |
+| `>`  | Folded scalar indicator                         |
+| `-`  | Strip chomp modifier (`|-` or `>-`)             |
+| `+`  | Keep chomp modifier (`|+` or `>+`)              |
+| `1-9`| Explicit indentation modifier (`|1` or `>2`). <br/> Modifiers can be combined (`|2-`, `>+1`) | 
+
+
+### Tag Property (usually unspecified) {.col-span-2}
+|              |                                                             |
+|--------------|-------------------------------------------------------------|
+| `none`       | Unspecified tag (automatically resolved by application)     |
+| `!`          | Non-specific tag (by default, `!!map`/`!!seq`/`!!str`)      |
+| `!foo`       | Primary (by convention, means a local `!foo` tag)           |
+| `!!foo`      | Secondary (by convention, means `tag:yaml.org,2002:foo`)    |
+| `!h!foo`     | Requires `%TAG !h! <prefix>` (and then means `<prefix>foo`) |
+| `!<foo>`     | Verbatim tag (always means `foo`)                           |
+
+### Misc indicators
+
+|                  |                              |
+|------------------|------------------------------|
+| `#`              | Throwaway comment indicator  |
+| <code>\`@</code> | Both reserved for future use |
+
+
+### Core types (default automatic tags) {.row-span-2}
+
+|         |                                        |
+|---------|----------------------------------------|
+| `!!map` | `{Hash table, dictionary, mapping}`      |
+| `!!seq` | `{List, array, tuple, vector, sequence}` |
+| `!!str` | Unicode string                         |
+
+
+
+### Escape Codes {.row-span-3}
+
+#### Numeric
+
+- `\x12` (8-bit)
+- `\u1234` (16-bit)
+- `\U00102030` (32-bit)
+  {.cols-2 .style-none}
+
+#### Protective
+
+- `\\` (\\)
+- `\"` (")
+- `\ ` ( )
+- `\<TAB>` (TAB)
+  {.cols-3 .style-none}
+
+#### C
+- `\0` (NUL)
+- `\a` (BEL)
+- `\b` (BS)
+- `\f` (FF)
+- `\n` (LF)
+- `\r` (CR)
+- `\t` (TAB)
+- `\v` (VTAB)
+  {.cols-3 .style-none}
+
+#### Additional
+
+- `\e` (ESC)
+- `\_` (NBSP)
+- `\N` (NEL)
+- `\L` (LS)
+- `\P` (PS)
+  {.cols-3 .style-none}
+  
+### More types
+
+|          |                             |
+|----------|-----------------------------|
+| `!!set`  | `{cherries, plums, apples}` |
+| `!!omap` | `[one: 1, two: 2]`          |
+
+
+
+### Language Independent Scalar Types {.col-span-2}
+
+|                           |                                              |
+|---------------------------|----------------------------------------------|
+| `{~, null}`               | Null (no value).                             |
+| `[1234, 0x4D2, 02333]`    | [Decimal int, Hexadecimal int, Octal int]    |
+| `[1_230.15, 12.3015e+02]` | [Fixed float, Exponential float]             |
+| `[.inf, -.Inf, .NAN]`     | [Infinity (float), Negative, Not a number]   |
+| `{Y, true, Yes, ON}`      | Boolean true                                 |
+| `{n, FALSE, No, off}`     | Boolean false                                |
+
+
+
+Also see 
+--------
+- [YAML Reference Card](https://yaml.org/refcard.html) _(yaml.org)_
+- [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/) _(learnxinyminutes.com)_
+- [YAML lint online](http://www.yamllint.com/) _(yamllint.com)_
