@@ -4,6 +4,7 @@ date: 2020-12-24 21:08:21
 icon: icon-jquery
 background: bg-blue-700
 tags:
+    - web
     - js
     - javascript
     - library

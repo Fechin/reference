@@ -4,6 +4,7 @@ date: 2020-12-25 20:22:47
 icon: icon-css
 background: bg-blue-500
 tags:
+    - web
     - css
     - style
 categories:

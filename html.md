@@ -4,7 +4,8 @@ date: 2021-07-20 19:16:42
 icon: icon-html
 background: bg-yellow-600
 tags:
-    - null
+    - web
+    - html
 categories:
     - Programming
 intro: |
