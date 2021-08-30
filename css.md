@@ -292,7 +292,7 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 |                           |                                   |
 |---------------------------|-----------------------------------|
 | `a:link    `              | Link in normal state              |
-| `a:active  `             | Link in clicked state             |
+| `a:active  `              | Link in clicked state             |
 | `a:hover   `              | Link with mouse over it           |
 | `a:visited `              | Visited link                      |
 
@@ -306,7 +306,7 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 | `p::first-letter`         | First letter in p                 |
 | `p::first-line`           | First line in p                   |
 | `::selection`             | Selected by user                  |
-| `input::placeholder`      | Placeholder attribute.            |
+| `::placeholder`           | [Placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) attribute             |
 | `:root`                   | Documents root element            |
 | `:target`                 | Highlight active anchor           |
 | `div:empty`               | Element with no children          |
@@ -327,9 +327,10 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 | `input:valid`             | Input with valid value            |
 | `input:invalid`           | Input with invalid value          |
 | `input:optional`          | No required attribute             |
-| `input:required`          | Input with requred attribute      |
+| `input:required`          | Input with required attribute      |
 | `input:read-only`         | With readonly attribute           |
-| `input:read-write`        | No readonly attribute.            |
+| `input:read-write`        | No readonly attribute             |
+| `input:indeterminate`     | With [indeterminate](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) state    |
 
 
 
