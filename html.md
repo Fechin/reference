@@ -5,11 +5,10 @@ icon: icon-html
 background: bg-yellow-600
 tags:
     - web
-    - html
 categories:
     - Programming
 intro: |
-    This HTML quick reference cheat sheet lists the common HTML tags and their attributes in an easy-to-read format.
+    This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.
 ---
 
 
@@ -110,7 +109,7 @@ See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML
 <pre>Preformatted text</pre>
 <code>Source code</code>
 <del>Deleted text</del>
-<mark>Marked/highlighted text</mark>
+<mark>Highlighted text (HTML5)</mark>
 <ins>Inserted text</ins>
 <sup>Makes text superscripted</sup>
 <sub> Makes text subscripted</sub>
@@ -146,6 +145,30 @@ You should only have one h1 on your page
 These are the tags used to divide your page up into sections
 
 
+
+### Inline Frame {.row-span-2}
+```html {.wrap}
+<iframe title="New York"
+    width="342"
+    height="306"
+    id="gmap_canvas"
+    src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    scrolling="no">
+</iframe>
+```
+#### ↓ Preview
+<iframe title="New York"
+    width="342"
+    height="306"
+    id="gmap_canvas"
+    src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    scrolling="no">
+</iframe>
+
+
+See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+
+
 ### JavaScript in HTML
 
 ```html
@@ -155,6 +178,7 @@ These are the tags used to divide your page up into sections
 </script>
 ```
 
+
 #### External JavaScript
 
 ```html
@@ -163,6 +187,7 @@ These are the tags used to divide your page up into sections
     <script src="app.js"></script>
 </head>
 ```
+
 
 ### CSS in HTML
 
@@ -183,26 +208,151 @@ These are the tags used to divide your page up into sections
 </body>
 ```
 
-### Inline Frame
+
+
+HTML5 Tags {.cols-3}
+-------------
+
+### Document
+```html
+<body>
+  <header>
+    <nav>...</nav>
+  </header>
+  <main>
+    <h1>QuickRef.ME</h1>
+  </main>
+  <footer>
+    <p>©2023 QuickRef.ME</p>
+  </footer>
+</body>
+```
+
+
+### Header Navigation
+```html
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Edit Page</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </nav>
+</header>
+```
+
+
+### HTML5 Tags {.row-span-4}
+
+|                                                                                    |                                        |
+|------------------------------------------------------------------------------------|----------------------------------------|
+| [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)       | Content that’s independent             |
+| [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)           | Secondary content                      |
+| [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)           | Embeds a sound, or an audio stream     |
+| [bdi](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi)               | The Bidirectional Isolate element      |
+| [canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)         | Draw graphics via JavaScript           |
+| [data](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data)             | Machine readable content               |
+| [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)     | A set of pre-defined options           |
+| [details](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)       | Additional information                 |
+| [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)         | A dialog box or sub-window             |
+| [embed](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)           | Embeds external application            |
+| [figcaption](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) | A caption or legend for a figure       |
+| [figure](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)         | A figure illustrated                   |
+| [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)         | Footer or least important              |
+| [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)         | Masthead or important information      |
+| [main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)             | The main content of the document       |
+| [mark](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)             | Text highlighted                       |
+| [meter](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter)           | A scalar value within a known range    |
+| [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)               | A section of navigation links          |
+| [output](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output)         | The result of a calculation            |
+| [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)       | A container for multiple image sources |
+| [progress](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)     | The completion progress of a task      |
+| [rp](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp)                 | Provides fall-back parenthesis         |
+| [rt](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt)                 | Defines the pronunciation of character |
+| [ruby](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)             | Represents a ruby annotation           |
+| [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)       | A group in a series of related content |
+| [source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)         | Resources for the media elements       |
+| [summary](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)       | A summary for the \<details> element   |
+| [template](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)     | Defines the fragments of HTML          |
+| [time](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)             | A time or date                         |
+| [track](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)           | Text tracks for the media elements     |
+| [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)           | Embeds video                           |
+| [wbr](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)               | A line break opportunity               |
+
+
+### HTML5 Video
 ```html {.wrap}
-<iframe id="inlineFrameExample"
-    title="YouTube video player"
-    width="560"
-    height="215"
-    src="https://www.youtube.com/embed/HmZKgaHa3Fg"
-    allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;">
-</iframe>
+<video controls="" width="100%">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 ```
 #### ↓ Preview
-<iframe id="inlineFrameExample"
-    title="YouTube video player"
-    width="560"
-    height="215"
-    src="https://www.youtube.com/embed/HmZKgaHa3Fg"
-    allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;">
-</iframe>
+<video controls="" width="100%">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 
-See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+
+### HTML5 Audio
+```html {.wrap}
+<audio controls
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+    Your browser does not support the audio element.
+</audio>
+```
+#### ↓ Preview
+<audio controls class="w-full"
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
+
+
+### HTML5 Ruby
+```html {.wrap}
+<ruby>
+  汉 <rp>(</rp><rt>Han</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+</ruby>
+```
+#### ↓ Preview
+<ruby class="mt-5 text-center text-5xl">
+  汉 <rp>(</rp><rt>Han</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+</ruby>
+
+
+### HTML5 kdi
+```html
+<ul>
+ <li>User <bdi>hrefs</bdi>: 60 points</li>
+ <li>User <bdi>jdoe</bdi>: 80 points</li>
+ <li>User <bdi>إيان</bdi>: 90 points</li>
+</ul>
+```
+#### ↓ Preview
+<ul>
+ <li>User <bdi>hrefs</bdi>: 60 points</li>
+ <li>User <bdi>jdoe</bdi>: 80 points</li>
+ <li>User <bdi>إيان</bdi>: 90 points</li>
+</ul>
+
+
+### HTML5 progress
+```html
+<progress value="50" max="100"></progress>
+```
+<progress value="50" max="100" class="w-full"></progress>
+
+
+### HTML 5 mark
+```html
+<p>I Love <mark>QuickRef.ME</mark></p>
+```
+<p>I Love <mark>QuickRef.ME</mark></p>
 
 
 HTML Tables {.cols-3}
@@ -434,10 +584,10 @@ Radio buttons are used to let the user select exactly one
 
 ### Checkboxes
 ```html
-<input type="checkbox" name="sports" id="soccer">
-<label for="soccer">Soccer</label>
-<input type="checkbox" name="sports" id="baseball">
-<label for="baseball">Baseball</label>
+<input type="checkbox" name="s" id="soc">
+<label for="soc">Soccer</label>
+<input type="checkbox" name="s" id="bas">
+<label for="bas">Baseball</label>
 ```
 #### ↓ Preview
 <form style="padding: 20px;">
@@ -478,28 +628,28 @@ A select box is a dropdown list of options
 ### Fieldset tags
 ```html
 <fieldset>
-    <legend>Choose your favorite monster</legend>
-    <input type="radio" id="kraken" name="monster">
+    <legend>Your favorite monster</legend>
+    <input type="radio" id="kra" name="m">
     <label for="kraken">Kraken</label><br/>
-    <input type="radio" id="sasquatch" name="monster">
-    <label for="sasquatch">Sasquatch</label><br/>
+    <input type="radio" id="sas" name="m">
+    <label for="sas">Sasquatch</label>
 </fieldset>
 ```
 #### ↓ Preview
 <form style="padding: 20px">
     <fieldset class="border border-gray-400" style="padding: 20px">
-        <legend>Choose your favorite monster</legend>
-        <input type="radio" id="kraken" name="monster">
-        <label for="kraken">Kraken</label><br/>
-        <input type="radio" id="sasquatch" name="monster">
-        <label for="sasquatch">Sasquatch</label><br/>
+        <legend>Your favorite monster</legend>
+        <input type="radio" id="kra" name="monster">
+        <label for="kra">Kraken</label><br/>
+        <input type="radio" id="sas" name="monster">
+        <label for="sas">Sasquatch</label>
     </fieldset>
 </form>
 
 
 
 
-### Datalist tags
+### Datalist tags(HTML5)
 ```html
 <label for="b">Choose a browser: </label>
 <input list="list" id="b" name="browser"/>
@@ -599,32 +749,32 @@ Also see: [Attributes for the \<input> element](https://developer.mozilla.org/en
 
 |                         |                                                              |
 |-------------------------|--------------------------------------------------------------|
+| `type="checkbox"`       | <input type="checkbox" class="border border-gray-400">       |
+| `type="radio"`          | <input type="radio" class="border border-gray-400">          |
+| `type="file"`           | <input type="file" class="border border-gray-400">           |
+| `type="hidden"`         | <input type="hidden" class="border border-gray-400">         |
+| `type="text"`           | <input type="text" class="border border-gray-400">           |
+| `type="password"`       | <input type="password" class="border border-gray-400">       |
+| `type="image"`          | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> |
+| `type="reset"`          | <input type="reset" class="border border-gray-400">          |
+| `type="button"`         | <input type="button" class="border border-gray-400">Button</input>         |
+| `type="submit"`         | <input type="submit" class="border border-gray-400">         |
+
+#### New Input Types in HTML5
+|                         |                                                              |
+|-------------------------|--------------------------------------------------------------|
+| `type="color"`          | <input type="color" value="#0FB881" class="border border-gray-400">          |
 | `type="date"`           | <input type="date" class="border border-gray-400">           |
 | `type="time"`           | <input type="time" class="border border-gray-400">           |
 | `type="month"`          | <input type="month" class="border border-gray-400">          |
 | `type="datetime-local"` | <input type="datetime-local" class="border border-gray-400"> |
 | `type="week"`           | <input type="week" class="border border-gray-400">           |
-
-| `type="checkbox"`       | <input type="checkbox" class="border border-gray-400">       |
-| `type="radio"`          | <input type="radio" class="border border-gray-400">          |
-| `type="color"`          | <input type="color" value="#0FB881" class="border border-gray-400">          |
-| `type="file"`           | <input type="file" class="border border-gray-400">           |
-| `type="hidden"`         | <input type="hidden" class="border border-gray-400">         |
-
-| `type="number"`         | <input type="number" class="border border-gray-400">         |
-| `type="range"`          | <input type="range" class="border border-gray-400">          |
-
-| `type="text"`           | <input type="text" class="border border-gray-400">           |
-| `type="search"`         | <input type="search" class="border border-gray-400">         |
-| `type="password"`       | <input type="password" class="border border-gray-400">       |
 | `type="email"`          | <input type="email" class="border border-gray-400">          |
 | `type="tel"`            | <input type="tel" class="border border-gray-400">            |
 | `type="url"`            | <input type="url" class="border border-gray-400">            |
-
-| `type="image"`          | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> |
-| `type="reset"`          | <input type="reset" class="border border-gray-400">          |
-| `type="button"`         | <input type="button" class="border border-gray-400">Button</input>         |
-| `type="submit"`         | <input type="submit" class="border border-gray-400">         |
+| `type="number"`         | <input type="number" class="border border-gray-400">         |
+| `type="search"`         | <input type="search" class="border border-gray-400">         |
+| `type="range"`          | <input type="range" class="border border-gray-400">          |
 
 
 ### Input CSS selectors
