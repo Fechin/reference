@@ -314,13 +314,13 @@ HTML5 Tags {.cols-3}
 ### HTML5 Ruby
 ```html {.wrap}
 <ruby>
-  汉 <rp>(</rp><rt>Han</rt><rp>)</rp>
+  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
   字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 #### ↓ Preview
 <ruby class="mt-4 text-center text-5xl">
-  汉 <rp>(</rp><rt>Han</rt><rp>)</rp>
+  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
   字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 
