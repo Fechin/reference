@@ -104,7 +104,7 @@ See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML
 <b>Bold Text</b>
 <strong>This text is important</strong>
 <i>Italic Text</i>
-<em>Emphasis - This text is emphasized</em>
+<em>This text is emphasized</em>
 <u>Underline Text</u>
 <pre>Preformatted text</pre>
 <code>Source code</code>
@@ -112,7 +112,7 @@ See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML
 <mark>Highlighted text (HTML5)</mark>
 <ins>Inserted text</ins>
 <sup>Makes text superscripted</sup>
-<sub> Makes text subscripted</sub>
+<sub>Makes text subscripted</sub>
 <small>Makes text smaller</small>
 <pre>Pre-formatted Text</pre>
 <kbd>Ctrl</kbd>
@@ -319,7 +319,7 @@ HTML5 Tags {.cols-3}
 </ruby>
 ```
 #### ↓ Preview
-<ruby class="mt-5 text-center text-5xl">
+<ruby class="mt-4 text-center text-5xl">
   汉 <rp>(</rp><rt>Han</rt><rp>)</rp>
   字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
