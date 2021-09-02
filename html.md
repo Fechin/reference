@@ -199,7 +199,7 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 </style>
 ```
 
-#### External CSS
+#### External stylesheet
 
 ```html
 <body>
@@ -314,14 +314,14 @@ HTML5 Tags {.cols-3}
 ### HTML5 Ruby
 ```html {.wrap}
 <ruby>
-  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  汉 <rp>(</rp><rt>hàn</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zì</rt><rp>)</rp>
 </ruby>
 ```
 #### ↓ Preview
 <ruby class="mt-4 text-center text-5xl">
-  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  汉 <rp>(</rp><rt>hàn</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zì</rt><rp>)</rp>
 </ruby>
 
 
@@ -348,7 +348,7 @@ HTML5 Tags {.cols-3}
 <progress value="50" max="100" class="w-full"></progress>
 
 
-### HTML 5 mark
+### HTML5 mark
 ```html
 <p>I Love <mark>QuickRef.ME</mark></p>
 ```

@@ -21,23 +21,25 @@ Getting started {.cols-3}
 ### Introduction {.row-span-3}
 CSS is rich in capabilities and is more than simply laying out pages.
 
-#### External CSS
+#### External stylesheet
 ```html {.wrap}
 <link href="./path/to/stylesheet/style.css" rel="stylesheet" type="text/css">
 ```
-#### Inline CSS
-```html {.wrap}
-<h2 style="text-align: center;">Centered text</h2>
 
-<p style="color: blue; font-size: 18px;">Blue, 18-point text</p>
-```
-#### Internal CSS
+#### Internal stylesheet
 ```html
 <style>
 body {
     background-color: linen;
 }
 </style>
+```
+
+#### Inline styles 
+```html {.wrap}
+<h2 style="text-align: center;">Centered text</h2>
+
+<p style="color: blue; font-size: 18px;">Blue, 18-point text</p>
 ```
 
 
