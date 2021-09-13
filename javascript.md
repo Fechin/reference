@@ -21,7 +21,7 @@ Getting started {.cols-3}
 ### Introduction
 JavaScript is a lightweight, interpreted programming language.
 
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/javascript/) _(learnxinyminutes.com)_
+- [JSON cheatsheet](/json) _(quickref.me)_
 - [Regex in JavaScript](/regex#regex-in-javascript) _(quickref.me)_
 
 
