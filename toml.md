@@ -197,7 +197,7 @@ text = "Great Article!"
 author = "Anonymous"
 text = "Love it!"
 ```
-#### Equivalent JSON
+#### ↓ Equavalent JSON
 ```json
 {
 	"comments" : [
@@ -219,7 +219,7 @@ text = "Love it!"
 [dog."tater.man"]
 type = "pug"
 ```
-#### Equivalent JSON
+#### ↓ Equavalent JSON
 ```json
 {
   "dog": {
@@ -238,7 +238,7 @@ type = "pug"
 [foo.bar.baz]
 bat = "hi"
 ```
-#### Equivalent JSON
+#### ↓ Equavalent JSON
 ```json
 {
 	"foo" : {
