@@ -55,15 +55,15 @@ std::cout << age;     // Print 25
 
 
 ### Primitive Data Types 
-| Data Type | Size    | Range               |
-|-----------|---------|---------------------|
-| `int`     | 4 bytes | -2^31^ ^to^ 2^31^-1 |
-| `float`   | 4 bytes |_N/A_                |
-| `double`  | 8 bytes |_N/A_                |
-| `char`    | 1 byte  | -128 ^to^ 127       |
-| `bool`    | 1 byte  | true / false        |
-| `void`    |_N/A_    |_N/A_                |
-| `wchar_t` | 2 ^or^ 4 bytes|  1 wide character  |
+| Data Type | Size           | Range               |
+|-----------|----------------|---------------------|
+| `int`     | 4 bytes        | -2^31^ ^to^ 2^31^-1 |
+| `float`   | 4 bytes        | _N/A_               |
+| `double`  | 8 bytes        | _N/A_               |
+| `char`    | 1 byte         | -128 ^to^ 127       |
+| `bool`    | 1 byte         | true / false        |
+| `void`    | _N/A_          | _N/A_               |
+| `wchar_t` | 2 ^or^ 4 bytes | 1 wide character    |
 {.show-header}
 
 
@@ -326,8 +326,8 @@ else
 
 #### Assignment Operators
 
-| Example  | Equivalent to           |
-|----------|-------------------------|
+| Example  | Equivalent to   |
+|----------|-----------------|
 | `a += b` | _Aka_ a = a + b |
 | `a -= b` | _Aka_ a = a - b |
 | `a *= b` | _Aka_ a = a * b |
@@ -336,22 +336,22 @@ else
 
 #### Logical Operators
 
-| Example              | Meaning                |
-|----------------------|------------------------|
-| `exp1 && exp2`       | Both are true _(AND)_  |
-| `exp1 || exp2`       | Either is true _(OR)_  |
-| `!exp`               | `exp` is false _(NOT)_ |
+| Example        | Meaning                |
+|----------------|------------------------|
+| `exp1 && exp2` | Both are true _(AND)_  |
+| `exp1 || exp2` | Either is true _(OR)_  |
+| `!exp`         | `exp` is false _(NOT)_ |
 
 #### Bitwise Operators
 
-| Operator     | Description             |
-|--------------|-------------------------|
-| `a & b`      | Binary AND              |
-| `a | b`      | Binary OR               |
-| `a ^ b`      | Binary XOR              |
-| `a ~ b`      | Binary One's Complement |
-| `a << b`     | Binary Shift Left       |
-| `a >> b`     | Binary Shift Right      |
+| Operator | Description             |
+|----------|-------------------------|
+| `a & b`  | Binary AND              |
+| `a | b`  | Binary OR               |
+| `a ^ b`  | Binary XOR              |
+| `a ~ b`  | Binary One's Complement |
+| `a << b` | Binary Shift Left       |
+| `a >> b` | Binary Shift Right      |
 
 
 ### Ternary Operator
@@ -693,17 +693,17 @@ Miscellaneous {.cols-3}
 
 | Escape Sequences | Characters            |
 |------------------|-----------------------|
-| `\b`              | Backspace             |
-| `\f`              | Form feed             |
-| `\n`              | Newline               |
-| `\r`              | Return                |
-| `\t`              | Horizontal tab        |
-| `\v`              | Vertical tab          |
-| `\\`              | Backslash             |
-| `\'`              | Single quotation mark |
-| `\"`              | Double quotation mark |
-| `\?`              | Question mark         |
-| `\0`              | Null Character        |
+| `\b`             | Backspace             |
+| `\f`             | Form feed             |
+| `\n`             | Newline               |
+| `\r`             | Return                |
+| `\t`             | Horizontal tab        |
+| `\v`             | Vertical tab          |
+| `\\`             | Backslash             |
+| `\'`             | Single quotation mark |
+| `\"`             | Double quotation mark |
+| `\?`             | Question mark         |
+| `\0`             | Null Character        |
 
 
 ### Keywords  {.col-span-2 .row-span-2}

@@ -32,22 +32,22 @@ $x('//a[text()="XPath"]')[0].click()
 
 ### Descendant selectors  {.col-span-2}
 
-| Xpath                     | CSS                                      |
-| ----                      | ----                                     |
-| `//h1`                    | h1                                       |
-| `//div//p`                | div p                                    |
-| `//ul/li`                 | ul > li                                  |
-| `//ul/li/a`               | ul > li > a                              |
-| `//div/*`                 | div > *                                  |
-| `/`                       | :root                                    |
-| `/html/body`                   | :root > body                             |
+| Xpath        | CSS          |
+|--------------|--------------|
+| `//h1`       | h1           |
+| `//div//p`   | div p        |
+| `//ul/li`    | ul > li      |
+| `//ul/li/a`  | ul > li > a  |
+| `//div/*`    | div > *      |
+| `/`          | :root        |
+| `/html/body` | :root > body |
 {.show-header}
 
 
 ### Order selectors  {.col-span-2}
 
-| Xpath             |  CSS                   |
-|-------------------|------------------------|
+| Xpath               | CSS                  |
+|---------------------|----------------------|
 | `//ul/li[1]`        | ul > li:first-child  |
 | `//ul/li[2]`        | ul > li:nth-child(2) |
 | `//ul/li[last()]`   | ul > li:last-child   |
@@ -59,22 +59,22 @@ $x('//a[text()="XPath"]')[0].click()
 
 ### Attribute selectors {.col-span-3 .row-span-2}
 
-| Xpath                           | CSS                    |
-|---------------------------------|------------------------|
-| `//*[@id="id"]`                 | #id                    |
-| `//*[@class="class"]`           | .class                 |
-| `//input[@type="submit"]`       | input[type="submit"]   |
-| `//a[@id="abc"][@for="xyz"]`    | a#abc[for="xyz"]       |
-| `//a[@rel]`                     | a[rel]                 |
-| `//a[starts-with(@href, '/')]`  | a[href^='/']           |
-| `//a[ends-with(@href, '.pdf')]` | a[href$='pdf']         |
-| `//a[contains(@href, '://')]`   | a[href*='`:`//']         |
-| `//a[contains(@rel, 'help')]`   | a[rel~='help']         |
+| Xpath                           | CSS                  |
+|---------------------------------|----------------------|
+| `//*[@id="id"]`                 | #id                  |
+| `//*[@class="class"]`           | .class               |
+| `//input[@type="submit"]`       | input[type="submit"] |
+| `//a[@id="abc"][@for="xyz"]`    | a#abc[for="xyz"]     |
+| `//a[@rel]`                     | a[rel]               |
+| `//a[starts-with(@href, '/')]`  | a[href^='/']         |
+| `//a[ends-with(@href, '.pdf')]` | a[href$='pdf']       |
+| `//a[contains(@href, '://')]`   | a[href*='`:`//']     |
+| `//a[contains(@rel, 'help')]`   | a[rel~='help']       |
 {.show-header}
 
 
 ### Siblings  {.col-span-3}
-|  Xpath                               | CSS      |
+| Xpath                                | CSS      |
 |--------------------------------------|----------|
 | `//h1/following-sibling::ul`         | h1 ~ ul  |
 | `//h1/following-sibling::ul[1]`      | h1 + ul  |
@@ -83,7 +83,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 
 ### jQuery {.col-span-3}
-|  Xpath                           | CSS                        |
+| Xpath                            | CSS                        |
 |----------------------------------|----------------------------|
 | `//ul/li/..`                     | $('ul > li').parent()      |
 | `//li/ancestor-or-self::section` | $('li').closest('section') |
@@ -93,16 +93,16 @@ $x('//a[text()="XPath"]')[0].click()
 
 
 ### Misc selectors {.col-span-3} 
-|  Xpath                            | CSS                     |
-|-----------------------------------|-------------------------|
-| `//h1[not(@id)]`                  | h1:not([id])            |
-| `//button[text()="Submit"]`       | Text match              |
-| `//button[contains(text(),"Go")]` | Text contains (substring)  |
-| `//product[@price > 2.50]`        | Arithmetic              |
-| `//ul[*]`                         | Has children            |
-| `//ul[li]`                        | Has children (specific) |
-| `//a[@name or @href]`             | Or logic                |
-| `//a | //div`                     | Union (joins results)   |
+| Xpath                             | CSS                       |
+|-----------------------------------|---------------------------|
+| `//h1[not(@id)]`                  | h1:not([id])              |
+| `//button[text()="Submit"]`       | Text match                |
+| `//button[contains(text(),"Go")]` | Text contains (substring) |
+| `//product[@price > 2.50]`        | Arithmetic                |
+| `//ul[*]`                         | Has children              |
+| `//ul[li]`                        | Has children (specific)   |
+| `//a[@name or @href]`             | Or logic                  |
+| `//a | //div`                     | Union (joins results)     |
 {.show-header}
 
 
@@ -327,10 +327,10 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 
 ### Other axes {.row-span-2}
 
-| Axis                 | Abbrev | Notes                                            |
-| ---                  | ---    | ---                                              |
-| `ancestor`           |        |                                                  |
-| `ancestor-or-self`   |        |                                                  |
+| Axis               | Abbrev | Notes |
+|--------------------|--------|-------|
+| `ancestor`         |        |       |
+| `ancestor-or-self` |        |       |
 
 | `attribute`          | `@`    | `@href` is short for `attribute::href`           |
 | `child`              |        | `div` is short for `child::div`                  |

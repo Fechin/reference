@@ -18,16 +18,16 @@ Getting started {.cols-3}
 ---------------
 
 ### Usage {.col-span-2}
-| Option | Example                 |     Description                                        |
-|--------|-----------------------------|----------------------------------------------------|
-| `-p`     | mitmproxy -p 8001     | Start proxy on port 8001 |
-| `-m`     | mitmproxy -p 8001 -m reverse:http://127.0.0.1:4000    | Reverse proxy on port 8001 to port 4000 |
-| `-w`     | mitmproxy -p 8001 -w traffic.mitm        | Stream flows to file as they arrive |
-| `-r`     | mitmproxy -r traffic.mitm    | Read flows from file               |
-| `-C`     | mitmproxy -C traffic.mitm    | Replay client requests from a saved file       |
-| `-S`     | mitmproxy -S traffic.mitm    | Replay server responses from a saved file       |
-| `-s`     | mitmproxy -s myScript.py    | Execute a script             |
-| `-h`     | mitmproxy -h     | mitmproxy quick help |
+| Option | Example                                            | Description                               |
+|--------|----------------------------------------------------|-------------------------------------------|
+| `-p`   | mitmproxy -p 8001                                  | Start proxy on port 8001                  |
+| `-m`   | mitmproxy -p 8001 -m reverse:http://127.0.0.1:4000 | Reverse proxy on port 8001 to port 4000   |
+| `-w`   | mitmproxy -p 8001 -w traffic.mitm                  | Stream flows to file as they arrive       |
+| `-r`   | mitmproxy -r traffic.mitm                          | Read flows from file                      |
+| `-C`   | mitmproxy -C traffic.mitm                          | Replay client requests from a saved file  |
+| `-S`   | mitmproxy -S traffic.mitm                          | Replay server responses from a saved file |
+| `-s`   | mitmproxy -s myScript.py                           | Execute a script                          |
+| `-h`   | mitmproxy -h                                       | mitmproxy quick help                      |
 
 
 ### Movement 
@@ -42,46 +42,46 @@ h ◀ ─── + ─── ▶ l           ││ page
 ```
 ---
 
-| -                  | -                     |
-|--------------------|-----------------------|
-| `h`, `j`, `k` ,`l` | Left, Down, Up, Right |
-| `Ctrl` `b`           | Page up             |
-| `Space` / `Ctrl` `f` | Page down           |
-| `g` / `G`          | Go to beginning / end |
-| `Arrows`           | Up, Down, Left, Right |
+| -                    | -                     |
+|----------------------|-----------------------|
+| `h`, `j`, `k` ,`l`   | Left, Down, Up, Right |
+| `Ctrl` `b`           | Page up               |
+| `Space` / `Ctrl` `f` | Page down             |
+| `g` / `G`            | Go to beginning / end |
+| `Arrows`             | Up, Down, Left, Right |
 {.shortcuts}
 
 
 
 
 ### Common Keybindings
-| - | - |
-|---------|-----------------------|
-| `q`     | Back / Exit           |
-| `z`     | Clear flow list       |
-| `:`     | Command prompt        |
-| `E`     | View event log        |
-| `O`     | View options          |
-| `r`     | Replay this flow      |
-| `Tab`   | Next                  |
-| `Enter` | Select                |
+| -       | -                |
+|---------|------------------|
+| `q`     | Back / Exit      |
+| `z`     | Clear flow list  |
+| `:`     | Command prompt   |
+| `E`     | View event log   |
+| `O`     | View options     |
+| `r`     | Replay this flow |
+| `Tab`   | Next             |
+| `Enter` | Select           |
 {.shortcuts}
 
 
 
 ### Global Keybindings
-| - | - |
-|--------------|---------------------------|
-| `-`          | Cycle to next layout      |
-| `?`          | View help                 |
-| `B`          | Start an attached browser |
-| `C`          | View commands             |
-| `I`          | Toggle intercept          |
-| `K`          | View key bindings         |
-| `P`          | View flow details         |
-| `Q`          | Exit immediately          |
-| `W`          | Stream to file            |
-| `i`          | Set intercept             |
+| -              | -                         |
+|----------------|---------------------------|
+| `-`            | Cycle to next layout      |
+| `?`            | View help                 |
+| `B`            | Start an attached browser |
+| `C`            | View commands             |
+| `I`            | Toggle intercept          |
+| `K`            | View key bindings         |
+| `P`            | View flow details         |
+| `Q`            | Exit immediately          |
+| `W`            | Stream to file            |
+| `i`            | Set intercept             |
 | `Ctrl` `right` | Focus next layout pane    |
 | `Shift` `tab`  | Focus next layout pane    |
 {.shortcuts}
@@ -92,30 +92,30 @@ h ◀ ─── + ─── ▶ l           ││ page
 
 
 ### Flow (View)
-| - | - |
-|----------|------------------------------|
-| `A`      | Resume all intercepted flows |
-| `D`      | Duplicate flow               |
-| `F`      | Set focus follow             |
-| `L`      | Load flows from file         |
-| `M`      | Toggle viewing marked flows  |
-| `S`      | Start server replay          |
-| `U`      | Un-set all marks             |
-| `V`      | Revert changes to this flow  |
-| `X`      | Kill this flow               |
-| `Z`      | Purge all flows not showing  |
-| `a`      | Resume this intercepted flow |
-| `b`      | Save response body to file   |
-| `d`      | Delete flow from view        |
-| `e`      | Export this flow to file     |
-| `f`      | Set view filter              |
-| `m`      | Toggle mark on this flow     |
-| `n`      | Create a new flow            |
-| `o`      | Set flow list order          |
-| `r`      | Replay this flow             |
-| `v`      | Reverse flow list order      |
-| `w`      | Save listed flows to file    |
-| `|`       | Run a script on this flow    |
+| -          | -                            |
+|------------|------------------------------|
+| `A`        | Resume all intercepted flows |
+| `D`        | Duplicate flow               |
+| `F`        | Set focus follow             |
+| `L`        | Load flows from file         |
+| `M`        | Toggle viewing marked flows  |
+| `S`        | Start server replay          |
+| `U`        | Un-set all marks             |
+| `V`        | Revert changes to this flow  |
+| `X`        | Kill this flow               |
+| `Z`        | Purge all flows not showing  |
+| `a`        | Resume this intercepted flow |
+| `b`        | Save response body to file   |
+| `d`        | Delete flow from view        |
+| `e`        | Export this flow to file     |
+| `f`        | Set view filter              |
+| `m`        | Toggle mark on this flow     |
+| `n`        | Create a new flow            |
+| `o`        | Set flow list order          |
+| `r`        | Replay this flow             |
+| `v`        | Reverse flow list order      |
+| `w`        | Save listed flows to file    |
+| `|`        | Run a script on this flow    |
 | `Ctrl` `l` | Send cuts to clipboard       |
 
 {.shortcuts}
@@ -127,9 +127,9 @@ Mitmproxy Filter {.cols-3}
 ---------------
 
 ### Filter
-| - | - |
-|----------|------------------------------|
-| `f`      | Set view filter _(on flow view page)_              |
+| -   | -                                     |
+|-----|---------------------------------------|
+| `f` | Set view filter _(on flow view page)_ |
 {.shortcuts}
 
 ---
@@ -142,52 +142,52 @@ The regex are Python-style, it can be specified as quoted strings
 
 ### Operators
 
-| - | - |
-|--------------|------------------------------------------------------------|
-| `!`          | unary not                                                  |
-| `&`          | and                                                        |
-| `|`           | or                                                         |
-| `(...)`      | grouping                                                   |
+| -       | -         |
+|---------|-----------|
+| `!`     | unary not |
+| `&`     | and       |
+| `|`     | or        |
+| `(...)` | grouping  |
 
 
 ### Expressions {.row-span-2}
 
-| - | - |
-|--------------|------------------------------------------------------------|
-| `~a`         | Match asset in response: CSS, Javascript, Flash, images.   |
+| -              | -                                                          |
+|----------------|------------------------------------------------------------|
+| `~a`           | Match asset in response: CSS, Javascript, Flash, images.   |
 | `~b` `regex`   | Body                                                       |
 | `~bq` `regex`  | Request body                                               |
 | `~bs` `regex`  | Response body                                              |
 | `~c` `int`     | HTTP response code                                         |
 | `~d` `regex`   | Domain                                                     |
 | `~dst` `regex` | Match destination address                                  |
-| `~e`         | Match error                                                |
+| `~e`           | Match error                                                |
 | `~h` `regex`   | Header                                                     |
 | `~hq` `regex`  | Request header                                             |
 | `~hs` `regex`  | Response header                                            |
-| `~http`      | Match HTTP flows                                           |
+| `~http`        | Match HTTP flows                                           |
 | `~m` `regex`   | Method                                                     |
-| `~marked`    | Match marked flows                                         |
-| `~q`         | Match request with no response                             |
-| `~s`         | Match response                                             |
+| `~marked`      | Match marked flows                                         |
+| `~q`           | Match request with no response                             |
+| `~s`           | Match response                                             |
 | `~src` `regex` | Match source address                                       |
 | `~t` `regex`   | Content-type header                                        |
-| `~tcp`       | Match TCP flows                                            |
+| `~tcp`         | Match TCP flows                                            |
 | `~tq` `regex`  | Request Content-Type header                                |
 | `~ts` `regex`  | Response Content-Type header                               |
 | `~u` `regex`   | URL                                                        |
-| `~websocket` | Match WebSocket flows (and HTTP-WebSocket handshake flows) |
+| `~websocket`   | Match WebSocket flows (and HTTP-WebSocket handshake flows) |
 
 ### Flow selectors
 Expressions
-| - | - |
-|--------------|----------------------------|
-| `@all     `  | All flows                  |
-| `@focus   `  | The currently focused flow |
-| `@shown   `  | All flows currently shown  |
-| `@hidden  `  | All flows currently hidden |
-| `@marked  `  | All marked flows           |
-| `@unmarked`  | All unmarked flows         |
+| -           | -                          |
+|-------------|----------------------------|
+| `@all     ` | All flows                  |
+| `@focus   ` | The currently focused flow |
+| `@shown   ` | All flows currently shown  |
+| `@hidden  ` | All flows currently hidden |
+| `@marked  ` | All marked flows           |
+| `@unmarked` | All unmarked flows         |
 
 mitmproxy has a set of convenient flow selectors that operate on the current view
 

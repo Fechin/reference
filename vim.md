@@ -65,10 +65,10 @@ G gg H M L k j ▶ print("to")
 {.shortcuts}
 
 #### Words{.left-text}
-| Shortcut      | Description               |
-|---------------|---------------------------|
-| `b` _/_ `w`   | Previous/Next word        |
-| `ge` _/_ `e`  | Previous/Next end of word |
+| Shortcut     | Description               |
+|--------------|---------------------------|
+| `b` _/_ `w`  | Previous/Next word        |
+| `ge` _/_ `e` | Previous/Next end of word |
 {.shortcuts}
 
 #### Line
@@ -81,20 +81,20 @@ G gg H M L k j ▶ print("to")
 
 #### Character
 
-| Shortcut       | Description                         |
-|----------------|-------------------------------------|
-| `Fe` _/_ `fe`  | Move to previous/next `e`           |
-| `To` _/_ `to`  | Move before/after previous/next `o` |
-| `|` _/_ `n|`   | Go to first/`n`th column            |
+| Shortcut      | Description                         |
+|---------------|-------------------------------------|
+| `Fe` _/_ `fe` | Move to previous/next `e`           |
+| `To` _/_ `to` | Move before/after previous/next `o` |
+| `|` _/_ `n|`  | Go to first/`n`th column            |
 {.shortcuts}
 
 #### Document
 
-| Shortcut     | Description                |
-|--------------|----------------------------|
-| `gg` _/_ `G` | First/Last line            |
-| `:n` _\|_ `nG`        | Go to line `n` |
-| `}` _/_ `{`        | Next/Previous empty line |
+| Shortcut       | Description              |
+|----------------|--------------------------|
+| `gg` _/_ `G`   | First/Last line          |
+| `:n` _\|_ `nG` | Go to line `n`           |
+| `}` _/_ `{`    | Next/Previous empty line |
 {.shortcuts}
 
 #### Window
@@ -121,30 +121,30 @@ G gg H M L k j ▶ print("to")
 
 
 ### Saving and Exiting
-| Shortcut                  | Description                |
-|---------------------------|----------------------------|
-| `:w`                      | Save                       |
-| `:q`                      | Close file                 |
-| `:wq` _\|_ `:x` _\|_ `ZZ` | Save and quit              |
-| `:wqa`                    | Save and quit all files    |
-| `:q!` _\|_ `ZQ`           | Force quit                 |
-| `:qa`                     | Close all files            |
-| `:qa!`                    | Force quit all files       |
-| `:w` new.txt              | Write to `new.txt`         |
-| `:sav` new.txt            | Save and edit `new.txt`    |
-| `:w` !sudo tee %          | Write to readonly file     |
+| Shortcut                  | Description             |
+|---------------------------|-------------------------|
+| `:w`                      | Save                    |
+| `:q`                      | Close file              |
+| `:wq` _\|_ `:x` _\|_ `ZZ` | Save and quit           |
+| `:wqa`                    | Save and quit all files |
+| `:q!` _\|_ `ZQ`           | Force quit              |
+| `:qa`                     | Close all files         |
+| `:qa!`                    | Force quit all files    |
+| `:w` new.txt              | Write to `new.txt`      |
+| `:sav` new.txt            | Save and edit `new.txt` |
+| `:w` !sudo tee %          | Write to readonly file  |
 {.shortcuts}
 
 
 
 ### Normal Mode
-| Shortcut              | Description              |
-|-----------------------|--------------------------|
-| `r`                   | Replace one character    |
-| `R`                   | Enter Replace mode       |
+| Shortcut              | Description                  |
+|-----------------------|------------------------------|
+| `r`                   | Replace one character        |
+| `R`                   | Enter Replace mode           |
 | `u` _/_ `3u`          | Undo changes `1` / `3` times |
-| `U`                   | Undo changes on one line |
-| `J`                   | Join with next line      |
+| `U`                   | Undo changes on one line     |
+| `J`                   | Join with next line          |
 | `<C-r>` _/_ 5 `<C-r>` | Redo changes `1` / `5` times |
 {.shortcuts}
 
@@ -357,20 +357,20 @@ Vim Multiple files {.cols-3}
 
 
 ### Buffers
-| -           | -                                |
-|-------------|----------------------------------|
-| `:e file`   | Edit a file in a new buffer      |
-| `:bn`       | Go to the next buffer            |
-| `:bp`       | Go to the previous buffer        |
-| `:bd`       | Remove file from buffer list     |
-| `:b 5`      | Open buffer #5                   |
-| `:b file`   | Go to a buffer by file           |
-| `:ls`       | List all open buffers            |
-| `:sp file`  | Open and split window            |
-| `:vs file`  | Open and vertically split window |
-| `:hid`      | Hide this buffer                 |
-| `:wn`       | Write file and move to next      |
-| `:tab ba`   | Edit all buffers as tabs         |
+| -          | -                                |
+|------------|----------------------------------|
+| `:e file`  | Edit a file in a new buffer      |
+| `:bn`      | Go to the next buffer            |
+| `:bp`      | Go to the previous buffer        |
+| `:bd`      | Remove file from buffer list     |
+| `:b 5`     | Open buffer #5                   |
+| `:b file`  | Go to a buffer by file           |
+| `:ls`      | List all open buffers            |
+| `:sp file` | Open and split window            |
+| `:vs file` | Open and vertically split window |
+| `:hid`     | Hide this buffer                 |
+| `:wn`      | Write file and move to next      |
+| `:tab ba`  | Edit all buffers as tabs         |
 
 
 
@@ -385,7 +385,7 @@ Vim Multiple files {.cols-3}
 | `<C-w>` `x`          | Swap current with next      |
 | `<C-w>` `-`  _/_ `+` | Decrease/Increase height    |
 | `<C-w>` `<`  _/_ `>` | Decrease/Increase width     |
-| `<C-w>` `|`         | Max out the width           |
+| `<C-w>` `|`          | Max out the width           |
 | `<C-w>` `=`          | Equally high and wide       |
 | `<C-w>` `h` _/_ `l`  | Go to the left/right window |
 | `<C-w>` `j` _/_ `k`  | Go to the up/down window    |
@@ -394,18 +394,18 @@ Vim Multiple files {.cols-3}
 
 
 ### Tabs
-| Shortcut           | Description                       |
-|--------------------|-----------------------------------|
-| `:tabe [file]`     | <yel>E</yel>dit file in a new tab |
-| `:tabf [file]`     | Open if exists in new tab         |
-| `:tabc`            | <yel>C</yel>lose current tab      |
-| `:tabo`            | Close <yel>o</yel>ther tabs       |
-| `:tabs`            | List all <yel>tabs</yel>          |
-| `:tabr`            | Go to fi<yel>r</yel>st tab        |
-| `:tabl`            | Go to <yel>l</yel>ast tab         |
-| `:tabm 0`          | <yel>M</yel>ove to position `0`   |
-| `:tabn`            | Go to <yel>n</yel>ext tab         |
-| `:tabp`            | Go to <yel>p</yel>revious tab     |
+| Shortcut       | Description                       |
+|----------------|-----------------------------------|
+| `:tabe [file]` | <yel>E</yel>dit file in a new tab |
+| `:tabf [file]` | Open if exists in new tab         |
+| `:tabc`        | <yel>C</yel>lose current tab      |
+| `:tabo`        | Close <yel>o</yel>ther tabs       |
+| `:tabs`        | List all <yel>tabs</yel>          |
+| `:tabr`        | Go to fi<yel>r</yel>st tab        |
+| `:tabl`        | Go to <yel>l</yel>ast tab         |
+| `:tabm 0`      | <yel>M</yel>ove to position `0`   |
+| `:tabn`        | Go to <yel>n</yel>ext tab         |
+| `:tabp`        | Go to <yel>p</yel>revious tab     |
 
 
 #### Normal mode
@@ -424,16 +424,16 @@ Vim Search and Replace {.cols-3}
 ------------------
 
 ### Search
-| -        | -                                               |
-|----------|-------------------------------------------------|
-| `/foo`   | Search forward                                  |
-| `/foo\c` | Search forward _(case insensitive)_             |
-| `?foo`   | Search backward                                 |
-| `/\v\d+` | Search with [regex](/regex)                     |
-| `n`      | Next matching search pattern                    |
-| `N`      | Previous match                                  |
-| `*`      | Search for current word forward                 |
-| `#`      | Search for current word backward                |
+| -        | -                                   |
+|----------|-------------------------------------|
+| `/foo`   | Search forward                      |
+| `/foo\c` | Search forward _(case insensitive)_ |
+| `?foo`   | Search backward                     |
+| `/\v\d+` | Search with [regex](/regex)         |
+| `n`      | Next matching search pattern        |
+| `N`      | Previous match                      |
+| `*`      | Search for current word forward     |
+| `#`      | Search for current word backward    |
 {.shortcuts}
 
 
@@ -445,14 +445,14 @@ Vim Search and Replace {.cols-3}
 
 ---
 
-|                   |                                 |
-|-------------------|---------------------------------|
-| `:s/old/new`      | Replace first                   |
-| `:s/old/new/g`    | Replace all                     |
-| `:s/\vold/new/g`  | Replace all with [regex](/regex)|
-| `:s/old/new/gc`   | replace all _(Confirm)_         |
-| `:s/old/new/i`    | Ignore case replace first       |
-| `:2,6s/old/new/g` | Replace between lines `2`-`6`   |
+|                   |                                  |
+|-------------------|----------------------------------|
+| `:s/old/new`      | Replace first                    |
+| `:s/old/new/g`    | Replace all                      |
+| `:s/\vold/new/g`  | Replace all with [regex](/regex) |
+| `:s/old/new/gc`   | replace all _(Confirm)_          |
+| `:s/old/new/i`    | Ignore case replace first        |
+| `:2,6s/old/new/g` | Replace between lines `2`-`6`    |
 
 ### Replace FILE
 ```vim
@@ -461,28 +461,28 @@ Vim Search and Replace {.cols-3}
 
 ---
 
-|                   |                             |
-|-------------------|-----------------------------|
-| `:%s/old/new`     | Replace first               |
-| `:%s/old/new/g`   | Replace all                 |
-| `:%s/old/new/gc`  | Replace all _(Confirm)_     |
-| `:%s/old/new/gi`  | Replace all _(ignore case)_ |
-| `:%s/\vold/new/g` | Replace all with [regex](/regex)|
+|                   |                                  |
+|-------------------|----------------------------------|
+| `:%s/old/new`     | Replace first                    |
+| `:%s/old/new/g`   | Replace all                      |
+| `:%s/old/new/gc`  | Replace all _(Confirm)_          |
+| `:%s/old/new/gi`  | Replace all _(ignore case)_      |
+| `:%s/\vold/new/g` | Replace all with [regex](/regex) |
 
 
 
 ### Ranges {.row-span-2}
-| -       | -                  |
-|---------|--------------------|
-| `%`     | Entire file        |
-| `’<,’>` | Current selection  |
-| `5`     | Line `5`           |
-| `5,10`  | Lines `5` to `10`  |
-| `$`     | Last line          |
-| `2,$`   | Lines `2` to Last  |
-| `.`     | Current line       |
-| `,3`    | Next `3` lines     |
-| `-3,`   | Forward `3` lines  |
+| -       | -                 |
+|---------|-------------------|
+| `%`     | Entire file       |
+| `’<,’>` | Current selection |
+| `5`     | Line `5`          |
+| `5,10`  | Lines `5` to `10` |
+| `$`     | Last line         |
+| `2,$`   | Lines `2` to Last |
+| `.`     | Current line      |
+| `,3`    | Next `3` lines    |
+| `-3,`   | Forward `3` lines |
 
 
 
@@ -511,9 +511,9 @@ Vim Search and Replace {.cols-3}
 ```
 ---
 
-|               |                                                            |
-|---------------|------------------------------------------------------------|
-| `:v/foo/d`    | Delete lines not containing `foo`<br/>_(also `:g!/foo/d`)_ |
+|            |                                                            |
+|------------|------------------------------------------------------------|
+| `:v/foo/d` | Delete lines not containing `foo`<br/>_(also `:g!/foo/d`)_ |
 
 
 
@@ -530,16 +530,16 @@ Vim Search and Replace {.cols-3}
 
 
 ### Substitute expression (magic)
-| -            | -                                |
-|--------------|----------------------------------|
-| `&` _\|_ `\0`| Replace with the whole matched   |
-| `\1`...`\9`  | Replace with the group 0-9       |
-| `\u`         | Uppercase next letter            |
-| `\U`         | Uppercase following characters   |
-| `\l`         | Lowercase next letter            |
-| `\L`         | Lowercase following characters   |
-| `\e`         | End of `\u`, `\U`, `\l` and `\L` |
-| `\E`         | End of `\u`, `\U`, `\l` and `\L` |
+| -             | -                                |
+|---------------|----------------------------------|
+| `&` _\|_ `\0` | Replace with the whole matched   |
+| `\1`...`\9`   | Replace with the group 0-9       |
+| `\u`          | Uppercase next letter            |
+| `\U`          | Uppercase following characters   |
+| `\l`          | Lowercase next letter            |
+| `\L`          | Lowercase following characters   |
+| `\e`          | End of `\u`, `\U`, `\l` and `\L` |
+| `\E`          | End of `\u`, `\U`, `\l` and `\L` |
 
 
 
@@ -602,7 +602,7 @@ See: [Ranges](#ranges)
 ### Folds {.row-span-2}
 
 | Shortcut      | Description                  |
-| ---           | ---                          |
+|---------------|------------------------------|
 | `zo` _/_ `zO` | Open                         |
 | `zc` _/_ `zC` | Close                        |
 | `za` _/_ `zA` | Toggle                       |
@@ -619,10 +619,10 @@ See: [Ranges](#ranges)
 ### Jumping
 <br>
 
-| Shortcut       | Description                      |
-| ---            | ---                              |
-| `]c`           | Next difference                  |
-| `[c`           | Previous difference              |
+| Shortcut | Description         |
+|----------|---------------------|
+| `]c`     | Next difference     |
+| `[c`     | Previous difference |
 {.shortcuts}
 
 
@@ -657,11 +657,11 @@ Miscellaneous {.cols-3}
 
 ### Jumping
 
-| Shortcut | Description          |
-|----------|----------------------|
-| `<C-o>`  | Go back to previous  |
-| `<C-i>`  | Go forward           |
-| `gf`     | Go to file in cursor |
+| Shortcut | Description              |
+|----------|--------------------------|
+| `<C-o>`  | Go back to previous      |
+| `<C-i>`  | Go forward               |
+| `gf`     | Go to file in cursor     |
 | `ga`     | Display hex, ascii value |
 {.shortcuts}
 
@@ -669,17 +669,17 @@ Miscellaneous {.cols-3}
 
 
 ### Misc command-lines {.row-span-2}
-| -                      | -                             |
-|------------------------|-------------------------------|
-| `:h`                   | Help open help view           |
-| `:edit!`               | Reload current file           |
-| `:2,8m0`               | Move lines `2`-`8` to `0`     |
-| `:noh`                 | Clear search highlights       |
-| `:sort`                | Sort lines                    |
-| `:ter`                 | Open a terminal window        |
-| `:set paste`           | Enable Insert Paste sub-mode  |
-| `:set nopaste`         | disable Insert Paste sub-mode |
-| `:cq`                  | Exiting with an error<br/>_(aborting Git)_ |
+| -              | -                                          |
+|----------------|--------------------------------------------|
+| `:h`           | Help open help view                        |
+| `:edit!`       | Reload current file                        |
+| `:2,8m0`       | Move lines `2`-`8` to `0`                  |
+| `:noh`         | Clear search highlights                    |
+| `:sort`        | Sort lines                                 |
+| `:ter`         | Open a terminal window                     |
+| `:set paste`   | Enable Insert Paste sub-mode               |
+| `:set nopaste` | disable Insert Paste sub-mode              |
+| `:cq`          | Exiting with an error<br/>_(aborting Git)_ |
 
 
 ### Navigating
@@ -696,8 +696,8 @@ Miscellaneous {.cols-3}
 
 ### Counters
 
-| Shortcut | Description      |
-| ---      | ---              |
+| Shortcut | Description     |
+|----------|-----------------|
 | `<C-a>`  | Increase number |
 | `<C-x>`  | Decrease number |
 {.shortcuts}
@@ -705,24 +705,24 @@ Miscellaneous {.cols-3}
 
 ### Tags {.row-span-2 .col-span-2}
 
-| Shortcut              | Description                                     |
-| ---                   | ---                                             |
-| `:tag Classname`      | Jump to first definition of Classname           |
-| `<C-]>`               | Jump to definition                              |
-| `g]`                  | See all definitions                             |
-| `<C-t>`               | Go back to last tag                             |
-| `<C-o> <C-i>`         | Back/forward                                    |
-| `:tselect Classname`  | Find definitions of Classname                   |
-| `:tjump Classname`    | Find definitions of Classname (auto-select 1st) |
+| Shortcut             | Description                                     |
+|----------------------|-------------------------------------------------|
+| `:tag Classname`     | Jump to first definition of Classname           |
+| `<C-]>`              | Jump to definition                              |
+| `g]`                 | See all definitions                             |
+| `<C-t>`              | Go back to last tag                             |
+| `<C-o> <C-i>`        | Back/forward                                    |
+| `:tselect Classname` | Find definitions of Classname                   |
+| `:tjump Classname`   | Find definitions of Classname (auto-select 1st) |
 {.shortcuts}
 
 
 ### Formatting
-| -               | - |
-|-----------------|---|
-| `:ce 8` |  Center lines between `8` columns |
-| `:ri 4`  | Right-align lines at `4` columns   |
-| `:le`           | Left-align lines  |
+| -       | -                                |
+|---------|----------------------------------|
+| `:ce 8` | Center lines between `8` columns |
+| `:ri 4` | Right-align lines at `4` columns |
+| `:le`   | Left-align lines                 |
 
 See `:help formatting`
 
@@ -762,10 +762,10 @@ See `:help formatting`
 
 ### Calculator
 
-| Shortcut      | Description                               |
-| ---           | ---                                       |
-| `<C-r>` `=` 7*7 | Shows the result   |
-| `<C-r>` `=` 10/2 | Shows the result   |
+| Shortcut         | Description      |
+|------------------|------------------|
+| `<C-r>` `=` 7*7  | Shows the result |
+| `<C-r>` `=` 10/2 | Shows the result |
 {.shortcuts}
 
 Do this in INSERT mode
@@ -774,12 +774,12 @@ Do this in INSERT mode
 
 
 ### Shell
-| -                      | -                             |
-|------------------------|-------------------------------|
-| `:!<shell>`            | Interpret Shell Command       |
-| `:r!<shell>`           | Read in output of shell                 |
-| `:r!date`              | Insert date                |
-| `:!!date`              | Replace current line with date                |
+| -            | -                              |
+|--------------|--------------------------------|
+| `:!<shell>`  | Interpret Shell Command        |
+| `:r!<shell>` | Read in output of shell        |
+| `:r!date`    | Insert date                    |
+| `:!!date`    | Replace current line with date |
 
 
 
@@ -787,7 +787,7 @@ Do this in INSERT mode
 ### Command line
 
 | Shortcut     | Description                               |
-| ---          | ---                                       |
+|--------------|-------------------------------------------|
 | `<C-r><C-w>` | Insert current word into the command line |
 | `<C-r>"`     | Paste from " register                     |
 | `<C-x><C-f>` | Auto-completion of path in insert mode    |

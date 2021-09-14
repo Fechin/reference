@@ -67,10 +67,10 @@ See: [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/E
 ```
 ---
 
-|   |          |                                                    |
-|---|----------|----------------------------------------------------|
-|   | `href`   | The URL that the hyperlink points to               |
-|   | `rel`    | Relationship of the linked URL                     |
+|   |          |                                                                 |
+|---|----------|-----------------------------------------------------------------|
+|   | `href`   | The URL that the hyperlink points to                            |
+|   | `rel`    | Relationship of the linked URL                                  |
 |   | `target` | Link target location: <br/>`_self`, `_blank`, `_top`, `_parent` |
 {.left-text}
 
@@ -85,13 +85,13 @@ See: [The \<a> Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 ```
 ---
 
-|   |          |                                     |
-|---|----------|-------------------------------------|
-|   | `src`    | Required, Image location _(URL \| Path)_ |
-|   | `alt`    | Describe of the image               |
-|   | `width`  | Width of the image                  |
-|   | `height` | Height of the image                 |
-|   | `loading`| How the browser should load         |
+|   |           |                                          |
+|---|-----------|------------------------------------------|
+|   | `src`     | Required, Image location _(URL \| Path)_ |
+|   | `alt`     | Describe of the image                    |
+|   | `width`   | Width of the image                       |
+|   | `height`  | Height of the image                      |
+|   | `loading` | How the browser should load              |
 {.left-text}
 
 See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
@@ -399,11 +399,11 @@ HTML Tables {.cols-3}
 
 ### \<td> Attributes
 
-| Attribute   | Description                                   |
-|-------------|-----------------------------------------------|
-| `colspan`   | Number of columns a cell should span          |
-| `headers`   | One or more header cells a cell is related to |
-| `rowspan`   | Number of rows a cell should span             |
+| Attribute | Description                                   |
+|-----------|-----------------------------------------------|
+| `colspan` | Number of columns a cell should span          |
+| `headers` | One or more header cells a cell is related to |
+| `rowspan` | Number of rows a cell should span             |
 
 See: [td\#Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attributes)
 
@@ -411,13 +411,13 @@ See: [td\#Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 
 ### \<th> Attributes
 
-| Attribute   | Description                                   |
-|-------------|-----------------------------------------------|
-| `colspan`   | Number of columns a cell should span          |
-| `headers`   | One or more header cells a cell is related to |
-| `rowspan`   | Number of rows a cell should span             |
-| `abbr`      | Description of the cell's content             |
-| [scope](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope)     | The header element relates to |
+| Attribute                                                                        | Description                                   |
+|----------------------------------------------------------------------------------|-----------------------------------------------|
+| `colspan`                                                                        | Number of columns a cell should span          |
+| `headers`                                                                        | One or more header cells a cell is related to |
+| `rowspan`                                                                        | Number of rows a cell should span             |
+| `abbr`                                                                           | Description of the cell's content             |
+| [scope](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope) | The header element relates to                 |
 
 See: [th\#Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attributes)
 
@@ -504,14 +504,14 @@ The HTML `<form>` element is used to collect and send information to an external
 
 
 ### Form Attribute
-| Attribute   | Description                                                                                                                                           |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`      | Name of form for scripting                                                                                                                     |
-| `action`    | URL of form script |
-| `method`    | HTTP method, `POST` / `GET` _(default)_             |
-| `enctype`   | Media type, See [enctype](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype) |
-| `onsubmit`   | Runs when the form was submit |
-| `onreset`    | Runs when the form was reset |
+| Attribute  | Description                                                                                         |
+|------------|-----------------------------------------------------------------------------------------------------|
+| `name`     | Name of form for scripting                                                                          |
+| `action`   | URL of form script                                                                                  |
+| `method`   | HTTP method, `POST` / `GET` _(default)_                                                             |
+| `enctype`  | Media type, See [enctype](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype) |
+| `onsubmit` | Runs when the form was submit                                                                       |
+| `onreset`  | Runs when the form was reset                                                                        |
 
 
 
@@ -715,31 +715,31 @@ The input tag is an empty element, identifying the particular type of field info
 
 ----
 
-| - |                         |                                                 |
-|---|-------------------------|-------------------------------------------------|
-|   | `type="…"`              | The type of data that is being input            |
-|   | `value="…"`             | Default value                                   |
-|   | `name="…"`              | Used to describe this data in the HTTP request  |
-|   | `id="…"`                | Unique identifier that other HTML elements      |
-|   | `readonly`              | Stops the user from modifying                   |
-|   | `disabled`              | Stops any interaction                           |
-|   | `checked`               | The radio or checkbox select or not             |
-|   | `required`              | Being compulsory, See [required](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required#example)                                |
-|   | `placeholder="…"`       | Adds a temporary, See [::placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder#examples)                                |
-|   | `autocomplete="off"`    | Disable auto completion                         |
-|   | `autocapitalize="none"` | Disable auto capitalization                     |
-|   | `inputmode="…"`         | Display a specific keyboard, See [inputmode](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)  |
-|   | `list="…"`              | The id of an associated [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)              |
-|   | `maxlength="…"`         | Maximum number of characters                    |
-|   | `minlength="…"`         | Minimum number of characters                    |
-|   | `min="…"`               | Minimum numerical value on range & number       |
-|   | `max="…"`               | Maximum numerical value on range & number       |
-|   | `step="…"`              | How the number will increment in range & number |
-|   | `pattern="…"`           | Specifies a [Regular expression](/regex), See [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern)        |
-|   | `autofocus`             | Be focused                                      |
-|   | `spellcheck`            | Perform spell checking                          |
-|   | `multiple`              | Whether to allow [multiple](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/multiple) values |
-|   | `accept=""`             | Expected file type in [file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file) upload controls      |
+| - |                         |                                                                                                                               |
+|---|-------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+|   | `type="…"`              | The type of data that is being input                                                                                          |
+|   | `value="…"`             | Default value                                                                                                                 |
+|   | `name="…"`              | Used to describe this data in the HTTP request                                                                                |
+|   | `id="…"`                | Unique identifier that other HTML elements                                                                                    |
+|   | `readonly`              | Stops the user from modifying                                                                                                 |
+|   | `disabled`              | Stops any interaction                                                                                                         |
+|   | `checked`               | The radio or checkbox select or not                                                                                           |
+|   | `required`              | Being compulsory, See [required](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required#example)               |
+|   | `placeholder="…"`       | Adds a temporary, See [::placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder#examples)                |
+|   | `autocomplete="off"`    | Disable auto completion                                                                                                       |
+|   | `autocapitalize="none"` | Disable auto capitalization                                                                                                   |
+|   | `inputmode="…"`         | Display a specific keyboard, See [inputmode](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)   |
+|   | `list="…"`              | The id of an associated [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)                        |
+|   | `maxlength="…"`         | Maximum number of characters                                                                                                  |
+|   | `minlength="…"`         | Minimum number of characters                                                                                                  |
+|   | `min="…"`               | Minimum numerical value on range & number                                                                                     |
+|   | `max="…"`               | Maximum numerical value on range & number                                                                                     |
+|   | `step="…"`              | How the number will increment in range & number                                                                               |
+|   | `pattern="…"`           | Specifies a [Regular expression](/regex), See [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) |
+|   | `autofocus`             | Be focused                                                                                                                    |
+|   | `spellcheck`            | Perform spell checking                                                                                                        |
+|   | `multiple`              | Whether to allow [multiple](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/multiple) values                     |
+|   | `accept=""`             | Expected file type in [file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file) upload controls            |
 {.left-text}
 
 Also see: [Attributes for the \<input> element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes)
@@ -747,41 +747,41 @@ Also see: [Attributes for the \<input> element](https://developer.mozilla.org/en
 
 ### Input types
 
-|                         |                                                              |
-|-------------------------|--------------------------------------------------------------|
-| `type="checkbox"`       | <input type="checkbox" class="border border-gray-400">       |
-| `type="radio"`          | <input type="radio" class="border border-gray-400">          |
-| `type="file"`           | <input type="file" class="border border-gray-400">           |
-| `type="hidden"`         | <input type="hidden" class="border border-gray-400">         |
-| `type="text"`           | <input type="text" class="border border-gray-400">           |
-| `type="password"`       | <input type="password" class="border border-gray-400">       |
-| `type="image"`          | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> |
-| `type="reset"`          | <input type="reset" class="border border-gray-400">          |
-| `type="button"`         | <input type="button" class="border border-gray-400">Button</input>         |
-| `type="submit"`         | <input type="submit" class="border border-gray-400">         |
+|                   |                                                                                                                                          |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `type="checkbox"` | <input type="checkbox" class="border border-gray-400">                                                                                   |
+| `type="radio"`    | <input type="radio" class="border border-gray-400">                                                                                      |
+| `type="file"`     | <input type="file" class="border border-gray-400">                                                                                       |
+| `type="hidden"`   | <input type="hidden" class="border border-gray-400">                                                                                     |
+| `type="text"`     | <input type="text" class="border border-gray-400">                                                                                       |
+| `type="password"` | <input type="password" class="border border-gray-400">                                                                                   |
+| `type="image"`    | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> |
+| `type="reset"`    | <input type="reset" class="border border-gray-400">                                                                                      |
+| `type="button"`   | <input type="button" class="border border-gray-400">Button</input>                                                                       |
+| `type="submit"`   | <input type="submit" class="border border-gray-400">                                                                                     |
 
 #### New Input Types in HTML5
-|                         |                                                              |
-|-------------------------|--------------------------------------------------------------|
-| `type="color"`          | <input type="color" value="#0FB881" class="border border-gray-400">          |
-| `type="date"`           | <input type="date" class="border border-gray-400">           |
-| `type="time"`           | <input type="time" class="border border-gray-400">           |
-| `type="month"`          | <input type="month" class="border border-gray-400">          |
-| `type="datetime-local"` | <input type="datetime-local" class="border border-gray-400"> |
-| `type="week"`           | <input type="week" class="border border-gray-400">           |
-| `type="email"`          | <input type="email" class="border border-gray-400">          |
-| `type="tel"`            | <input type="tel" class="border border-gray-400">            |
-| `type="url"`            | <input type="url" class="border border-gray-400">            |
-| `type="number"`         | <input type="number" class="border border-gray-400">         |
-| `type="search"`         | <input type="search" class="border border-gray-400">         |
-| `type="range"`          | <input type="range" class="border border-gray-400">          |
+|                         |                                                                     |
+|-------------------------|---------------------------------------------------------------------|
+| `type="color"`          | <input type="color" value="#0FB881" class="border border-gray-400"> |
+| `type="date"`           | <input type="date" class="border border-gray-400">                  |
+| `type="time"`           | <input type="time" class="border border-gray-400">                  |
+| `type="month"`          | <input type="month" class="border border-gray-400">                 |
+| `type="datetime-local"` | <input type="datetime-local" class="border border-gray-400">        |
+| `type="week"`           | <input type="week" class="border border-gray-400">                  |
+| `type="email"`          | <input type="email" class="border border-gray-400">                 |
+| `type="tel"`            | <input type="tel" class="border border-gray-400">                   |
+| `type="url"`            | <input type="url" class="border border-gray-400">                   |
+| `type="number"`         | <input type="number" class="border border-gray-400">                |
+| `type="search"`         | <input type="search" class="border border-gray-400">                |
+| `type="range"`          | <input type="range" class="border border-gray-400">                 |
 
 
 ### Input CSS selectors
 
-|                  |                                                |
-|------------------|------------------------------------------------|
-| `input:focus`    | When its keyboard focused                      |
+|               |                           |
+|---------------|---------------------------|
+| `input:focus` | When its keyboard focused |
 See: [Input pseudo classes](/css#input-pseudo-classes)
 
 

@@ -67,18 +67,18 @@ Multi-line comments use `:'` to open and `'` to close
 
 ### Arguments {.row-span-2}
 
-| Expression | Description                            |
-| ---        | ---                                    |
-| `$1` … `$9`| Parameter 1 ... 9                      |
-| `$0`       | Name of the script itself              |
-| `$1`       | First argument                         |
-| `${10}`	 | Positional parameter 10                |
-| `$#`       | Number of arguments                    |
-| `$$`       | Process id of the shell                |
-| `$*`       | All arguments                          |
-| `$@`       | All arguments, starting from first     |
-| `$-`       | Current options                        |
-| `$_`       | Last argument of the previous command  |
+| Expression  | Description                           |
+|-------------|---------------------------------------|
+| `$1` … `$9` | Parameter 1 ... 9                     |
+| `$0`        | Name of the script itself             |
+| `$1`        | First argument                        |
+| `${10}`     | Positional parameter 10               |
+| `$#`        | Number of arguments                   |
+| `$$`        | Process id of the shell               |
+| `$*`        | All arguments                         |
+| `$@`        | All arguments, starting from first    |
+| `$-`        | Current options                       |
+| `$_`        | Last argument of the previous command |
 
 See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
@@ -116,7 +116,7 @@ echo {A,B}.js
 ---
 
 | Expression | Description         |
-| ---------- | ------------------- |
+|------------|---------------------|
 | `{A,B}`    | Same as `A B`       |
 | `{A,B}.js` | Same as `A.js B.js` |
 | `{1..5}`   | Same as `1 2 3 4 5` |
@@ -143,7 +143,7 @@ Bash Parameter expansions {.cols-3}
 ### Syntax {.row-span-2}
 
 | Code              | Description         |
-| ----------------- | ------------------- |
+|-------------------|---------------------|
 | `${FOO%suffix}`   | Remove suffix       |
 | `${FOO#prefix}`   | Remove prefix       |
 | `${FOO%%suffix}`  | Remove long suffix  |
@@ -154,20 +154,20 @@ Bash Parameter expansions {.cols-3}
 | `${FOO/#from/to}` | Replace prefix      |
 #### Substrings
 | Expression      | Description                    |
-| --------------- | ------------------------------ |
+|-----------------|--------------------------------|
 | `${FOO:0:3}`    | Substring _(position, length)_ |
 | `${FOO:(-3):3}` | Substring from the right       |
 #### Length
 | Expression | Description      |
-| ---------- | ---------------- |
+|------------|------------------|
 | `${#FOO}`  | Length of `$FOO` |
 #### Default values
-| Expression        | Description                                              |
-| ----------------- | -------------------------------------------------------- |
-| `${FOO:-val}`     | `$FOO`, or `val` if unset                                |
-| `${FOO:=val}`     | Set `$FOO` to `val` if unset                             |
-| `${FOO:+val}`     | `val` if `$FOO` is set                                   |
-| `${FOO:?message}` | Show message and exit if `$FOO` is unset           |
+| Expression        | Description                              |
+|-------------------|------------------------------------------|
+| `${FOO:-val}`     | `$FOO`, or `val` if unset                |
+| `${FOO:=val}`     | Set `$FOO` to `val` if unset             |
+| `${FOO:+val}`     | `val` if `$FOO` is set                   |
+| `${FOO:?message}` | Show message and exit if `$FOO` is unset |
 
 
 
@@ -274,17 +274,17 @@ declare -a Numbers=(1 2 3 4 5 6)
 
 ### Indexing
 
-|         -          |         -             |
-|--------------------|-----------------------|
-| `${Fruits[0]}`     | First element         |
-| `${Fruits[-1]}`    | Last element          |
-| `${Fruits[*]}`     | All elements          |
-| `${Fruits[@]}`     | All elements          |
-| `${#Fruits[@]}`    | Number of all         |
-| `${#Fruits}`       | Length of 1st         |
-| `${#Fruits[3]}`    | Length of nth         |
-| `${Fruits[@]:3:2}` | Range                 |
-| `${!Fruits[@]}`    | Keys of all           |
+| -                  | -             |
+|--------------------|---------------|
+| `${Fruits[0]}`     | First element |
+| `${Fruits[-1]}`    | Last element  |
+| `${Fruits[*]}`     | All elements  |
+| `${Fruits[@]}`     | All elements  |
+| `${#Fruits[@]}`    | Number of all |
+| `${#Fruits}`       | Length of 1st |
+| `${#Fruits[3]}`    | Length of nth |
+| `${Fruits[@]:3:2}` | Range         |
+| `${!Fruits[@]}`    | Keys of all   |
 
 
 
@@ -384,32 +384,32 @@ Bash Conditionals {.cols-3}
 
 ### Integer conditions
 
-| Condition                | Description           |
-| ---                      | ---                   |
-| `[[ NUM -eq NUM ]]`      | <yel>Eq</yel>ual                 |
-| `[[ NUM -ne NUM ]]`      | <yel>N</yel>ot <yel>e</yel>qual             |
-| `[[ NUM -lt NUM ]]`      | <yel>L</yel>ess <yel>t</yel>han             |
-| `[[ NUM -le NUM ]]`      | <yel>L</yel>ess than or <yel>e</yel>qual    |
-| `[[ NUM -gt NUM ]]`      | <yel>G</yel>reater <yel>t</yel>han          |
-| `[[ NUM -ge NUM ]]`      | <yel>G</yel>reater than or <yel>e</yel>qual |
-| `(( NUM < NUM ))`        | Less than             |
-| `(( NUM <= NUM ))`       | Less than or equal    |
-| `(( NUM > NUM ))`        | Greater than          |
-| `(( NUM >= NUM ))`       | Greater than or equal |
+| Condition           | Description                                 |
+|---------------------|---------------------------------------------|
+| `[[ NUM -eq NUM ]]` | <yel>Eq</yel>ual                            |
+| `[[ NUM -ne NUM ]]` | <yel>N</yel>ot <yel>e</yel>qual             |
+| `[[ NUM -lt NUM ]]` | <yel>L</yel>ess <yel>t</yel>han             |
+| `[[ NUM -le NUM ]]` | <yel>L</yel>ess than or <yel>e</yel>qual    |
+| `[[ NUM -gt NUM ]]` | <yel>G</yel>reater <yel>t</yel>han          |
+| `[[ NUM -ge NUM ]]` | <yel>G</yel>reater than or <yel>e</yel>qual |
+| `(( NUM < NUM ))`   | Less than                                   |
+| `(( NUM <= NUM ))`  | Less than or equal                          |
+| `(( NUM > NUM ))`   | Greater than                                |
+| `(( NUM >= NUM ))`  | Greater than or equal                       |
 
 
 ### String conditions
 
-| Condition                | Description           |
-| ---                      | ---                   |
-| `[[ -z STR ]]`        | Empty string          |
-| `[[ -n STR ]]`        | <yel>N</yel>ot empty string      |
-| `[[ STR == STR ]]` | Equal                 |
-| `[[ STR = STR ]]` | Equal (Same above)                 |
-| `[[ STR < STR ]]` | Less than _(ASCII)_                 |
-| `[[ STR > STR ]]` | Greater than _(ASCII)_                 |
-| `[[ STR != STR ]]` | Not Equal             |
-| `[[ STR =~ STR ]]` | Regexp                |
+| Condition          | Description                 |
+|--------------------|-----------------------------|
+| `[[ -z STR ]]`     | Empty string                |
+| `[[ -n STR ]]`     | <yel>N</yel>ot empty string |
+| `[[ STR == STR ]]` | Equal                       |
+| `[[ STR = STR ]]`  | Equal (Same above)          |
+| `[[ STR < STR ]]`  | Less than _(ASCII)_         |
+| `[[ STR > STR ]]`  | Greater than _(ASCII)_      |
+| `[[ STR != STR ]]` | Not Equal                   |
+| `[[ STR =~ STR ]]` | Regexp                      |
 
 
 
@@ -470,29 +470,29 @@ fi
 
 ### File conditions {.row-span-2}
 
-| Condition               | Description             |
-| ---                     | ---                     |
-| `[[ -e FILE ]]`         | <yel>E</yel>xists                  |
-| `[[ -d FILE ]]`         | <yel>D</yel>irectory               |
-| `[[ -f FILE ]]`         | <yel>F</yel>ile                    |
-| `[[ -h FILE ]]`         | Symlink                 |
-| `[[ -s FILE ]]`         | Size is > 0 bytes       |
-| `[[ -r FILE ]]`         | <yel>R</yel>eadable                |
-| `[[ -w FILE ]]`         | <yel>W</yel>ritable                |
-| `[[ -x FILE ]]`         | Executable              |
-| `[[ f1 -nt f2 ]]` | f1 <yel>n</yel>ewer <yel>t</yel>han f2         |
-| `[[ f1 -ot f2 ]]` | f2 <yel>o</yel>lder <yel>t</yel>han f1         |
-| `[[ f1 -ef f2 ]]` | Same files              |
+| Condition         | Description                            |
+|-------------------|----------------------------------------|
+| `[[ -e FILE ]]`   | <yel>E</yel>xists                      |
+| `[[ -d FILE ]]`   | <yel>D</yel>irectory                   |
+| `[[ -f FILE ]]`   | <yel>F</yel>ile                        |
+| `[[ -h FILE ]]`   | Symlink                                |
+| `[[ -s FILE ]]`   | Size is > 0 bytes                      |
+| `[[ -r FILE ]]`   | <yel>R</yel>eadable                    |
+| `[[ -w FILE ]]`   | <yel>W</yel>ritable                    |
+| `[[ -x FILE ]]`   | Executable                             |
+| `[[ f1 -nt f2 ]]` | f1 <yel>n</yel>ewer <yel>t</yel>han f2 |
+| `[[ f1 -ot f2 ]]` | f2 <yel>o</yel>lder <yel>t</yel>han f1 |
+| `[[ f1 -ef f2 ]]` | Same files                             |
 
 
 ### More conditions
 
-| Condition            | Description              |
-| -------------------- | ------------------------ |
+| Condition            | Description          |
+|----------------------|----------------------|
 | `[[ -o noclobber ]]` | If OPTION is enabled |
-| `[[ ! EXPR ]]`       | Not |
-| `[[ X && Y ]]`       | And |
-| `[[ X || Y ]]`       | Or  |
+| `[[ ! EXPR ]]`       | Not                  |
+| `[[ X && Y ]]`       | And                  |
+| `[[ X || Y ]]`       | Or                   |
 
 
 ### logical and, or
@@ -733,14 +733,14 @@ Bash History {.cols-2}
 ### Commands
 
 | Command               | Description                               |
-| --------------------- | ----------------------------------------- |
+|-----------------------|-------------------------------------------|
 | `history`             | Show history                              |
 | `shopt -s histverify` | Don't execute expanded result immediately |
 
 ### Expansions
 
 | Expression   | Description                                          |
-| ------------ | ---------------------------------------------------- |
+|--------------|------------------------------------------------------|
 | `!$`         | Expand last parameter of most recent command         |
 | `!*`         | Expand all parameters of most recent command         |
 | `!-n`        | Expand `n`th most recent command                     |
@@ -750,7 +750,7 @@ Bash History {.cols-2}
 ### Operations
 
 | Code                 | Description                                                           |
-| -------------------- | --------------------------------------------------------------------- |
+|----------------------|-----------------------------------------------------------------------|
 | `!!`                 | Execute last command again                                            |
 | `!!:s/<FROM>/<TO>/`  | Replace first occurrence of `<FROM>` to `<TO>` in most recent command |
 | `!!:gs/<FROM>/<TO>/` | Replace all occurrences of `<FROM>` to `<TO>` in most recent command  |
@@ -762,7 +762,7 @@ Bash History {.cols-2}
 ### Slices
 
 | Code     | Description                                                                              |
-| -------- | ---------------------------------------------------------------------------------------- |
+|----------|------------------------------------------------------------------------------------------|
 | `!!:n`   | Expand only `n`th token from most recent command (command is `0`; first argument is `1`) |
 | `!^`     | Expand first argument from most recent command                                           |
 | `!$`     | Expand last token from most recent command                                               |
@@ -905,7 +905,7 @@ fi
 ### Special variables  {.row-span-2}
 
 | Expression | Description                  |
-| ---------- | ---------------------------- |
+|------------|------------------------------|
 | `$?`       | Exit status of last task     |
 | `$!`       | PID of last background task  |
 | `$$`       | PID of shell                 |

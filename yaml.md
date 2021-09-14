@@ -406,10 +406,10 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 
 ### Alias indicators
 
-|              |                                                             |
-|--------------|-------------------------------------------------------------|
-| `&`          | Anchor property                                             |
-| `*`          | Alias indicator                                             |
+|     |                 |
+|-----|-----------------|
+| `&` | Anchor property |
+| `*` | Alias indicator |
 
 
 ### Special keys
@@ -422,42 +422,42 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 
 ### Scalar indicators
 
-|      |                                                 |
-|------|-------------------------------------------------|
-| `''` | Surround in-line unescaped scalar               |
-| `"`  | Surround in-line escaped scalar                 |
-| `|`  | Block scalar indicator                          |
-| `>`  | Folded scalar indicator                         |
-| `-`  | Strip chomp modifier (`|-` or `>-`)             |
-| `+`  | Keep chomp modifier (`|+` or `>+`)              |
-| `1-9`| Explicit indentation modifier (`|1` or `>2`). <br/> Modifiers can be combined (`|2-`, `>+1`) | 
+|       |                                                                                              |
+|-------|----------------------------------------------------------------------------------------------|
+| `''`  | Surround in-line unescaped scalar                                                            |
+| `"`   | Surround in-line escaped scalar                                                              |
+| `|`   | Block scalar indicator                                                                       |
+| `>`   | Folded scalar indicator                                                                      |
+| `-`   | Strip chomp modifier (`|-` or `>-`)                                                          |
+| `+`   | Keep chomp modifier (`|+` or `>+`)                                                           |
+| `1-9` | Explicit indentation modifier (`|1` or `>2`). <br/> Modifiers can be combined (`|2-`, `>+1`) |
 
 
 ### Tag Property (usually unspecified) {.col-span-2}
-|              |                                                             |
-|--------------|-------------------------------------------------------------|
-| `none`       | Unspecified tag (automatically resolved by application)     |
-| `!`          | Non-specific tag (by default, `!!map`/`!!seq`/`!!str`)      |
-| `!foo`       | Primary (by convention, means a local `!foo` tag)           |
-| `!!foo`      | Secondary (by convention, means `tag:yaml.org,2002:foo`)    |
-| `!h!foo`     | Requires `%TAG !h! <prefix>` (and then means `<prefix>foo`) |
-| `!<foo>`     | Verbatim tag (always means `foo`)                           |
+|          |                                                             |
+|----------|-------------------------------------------------------------|
+| `none`   | Unspecified tag (automatically resolved by application)     |
+| `!`      | Non-specific tag (by default, `!!map`/`!!seq`/`!!str`)      |
+| `!foo`   | Primary (by convention, means a local `!foo` tag)           |
+| `!!foo`  | Secondary (by convention, means `tag:yaml.org,2002:foo`)    |
+| `!h!foo` | Requires `%TAG !h! <prefix>` (and then means `<prefix>foo`) |
+| `!<foo>` | Verbatim tag (always means `foo`)                           |
 
 ### Misc indicators
 
-|                  |                              |
-|------------------|------------------------------|
-| `#`              | Throwaway comment indicator  |
+|     |                             |
+|-----|-----------------------------|
+| `#` | Throwaway comment indicator |
 | <code>\`@</code> | Both reserved for future use |
 
 
 ### Core types (default automatic tags) {.row-span-2}
 
-|         |                                        |
-|---------|----------------------------------------|
+|         |                                          |
+|---------|------------------------------------------|
 | `!!map` | `{Hash table, dictionary, mapping}`      |
 | `!!seq` | `{List, array, tuple, vector, sequence}` |
-| `!!str` | Unicode string                         |
+| `!!str` | Unicode string                           |
 
 
 
@@ -509,14 +509,14 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 
 ### Language Independent Scalar Types {.col-span-2}
 
-|                           |                                              |
-|---------------------------|----------------------------------------------|
-| `{~, null}`               | Null (no value).                             |
-| `[1234, 0x4D2, 02333]`    | [Decimal int, Hexadecimal int, Octal int]    |
-| `[1_230.15, 12.3015e+02]` | [Fixed float, Exponential float]             |
-| `[.inf, -.Inf, .NAN]`     | [Infinity (float), Negative, Not a number]   |
-| `{Y, true, Yes, ON}`      | Boolean true                                 |
-| `{n, FALSE, No, off}`     | Boolean false                                |
+|                           |                                            |
+|---------------------------|--------------------------------------------|
+| `{~, null}`               | Null (no value).                           |
+| `[1234, 0x4D2, 02333]`    | [Decimal int, Hexadecimal int, Octal int]  |
+| `[1_230.15, 12.3015e+02]` | [Fixed float, Exponential float]           |
+| `[.inf, -.Inf, .NAN]`     | [Infinity (float), Negative, Not a number] |
+| `{Y, true, Yes, ON}`      | Boolean true                               |
+| `{n, FALSE, No, off}`     | Boolean false                              |
 
 
 

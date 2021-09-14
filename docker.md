@@ -71,7 +71,7 @@ Docker Containers {.cols-2}
 
 
 ### Starting & Stopping
-|   Description                 | Example                             |
+| Description                   | Example                             |
 |-------------------------------|-------------------------------------|
 | `docker start nginx-server`   | Starting                            |
 | `docker stop nginx-server`    | Stopping                            |
@@ -86,10 +86,10 @@ Docker Containers {.cols-2}
 
 ### Information
 
-|  Example                  | Description                            |
-|---------------------------|----------------------------------------|
-| `docker ps`               | List running containers                |
-| `docker ps -a`            | List all containers                    |
+| Example                       | Description                            |
+|-------------------------------|----------------------------------------|
+| `docker ps`                   | List running containers                |
+| `docker ps -a`                | List all containers                    |
 | `docker logs nginx-server`    | Container Logs                         |
 | `docker inspect nginx-server` | Inspecting Containers                  |
 | `docker events nginx-server`  | Containers Events                      |
@@ -141,17 +141,17 @@ Docker Images {.cols-2}
 ------
 
 ### Manipulating
-| `Example`                          | Description                                                |
-|------------------------------------|------------------------------------------------------------|
-| `docker images`                    | Listing images                                             |
-| `docker rmi nginx`                 | Removing an image                                          |
-| `docker load < ubuntu.tar.gz`      | Loading a tarred repository                                |
-| `docker load --input ubuntu.tar`   | Loading a tarred repository                                |
-| `docker save busybox > ubuntu.tar` | Save an image to a tar archive                             |
-| `docker history`                   | Showing the history of an image                            |
-| `docker commit nginx`              | Save a container as an image.                              |
-| `docker tag nginx eon01/nginx`     | Tagging an image                                           |
-| `docker push eon01/nginx`          | Pushing an image                                           |
+| `Example`                          | Description                     |
+|------------------------------------|---------------------------------|
+| `docker images`                    | Listing images                  |
+| `docker rmi nginx`                 | Removing an image               |
+| `docker load < ubuntu.tar.gz`      | Loading a tarred repository     |
+| `docker load --input ubuntu.tar`   | Loading a tarred repository     |
+| `docker save busybox > ubuntu.tar` | Save an image to a tar archive  |
+| `docker history`                   | Showing the history of an image |
+| `docker commit nginx`              | Save a container as an image.   |
+| `docker tag nginx eon01/nginx`     | Tagging an image                |
+| `docker push eon01/nginx`          | Pushing an image                |
 
 
 ### Building Images
@@ -229,12 +229,12 @@ Miscellaneous {.cols-2}
 
 
 ### Docker Hub
-| Docker Syntax              | Description                         |
-|----------------------------|-------------------------------------|
-| `docker search search_word`| Search docker hub for images.      |
-| `docker pull user/image   `| Downloads an image from docker hub. |
-| `docker login             `| Authenticate to docker hub          |
-| `docker push user/image   `| Uploads an image to docker hub.     |
+| Docker Syntax               | Description                         |
+|-----------------------------|-------------------------------------|
+| `docker search search_word` | Search docker hub for images.       |
+| `docker pull user/image   ` | Downloads an image from docker hub. |
+| `docker login             ` | Authenticate to docker hub          |
+| `docker push user/image   ` | Uploads an image to docker hub.     |
 
 
 

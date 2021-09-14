@@ -53,13 +53,13 @@ Min  Hour Day  Mon  Weekday
 
 ### Examples
 
-| Example        | Description                                          |
-|----------------|------------------------------------------------------|
-| `*/15 * * * *` | Every 15 mins                                        |
-| `0 * * * *`    | Every hour                                           |
-| `0 */2 * * *`  | Every 2 hours                                        |
-| `15 2 * * *`   | At 2:15AM of every day                               |
-| `15 2 * * ?`   | At 2:15AM of every day                               |
+| Example        | Description            |
+|----------------|------------------------|
+| `*/15 * * * *` | Every 15 mins          |
+| `0 * * * *`    | Every hour             |
+| `0 */2 * * *`  | Every 2 hours          |
+| `15 2 * * *`   | At 2:15AM of every day |
+| `15 2 * * ?`   | At 2:15AM of every day |
 
 | `10 9 * * 5`   | At 9:10AM of every Friday                            |
 | `0 0 * * 0`    | At midnight of every Sunday                          |
@@ -89,17 +89,17 @@ Min  Hour Day  Mon  Weekday
 ### Crontab command
 
 
-| - | - |
-|------|-------------------------------------------------------------------------|
-| `crontab -e` | Edit or create a crontab file if doesn’t already exist.         |
-| `crontab -l` | Display the crontab file.                                       |
-| `crontab -r` | Remove the crontab file.                                        |
+| -            | -                                                                       |
+|--------------|-------------------------------------------------------------------------|
+| `crontab -e` | Edit or create a crontab file if doesn’t already exist.                 |
+| `crontab -l` | Display the crontab file.                                               |
+| `crontab -r` | Remove the crontab file.                                                |
 | `crontab -v` | Display the last time you edited your crontab file.<br>_(non-standard)_ |
 {.shortcuts}
 
 
 ### Special characters {.col-span-2}
-| Special Character | Description                                                                                                                                          |
+| Special Character   | Description                                                                                                                                          |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Asterik(*)`        | Matches all values in the field or any possible value.                                                                                               |
 | `Hyphen(-)`         | Used to define a range.Ex: 1-5 in 5th field(Day Of Week) Every Weekday i.e., Monday to Friday                                                        |

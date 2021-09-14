@@ -36,7 +36,7 @@ $ echo '123abc' | sed 's/[0-9]+//g'
 ### Option Examples {.col-span-2}
 
 | Option | Example                                    | Description                             |
-| ------ | ------------------------------------------ |---------------------------------------- |
+|--------|--------------------------------------------|-----------------------------------------|
 | `-i`   | sed -ibak 's/On/Off/' php.ini              | Backup and modify input file directly   |
 | `-E`   | sed -E 's/[0-9]+//g' input-file            | Use extended regular expressions        |
 | `-n`   | sed -n '3 p' config.conf                   | Suppress default pattern space printing |
@@ -84,14 +84,14 @@ Sed commands {.cols-3}
 
 ### Commands {.col-span-2}
 
-| Command | Example                                 | Description                  |
-| ------- | --------------------------------------- |----------------------------- |
-| `p`     | sed -n '1,4 p' input.txt                | Print lines 1-4            |
-| `p`     | sed -n -e '1,4 p' -e '6,7 p' input.txt   | Print lines 1-4 and 6-7  |
-| `d`     | sed '1,4 d' input.txt                | Print lines except 1-4 |
-| `w`     | sed -n '1,4 w output.txt' input.txt     | Write pattern space to file  |
-| `a`     | sed '2 a new-line' input.txt            | Append line after            |
-| `i`     | sed '2 i new-line' input.txt            | Insert line before           |
+| Command | Example                                | Description                 |
+|---------|----------------------------------------|-----------------------------|
+| `p`     | sed -n '1,4 p' input.txt               | Print lines 1-4             |
+| `p`     | sed -n -e '1,4 p' -e '6,7 p' input.txt | Print lines 1-4 and 6-7     |
+| `d`     | sed '1,4 d' input.txt                  | Print lines except 1-4      |
+| `w`     | sed -n '1,4 w output.txt' input.txt    | Write pattern space to file |
+| `a`     | sed '2 a new-line' input.txt           | Append line after           |
+| `i`     | sed '2 i new-line' input.txt           | Insert line before          |
 {.show-header}
 
 
@@ -99,7 +99,7 @@ Sed commands {.cols-3}
 ### Space commands
 
 | Command | Description                                                  |
-| ------- |------------------------------------------------------------- |
+|---------|--------------------------------------------------------------|
 | `n`     | Print pattern space, empty pattern space, and read next line |
 | `x`     | Swap pattern space with hold space                           |
 | `h`     | Copy pattern space to hold space                             |
@@ -118,35 +118,35 @@ $ sed 's/old/new/[flags]' [input-file]
 ```
 ---
  
-| Flag             | Description                                 |
-| ---------------- |-------------------------------------------- |
-| `g`              | Global substitution                         |
-| `1,2...`         | Substitute the nth occurrence               |
-| `p`              | Print only the substituted line             |
-| `w`              | Write only the substituted line to a file   |
-| `I`              | Ignore case while searching                 |
-| `e`              | Substitute and execute in the command line  |
+| Flag     | Description                                |
+|----------|--------------------------------------------|
+| `g`      | Global substitution                        |
+| `1,2...` | Substitute the nth occurrence              |
+| `p`      | Print only the substituted line            |
+| `w`      | Write only the substituted line to a file  |
+| `I`      | Ignore case while searching                |
+| `e`      | Substitute and execute in the command line |
 
 
 ### Loops commands
 
-| Command    | Description                                                        |
-| ---------- |------------------------------------------------------------------- |
+| Command   | Description                                                        |
+|-----------|--------------------------------------------------------------------|
 | `b label` | Branch to a label (for looping)                                    |
 | `t label` | Branch to a label only on successful substitution<br>(for looping) |
 | `:label`  | Label for the b and t commands (for looping)                       |
-| `N`        | Append next line to pattern space                                  |
-| `P`        | Print 1st line in multi-line                                       |
-| `D`        | Delete 1st line in multi-line                                      |
+| `N`       | Append next line to pattern space                                  |
+| `P`       | Print 1st line in multi-line                                       |
+| `D`       | Delete 1st line in multi-line                                      |
 
 
 
 ### Misc Flags
-| Flag             | Description                                 |
-| ---------------- |-------------------------------------------- |
-| `/ | ^ @ ! #`    | Substitution delimiter can be any character |
-| `&`              | Gets the matched pattern                    |
-| `( ) \1 \2 \3` | Group using `(` and `)`.<br>Use `\1`, `\2` in replacement to refer the group|
+| Flag           | Description                                                                  |
+|----------------|------------------------------------------------------------------------------|
+| `/ | ^ @ ! #`  | Substitution delimiter can be any character                                  |
+| `&`            | Gets the matched pattern                                                     |
+| `( ) \1 \2 \3` | Group using `(` and `)`.<br>Use `\1`, `\2` in replacement to refer the group |
 
 
 

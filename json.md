@@ -72,7 +72,7 @@ Getting started {.cols-3}
 | `\f` | Form feed                  |
 | `\n` | Newline                    |
 | `\r` | Carriage return            |
-| `\t`  | Tab                        |
+| `\t` | Tab                        |
 | `\u` | Trailed by four hex digits |
 
 #### Examples
@@ -96,7 +96,7 @@ Have to be delimited by double quotes
 | Type       | Description                            |
 |------------|----------------------------------------|
 | `Integer`  | Digits 1-9, 0 and positive or negative |
-| `Fraction` | Fractions like 0.3, 3.9                  |
+| `Fraction` | Fractions like 0.3, 3.9                |
 | `Exponent` | Exponent like e, e+, e-, E, E+, E      |
 
 #### Examples
@@ -227,13 +227,13 @@ let myObject = {
 ```
 ----
 
-|                      |           |
-|----------------------|-----------|
-| `myObject.name`      | "Jason"   |
-| `myObject["name"]`   | "Jason"   |
-| `myObject.age`       | 39        |
-| `myObject.other`     | undefined |
-| `myObject[0]`        | undefined |
+|                    |           |
+|--------------------|-----------|
+| `myObject.name`    | "Jason"   |
+| `myObject["name"]` | "Jason"   |
+| `myObject.age`     | 39        |
+| `myObject.other`   | undefined |
+| `myObject[0]`      | undefined |
 
 
 

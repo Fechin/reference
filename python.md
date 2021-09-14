@@ -47,15 +47,15 @@ Python has no command for declaring a variable.
 
 
 ### Data Types {.row-span-2}
-|                                |                |
-|--------------------------------|----------------|
-| `str`                          | Text |
-| `int`, `float`, `complex`          | Numeric |
+|                                    |          |
+|------------------------------------|----------|
+| `str`                              | Text     |
+| `int`, `float`, `complex`          | Numeric  |
 | `list`, `tuple`, `range`           | Sequence |
-| `dict`                         | Mapping |
-| `set`, `frozenset`               | Set |
-| `bool`                         | Boolean |
-| `bytes`, `bytearray`, `memoryview` | Binary |
+| `dict`                             | Mapping  |
+| `set`, `frozenset`                 | Set      |
+| `bool`                             | Boolean  |
+| `bytes`, `bytearray`, `memoryview` | Binary   |
 See: [Data Types](#data-types-2)
 
 

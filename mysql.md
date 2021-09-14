@@ -35,34 +35,34 @@ mysql -h <host> -u <user> -p [db_name]
 
 #### Database
 
-| - | - |
-|------------------------|-------------------------|
-| `create database` db `;`      | Create database      |
-| `show databases;`      | List databases      |
-| `use` db`;`              | Switch to db            |
-| `drop database` db`;`              | Delete db            |
+| -                        | -               |
+|--------------------------|-----------------|
+| `create database` db `;` | Create database |
+| `show databases;`        | List databases  |
+| `use` db`;`              | Switch to db    |
+| `drop database` db`;`    | Delete db       |
 
 #### Table
 
-| - | - |
-|------------------------|-------------------------|
-| `show tables;`         | List tables for current db	|
-| `show fields from` t`;`  | List fields for a table  |
-| `desc` t`;`              | Show table structure    |
-| `show create table `t`;` | Show create table sql   |
-| `truncate table `t`;` | Remove all data in a table |
-| `drop table `t`;` | Delete table |
+| -                        | -                          |
+|--------------------------|----------------------------|
+| `show tables;`           | List tables for current db |
+| `show fields from` t`;`  | List fields for a table    |
+| `desc` t`;`              | Show table structure       |
+| `show create table `t`;` | Show create table sql      |
+| `truncate table `t`;`    | Remove all data in a table |
+| `drop table `t`;`        | Delete table               |
 #### Proccess
 
-| - | - |
-|------------------------|-------------------------|
-| `show processlist;`    | List processes        |
-| `kill` pid`;`            | kill process            |
+| -                   | -              |
+|---------------------|----------------|
+| `show processlist;` | List processes |
+| `kill` pid`;`       | kill process   |
 #### Other
 
-| - | - |
-|------------------------|-------------------------|
-| `exit` or `\q`         | Exit MySQL session      |
+| -              | -                  |
+|----------------|--------------------|
+| `exit` or `\q` | Exit MySQL session |
 
 
 
@@ -513,14 +513,14 @@ EXECUTE stored_procedure;
 ```
 #### WHEN
 
-| - | - |
+| -        | -                              |
 |----------|--------------------------------|
 | `BEFORE` | invoke before the event occurs |
 | `AFTER`  | invoke after the event occurs  |
 
 #### EVENT
 
-| - | - |
+| -        | -                 |
 |----------|-------------------|
 | `INSERT` | invoke for INSERT |
 | `UPDATE` | invoke for UPDATE |
@@ -528,7 +528,7 @@ EXECUTE stored_procedure;
 
 #### TRIGGER_TYPE
 
-| - | - |
+| -                    | - |
 |----------------------|---|
 | `FOR EACH ROW`       |   |
 | `FOR EACH STATEMENT` |   |
@@ -567,19 +567,19 @@ MySQL Data Types {.cols-3}
 
 ### Strings
 
-| - | - |
-|---------------|-------------------------------|
-| `CHAR`        | String (0 - 255)              |
-| `VARCHAR`     | String (0 - 255)              |
-| `TINYTEXT`    | String (0 - 255)              |
-| `TEXT`        | String (0 - 65535)            |
-| `BLOB`        | String (0 - 65535)            |
-| `MEDIUMTEXT`  | String (0 - 16777215)         |
-| `MEDIUMBLOB`  | String (0 - 16777215)         |
-| `LONGTEXT`    | String (0 - 429496­7295)      |
-| `LONGBLOB`    | String (0 - 429496­7295)      |
-| `ENUM`        | One of preset options         |
-| `SET`         | Selection of preset options   |
+| -            | -                           |
+|--------------|-----------------------------|
+| `CHAR`       | String (0 - 255)            |
+| `VARCHAR`    | String (0 - 255)            |
+| `TINYTEXT`   | String (0 - 255)            |
+| `TEXT`       | String (0 - 65535)          |
+| `BLOB`       | String (0 - 65535)          |
+| `MEDIUMTEXT` | String (0 - 16777215)       |
+| `MEDIUMBLOB` | String (0 - 16777215)       |
+| `LONGTEXT`   | String (0 - 429496­7295)    |
+| `LONGBLOB`   | String (0 - 429496­7295)    |
+| `ENUM`       | One of preset options       |
+| `SET`        | Selection of preset options |
 
 
 ### Date & time
@@ -594,7 +594,7 @@ MySQL Data Types {.cols-3}
 
 ### Numeric
 
-| - | - |
+| -             | -                                                             |
 |---------------|---------------------------------------------------------------|
 | `TINYINT x`   | Integer (-128 to 127)                                         |
 | `SMALLINT x`  | Integer (-32768 to 32767)                                     |

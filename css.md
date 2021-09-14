@@ -248,43 +248,43 @@ p:first-child {
 
 ### Basic
 
-|                           |                                   |
-|---------------------------|-----------------------------------|
-| `*`                       | All elements                      |
-| `div`                     | All div tags                      |
-| `.classname`              | All elements with class           |
-| `#idname`                 | Element with ID                   |
-| `div,p`                   | All divs and paragraphs           |
-| `#idname *`               | All elements inside #idname       |
+|              |                             |
+|--------------|-----------------------------|
+| `*`          | All elements                |
+| `div`        | All div tags                |
+| `.classname` | All elements with class     |
+| `#idname`    | Element with ID             |
+| `div,p`      | All divs and paragraphs     |
+| `#idname *`  | All elements inside #idname |
 See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) / [Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) / [ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) / [Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors
 
 
 ### Combinators
 
-| Selector            | Description       |
-| ------------------- | ----------------- |
-| `div.classname`     | Div with certain classname       |
-| `div#idname`        | Div with certain ID               |
-| `div p`             | Paragraphs inside divs            |
-| `div > p`           | All p tags<br>_one level deep in div_ |
-| `div + p`           | P tags immediately after div      |
-| `div ~ p`           | P tags preceded by div            |
+| Selector        | Description                           |
+|-----------------|---------------------------------------|
+| `div.classname` | Div with certain classname            |
+| `div#idname`    | Div with certain ID                   |
+| `div p`         | Paragraphs inside divs                |
+| `div > p`       | All p tags<br>_one level deep in div_ |
+| `div + p`       | P tags immediately after div          |
+| `div ~ p`       | P tags preceded by div                |
 See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) / [Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) / [Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
 
 
 
 ### Attribute selectors
 
-|                           |                                   |
-|---------------------------|-----------------------------------|
-| `a[target]`               | With a <yel>target</yel> attribute     |
-| `a[target="_blank"]`      | Open in new tab       |
-| `a[href^="/index"]`       | Starts with <yel>/index</yel> |
-| `[class|="chair"]`        | Starts with <yel>chair</yel> |
-| `[class*="chair"]`        | containing <yel>chair</yel>   |
-| `[title~="chair"]`        | Contains the word <yel>chair</yel>   |
-| `a[href$=".doc"]`         | Ends with <yel>.doc</yel>    |
-| `[type="button"]`         | Specified type               |
+|                      |                                    |
+|----------------------|------------------------------------|
+| `a[target]`          | With a <yel>target</yel> attribute |
+| `a[target="_blank"]` | Open in new tab                    |
+| `a[href^="/index"]`  | Starts with <yel>/index</yel>      |
+| `[class|="chair"]`   | Starts with <yel>chair</yel>       |
+| `[class*="chair"]`   | containing <yel>chair</yel>        |
+| `[title~="chair"]`   | Contains the word <yel>chair</yel> |
+| `a[href$=".doc"]`    | Ends with <yel>.doc</yel>          |
+| `[type="button"]`    | Specified type                     |
 
 See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
@@ -292,65 +292,65 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 
 ### User action pseudo classes
-|                           |                                   |
-|---------------------------|-----------------------------------|
-| `a:link    `              | Link in normal state              |
-| `a:active  `              | Link in clicked state             |
-| `a:hover   `              | Link with mouse over it           |
-| `a:visited `              | Visited link                      |
+|              |                         |
+|--------------|-------------------------|
+| `a:link    ` | Link in normal state    |
+| `a:active  ` | Link in clicked state   |
+| `a:hover   ` | Link with mouse over it |
+| `a:visited ` | Visited link            |
 
 
 
 ### Pseudo classes
-|                           |                                   |
-|---------------------------|-----------------------------------|
-| `p::after`                | Add content after p               |
-| `p::before`               | Add content before p              |
-| `p::first-letter`         | First letter in p                 |
-| `p::first-line`           | First line in p                   |
-| `::selection`             | Selected by user                  |
-| `::placeholder`           | [Placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) attribute             |
-| `:root`                   | Documents root element            |
-| `:target`                 | Highlight active anchor           |
-| `div:empty`               | Element with no children          |
-| `p:lang(en)`              | P with en language attribute      |
-| `:not(span)`              | Element that's not a span         |
+|                   |                                                                                         |
+|-------------------|-----------------------------------------------------------------------------------------|
+| `p::after`        | Add content after p                                                                     |
+| `p::before`       | Add content before p                                                                    |
+| `p::first-letter` | First letter in p                                                                       |
+| `p::first-line`   | First line in p                                                                         |
+| `::selection`     | Selected by user                                                                        |
+| `::placeholder`   | [Placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) attribute |
+| `:root`           | Documents root element                                                                  |
+| `:target`         | Highlight active anchor                                                                 |
+| `div:empty`       | Element with no children                                                                |
+| `p:lang(en)`      | P with en language attribute                                                            |
+| `:not(span)`      | Element that's not a span                                                               |
 
 
 
 ### Input pseudo classes
-|                           |                                   |
-|---------------------------|-----------------------------------|
-| `input:checked`           | Checked inputs                    |
-| `input:disabled`          | Disabled inputs                   |
-| `input:enabled`           | Enabled inputs                    |
-| `input:focus`             | Input has focus                   |
-| `input:in-range`          | Value in range                    |
-| `input:out-of-range`      | Input value out of range          |
-| `input:valid`             | Input with valid value            |
-| `input:invalid`           | Input with invalid value          |
-| `input:optional`          | No required attribute             |
-| `input:required`          | Input with required attribute      |
-| `input:read-only`         | With readonly attribute           |
-| `input:read-write`        | No readonly attribute             |
-| `input:indeterminate`     | With [indeterminate](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) state    |
+|                       |                                                                                             |
+|-----------------------|---------------------------------------------------------------------------------------------|
+| `input:checked`       | Checked inputs                                                                              |
+| `input:disabled`      | Disabled inputs                                                                             |
+| `input:enabled`       | Enabled inputs                                                                              |
+| `input:focus`         | Input has focus                                                                             |
+| `input:in-range`      | Value in range                                                                              |
+| `input:out-of-range`  | Input value out of range                                                                    |
+| `input:valid`         | Input with valid value                                                                      |
+| `input:invalid`       | Input with invalid value                                                                    |
+| `input:optional`      | No required attribute                                                                       |
+| `input:required`      | Input with required attribute                                                               |
+| `input:read-only`     | With readonly attribute                                                                     |
+| `input:read-write`    | No readonly attribute                                                                       |
+| `input:indeterminate` | With [indeterminate](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) state |
 
 
 
 ### Structural pseudo classes
-|                           |                                   |
-|---------------------------|-----------------------------------|
-| `p:first-child`           | First child                       |
-| `p:last-child`            | Last child                        |
-| `p:first-of-type`         | First of some type                |
-| `p:last-of-type`          | Last of some type                 |
-| `p:nth-child(2)`          | Second child of its parent        |
-| `p:nth-child(3n42)`       | Nth-child (an + b) formula        |
-| `p:nth-last-child(2)`     | Second child from behind          |
-| `p:nth-of-type(2)`        | Second p of its parent            |
-| `p:nth-last-of-type(2)`   | ...from behind                    |
-| `p:only-of-type`          | Unique of its parent              |
-| `p:only-child`            | Only child of its parent          |
+|                         |                            |
+|-------------------------|----------------------------|
+| `p:first-child`         | First child                |
+| `p:last-child`          | Last child                 |
+| `p:first-of-type`       | First of some type         |
+| `p:last-of-type`        | Last of some type          |
+| `p:nth-child(2)`        | Second child of its parent |
+| `p:nth-child(3n42)`     | Nth-child (an + b) formula |
+| `p:nth-last-child(2)`   | Second child from behind   |
+| `p:nth-of-type(2)`      | Second p of its parent     |
+| `p:nth-last-of-type(2)` | ...from behind             |
+| `p:only-of-type`        | Unique of its parent       |
+| `p:only-child`          | Only child of its parent   |
 
 
 
@@ -360,12 +360,12 @@ CSS Fonts {.cols-3}
 
 ### Properties {.row-span-3}
 
-| Property           | Description                          |
-| ------------------ | ------------------------------------ |
-| `font-family:`     | \<font> <fontN>                    |
-| `font-size:`       | \<size>                             |
-| `letter-spacing:`  | \<size>                             |
-| `line-height:`     | \<number>                           |
+| Property          | Description     |
+|-------------------|-----------------|
+| `font-family:`    | \<font> <fontN> |
+| `font-size:`      | \<size>         |
+| `letter-spacing:` | \<size>         |
+| `line-height:`    | \<number>       |
 
 | `font-weight:`     | \<number> / bold / normal       |
 | `font-style:`      | italic / normal                    |
@@ -380,7 +380,7 @@ See also: [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 ### Shorthand {.secondary .col-span-2}
 
 |         | style    | weight | size (required) |     | line-height | family            |
-| ------- | -------- | ------ | --------------- | --- | ----------- | ----------------- |
+|---------|----------|--------|-----------------|-----|-------------|-------------------|
 | `font:` | `italic` | `400`  | `14px`          | `/` | `1.5`       | `sans-serif`      |
 |         | style    | weight | size (required) |     | line-height | family (required) |
 
@@ -489,9 +489,9 @@ CSS Backgrounds {.cols-3}
 
 ### Properties {.row-span-2}
 
-| Property                 | Description                              |
-| ------------------------ | ---------------------------------------- |
-| `background:`            | _(Shorthand)_                            |
+| Property      | Description   |
+|---------------|---------------|
+| `background:` | _(Shorthand)_ |
 
 | `background-color:`      | See: [Colors](#colors)                                |
 | `background-image:`      | url(...)                               |
@@ -504,11 +504,11 @@ CSS Backgrounds {.cols-3}
 
 ### Shorthand {.secondary .col-span-2}
 
-|               | color  | image         | positionX | positionY |     | size           | repeat      | attachment |
-| ------------- | ------ | ------------- | --------- | --------- | --- | -------------- | ----------- | ---------- |
+|               | color  | image        | positionX | positionY |     | size           | repeat      | attachment |
+|---------------|--------|--------------|-----------|-----------|-----|----------------|-------------|------------|
 | `background:` | `#ff0` | `url(a.jpg)` | `left`    | `top`     | `/` | `100px` `auto` | `no-repeat` | `fixed;`   |
 | `background:` | `#abc` | `url(b.png)` | `center`  | `center`  | `/` | `cover`        | `repeat-x`  | `local;`   |
-|               | color  | image         | posX | posY |     | size           | repeat      | attach..|
+|               | color  | image        | posX      | posY      |     | size           | repeat      | attach..   |
 
 ### Examples {.col-span-2}
 
@@ -601,23 +601,23 @@ CSS Animation {.cols-5}
 ### Shorthand {.col-span-5 .secondary}
 
 |              | name     | duration | timing-function | delay   | count      | direction           | fill-mode | play-state |
-| ------------ | -------- | -------- | --------------- | ------- | ---------- | ------------------- | --------- | ---------- |
+|--------------|----------|----------|-----------------|---------|------------|---------------------|-----------|------------|
 | `animation:` | `bounce` | `300ms`  | `linear`        | `100ms` | `infinite` | `alternate-reverse` | `both`    | `reverse`  |
 |              | name     | duration | timing-function | delay   | count      | direction           | fill-mode | play-state |
 
 ### Properties {.row-span-2 .col-span-2}
 
-| Property                     | Value                                                    |
-| ---------------------------- | -------------------------------------------------------- |
-| `animation:`                 | _(shorthand)_                                            |
+| Property                     | Value                                                  |
+|------------------------------|--------------------------------------------------------|
+| `animation:`                 | _(shorthand)_                                          |
 | `animation-name:`            | \<name>                                                |
 | `animation-duration:`        | \<time>ms                                              |
-| `animation-timing-function:` | ease / linear / ease-in / ease-out / ease-in-out      |
+| `animation-timing-function:` | ease / linear / ease-in / ease-out / ease-in-out       |
 | `animation-delay:`           | \<time>ms                                              |
 | `animation-iteration-count:` | infinite / \<number>                                   |
-| `animation-direction:`       | normal / reverse / alternate / alternate-reverse      |
-| `animation-fill-mode:`       | none / forwards / backwards / both / initial / inherit|
-| `animation-play-state:`      | normal / reverse / alternate / alternate-reverse      |
+| `animation-direction:`       | normal / reverse / alternate / alternate-reverse       |
+| `animation-fill-mode:`       | none / forwards / backwards / both / initial / inherit |
+| `animation-play-state:`      | normal / reverse / alternate / alternate-reverse       |
 {.left-text}
 
 See also: [Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)

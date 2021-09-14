@@ -54,10 +54,10 @@ String site = "quickref.me";
 | `short`   | 2 byte | 0       | -2^15^ ^to^ 2^15^-1 |
 | `int`     | 4 byte | 0       | -2^31^ ^to^ 2^31^-1 |
 | `long`    | 8 byte | 0       | -2^63^ ^to^ 2^63^-1 |
-| `float`   | 4 byte | 0.0f    |_N/A_                 |
-| `double`  | 8 byte | 0.0d    |_N/A_                 |
+| `float`   | 4 byte | 0.0f    | _N/A_               |
+| `double`  | 8 byte | 0.0d    | _N/A_               |
 | `char`    | 2 byte | \\u0000 | 0 ^to^ 65535        |
-| `boolean` |_N/A_    | false   | true / false        |
+| `boolean` | _N/A_  | false   | true / false        |
 {.show-header}
 
 
@@ -747,21 +747,21 @@ multi-line comment!
 
 ### Math methods 
 
-| Method                | Description                 |
-|-----------------------|-----------------------------|
-| `Math.max(a,b)`       | Maximum of a and b          |
-| `Math.min(a,b)`       | Minimum of a and b          |
-| `Math.abs(a)`         | Absolute value a            |
-| `Math.sqrt(a)`        | Square-root of a            |
-| `Math.pow(a,b)`       | Power of b                  |
-| `Math.round(a)`       | Closest integer             |
-| `Math.sin(ang)`       | Sine of ang                 |
-| `Math.cos(ang)`       | Cosine of ang               |
-| `Math.tan(ang)`       | Tangent of ang              |
-| `Math.asin(ang)`      | Inverse sine of ang         |
-| `Math.log(a)`         | Natural logarithm of a      |
-| `Math.toDegrees(rad)` | Angle rad in degrees        |
-| `Math.toRadians(deg)` | Angle deg in radians        |
+| Method                | Description            |
+|-----------------------|------------------------|
+| `Math.max(a,b)`       | Maximum of a and b     |
+| `Math.min(a,b)`       | Minimum of a and b     |
+| `Math.abs(a)`         | Absolute value a       |
+| `Math.sqrt(a)`        | Square-root of a       |
+| `Math.pow(a,b)`       | Power of b             |
+| `Math.round(a)`       | Closest integer        |
+| `Math.sin(ang)`       | Sine of ang            |
+| `Math.cos(ang)`       | Cosine of ang          |
+| `Math.tan(ang)`       | Tangent of ang         |
+| `Math.asin(ang)`      | Inverse sine of ang    |
+| `Math.log(a)`         | Natural logarithm of a |
+| `Math.toDegrees(rad)` | Angle rad in degrees   |
+| `Math.toRadians(deg)` | Angle deg in radians   |
 
 ### Try/Catch/Finally
 ```java

@@ -897,10 +897,10 @@ Redis List command {.cols-3}
 
 ### Misc
 
-| - | - |
-|----|----|
+| -                                                   | -                                                                                                  |
+|-----------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | [BRPOPLPUSH ](https://redis.io/commands/brpoplpush) | Pop an element from a list, push it to another list and return it; or block until one is available |
-| [BLMOVE ](https://redis.io/commands/blmove) | Pop an element from a list, push it to another list and return it; or block until one is available |
+| [BLMOVE ](https://redis.io/commands/blmove)         | Pop an element from a list, push it to another list and return it; or block until one is available |
 
 
 
@@ -2412,8 +2412,8 @@ redis> GEOSEARCH Sicily FROMLONLAT 15 37 BYBOX 400 400 km ASC
 Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle.
 
 ### Misc
-| - | - |
-|----|----|
+| -                                                           | -                                                                                                                                             |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | [GEOSEARCHSTORE ](https://redis.io/commands/geosearchstore) | Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle, and store the result in another key. |
 
 
@@ -2514,57 +2514,57 @@ Get array of Redis command details
 
 ### Misc {.col-span-2 .row-span-4}
 
-| - | - |
-|----|----|
-| [ACL LOAD](https://redis.io/commands/acl-load) | Reload the ACLs from the configured ACL file |
-| [ACL SAVE](https://redis.io/commands/acl-save) | Save the current ACL rules in the configured ACL file |
-| [ACL LIST](https://redis.io/commands/acl-list) | List the current ACL rules in ACL config file format |
-| [ACL USERS](https://redis.io/commands/acl-users) | List the username of all the configured ACL rules |
-| [ACL GETUSER ](https://redis.io/commands/acl-getuser) | Get the rules for a specific ACL user |
-| [ACL SETUSER ](https://redis.io/commands/acl-setuser) | Modify or create the rules for a specific ACL user |
-| [ACL DELUSER ](https://redis.io/commands/acl-deluser) | Remove the specified ACL users and the associated rules |
-| [ACL CAT ](https://redis.io/commands/acl-cat) | List the ACL categories or the commands inside a category |
-| [ACL GENPASS ](https://redis.io/commands/acl-genpass) | Generate a pseudorandom secure password to use for ACL users |
-| [ACL WHOAMI](https://redis.io/commands/acl-whoami) | Return the name of the user associated to the current connection |
-| [ACL LOG ](https://redis.io/commands/acl-log) | List latest events denied because of ACLs in place |
-| [ACL HELP](https://redis.io/commands/acl-help) | Show helpful text about the different subcommands |
-| [BGREWRITEAOF](https://redis.io/commands/bgrewriteaof) | Asynchronously rewrite the append-only file |
-| [BGSAVE ](https://redis.io/commands/bgsave) | Asynchronously save the dataset to disk |
-| [CONFIG GET ](https://redis.io/commands/config-get) | Get the value of a configuration parameter |
-| [CONFIG REWRITE](https://redis.io/commands/config-rewrite) | Rewrite the configuration file with the in memory configuration |
-| [CONFIG SET ](https://redis.io/commands/config-set) | Set a configuration parameter to the given value |
-| [CONFIG RESETSTAT](https://redis.io/commands/config-resetstat) | Reset the stats returned by INFO |
-| [DBSIZE](https://redis.io/commands/dbsize) | Return the number of keys in the selected database |
-| [DEBUG OBJECT ](https://redis.io/commands/debug-object) | Get debugging information about a key |
-| [DEBUG SEGFAULT](https://redis.io/commands/debug-segfault) | Make the server crash |
-| [FLUSHALL ](https://redis.io/commands/flushall) | Remove all keys from all databases |
-| [FLUSHDB ](https://redis.io/commands/flushdb) | Remove all keys from the current database |
-| [LOLWUT ](https://redis.io/commands/lolwut) | Display some computer art and the Redis version |
-| [LASTSAVE](https://redis.io/commands/lastsave) | Get the UNIX time stamp of the last successful save to disk |
-| [MEMORY DOCTOR](https://redis.io/commands/memory-doctor) | Outputs memory problems report |
-| [MEMORY HELP](https://redis.io/commands/memory-help) | Show helpful text about the different subcommands |
-| [MEMORY MALLOC-STATS](https://redis.io/commands/memory-malloc-stats) | Show allocator internal stats |
-| [MEMORY PURGE](https://redis.io/commands/memory-purge) | Ask the allocator to release memory |
-| [MEMORY STATS](https://redis.io/commands/memory-stats) | Show memory usage details |
-| [MEMORY USAGE ](https://redis.io/commands/memory-usage) | Estimate the memory usage of a key |
-| [MODULE LIST](https://redis.io/commands/module-list) | List all modules loaded by the server |
-| [MODULE LOAD ](https://redis.io/commands/module-load) | Load a module |
-| [MODULE UNLOAD ](https://redis.io/commands/module-unload) | Unload a module |
-| [MONITOR](https://redis.io/commands/monitor) | Listen for all requests received by the server in real time |
-| [SAVE](https://redis.io/commands/save) | Synchronously save the dataset to disk |
-| [SHUTDOWN ](https://redis.io/commands/shutdown) | Synchronously save the dataset to disk and then shut down the server |
-| [SLAVEOF ](https://redis.io/commands/slaveof) | Make the server a replica of another instance, or promote it as master. Deprecated starting with Redis 5. Use REPLICAOF instead. |
-| [REPLICAOF ](https://redis.io/commands/replicaof) | Make the server a replica of another instance, or promote it as master. |
-| [SLOWLOG ](https://redis.io/commands/slowlog) | Manages the Redis slow queries log |
-| [SWAPDB ](https://redis.io/commands/swapdb) | Swaps two Redis databases |
-| [SYNC](https://redis.io/commands/sync) | Internal command used for replication |
-| [PSYNC ](https://redis.io/commands/psync) | Internal command used for replication |
-| [LATENCY DOCTOR](https://redis.io/commands/latency-doctor) | Return a human readable latency analysis report. |
-| [LATENCY GRAPH ](https://redis.io/commands/latency-graph) | Return a latency graph for the event. |
-| [LATENCY HISTORY ](https://redis.io/commands/latency-history) | Return timestamp-latency samples for the event. |
-| [LATENCY LATEST](https://redis.io/commands/latency-latest) | Return the latest latency samples for all events. |
-| [LATENCY RESET ](https://redis.io/commands/latency-reset) | Reset latency data for one or more events. |
-| [LATENCY HELP](https://redis.io/commands/latency-help) | Show helpful text about the different subcommands. |
+| -                                                                    | -                                                                                                                                |
+|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| [ACL LOAD](https://redis.io/commands/acl-load)                       | Reload the ACLs from the configured ACL file                                                                                     |
+| [ACL SAVE](https://redis.io/commands/acl-save)                       | Save the current ACL rules in the configured ACL file                                                                            |
+| [ACL LIST](https://redis.io/commands/acl-list)                       | List the current ACL rules in ACL config file format                                                                             |
+| [ACL USERS](https://redis.io/commands/acl-users)                     | List the username of all the configured ACL rules                                                                                |
+| [ACL GETUSER ](https://redis.io/commands/acl-getuser)                | Get the rules for a specific ACL user                                                                                            |
+| [ACL SETUSER ](https://redis.io/commands/acl-setuser)                | Modify or create the rules for a specific ACL user                                                                               |
+| [ACL DELUSER ](https://redis.io/commands/acl-deluser)                | Remove the specified ACL users and the associated rules                                                                          |
+| [ACL CAT ](https://redis.io/commands/acl-cat)                        | List the ACL categories or the commands inside a category                                                                        |
+| [ACL GENPASS ](https://redis.io/commands/acl-genpass)                | Generate a pseudorandom secure password to use for ACL users                                                                     |
+| [ACL WHOAMI](https://redis.io/commands/acl-whoami)                   | Return the name of the user associated to the current connection                                                                 |
+| [ACL LOG ](https://redis.io/commands/acl-log)                        | List latest events denied because of ACLs in place                                                                               |
+| [ACL HELP](https://redis.io/commands/acl-help)                       | Show helpful text about the different subcommands                                                                                |
+| [BGREWRITEAOF](https://redis.io/commands/bgrewriteaof)               | Asynchronously rewrite the append-only file                                                                                      |
+| [BGSAVE ](https://redis.io/commands/bgsave)                          | Asynchronously save the dataset to disk                                                                                          |
+| [CONFIG GET ](https://redis.io/commands/config-get)                  | Get the value of a configuration parameter                                                                                       |
+| [CONFIG REWRITE](https://redis.io/commands/config-rewrite)           | Rewrite the configuration file with the in memory configuration                                                                  |
+| [CONFIG SET ](https://redis.io/commands/config-set)                  | Set a configuration parameter to the given value                                                                                 |
+| [CONFIG RESETSTAT](https://redis.io/commands/config-resetstat)       | Reset the stats returned by INFO                                                                                                 |
+| [DBSIZE](https://redis.io/commands/dbsize)                           | Return the number of keys in the selected database                                                                               |
+| [DEBUG OBJECT ](https://redis.io/commands/debug-object)              | Get debugging information about a key                                                                                            |
+| [DEBUG SEGFAULT](https://redis.io/commands/debug-segfault)           | Make the server crash                                                                                                            |
+| [FLUSHALL ](https://redis.io/commands/flushall)                      | Remove all keys from all databases                                                                                               |
+| [FLUSHDB ](https://redis.io/commands/flushdb)                        | Remove all keys from the current database                                                                                        |
+| [LOLWUT ](https://redis.io/commands/lolwut)                          | Display some computer art and the Redis version                                                                                  |
+| [LASTSAVE](https://redis.io/commands/lastsave)                       | Get the UNIX time stamp of the last successful save to disk                                                                      |
+| [MEMORY DOCTOR](https://redis.io/commands/memory-doctor)             | Outputs memory problems report                                                                                                   |
+| [MEMORY HELP](https://redis.io/commands/memory-help)                 | Show helpful text about the different subcommands                                                                                |
+| [MEMORY MALLOC-STATS](https://redis.io/commands/memory-malloc-stats) | Show allocator internal stats                                                                                                    |
+| [MEMORY PURGE](https://redis.io/commands/memory-purge)               | Ask the allocator to release memory                                                                                              |
+| [MEMORY STATS](https://redis.io/commands/memory-stats)               | Show memory usage details                                                                                                        |
+| [MEMORY USAGE ](https://redis.io/commands/memory-usage)              | Estimate the memory usage of a key                                                                                               |
+| [MODULE LIST](https://redis.io/commands/module-list)                 | List all modules loaded by the server                                                                                            |
+| [MODULE LOAD ](https://redis.io/commands/module-load)                | Load a module                                                                                                                    |
+| [MODULE UNLOAD ](https://redis.io/commands/module-unload)            | Unload a module                                                                                                                  |
+| [MONITOR](https://redis.io/commands/monitor)                         | Listen for all requests received by the server in real time                                                                      |
+| [SAVE](https://redis.io/commands/save)                               | Synchronously save the dataset to disk                                                                                           |
+| [SHUTDOWN ](https://redis.io/commands/shutdown)                      | Synchronously save the dataset to disk and then shut down the server                                                             |
+| [SLAVEOF ](https://redis.io/commands/slaveof)                        | Make the server a replica of another instance, or promote it as master. Deprecated starting with Redis 5. Use REPLICAOF instead. |
+| [REPLICAOF ](https://redis.io/commands/replicaof)                    | Make the server a replica of another instance, or promote it as master.                                                          |
+| [SLOWLOG ](https://redis.io/commands/slowlog)                        | Manages the Redis slow queries log                                                                                               |
+| [SWAPDB ](https://redis.io/commands/swapdb)                          | Swaps two Redis databases                                                                                                        |
+| [SYNC](https://redis.io/commands/sync)                               | Internal command used for replication                                                                                            |
+| [PSYNC ](https://redis.io/commands/psync)                            | Internal command used for replication                                                                                            |
+| [LATENCY DOCTOR](https://redis.io/commands/latency-doctor)           | Return a human readable latency analysis report.                                                                                 |
+| [LATENCY GRAPH ](https://redis.io/commands/latency-graph)            | Return a latency graph for the event.                                                                                            |
+| [LATENCY HISTORY ](https://redis.io/commands/latency-history)        | Return timestamp-latency samples for the event.                                                                                  |
+| [LATENCY LATEST](https://redis.io/commands/latency-latest)           | Return the latest latency samples for all events.                                                                                |
+| [LATENCY RESET ](https://redis.io/commands/latency-reset)            | Reset latency data for one or more events.                                                                                       |
+| [LATENCY HELP](https://redis.io/commands/latency-help)               | Show helpful text about the different subcommands.                                                                               |
 
 
 
@@ -2705,16 +2705,16 @@ Redis Generic command{.cols-3}
 
 ### Misc
 
-| - | - |
-|----|----|
-| [COPY ](https://redis.io/commands/copy) | Copy a key |
-| [MIGRATE ](https://redis.io/commands/migrate) | Atomically transfer a key from a Redis instance to another one. |
-| [MOVE ](https://redis.io/commands/move) | Move a key to another database |
-| [OBJECT ](https://redis.io/commands/object) | Inspect the internals of Redis objects |
-| [RESTORE ](https://redis.io/commands/restore) | Create a key using the provided serialized value, previously obtained using DUMP. |
-| [SORT ](https://redis.io/commands/sort) | Sort the elements in a list, set or sorted set |
-| [WAIT ](https://redis.io/commands/wait) | Wait for the synchronous replication of all the write commands sent in the context of the current connection |
-| [SCAN ](https://redis.io/commands/scan) | Incrementally iterate the keys space |
+| -                                             | -                                                                                                            |
+|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [COPY ](https://redis.io/commands/copy)       | Copy a key                                                                                                   |
+| [MIGRATE ](https://redis.io/commands/migrate) | Atomically transfer a key from a Redis instance to another one.                                              |
+| [MOVE ](https://redis.io/commands/move)       | Move a key to another database                                                                               |
+| [OBJECT ](https://redis.io/commands/object)   | Inspect the internals of Redis objects                                                                       |
+| [RESTORE ](https://redis.io/commands/restore) | Create a key using the provided serialized value, previously obtained using DUMP.                            |
+| [SORT ](https://redis.io/commands/sort)       | Sort the elements in a list, set or sorted set                                                               |
+| [WAIT ](https://redis.io/commands/wait)       | Wait for the synchronous replication of all the write commands sent in the context of the current connection |
+| [SCAN ](https://redis.io/commands/scan)       | Incrementally iterate the keys space                                                                         |
 
 
 
@@ -3027,23 +3027,23 @@ Redis Connection command{.cols-3}
 
 ### Misc
 
-| - | - |
-|----|----|
-| [AUTH ](https://redis.io/commands/auth) | Authenticate to the server |
-| [CLIENT CACHING ](https://redis.io/commands/client-caching) | Instruct the server about tracking or not keys in the next request |
-| [CLIENT KILL ](https://redis.io/commands/client-kill) | Kill the connection of a client |
-| [CLIENT LIST ](https://redis.io/commands/client-list) | Get the list of client connections |
-| [CLIENT GETNAME](https://redis.io/commands/client-getname) | Get the current connection name |
-| [CLIENT GETREDIR](https://redis.io/commands/client-getredir) | Get tracking notifications redirection client ID if any |
-| [CLIENT PAUSE ](https://redis.io/commands/client-pause) | Stop processing commands from clients for some time |
-| [CLIENT REPLY ](https://redis.io/commands/client-reply) | Instruct the server whether to reply to commands |
-| [CLIENT SETNAME ](https://redis.io/commands/client-setname) | Set the current connection name |
-| [CLIENT TRACKING ](https://redis.io/commands/client-tracking) | Enable or disable server assisted client side caching support |
-| [CLIENT UNBLOCK ](https://redis.io/commands/client-unblock) | Unblock a client blocked in a blocking command from a different connection |
-| [HELLO ](https://redis.io/commands/hello) | switch Redis protocol |
-| [QUIT](https://redis.io/commands/quit) | Close the connection |
-| [RESET](https://redis.io/commands/reset) | Reset the connection |
-| [SELECT ](https://redis.io/commands/select) | Change the selected database for the current connection |
+| -                                                             | -                                                                          |
+|---------------------------------------------------------------|----------------------------------------------------------------------------|
+| [AUTH ](https://redis.io/commands/auth)                       | Authenticate to the server                                                 |
+| [CLIENT CACHING ](https://redis.io/commands/client-caching)   | Instruct the server about tracking or not keys in the next request         |
+| [CLIENT KILL ](https://redis.io/commands/client-kill)         | Kill the connection of a client                                            |
+| [CLIENT LIST ](https://redis.io/commands/client-list)         | Get the list of client connections                                         |
+| [CLIENT GETNAME](https://redis.io/commands/client-getname)    | Get the current connection name                                            |
+| [CLIENT GETREDIR](https://redis.io/commands/client-getredir)  | Get tracking notifications redirection client ID if any                    |
+| [CLIENT PAUSE ](https://redis.io/commands/client-pause)       | Stop processing commands from clients for some time                        |
+| [CLIENT REPLY ](https://redis.io/commands/client-reply)       | Instruct the server whether to reply to commands                           |
+| [CLIENT SETNAME ](https://redis.io/commands/client-setname)   | Set the current connection name                                            |
+| [CLIENT TRACKING ](https://redis.io/commands/client-tracking) | Enable or disable server assisted client side caching support              |
+| [CLIENT UNBLOCK ](https://redis.io/commands/client-unblock)   | Unblock a client blocked in a blocking command from a different connection |
+| [HELLO ](https://redis.io/commands/hello)                     | switch Redis protocol                                                      |
+| [QUIT](https://redis.io/commands/quit)                        | Close the connection                                                       |
+| [RESET](https://redis.io/commands/reset)                      | Reset the connection                                                       |
+| [SELECT ](https://redis.io/commands/select)                   | Change the selected database for the current connection                    |
 
 
 
@@ -3112,15 +3112,15 @@ Redis Stream command{.cols-2}
 
 ### Misc
 
-| - | - |
-|----|----|
-| [XINFO ](https://redis.io/commands/xinfo) | Get information on streams and consumer groups |
-| [XDEL ](https://redis.io/commands/xdel) | Removes the specified entries from the stream. Returns the number of items actually deleted, that may be different from the number of IDs passed in case certain IDs do not exist. |
-| [XREAD ](https://redis.io/commands/xread) | Return never seen elements in multiple streams, with IDs greater than the ones reported by the caller for each stream. Can block. |
-| [XGROUP ](https://redis.io/commands/xgroup) | Create, destroy, and manage consumer groups. |
-| [XREADGROUP ](https://redis.io/commands/xreadgroup) | Return new entries from a stream using a consumer group, or access the history of the pending entries for a given consumer. Can block. |
-| [XCLAIM ](https://redis.io/commands/xclaim) | Changes (or acquires) ownership of a message in a consumer group, as if the message was delivered to the specified consumer. |
-| [XPENDING ](https://redis.io/commands/xpending) | Return information and entries from a stream consumer group pending entries list, that are messages fetched but never acknowledged. |
+| -                                                   | -                                                                                                                                                                                  |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [XINFO ](https://redis.io/commands/xinfo)           | Get information on streams and consumer groups                                                                                                                                     |
+| [XDEL ](https://redis.io/commands/xdel)             | Removes the specified entries from the stream. Returns the number of items actually deleted, that may be different from the number of IDs passed in case certain IDs do not exist. |
+| [XREAD ](https://redis.io/commands/xread)           | Return never seen elements in multiple streams, with IDs greater than the ones reported by the caller for each stream. Can block.                                                  |
+| [XGROUP ](https://redis.io/commands/xgroup)         | Create, destroy, and manage consumer groups.                                                                                                                                       |
+| [XREADGROUP ](https://redis.io/commands/xreadgroup) | Return new entries from a stream using a consumer group, or access the history of the pending entries for a given consumer. Can block.                                             |
+| [XCLAIM ](https://redis.io/commands/xclaim)         | Changes (or acquires) ownership of a message in a consumer group, as if the message was delivered to the specified consumer.                                                       |
+| [XPENDING ](https://redis.io/commands/xpending)     | Return information and entries from a stream consumer group pending entries list, that are messages fetched but never acknowledged.                                                |
 
 
 
@@ -3287,71 +3287,71 @@ Miscellaneous {.cols-2}
 
 ### Cluster
 
-| - | - |
-|----|----|
-| [CLUSTER ADDSLOTS ](https://redis.io/commands/cluster-addslots) | Assign new hash slots to receiving node |
-| [CLUSTER BUMPEPOCH](https://redis.io/commands/cluster-bumpepoch) | Advance the cluster config epoch |
-| [CLUSTER COUNT-FAILURE-REPORTS ](https://redis.io/commands/cluster-count-failure-reports) | Return the number of failure reports active for a given node |
-| [CLUSTER COUNTKEYSINSLOT ](https://redis.io/commands/cluster-countkeysinslot) | Return the number of local keys in the specified hash slot |
-| [CLUSTER DELSLOTS ](https://redis.io/commands/cluster-delslots) | Set hash slots as unbound in receiving node |
-| [CLUSTER FAILOVER ](https://redis.io/commands/cluster-failover) | Forces a replica to perform a manual failover of its master. |
-| [CLUSTER FLUSHSLOTS](https://redis.io/commands/cluster-flushslots) | Delete a node's own slots information |
-| [CLUSTER FORGET ](https://redis.io/commands/cluster-forget) | Remove a node from the nodes table |
-| [CLUSTER GETKEYSINSLOT ](https://redis.io/commands/cluster-getkeysinslot) | Return local key names in the specified hash slot |
-| [CLUSTER INFO](https://redis.io/commands/cluster-info) | Provides info about Redis Cluster node state |
-| [CLUSTER KEYSLOT ](https://redis.io/commands/cluster-keyslot) | Returns the hash slot of the specified key |
-| [CLUSTER MEET ](https://redis.io/commands/cluster-meet) | Force a node cluster to handshake with another node |
-| [CLUSTER MYID](https://redis.io/commands/cluster-myid) | Return the node id |
-| [CLUSTER NODES](https://redis.io/commands/cluster-nodes) | Get Cluster config for the node |
-| [CLUSTER REPLICATE ](https://redis.io/commands/cluster-replicate) | Reconfigure a node as a replica of the specified master node |
-| [CLUSTER RESET ](https://redis.io/commands/cluster-reset) | Reset a Redis Cluster node |
-| [CLUSTER SAVECONFIG](https://redis.io/commands/cluster-saveconfig) | Forces the node to save cluster state on disk |
-| [CLUSTER SET-CONFIG-EPOCH ](https://redis.io/commands/cluster-set-config-epoch) | Set the configuration epoch in a new node |
-| [CLUSTER SETSLOT ](https://redis.io/commands/cluster-setslot) | Bind a hash slot to a specific node |
-| [CLUSTER SLAVES ](https://redis.io/commands/cluster-slaves) | List replica nodes of the specified master node |
-| [CLUSTER REPLICAS ](https://redis.io/commands/cluster-replicas) | List replica nodes of the specified master node |
-| [CLUSTER SLOTS](https://redis.io/commands/cluster-slots) | Get array of Cluster slot to node mappings |
-| [READONLY](https://redis.io/commands/readonly) | Enables read queries for a connection to a cluster replica node |
-| [READWRITE](https://redis.io/commands/readwrite) | Disables read queries for a connection to a cluster replica node |
+| -                                                                                         | -                                                                |
+|-------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| [CLUSTER ADDSLOTS ](https://redis.io/commands/cluster-addslots)                           | Assign new hash slots to receiving node                          |
+| [CLUSTER BUMPEPOCH](https://redis.io/commands/cluster-bumpepoch)                          | Advance the cluster config epoch                                 |
+| [CLUSTER COUNT-FAILURE-REPORTS ](https://redis.io/commands/cluster-count-failure-reports) | Return the number of failure reports active for a given node     |
+| [CLUSTER COUNTKEYSINSLOT ](https://redis.io/commands/cluster-countkeysinslot)             | Return the number of local keys in the specified hash slot       |
+| [CLUSTER DELSLOTS ](https://redis.io/commands/cluster-delslots)                           | Set hash slots as unbound in receiving node                      |
+| [CLUSTER FAILOVER ](https://redis.io/commands/cluster-failover)                           | Forces a replica to perform a manual failover of its master.     |
+| [CLUSTER FLUSHSLOTS](https://redis.io/commands/cluster-flushslots)                        | Delete a node's own slots information                            |
+| [CLUSTER FORGET ](https://redis.io/commands/cluster-forget)                               | Remove a node from the nodes table                               |
+| [CLUSTER GETKEYSINSLOT ](https://redis.io/commands/cluster-getkeysinslot)                 | Return local key names in the specified hash slot                |
+| [CLUSTER INFO](https://redis.io/commands/cluster-info)                                    | Provides info about Redis Cluster node state                     |
+| [CLUSTER KEYSLOT ](https://redis.io/commands/cluster-keyslot)                             | Returns the hash slot of the specified key                       |
+| [CLUSTER MEET ](https://redis.io/commands/cluster-meet)                                   | Force a node cluster to handshake with another node              |
+| [CLUSTER MYID](https://redis.io/commands/cluster-myid)                                    | Return the node id                                               |
+| [CLUSTER NODES](https://redis.io/commands/cluster-nodes)                                  | Get Cluster config for the node                                  |
+| [CLUSTER REPLICATE ](https://redis.io/commands/cluster-replicate)                         | Reconfigure a node as a replica of the specified master node     |
+| [CLUSTER RESET ](https://redis.io/commands/cluster-reset)                                 | Reset a Redis Cluster node                                       |
+| [CLUSTER SAVECONFIG](https://redis.io/commands/cluster-saveconfig)                        | Forces the node to save cluster state on disk                    |
+| [CLUSTER SET-CONFIG-EPOCH ](https://redis.io/commands/cluster-set-config-epoch)           | Set the configuration epoch in a new node                        |
+| [CLUSTER SETSLOT ](https://redis.io/commands/cluster-setslot)                             | Bind a hash slot to a specific node                              |
+| [CLUSTER SLAVES ](https://redis.io/commands/cluster-slaves)                               | List replica nodes of the specified master node                  |
+| [CLUSTER REPLICAS ](https://redis.io/commands/cluster-replicas)                           | List replica nodes of the specified master node                  |
+| [CLUSTER SLOTS](https://redis.io/commands/cluster-slots)                                  | Get array of Cluster slot to node mappings                       |
+| [READONLY](https://redis.io/commands/readonly)                                            | Enables read queries for a connection to a cluster replica node  |
+| [READWRITE](https://redis.io/commands/readwrite)                                          | Disables read queries for a connection to a cluster replica node |
 
 
 
 
 ### Transactions
 
-| - | - |
-|----|----|
-| [DISCARD](https://redis.io/commands/discard) | Discard all commands issued after MULTI |
-| [EXEC](https://redis.io/commands/exec) | Execute all commands issued after MULTI |
-| [MULTI](https://redis.io/commands/multi) | Mark the start of a transaction block |
-| [UNWATCH](https://redis.io/commands/unwatch) | Forget about all watched keys |
-| [WATCH ](https://redis.io/commands/watch) | Watch the given keys to determine execution of the MULTI/EXEC block |
+| -                                            | -                                                                   |
+|----------------------------------------------|---------------------------------------------------------------------|
+| [DISCARD](https://redis.io/commands/discard) | Discard all commands issued after MULTI                             |
+| [EXEC](https://redis.io/commands/exec)       | Execute all commands issued after MULTI                             |
+| [MULTI](https://redis.io/commands/multi)     | Mark the start of a transaction block                               |
+| [UNWATCH](https://redis.io/commands/unwatch) | Forget about all watched keys                                       |
+| [WATCH ](https://redis.io/commands/watch)    | Watch the given keys to determine execution of the MULTI/EXEC block |
 
 
 
 
 ### Scripting 
 
-| - | - |
-|----|----|
-| [EVAL ](https://redis.io/commands/eval) | Execute a Lua script server side |
-| [EVALSHA ](https://redis.io/commands/evalsha) | Execute a Lua script server side |
-| [SCRIPT DEBUG ](https://redis.io/commands/script-debug) | Set the debug mode for executed scripts. |
-| [SCRIPT EXISTS ](https://redis.io/commands/script-exists) | Check existence of scripts in the script cache. |
-| [SCRIPT FLUSH](https://redis.io/commands/script-flush) | Remove all the scripts from the script cache. |
-| [SCRIPT KILL](https://redis.io/commands/script-kill) | Kill the script currently in execution. |
-| [SCRIPT LOAD ](https://redis.io/commands/script-load) | Load the specified Lua script into the script cache. |
+| -                                                         | -                                                    |
+|-----------------------------------------------------------|------------------------------------------------------|
+| [EVAL ](https://redis.io/commands/eval)                   | Execute a Lua script server side                     |
+| [EVALSHA ](https://redis.io/commands/evalsha)             | Execute a Lua script server side                     |
+| [SCRIPT DEBUG ](https://redis.io/commands/script-debug)   | Set the debug mode for executed scripts.             |
+| [SCRIPT EXISTS ](https://redis.io/commands/script-exists) | Check existence of scripts in the script cache.      |
+| [SCRIPT FLUSH](https://redis.io/commands/script-flush)    | Remove all the scripts from the script cache.        |
+| [SCRIPT KILL](https://redis.io/commands/script-kill)      | Kill the script currently in execution.              |
+| [SCRIPT LOAD ](https://redis.io/commands/script-load)     | Load the specified Lua script into the script cache. |
 
 
 
 ### Pubsub 
 
-| - | - |
-|----|----|
-| [PSUBSCRIBE ](https://redis.io/commands/psubscribe) | Listen for messages published to channels matching the given patterns |
-| [PUBSUB ](https://redis.io/commands/pubsub) | Inspect the state of the Pub/Sub subsystem |
-| [PUBLISH ](https://redis.io/commands/publish) | Post a message to a channel |
+| -                                                       | -                                                                          |
+|---------------------------------------------------------|----------------------------------------------------------------------------|
+| [PSUBSCRIBE ](https://redis.io/commands/psubscribe)     | Listen for messages published to channels matching the given patterns      |
+| [PUBSUB ](https://redis.io/commands/pubsub)             | Inspect the state of the Pub/Sub subsystem                                 |
+| [PUBLISH ](https://redis.io/commands/publish)           | Post a message to a channel                                                |
 | [PUNSUBSCRIBE ](https://redis.io/commands/punsubscribe) | Stop listening for messages posted to channels matching the given patterns |
-| [SUBSCRIBE ](https://redis.io/commands/subscribe) | Listen for messages published to the given channels |
-| [UNSUBSCRIBE ](https://redis.io/commands/unsubscribe) | Stop listening for messages posted to the given channels |
+| [SUBSCRIBE ](https://redis.io/commands/subscribe)       | Listen for messages published to the given channels                        |
+| [UNSUBSCRIBE ](https://redis.io/commands/unsubscribe)   | Stop listening for messages posted to the given channels                   |
 

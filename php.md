@@ -477,8 +477,8 @@ PHP Operators {.cols-4}
 
 
 ### Arithmetic
-| -  | -              |
-|----|----------------|
+| -    | -              |
+|------|----------------|
 | `+`  | Addition       |
 | `-`  | Subtraction    |
 | `*`  | Multiplication |
@@ -487,8 +487,8 @@ PHP Operators {.cols-4}
 | `**` | Exponentiation |
 
 ### Assignment
-| -      | -                 |
-|--------|-------------------|
+| -        | -                   |
+|----------|---------------------|
 | `a += b` | Same as `a = a + b` |
 | `a -= b` | Same as `a = a – b` |
 | `a *= b` | Same as `a = a * b` |
@@ -497,8 +497,8 @@ PHP Operators {.cols-4}
 
 
 ### Comparison {.row-span-2}
-| -   | -                            |
-|-----|------------------------------|
+| -     | -                            |
+|-------|------------------------------|
 | `==`  | Equal                        |
 | `===` | Identical                    |
 | `!=`  | Not equal                    |
@@ -511,14 +511,14 @@ PHP Operators {.cols-4}
 | `<=>` | Less than/equal/greater than |
 
 ### Logical
-| -    | -            |
-|------|--------------|
-| `and`  | And          |
-| `or`   | Or           |
-| `xor`  | Exclusive or |
-| `!`    | Not          |
-| `&&`   | And          |
-| `||` | Or           |
+| -     | -            |
+|-------|--------------|
+| `and` | And          |
+| `or`  | Or           |
+| `xor` | Exclusive or |
+| `!`   | Not          |
+| `&&`  | And          |
+| `||`  | Or           |
 
 
 
@@ -542,8 +542,8 @@ $num /= $float;  // Divide and assign the quotient to $num
 
 
 ### Bitwise
-| -  | -                  |
-|----|--------------------|
+| -    | -                  |
+|------|--------------------|
 | `&`  | And                |
 | `|`  | Or (inclusive or)  |
 | `^`  | Xor (exclusive or) |

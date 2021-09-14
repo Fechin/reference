@@ -34,19 +34,19 @@ $ nc -lp port [host] [port]
 
 ### Option examples {.col-span-3 .row-span-2}
 
-| Option | Description                 | Example                                            |
-|--------|-----------------------------|----------------------------------------------------|
-| `-h`     | nc -h                       | Help                                               |
-| `-z`     | nc -z 192.168.1.9 1-100        | Port scan for a host or IP address                 |
-| `-v`     | nc -zv 192.168.1.9 1-100     |   Provide verbose output   | 
-| `-n`     | nc -zn 192.168.1.9 1-100     | Fast scan by disabling DNS resolution              |
-| `-l`     | nc -lp 8000                 | TCP Listen mode _(for inbound connects)_                                   |
-| `-w`     | nc -w 180 192.168.1.9 8000     | Define timeout value                               |
-| `-k`     | nc -kl 8000 | Continue listening after disconnection |
-| `-u`     | nc -u 192.168.1.9 8000 | Use UDP instead of TCP |
-| `-q`     | nc -q 1 192.168.1.9 8000 | Client stay up after EOF |
-| `-4`     | nc -4 -l 8000 | IPv4 only                                          |
-| `-6`     | nc -6 -l 8000 | IPv6 only                                          |
+| Option | Description                | Example                                  |
+|--------|----------------------------|------------------------------------------|
+| `-h`   | nc -h                      | Help                                     |
+| `-z`   | nc -z 192.168.1.9 1-100    | Port scan for a host or IP address       |
+| `-v`   | nc -zv 192.168.1.9 1-100   | Provide verbose output                   |
+| `-n`   | nc -zn 192.168.1.9 1-100   | Fast scan by disabling DNS resolution    |
+| `-l`   | nc -lp 8000                | TCP Listen mode _(for inbound connects)_ |
+| `-w`   | nc -w 180 192.168.1.9 8000 | Define timeout value                     |
+| `-k`   | nc -kl 8000                | Continue listening after disconnection   |
+| `-u`   | nc -u 192.168.1.9 8000     | Use UDP instead of TCP                   |
+| `-q`   | nc -q 1 192.168.1.9 8000   | Client stay up after EOF                 |
+| `-4`   | nc -4 -l 8000              | IPv4 only                                |
+| `-6`   | nc -6 -l 8000              | IPv6 only                                |
 
 
 ### Chat client-server {.col-span-2}

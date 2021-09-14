@@ -21,7 +21,7 @@ Getting started {.cols-3}
 $ awk -F: '{print $1, $NF}' /etc/passwd
 ```
 ----
-|-  | -             | -                         |
+| - | -             | -                         |
 |---|---------------|---------------------------|
 |   | `-F:`         | Colon as a separator      |
 |   | `{...}`       | Awk program               |
@@ -280,10 +280,10 @@ Awk Operators {.cols-3}
 | `$1 ~ /regex/`  | Field matches     |
 | `$1 !~ /regex/` | Field not matches |
 #### More conditions
-| -                        | -   |
-|--------------------------|-----|
+| -                      | -   |
+|------------------------|-----|
 | `($2 <= 4 || $3 < 20)` | Or  |
-| `($1 == 4 && $3 < 20)`   | And |
+| `($1 == 4 && $3 < 20)` | And |
 
 ### Operations
 #### Arithmetic operations
@@ -745,14 +745,14 @@ Miscellaneous {.cols-3}
 {.cols-3 .style-none}
 
 ### Escape Sequences
-| -      | -                   |
-|--------|---------------------|
-| `\b`   | Backspace           |
-| `\f`   | Form feed           |
-| `\n`   | Newline (line feed) |
-| `\r`   | Carriage return     |
-| `\t`   | Horizontal tab      |
-| `\v`   | Vertical tab        |
+| -    | -                   |
+|------|---------------------|
+| `\b` | Backspace           |
+| `\f` | Form feed           |
+| `\n` | Newline (line feed) |
+| `\r` | Carriage return     |
+| `\t` | Horizontal tab      |
+| `\v` | Vertical tab        |
 
 
 ### Run script

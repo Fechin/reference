@@ -31,52 +31,52 @@ $ netstat -h
 
 
 ### Listening
-|    Option             |         Example                                       |
-|-----------------|------------------------------------------------|
+| Option           | Example              |
+|------------------|----------------------|
 | `netstat -ltunp` | All Listening ports  |
-| `netstat -ltn`    | Listening TCP ports                            |
-| `netstat -lun`    | Listening UDP ports                            |
-| `netstat -lx`    | Listening Unix ports                            |
+| `netstat -ltn`   | Listening TCP ports  |
+| `netstat -lun`   | Listening UDP ports  |
+| `netstat -lx`    | Listening Unix ports |
 
 
 
 
 ### Connections
 
-|    Option             |         Example                                       |
-|-----------------|------------------------------------------------|
-| `netstat -a`      | All connections                                |
-| `netstat -at`     | All TCP connections                            |
-| `netstat -au`     | All UDP connections                            |
+| Option        | Example             |
+|---------------|---------------------|
+| `netstat -a`  | All connections     |
+| `netstat -at` | All TCP connections |
+| `netstat -au` | All UDP connections |
 
 
 
 
 ### Statistics
 
-|    Option             |         Example                                       |
-|-----------------|------------------------------------------------|
-| `netstat -s`      | Display statistics                             |
-| `netstat -st`     | Display TCP statistics                         |
-| `netstat -su`     | Display UDP statistics                         |
+| Option        | Example                |
+|---------------|------------------------|
+| `netstat -s`  | Display statistics     |
+| `netstat -st` | Display TCP statistics |
+| `netstat -su` | Display UDP statistics |
 
 
 
 
 ### Networks
 
-|    Option             |         Example                                       |
-|-----------------|------------------------------------------------|
-| `netstat -i`      | Show network interfaces                        |
-| `netstat -ie`     | Show network interfaces extended info          |
+| Option        | Example                               |
+|---------------|---------------------------------------|
+| `netstat -i`  | Show network interfaces               |
+| `netstat -ie` | Show network interfaces extended info |
 
 
 
 ### Routing
 
-|    Option             |         Example                                       |
-|-----------------|------------------------------------------------|
-| `netstat -r`      | Show routing table                             |
-| `netstat -rn`     | Show routing table, don't resolve hosts        |
+| Option        | Example                                 |
+|---------------|-----------------------------------------|
+| `netstat -r`  | Show routing table                      |
+| `netstat -rn` | Show routing table, don't resolve hosts |
 
 

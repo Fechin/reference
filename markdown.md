@@ -182,16 +182,16 @@ console.log("This is a block code")
 ```markdown
 | Left column | Center column | Right column |
 |:------------|:-------------:|-------------:|
-| Cell 1      | Centered      | $1600        |
-| Cell 2      | Cell 3        | $12          |
+| Cell 1      |   Centered    |        $1600 |
+| Cell 2      |    Cell 3     |          $12 |
 ```
 
 Simple style
 ```markdown
-Left column | Center column | Right column 
-:---:|:---:|:---:
-Cell 1 | Centered | $1600 
-Cell 2 | Cell 3 | $12 
+Left column | Center column | Right column
+:----------:|:-------------:|:-----------:
+   Cell 1   |   Centered    |    $1600
+   Cell 2   |    Cell 3     |     $12
 ```
 A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
@@ -222,9 +222,9 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
 ### Backslash escapes
 
-| Characters | Escape | Description           |
-|------------|--------|-----------------------|
-| \\         | \\\\   | backslash             |
+| Characters | Escape | Description |
+|------------|--------|-------------|
+| \\         | \\\\   | backslash   |
 | \`         | \\\`   | backtick              |
 | \*         | \\\*   | asterisk              |
 | \_         | \\\_   | underscore            |

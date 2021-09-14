@@ -27,9 +27,9 @@ Neo4j is a Graph Database consisting of nodes connected together by relationship
 
 ### Graph Database Concepts
 
-| | |
-| -- | -- |
-| **Nodes** | Nodes are commonly used to represent _entities_ or _things_ in your data.  For example, a **Person** or **Movie**  |
+|           |                                                                                                                   |
+|-----------|-------------------------------------------------------------------------------------------------------------------|
+| **Nodes** | Nodes are commonly used to represent _entities_ or _things_ in your data.  For example, a **Person** or **Movie** |
 | **Relationships** | Relationships are used to connect two nodes together and organise the data into structure.  For example, a Person **acted in** a movie.  A relationship has a _type_ and _direction_, although the direction can be ignored at query time.
 | **Labels** | Labels are used to group nodes into categories.  For example, a person may have `Person` and `Actor` labels.
 | **Relationship Type** | Each relationship has a type.  Relationships allow you to explore smaller sections of a graph. |
@@ -511,16 +511,16 @@ Returns the line number that LOAD CSV is currently processing, returns null if c
 
 ### Operators
 
-| | |
-| -- | -- |
-| **General** | DISTINCT, ., [] |
-| **Mathematical** | +, -, *, /, %, ^ |
-| **Comparison** | =, <>, <, >, <=, >=, IS NULL, IS NOT NULL |
-| **Boolean** | AND, OR, XOR, NOT |
-| **String** | + |
-| **List** | +, IN, [x], [x .. y] |
-| **Regular Expression** | =~ |
-| **String matching** | STARTS WITH, ENDS WITH, CONTAINS |
+|                        |                                           |
+|------------------------|-------------------------------------------|
+| **General**            | DISTINCT, ., []                           |
+| **Mathematical**       | +, -, *, /, %, ^                          |
+| **Comparison**         | =, <>, <, >, <=, >=, IS NULL, IS NOT NULL |
+| **Boolean**            | AND, OR, XOR, NOT                         |
+| **String**             | +                                         |
+| **List**               | +, IN, [x], [x .. y]                      |
+| **Regular Expression** | =~                                        |
+| **String matching**    | STARTS WITH, ENDS WITH, CONTAINS          |
 
 
 ### null

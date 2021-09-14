@@ -43,15 +43,15 @@ Chmod Generator allows you to quickly and visually generate permissions in numer
 ### Common Permissions
 | Command | s         | Meaning                      |
 |---------|-----------|------------------------------|
-|`400`    | r-------- | Readable by owner only |
-|`500`    | r-x------ | Avoid Changing               |
-|`600`    | rw------- | Changeable by user           |
-|`644`    | rw-r--r-- | Read and change by user      |
-|`660`    | rw-rw---- | Changeable by user and group |
-|`700`    | rwx------ | Only user has full access    |
-|`755`    | rwxr-xr-x | Only changeable by user      |
-|`775`    | rwxrwxr-x | Sharing mode for a group     |
-|`777`    | rwxrwxrwx | Everybody can do everything  |
+| `400`   | r-------- | Readable by owner only       |
+| `500`   | r-x------ | Avoid Changing               |
+| `600`   | rw------- | Changeable by user           |
+| `644`   | rw-r--r-- | Read and change by user      |
+| `660`   | rw-rw---- | Changeable by user and group |
+| `700`   | rwx------ | Only user has full access    |
+| `755`   | rwxr-xr-x | Only changeable by user      |
+| `775`   | rwxrwxr-x | Sharing mode for a group     |
+| `777`   | rwxrwxrwx | Everybody can do everything  |
 
 
 ### Explains
@@ -89,11 +89,11 @@ d  rwx  r-x  r-x
 
 ### Objects
 | Who (abbr.) | Meaning            |
-|--------------|--------------------|
-| `u`          | `U`ser             |
-| `g`          | `G`roup            |
-| `o`          | `O`thers           |
-| `a`          | `A`ll, same as ugo |
+|-------------|--------------------|
+| `u`         | `U`ser             |
+| `g`         | `G`roup            |
+| `o`         | `O`thers           |
+| `a`         | `A`ll, same as ugo |
 {.show-header}
 
 

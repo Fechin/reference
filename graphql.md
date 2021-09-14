@@ -31,24 +31,24 @@ Getting started {.cols-3}
 
 ### Schema
 
-|               |                                         |
-|---------------|-----------------------------------------|
-| `schema`      | GraphQL schema definition               |
-| `query`       | Read and traverse data             |
-| `mutation`    | Modify data or trigger an action    |
-| `subscription`| Run a query when an event occurs |
+|                |                                  |
+|----------------|----------------------------------|
+| `schema`       | GraphQL schema definition        |
+| `query`        | Read and traverse data           |
+| `mutation`     | Modify data or trigger an action |
+| `subscription` | Run a query when an event occurs |
 
 
 
 ### Built-in Scalar Types
 
-|           |         |
-|-----------|---------|
-| `Int`     | Signed 32‐bit integer |
+|           |                                              |
+|-----------|----------------------------------------------|
+| `Int`     | Signed 32‐bit integer                        |
 | `Float`   | Signed double-precision floating-point value |
-| `String`  | UTF‐8 character sequence  |
-| `Boolean` | true or false |
-| `ID`      | A Unique identifier      |
+| `String`  | UTF‐8 character sequence                     |
+| `Boolean` | true or false                                |
+| `ID`      | A Unique identifier                          |
 
 
 

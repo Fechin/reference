@@ -39,21 +39,21 @@ Wildcards are accepted in filename.
 
 ### Option examples {.col-span-3}
 
-| Option | Example                                    | Operation                                      |
-|---------|-------------------------------------------|-------------------------------------------------|
-| `-i`    | grep -i ^DA demo.txt                 | Forgets about case sensitivity                       |
-| `-w`    | grep -w "of" demo.txt              | Search only for the full word                                 |
-| `-A`    | grep -A 3 'Exception' error.log               | Display 3 lines after matching string           |
-| `-B`    | grep -B 4 'Exception' error.log               | Display 4 lines before matching string          |
-| `-C`    | grep -C 5 'Exception' error.log               | Display 5 lines around matching string          |
-| `-r`    | grep -r 'quickref.me' /var/log/nginx/    | Recursive search _(within subdirs)_ |
-| `-v`    | grep -v 'warning' /var/log/syslog       | Return all lines which don't match the pattern  |
-| `-e`    | grep -e '^al' filename                    | Use regex _(lines starting with 'al')_                                      |
-| `-E`    | grep -E 'ja(s\|cks)on' filename           | Extended regex _(lines containing jason or jackson)_                        |
-| `-c`    | grep -c 'error' /var/log/syslog         | Count the number of matches                                 |
-| `-l`    | grep -l 'robot' /var/log/*               | Print the name of the file(s) of matches                               |
-| `-o`    | grep -o search_string filename                 | Only show the matching part of the string       |
-| `-n`    | grep -n "go" demo.txt                | Show the line numbers of the matches                           |
+| Option | Example                               | Operation                                            |
+|--------|---------------------------------------|------------------------------------------------------|
+| `-i`   | grep -i ^DA demo.txt                  | Forgets about case sensitivity                       |
+| `-w`   | grep -w "of" demo.txt                 | Search only for the full word                        |
+| `-A`   | grep -A 3 'Exception' error.log       | Display 3 lines after matching string                |
+| `-B`   | grep -B 4 'Exception' error.log       | Display 4 lines before matching string               |
+| `-C`   | grep -C 5 'Exception' error.log       | Display 5 lines around matching string               |
+| `-r`   | grep -r 'quickref.me' /var/log/nginx/ | Recursive search _(within subdirs)_                  |
+| `-v`   | grep -v 'warning' /var/log/syslog     | Return all lines which don't match the pattern       |
+| `-e`   | grep -e '^al' filename                | Use regex _(lines starting with 'al')_               |
+| `-E`   | grep -E 'ja(s\|cks)on' filename       | Extended regex _(lines containing jason or jackson)_ |
+| `-c`   | grep -c 'error' /var/log/syslog       | Count the number of matches                          |
+| `-l`   | grep -l 'robot' /var/log/*            | Print the name of the file(s) of matches             |
+| `-o`   | grep -o search_string filename        | Only show the matching part of the string            |
+| `-n`   | grep -n "go" demo.txt                 | Show the line numbers of the matches                 |
 
 
 Grep regular expressions {.cols-3}
@@ -67,16 +67,16 @@ Please refer to the full version of the regex cheat sheet for more complex requi
 
 ### Wildcards
 
-| - | - |
-|-----------------|----------------------------------------------|
-| .               | Any character.                               |
-| `?            ` | Optional and can only occur once.            |
-| `*            ` | Optional and can occur more than once.       |
-| `+            ` | Required and can occur more than once.       |
+| -               | -                                      |
+|-----------------|----------------------------------------|
+| .               | Any character.                         |
+| `?            ` | Optional and can only occur once.      |
+| `*            ` | Optional and can occur more than once. |
+| `+            ` | Required and can occur more than once. |
 
 ### Quantifiers
 
-| - | - |
+| -               | -                                            |
 |-----------------|----------------------------------------------|
 | `{n}          ` | Previous item appears exactly n times.       |
 | `{n,}         ` | Previous item appears n times or more.       |
@@ -84,26 +84,26 @@ Please refer to the full version of the regex cheat sheet for more complex requi
 | `{n,m}        ` | Previous item appears between n and m times. |
 
 ### POSIX
-| - | - |
-|-----------------|----------------------------------------------|
-| `[:alpha:]   ` | Any lower and upper case letter.             |
-| `[:digit:]   ` | Any number.                                  |
-| `[:alnum:]   ` | Any lower and upper case letter or digit.    |
-| `[:space:]    ` | Any whites­pace.                             |
+| -               | -                                         |
+|-----------------|-------------------------------------------|
+| `[:alpha:]   `  | Any lower and upper case letter.          |
+| `[:digit:]   `  | Any number.                               |
+| `[:alnum:]   `  | Any lower and upper case letter or digit. |
+| `[:space:]    ` | Any whites­pace.                          |
 
 ### Character
 
-| - | - |
-|-----------------|----------------------------------------------|
-| `[A-Z­a-z]    ` | Any lower and upper case letter.             |
-| `[0-9]        ` | Any number.                                  |
-| `[0-9­A-Z­a-z]` | Any lower and upper case letter or digit.    |
+| -               | -                                         |
+|-----------------|-------------------------------------------|
+| `[A-Z­a-z]    ` | Any lower and upper case letter.          |
+| `[0-9]        ` | Any number.                               |
+| `[0-9­A-Z­a-z]` | Any lower and upper case letter or digit. |
 
 
 ### Position
 
-|    |                    |
-|----|--------------------|
+|      |                    |
+|------|--------------------|
 | `^ ` | Beginning of line. |
 | `$ ` | End of line.       |
 | `^$` | Empty line.        |

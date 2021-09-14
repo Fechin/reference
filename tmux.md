@@ -76,13 +76,13 @@ $ tmux show-options -g
 
 
 ### Copy Mode  
-| Command             | Description                  |
-|---------------------|------------------------------|
-| `Ctrl+b` `[`        | Enter copy mode           |
-| `<Space>`      | Start selection                         |
-| `Enter`         | Copy selection                          |
-| `q`                 | Quit copy mode               |
-| `Ctrl+b` `]`        | Paste contents of buffer_0 |
+| Command      | Description                |
+|--------------|----------------------------|
+| `Ctrl+b` `[` | Enter copy mode            |
+| `<Space>`    | Start selection            |
+| `Enter`      | Copy selection             |
+| `q`          | Quit copy mode             |
+| `Ctrl+b` `]` | Paste contents of buffer_0 |
 {.shortcuts}
 
 
@@ -96,9 +96,9 @@ Tmux shortcuts {.cols-3}
 --------------
 
 ### Getting started {.secondary}
-| Shortcuts           | Description                  |
-|---------------------|------------------------------|
-| `Ctrl+b` `?`        | List all shortcuts           |
+| Shortcuts    | Description        |
+|--------------|--------------------|
+| `Ctrl+b` `?` | List all shortcuts |
 {.shortcuts .show-header}
 
 <br/>
@@ -132,29 +132,29 @@ $ tmux info
 
 
 ### Window (Tabs) {.row-span-2}
-| -                  | -                              |
-|--------------------|--------------------------------|
-| `Ctrl+b` `c`       | Create window                  |
-| `Ctrl+b` `p` _/_ `n`      | Previous/Next window                |
-| `Ctrl+b` `"` _/_ `%`            | Split Horiz/Vert|
-| `Ctrl+b` `w`       | List window                  |
-| `Ctrl+b` `,`       | Rename window                  |
-| `Ctrl+b` `f`       | Find window                  |
-| `Ctrl+b` `l`       | Last window                  |
-| `Ctrl+b` `.`       | Move window                  |
-| `Ctrl+b` `&`       | Close window           |
-| `Ctrl+b` `0`...`9` | Goto # window |
+| -                    | -                    |
+|----------------------|----------------------|
+| `Ctrl+b` `c`         | Create window        |
+| `Ctrl+b` `p` _/_ `n` | Previous/Next window |
+| `Ctrl+b` `"` _/_ `%` | Split Horiz/Vert     |
+| `Ctrl+b` `w`         | List window          |
+| `Ctrl+b` `,`         | Rename window        |
+| `Ctrl+b` `f`         | Find window          |
+| `Ctrl+b` `l`         | Last window          |
+| `Ctrl+b` `.`         | Move window          |
+| `Ctrl+b` `&`         | Close window         |
+| `Ctrl+b` `0`...`9`   | Goto # window        |
 {.shortcuts}
 
 
 
 ### Session (Set of Windows)
-| -              | -                        |
-|----------------|--------------------------|
-| `Ctrl+b` `d` | <red>Detach from session</red>      |
-| `Ctrl+b` `s` | Show all sessions        |
-| `Ctrl+b` `$` | Rename session           |
-| `Ctrl+b` `(` _/_ `)` | Previous/Next session |
+| -                    | -                              |
+|----------------------|--------------------------------|
+| `Ctrl+b` `d`         | <red>Detach from session</red> |
+| `Ctrl+b` `s`         | Show all sessions              |
+| `Ctrl+b` `$`         | Rename session                 |
+| `Ctrl+b` `(` _/_ `)` | Previous/Next session          |
 {.shortcuts}
 
 
@@ -163,41 +163,41 @@ Tmux Command Mode {.cols-3}
 -----------
 
 ### Usage {.secondary}
-| Command             | Description                  |
-|---------------------|------------------------------|
-| `Ctrl+b` `:`        | Enter command mode           |
+| Command      | Description        |
+|--------------|--------------------|
+| `Ctrl+b` `:` | Enter command mode |
 {.shortcuts}
 
 
 ### Resizing 
 
-| Command             | Description                  |
-|---------------------|------------------------------|
-| `resize-pane -D 20`  | Resize down                  |
-| `resize-pane -U 20`  | Resize up                    |
-| `resize-pane -L 20`  | Resize left                  |
-| `resize-pane -R 20`  | Resize right                 |
+| Command             | Description  |
+|---------------------|--------------|
+| `resize-pane -D 20` | Resize down  |
+| `resize-pane -U 20` | Resize up    |
+| `resize-pane -L 20` | Resize left  |
+| `resize-pane -R 20` | Resize right |
 
 
 ### Listing
 
-| Command             | Description                  |
-|---------------------|------------------------------|
-| `list-keys`           | All commands       |
-| `list-panes`         | All panes |
-| `list-windows`         | All Windows |
+| Command        | Description  |
+|----------------|--------------|
+| `list-keys`    | All commands |
+| `list-panes`   | All panes    |
+| `list-windows` | All Windows  |
 
 
 ### Copying
 
-| Command               | Description           |
-|-----------------------|-----------------------|
-| `list-buffers`        | List all buffers      |
-| `show-buffer`         | Show #0 contents      |
-| `capture-pane`        | Copy of pane          |
-| `choose-buffer`       | Show and paste        |
-| `save-buffer a.txt`   | Save to file          |
-| `delete-buffer -b 1`  | Delete buffer 1       |
+| Command              | Description      |
+|----------------------|------------------|
+| `list-buffers`       | List all buffers |
+| `show-buffer`        | Show #0 contents |
+| `capture-pane`       | Copy of pane     |
+| `choose-buffer`      | Show and paste   |
+| `save-buffer a.txt`  | Save to file     |
+| `delete-buffer -b 1` | Delete buffer 1  |
 
 
 ### Setting
@@ -210,9 +210,9 @@ Tmux Command Mode {.cols-3}
 
 
 ### Misc
-| Command             | Description                  |
-|---------------------|------------------------------|
-| `swap-pane -s 3 -t 1`| Swap pane  |
-| `swap-window -t -1`| Move to left  |
-| `setw synchronize-panes`| Sync Panes |
-| `join-pane -t :#` | Join pane |
+| Command                  | Description  |
+|--------------------------|--------------|
+| `swap-pane -s 3 -t 1`    | Swap pane    |
+| `swap-window -t -1`      | Move to left |
+| `setw synchronize-panes` | Sync Panes   |
+| `join-pane -t :#`        | Join pane    |
