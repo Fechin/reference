@@ -262,14 +262,231 @@ var nobleGases = {
 Functions
 ------------
 
+### Functions
+```dart
+// functions in dart are objects and have a type
+int add(int a, int b){
+    return a+b;
+}
 
-Classes Objects, getters setters, constructors, exetends
+// functions can be assigned to variables
+int sum = add(2,3); // returns: 5
+
+// can be passed as arguments to other functions
+int totalSum = add(2, add(2,3)); // returns : 7
+```
+
+
+### Arrow Syntax (=>) 
+```dart
+// functions that contain just one expression, you can use a shorthand syntax
+bool isFav(Product product) => favProductsList.contains(product);
+```
+
+### Anonymous (lambda) functions
+```dart
+// small one line functions that dont have name
+int add(a,b) => a+b;
+
+// lambda functions mostly passed as parameter to other functions
+const list = ['apples', 'bananas', 'oranges'];
+list.forEach(
+(item) => print('${list.indexOf(item)}: $item'));
+//Prints: 0: apples 1: bananas 2: oranges
+```
+
+Classes and Objects
 ----------
 
+### Class
+```dart
+class Cat {
+    String name;
+
+    // method
+    void voice(){
+        print("Meow");
+    }
+}
+```
+
+
+### Object
+```dart
+// instance of a class
+// below myCat is Object of class Cat
+
+void main(){
+    Cat myCat = Cat();
+    myCat.name = "Kitty";
+    myCat.voice(); // Prints: Meow
+}
+```
+
+
+### Constructors
+```dart
+class Cat {
+    String name;
+    Cat(this.name);
+}
+void main(){
+    Cat myCat = Cat("Kitty");
+    print(myCat.name); // Prints: Kitty
+}
+```
+
+
+### Abstract Classes
+```dart
+// abstract class—a class that can’t be instantiated
+// This class is declared abstract and thus can't be instantiated.
+abstract class AbstractContainer {
+  // Define constructors, fields, methods...
+
+  void updateChildren(); // Abstract method.
+}
+```
+
+
+### Getters Setters
+```dart
+// provide read and write access to an object’s properties
+class Cat {
+    String name;
+    
+    // getter
+    String get catName {
+        return name;
+    }
+
+    // setter
+    void set catName(String name){
+        this.name = name;
+    }
+}
+```
+
+
+Implicit interfaces
+------------
+
+### A basic interface
+```dart
+// A person. The implicit interface contains greet().
+class Person {
+  // In the interface, but visible only in this library.
+  final String _name;
+
+  // Not in the interface, since this is a constructor.
+  Person(this._name);
+
+  // In the interface.
+  String greet(String who) => 'Hello, $who. I am $_name.';
+}
+
+// An implementation of the Person interface.
+class Impostor implements Person {
+  String get _name => '';
+
+  String greet(String who) => 'Hi $who. Do you know who I am?';
+}
+
+String greetBob(Person person) => person.greet('Bob');
+
+void main() {
+  print(greetBob(Person('Kathy'))); // Hello, Bob. I am Kathy.
+  print(greetBob(Impostor())); // Hi Bob. Do you know who I am?
+}
+```
+
+### Extending a class
+```dart
+class Phone {
+
+    void use(){
+        _call();
+        _sendMessage();
+    }
+}
+// Use extends to create a subclass
+class SmartPhone extends Phone {
+    void use(){
+        // use super to refer to the superclass
+        super.use();
+        _takePhotos();
+        _playGames();
+    }
+}
+```
+
+Exceptions
+------------
+
+### Throw
+```dart
+// throws or raises and exception
+throw IntegerDivisionByZeroException();
+
+// You can also throw arbitrary objects
+throw "Product out of stock!";
+```
+
+### Catch 
+```dart
+
+try {
+    int c = 3/0;
+    print(c);
+} on IntegerDivisionByZeroException {
+    // A specific exception
+    print('Can not divide integer by 0.')
+} on Exception catch (e) {
+    // Anything else that is an exception
+    print('Unknown exception: $e');
+} catch (e) {
+    // No specified type, handles all
+    print('Something really unknown: $e');
+}
+
+```
+### Finally
+```dart
+// To ensure that some code runs whether or not an exception is thrown
+try {
+  cookFood();
+} catch (e) {
+  print('Error: $e'); // Handle the exception first.
+} finally {
+  cleanKitchen(); // Then clean up.
+}
+```
+
+
+Futures
+------------
+### Async Await
+```dart
+// functionswhich are asynchronous: they return after setting up a possibly time-consuming operation
+// The async and await keywords support asynchronous programming
+
+Future<String> login() {
+ String userName="Temidjoy";
+ return
+  Future.delayed(
+    Duration(seconds: 4), () => userName);
+}
+
+// Asynchronous
+main() async {
+ print('Authenticating please wait...');
+ print(await userName());
+}
+```
 
 
 
-Others
+Miscellaneous
 ------------
 
 ### Null and Null aware
@@ -299,7 +516,6 @@ isAvailable ? orderproduct() : addToFavourite();
 ```
 
 
-
 ### Spread Operator (...)
 
 ```dart
@@ -326,4 +542,17 @@ var user = User()
   ..name = "Nicola"
   ..email = "nicola@g.c"
   ..age = 24;
+```
+
+### Conditional Property Access
+```dart
+userObject?.userName
+
+//The code snippet above is equivalent to following:
+(userObject != null) ? userObject.userName : null
+
+//You can chain multiple uses of ?. together in a single expression
+userObject?.userName?.toString()
+
+// The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null
 ```
