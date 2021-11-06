@@ -15,7 +15,7 @@ intro: |
 
 
 
-Getting started 
+Getting started {.cols-3}
 ------------
 
 ### main function
@@ -82,7 +82,7 @@ print(upperCase); //Print: NICOLA
 ```
 
 
-Operators
+Operators {.cols-3}
 ------------
 
 ### Arithmatic Operators
@@ -131,7 +131,7 @@ if (!isOutOfStock && (quantity == 2 || quantity == 3)) {
 
 
 
-Control Flows : Conditionals
+Control Flows : Conditionals {.cols-2}
 ------------
 
 
@@ -167,7 +167,7 @@ switch(myPet){
 
 
 
-Control Flows : Loops
+Control Flows : Loops {.cols-3}
 ------------
 
 
@@ -202,7 +202,7 @@ for(var number in numbers){
 
 
 
-Collections
+Collections {.cols-3}
 ------------
 
 ### Lists
@@ -259,7 +259,7 @@ var nobleGases = {
 
 
 
-Functions
+Functions {.cols-3}
 ------------
 
 ### Functions
@@ -295,7 +295,7 @@ list.forEach(
 //Prints: 0: apples 1: bananas 2: oranges
 ```
 
-Classes and Objects
+Classes and Objects {.cols-3}
 ----------
 
 ### Class
@@ -368,7 +368,7 @@ class Cat {
 ```
 
 
-Implicit interfaces
+Implicit interfaces {.cols-2}
 ------------
 
 ### A basic interface
@@ -420,7 +420,7 @@ class SmartPhone extends Phone {
 }
 ```
 
-Exceptions
+Exceptions {.cols-3}
 ------------
 
 ### Throw
@@ -486,7 +486,7 @@ main() async {
 
 
 
-Miscellaneous
+Miscellaneous {.cols-3}
 ------------
 
 ### Null and Null aware
