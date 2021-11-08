@@ -2,7 +2,7 @@
 title: Dart
 date: 2021-11-04 10:12:25
 icon: icon-dart
-background: bg-blue-500
+background: bg-blue-600
 tags:
     - dart
     - flutter
@@ -15,16 +15,17 @@ intro: |
 
 
 
-Getting started 
+Getting started {.cols-2}
 ------------
 
-### main function
+### hello.dart
 ```dart
 // top-level function where app execution starts
 void main(){
     print("Hello World!"); // Print to console
 }
 ```
+Every app has a main() function
 
 
 ### Variables
@@ -81,8 +82,30 @@ String upperCase = '${firstName.toUpperCase()}';
 print(upperCase); //Print: NICOLA
 ```
 
+### Comments
+```dart
+// This is a normal, one-line comment.
 
-Operators
+/// This is a documentation comment, used to document libraries,
+/// classes, and their members. Tools like IDEs and dartdoc treat
+/// doc comments specially.
+
+/* Comments like these are also supported. */
+```
+
+### Imports
+```dart
+// Importing core libraries
+import 'dart:math';
+
+// Importing libraries from external packages
+import 'package:test/test.dart';
+
+// Importing files
+import 'path/to/my_other_file.dart';
+```
+
+Operators {.cols-2}
 ------------
 
 ### Arithmatic Operators
@@ -131,7 +154,7 @@ if (!isOutOfStock && (quantity == 2 || quantity == 3)) {
 
 
 
-Control Flows : Conditionals
+Control Flows : Conditionals {.cols-2}
 ------------
 
 
@@ -167,25 +190,25 @@ switch(myPet){
 
 
 
-Control Flows : Loops
+Control Flows : Loops {.cols-3}
 ------------
 
 
 ### while loop
 ```dart
-// while loop check condition before iteration of the loop
 while (!dreamsAchieved) {
   workHard();
 }
 ```
+while loop check condition before iteration of the loop
 
 ### do-while loop
 ```dart
-// do-while loop verifies the condition after the execution of the statements inside the loop
 do {
   workHard();
 } while (!dreamsAchieved);
 ```
+do-while loop verifies the condition after the execution of the statements inside the loop
 
 ### for loop
 ```dart
@@ -202,7 +225,7 @@ for(var number in numbers){
 
 
 
-Collections
+Collections {.cols-2}
 ------------
 
 ### Lists
@@ -259,7 +282,7 @@ var nobleGases = {
 
 
 
-Functions
+Functions {.cols-2}
 ------------
 
 ### Functions
@@ -295,7 +318,7 @@ list.forEach(
 //Prints: 0: apples 1: bananas 2: oranges
 ```
 
-Classes and Objects
+Classes and Objects {.cols-3}
 ----------
 
 ### Class
@@ -368,7 +391,7 @@ class Cat {
 ```
 
 
-Implicit interfaces
+Implicit interfaces {.cols-2}
 ------------
 
 ### A basic interface
@@ -420,7 +443,7 @@ class SmartPhone extends Phone {
 }
 ```
 
-Exceptions
+Exceptions {.cols-3}
 ------------
 
 ### Throw
@@ -486,7 +509,7 @@ main() async {
 
 
 
-Miscellaneous
+Miscellaneous {.cols-2}
 ------------
 
 ### Null and Null aware
