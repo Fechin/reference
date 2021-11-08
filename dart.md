@@ -2,7 +2,7 @@
 title: Dart
 date: 2021-11-04 10:12:25
 icon: icon-dart
-background: bg-blue-500
+background: bg-blue-600
 tags:
     - dart
     - flutter
@@ -15,16 +15,17 @@ intro: |
 
 
 
-Getting started {.cols-3}
+Getting started {.cols-2}
 ------------
 
-### main function
+### hello.dart
 ```dart
 // top-level function where app execution starts
 void main(){
     print("Hello World!"); // Print to console
 }
 ```
+Every app has a main() function
 
 
 ### Variables
@@ -81,8 +82,31 @@ String upperCase = '${firstName.toUpperCase()}';
 print(upperCase); //Print: NICOLA
 ```
 
+### Comments
+```dart
+// This is a normal, one-line comment.
 
-Operators {.cols-3}
+/// This is a documentation comment, used to document libraries,
+/// classes, and their members. Tools like IDEs and dartdoc treat
+/// doc comments specially.
+
+/* Comments like these are also supported. */
+```
+
+### Imports
+```dart
+// Importing core libraries
+import 'dart:math';
+
+// Importing libraries from external packages
+import 'package:test/test.dart';
+
+// Importing files
+import 'path/to/my_other_file.dart';
+```
+
+
+Operators {.cols-2}
 ------------
 
 ### Arithmatic Operators
@@ -173,19 +197,19 @@ Control Flows : Loops {.cols-3}
 
 ### while loop
 ```dart
-// while loop check condition before iteration of the loop
 while (!dreamsAchieved) {
   workHard();
 }
 ```
+while loop check condition before iteration of the loop
 
 ### do-while loop
 ```dart
-// do-while loop verifies the condition after the execution of the statements inside the loop
 do {
   workHard();
 } while (!dreamsAchieved);
 ```
+do-while loop verifies the condition after the execution of the statements inside the loop
 
 ### for loop
 ```dart
@@ -202,7 +226,7 @@ for(var number in numbers){
 
 
 
-Collections {.cols-3}
+Collections {.cols-2}
 ------------
 
 ### Lists
@@ -259,7 +283,7 @@ var nobleGases = {
 
 
 
-Functions {.cols-3}
+Functions {.cols-2}
 ------------
 
 ### Functions
@@ -486,7 +510,7 @@ main() async {
 
 
 
-Miscellaneous {.cols-3}
+Miscellaneous {.cols-2}
 ------------
 
 ### Null and Null aware
