@@ -253,7 +253,7 @@ Route::get('/user/{id}', function (Request $request, $id) {
     return 'User '.$id;
 });
 ```
-#### Optional Paramters
+#### Optional Parameters
 ```php
 Route::get('/user/{name?}', function ($name = null) {
     return $name;
