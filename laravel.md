@@ -502,8 +502,9 @@ Deployment {.cols-3}
 Also see 
 -------
 
-- [PHP Docs](https://www.php.net/manual/en/index.php)
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/php/)
+- [Laravel Docs](https://laravel.com/docs/8.x)
+- [Laracasts](https://laracasts.com/)
+- [Laravel API](https://laravel.com/api/8.x/)
 
 
 
