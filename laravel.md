@@ -83,11 +83,14 @@ php artisan serve
 Access application via http://localhost
 
 
-### Configuration
-#### .env
+Configuration {.cols-3}
+---------------
+
+
+### .env {.cols-2}
 Retrieve values from `.env` file
 ```php
-env('APP_DEBUG', false)
+env('APP_DEBUG', false);
 ```
 Determine current environment
 ```php
@@ -96,15 +99,69 @@ use Illuminate\Support\Facades\App;
 $environment = App::environment();
 ```
 Accessing configuration values using "dot" syntax
-```
-// config/app.php $
+```php
+// config/app.php --> ['timezone' => '']
 $value = config('app.timezone');
 
 // Retrieve a default value if the configuration value does not exist...
 $value = config('app.timezone', 'Asia/Seoul');
 ```
+Set configuration values at runtime:
+```php
+config(['app.timezone' => 'America/Chicago']);
+```
 
+### Debug Mode
+On (local dev):
+```php
+// .env file
+APP_ENV=local
+APP_DEBUG=true
+// ...
+```
+Off (production):
+```php
+// .env file
+APP_ENV=production
+APP_DEBUG=false
+// ...
+```
 
+### Maintenance Mode
+Temporarily disable application (503 status code)
+```bash
+php artisan down
+```
+Set `Refresh` HTTP header
+```bash
+// auto refresh browser after 60 seconds
+php artisan down --refresh=15
+```
+Set `Retry-After` HTTP header
+```bash
+// retry after 60 seconds
+php artisan down --retry=60
+```
+#### Bypass Maintenance Mode
+```bash
+php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
+```
+#### Pre-Render Maintenance View
+```bash
+php artisan down --render="errors::503"
+```
+#### Redirect instead of maintenance view
+```bash
+php artisan down --redirect=/
+```
+#### Disable maintenance mode
+```bash
+php artisan up
+```
+### Customize maintenance template
+```
+resources/views/errors/503.blade.php
+```
 
 
 PHP Operators {.cols-4}
