@@ -35,7 +35,7 @@ Getting started {.cols-3}
 
 #### Server
 Ensure your web server directs all requests to your application's 
-`public/index.php` file
+`public/index.php` file  
 See: [Deployment](#deployment)
 
 
@@ -164,8 +164,192 @@ resources/views/errors/503.blade.php
 ```
 
 
-PHP Operators {.cols-4}
+Routing {.cols-4}
 ---------------
+
+Web routes - `routes/web.php`
+API routes - `routes/api.php`
+
+### Router Methods
+```php
+Route::get($uri, $callback);
+Route::post($uri, $callback);
+Route::put($uri, $callback);
+Route::patch($uri, $callback);
+Route::delete($uri, $callback);
+Route::options($uri, $callback);
+```
+Multiple HTTP methods
+```php
+Route::match(['get', 'post'], '/', function () {
+    //
+});
+
+Route::any('/', function () {
+    //
+});
+```
+
+### Basic
+```php
+use Illuminate\Support\Facades\Route;
+
+// closure
+Route::get('/greeting', function () {
+    return 'Hello World';
+});
+
+// controller action
+Route::get(
+    '/user/profile',
+    [UserProfileController::class, 'show']
+);
+```
+
+### Dependency Injection
+Type hint concrete dependencies for auto-injection
+```php
+use Illuminate\Http\Request;
+
+Route::get('/users', function (Request $request) {
+    // ...
+});
+```
+
+### Redirect Routes
+HTTP 302 status
+```php
+Route::redirect('/here', '/there');
+```
+Set the status code
+```php
+Route::redirect('/here', '/there', 301);
+```
+Permanent 301 redirect
+```php
+Route::permanentRedirect('/here', '/there');
+```
+
+### View Routes
+```php
+Route::view('/welcome', 'welcome');
+
+// with data
+Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
+```
+
+### Route Parameters {.cols-2}
+#### Required params
+```php
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
+```
+With dependency injection
+```php
+use Illuminate\Http\Request;
+
+Route::get('/user/{id}', function (Request $request, $id) {
+    return 'User '.$id;
+});
+```
+#### Optional Paramters
+```php
+Route::get('/user/{name?}', function ($name = null) {
+    return $name;
+});
+
+Route::get('/user/{name?}', function ($name = 'John') {
+    return $name;
+});
+```
+### Regular Expression Constraints {.cols-2}
+```php
+Route::get('/user/{name}', function ($name) {
+    //
+})->where('name', '[A-Za-z]+');
+
+Route::get('/user/{id}', function ($id) {
+    //
+})->where('id', '[0-9]+');
+
+Route::get('/user/{id}/{name}', function ($id, $name) {
+    //
+})->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+```
+Common pattern helpers
+```php
+Route::get('/user/{id}/{name}', function ($id, $name) {
+    //
+})->whereNumber('id')->whereAlpha('name');
+
+Route::get('/user/{name}', function ($name) {
+    //
+})->whereAlphaNumeric('name');
+
+Route::get('/user/{id}', function ($id) {
+    //
+})->whereUuid('id');
+```
+
+### Global Constraint
+Always apply constraint to paramters with this name
+```php
+// in App\Providers\RouteServiceProvider
+public function boot()
+{
+    Route::pattern('id', '[0-9]+');
+}
+
+
+// in routes/web.php
+Route::get('/user/{id}', function ($id) {
+    // Only executed if {id} is numeric...
+});
+```
+
+### Named Routes
+Route names should always be unique
+```php
+Route::get('/user/profile', function () {
+    //
+})->name('profile');
+```
+See: [Helpers](#helpers)
+
+
+
+Helpers {.cols-3}
+---------------
+### routes
+#### Named route
+```php
+$url = route('profile');
+```
+With parameters
+```php
+// Route::get('/user/{id}/profile', /*...*/ )->name('profile);
+
+$url = route('profile', ['id' => 1]);
+
+// /user/1/profile/
+```
+Additional parameters will be added to query string
+```php
+// Route::get('/user/{id}/profile', /*...*/ )->name('profile);
+
+$url = route('profile', ['id' => 1, 'photos'=>'yes']);
+
+// /user/1/profile?photos=yes
+```
+#### Redirects
+```php
+// Generating Redirects...
+return redirect()->route('profile');
+```
+
+
+
 
 
 
