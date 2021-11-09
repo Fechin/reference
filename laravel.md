@@ -318,6 +318,148 @@ Route::get('/user/profile', function () {
 See: [Helpers](#helpers)
 
 
+### Route Groups {.cols-2}
+Share attributes across routes
+#### Middleware
+```php
+Route::middleware(['first', 'second'])->group(function () {
+    Route::get('/', function () {
+        // Uses first & second middleware...
+    });
+
+    Route::get('/user/profile', function () {
+        // Uses first & second middleware...
+    });
+});
+```
+#### Subdomain
+*Register subdomain routes before registering root domain routes*
+```php
+Route::domain('{account}.example.com')->group(function () {
+    Route::get('user/{id}', function ($account, $id) {
+        //
+    });
+});
+```
+#### Prefixes
+URI prefix
+```php
+Route::prefix('admin')->group(function () {
+    Route::get('/users', function () {
+        // Matches The "/admin/users" URL
+    });
+});
+```
+Name Prefix
+```php
+Route::name('admin.')->group(function () {
+    Route::get('/users', function () {
+        // Route assigned name "admin.users"...
+    })->name('users');
+});
+```
+
+### Route Model Binding {.cols-2}
+Convenient way to automatically inject the model instances directly into your routes
+#### Implicit binding
+With closure
+```php
+use App\Models\User;
+
+Route::get('/users/{user}', function (User $user) {
+    return $user->email;
+});
+
+// /user/1 --> User::where('id', '=', 1);
+```
+With controller action
+```php
+use App\Http\Controllers\UserController;
+use App\Models\User;
+
+// Route definition...
+Route::get('/users/{user}', [UserController::class, 'show']);
+
+// Controller method definition...
+public function show(User $user)
+{
+    return view('user.profile', ['user' => $user]);
+}
+```
+With custom resolution column
+```php
+use App\Models\Post;
+
+Route::get('/posts/{post:slug}', function (Post $post) {
+    return $post;
+});
+
+// /posts/my-post --> Post::where('slug', '=', 'my-post');
+```
+Always use a different column to resolve
+```php
+// in App\Models\Post
+public function getRouteKeyName()
+{
+    return 'slug';
+}
+```
+Multiple models - second is child of first
+```php
+use App\Models\Post;
+use App\Models\User;
+
+Route::get('/users/{user}/posts/{post:slug}', function (User $user, Post $post) {
+    return $post;
+});
+```
+#### Explicit Binding
+Define how route parameters correspond to models
+```php
+// in App\Providers\RouteServiceProvider
+use App\Models\User;
+use Illuminate\Support\Facades\Route;
+
+public function boot()
+{
+    Route::model('user', User::class);
+
+    // ...
+}
+```
+Define custom binding logic
+```php
+// in App\Providers\RouteServiceProvider
+use App\Models\User;
+use Illuminate\Support\Facades\Route;
+
+public function boot()
+{
+    Route::bind('user', function ($value) {
+        return User::where('name', $value)->firstOrFail();
+    });
+
+    // ...
+}
+```
+
+### Fallback Routes
+Executed when no other routes match
+```php
+Route::fallback(function () {
+    //
+});
+```
+
+### Accessing current route
+```php
+use Illuminate\Support\Facades\Route;
+
+$route = Route::current(); // Illuminate\Routing\Route
+$name = Route::currentRouteName(); // string
+$action = Route::currentRouteAction(); // string
+```
+
 
 Helpers {.cols-3}
 ---------------
@@ -349,84 +491,9 @@ return redirect()->route('profile');
 ```
 
 
+Deployment {.cols-3}
+---------------
 
-
-
-
-### Arithmetic
-| -    | -              |
-|------|----------------|
-| `+`  | Addition       |
-| `-`  | Subtraction    |
-| `*`  | Multiplication |
-| `/`  | Division       |
-| `%`  | Modulo         |
-| `**` | Exponentiation |
-
-### Assignment
-| -        | -                   |
-|----------|---------------------|
-| `a += b` | Same as `a = a + b` |
-| `a -= b` | Same as `a = a – b` |
-| `a *= b` | Same as `a = a * b` |
-| `a /= b` | Same as `a = a / b` |
-| `a %= b` | Same as `a = a % b` |
-
-
-### Comparison {.row-span-2}
-| -     | -                            |
-|-------|------------------------------|
-| `==`  | Equal                        |
-| `===` | Identical                    |
-| `!=`  | Not equal                    |
-| `<>`  | Not equal                    |
-| `!==` | Not identical                |
-| `<`   | Less than                    |
-| `>`   | Greater than                 |
-| `<=`  | Less than or equal           |
-| `>=`  | Greater than or equal        |
-| `<=>` | Less than/equal/greater than |
-
-### Logical
-| -     | -            |
-|-------|--------------|
-| `and` | And          |
-| `or`  | Or           |
-| `xor` | Exclusive or |
-| `!`   | Not          |
-| `&&`  | And          |
-| `||`  | Or           |
-
-
-
-
-### Arithmetic {.col-span-2}
-```php
-// Arithmetic
-$sum        = 1 + 1; // 2
-$difference = 2 - 1; // 1
-$product    = 2 * 2; // 4
-$quotient   = 2 / 1; // 2
-
-// Shorthand arithmetic
-$num = 0;
-$num += 1;       // Increment $num by 1
-echo $num++;     // Prints 1 (increments after evaluation)
-echo ++$num;     // Prints 3 (increments before evaluation)
-$num /= $float;  // Divide and assign the quotient to $num
-```
-
-
-
-### Bitwise
-| -    | -                  |
-|------|--------------------|
-| `&`  | And                |
-| `|`  | Or (inclusive or)  |
-| `^`  | Xor (exclusive or) |
-| `~`  | Not                |
-| `<<` | Shift left         |
-| `>>` | Shift right        |
 
 
 
