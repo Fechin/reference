@@ -554,6 +554,296 @@ See: [Artisan Commands](#artisan-commands)
 
 
 
+Requests {.cols-3}
+---------------
+### CSRF Protection
+Laravel automatically generates a CSRF "token" for each active user session. 
+This token is used to verify that the authenticated user is the person actually making the requests.
+
+Get current session's token:
+```php
+Route::get('/token', function (Request $request) {
+    $token = $request->session()->token();
+
+    $token = csrf_token();
+
+    // ...
+});
+```
+POST, PUT, PATCH, or DELETE forms should include a hidden CSRF `_token` field 
+in the form to validate the request.
+```html
+<form method="POST" action="/profile">
+    @csrf
+
+    <!-- Equivalent to... -->
+    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+</form>
+```
+#### Exclude URIs From CSRF Protection
+Define routes outside of the `routes/web.php`  
+Or
+Adding route URIs to the `$except` property of `VerifyCsrfToken`
+```php
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
+
+class VerifyCsrfToken extends Middleware
+{
+    protected $except = [
+        'stripe/*',
+        'http://example.com/foo/bar',
+        'http://example.com/foo/*',
+    ];
+}
+```
+
+### Accessing Request
+Get an instance of the current request by type-hinting the 
+controller action or route closure
+```php
+// controller action
+class UaerController extends Controller
+{
+    public function store(Request $request)
+    {
+        $name = $request->input('name');
+    }
+}
+
+// closure
+Route::get('/', function (Request $request) {
+    //
+});
+```  
+[See Routing](#routing)
+
+### Path
+The request's path information
+```php
+$uri = $request->path();
+
+// http://example.com/foo/bar --> foo/bar
+```
+#### Match path to pattern
+Verify that the incoming request path matches a given pattern
+```php
+// * is wildcard
+if ($request->is('admin/*')) {
+    //
+}
+```
+Determine if the incoming request matches a named route
+```php
+if ($request->routeIs('admin.*')) {
+    //
+}
+```
+#### URL
+Full URL for the incoming request
+```php
+// URL without the query string
+$url = $request->url();
+
+$urlWithQueryString = $request->fullUrl();
+
+// append data to query string
+$request->fullUrlWithQuery(['type' => 'phone']);
+```
+
+### Request Method
+
+```php
+$method = $request->method();
+
+// verify that the HTTP verb matches a given string
+if ($request->isMethod('post')) {
+    //
+}
+```
+
+### Headers 
+```php
+$value = $request->header('X-Header-Name');
+
+$value = $request->header('X-Header-Name', 'default value');
+
+// determine if the request contains a given header
+if ($request->hasHeader('X-Header-Name')) {
+    //
+}
+
+// retrieve a bearer token from the Authorization header
+$token = $request->bearerToken();
+```
+
+### Client IP
+```php
+$ipAddress = $request->ip();
+```
+
+### Content
+Return an array containing all of the content types accepted by the request
+```php
+$contentTypes = $request->getAcceptableContentTypes();
+```
+Boolean check for content types are accepted by the request
+```php
+if ($request->accepts(['text/html', 'application/json'])) {
+    // ...
+}
+```
+Determine content type is most preferred by the request
+```php
+$preferred = $request->prefers(['text/html', 'application/json']);
+```
+Shortcut to determine if the incoming request expects a JSON response
+```php
+if ($request->expectsJson()) {
+    // ...
+}
+```
+
+### Input
+Retrieve all of the incoming request's input data as an array
+```php
+$input = $request->all();
+```
+Retrieve all of the incoming request's input data as a collection
+```php
+$input = $request->collect();
+
+// retrieve subset as collection
+$request->collect('users')->each(function ($user) {
+    // ...
+});
+```
+[See helpers](#helpers)
+
+Retrieve user input (also gets values from query string)
+```php
+$name = $request->input('name');
+
+// with default value if none present
+$name = $request->input('name', 'Sally');
+```
+
+Access array inputs
+```php
+$name = $request->input('products.0.name');
+
+$names = $request->input('products.*.name');
+```
+
+Retrieve all of the input values as an associative array:
+```php
+$input = $request->input();
+```
+
+Only retrieve values from the query string:
+```php
+$name = $request->query('name');
+
+// with default value
+$name = $request->query('name', 'Helen');
+```
+
+Retrieve all of the query string values as an associative array:
+```php
+$query = $request->query();
+```
+
+#### Boolean Input Values
+Helpful for checkbox inputs or other booleans. 
+Return `true` for 1, "1", true, "true", "on", and "yes". 
+All other values will return `false`
+```php
+$archived = $request->boolean('archived');
+```
+
+### Dynamic Properties
+Access inputs via properties. If not found as an input, the route parameters will be checked.
+```php
+$name = $request->name;
+```
+
+### Retrieve Partial Input
+```php
+$input = $request->only(['username', 'password']);
+
+$input = $request->only('username', 'password');
+
+$input = $request->except(['credit_card']);
+
+$input = $request->except('credit_card');
+```
+
+### Check Existence
+Determine if value(s) present
+```php
+if ($request->has('name')) {
+    //
+}
+
+// check if ALL values are present
+if ($request->has(['name', 'email'])) {
+    //
+}
+
+// if any values are present
+if ($request->hasAny(['name', 'email'])) {
+    //
+}
+```
+Execute the given closure if a value is present
+```php
+$request->whenHas('name', function ($input) {
+    //
+});
+
+// execute 2nd closure if value is **not** present
+$request->whenHas('name', function ($input) {
+    // The "name" value is present...
+}, function () {
+    // The "name" value is not present...
+});
+```
+
+Check if value exists and is not empty
+```php
+if ($request->filled('name')) {
+    //
+}
+```
+
+Execute if value present and not empty
+```php
+$request->whenFilled('name', function ($input) {
+    //
+});
+
+// execute 2nd closure if value is not filled
+$request->whenFilled('name', function ($input) {
+    // The "name" value is filled...
+}, function () {
+    // The "name" value is not filled...
+});
+```
+
+Determine if key is absent
+```php
+if ($request->missing('name')) {
+    //
+}
+```
+
+### Old Input
+
+
+
+
+
+
+
 Also see 
 -------
 
