@@ -158,7 +158,7 @@ php artisan down --redirect=/
 ```bash
 php artisan up
 ```
-### Customize maintenance template
+#### Customize maintenance template
 ```
 resources/views/errors/503.blade.php
 ```
@@ -293,7 +293,7 @@ Route::get('/user/{id}', function ($id) {
 ```
 
 ### Global Constraint
-Always apply constraint to paramters with this name
+Always apply constraint to parameters with this name
 ```php
 // in App\Providers\RouteServiceProvider
 public function boot()
@@ -681,7 +681,7 @@ $token = $request->bearerToken();
 $ipAddress = $request->ip();
 ```
 
-### Content
+### Content Type
 Return an array containing all of the content types accepted by the request
 ```php
 $contentTypes = $request->getAcceptableContentTypes();
