@@ -132,37 +132,15 @@ Temporarily disable application (503 status code)
 ```bash
 php artisan down
 ```
-Set `Refresh` HTTP header
-```bash
-// auto refresh browser after 60 seconds
-php artisan down --refresh=15
-```
-Set `Retry-After` HTTP header
-```bash
-// retry after 60 seconds
-php artisan down --retry=60
-```
 #### Bypass Maintenance Mode
 ```bash
 php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
 ```
-#### Pre-Render Maintenance View
-```bash
-php artisan down --render="errors::503"
-```
-#### Redirect instead of maintenance view
-```bash
-php artisan down --redirect=/
 ```
 #### Disable maintenance mode
 ```bash
 php artisan up
 ```
-#### Customize maintenance template
-```
-resources/views/errors/503.blade.php
-```
-
 
 Routing {.cols-4}
 ---------------
@@ -239,7 +217,7 @@ Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
 ```
 
 ### Route Parameters {.cols-2}
-#### Required params
+#### Required parameters
 ```php
 Route::get('/user/{id}', function ($id) {
     return 'User '.$id;
@@ -277,36 +255,6 @@ Route::get('/user/{id}/{name}', function ($id, $name) {
     //
 })->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 ```
-Common pattern helpers
-```php
-Route::get('/user/{id}/{name}', function ($id, $name) {
-    //
-})->whereNumber('id')->whereAlpha('name');
-
-Route::get('/user/{name}', function ($name) {
-    //
-})->whereAlphaNumeric('name');
-
-Route::get('/user/{id}', function ($id) {
-    //
-})->whereUuid('id');
-```
-
-### Global Constraint
-Always apply constraint to parameters with this name
-```php
-// in App\Providers\RouteServiceProvider
-public function boot()
-{
-    Route::pattern('id', '[0-9]+');
-}
-
-
-// in routes/web.php
-Route::get('/user/{id}', function ($id) {
-    // Only executed if {id} is numeric...
-});
-```
 
 ### Named Routes
 Route names should always be unique
@@ -329,15 +277,6 @@ Route::middleware(['first', 'second'])->group(function () {
 
     Route::get('/user/profile', function () {
         // Uses first & second middleware...
-    });
-});
-```
-#### Subdomain
-*Register subdomain routes before registering root domain routes*
-```php
-Route::domain('{account}.example.com')->group(function () {
-    Route::get('user/{id}', function ($account, $id) {
-        //
     });
 });
 ```
@@ -413,36 +352,6 @@ Route::get('/users/{user}/posts/{post:slug}', function (User $user, Post $post) 
     return $post;
 });
 ```
-#### Explicit Binding
-Define how route parameters correspond to models
-```php
-// in App\Providers\RouteServiceProvider
-use App\Models\User;
-use Illuminate\Support\Facades\Route;
-
-public function boot()
-{
-    Route::model('user', User::class);
-
-    // ...
-}
-```
-Define custom binding logic
-```php
-// in App\Providers\RouteServiceProvider
-use App\Models\User;
-use Illuminate\Support\Facades\Route;
-
-public function boot()
-{
-    Route::bind('user', function ($value) {
-        return User::where('name', $value)->firstOrFail();
-    });
-
-    // ...
-}
-```
-
 ### Fallback Routes
 Executed when no other routes match
 ```php
@@ -503,12 +412,6 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    /**
-     * Show the profile for a given user.
-     *
-     * @param  int  $id
-     * @return \Illuminate\View\View
-     */
     public function show($id)
     {
         return view('user.profile', [
@@ -523,35 +426,6 @@ use App\Http\Controllers\UserController;
 
 Route::get('/user/{id}', [UserController::class, 'show']);
 ```
-
-### Single Action
-```php
-namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;
-use App\Models\User;
-
-class ProvisionServer extends Controller
-{
-    /**
-     * Provision a new web server.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke()
-    {
-        // ...
-    }
-}
-```
-Define the route: 
-```php
-use App\Http\Controllers\ProvisionServer;
-
-Route::post('/server', ProvisionServer::class);
-```  
-See: [Artisan Commands](#artisan-commands)
-
 
 
 Requests {.cols-3}
@@ -579,22 +453,6 @@ in the form to validate the request.
     <!-- Equivalent to... -->
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 </form>
-```
-#### Exclude URIs From CSRF Protection
-Define routes outside of the `routes/web.php`  
-Or
-Adding route URIs to the `$except` property of `VerifyCsrfToken`
-```php
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
-
-class VerifyCsrfToken extends Middleware
-{
-    protected $except = [
-        'stripe/*',
-        'http://example.com/foo/bar',
-        'http://example.com/foo/*',
-    ];
-}
 ```
 
 ### Accessing Request
@@ -651,7 +509,6 @@ $request->fullUrlWithQuery(['type' => 'phone']);
 ```
 
 ### Request Method
-
 ```php
 $method = $request->method();
 
@@ -682,7 +539,7 @@ $ipAddress = $request->ip();
 ```
 
 ### Content Type
-Return an array containing all of the content types accepted by the request
+Return an array containing all the content types accepted by the request
 ```php
 $contentTypes = $request->getAcceptableContentTypes();
 ```
@@ -704,11 +561,11 @@ if ($request->expectsJson()) {
 ```
 
 ### Input
-Retrieve all of the incoming request's input data as an array
+Retrieve all the incoming request's input data as an array
 ```php
 $input = $request->all();
 ```
-Retrieve all of the incoming request's input data as a collection
+Retrieve all the incoming request's input data as a collection
 ```php
 $input = $request->collect();
 
@@ -734,7 +591,7 @@ $name = $request->input('products.0.name');
 $names = $request->input('products.*.name');
 ```
 
-Retrieve all of the input values as an associative array:
+Retrieve all the input values as an associative array:
 ```php
 $input = $request->input();
 ```
@@ -747,7 +604,7 @@ $name = $request->query('name');
 $name = $request->query('name', 'Helen');
 ```
 
-Retrieve all of the query string values as an associative array:
+Retrieve all the query string values as an associative array:
 ```php
 $query = $request->query();
 ```
@@ -794,52 +651,75 @@ if ($request->hasAny(['name', 'email'])) {
     //
 }
 ```
-Execute the given closure if a value is present
-```php
-$request->whenHas('name', function ($input) {
-    //
-});
-
-// execute 2nd closure if value is **not** present
-$request->whenHas('name', function ($input) {
-    // The "name" value is present...
-}, function () {
-    // The "name" value is not present...
-});
-```
-
-Check if value exists and is not empty
-```php
-if ($request->filled('name')) {
-    //
-}
-```
-
-Execute if value present and not empty
-```php
-$request->whenFilled('name', function ($input) {
-    //
-});
-
-// execute 2nd closure if value is not filled
-$request->whenFilled('name', function ($input) {
-    // The "name" value is filled...
-}, function () {
-    // The "name" value is not filled...
-});
-```
-
-Determine if key is absent
-```php
-if ($request->missing('name')) {
-    //
-}
-```
 
 ### Old Input
+Retrieve input from the previous request
+```php
+$username = $request->old('username');
+```
+Or use the `old()` helper
+```php
+<input type="text" name="username" value="{{ old('username') }}">
+```
+See: (Helpers)[#helpers]
+
+### Uploaded Files
+Retrieve uploaded file from request
+```php
+$file = $request->file('photo');
+
+$file = $request->photo;
+```
+
+Get file path or extension
+```php
+$path = $request->photo->path();
+
+$extension = $request->photo->extension();
+```
+
+Store uploaded file with a randomly generated filename
+```php
+// path where the file should be stored relative to
+// the filesystem's configured root directory
+$path = $request->photo->store('images'); 
+
+// optional 2nd param to specify the filesystem disk
+$path = $request->photo->store('images', 's3');
+```
+Store uploaded file and specify the name
+```php
+$path = $request->photo->storeAs('images', 'filename.jpg');
+
+$path = $request->photo->storeAs('images', 'filename.jpg', 's3');
+```
+See More: [File Storage](https://laravel.com/docs/8.x/filesystem)
 
 
 
+Views {.cols-3}
+---------------
+Presentational logic and HTML. 
+Create a view by placing a file with the `.blade.php` 
+extension in the `resources/views` directory.
+```html
+<!-- View stored in resources/views/greeting.blade.php -->
+
+<html>
+    <body>
+        <h1>Hello, {{ $name }}</h1>
+    </body>
+</html>
+```
+
+Return a view from a route with the `view()` helper
+```php
+Route::get('/', function () {
+    return view('greeting', ['name' => 'James']);
+});
+```
+See [Routing](#routing-cols-4)
+See [Helpers](#helpers-cols-3)
 
 
 
@@ -850,7 +730,3 @@ Also see
 - [Laravel Docs](https://laravel.com/docs/8.x)
 - [Laracasts](https://laracasts.com/)
 - [Laravel API](https://laravel.com/api/8.x/)
-
-
-
-
