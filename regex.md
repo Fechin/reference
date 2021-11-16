@@ -332,7 +332,7 @@ Use `\` to search for these special characters: <br> `[ \ ^ $ . | ? * + ( ) { }`
 | Pattern        | Matches                                    |
 |----------------|--------------------------------------------|
 | `cat|dog     ` | Match <yel>cat</yel> or <yel>dog</yel>     |
-| `id|identity ` | Match <yel>id</yel> or <yel>id</yel>entity |
+| `id|identity ` | Match <yel>id</yel> or <yel>identity</yel> |
 | `identity|id ` | Match <yel>id</yel> or <yel>identity</yel> |
 
 Order longer to shorter when alternatives overlap
