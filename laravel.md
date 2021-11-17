@@ -18,6 +18,7 @@ intro: |
 
 Getting started {.cols-3}
 ---------------
+[Laravel Docs - Getting Started](https://laravel.com/docs/8.x/installation#your-first-laravel-project)
 
 ### Requirements
 #### PHP
@@ -84,11 +85,14 @@ Access application via http://localhost
 
 Configuration {.cols-3}
 ---------------
-
+[Laravel Docs - Configuration](https://laravel.com/docs/8.x/configuration)
 
 ### .env {.cols-2}
 Retrieve values from `.env` file
 ```php
+env('APP_DEBUG');
+
+// with default value
 env('APP_DEBUG', false);
 ```
 Determine current environment
@@ -111,14 +115,14 @@ config(['app.timezone' => 'America/Chicago']);
 ```
 
 ### Debug Mode
-On (local dev):
+Turn on (local dev):
 ```php
 // .env file
 APP_ENV=local
 APP_DEBUG=true
 // ...
 ```
-Off (production):
+Turn off (production):
 ```php
 // .env file
 APP_ENV=production
@@ -131,11 +135,13 @@ Temporarily disable application (503 status code)
 ```bash
 php artisan down
 ```
+
 #### Bypass Maintenance Mode
 ```bash
 php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
 ```
-```
+Visit your application URL `https://example.com/1630542a-246b-4b66-afa1-dd72a4c43515` to set a cookie and bypass the maintenance screen
+
 #### Disable maintenance mode
 ```bash
 php artisan up
@@ -143,11 +149,12 @@ php artisan up
 
 Routing {.cols-4}
 ---------------
+[Laravel Docs - Basic Routing](https://laravel.com/docs/8.x/routing#basic-routing)
 
-Web routes - `routes/web.php`
-API routes - `routes/api.php`
+Web routes: `routes/web.php`  
+API routes: `routes/api.php`
 
-### Router Methods
+### Router HTTP Methods
 ```php
 Route::get($uri, $callback);
 Route::post($uri, $callback);
@@ -167,7 +174,7 @@ Route::any('/', function () {
 });
 ```
 
-### Basic
+### Basic Definition
 ```php
 use Illuminate\Support\Facades\Route;
 
@@ -194,7 +201,7 @@ Route::get('/users', function (Request $request) {
 ```
 
 ### Redirect Routes
-HTTP 302 status
+HTTP `302` status
 ```php
 Route::redirect('/here', '/there');
 ```
@@ -202,12 +209,14 @@ Set the status code
 ```php
 Route::redirect('/here', '/there', 301);
 ```
-Permanent 301 redirect
+Permanent `301` redirect
 ```php
 Route::permanentRedirect('/here', '/there');
 ```
 
 ### View Routes
+Route only needs to return a view.  
+First argument: URI, second argument: view name
 ```php
 Route::view('/welcome', 'welcome');
 
@@ -216,6 +225,7 @@ Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
 ```
 
 ### Route Parameters {.cols-2}
+Capture segments of the URI within your route
 #### Required parameters
 ```php
 Route::get('/user/{id}', function ($id) {
@@ -262,8 +272,7 @@ Route::get('/user/profile', function () {
     //
 })->name('profile');
 ```
-See: [Helpers](#helpers)
-
+See: [Helpers](#helpers-cols-3)
 
 ### Route Groups {.cols-2}
 Share attributes across routes
@@ -371,6 +380,8 @@ $action = Route::currentRouteAction(); // string
 
 Helpers {.cols-3}
 ---------------
+[Laravel Docs - Helpers](https://laravel.com/docs/8.x/helpers)
+
 ### routes
 #### Named route
 ```php
@@ -403,6 +414,7 @@ echo route('post.show', ['post' => $post]);
 // Generating Redirects...
 return redirect()->route('profile');
 ```
+See [Routing](#routing-cols-4)
 
 ### URL Generation
 Generate arbitrary URLs for your application that will 
@@ -427,6 +439,9 @@ echo url()->full();
 echo url()->previous();
 ```
 ### Named Route URL
+```php
+$url = route('profile');
+```
 See [Named Route](#named-route)
 
 ### Error Handling
@@ -453,6 +468,8 @@ public function isValid($value)
 
 Controllers {.cols-3}
 ---------------
+[Laravel Docs - Controllers](https://laravel.com/docs/8.x/controllers)
+
 ### Basic
 ```php
 namespace App\Http\Controllers;
@@ -470,18 +487,19 @@ class UserController extends Controller
     }
 }
 ```
-Define a route to this controller method:
+Define a route for this controller method:
 ```php
 use App\Http\Controllers\UserController;
 
 Route::get('/user/{id}', [UserController::class, 'show']);
 ```
 
-
 Requests {.cols-3}
 ---------------
+[Laravel Docs - HTTP Requests](https://laravel.com/docs/8.x/requests)
+
 ### CSRF Protection
-Laravel automatically generates a CSRF "token" for each active user session. 
+Laravel automatically generates a CSRF "token" for each active user session.  
 This token is used to verify that the authenticated user is the person actually making the requests.
 
 Get current session's token:
@@ -494,7 +512,7 @@ Route::get('/token', function (Request $request) {
     // ...
 });
 ```
-POST, PUT, PATCH, or DELETE forms should include a hidden CSRF `_token` field 
+`POST`, `PUT`, `PATCH`, or `DELETE` forms should include a hidden CSRF `_token` field 
 in the form to validate the request.
 ```html
 <form method="POST" action="/profile">
@@ -504,13 +522,14 @@ in the form to validate the request.
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 </form>
 ```
+See [Forms](#forms-cols-3)
 
 ### Accessing Request
 Get an instance of the current request by type-hinting the 
 controller action or route closure
 ```php
 // controller action
-class UaerController extends Controller
+class UserController extends Controller
 {
     public function store(Request $request)
     {
@@ -530,7 +549,7 @@ The request's path information
 ```php
 $uri = $request->path();
 
-// http://example.com/foo/bar --> foo/bar
+// https://example.com/foo/bar --> foo/bar
 ```
 #### Match path to pattern
 Verify that the incoming request path matches a given pattern
@@ -546,12 +565,14 @@ if ($request->routeIs('admin.*')) {
     //
 }
 ```
-#### URL
+
+### URL
 Full URL for the incoming request
 ```php
 // URL without the query string
 $url = $request->url();
 
+// URL including query string
 $urlWithQueryString = $request->fullUrl();
 
 // append data to query string
@@ -599,16 +620,7 @@ if ($request->accepts(['text/html', 'application/json'])) {
     // ...
 }
 ```
-Determine content type is most preferred by the request
-```php
-$preferred = $request->prefers(['text/html', 'application/json']);
-```
-Shortcut to determine if the incoming request expects a JSON response
-```php
-if ($request->expectsJson()) {
-    // ...
-}
-```
+
 
 ### Input
 Retrieve all the incoming request's input data as an array
@@ -624,7 +636,7 @@ $request->collect('users')->each(function ($user) {
     // ...
 });
 ```
-[See helpers](#helpers)
+See [Helpers](#helpers-cols-3)
 
 Retrieve user input (also gets values from query string)
 ```php
@@ -661,14 +673,15 @@ $query = $request->query();
 
 #### Boolean Input Values
 Helpful for checkbox inputs or other booleans. 
-Return `true` for 1, "1", true, "true", "on", and "yes". 
+Return `true` for `1`, `"1"`, `true`, `"true"`, `"on"`, and `"yes"`.   
 All other values will return `false`
 ```php
 $archived = $request->boolean('archived');
 ```
 
 ### Dynamic Properties
-Access inputs via properties. If not found as an input, the route parameters will be checked.
+Access inputs via properties.  
+If not found as an input, the route parameters will be checked.
 ```php
 $name = $request->name;
 ```
@@ -711,7 +724,8 @@ Or use the `old()` helper
 ```php
 <input type="text" name="username" value="{{ old('username') }}">
 ```
-See: (Helpers)[#helpers]
+See: [Helpers](#helpers-cols-3)  
+See: [Forms](#forms-cols-3)
 
 ### Uploaded Files
 Retrieve uploaded file from request
@@ -743,13 +757,14 @@ $path = $request->photo->storeAs('images', 'filename.jpg');
 
 $path = $request->photo->storeAs('images', 'filename.jpg', 's3');
 ```
-See More: [File Storage](https://laravel.com/docs/8.x/filesystem)
-
+See More: [Laravel File Storage](https://laravel.com/docs/8.x/filesystem)
 
 
 Views {.cols-3}
 ---------------
-Presentational logic and HTML. 
+[Laravel Docs - Views](https://laravel.com/docs/8.x/views)
+
+Presentational logic and HTML.  
 Create a view by placing a file with the `.blade.php` 
 extension in the `resources/views` directory.
 ```html
@@ -762,14 +777,14 @@ extension in the `resources/views` directory.
 </html>
 ```
 
-### view() helper
+### view helper
 Return a view from a route with the `view()` helper
 ```php
 Route::get('/', function () {
     return view('greeting', ['name' => 'James']);
 });
 ```
-See [Routing](#routing-cols-4)
+See [View Routes](#view-routes)  
 See [Helpers](#helpers-cols-3)
 
 ### Subdirectories
@@ -777,7 +792,7 @@ See [Helpers](#helpers-cols-3)
 // resources/views/admin.profile.blade.php
 return view('admin.profile');
 ```
-## Pass Data to Views
+### Pass Data to Views
 #### As an array
 ```php
 return view('greetings', ['name' => 'Victoria']);
@@ -800,8 +815,10 @@ Access each value using the data's keys
 </html>
 ```
 
-Blade Templating Engine {.cols-3}
+Blade Templates {.cols-3}
 ---------------
+[Laravel Docs - Blade Templates](https://laravel.com/docs/8.x/blade)
+
 Blade is the templating engine included in Laravel 
 that also allows you to use plain PHP.
 
@@ -812,7 +829,12 @@ Route::get('/', function () {
     return view('welcome', ['name' => 'Samantha']);
 });
 ```
-[See Views](#view-helper)
+See: [Views](#view-helper)
+
+### Comments
+```html
+{{-- This comment will not be present in the rendered HTML --}}
+```
 
 ### Displaying Data
 Blade's echo statements `{{ }}` are automatically sent through 
@@ -829,11 +851,6 @@ The current UNIX timestamp is {{ time() }}.
 Display data without escaping with `htmlspecialchars`
 ```html
 Hello, {!! $name !!}.
-```
-
-### Comments
-```html
-{{-- This comment will not be present in the rendered HTML --}}
 ```
 
 ### Directives {.cols-2}
@@ -901,11 +918,11 @@ Loop Iteration:
     <p>This is user {{ $user->id }}</p>
 @endforeach
 ```
-[See more](https://laravel.com/docs/8.x/blade#the-loop-variable)
+See more: [Laravel Loop Variable](https://laravel.com/docs/8.x/blade#the-loop-variable)
 
 ### Including Subviews
-Include a Blade view from within another view. All variables that 
-are available to the parent view are also available to the included view
+Include a Blade view from within another view.  
+All variables that are available to the parent view are also available to the included view
 ```html
 <div>
     <!-- resources/views/shared/errors/blade.php -->
@@ -926,7 +943,7 @@ Execute a block of plain PHP
 ```
 
 ### Stacks
-Blade allows you to push to named stacks which can be rendered in another view or layout.
+Blade allows you to push to named stacks which can be rendered in another view or layout.  
 Useful for javascript libraries required by child views
 ```html
 <!-- Add to the stack -->
@@ -956,10 +973,10 @@ Prepend to the beginning of a stack
 ```
 
 
-
-
 Forms {.cols-3}
 ---------------
+[Laravel Docs - Forms](https://laravel.com/docs/8.x/blade#forms)
+
 ### CSRF Field
 Include a hidden CSRF token field to validate the request
 ```html
@@ -969,6 +986,7 @@ Include a hidden CSRF token field to validate the request
     ...
 </form>
 ```
+See: [CSRF Protection](#csrf-protection)
 
 ### Method Field
 Since HTML forms can't make `PUT`, `PATCH`, or `DELETE` requests, you 
@@ -993,11 +1011,11 @@ will need to add a hidden `_method` field to spoof these HTTP verbs:
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
 ```
-[See Validation](#validation)
+See: [Validation](#validation-cols-3)
 
 ### Repopulating Forms
-When redirecting due to a validation error, request input is flashed to the session.
-Retrieve the input from the previous request with the `old()` method
+When redirecting due to a validation error, request input is flashed to the session.  
+Retrieve the input from the previous request with the `old` method
 ```php
 $title = $request->old('title');
 ```
@@ -1008,7 +1026,9 @@ Or the `old()` helper
 
 Validation {.cols-3}
 ---------------
-If validation fails, a redirect response to the previous URL will be generated.
+[Laravel Docs - Validation](https://laravel.com/docs/8.x/validation)
+
+If validation fails, a redirect response to the previous URL will be generated.  
 If the incoming request is an XHR request, a JSON response with the
 validation error messages will be returned.
 
@@ -1018,7 +1038,7 @@ validation error messages will be returned.
 Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create']);
 Route::post('/post', [App\Http\Controllers\PostController::class, 'store']);
 
-// in blog PostController...
+// in app/Http/Controllers/PostController...
 public function store(Request $request)
 {
     $validated = $request->validate([
@@ -1032,6 +1052,8 @@ public function store(Request $request)
 ```
 
 ### Rules {.cols-3}
+[See all available rules](https://laravel.com/docs/8.x/validation#available-validation-rules)
+
 Can also be passed as an array
 ```php
 $validatedData = $request->validate([
@@ -1054,7 +1076,7 @@ Field must be a value after or equal to the given date.
 See [after:date](#afterdate)
 #### before:date
 Field must be a value preceding the given date.  
-The name of another field may be supplied as the value of `date`.
+The name of another field may be supplied as the value of `date`.  
 See [after:date](#afterdate)
 #### alpha_num
 Field must be entirely alpha-numeric characters
@@ -1064,34 +1086,36 @@ Accepted input are `true`, `false`, `1`, `0`, `"1"`, and `"0"`
 #### confirmed
 Field must have a matching field of `{field}_confirmation`.  
 For example, if the field is password, a matching `password_confirmation` field must be present
-#### date
-Field must be a valid, non-relative date according to the `strtotime` PHP function.
 #### current_password
 Field must match the authenticated user's password.
+#### date
+Field must be a valid, non-relative date according to the `strtotime` PHP function.
 #### email
 Field must be formatted as an email address.
 #### file
-Field must be a successfully uploaded file.
+Field must be a successfully uploaded file.  
+See: [Uploaded Files](#uploaded-files)
 #### max:value
-Field must be less than or equal to a maximum value. 
+Field must be less than or equal to a maximum value.  
 Strings, numerics, arrays, and files are evaluated like the [size](#sizevalue) rule.
 #### min:value
-Field must have a minimum value.   
+Field must have a minimum value.  
 Strings, numerics, arrays, and files are evaluated like the [size](#sizevalue) rule.
 #### mimetypes:text/plain,...
 File must match one of the given MIME types:
 ```php
 'video' => 'mimetypes:video/avi,video/mpeg,video/quicktime'
 ````
-_File's contents will be read and the framework will attempt to guess the 
+> _File's contents will be read and the framework will attempt to guess the 
 MIME type, regardless of the client's provided MIME type._
 #### mimes:foo,bar,...
 Field must have a MIME type corresponding to one of the listed extensions.
 ```php
 'photo' => 'mimes:jpg,bmp,png'
 ````
-_File's contents will be read and the framework will attempt to guess the 
-MIME type, regardless of the client's provided MIME type._
+> _File's contents will be read and the framework will attempt to guess the 
+MIME type, regardless of the client's provided MIME type._ 
+ 
 [Full listing of MIME types & extensions](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
 #### nullable
 Field may be null.
@@ -1110,9 +1134,9 @@ _anotherfield_ field is equal to any value.
 #### required
 Field must be present in the input data and not empty.  
 A field is considered "empty" if one of the following conditions are true:  
-- The value is null.
+- The value is `null`.
 - The value is an empty string.
-- The value is an empty array or empty Countable object.
+- The value is an empty array or empty `Countable` object.
 - The value is an uploaded file with no path.
 #### required_with:foo,bar,...
 Field must be present and not empty, only if any of the other 
@@ -1147,7 +1171,7 @@ $validatedData = $request->validate([
     'password' => ['required', 'confirmed', Password::min(8)],
 ]);
 ```
-Password rule object allows you to easily customize the password complexity requirements
+`Password` rule object allows you to easily customize the password complexity requirements
 ```php
 // Require at least 8 characters...
 Password::min(8)
@@ -1165,10 +1189,11 @@ Password::min(8)->numbers()
 Password::min(8)->symbols()
 ```
 Ensure a password has not been compromised in a public password data breach leak  
-_uses the [k-Anonymity](https://en.wikipedia.org/wiki/K-anonymity) model via the [haveibeenpwned.com](https://haveibeenpwned.com) service without sacrificing the user's privacy or security_
 ```php
 Password::min(8)->uncompromised()
 ```
+> _Uses the [k-Anonymity](https://en.wikipedia.org/wiki/K-anonymity) model via the [haveibeenpwned.com](https://haveibeenpwned.com) service without sacrificing the user's privacy or security_
+
 Methods can be chained 
 ```php
 Password::min(8)
@@ -1196,7 +1221,7 @@ Password::min(8)
 
 <!-- Create Post Form -->
 ```
-See also [Display Errors](#display-errors)
+See: [Validation Errors](#validation-errors)
 
 ### Optional Fields
 You will often need to mark your "optional" request fields as `nullable` 
@@ -1223,28 +1248,30 @@ $validated = $request->safe()->except(['name', 'email']);
 
 $validated = $request->safe()->all();
 ```
+#### Iterate
 ```php
-// Validated data may be iterated...
 foreach ($request->safe() as $key => $value) {
     //
 }
-
-// Validated data may be accessed as an array...
+```
+#### Access as an array
+```php
 $validated = $request->safe();
 
 $email = $validated['email'];
 ```
 
 
-
 Session {.cols-3}
 ---------------
+[Laravel Docs - Session](https://laravel.com/docs/8.x/session)
+
 Laravel ships with a variety of session backends that are accessed through 
 a unified API. Memcached, Redis, and database support is included.
 
 ### Configuration
-Session configuration is in `config/session.php`. By default, 
-Laravel is configured to use the file session driver
+Session configuration is in `config/session.php`.   
+By default, Laravel is configured to use the file session driver
 
 ### Retrieving Data {.cols-2}
 ##### Via Request
@@ -1265,12 +1292,12 @@ if the key does not exist
 ```php
 $value = $request->session()->get('key', 'default');
 
-// closure can be passed and executed as default
+// closure can be passed and executed as a default
 $value = $request->session()->get('key', function () {
     return 'default';
 });
 ```
-#### Via session Helper
+#### Via session helper
 ```php
 Route::get('/home', function () {
     // Retrieve a piece of data from the session...
@@ -1283,7 +1310,8 @@ Route::get('/home', function () {
     session(['key' => 'value']);
 });
 ```
-See [Session Helper]()
+See: [Session Helper]()
+
 #### All Session Data
 ```php
 $data = $request->session()->all();
@@ -1314,11 +1342,12 @@ if ($request->session()->missing('users')) {
 }
 ```
 ### Store Data
+Via a request instance
 ```php
-// Via a request instance...
 $request->session()->put('key', 'value');
-
-// Via the global "session" helper...
+```
+Via the global "session" helper
+```php
 session(['key' => 'value']);
 ```
 Push a new value onto a session value that is an array
@@ -1330,13 +1359,16 @@ $request->session()->push('user.teams', 'developers');
 
 Logging {.cols-3}
 ---------------
+[Laravel Docs - Logging](https://laravel.com/docs/8.x/logging)
+ 
+> Laravel utilizes the [Monolog](https://github.com/Seldaek/monolog) library
+
 ### Configuration
 Configuration options for logging behavior is in `config/logging.php`.  
-By default, Laravel will use the stack channel when logging messages, 
-which is used to aggregate multiple log channels into a single channel.
+By default, Laravel will use the stack channel when logging messages, which aggregates multiple log channels into a single channel.
 
 ### Levels
-Offers all the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424):  
+All the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424) are available:  
 - emergency
 - alert
 - critical
@@ -1370,6 +1402,8 @@ Log::info('User failed to login.', ['id' => $user->id]);
 
 Deployment {.cols-3}
 ---------------
+[Laravel Docs - Deployment](https://laravel.com/docs/8.x/deployment)
+
 Ensure your web server directs all requests to your application's `public/index.php` file
 
 ### Optimization
@@ -1378,9 +1412,9 @@ Ensure your web server directs all requests to your application's `public/index.
 composer install --optimize-autoloader --no-dev
 ``` 
 #### Configuration Loading
-_Be sure that you are only calling the `env` function from within your configuration files.   
+**_Be sure that you are only calling the `env` function from within your configuration files.   
 Once the configuration has been cached, the `.env` file will not be loaded and all calls 
-to the `env` function for `.env` variables will return `null`_
+to the `env` function for `.env` variables will return `null`_**
 ```bash
 php artisan config:cache
 ```
@@ -1399,14 +1433,13 @@ about an error is actually displayed to the user.
 By default, this option is set to the value of the `APP_DEBUG` environment 
 variable in your `.env` file.
 
-**In your production environment, this value should always be `false`.   
-If the `APP_DEBUG` variable is set to `true` in production, you risk exposing sensitive configuration values to end users.**
+_**In your production environment, this value should always be `false`.   
+If the `APP_DEBUG` variable is set to `true` in production, you risk exposing sensitive configuration values to end users.**_
 
 
 
 Also see 
 -------
-
 - [Laravel Docs](https://laravel.com/docs/8.x)
 - [Laracasts](https://laracasts.com/)
 - [Laravel API](https://laravel.com/api/8.x/)
