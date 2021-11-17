@@ -1,15 +1,14 @@
 ---
 title: Laravel
-date: 2021-11-09 
-icon: 
-background: bg-orange-500
+date: 2021-11-09 18:26:55
+icon: icon-laravel
+background: bg-red-500
 tags:
     - web
     - framework
     - php
 categories:
     - Programming
-    - Framework
 intro: |
     [Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. 
     This cheat sheet provides a reference for common commands and features for Laravel 8. 
@@ -18,10 +17,8 @@ intro: |
 
 Getting started {.cols-3}
 ---------------
-[Laravel Docs - Getting Started](https://laravel.com/docs/8.x/installation#your-first-laravel-project)
 
-### Requirements
-#### PHP
+### Requirements {.row-span-2}
 - PHP version >= 7.3
 - BCMath PHP Extension
 - Ctype PHP Extension
@@ -33,59 +30,58 @@ Getting started {.cols-3}
 - Tokenizer PHP Extension
 - XML PHP Extension
 
-#### Server
 Ensure your web server directs all requests to your application's 
-`public/index.php` file  
-See: [Deployment](#deployment)
+`public/index.php` file, See: [Deployment](#deployment)
 
 
-### Installation  {.cols-2}
-Local development with [Docker Desktop](https://www.docker.com/products/docker-desktop) and [Sail](https://laravel.com/docs/8.x/sail)
-#### Windows
-1. Install & enable [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install)
-2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-3. Ensure that Docker Desktop is [configured to use WSL2](https://docs.docker.com/desktop/windows/wsl/)
-4. In WSL2 terminal:
-```bash
-curl -s https://laravel.build/example-app | bash
+### Windows
+- #### Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- #### Install & enable [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install)
+- #### Ensure that Docker Desktop is [configured to use WSL2](https://docs.docker.com/desktop/windows/wsl/)
+- #### In WSL2 terminal:
+    ```shell
+    $ curl -s https://laravel.build/example-app | bash
+    $ cd example-app
+    $ ./vendor/bin/sail up
+    ```
+{.style-timeline}
 
-cd example-app
+Access application via `http://localhost`
 
-./vendor/bin/sail up
-```
-#### Mac
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. In terminal:
-```bash
-curl -s "https://laravel.build/example-app" | bash
 
-cd example-app
 
-./vendor/bin/sail up
-```
-#### Linux
-```bash
-curl -s https://laravel.build/example-app | bash
+### Mac
+- #### Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- #### In terminal:
+    ```shell
+    $ curl -s https://laravel.build/example-app | bash
+    $ cd example-app
+    $ ./vendor/bin/sail up
+    ```
+{.style-timeline}
 
-cd example-app
+Access application via `http://localhost`
 
-./vendor/bin/sail up
+
+### Linux
+```shell
+$ curl -s https://laravel.build/example-app | bash
+$ cd example-app
+$ ./vendor/bin/sail up
 ```
 Installation via [Composer](https://getcomposer.org)
 ```bash
-composer create-project laravel/laravel example-app
-
-cd example-app
-
-php artisan serve
+$ composer create-project laravel/laravel example-app
+$ cd example-app
+$ php artisan serve
 ```
+Access application via `http://localhost`
 
-Access application via http://localhost
+
 
 
 Configuration {.cols-3}
 ---------------
-[Laravel Docs - Configuration](https://laravel.com/docs/8.x/configuration)
 
 ### .env {.cols-2}
 Retrieve values from `.env` file
@@ -136,25 +132,21 @@ Temporarily disable application (503 status code)
 php artisan down
 ```
 
+#### Disable maintenance mode
+```bash
+php artisan up
+```
+
 #### Bypass Maintenance Mode
 ```bash
 php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
 ```
 Visit your application URL `https://example.com/1630542a-246b-4b66-afa1-dd72a4c43515` to set a cookie and bypass the maintenance screen
 
-#### Disable maintenance mode
-```bash
-php artisan up
-```
-
-Routing {.cols-4}
+Routing {.cols-3}
 ---------------
-[Laravel Docs - Basic Routing](https://laravel.com/docs/8.x/routing#basic-routing)
 
-Web routes: `routes/web.php`  
-API routes: `routes/api.php`
-
-### Router HTTP Methods
+### Router HTTP Methods {.row-span-2}
 ```php
 Route::get($uri, $callback);
 Route::post($uri, $callback);
@@ -174,7 +166,7 @@ Route::any('/', function () {
 });
 ```
 
-### Basic Definition
+### Basic Definition {.row-span-2}
 ```php
 use Illuminate\Support\Facades\Route;
 
@@ -191,7 +183,6 @@ Route::get(
 ```
 
 ### Dependency Injection
-Type hint concrete dependencies for auto-injection
 ```php
 use Illuminate\Http\Request;
 
@@ -199,115 +190,22 @@ Route::get('/users', function (Request $request) {
     // ...
 });
 ```
+Type hint concrete dependencies for auto-injection
 
-### Redirect Routes
-HTTP `302` status
-```php
-Route::redirect('/here', '/there');
-```
-Set the status code
-```php
-Route::redirect('/here', '/there', 301);
-```
-Permanent `301` redirect
-```php
-Route::permanentRedirect('/here', '/there');
-```
 
 ### View Routes
-Route only needs to return a view.  
-First argument: URI, second argument: view name
 ```php
+// Argument 1: URI, Argument 2: view name
 Route::view('/welcome', 'welcome');
 
 // with data
 Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
 ```
+Route only needs to return a view.  
 
-### Route Parameters {.cols-2}
-Capture segments of the URI within your route
-#### Required parameters
-```php
-Route::get('/user/{id}', function ($id) {
-    return 'User '.$id;
-});
-```
-With dependency injection
-```php
-use Illuminate\Http\Request;
 
-Route::get('/user/{id}', function (Request $request, $id) {
-    return 'User '.$id;
-});
-```
-#### Optional Parameters
-```php
-Route::get('/user/{name?}', function ($name = null) {
-    return $name;
-});
 
-Route::get('/user/{name?}', function ($name = 'John') {
-    return $name;
-});
-```
-### Regular Expression Constraints {.cols-2}
-```php
-Route::get('/user/{name}', function ($name) {
-    //
-})->where('name', '[A-Za-z]+');
-
-Route::get('/user/{id}', function ($id) {
-    //
-})->where('id', '[0-9]+');
-
-Route::get('/user/{id}/{name}', function ($id, $name) {
-    //
-})->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
-```
-
-### Named Routes
-Route names should always be unique
-```php
-Route::get('/user/profile', function () {
-    //
-})->name('profile');
-```
-See: [Helpers](#helpers-cols-3)
-
-### Route Groups {.cols-2}
-Share attributes across routes
-#### Middleware
-```php
-Route::middleware(['first', 'second'])->group(function () {
-    Route::get('/', function () {
-        // Uses first & second middleware...
-    });
-
-    Route::get('/user/profile', function () {
-        // Uses first & second middleware...
-    });
-});
-```
-#### Prefixes
-URI prefix
-```php
-Route::prefix('admin')->group(function () {
-    Route::get('/users', function () {
-        // Matches The "/admin/users" URL
-    });
-});
-```
-Name Prefix
-```php
-Route::name('admin.')->group(function () {
-    Route::get('/users', function () {
-        // Route assigned name "admin.users"...
-    })->name('users');
-});
-```
-
-### Route Model Binding {.cols-2}
-Convenient way to automatically inject the model instances directly into your routes
+### Route Model Binding {.row-span-4}
 #### Implicit binding
 With closure
 ```php
@@ -360,29 +258,140 @@ Route::get('/users/{user}/posts/{post:slug}', function (User $user, Post $post) 
     return $post;
 });
 ```
+Convenient way to automatically inject the model instances directly into your routes
+
+
+
+
+### Route Parameters {.row-span-2}
+Capture segments of the URI within your route
+#### Required parameters
+```php
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
+```
+With dependency injection
+```php
+use Illuminate\Http\Request;
+
+Route::get('/user/{id}', function (Request $request, $id) {
+    return 'User '.$id;
+});
+```
+#### Optional Parameters
+```php
+Route::get('/user/{name?}', function ($name = null) {
+    return $name;
+});
+
+Route::get('/user/{name?}', function ($name = 'John') {
+    return $name;
+});
+```
+
+
+
+### Redirect Routes
+HTTP `302` status
+```php
+Route::redirect('/here', '/there');
+```
+Set the status code
+```php
+Route::redirect('/here', '/there', 301);
+```
+Permanent `301` redirect
+```php
+Route::permanentRedirect('/here', '/there');
+```
+
+
+### Regular Expression Constraints {.cols-2}
+```php
+Route::get('/user/{name}', function ($name) {
+    //
+})->where('name', '[A-Za-z]+');
+
+Route::get('/user/{id}', function ($id) {
+    //
+})->where('id', '[0-9]+');
+
+Route::get('/user/{id}/{name}', function ($id, $name) {
+    //
+})->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+```
+See also: [Regex Cheatsheet](/regex)
+
+### Named Routes
+Route names should always be unique
+```php
+Route::get('/user/profile', function () {
+    //
+})->name('profile');
+```
+See: [Helpers](#helpers-cols-3)
+
+
 ### Fallback Routes
-Executed when no other routes match
 ```php
 Route::fallback(function () {
     //
 });
 ```
+Executed when no other routes match
+
+### Route Groups
+#### Middleware
+```php
+Route::middleware(['first', 'second'])->group(function () {
+    Route::get('/', function () {
+        // Uses first & second middleware...
+    });
+
+    Route::get('/user/profile', function () {
+        // Uses first & second middleware...
+    });
+});
+```
+#### URI Prefixes
+```php
+Route::prefix('admin')->group(function () {
+    Route::get('/users', function () {
+        // Matches The "/admin/users" URL
+    });
+});
+```
+#### Name Prefix
+```php
+Route::name('admin.')->group(function () {
+    Route::get('/users', function () {
+        // Route assigned name "admin.users"...
+    })->name('users');
+});
+```
+Share attributes across routes
+
 
 ### Accessing current route
 ```php
 use Illuminate\Support\Facades\Route;
 
-$route = Route::current(); // Illuminate\Routing\Route
-$name = Route::currentRouteName(); // string
-$action = Route::currentRouteAction(); // string
+// Illuminate\Routing\Route
+$route = Route::current();
+
+// string
+$name = Route::currentRouteName();
+
+// string
+$action = Route::currentRouteAction();
 ```
 
 
 Helpers {.cols-3}
 ---------------
-[Laravel Docs - Helpers](https://laravel.com/docs/8.x/helpers)
 
-### routes
+### routes {.row-span-2}
 #### Named route
 ```php
 $url = route('profile');
@@ -395,7 +404,7 @@ $url = route('profile', ['id' => 1]);
 
 // /user/1/profile/
 ```
-Additional parameters will be added to query string
+With query string
 ```php
 // Route::get('/user/{id}/profile', /*...*/ )->name('profile);
 
@@ -403,17 +412,18 @@ $url = route('profile', ['id' => 1, 'photos'=>'yes']);
 
 // /user/1/profile?photos=yes
 ```
-#### Eloquent Models
-You may pass Eloquent models as parameter values. The 
-route helper will automatically extract the model's route key
-```php
-echo route('post.show', ['post' => $post]);
-```
+
 #### Redirects
 ```php
 // Generating Redirects...
 return redirect()->route('profile');
 ```
+
+#### Eloquent Models
+```php
+echo route('post.show', ['post' => $post]);
+```
+The route helper will automatically extract the model's route key.
 See [Routing](#routing-cols-4)
 
 ### URL Generation
@@ -445,7 +455,6 @@ $url = route('profile');
 See [Named Route](#named-route)
 
 ### Error Handling
-Report an exception but continue handling the current request
 ```php
 public function isValid($value)
 {
@@ -458,17 +467,18 @@ public function isValid($value)
     }
 }
 ```
+Report an exception but continue handling the current request
+
  ### HTTP Exceptions
- Generate an HTTP exception response using status code
  ```php
  // page not found
  abort(404);
  ```
+Generate an HTTP exception response using status code
 
 
 Controllers {.cols-3}
 ---------------
-[Laravel Docs - Controllers](https://laravel.com/docs/8.x/controllers)
 
 ### Basic
 ```php
@@ -496,7 +506,6 @@ Route::get('/user/{id}', [UserController::class, 'show']);
 
 Requests {.cols-3}
 ---------------
-[Laravel Docs - HTTP Requests](https://laravel.com/docs/8.x/requests)
 
 ### CSRF Protection
 Laravel automatically generates a CSRF "token" for each active user session.  
@@ -589,6 +598,12 @@ if ($request->isMethod('post')) {
 }
 ```
 
+### Client IP
+```php
+$ipAddress = $request->ip();
+```
+
+
 ### Headers 
 ```php
 $value = $request->header('X-Header-Name');
@@ -604,11 +619,6 @@ if ($request->hasHeader('X-Header-Name')) {
 $token = $request->bearerToken();
 ```
 
-### Client IP
-```php
-$ipAddress = $request->ip();
-```
-
 ### Content Type
 Return an array containing all the content types accepted by the request
 ```php
@@ -622,7 +632,7 @@ if ($request->accepts(['text/html', 'application/json'])) {
 ```
 
 
-### Input
+### Input {.row-span-4}
 Retrieve all the incoming request's input data as an array
 ```php
 $input = $request->all();
@@ -762,11 +772,9 @@ See More: [Laravel File Storage](https://laravel.com/docs/8.x/filesystem)
 
 Views {.cols-3}
 ---------------
-[Laravel Docs - Views](https://laravel.com/docs/8.x/views)
-
-Presentational logic and HTML.  
-Create a view by placing a file with the `.blade.php` 
-extension in the `resources/views` directory.
+### Intro
+- [Laravel Docs - Views](https://laravel.com/docs/8.x/views)
+ 
 ```html
 <!-- View stored in resources/views/greeting.blade.php -->
 
@@ -776,22 +784,10 @@ extension in the `resources/views` directory.
     </body>
 </html>
 ```
+Create a view by placing a file with the `.blade.php`
+extension in the `resources/views` directory.
 
-### view helper
-Return a view from a route with the `view()` helper
-```php
-Route::get('/', function () {
-    return view('greeting', ['name' => 'James']);
-});
-```
-See [View Routes](#view-routes)  
-See [Helpers](#helpers-cols-3)
 
-### Subdirectories
-```php
-// resources/views/admin.profile.blade.php
-return view('admin.profile');
-```
 ### Pass Data to Views
 #### As an array
 ```php
@@ -815,9 +811,29 @@ Access each value using the data's keys
 </html>
 ```
 
+
+### view helper
+Return a view from a route with the `view()` helper
+```php
+Route::get('/', function () {
+    return view('greeting', ['name' => 'James']);
+});
+```
+See: [View Routes](#view-routes)  and [Helpers](#helpers)
+
+
+### Subdirectories
+```php
+// resources/views/admin.profile.blade.php
+return view('admin.profile');
+```
+
+
 Blade Templates {.cols-3}
 ---------------
-[Laravel Docs - Blade Templates](https://laravel.com/docs/8.x/blade)
+
+### Intro
+- [Laravel Docs - Blade Templates](https://laravel.com/docs/8.x/blade)
 
 Blade is the templating engine included in Laravel 
 that also allows you to use plain PHP.
@@ -836,24 +852,8 @@ See: [Views](#view-helper)
 {{-- This comment will not be present in the rendered HTML --}}
 ```
 
-### Displaying Data
-Blade's echo statements `{{ }}` are automatically sent through 
-PHP's `htmlspecialchars` function to prevent XSS attacks.
 
-Display the contents of the name variable:
-```html
-Hello, {{ $name }}.
-```
-Display results of a PHP function:
-```html
-The current UNIX timestamp is {{ time() }}.
-```
-Display data without escaping with `htmlspecialchars`
-```html
-Hello, {!! $name !!}.
-```
-
-### Directives {.cols-2}
+### Directives {.row-span-3}
 #### if Statements
 ```php
 @if (count($records) === 1)
@@ -920,6 +920,24 @@ Loop Iteration:
 ```
 See more: [Laravel Loop Variable](https://laravel.com/docs/8.x/blade#the-loop-variable)
 
+
+### Displaying Data
+Blade's echo statements `{{ }}` are automatically sent through 
+PHP's `htmlspecialchars` function to prevent XSS attacks.
+
+Display the contents of the name variable:
+```html
+Hello, {{ $name }}.
+```
+Display results of a PHP function:
+```html
+The current UNIX timestamp is {{ time() }}.
+```
+Display data without escaping with `htmlspecialchars`
+```html
+Hello, {!! $name !!}.
+```
+
 ### Including Subviews
 Include a Blade view from within another view.  
 All variables that are available to the parent view are also available to the included view
@@ -975,7 +993,8 @@ Prepend to the beginning of a stack
 
 Forms {.cols-3}
 ---------------
-[Laravel Docs - Forms](https://laravel.com/docs/8.x/blade#forms)
+### Intro
+- [Laravel Docs - Forms](https://laravel.com/docs/8.x/blade#forms)
 
 ### CSRF Field
 Include a hidden CSRF token field to validate the request
@@ -1026,7 +1045,8 @@ Or the `old()` helper
 
 Validation {.cols-3}
 ---------------
-[Laravel Docs - Validation](https://laravel.com/docs/8.x/validation)
+### Intro
+- [Laravel Docs - Validation](https://laravel.com/docs/8.x/validation)
 
 If validation fails, a redirect response to the previous URL will be generated.  
 If the incoming request is an XHR request, a JSON response with the
@@ -1051,9 +1071,7 @@ public function store(Request $request)
 }
 ```
 
-### Rules {.cols-3}
-[See all available rules](https://laravel.com/docs/8.x/validation#available-validation-rules)
-
+### Rules {.row-span-5}
 Can also be passed as an array
 ```php
 $validatedData = $request->validate([
@@ -1106,15 +1124,15 @@ File must match one of the given MIME types:
 ```php
 'video' => 'mimetypes:video/avi,video/mpeg,video/quicktime'
 ````
-> _File's contents will be read and the framework will attempt to guess the 
-MIME type, regardless of the client's provided MIME type._
+File's contents will be read and the framework will attempt to guess the 
+MIME type, regardless of the client's provided MIME type.
 #### mimes:foo,bar,...
 Field must have a MIME type corresponding to one of the listed extensions.
 ```php
 'photo' => 'mimes:jpg,bmp,png'
 ````
-> _File's contents will be read and the framework will attempt to guess the 
-MIME type, regardless of the client's provided MIME type._ 
+File's contents will be read and the framework will attempt to guess the 
+MIME type, regardless of the client's provided MIME type.
  
 [Full listing of MIME types & extensions](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
 #### nullable
@@ -1264,17 +1282,41 @@ $email = $validated['email'];
 
 Session {.cols-3}
 ---------------
-[Laravel Docs - Session](https://laravel.com/docs/8.x/session)
+### Intro
+- [Laravel Docs - Session](https://laravel.com/docs/8.x/session)
 
 Laravel ships with a variety of session backends that are accessed through 
 a unified API. Memcached, Redis, and database support is included.
 
-### Configuration
+#### Configuration
 Session configuration is in `config/session.php`.   
 By default, Laravel is configured to use the file session driver
 
-### Retrieving Data {.cols-2}
-##### Via Request
+
+
+### Check Isset / Exists
+Returns `true` if the item is present and is not `null`:
+```php
+if ($request->session()->has('users')) {
+    //
+}
+```
+Returns `true` if present, even if it's `null`:
+```php
+if ($request->session()->exists('users')) {
+    //
+}
+```
+Returns `true` if the item is `null` or is not present:
+```php
+if ($request->session()->missing('users')) {
+    //
+}
+```
+
+
+### Retrieving Data {.row-span-2}
+#### Via Request
 ```php
 // ...
 class UserController extends Controller
@@ -1287,7 +1329,7 @@ class UserController extends Controller
     }
 }
 ```
-Pass a default value as the second argument to use 
+Pass a default value as the second argument to use
 if the key does not exist
 ```php
 $value = $request->session()->get('key', 'default');
@@ -1322,25 +1364,6 @@ Retrieve and delete an item from the session
 $value = $request->session()->pull('key', 'default');
 ```
 
-### Check Isset / Exists
-Returns `true` if the item is present and is not `null`:
-```php
-if ($request->session()->has('users')) {
-    //
-}
-```
-Returns `true` if present, even if it's `null`:
-```php
-if ($request->session()->exists('users')) {
-    //
-}
-```
-Returns `true` if the item is `null` or is not present:
-```php
-if ($request->session()->missing('users')) {
-    //
-}
-```
 ### Store Data
 Via a request instance
 ```php
@@ -1359,15 +1382,12 @@ $request->session()->push('user.teams', 'developers');
 
 Logging {.cols-3}
 ---------------
-[Laravel Docs - Logging](https://laravel.com/docs/8.x/logging)
- 
-> Laravel utilizes the [Monolog](https://github.com/Seldaek/monolog) library
 
 ### Configuration
 Configuration options for logging behavior is in `config/logging.php`.  
 By default, Laravel will use the stack channel when logging messages, which aggregates multiple log channels into a single channel.
 
-### Levels
+### Levels {.row-span-2}
 All the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424) are available:  
 - emergency
 - alert
@@ -1378,7 +1398,7 @@ All the log levels defined in the [RFC 5424 specification](https://tools.ietf.or
 - info
 - debug
 
-### Log Facade
+### Log Facade {.row-span-2}
 ```php
 use Illuminate\Support\Facades\Log;
 
@@ -1402,8 +1422,9 @@ Log::info('User failed to login.', ['id' => $user->id]);
 
 Deployment {.cols-3}
 ---------------
-[Laravel Docs - Deployment](https://laravel.com/docs/8.x/deployment)
-
+### Intro
+- [Laravel Docs - Deployment](https://laravel.com/docs/8.x/deployment)
+ 
 Ensure your web server directs all requests to your application's `public/index.php` file
 
 ### Optimization
@@ -1412,9 +1433,9 @@ Ensure your web server directs all requests to your application's `public/index.
 composer install --optimize-autoloader --no-dev
 ``` 
 #### Configuration Loading
-**_Be sure that you are only calling the `env` function from within your configuration files.   
+Be sure that you are only calling the `env` function from within your configuration files.   
 Once the configuration has been cached, the `.env` file will not be loaded and all calls 
-to the `env` function for `.env` variables will return `null`_**
+to the `env` function for `.env` variables will return `null`
 ```bash
 php artisan config:cache
 ```
@@ -1432,9 +1453,8 @@ The debug option in your `config/app.php` determines how much information
 about an error is actually displayed to the user.  
 By default, this option is set to the value of the `APP_DEBUG` environment 
 variable in your `.env` file.
-
-_**In your production environment, this value should always be `false`.   
-If the `APP_DEBUG` variable is set to `true` in production, you risk exposing sensitive configuration values to end users.**_
+In your production environment, this value should always be `false`.   
+If the `APP_DEBUG` variable is set to `true` in production, you risk exposing sensitive configuration values to end users.
 
 
 
