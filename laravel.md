@@ -19,7 +19,6 @@ intro: |
 Getting started {.cols-3}
 ---------------
 
-
 ### Requirements
 #### PHP
 - PHP version >= 7.3
@@ -1367,6 +1366,42 @@ use Illuminate\Support\Facades\Log;
 
 Log::info('User failed to login.', ['id' => $user->id]);
 ```
+
+
+Deployment {.cols-3}
+---------------
+Ensure your web server directs all requests to your application's `public/index.php` file
+
+### Optimization
+#### Composer's autoloader map
+```bash
+composer install --optimize-autoloader --no-dev
+``` 
+#### Configuration Loading
+_Be sure that you are only calling the `env` function from within your configuration files.   
+Once the configuration has been cached, the `.env` file will not be loaded and all calls 
+to the `env` function for `.env` variables will return `null`_
+```bash
+php artisan config:cache
+```
+#### Route Loading
+```bash
+php artisan route:cache
+```
+#### View Loading
+```bash
+php artisan view:cache
+```
+
+### Debug Mode
+The debug option in your `config/app.php` determines how much information 
+about an error is actually displayed to the user.  
+By default, this option is set to the value of the `APP_DEBUG` environment 
+variable in your `.env` file.
+
+**In your production environment, this value should always be `false`.   
+If the `APP_DEBUG` variable is set to `true` in production, you risk exposing sensitive configuration values to end users.**
+
 
 
 Also see 
