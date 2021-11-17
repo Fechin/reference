@@ -393,16 +393,67 @@ $url = route('profile', ['id' => 1, 'photos'=>'yes']);
 
 // /user/1/profile?photos=yes
 ```
+#### Eloquent Models
+You may pass Eloquent models as parameter values. The 
+route helper will automatically extract the model's route key
+```php
+echo route('post.show', ['post' => $post]);
+```
 #### Redirects
 ```php
 // Generating Redirects...
 return redirect()->route('profile');
 ```
 
+### URL Generation
+Generate arbitrary URLs for your application that will 
+automatically use the scheme (HTTP or HTTPS) and host 
+from the current request
+```php
+$post = App\Models\Post::find(1);
+
+echo url("/posts/{$post->id}");
+
+// http://example.com/posts/1
+```
+#### Current URL
+```php
+// Get the current URL without the query string...
+echo url()->current();
+
+// Get the current URL including the query string...
+echo url()->full();
+
+// Get the full URL for the previous request...
+echo url()->previous();
+```
+### Named Route URL
+See [Named Route](#named-route)
+
+### Error Handling
+Report an exception but continue handling the current request
+```php
+public function isValid($value)
+{
+    try {
+        // Validate the value...
+    } catch (Throwable $e) {
+        report($e);
+
+        return false;
+    }
+}
+```
+ ### HTTP Exceptions
+ Generate an HTTP exception response using status code
+ ```php
+ // page not found
+ abort(404);
+ ```
+
 
 Controllers {.cols-3}
 ---------------
-
 ### Basic
 ```php
 namespace App\Http\Controllers;
@@ -707,11 +758,12 @@ extension in the `resources/views` directory.
 
 <html>
     <body>
-        <h1>Hello, {{ $name }}</h1>
+        <h1>Hello, <?php echo $name; ?></h1>
     </body>
 </html>
 ```
 
+### view() helper
 Return a view from a route with the `view()` helper
 ```php
 Route::get('/', function () {
@@ -721,7 +773,600 @@ Route::get('/', function () {
 See [Routing](#routing-cols-4)
 See [Helpers](#helpers-cols-3)
 
+### Subdirectories
+```php
+// resources/views/admin.profile.blade.php
+return view('admin.profile');
+```
+## Pass Data to Views
+#### As an array
+```php
+return view('greetings', ['name' => 'Victoria']);
+```
+#### Using with()
+```php
+return view('greeting')
+            ->with('name', 'Victoria')
+            ->with('occupation', 'Astronaut');
+```
 
+Access each value using the data's keys
+```html
+<html>
+    <body>
+        <h1>Hello, {{ $name }}</h1>
+        <!-- Or -->
+        <h1>Hello, <?php echo $name; ?></h1>
+    </body>
+</html>
+```
+
+Blade Templating Engine {.cols-3}
+---------------
+Blade is the templating engine included in Laravel 
+that also allows you to use plain PHP.
+
+### Views
+Blade views are returned using the `view()` helper
+```php
+Route::get('/', function () {
+    return view('welcome', ['name' => 'Samantha']);
+});
+```
+[See Views](#view-helper)
+
+### Displaying Data
+Blade's echo statements `{{ }}` are automatically sent through 
+PHP's `htmlspecialchars` function to prevent XSS attacks.
+
+Display the contents of the name variable:
+```html
+Hello, {{ $name }}.
+```
+Display results of a PHP function:
+```html
+The current UNIX timestamp is {{ time() }}.
+```
+Display data without escaping with `htmlspecialchars`
+```html
+Hello, {!! $name !!}.
+```
+
+### Comments
+```html
+{{-- This comment will not be present in the rendered HTML --}}
+```
+
+### Directives {.cols-2}
+#### if Statements
+```php
+@if (count($records) === 1)
+    I have one record!
+@elseif (count($records) > 1)
+    I have multiple records!
+@else
+    I don't have any records!
+@endif
+```
+#### isset & empty
+```php
+@isset($records)
+    // $records is defined and is not null...
+@endisset
+
+@empty($records)
+    // $records is "empty"...
+@endempty
+```
+#### Authentication
+```php
+@auth
+    // The user is authenticated...
+@endauth
+
+@guest
+    // The user is not authenticated...
+@endguest
+```
+#### Loops
+```html
+@for ($i = 0; $i < 10; $i++)
+    The current value is {{ $i }}
+@endfor
+
+@foreach ($users as $user)
+    <p>This is user {{ $user->id }}</p>
+@endforeach
+
+@forelse ($users as $user)
+    <li>{{ $user->name }}</li>
+@empty
+    <p>No users</p>
+@endforelse
+
+@while (true)
+    <p>I'm looping forever.</p>
+@endwhile
+```
+Loop Iteration:
+```php
+@foreach ($users as $user)
+    @if ($loop->first)
+        This is the first iteration.
+    @endif
+
+    @if ($loop->last)
+        This is the last iteration.
+    @endif
+
+    <p>This is user {{ $user->id }}</p>
+@endforeach
+```
+[See more](https://laravel.com/docs/8.x/blade#the-loop-variable)
+
+### Including Subviews
+Include a Blade view from within another view. All variables that 
+are available to the parent view are also available to the included view
+```html
+<div>
+    <!-- resources/views/shared/errors/blade.php -->
+    @include('shared.errors')
+
+    <form>
+        <!-- Form Contents -->
+    </form>
+</div>
+```
+
+### Raw PHP
+Execute a block of plain PHP
+```php
+@php
+    $counter = 1;
+@endphp
+```
+
+### Stacks
+Blade allows you to push to named stacks which can be rendered in another view or layout.
+Useful for javascript libraries required by child views
+```html
+<!-- Add to the stack -->
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush
+```
+Render the stack
+```html
+<head>
+    <!-- Head Contents -->
+
+    @stack('scripts')
+</head>
+```
+Prepend to the beginning of a stack
+```php
+@push('scripts')
+    This will be second...
+@endpush
+
+// Later...
+
+@prepend('scripts')
+    This will be first...
+@endprepend
+```
+
+
+
+
+Forms {.cols-3}
+---------------
+### CSRF Field
+Include a hidden CSRF token field to validate the request
+```html
+<form method="POST" action="/profile">
+    @csrf
+    
+    ...
+</form>
+```
+
+### Method Field
+Since HTML forms can't make `PUT`, `PATCH`, or `DELETE` requests, you 
+will need to add a hidden `_method` field to spoof these HTTP verbs:
+```html
+<form action="/post/my-post" method="POST">
+    @method('PUT')
+
+    ...
+</form>
+```
+
+### Validation Errors
+```html
+<!-- /resources/views/post/create.blade.php -->
+
+<label for="title">Post Title</label>
+
+<input id="title" type="text" class="@error('title') is-invalid @enderror">
+
+@error('title')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+```
+[See Validation](#validation)
+
+### Repopulating Forms
+When redirecting due to a validation error, request input is flashed to the session.
+Retrieve the input from the previous request with the `old()` method
+```php
+$title = $request->old('title');
+```
+Or the `old()` helper
+```html
+<input type="text" name="title" value="{{ old('title') }}">
+```
+
+Validation {.cols-3}
+---------------
+If validation fails, a redirect response to the previous URL will be generated.
+If the incoming request is an XHR request, a JSON response with the
+validation error messages will be returned.
+
+### Logic
+```php
+// in routes/web.php
+Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create']);
+Route::post('/post', [App\Http\Controllers\PostController::class, 'store']);
+
+// in blog PostController...
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        // input name => validation rules
+        'title' => 'required|unique:posts|max:255',
+        'body' => 'required',
+    ]);
+
+    // The blog post is valid...
+}
+```
+
+### Rules {.cols-3}
+Can also be passed as an array
+```php
+$validatedData = $request->validate([
+    'title' => ['required', 'unique:posts', 'max:255'],
+    'body' => ['required'],
+]);
+```
+#### after:date
+Field must be a value after a given date.
+```php
+'start_date' => 'required|date|after:tomorrow'
+```
+Instead of a date string, you may specify another field to compare against the date
+```php
+'finish_date' => 'required|date|after:start_date'
+```
+See [before:date](#beforedate)
+#### after_or_equal:date
+Field must be a value after or equal to the given date.  
+See [after:date](#afterdate)
+#### before:date
+Field must be a value preceding the given date.  
+The name of another field may be supplied as the value of `date`.
+See [after:date](#afterdate)
+#### alpha_num
+Field must be entirely alpha-numeric characters
+#### boolean
+Field must be able to be cast as a `boolean`.  
+Accepted input are `true`, `false`, `1`, `0`, `"1"`, and `"0"`
+#### confirmed
+Field must have a matching field of `{field}_confirmation`.  
+For example, if the field is password, a matching `password_confirmation` field must be present
+#### date
+Field must be a valid, non-relative date according to the `strtotime` PHP function.
+#### current_password
+Field must match the authenticated user's password.
+#### email
+Field must be formatted as an email address.
+#### file
+Field must be a successfully uploaded file.
+#### max:value
+Field must be less than or equal to a maximum value. 
+Strings, numerics, arrays, and files are evaluated like the [size](#sizevalue) rule.
+#### min:value
+Field must have a minimum value.   
+Strings, numerics, arrays, and files are evaluated like the [size](#sizevalue) rule.
+#### mimetypes:text/plain,...
+File must match one of the given MIME types:
+```php
+'video' => 'mimetypes:video/avi,video/mpeg,video/quicktime'
+````
+_File's contents will be read and the framework will attempt to guess the 
+MIME type, regardless of the client's provided MIME type._
+#### mimes:foo,bar,...
+Field must have a MIME type corresponding to one of the listed extensions.
+```php
+'photo' => 'mimes:jpg,bmp,png'
+````
+_File's contents will be read and the framework will attempt to guess the 
+MIME type, regardless of the client's provided MIME type._
+[Full listing of MIME types & extensions](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
+#### nullable
+Field may be null.
+#### numeric
+Field must be numeric.
+#### password
+Field must match the authenticated user's password.
+#### prohibited
+Field must be empty or not present.
+#### prohibited_if:anotherfield,value,...
+Field must be empty or not present if the 
+_anotherfield_ field is equal to any value.
+#### prohibited_unless:anotherfield,value,...
+Field must be empty or not present unless the 
+_anotherfield_ field is equal to any value.
+#### required
+Field must be present in the input data and not empty.  
+A field is considered "empty" if one of the following conditions are true:  
+- The value is null.
+- The value is an empty string.
+- The value is an empty array or empty Countable object.
+- The value is an uploaded file with no path.
+#### required_with:foo,bar,...
+Field must be present and not empty, only if any of the other 
+specified fields are present and not empty
+#### size:value
+Field must have a size matching the given value. 
+- For strings: number of characters
+- For numeric data: integer value (must also have the `numeric` or `integer` rule). 
+- For arrays: count of the array
+- For files: file size in kilobytes
+```php
+// Validate that a string is exactly 12 characters long...
+'title' => 'size:12';
+// Validate that a provided integer equals 10...
+'seats' => 'integer|size:10';
+// Validate that an array has exactly 5 elements...
+'tags' => 'array|size:5';
+// Validate that an uploaded file is exactly 512 kilobytes...
+'image' => 'file|size:512';
+```
+#### unique:table,column
+Field must not exist within the given database table
+#### url
+Field must be a valid URL
+
+[See all available rules](https://laravel.com/docs/8.x/validation#available-validation-rules)
+
+### Validate Passwords
+Ensure passwords have an adequate level of complexity
+```php
+$validatedData = $request->validate([
+    'password' => ['required', 'confirmed', Password::min(8)],
+]);
+```
+Password rule object allows you to easily customize the password complexity requirements
+```php
+// Require at least 8 characters...
+Password::min(8)
+
+// Require at least one letter...
+Password::min(8)->letters()
+
+// Require at least one uppercase and one lowercase letter...
+Password::min(8)->mixedCase()
+
+// Require at least one number...
+Password::min(8)->numbers()
+
+// Require at least one symbol...
+Password::min(8)->symbols()
+```
+Ensure a password has not been compromised in a public password data breach leak  
+_uses the [k-Anonymity](https://en.wikipedia.org/wiki/K-anonymity) model via the [haveibeenpwned.com](https://haveibeenpwned.com) service without sacrificing the user's privacy or security_
+```php
+Password::min(8)->uncompromised()
+```
+Methods can be chained 
+```php
+Password::min(8)
+    ->letters()
+    ->mixedCase()
+    ->numbers()
+    ->symbols()
+    ->uncompromised()
+```
+### Display Validation Errors 
+```php
+<!-- /resources/views/post/create.blade.php -->
+
+<h1>Create Post</h1>
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<!-- Create Post Form -->
+```
+See also [Display Errors](#display-errors)
+
+### Optional Fields
+You will often need to mark your "optional" request fields as `nullable` 
+if you do not want the validator to consider `null` values as invalid
+```php
+// publish_at field may be either null or a valid date representation
+$request->validate([
+    'title' => 'required|unique:posts|max:255',
+    'body' => 'required',
+    'publish_at' => 'nullable|date',
+]);
+```
+
+### Validated Input
+Retrieve the request data that underwent validation
+```php
+$validated = $request->validated();
+```
+Or with `safe()`, which returns an instance of `Illuminate\Support\ValidatedInput`
+```php
+$validated = $request->safe()->only(['name', 'email']);
+
+$validated = $request->safe()->except(['name', 'email']);
+
+$validated = $request->safe()->all();
+```
+```php
+// Validated data may be iterated...
+foreach ($request->safe() as $key => $value) {
+    //
+}
+
+// Validated data may be accessed as an array...
+$validated = $request->safe();
+
+$email = $validated['email'];
+```
+
+
+
+Session {.cols-3}
+---------------
+Laravel ships with a variety of session backends that are accessed through 
+a unified API. Memcached, Redis, and database support is included.
+
+### Configuration
+Session configuration is in `config/session.php`. By default, 
+Laravel is configured to use the file session driver
+
+### Retrieving Data {.cols-2}
+##### Via Request
+```php
+// ...
+class UserController extends Controller
+{
+    public function show(Request $request, $id)
+    {
+        $value = $request->session()->get('key');
+
+        //
+    }
+}
+```
+Pass a default value as the second argument to use 
+if the key does not exist
+```php
+$value = $request->session()->get('key', 'default');
+
+// closure can be passed and executed as default
+$value = $request->session()->get('key', function () {
+    return 'default';
+});
+```
+#### Via session Helper
+```php
+Route::get('/home', function () {
+    // Retrieve a piece of data from the session...
+    $value = session('key');
+
+    // Specifying a default value...
+    $value = session('key', 'default');
+
+    // Store a piece of data in the session...
+    session(['key' => 'value']);
+});
+```
+See [Session Helper]()
+#### All Session Data
+```php
+$data = $request->session()->all();
+```
+#### Retrieve and Delete
+Retrieve and delete an item from the session
+```php
+$value = $request->session()->pull('key', 'default');
+```
+
+### Check Isset / Exists
+Returns `true` if the item is present and is not `null`:
+```php
+if ($request->session()->has('users')) {
+    //
+}
+```
+Returns `true` if present, even if it's `null`:
+```php
+if ($request->session()->exists('users')) {
+    //
+}
+```
+Returns `true` if the item is `null` or is not present:
+```php
+if ($request->session()->missing('users')) {
+    //
+}
+```
+### Store Data
+```php
+// Via a request instance...
+$request->session()->put('key', 'value');
+
+// Via the global "session" helper...
+session(['key' => 'value']);
+```
+Push a new value onto a session value that is an array
+```php
+// array of team names
+$request->session()->push('user.teams', 'developers');
+```
+
+
+Logging {.cols-3}
+---------------
+### Configuration
+Configuration options for logging behavior is in `config/logging.php`.  
+By default, Laravel will use the stack channel when logging messages, 
+which is used to aggregate multiple log channels into a single channel.
+
+### Levels
+Offers all the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424):  
+- emergency
+- alert
+- critical
+- error
+- warning
+- notice
+- info
+- debug
+
+### Log Facade
+```php
+use Illuminate\Support\Facades\Log;
+
+Log::emergency($message);
+Log::alert($message);
+Log::critical($message);
+Log::error($message);
+Log::warning($message);
+Log::notice($message);
+Log::info($message);
+Log::debug($message);
+``` 
+
+### Contextual Info
+```php
+use Illuminate\Support\Facades\Log;
+
+Log::info('User failed to login.', ['id' => $user->id]);
+```
 
 
 Also see 
