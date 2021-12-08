@@ -311,7 +311,7 @@ let myArray = [
 
 |                     |                            |
 |---------------------|----------------------------|
-| `myArray[0]`        | `{`"fist": "Jason", ...`}` |
+| `myArray[0]`        | `{`"name": "Jason", ...`}` |
 | `myArray[1].name`   | "Tom"                      |
 | `myArray[1][2]`     | 42                         |
 | `myArray[3]`        | undefined                  |
