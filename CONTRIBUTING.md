@@ -10,7 +10,7 @@ A `{filename}.md` file will be processed into a cheat sheet, let's create or edi
 title: QuickRef
 date: 2020-11-25 18:28:43
 icon: icon-style
-background: bg-green-600
+background: bg-emerald-600
 tags:
 categories:
     - Other

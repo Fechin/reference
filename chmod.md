@@ -2,7 +2,7 @@
 title: Chmod
 date: 2021-07-01 10:51:44
 icon: icon-permission
-background: bg-green-600
+background: bg-emerald-600
 tags:
     - permission
 categories:

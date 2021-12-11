@@ -2,7 +2,7 @@
 title: Vim
 date: 2020-11-25 18:28:43
 icon: icon-vim
-background: bg-green-600
+background: bg-emerald-600
 tags: 
     - vi
     - text

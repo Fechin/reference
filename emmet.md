@@ -2,7 +2,7 @@
 title: Emmet
 date: 2020-12-14 18:28:43
 icon: icon-emmet
-background: bg-green-400
+background: bg-emerald-400
 tags:
     - snippets
     - coding
