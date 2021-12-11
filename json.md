@@ -2,7 +2,7 @@
 title: JSON
 date: 2021-09-14 18:26:55
 icon: icon-json
-background: bg-gray-700
+background: bg-slate-700
 tags:
    - config
    - format

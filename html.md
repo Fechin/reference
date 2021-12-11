@@ -488,10 +488,10 @@ HTML Forms {.cols-3}
 #### ↓ Preview
 <form method="POST" action="api/login" style="padding: 20px;">
     <label for="email">Email: </label> 
-    <input type="email" id="email" name="email" class="border border-gray-400 mt-2">
+    <input type="email" id="email" name="email" class="border border-slate-400 mt-2">
     <br/>
     <label for="pwd">Password: </label> 
-    <input type="password" id="pwd" name="pwd" class="border border-gray-400 mt-2">
+    <input type="password" id="pwd" name="pwd" class="border border-slate-400 mt-2">
     <br/>
     <input type="submit" value="Login" class="mt-2">
     <br/>
@@ -544,7 +544,7 @@ The HTML `<form>` element is used to collect and send information to an external
 #### ↓ Preview
 <form style="padding: 20px;">
     <label for="username">Username:</label>
-    <input type="text" name="username" id="username" class="border border-gray-400">
+    <input type="text" name="username" id="username" class="border border-slate-400">
 </form>
 
 See: [HTML input Tags](/html#html-input-tags)
@@ -556,7 +556,7 @@ See: [HTML input Tags](/html#html-input-tags)
 ```
 #### ↓ Preview
 <form style="padding: 20px;">
-    <textarea rows="2" cols="30" name="address" id="address" class="border border-gray-400"style="width: 100%"></textarea>
+    <textarea rows="2" cols="30" name="address" id="address" class="border border-slate-400"style="width: 100%"></textarea>
 </form>
 
 Textarea is a multiple-line text input control
@@ -614,7 +614,7 @@ Checkboxes allows the user to select one or more
 #### ↓ Preview
 <form style="padding: 20px">
     <label for="city">City:</label>
-    <select name="city" id="city" class="border border-gray-400">
+    <select name="city" id="city" class="border border-slate-400">
         <option value="1">Sydney</option>
         <option value="2">Melbourne</option>
         <option value="3">Cromwell</option>
@@ -637,7 +637,7 @@ A select box is a dropdown list of options
 ```
 #### ↓ Preview
 <form style="padding: 20px">
-    <fieldset class="border border-gray-400" style="padding: 20px">
+    <fieldset class="border border-slate-400" style="padding: 20px">
         <legend>Your favorite monster</legend>
         <input type="radio" id="kra" name="monster">
         <label for="kra">Kraken</label><br/>
@@ -666,7 +666,7 @@ A select box is a dropdown list of options
 #### ↓ Preview
 <form style="padding: 20px">
     <label for="myBrowser">Choose a browser:</label>
-    <input list="browsers" id="myBrowser" name="myBrowser" class="border border-gray-400"/>
+    <input list="browsers" id="myBrowser" name="myBrowser" class="border border-slate-400"/>
     <datalist id="browsers">
       <option value="Chrome">
       <option value="Firefox">
@@ -692,7 +692,7 @@ A select box is a dropdown list of options
 #### ↓ Preview
 <form action="register.php" method="post" style="padding: 20px">
     <label for="name">Name:</label>
-    <input type="text" name="name" id="name" class="border border-gray-400">
+    <input type="text" name="name" id="name" class="border border-slate-400">
     <input type="submit" value="Submit">
     <input type="reset" value="Reset">
 </form>
@@ -749,32 +749,32 @@ Also see: [Attributes for the \<input> element](https://developer.mozilla.org/en
 
 |                   |                                                                                                                                          |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `type="checkbox"` | <input type="checkbox" class="border border-gray-400">                                                                                   |
-| `type="radio"`    | <input type="radio" class="border border-gray-400">                                                                                      |
-| `type="file"`     | <input type="file" class="border border-gray-400">                                                                                       |
-| `type="hidden"`   | <input type="hidden" class="border border-gray-400">                                                                                     |
-| `type="text"`     | <input type="text" class="border border-gray-400">                                                                                       |
-| `type="password"` | <input type="password" class="border border-gray-400">                                                                                   |
+| `type="checkbox"` | <input type="checkbox" class="border border-slate-400">                                                                                   |
+| `type="radio"`    | <input type="radio" class="border border-slate-400">                                                                                      |
+| `type="file"`     | <input type="file" class="border border-slate-400">                                                                                       |
+| `type="hidden"`   | <input type="hidden" class="border border-slate-400">                                                                                     |
+| `type="text"`     | <input type="text" class="border border-slate-400">                                                                                       |
+| `type="password"` | <input type="password" class="border border-slate-400">                                                                                   |
 | `type="image"`    | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> |
-| `type="reset"`    | <input type="reset" class="border border-gray-400">                                                                                      |
-| `type="button"`   | <input type="button" class="border border-gray-400">Button</input>                                                                       |
-| `type="submit"`   | <input type="submit" class="border border-gray-400">                                                                                     |
+| `type="reset"`    | <input type="reset" class="border border-slate-400">                                                                                      |
+| `type="button"`   | <input type="button" class="border border-slate-400">Button</input>                                                                       |
+| `type="submit"`   | <input type="submit" class="border border-slate-400">                                                                                     |
 
 #### New Input Types in HTML5
 |                         |                                                                     |
 |-------------------------|---------------------------------------------------------------------|
-| `type="color"`          | <input type="color" value="#0FB881" class="border border-gray-400"> |
-| `type="date"`           | <input type="date" class="border border-gray-400">                  |
-| `type="time"`           | <input type="time" class="border border-gray-400">                  |
-| `type="month"`          | <input type="month" class="border border-gray-400">                 |
-| `type="datetime-local"` | <input type="datetime-local" class="border border-gray-400">        |
-| `type="week"`           | <input type="week" class="border border-gray-400">                  |
-| `type="email"`          | <input type="email" class="border border-gray-400">                 |
-| `type="tel"`            | <input type="tel" class="border border-gray-400">                   |
-| `type="url"`            | <input type="url" class="border border-gray-400">                   |
-| `type="number"`         | <input type="number" class="border border-gray-400">                |
-| `type="search"`         | <input type="search" class="border border-gray-400">                |
-| `type="range"`          | <input type="range" class="border border-gray-400">                 |
+| `type="color"`          | <input type="color" value="#0FB881" class="border border-slate-400"> |
+| `type="date"`           | <input type="date" class="border border-slate-400">                  |
+| `type="time"`           | <input type="time" class="border border-slate-400">                  |
+| `type="month"`          | <input type="month" class="border border-slate-400">                 |
+| `type="datetime-local"` | <input type="datetime-local" class="border border-slate-400">        |
+| `type="week"`           | <input type="week" class="border border-slate-400">                  |
+| `type="email"`          | <input type="email" class="border border-slate-400">                 |
+| `type="tel"`            | <input type="tel" class="border border-slate-400">                   |
+| `type="url"`            | <input type="url" class="border border-slate-400">                   |
+| `type="number"`         | <input type="number" class="border border-slate-400">                |
+| `type="search"`         | <input type="search" class="border border-slate-400">                |
+| `type="range"`          | <input type="range" class="border border-slate-400">                 |
 
 
 ### Input CSS selectors
