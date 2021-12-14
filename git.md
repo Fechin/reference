@@ -184,6 +184,8 @@ $ git fetch [alias]
 Merge a remote branch into your current branch to bring it up to date
 ``` shell script
 $ git merge [alias]/[branch]
+// No fast-forward
+$ git merge --no-ff [alias]/[branch]
 ```
 
 Transmit local branch commits to the remote repository branch
