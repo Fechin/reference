@@ -735,6 +735,7 @@ Bash History {.cols-2}
 | Command               | Description                               |
 |-----------------------|-------------------------------------------|
 | `history`             | Show history                              |
+| `sudo !!`             | Run the previous command with sudo        |
 | `shopt -s histverify` | Don't execute expanded result immediately |
 
 ### Expansions
