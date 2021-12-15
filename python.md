@@ -56,7 +56,7 @@ Python can't declare a variable without assignment.
 | `set`, `frozenset`                 | Set      |
 | `bool`                             | Boolean  |
 | `bytes`, `bytearray`, `memoryview` | Binary   |
-See: [Data Types](#data-types-2)
+See: [Data Types](#python-data-types)
 
 
 ### Slicing String
@@ -67,7 +67,7 @@ See: [Data Types](#data-types-2)
 llo
 ```
 
-See: [Strings](#strings-3)
+See: [Strings](#python-strings)
 
 ### Lists
 ```python
@@ -78,7 +78,7 @@ for item in mylist:
     print(item) # prints out 1,2
 ```
 
-See: [Lists](#lists-3)
+See: [Lists](#python-lists)
 
 
 ### If Else                                        
@@ -89,7 +89,7 @@ if num > 0:
 else:
     print("num is not greater than 0")
 ```
-See: [Flow control](#flow-control)
+See: [Flow control](#python-flow-control)
 
 ### Loops
 ```python
@@ -99,7 +99,7 @@ for item in range(6):
 else:
     print("Finally finished!")
 ```
-See: [Loops](#loops-2)
+See: [Loops](#python-loops)
 
 
 ### Functions
@@ -111,7 +111,7 @@ See: [Loops](#loops-2)
 Hello from a function
 ```
 
-See: [Functions](#functions-2)
+See: [Functions](#python-functions)
 
 
 ### File Handling {.col-span-2}
@@ -121,7 +121,7 @@ with open("myfile.txt", "r", encoding='utf8') as file:
         print(line)
 ```
 
-See: [File Handling](#file-handling-2)
+See: [File Handling](#python-file-handling)
 
 
 
@@ -160,7 +160,7 @@ message += "Part 2."
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 ```
-See: [Python F-Strings](/python#python-f-strings-since-python-3-6)
+See: [Python F-Strings](#python-f-strings-since-python-3-6)
 
 
                                             
@@ -287,21 +287,21 @@ Python Strings {.cols-3}
 >>> hello = "Hello, World"
 >>> print(hello[1])
 e
->>> print(hello[len(a)-1])
+>>> print(hello[-1])
 d
 ```
-Get the character at position 1
+Get the character at position 1 or last
 
 ### Looping
 
 ```python
->>> for char in "abc":
+>>> for char in "foo":
 ...     print(char)
-a
-b
-c
+f
+o
+o
 ```
-Loop through the letters in the word "banana"
+Loop through the letters in the word "foo"
 
 
 
