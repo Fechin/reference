@@ -25,12 +25,17 @@ JavaScript is a lightweight, interpreted programming language.
 - [Regex in JavaScript](/regex#regex-in-javascript) _(quickref.me)_
 
 
-### console.log()
+### Console
 
 ```javascript
-alert('Hello world!');
-console.log('Hello world!');
 // => Hello world!
+console.log('Hello world!');
+
+// => Hello QuickRef.ME
+console.warn('hello %s', 'QuickRef.ME');
+
+// Prints error message to stderr
+console.error(new Error('Oops!'));
 ```
 
 
@@ -243,6 +248,18 @@ switch (food) {
 }
 ```
 
+### == vs ===
+```javascript
+0 == false   // true
+0 === false  // false, different type
+1 == "1"     // true,  automatic type conversion 
+1 === "1"    // false, different type
+null == undefined  // true
+null === undefined // false
+'0' == false       // true
+'0' === false      // false
+```
+The `==` just check the value, `===` check both the value and the type.
 
 
 JavaScript Functions {.cols-3}
@@ -306,6 +323,7 @@ const multiply = (a, b) => a * b;
 // => 60 
 console.log(multiply(2, 30)); 
 ```
+[Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) available starting ES2015
 
 
 
@@ -413,6 +431,43 @@ function printColor() {
 
 printColor(); // => blue
 ```
+
+
+### let vs var
+```javascript
+for (let i = 0; i < 3; i++) {
+  // This is the Max Scope for 'let'
+  // i accessible ✔️
+}
+// i not accessible ❌
+
+```
+---
+```javascript
+for (var i = 0; i < 3; i++) {
+  // i accessible ✔️
+}
+// i accessible ✔️
+```
+`var` is scoped to the nearest function block, and `let` is scoped to the nearest enclosing block.
+
+### Loops with closures
+```javascript{.wrap}
+// Prints 3 thrice, not what we meant.
+for (var i = 0; i < 3; i++) {
+  setTimeout(_ => console.log(i), 10);
+}
+```
+---
+```javascript{.wrap}
+// Prints 0, 1 and 2, as expected.
+for (let j = 0; j < 3; j++) { 
+  setTimeout(_ => console.log(j), 10);
+}
+```
+The variable has its own copy using `let`, and the variable has shared copy using `var`.
+
+
 
 
 
@@ -1079,7 +1134,7 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
-promise.then((res) => console.log(res), (err) => alert(err));
+promise.then((res) => console.log(res), (err) => console.error(err));
 ```
 
 
@@ -1098,7 +1153,7 @@ const promise = new Promise(executorFn);
 
 ```javascript
 const loginAlert = () =>{
-  alert('Login');
+  console.log('Login');
 };
 
 setTimeout(loginAlert, 6000);
@@ -1118,7 +1173,7 @@ const promise = new Promise((resolve, reject) => {
 promise.then((res) => {
   console.log(res);
 }, (err) => {
-  alert(err);
+  console.error(err);
 });
 ```
 
@@ -1137,7 +1192,7 @@ promise.then((res) => {
 });
 
 promise.catch((err) => {
-  alert(err);
+  console.error(err);
 });
 ```
 
@@ -1210,7 +1265,7 @@ promise.then(res => {
 }).then((res) => {
   console.log(res)
 }, (err) => {
-  alert(err)
+  console.error(err)
 });
 ```
 
@@ -1289,9 +1344,9 @@ let json = '{ "age": 30 }'; // incomplete data
 
 try {
   let user = JSON.parse(json); // <-- no errors
-  alert( user.name ); // no name!
+  console.log( user.name ); // no name!
 } catch (e) {
-  alert( "Invalid JSON data!" );
+  console.error( "Invalid JSON data!" );
 }
 ```
 
@@ -1329,6 +1384,7 @@ const jsonObj = {
   "level": 4  
 };
 ```
+Also see: [JSON cheatsheet](/json)
 
 
 
@@ -1338,6 +1394,7 @@ const jsonObj = {
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'mysite.com/getjson');
 ```
+`XMLHttpRequest` is a browser-level API that enables the client to script data transfers via JavaScript, NOT part of the JavaScript language.
 
 
 
