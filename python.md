@@ -127,13 +127,15 @@ See: [File Handling](#file-handling-2)
 
 ### Arithmetic
 ```python
-result = 10 + 30  # =>  40
-result = 40 - 10  # =>  30
-result = 50 * 5   # =>  250
-result = 16 / 4   # =>  4
-result = 25 % 2   # =>  1
-result = 5 ** 3   # =>  125
+result = 10 + 30 # => 40
+result = 40 - 10 # => 30
+result = 50 * 5  # => 250
+result = 16 / 4  # => 4.0 (Float Division)
+result = 16 // 4 # => 4 (Integer Division)
+result = 25 % 2  # => 1
+result = 5 ** 3  # => 125
 ``` 
+The `/` means quotient of x and y, and the `//` means floored quotient of x and y, also see [StackOverflow](https://stackoverflow.com/a/183870/13192320)
 
 ### Plus-Equals
 ```python
