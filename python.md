@@ -37,9 +37,9 @@ The famous "Hello World" program in Python
 
 ### Variables
 ```python
-x = 4        # x is of type int
-x = "Sally"  # x is now of type str
-print(x)
+age = 18      # age is of type int
+name = "John" # name is now of type str
+print(name)
 ```
 
 Python can't declare a variable without assignment.
@@ -62,8 +62,8 @@ See: [Data Types](#data-types-2)
 ### Slicing String
 
 ```python
->>> b = "Hello, World!"
->>> print(b[2:5])
+>>> msg = "Hello, World!"
+>>> print(msg[2:5])
 llo
 ```
 
@@ -74,8 +74,8 @@ See: [Strings](#strings-3)
 mylist = []
 mylist.append(1)
 mylist.append(2)
-for x in mylist:
-    print(x) # prints out 1,2
+for item in mylist:
+    print(item) # prints out 1,2
 ```
 
 See: [Lists](#lists-3)
@@ -83,19 +83,19 @@ See: [Lists](#lists-3)
 
 ### If Else                                        
 ```python
-a = 200
-if a > 0:
-    print("a is greater than 0")
+num = 200
+if num > 0:
+    print("num is greater than 0")
 else:
-    print("a is not greater than 0")
+    print("num is not greater than 0")
 ```
 See: [Flow control](#flow-control)
 
 ### Loops
 ```python
-for x in range(6):
-    if x == 3: break
-    print(x)
+for item in range(6):
+    if item == 3: break
+    print(item)
 else:
     print("Finally finished!")
 ```
@@ -117,8 +117,8 @@ See: [Functions](#functions-2)
 ### File Handling {.col-span-2}
 ```python
 with open("myfile.txt", "r", encoding='utf8') as file:
-    for x in file:
-        print(x)
+    for line in file:
+        print(line)
 ```
 
 See: [File Handling](#file-handling-2)
@@ -172,10 +172,10 @@ Python Data Types {.cols-3}
 ### Strings
 
 ```python
-s = "Hello World"
-s = 'Hello World'
+hello = "Hello World"
+hello = 'Hello World'
 
-a = """Multiline Strings
+multi_string = """Multiline Strings
 Lorem ipsum dolor sit amet,
 consectetur adipiscing elit """
 ```
@@ -197,8 +197,8 @@ z = 1j   # complex
 
 ### Booleans
 ```python
-a = True 
-b = False
+my_bool = True 
+my_bool = False
 
 bool(0)     # => False
 bool(1)     # => True
@@ -218,8 +218,8 @@ See: [Lists](#lists-3)
 
 ### Tuple
 ```python
-a = (1, 2, 3)
-a = tuple((1, 2, 3))
+my_tuple = (1, 2, 3)
+my_tuple = tuple((1, 2, 3))
 ```
 Similar to List but immutable 
 
@@ -284,10 +284,10 @@ Python Strings {.cols-3}
 ### Array-like
 
 ```python
->>> a = "Hello, World"
->>> print(a[1])
+>>> hello = "Hello, World"
+>>> print(hello[1])
 e
->>> print(a[len(a)-1])
+>>> print(hello[len(a)-1])
 d
 ```
 Get the character at position 1
@@ -295,8 +295,8 @@ Get the character at position 1
 ### Looping
 
 ```python
->>> for x in "abc":
-...     print(x)
+>>> for char in "abc":
+...     print(char)
 a
 b
 c
@@ -370,8 +370,8 @@ Loop through the letters in the word "banana"
 
 
 ```python
->>> a = "Hello, World!"
->>> print(len(a))
+>>> hello = "Hello, World!"
+>>> print(len(hello))
 13
 ```
 The len() function returns the length of a string
@@ -735,13 +735,13 @@ Python Flow control {.cols-3}
 
 ### Basic
 ```python
-a = 5
-if a > 10:
-    print("a is totally bigger than 10.")
-elif a < 10:
-    print("a is smaller than 10.")
+num = 5
+if num > 10:
+    print("num is totally bigger than 10.")
+elif num < 10:
+    print("num is smaller than 10.")
 else:
-    print("a is indeed 10.")
+    print("num is indeed 10.")
 ```
 
 ### One line
