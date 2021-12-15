@@ -42,7 +42,7 @@ x = "Sally"  # x is now of type str
 print(x)
 ```
 
-Python has no command for declaring a variable.
+Python can't declare a variable without assignment.
 
 
 
