@@ -107,15 +107,15 @@ G gg H M L k j ▶ print("to")
 
 
 ### Insert Mode
-| Shortcut               | Description                 |
-|------------------------|-----------------------------|
-| `i` _/_ `a`            | Insert before/after cursor  |
-| `I` _/_ `A`            | Insert start/end of line    |
-| `o` _/_ `O` _(letter)_ | Insert new line below/above |
-| `s` _/_ `S`            | Delete char/line and insert |
-| `C`                    | Change to end of line       |
-| `gi`                   | Insert at last insert point |
-| `Esc` _\|_ `<C-[>`     | Exit insert mode            |
+| Shortcut               | Description                   |
+|------------------------|-------------------------------|
+| `i` _/_ `a`            | Insert before/after cursor    |
+| `I` _/_ `A`            | Insert start/end of line      |
+| `o` _/_ `O` _(letter)_ | Insert new line below/above   |
+| `s` _/_ `S`            | Delete char/line and insert   |
+| `C` _/_ `cc`           | Change to end of/current line |
+| `gi`                   | Insert at last insert point   |
+| `Esc` _\|_ `<C-[>`     | Exit insert mode              |
 {.shortcuts}
 
 
@@ -244,20 +244,20 @@ Combine [operators](#available-operators) with [motions](#motions) to use them
 
 ### Examples {.row-span-2}
 
-| Combination          | Description                 |
-|----------------------|-----------------------------|
-| `d`<yel>d</yel>      | Delete current line         |
-| `d`<yel>j</yel>      | Delete two lines            |
-| `d`<yel>w</yel>      | Delete to next word         |
-| `d`<yel>b</yel>      | Delete to beginning of word |
-| `d`<yel>fa</yel>     | Delete until `a` char       |
-| `d`<yel>/hello</yel> | Delete until `hello`        |
-| `c`<yel>c</yel>      | Change current line         |
-| `y`<yel>y</yel>      | Copy current line           |
-| `>`<yel>j</yel>      | Indent 2 lines              |
-| gg`d`<yel>G</yel>    | Delete a complete document  |
-| gg`=`<yel>G</yel>    | Indent a complete document  |
-| gg`y`<yel>G</yel>    | Copy a whole document       |
+| Combination          | Description                           |
+|----------------------|---------------------------------------|
+| `d`<yel>d</yel>      | Delete current line                   |
+| `d`<yel>j</yel>      | Delete two lines                      |
+| `d`<yel>w</yel>      | Delete to next word                   |
+| `d`<yel>b</yel>      | Delete to beginning of word           |
+| `d`<yel>fa</yel>     | Delete until `a` char                 |
+| `d`<yel>/hello</yel> | Delete until `hello`                  |
+| `c`<yel>c</yel>      | Change current line, synonym with `S` |
+| `y`<yel>y</yel>      | Copy current line                     |
+| `>`<yel>j</yel>      | Indent 2 lines                        |
+| gg`d`<yel>G</yel>    | Delete a complete document            |
+| gg`=`<yel>G</yel>    | Indent a complete document            |
+| gg`y`<yel>G</yel>    | Copy a whole document                 |
 {.show-header}
 
 
