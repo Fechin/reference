@@ -123,14 +123,14 @@ List all branches, local and remote
 $ git branch -av
 ```
 
-Switch to a branch, my_branch, and update working directory
+Switch to my_branch, and update working directory
 ``` shell script
 $ git checkout my_branch
 ```
 
 Create a new branch called new_branch
 ``` shell script
-$ git branch new_branch
+$ git checkout -b new_branch
 ```
 
 Delete the branch called my_branch
@@ -284,6 +284,7 @@ $ git log --stat -M
 ```
 /logs/*
 
+# "!" means don't ignore 
 !logs/.gitkeep
 
 /# Ignore Mac system files
