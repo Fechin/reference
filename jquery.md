@@ -2,7 +2,7 @@
 title: jQuery
 date: 2020-12-24 21:08:21
 icon: icon-jquery
-background: bg-blue-700
+background: bg-[#2c63a2]
 tags:
     - web
     - js

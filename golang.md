@@ -2,7 +2,7 @@
 title: Golang
 date: 2020-12-17 21:51:44
 icon: icon-golang
-background: bg-blue-400
+background: bg-[#4ba4cc]
 tags:
     - Go
 categories:

@@ -2,7 +2,7 @@
 title: MySQL
 date: 2020-12-16 18:28:43
 icon: icon-mysql
-background: bg-blue-400
+background: bg-[#2a6387]
 tags:
     - RDBMS
     - DB

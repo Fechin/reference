@@ -1,7 +1,7 @@
 ---
 title: Redis
 icon: icon-redis
-background: bg-red-600
+background: bg-[#c13b2c]
 tags:
     - cache
 categories:

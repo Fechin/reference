@@ -2,7 +2,7 @@
 title: PHP
 date: 2021-01-04 15:23:28
 icon: icon-php
-background: bg-violet-900
+background: bg-[#7477a9]
 tags:
     - web
 categories:

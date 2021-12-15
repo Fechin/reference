@@ -2,7 +2,7 @@
 title: C#
 date: 2021-12-14 12:22:00
 icon: icon-cs
-background: bg-purple-700
+background: bg-[#8c4c8a]
 tags:
     - object-oriented
     - class

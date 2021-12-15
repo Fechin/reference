@@ -2,7 +2,7 @@
 title: Sass
 date: 2020-12-20 22:15:43
 icon: icon-sass
-background: bg-pink-500
+background: bg-[#ba6993]
 tags:
     - css
 categories:

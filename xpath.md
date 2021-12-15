@@ -2,7 +2,7 @@
 title: XPath
 date: 2020-12-19 22:15:43
 icon: icon-xpath
-background: bg-blue-600
+background: bg-[#77aeeb]
 tags:
     - document
     - expression

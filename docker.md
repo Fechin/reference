@@ -2,7 +2,7 @@
 title: Docker
 date: 2020-12-30 10:55:24
 icon: icon-docker
-background: bg-blue-500
+background: bg-[#488fdf]
 tags:
     - container
     - virtual

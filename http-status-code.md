@@ -1,7 +1,7 @@
 ---
 title: HTTP Status Code
 icon: icon-style
-background: bg-pink-400
+background: bg-[#3b7dc0]
 date: 2020-12-26 16:09:09
 tags:
     - response

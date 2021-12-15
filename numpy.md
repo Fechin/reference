@@ -2,7 +2,7 @@
 title: Numpy
 date: 2020-12-14 18:28:43
 icon: icon-numpy
-background: bg-blue-500
+background: bg-[#4f6fc3]
 tags:
     - scientific
     - computing

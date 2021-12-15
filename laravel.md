@@ -2,7 +2,7 @@
 title: Laravel
 date: 2021-11-09 18:26:55
 icon: icon-laravel
-background: bg-red-500
+background: bg-[#e44230]
 tags:
     - web
     - framework

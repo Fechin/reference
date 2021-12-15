@@ -2,7 +2,7 @@
 title: JavaScript
 date: 2020-12-24 17:12:25
 icon: icon-javascript
-background: bg-amber-500
+background: bg-[#ebd94e]
 tags:
     - js
     - web

@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 icon: icon-postgres
-background: bg-blue-800
+background: bg-[#3d6488]
 tags:
     - DB
     - RDBMS

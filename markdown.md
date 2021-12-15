@@ -2,7 +2,7 @@
 title: Markdown
 date: 2020-12-14 18:28:43
 icon: icon-markdown
-background: bg-violet-500
+background: bg-[#6319bf]
 tags:
     - md
     - Markup

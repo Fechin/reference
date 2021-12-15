@@ -2,7 +2,7 @@
 title: Emacs
 date: 2020-12-17 16:21:49
 icon: icon-emacs
-background: bg-violet-500
+background: bg-[#7752a9]
 tags:
     - editor
     - text

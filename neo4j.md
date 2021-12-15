@@ -2,7 +2,7 @@
 title: Neo4j
 date: 2021-08-23 12:34:56
 icon: icon-neo4j
-background: bg-blue-600
+background: bg-[#3b85ef]
 tags:
     - DB
     - GraphDB

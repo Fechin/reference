@@ -2,7 +2,7 @@
 title: Git
 date: 2020-11-25 18:28:43
 icon: icon-git
-background: bg-slate-400
+background: bg-[#d7593e]
 tags:
     - github
     - gitlab

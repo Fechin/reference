@@ -2,7 +2,7 @@
 title: CSS 3
 date: 2020-12-25 20:22:47
 icon: icon-css
-background: bg-blue-500
+background: bg-[#3473b5]
 tags:
     - web
     - css

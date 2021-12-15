@@ -2,7 +2,7 @@
 title: YAML
 date: 2020-12-29 18:26:55
 icon: icon-yaml
-background: bg-slate-700
+background: bg-[#b42e28]
 tags:
    - config
    - format

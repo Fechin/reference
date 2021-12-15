@@ -2,7 +2,7 @@
 title: Python
 date: 2020-12-23 18:41:20
 icon: icon-python
-background: bg-blue-600
+background: bg-[#436b97]
 tags:
     - script
     - interpret
