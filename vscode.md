@@ -2,7 +2,7 @@
 title: VSCode
 date: 2021-12-16 13:41:00
 icon: icon-vscode
-background: bg-[#7752a9]
+background: bg-[#5ba3e6]
 tags:
     - text
     - editor
@@ -10,7 +10,7 @@ tags:
 categories:
     - Toolkit
 intro: |
-    Visual Studio Code shortcuts.
+    This VSCode (Visual Studio Code) quick reference cheat sheet shows its keyboard shortcuts and commands.
 ---
 
 
@@ -29,7 +29,7 @@ intro: |
 {.shortcuts}
 
 
-### Basic editing
+### Basic editing {.row-span-2}
 | -                            | -                                               |
 |------------------------------|-------------------------------------------------|
 | `Ctrl+X`                     | Cut line                                        |
@@ -180,19 +180,20 @@ intro: |
 
 
 ### Debug
-| -                            | -                                               |
-|------------------------------|-------------------------------------------------|
-| `F9`                         | Toggle breakpoint                               |
-| `F5`                         | Start/Continue                                  |
-| `Shift+F5`                   | Stop                                            |
-| `F11 / Shift+F11`            | Step into/out                                   |
-| `F10`                        | Step over                                       |
-| `Ctrl+K Ctrl+I`              | Show hover                                      |
-| ``Ctrl+` ``                  | Show integrated terminal                        |
-| ``Ctrl+Shift+` ``            | Create a new terminal                           |
-| `Ctrl+C`                     | Copy selection                                  |
-| `Ctrl+V`                     | Paste into an active terminal                   |
-| `Ctrl+↑ / ↓`                 | Scroll up/down                                  |
-| `Shift+PgUp / PgDn`          | Scroll page up/down                             |
-| `Ctrl+Home / End`            | Scroll to the top/bottom                        |
+
+| -                          | -                             |
+|----------------------------|-------------------------------|
+| `F9`                       | Toggle breakpoint             |
+| `F5`                       | Start/Continue                |
+| `Shift+F5`                 | Stop                          |
+| `F11 / Shift+F11`          | Step into/out                 |
+| `F10`                      | Step over                     |
+| `Ctrl+K Ctrl+I`            | Show hover                    |
+| <code>Ctrl+\`</code>       | Show integrated terminal      |
+| <code>Ctrl+Shift+\`</code> | Create a new terminal         |
+| `Ctrl+C`                   | Copy selection                |
+| `Ctrl+V`                   | Paste into an active terminal |
+| `Ctrl+↑ / ↓`               | Scroll up/down                |
+| `Shift+PgUp / PgDn`        | Scroll page up/down           |
+| `Ctrl+Home / End`          | Scroll to the top/bottom      |
 {.shortcuts}
