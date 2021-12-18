@@ -210,6 +210,8 @@ G gg H M L k j ▶ print("to")
 | `@@`  | Repeat last macro     |
 {.shortcuts}
 
+You can save macro for any letters not just `i`
+
 
 Vim Operators {.cols-3}
 ---------
