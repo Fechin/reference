@@ -78,7 +78,7 @@ awk -F: '{print $(NF-1)}' /etc/passwd
 # Custom string 
 awk -F: '{print $1 "=" $6}' /etc/passwd
 ```
-See: [Variables](#variables-2)
+See: [Variables](#awk-variables)
 
 
 
@@ -101,9 +101,9 @@ awk -F: '{print $1} END { print "-done-"}' /etc/passwd
 
 ### Conditions
 ```
-awk '{if ($3>30) print $1}' /etc/passwd
+awk -F: '$3>30 {print $1}' /etc/passwd
 ```
-See: [Conditions](#conditions-2)
+See: [Conditions](#awk-conditions)
 
 
 ### Generate 1000 spaces
@@ -114,7 +114,7 @@ awk 'BEGIN{
     print s
 }'
 ```
-See: [Loops](#loops)
+See: [Loops](#awk-loops)
 
 
 
@@ -123,11 +123,12 @@ See: [Loops](#loops)
 awk 'BEGIN {
    fruits["mango"] = "yellow";
    fruits["orange"] = "orange"
-   print fruits["orange"] 
-   print fruits["mango"]
+   for(fruit in fruits) {
+     print "The color of " fruit " is " fruits[fruit]
+   }
 }'
 ```
-See: [Arrays](#arrays-2)
+See: [Arrays](#awk-arrays)
 
 
 
@@ -140,7 +141,7 @@ awk 'BEGIN{print toupper("hello")}'
 # => hel
 awk 'BEGIN{print substr("hello", 1, 3)}'
 ```
-See: [Functions](#functions-2)
+See: [Functions](#awk-functions)
 
 
 
