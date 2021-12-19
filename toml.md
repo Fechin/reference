@@ -90,7 +90,7 @@ str1 = "I'm a string."
 str2 = "You can \"quote\" me."
 str3 = "Name\tJos\u00E9\nLoc\tSF."
 ```
-See: [Strings](#strings)
+See: [Strings](#toml-strings)
 
 
 
@@ -101,7 +101,7 @@ See: [Strings](#strings)
 name = "Tom Preston-Werner"
 dob = 1979-05-27T07:32:00-08:00
 ```
-See: [Tables](#tables)
+See: [Tables](#toml-tables)
 
 
 ### Array

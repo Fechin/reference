@@ -73,7 +73,7 @@ div.hero { }
 div > p { }
 ```
 
-See: [Selectors](#selectors)
+See: [Selectors](#css-selectors)
 
 
 
@@ -86,7 +86,7 @@ color: rgb(34, 12, 64, 0.6);
 color: hsla(30 100% 50% / 0.6);
 ```
 
-See: [Colors](#colors)
+See: [Colors](#css-colors)
 
 
 
@@ -99,7 +99,7 @@ background-image: url("nyan-cat.gif");
 background-image: url("../image.png");
 ```
 
-See: [Backgrounds](#backgrounds)
+See: [Backgrounds](#css-backgrounds)
 
 
 
@@ -112,7 +112,7 @@ See: [Backgrounds](#backgrounds)
     font-family: "Courier New";
 }
 ```
-See: [Fonts](#fonts)
+See: [Fonts](#css-fonts)
 
 
 
@@ -139,7 +139,7 @@ animation: 300ms linear 0s infinite;
 animation: bounce 300ms linear infinite;
 
 ```
-See: [Animation](#animation-2)
+See: [Animation](#css-animation)
 
 
 ### Comment
@@ -165,7 +165,7 @@ div {
 }
 ```
 
-See: [Flexbox](#flexbox) | [Flex Tricks](#flexbox-tricks)
+See: [Flexbox](#css-flexbox) | [Flex Tricks](#css-flexbox-tricks)
 
 
 
@@ -185,7 +185,7 @@ See: [Flexbox](#flexbox) | [Flex Tricks](#flexbox-tricks)
 }
 ```
 
-See: [Grid Layout](#grid-layout-2)
+See: [Grid Layout](#css-grid-layout)
 
 
 
@@ -203,7 +203,7 @@ element {
 }
 ```
 
-See: [Dynamic content](#dynamic-content)
+See: [Dynamic content](#css-dynamic-content)
 
 
 CSS Selectors {.cols-3}
@@ -493,7 +493,7 @@ CSS Backgrounds {.cols-3}
 |---------------|---------------|
 | `background:` | _(Shorthand)_ |
 
-| `background-color:`      | See: [Colors](#colors)                                |
+| `background-color:`      | See: [Colors](#css-colors)                                |
 | `background-image:`      | url(...)                               |
 | `background-position:`   | left/center/right<br/>top/center/bottom  |
 | `background-size:`       | cover X Y                            |
@@ -1078,7 +1078,7 @@ html {
     scroll-behavior: smooth;
 }
 ```
-[Click me](#getting-started), the page will scroll smoothly to Getting started
+[Click me](#css-getting-started), the page will scroll smoothly to Getting started
 
 
 

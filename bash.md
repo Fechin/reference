@@ -80,7 +80,7 @@ Multi-line comments use `:'` to open and `'` to close
 | `$-`        | Current options                       |
 | `$_`        | Last argument of the previous command |
 
-See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
+See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables)
 
 
 
@@ -94,7 +94,7 @@ get_name() {
 echo "You are $(get_name)"
 ```
 
-See: [Functions](#functions-2)
+See: [Functions](#bash-functions)
 
 ### Conditionals {#conditionals-example}
 
@@ -106,7 +106,7 @@ elif [[ -n "$string" ]]; then
 fi
 ```
 
-See: [Conditionals](#conditionals-2)
+See: [Conditionals](#bash-conditionals)
 
 ### Brace expansion
 

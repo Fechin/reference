@@ -68,7 +68,7 @@ h1 {
     @include heading-font;
 }
 ```
-See: [Mixins](#mixins-2)
+See: [Mixins](#sass-mixins)
 
 
 

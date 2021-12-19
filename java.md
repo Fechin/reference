@@ -70,7 +70,7 @@ String last = "Doe";
 String name = first + " " + last;
 System.out.println(name);
 ```
-See: [Strings](#strings-2)
+See: [Strings](#java-strings)
 
 
 
@@ -83,7 +83,7 @@ for (char c: word.toCharArray()) {
 }
 // Outputs: Q-u-i-c-k-R-e-f-
 ```
-See: [Loops](#loops-2)
+See: [Loops](#java-loops)
 
 
 ### Arrays
@@ -96,7 +96,7 @@ String[] letters = {"A", "B", "C"};
 int[] mylist = {100, 200};
 boolean[] answers = {true, false};
 ```
-See: [Arrays](#arrays-2)
+See: [Arrays](#java-arrays)
 
 
 ### Swap
@@ -139,7 +139,7 @@ if (j == 10) {
   System.out.println("I also don't");
 }
 ```
-See: [Conditionals](#conditionals-2)
+See: [Conditionals](#java-conditionals)
 
 
 

@@ -160,7 +160,7 @@ message += "Part 2."
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 ```
-See: [Python F-Strings](#python-f-strings-since-python-3-6)
+See: [Python F-Strings](#python-f-strings-since-python)
 
 
                                             
@@ -179,7 +179,7 @@ multi_string = """Multiline Strings
 Lorem ipsum dolor sit amet,
 consectetur adipiscing elit """
 ```
-See: [Strings](#strings-2)
+See: [Strings](#python-strings)
 
 
 
@@ -213,7 +213,7 @@ list2 = [True, False, False]
 list3 = [1, 5, 7, 9, 3]
 list4 = list((1, 5, 7, 9, 3))
 ```
-See: [Lists](#lists-3)
+See: [Lists](#python-lists)
 
 
 ### Tuple

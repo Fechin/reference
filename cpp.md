@@ -115,7 +115,7 @@ if (a == 10) {
     // do something
 }
 ```
-See: [Conditionals](#conditionals)
+See: [Conditionals](#c-conditionals)
 
 
 
@@ -126,7 +126,7 @@ for (int i = 0; i < 10; i++) {
     std::cout << i << "\n";
 }
 ```
-See: [Loops](#loops-2)
+See: [Loops](#c-loops)
 
 
 ### Functions
@@ -143,7 +143,7 @@ void hello() { // Defining
     std::cout << "Hello QuickRef!\n";
 }
 ```
-See: [Functions](#functions-2)
+See: [Functions](#c-functions)
 
 
 

@@ -50,11 +50,11 @@ redis> GET mykey
 
 
 ### Basic Data types
-- [Strings](#string-command)
-- [Lists](#list-command)
-- [Hashes](#hash-command)
-- [Sets](#set-command)
-- [Sorted Sets](#sorted-set-command)
+- [Strings](#redis-string-command)
+- [Lists](#redis-list-command)
+- [Hashes](#redis-hash-command)
+- [Sets](#redis-set-command)
+- [Sorted Sets](#redis-sorted-set-command)
 
 Redis supports 5 basic data types
 

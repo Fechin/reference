@@ -44,7 +44,7 @@ unset($float);  // Delete variable
 $str1 = "How are you?";
 $str2 = 'Fine, thanks';
 ```
-See: [Types](#types)
+See: [Types](#php-types)
 
 
 
@@ -61,7 +61,7 @@ $hello = "Hello, ";
 $hello .= "World!";
 echo $hello;   # => Hello, World!
 ```
-See: [Strings](#strings-2)
+See: [Strings](#php-strings)
 
 
 
@@ -74,7 +74,7 @@ unset($num[2]);    // Delete variable
 print_r($num);     # => 1 3 7 9 11
 echo count($num);  # => 5
 ```
-See: [Arrays](#arrays-2)
+See: [Arrays](#php-arrays)
 
 
 
@@ -86,7 +86,7 @@ $y = 2;
 $sum = $x + $y;
 echo $sum;   # => 3
 ```
-See: [Operators](#operators-2)
+See: [Operators](#php-operators)
 
 
 ### Include {.row-span-3}
@@ -131,7 +131,7 @@ function add($num1, $num2 = 1) {
 echo add(10);    # => 11
 echo add(10, 5); # => 15
 ```
-See: [Functions](#functions-3)
+See: [Functions](#php-functions)
 
 
 
@@ -171,7 +171,7 @@ class Student {
 }
 $alex = new Student("Alex");
 ```
-See: [Classes](#classes-2)
+See: [Classes](#php-classes)
 
 
 
@@ -214,13 +214,13 @@ See also: [Integers](https://www.php.net/manual/en/language.types.integer.php)
 ```php
 echo 'this is a simple string';
 ```
-See: [Strings](#strings-3)
+See: [Strings](#php-strings)
 
 ### Arrays
 ```php
 $arr = array("hello", "world", "!");
 ```
-See: [Arrays](#arrays-3)
+See: [Arrays](#php-arrays)
 
 
 ### Float (Double)
@@ -695,7 +695,7 @@ foreach ($a as $k) {
     echo $k;
 }
 ```
-See: [Array iteration](#value-iteration)
+See: [Array iteration](#php-value-iteration)
 
 
 
