@@ -186,6 +186,8 @@ Merge a remote branch into your current branch to bring it up to date
 $ git merge [alias]/[branch]
 // No fast-forward
 $ git merge --no-ff [alias]/[branch]
+// Only fast-forward
+$ git merge --ff-only [alias]/[branch]
 ```
 
 Transmit local branch commits to the remote repository branch
