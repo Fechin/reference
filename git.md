@@ -150,6 +150,7 @@ $ git tag my_tag
 ```
 
 
+
 ### Observe your Repository
 Show the commit history for the currently active branch
 ``` shell script
@@ -184,9 +185,9 @@ $ git fetch [alias]
 Merge a remote branch into your current branch to bring it up to date
 ``` shell script
 $ git merge [alias]/[branch]
-// No fast-forward
+# No fast-forward
 $ git merge --no-ff [alias]/[branch]
-// Only fast-forward
+# Only fast-forward
 $ git merge --ff-only [alias]/[branch]
 ```
 
