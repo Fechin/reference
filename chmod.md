@@ -225,7 +225,7 @@ $ chmod -R 644 /var/www/html/
 $ chmod 644 .htaccess
 $ chmod 644 robots.txt
 $ chmod 755 /var/www/uploads/
-$ chmod 755 `find /var/www/html -type d`
+$ find /var/www/html -type d -exec chmod 755 {} \;
 ```
 
 ### Batch Change
@@ -233,7 +233,6 @@ $ chmod 755 `find /var/www/html -type d`
 $ chmod -R 644 /your_path
 $ find /path -type d -exec chmod 755 {} \;
 $ find /path -type f -exec chmod 644 {} \;
-$ chmod 644 `find /your_path -type f`
 ```
 See: [Command Substitution](https://tldp.org/LDP/abs/html/commandsub.html)
 
