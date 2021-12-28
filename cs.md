@@ -19,8 +19,8 @@ Getting started {.cols-3}
 ### Hello.cs {.row-span-2}
 ```cs
 class Hello {
-  // main methord
-  static void main(string[] args)
+  // main method
+  static void Main(string[] args)
   {
     // Output: Hello, world!
     Console.WriteLine("Hello, world!");
@@ -38,11 +38,11 @@ Hello, world!
 ```cs
 int intNum = 9;
 long longNum = 9999999;
-float floatNum = 9.99;
+float floatNum = 9.99F;
 double doubleNum = 99.999;
-decimal decimalNum = 99.9999;
+decimal decimalNum = 99.9999M;
 char letter = 'D';
-bool bool = true;
+bool @bool = true;
 string site = "quickref.me";
 var num = 999;
 var str = "999";
@@ -51,16 +51,16 @@ var bo = false;
 
 
 ### Primitive Data Types 
-| Data Type | Size             | Range                  |
-|-----------|------------------|------------------------|
-| `int`     | 4 bytes          | -2^31^ ^to^ 2^31^-1    |
-| `long`    | 8 bytes          | -2^63^ ^to^ 2^63^-1    |
-| `float`   | 4 bytes          | 6 to 7 decimals digits |
-| `double`  | 8 bytes          | 15 decimals            |
-| `decimal` | 16 bytes         | _N/A_                  |
-| `char`    | 2 bytes          | 0 ^to^ 65535           |
-| `bool`    | 1 bit            | true / false           |
-| `string`  | 2 bytes per char | _N/A_                  |
+| Data Type | Size             | Range                   |
+| --------- | ---------------- | ----------------------- |
+| `int`     | 4 bytes          | -2^31^ ^to^ 2^31^-1     |
+| `long`    | 8 bytes          | -2^63^ ^to^ 2^63^-1     |
+| `float`   | 4 bytes          | 6 to 7 decimal digits   |
+| `double`  | 8 bytes          | 15 decimal digits       |
+| `decimal` | 16 bytes         | 28 to 29 decimal digits |
+| `char`    | 2 bytes          | 0 ^to^ 65535            |
+| `bool`    | 1 bit            | true / false            |
+| `string`  | 2 bytes per char | _N/A_                   |
 {.show-header}
 
 
@@ -69,6 +69,8 @@ var bo = false;
 string first = "John";
 string last = "Doe";
 string name = first + " " + last;
+// Or string interpolation : 
+// Same as string name = $"{first} {last}"
 Console.WriteLine(name);
 ```
 
@@ -76,8 +78,11 @@ Console.WriteLine(name);
 ### User Input
 ```cs
 Console.WriteLine("Enter number:");
-int num = Console.ReadLine();
-Console.WriteLine("You entered " + num);
+if(int.TryParse(Console.ReadLine(),out int input))
+{
+       // Input validated
+       Console.WriteLine($"You entered {input}");
+}
 ```
 
 
@@ -98,18 +103,18 @@ if (j == 10) {
 ### Arrays
 ```cs
 char[] chars = new char[10];
-chars[0] = 'a'
-chars[1] = 'b'
+chars[0] = 'a';
+chars[1] = 'b';
 string[] letters = {"A", "B", "C"};
 int[] mylist = {100, 200};
-boolean[] answers = {true, false};
+bool[] answers = {true, false};
 ```
 
 
 ### Loops
 ```cs
 int[] numbers = {1, 2, 3, 4, 5};
-for(int i = 0; i < numbers.length; i++) {
+for(int i = 0; i < numbers.Length; i++) {
     Console.WriteLine(numbers[i]);
 }
 foreach(int num in numbers) {
