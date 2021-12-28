@@ -44,6 +44,7 @@ decimal decimalNum = 99.9999M;
 char letter = 'D';
 bool @bool = true;
 string site = "quickref.me";
+
 var num = 999;
 var str = "999";
 var bo = false;
@@ -55,9 +56,9 @@ var bo = false;
 | --------- | ---------------- | ----------------------- |
 | `int`     | 4 bytes          | -2^31^ ^to^ 2^31^-1     |
 | `long`    | 8 bytes          | -2^63^ ^to^ 2^63^-1     |
-| `float`   | 4 bytes          | 6 to 7 decimal digits   |
+| `float`   | 4 bytes          | 6 ^to^ 7 decimal digits   |
 | `double`  | 8 bytes          | 15 decimal digits       |
-| `decimal` | 16 bytes         | 28 to 29 decimal digits |
+| `decimal` | 16 bytes         | 28 ^to^ 29 decimal digits |
 | `char`    | 2 bytes          | 0 ^to^ 65535            |
 | `bool`    | 1 bit            | true / false            |
 | `string`  | 2 bytes per char | _N/A_                   |
@@ -68,10 +69,15 @@ var bo = false;
 ```cs
 string first = "John";
 string last = "Doe";
+
 string name = first + " " + last;
-// Or string interpolation : 
-// Same as string name = $"{first} {last}"
-Console.WriteLine(name);
+Console.WriteLine(name); // => John Doe
+```
+---
+```
+// Or string interpolation
+string name = $"{first} {last}"
+Console.WriteLine(name); // => John Doe
 ```
 
 
@@ -80,8 +86,8 @@ Console.WriteLine(name);
 Console.WriteLine("Enter number:");
 if(int.TryParse(Console.ReadLine(),out int input))
 {
-       // Input validated
-       Console.WriteLine($"You entered {input}");
+  // Input validated
+  Console.WriteLine($"You entered {input}");
 }
 ```
 
@@ -105,6 +111,7 @@ if (j == 10) {
 char[] chars = new char[10];
 chars[0] = 'a';
 chars[1] = 'b';
+
 string[] letters = {"A", "B", "C"};
 int[] mylist = {100, 200};
 bool[] answers = {true, false};
@@ -114,10 +121,14 @@ bool[] answers = {true, false};
 ### Loops
 ```cs
 int[] numbers = {1, 2, 3, 4, 5};
+
 for(int i = 0; i < numbers.Length; i++) {
-    Console.WriteLine(numbers[i]);
+  Console.WriteLine(numbers[i]);
 }
+```
+---
+```
 foreach(int num in numbers) {
-    Console.WriteLine(num);
+  Console.WriteLine(num);
 }
 ```
