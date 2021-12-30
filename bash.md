@@ -36,13 +36,13 @@ $ bash hello.sh
 ```bash
 NAME="John"
 
-echo ${NAME}    # => John
-echo $NAME      # => John
-echo "$NAME"    # => John
-echo '$NAME'    # => $NAME
-echo "${NAME}!" # => John!
+echo ${NAME}    # => John (Variables)
+echo $NAME      # => John (Variables)
+echo "$NAME"    # => John (Variables)
+echo '$NAME'    # => $NAME (Exact string)
+echo "${NAME}!" # => John! (Variables)
 
-NAME = "John" # => Error (about space)
+NAME = "John"   # => Error (about space)
 ```
 
 
@@ -126,8 +126,10 @@ See: [Brace expansion](http://wiki.bash-hackers.org/syntax/expansion/brace)
 ### Shell execution
 
 ```bash
+# => I'm in /path/of/current
 echo "I'm in $(PWD)"
-# Same
+
+# Same as:
 echo "I'm in `pwd`"
 ```
 
