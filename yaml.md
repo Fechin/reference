@@ -42,7 +42,7 @@ b: false         # boolean type
 
 d: 2015-04-05    # date type
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "n1": 1,
@@ -62,7 +62,7 @@ Use spaces to indent. There must be space between the element parts.
 some_thing: &VAR_NAME foobar
 other_thing: *VAR_NAME
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "some_thing": "foobar",
@@ -91,7 +91,7 @@ description: |
   hello
   world
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {"description": "hello\nworld\n"}
 ```
@@ -108,7 +108,7 @@ child:
   <<: *defaults
   b: 4
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "parent": {
@@ -133,7 +133,7 @@ values: &ref
 other_values:
   i_am_ref: *ref
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "values": [
@@ -156,7 +156,7 @@ description: >
   hello
   world
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {"description": "hello world\n"}
 ```
@@ -186,7 +186,7 @@ YAML Collections {.cols-3}
 - Sammy Sosa
 - Ken Griffey
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 [
   "Mark McGwire",
@@ -202,7 +202,7 @@ hr:  65       # Home runs
 avg: 0.278    # Batting average
 rbi: 147      # Runs Batted In
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "hr": 65,
@@ -220,7 +220,7 @@ attributes:
   - a2
 methods: [getter, setter]
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "attributes": ["a1", "a2"],
@@ -243,7 +243,7 @@ children:
     name: Sammy Sosa
     age: 12
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "children": [
@@ -266,7 +266,7 @@ my_sequences:
     - 9
     - 0 
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "my_sequences": [
@@ -286,7 +286,7 @@ Sammy Sosa: {
     avg: 0.288
   }
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "Mark McGwire": {
@@ -313,7 +313,7 @@ Jack:
     - b
   location: {country: "A", city: "A-A"}
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "Jack": {
@@ -336,7 +336,7 @@ set1: !!set
   ? two
 set2: !!set {'one', "two"}
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "set1": {"one": null, "two": null},
@@ -353,7 +353,7 @@ ordered: !!omap
 - Sammy Sosa: 63
 - Ken Griffy: 58
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json {.wrap}
 {
   "ordered": [
