@@ -18,7 +18,7 @@ Getting started {.cols-3}
 
 ### Introduction
 [TOML](https://toml.io/en/) is a minimal configuration file format that's easy to read due to obvious semantics. 
-- [Document](https://toml.io/en/latest) _(yaml.org)_
+- [Document](https://toml.io/en/latest) _(toml.io)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/toml/) _(learnxinyminutes.com)_
 
 
