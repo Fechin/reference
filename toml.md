@@ -18,7 +18,7 @@ Getting started {.cols-3}
 
 ### Introduction
 [TOML](https://toml.io/en/) is a minimal configuration file format that's easy to read due to obvious semantics. 
-- [Document](https://toml.io/en/latest) _(yaml.org)_
+- [Document](https://toml.io/en/latest) _(toml.io)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/toml/) _(learnxinyminutes.com)_
 
 
@@ -197,7 +197,7 @@ text = "Great Article!"
 author = "Anonymous"
 text = "Love it!"
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json
 {
 	"comments" : [
@@ -219,7 +219,7 @@ text = "Love it!"
 [dog."tater.man"]
 type = "pug"
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json
 {
   "dog": {
@@ -238,7 +238,7 @@ type = "pug"
 [foo.bar.baz]
 bat = "hi"
 ```
-#### ↓ Equavalent JSON
+#### ↓ Equivalent JSON
 ```json
 {
 	"foo" : {
