@@ -11,8 +11,47 @@ intro: |
     This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
 ---
 
-Resolutions
------------
+
+Getting started {.cols-2}
+---------------
+
+### Introduction
+- Resolution is the number of pixels (individual points of color)
+- Viewport is defined by the size of the rectangle filled by a web page on your screen
+- Screen resolution refers to the clarity of the text and images displayed on your screen
+- For design
+  {.style-round}
+
+
+### Multi-format of Resolutions
+
+- [Markdown Table](https://tableconvert.com/html-to-markdown?data=https://quickref.me/resolutions#TableGenerator)
+- [Template](https://tableconvert.com/html-to-template?data=https://quickref.me/resolutions#TableGenerator)
+- [LaTeX Table](https://tableconvert.com/html-to-latex?data=https://quickref.me/resolutions#TableGenerator)
+- [CSV](https://tableconvert.com/html-to-csv?data=https://quickref.me/resolutions#TableGenerator)
+- [Excel](https://tableconvert.com/html-to-excel?data=https://quickref.me/resolutions#TableGenerator)
+- [JSON Array](https://tableconvert.com/html-to-json?data=https://quickref.me/resolutions#TableGenerator)
+- [HTML Table](https://tableconvert.com/html-to-html?data=https://quickref.me/resolutions#TableGenerator)
+- [Insert SQL](https://tableconvert.com/html-to-sql?data=https://quickref.me/resolutions#TableGenerator)
+- [YAML Sequence](https://tableconvert.com/html-to-yaml?data=https://quickref.me/resolutions#TableGenerator)
+- [XML](https://tableconvert.com/html-to-xml?data=https://quickref.me/resolutions#TableGenerator)
+- [ASCII](https://tableconvert.com/html-to-ascii?data=https://quickref.me/resolutions#TableGenerator)
+- [MediaWiki Table](https://tableconvert.com/html-to-mediawiki?data=https://quickref.me/resolutions#TableGenerator)
+- [AsciiDoc Table](https://tableconvert.com/html-to-asciidoc?data=https://quickref.me/resolutions#TableGenerator)
+- [Jira Table](https://tableconvert.com/html-to-jira?data=https://quickref.me/resolutions#TableGenerator)
+- [Textile Table](https://tableconvert.com/html-to-textile?data=https://quickref.me/resolutions#TableGenerator)
+- [reStructuredText](https://tableconvert.com/html-to-restructuredtext?data=https://quickref.me/resolutions#TableGenerator)
+- [PHP Array](https://tableconvert.com/html-to-php?data=https://quickref.me/resolutions#TableGenerator)
+- [Ruby Array](https://tableconvert.com/html-to-ruby?data=https://quickref.me/resolutions#TableGenerator)
+- [ASP Array](https://tableconvert.com/html-to-asp?data=https://quickref.me/resolutions#TableGenerator)
+- [ActionScript](https://tableconvert.com/html-to-actionscript?data=https://quickref.me/resolutions#TableGenerator)
+- [BBCode](https://tableconvert.com/html-to-bbcode?data=https://quickref.me/resolutions#TableGenerator)
+- [PDF](https://tableconvert.com/html-to-pdf?data=https://quickref.me/resolutions#TableGenerator)
+- [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/resolutions#TableGenerator)
+{.cols-4 .style-none}
+
+Lists of Resolutions
+-------------------
 
 ### Mobile Phones
 

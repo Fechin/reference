@@ -9,6 +9,50 @@ intro: |
     This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
 ---
 
+
+Getting started {.cols-2}
+---------------
+
+### Introduction
+- The MIME type registry associates particular filename extensions and filename pattern
+- MIME (Multipurpose Internet Mail Extensions) type aka media type
+- MIME types are defined and standardized in IETF's RFC 6838
+- Indicates the nature and format of a document, file, or assortment of bytes.
+- For file formats or format contents on the Internet
+  {.style-round}
+
+
+### Multi-format of MIME types
+
+- [Markdown Table](https://tableconvert.com/html-to-markdown?data=https://quickref.me/mime#TableGenerator)
+- [Template](https://tableconvert.com/html-to-template?data=https://quickref.me/mime#TableGenerator)
+- [LaTeX Table](https://tableconvert.com/html-to-latex?data=https://quickref.me/mime#TableGenerator)
+- [CSV](https://tableconvert.com/html-to-csv?data=https://quickref.me/mime#TableGenerator)
+- [Excel](https://tableconvert.com/html-to-excel?data=https://quickref.me/mime#TableGenerator)
+- [JSON Array](https://tableconvert.com/html-to-json?data=https://quickref.me/mime#TableGenerator)
+- [HTML Table](https://tableconvert.com/html-to-html?data=https://quickref.me/mime#TableGenerator)
+- [Insert SQL](https://tableconvert.com/html-to-sql?data=https://quickref.me/mime#TableGenerator)
+- [YAML Sequence](https://tableconvert.com/html-to-yaml?data=https://quickref.me/mime#TableGenerator)
+- [XML](https://tableconvert.com/html-to-xml?data=https://quickref.me/mime#TableGenerator)
+- [ASCII](https://tableconvert.com/html-to-ascii?data=https://quickref.me/mime#TableGenerator)
+- [MediaWiki Table](https://tableconvert.com/html-to-mediawiki?data=https://quickref.me/mime#TableGenerator)
+- [AsciiDoc Table](https://tableconvert.com/html-to-asciidoc?data=https://quickref.me/mime#TableGenerator)
+- [Jira Table](https://tableconvert.com/html-to-jira?data=https://quickref.me/mime#TableGenerator)
+- [Textile Table](https://tableconvert.com/html-to-textile?data=https://quickref.me/mime#TableGenerator)
+- [reStructuredText](https://tableconvert.com/html-to-restructuredtext?data=https://quickref.me/mime#TableGenerator)
+- [PHP Array](https://tableconvert.com/html-to-php?data=https://quickref.me/mime#TableGenerator)
+- [Ruby Array](https://tableconvert.com/html-to-ruby?data=https://quickref.me/mime#TableGenerator)
+- [ASP Array](https://tableconvert.com/html-to-asp?data=https://quickref.me/mime#TableGenerator)
+- [ActionScript](https://tableconvert.com/html-to-actionscript?data=https://quickref.me/mime#TableGenerator)
+- [BBCode](https://tableconvert.com/html-to-bbcode?data=https://quickref.me/mime#TableGenerator)
+- [PDF](https://tableconvert.com/html-to-pdf?data=https://quickref.me/mime#TableGenerator)
+- [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/mime#TableGenerator)
+{.cols-4 .style-none}
+
+
+Lists of MIME types
+-------------------
+
 ### Common MIME (Media) types
 | Extension       | Kind of document                                 | MIME Type \(Content Type\)                                                                                                               |
 |-----------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
