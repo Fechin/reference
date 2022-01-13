@@ -2,9 +2,9 @@
 title: HTML Characters Entities
 date: 2022-01-13 11:44:21
 tags:
-    - network
-    - utility
-    - port
+    - html
+    - code
+    - characters
 categories:
   - Other
 intro: |
