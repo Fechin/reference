@@ -86,15 +86,40 @@ var bo = false;
 string first = "John";
 string last = "Doe";
 
+// string concatenation
 string name = first + " " + last;
 Console.WriteLine(name); // => John Doe
 ```
 ---
-```
-// Or string interpolation
-string name = $"{first} {last}"
+```cs
+// string interpolation
+string name = $"{first} {last}";
 Console.WriteLine(name); // => John Doe
 ```
+---
+```cs
+// verbatim strings
+string longString = @"I can type any characters in here !#@$%^&*()__+ '' \n \t except double quotes and I will be taken literally. I even work with multiple lines.";
+```
+#### String Members
+```cs
+// Using property of System.String
+string lengthOfString = "How long?";
+Console.WriteLine(lengthOfString.Length); // => 9
+
+// Using methods of System.String
+Console.WriteLine(lengthOfString.Contains("How")); // => true
+```
+| String Member | Description |
+|---------------|-------------|
+| Length      | A property that returns the length of the string.         |
+| Compare()   | A static method that compares two strings.  |
+| Contains()  | Determines if the string contains a specific substring. |
+| Equals()    | Determines if the two strings have the same character data. |
+| Format()    | Formats a string via the {0} notation and by using other primitives. |
+| Trim()      | Removes all instances of specific characters from trailing and leading characters. Defaults to removing leading and trailing spaces. |
+| Split()     | Removes the provided character and creates an array out of the remaining characters on either side. |
+{.show-header}
 
 
 ### User Input
@@ -143,7 +168,7 @@ for(int i = 0; i < numbers.Length; i++) {
 }
 ```
 ---
-```
+```cs
 foreach(int num in numbers) {
   Console.WriteLine(num);
 }
@@ -152,8 +177,9 @@ foreach(int num in numbers) {
 ### General .NET Terms
 
 | Term       | Definition |
-|------------|--------
-| Runtime | A collection of services that are required to execute a given compiled unit of code.
-| Common Language Runtime (CLR) | Primarily locates, loads, and managed .NET objects. The CLR also handles memory management, application hosting, coordination of threads, performaing security checks, and other low-level details.
-| Managed code | Code that compiles and runs on .NET runtime. C#/F#/VB are examples.
-| Umanaged code | Code that compiles straight to machine code and cannot be directly hosted by the .NET runtime. Contains no free memory management, garbage collection, etc. DLLs created from C/C++ are examples.
+|------------|------------|
+| Runtime | A collection of services that are required to execute a given compiled unit of code. |
+| Common Language Runtime (CLR) | Primarily locates, loads, and managed .NET objects. The CLR also handles memory management, application hosting, coordination of threads, performaing security checks, and other low-level details. |
+| Managed code | Code that compiles and runs on .NET runtime. C#/F#/VB are examples. |
+| Umanaged code | Code that compiles straight to machine code and cannot be directly hosted by the .NET runtime. Contains no free memory management, garbage collection, etc. DLLs created from C/C++ are examples. |
+{.show-header}
