@@ -515,6 +515,7 @@ cart.push('pear');
 const numbers = [1, 2];
 numbers.push(3, 4, 5);
 ```
+Add items to the end and returns the new array length.
 
 
 ### Method .pop()
@@ -525,17 +526,41 @@ const a= ['eggs', 'flour', 'chocolate'];
 const p = a.pop(); // 'chocolate'
 console.log(a); // ['eggs', 'flour']
 ```
+Remove an item from the end and returns the removed item.
 
 
-### Mutable
+### Method .shift()
 
 ```javascript
-const names = ['Alice', 'Bob'];
+let cats = ['Bob', 'Willy', 'Mini'];
 
-names.push('Carl');
-// ['Alice', 'Bob', 'Carl']
+cats.shift(); // ['Willy', 'Mini']
 ```
+Remove an item from the beginning and returns the removed item.
 
+
+### Method .unshift()
+
+```javascript
+let cats = ['Bob'];
+
+// => ['Willy', 'Bob']
+cats.unshift('Willy');
+
+// => ['Puff', 'George', 'Willy', 'Bob']
+cats.unshift('Puff', 'George');
+```
+Add items to the beginning and returns the new array length.
+
+
+### Mutable chart
+|           | add | remove | start | end |
+|:----------|:---:|:------:|:-----:|:---:|
+| `push`    | ✔   |        |       | ✔   |
+| `pop`     |     | ✔      |       | ✔   |
+| `unshift` | ✔   |        | ✔     |     |
+| `shift`   |     | ✔      | ✔     |     |
+{.show-header}
 
 
 JavaScript Loops  {.cols-3}
