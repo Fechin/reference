@@ -504,6 +504,16 @@ console.log(myArray[1]); // 200
 ```
 
 
+### Mutable chart
+|           | add | remove | start | end |
+|:----------|:---:|:------:|:-----:|:---:|
+| `push`    | ✔   |        |       | ✔   |
+| `pop`     |     | ✔      |       | ✔   |
+| `unshift` | ✔   |        | ✔     |     |
+| `shift`   |     | ✔      | ✔     |     |
+{.show-header}
+
+
 ### Method .push()
 
 ```javascript
@@ -553,14 +563,20 @@ cats.unshift('Puff', 'George');
 Add items to the beginning and returns the new array length.
 
 
-### Mutable chart
-|           | add | remove | start | end |
-|:----------|:---:|:------:|:-----:|:---:|
-| `push`    | ✔   |        |       | ✔   |
-| `pop`     |     | ✔      |       | ✔   |
-| `unshift` | ✔   |        | ✔     |     |
-| `shift`   |     | ✔      | ✔     |     |
-{.show-header}
+
+
+### Method .concat()
+```javascript
+const array = [3, 2, 1]
+const newFirstElement = 4
+    
+// => [ 4, 3, 2, 1 ]
+[newFirstElement].concat(array)
+    
+// => [ 3, 2, 1, 4 ]
+[array].concat(newFirstElement)
+```
+if you want to avoid mutating your original array, you can use concat.
 
 
 JavaScript Loops  {.cols-3}
