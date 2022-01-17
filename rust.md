@@ -18,12 +18,12 @@ Getting Started  {.cols-3}
 
 ```rust
 fn main() {
-  println!("{}", "Hello, World!");
+  println!("Hello, World!");
 }
 ```
 #### Compiling and Running
 ```shell
-$ rustc Hello_World.rs -o Hello_World
+$ rustc Hello_World.rs
 $ ./Hello_World
 Hello, World!
 ```
@@ -63,6 +63,10 @@ println!("Let us print 76 is binary which is {:b} , and hex equivalent is {:0x} 
 
 // Debug Trait
 println!("Print whatever we want to here using debug trait {:?}", (76, 'A', 90));
+
+// New Format Strings in 1.58
+let x = "world";
+println!("Hello {x}!");
 ```
 
 
@@ -178,7 +182,7 @@ let emoji = "\u{1f600}";   // => 😀
 let community_name = "AXIAL";
 let no_of_members: &str = "ten";
 
-println!("The name of the community is {} and it has {} members", community_name, no_of_members);
+println!("The name of the community is {community_name} and it has {no_of_members} members");
 ```
 See: [Strings](#rust-strings)
 
@@ -235,7 +239,7 @@ Use the `mut` keyword to make it mutable.
 let mut array: [ i64; 4] = [1,2,3,4];
 let mut slices: &[i64] = &array[0..3] // Lower range is inclusive and upper range is exclusive
 
-println!("The elements of the slices are : {:?}", slices);
+println!("The elements of the slices are : {slices:?}");
 ```
 
 
@@ -264,7 +268,7 @@ Rust Strings {.cols-3}
 let cs:&str = "cheat sheet";
 
 // => Share cheat sheet for developers
-println!("Share {} for developers", cs);
+println!("Share {cs} for developers");
 ```
 
 
@@ -279,7 +283,7 @@ let S_string = a_string.to_string()
 
 // Creating an initialized string object
 let lang = String::from("Rust");  
-println!("First language is {}", lang);
+println!("First language is {lang}");
  ```
 
 ### .capacity()
@@ -315,7 +319,7 @@ let mut hi = String::from("Hey there...");
 hi.push_str("How are you doing??");
 
 // => Hey there...How are you doing??
-println!("{}", hi);
+println!("{hi}");
 ```
 
 
@@ -508,7 +512,7 @@ if let(_, 7, 9, 78.99) = tuple_1{
 
 let tuple_2 = ( 9, 7, 89, 12, "Okay");
 if let(9, 7,89, 12, blank) = tuple_2 {
-    println!("Everything {} mate?", blank);
+    println!("Everything {blank} mate?");
 }
 
 let tuple_3 = (89, 90, "Yes");
@@ -572,7 +576,7 @@ if nested_conditions == 89 {
 ```rust
 for mut i in 0..15 {
   i-=1;
-  println!("The value of i is : {}", i);
+  println!("The value of i is : {i}");
 }
 ```
 
@@ -583,9 +587,9 @@ for mut i in 0..15 {
 ```rust
 let mut check =  0;
 while check < 11{
-  println!("Check is : {}", check);
+  println!("Check is : {check}");
   check+=1;
-  println!("After incrementing: {}", check);
+  println!("After incrementing: {check}");
 
   if check == 10{
     break; // stop while
@@ -608,7 +612,7 @@ The infinite loop indicated.
 ```rust
 let mut i = 1;
 loop {
-  println!("i is {}", i);
+  println!("i is {i}");
   if i > 100 {
     break;
   }
@@ -621,12 +625,12 @@ loop {
 
 ```rust
 for (v, c) in (0..10+1).enumerate(){
-  println!("The {} number loop", c);
+  println!("The {c} number loop");
   if v == 9{
     println!("Here we go continue?");
     continue;
   }
-  println!{"The value of v is : {}", v};
+  println!{"The value of v is : {v}"};
 }
 ```
 
@@ -673,13 +677,13 @@ fn cal_rect(x:u32, y:u32) -> u32
 fn main(){
   let mut by_ref = 3;      // => 3
   power_of_three(&mut by_ref);
-  println!("{}", by_ref);  // => 9
+  println!("{by_ref}");  // => 9
 }
 
 fn power_of_three(by_ref: &mut i32){
   // de-referencing is important
   *by_ref = *by_ref * *by_ref;
-  println!("{}", by_ref);  // => 9
+  println!("{by_ref}");  // => 9
 }
 ```
 
@@ -694,7 +698,7 @@ fn main(){
       &mut radius,
       &mut pi
   );
-  println!("The area and the perimeter of the circle are: {} & {}", area, _perimeter);
+  println!("The area and the perimeter of the circle are: {area} & {_perimeter}");
 }
 
 fn calculate(radius : &mut f64, pi: &mut f64) -> (f64, f64){
@@ -710,7 +714,7 @@ fn calculate(radius : &mut f64, pi: &mut f64) -> (f64, f64){
 fn main(){
   let mut array: [i32 ; 5] = [1,2,3,4,6];
   print_arrays(array);
-  println!("The elements: {:?}", array);
+  println!("The elements: {array:?}");
 }
 
 fn print_arrays(mut array:[i32; 5]) {
@@ -719,7 +723,7 @@ fn print_arrays(mut array:[i32; 5]) {
   array[2] = 91;
   array[3] = 92;
   array[4] = 93;
-  println!("The elements: {:?}", array);
+  println!("The elements: {array:?}");
 }
 ```
 
@@ -773,13 +777,13 @@ To perform type-casting in Rust one must use the `as` keyword.
 ```rust
 let mut foo = 4;
 let mut borrowed_foo = &foo;
-println!("{}", borrowed_foo);
+println!("{borrowed_foo}");
 ```
 ------
 ```rust
 let mut bar = 3;
 let mut mutable_borrowed_bar = &mut bar;
-println!("{}", mutable_borrowed_bar);
+println!("{mutable_borrowed_bar}");
 ```
 
 Here borrowed value borrows the value from value one using `&` operator.
@@ -804,7 +808,7 @@ De-referencing in rust can be done using the `*` operator
   // The scope limited to this braces
   let a_number = 1;
 }
-println!("{}", a_number);
+println!("{a_number}");
 ```
 This will produce error as the scope of the variable `a_number` ends at the braces
 
