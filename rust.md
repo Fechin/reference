@@ -742,7 +742,7 @@ fn multiply (mut arr: [i32 ; 5]) -> [i32 ; 5]{
   for mut i in 0..5 {
       arr[i] = arr[i] * arr[2];
   }
-  return multiply;
+  return arr;
 }
 ```
 
