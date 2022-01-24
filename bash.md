@@ -83,19 +83,6 @@ Multi-line comments use `:'` to open and `'` to close
 See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables)
 
 
-
-### Optional arguments
-
-```bash
-args=("$@")
-args+=(foo)
-args+=(bar)
-baz "${args[@]}"
-```
-
-Put the arguments into an array and then append to the array.
-
-
 ### Functions
 
 ```bash
@@ -277,11 +264,15 @@ Fruits[0]="Apple"
 Fruits[1]="Banana"
 Fruits[2]="Orange"
 
-ARRAY2=(foo{1..2}) # => foo1 foo2
-ARRAY3=({A..D})    # => A B C D
+ARRAY1=(foo{1..2}) # => foo1 foo2
+ARRAY2=({A..D})    # => A B C D
+
+# Merge => foo1 foo2 A B C D
+ARRAY3=(${ARRAY1[@]} ${ARRAY2[@]})
 
 # declare construct
-declare -a Numbers=(1 2 3 4 5 6)
+declare -a Numbers=(1 2 3)
+Numbers+=(4 5) # Append => 1 2 3 4 5
 ```
 
 
@@ -1020,6 +1011,19 @@ IFS=$'\n\t'
 ```
 
 See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+
+
+### Optional arguments
+
+```bash
+args=("$@")
+args+=(foo)
+args+=(bar)
+echo "${args[@]}"
+```
+
+Put the arguments into an array and then append
+
 
 
 ## Also see {.cols-1}
