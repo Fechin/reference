@@ -84,6 +84,18 @@ See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_
 
 
 
+### Optional arguments
+
+```bash
+args=("$@")
+args+=(foo)
+args+=(bar)
+baz "${args[@]}"
+```
+
+Put the arguments into an array and then append to the array.
+
+
 ### Functions
 
 ```bash
