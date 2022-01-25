@@ -37,21 +37,22 @@ mysql -h <host> -u <user> -p [db_name]
 
 | -                        | -               |
 |--------------------------|-----------------|
-| `create database` db `;` | Create database |
-| `show databases;`        | List databases  |
-| `use` db`;`              | Switch to db    |
-| `drop database` db`;`    | Delete db       |
+| `CREATE DATABASE` db `;` | Create database |
+| `SHOW DATABASES;`        | List databases  |
+| `USE` db`;`              | Switch to db    |
+| `DROP DATABASE` db`;`    | Delete db       |
 
 #### Table
 
 | -                        | -                          |
 |--------------------------|----------------------------|
-| `show tables;`           | List tables for current db |
-| `show fields from` t`;`  | List fields for a table    |
-| `desc` t`;`              | Show table structure       |
-| `show create table `t`;` | Show create table sql      |
-| `truncate table `t`;`    | Remove all data in a table |
-| `drop table `t`;`        | Delete table               |
+| `SHOW TABLES;`           | List tables for current db |
+| `SHOW fields from` t`;`  | List fields for a table    |
+| `DESC` t`;`              | Show table structure       |
+| `SHOW CREATE TABLE `t`;` | Show create table sql      |
+| `TRUNCATE TABLE `t`;`    | Remove all data in a table |
+| `DROP TABLE `t`;`        | Delete table               |
+
 #### Proccess
 
 | -                   | -              |
@@ -63,8 +64,6 @@ mysql -h <host> -u <user> -p [db_name]
 | -              | -                  |
 |----------------|--------------------|
 | `exit` or `\q` | Exit MySQL session |
-
-
 
 ### Backups
 
