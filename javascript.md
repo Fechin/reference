@@ -574,7 +574,7 @@ const newFirstElement = 4
 [newFirstElement].concat(array)
     
 // => [ 3, 2, 1, 4 ]
-[array].concat(newFirstElement)
+array.concat(newFirstElement)
 ```
 if you want to avoid mutating your original array, you can use concat.
 
