@@ -458,7 +458,7 @@ Python F-Strings (Since Python 3.6+) {.cols-3}
 >>> f"Hello, {website}"
 "Hello, Quickref.ME"
 
->>> num = 1num = 100
+>>> num = 10
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 
