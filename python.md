@@ -983,8 +983,8 @@ with open("myfile.txt") as file:
 ```
 #### With line number
 ```python
-input = open('myfile.txt', 'r')
-for i,line in enumerate(input, start=1):
+file = open('myfile.txt', 'r')
+for i, line in enumerate(file, start=1):
     print("Number %s: %s" % (i, line))
 ```
 
