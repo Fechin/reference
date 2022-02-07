@@ -156,14 +156,14 @@ message += "Part 2."
 >>> f"Hello, {website}"
 "Hello, Quickref.ME"
 
->>> num = 1num = 100
+>>> num = 10
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 ```
 See: [Python F-Strings](#python-f-strings-since-python)
 
 
-                                            
+
 Python Data Types {.cols-3}
 ---------------
 
@@ -421,9 +421,9 @@ print("%s is %d years old." % (name, age))
 
 #### format() Method
 ```python
-txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
-txt2 = "My name is {0}, I'm {1}".format("John",36)
-txt3 = "My name is {}, I'm {}".format("John",36)
+txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
+txt2 = "My name is {0}, I'm {1}".format("John", 36)
+txt3 = "My name is {}, I'm {}".format("John", 36)
 ```
 
 ### Input
@@ -458,7 +458,7 @@ Python F-Strings (Since Python 3.6+) {.cols-3}
 >>> f"Hello, {website}"
 "Hello, Quickref.ME"
 
->>> num = 1num = 100
+>>> num = 10
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 
@@ -983,8 +983,8 @@ with open("myfile.txt") as file:
 ```
 #### With line number
 ```python
-input = open('myfile.txt', 'r')
-for i,line in enumerate(input, start=1):
+file = open('myfile.txt', 'r')
+for i, line in enumerate(file, start=1):
     print("Number %s: %s" % (i, line))
 ```
 
@@ -1061,7 +1061,6 @@ Python Classes & Inheritance {.cols-3}
 
 ```python
 class MyNewClass:
-    '''This is a docstring.'''
     pass
 
 # Class Instantiation
@@ -1075,7 +1074,7 @@ my = MyNewClass()
 ```python
 class Animal:
     def __init__(self, voice):
-    self.voice = voice
+        self.voice = voice
  
 cat = Animal('Meow')
 print(cat.voice)    # => Meow
@@ -1092,7 +1091,7 @@ class Dog:
 
     # Method of the class
     def bark(self):
-    print("Ham-Ham")
+        print("Ham-Ham")
  
 charlie = Dog()
 charlie.bark()   # => "Ham-Ham"
@@ -1103,17 +1102,16 @@ charlie.bark()   # => "Ham-Ham"
 ### Class Variables  {.row-span-2}
 
 ```python
-class my_class:
+class MyClass:
     class_variable = "A class variable!"
-  
-x = my_class()
-y = my_class()
+
+# => A class variable!
+print(MyClass.class_variable)
+
+x = MyClass()
  
 # => A class variable!
 print(x.class_variable)
-
-# => A class variable!
-print(y.class_variable)
 ```
 
 
