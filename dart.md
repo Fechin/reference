@@ -270,7 +270,7 @@ person['firstName'] = 'Nicola';
 person['lastName'] = 'Tesla';
 
 print(person); //Print: {firstName: Nicola, lastName: Tesla}
-print(person['lastName']); //Print: Nicola
+print(person['lastName']); //Print: Tesla
 
 
 var nobleGases = {
