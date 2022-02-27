@@ -694,7 +694,7 @@ for (let i = 0; i < 2; i += 1) {
 ### for...in loop
 
 ```javascript
-let dic = {brand: 'Apple', model: ''};
+let mobile = {brand: 'Apple', model: ''};
 
 for (let key in mobile) {
   console.log(`${key}: ${mobile[key]}`);
