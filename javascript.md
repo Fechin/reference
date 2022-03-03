@@ -701,6 +701,14 @@ for (let key in mobile) {
 }
 ```
 
+### for...of loop
+
+```javascript
+let fruits = ["banana", "apple", "orange"];
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+```
 
 
 JavaScript Iterators {.cols-2}
