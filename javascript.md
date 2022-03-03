@@ -1132,33 +1132,33 @@ export default function add(x,y){
 }
 
 // Normal export
-export function multiply(x,y){
-    return x * y
+export function subtract(x,y){
+    return x - y
 }
 
 // Multiple exports
-function subtract(x,y){
-    return x - y
+function multiply(x,y){
+    return x * y
 }
 function duplicate(x){
     return x * 2
 }
 export {
-    subtract,
+    multiply,
     duplicate
 }
 ```
 
 
-### Import keyword 
+### Import 
 
 ```javascript
 // main.js
-import add, { multiply, subtract, duplicate } from './myMath.js';
+import add, { subtract, multiply, duplicate } from './myMath.js';
 
-console.log(multiply(6, 2)); // 12
 console.log(add(6, 2)); // 8 
 console.log(subtract(6, 2)) // 4
+console.log(multiply(6, 2)); // 12
 console.log(duplicate(5)) // 10
 
 // index.html
@@ -1166,26 +1166,44 @@ console.log(duplicate(5)) // 10
 ```
 
 
-### Require
-
-```javascript
-var moduleA = require( "./module-a.js" );
-
-// The .js extension is optional
-var moduleA = require( "./module-a" );
-// Both ways will produce the same result.
-
-// Now the functionality of moduleA can be used
-console.log(moduleA.someFunctionality)
-```
-
-
 ### Export Module
 
 ```javascript
-let Course = {};
-Course.name = "Javascript Node.js"
-module.exports = Course;
+// myMath.js
+
+function add(x,y){
+    return x + y
+}
+function subtract(x,y){
+    return x - y
+}
+function multiply(x,y){
+    return x * y
+}
+function duplicate(x){
+    return x * 2
+}
+
+// Multiple exports in node.js
+module.exports = {
+    add,
+    subtract,
+    multiply,
+    duplicate
+}
+```
+
+
+### Require Module
+
+```javascript
+// main.js
+const myMath = require('./myMath.js')
+
+console.log(myMath.add(6, 2)); // 8 
+console.log(myMath.subtract(6, 2)) // 4
+console.log(myMath.multiply(6, 2)); // 12
+console.log(myMath.duplicate(5)) // 10
 ```
 
 
