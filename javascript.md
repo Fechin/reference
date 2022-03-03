@@ -705,6 +705,7 @@ for (let key in mobile) {
 
 ```javascript
 let fruits = ["banana", "apple", "orange"];
+
 for (let fruit of fruits) {
   console.log(fruit);
 }
