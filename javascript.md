@@ -1121,6 +1121,51 @@ JavaScript Modules {.cols-2}
 ------------
 
 
+### Export 
+
+```javascript
+// myMath.js
+
+// Default export
+export default function add(x,y){
+    return x + y
+}
+
+// Normal export
+export function multiply(x,y){
+    return x * y
+}
+
+// Multiple exports
+function subtract(x,y){
+    return x - y
+}
+function duplicate(x){
+    return x * 2
+}
+export {
+    subtract,
+    duplicate
+}
+```
+
+
+### Import keyword 
+
+```javascript
+// main.js
+import add, { multiply, subtract, duplicate } from './myMath.js';
+
+console.log(multiply(6, 2)); // 12
+console.log(add(6, 2)); // 8 
+console.log(subtract(6, 2)) // 4
+console.log(duplicate(5)) // 10
+
+// index.html
+<script type="module" src="main.js"></script>
+```
+
+
 ### Require
 
 ```javascript
@@ -1135,21 +1180,6 @@ console.log(moduleA.someFunctionality)
 ```
 
 
-### Export 
-
-```javascript
-// module "moduleA.js"
-export default function cube(x) {
-  return x * x * x;
-}
-
-// In main.js
-import cube from './moduleA.js';
-// Now the `cube` function can be used straightforwardly.
-console.log(cube(3)); // 27
-```
-
-
 ### Export Module
 
 ```javascript
@@ -1157,22 +1187,6 @@ let Course = {};
 Course.name = "Javascript Node.js"
 module.exports = Course;
 ```
-
-
-### Import keyword 
-
-```javascript
-// add.js
-export const add = (x, y) => {
-    return x + y
-}
-
-
-// main.js
-import { add } from './add';
-console.log(add(2, 3)); // 5
-```
-
 
 
 JavaScript Promises {.cols-2}
