@@ -404,7 +404,7 @@ JavaScript Scope  {.cols-3}
 ```javascript
 function myFunction() {
   
-  var pizzaName = "Volvo";
+  var pizzaName = "Margarita";
   // Code here can use pizzaName
   
 }
@@ -487,10 +487,10 @@ JavaScript Arrays  {.cols-3}
 ### Arrays
 
 ```javascript
-const a1 = [0, 1, 2, 3];
+const fruits = ["apple", "orange", "banana"];
 
 // Different data types
-const a2 = [1, 'chicken', false];
+const data = [1, 'chicken', false];
 ```
 
 ### Property .length
@@ -540,10 +540,10 @@ Add items to the end and returns the new array length.
 ### Method .pop()
 
 ```javascript
-const a= ['eggs', 'flour', 'chocolate'];
+const fruits = ["apple", "orange", "banana"];
 
-const p = a.pop(); // 'chocolate'
-console.log(a); // ['eggs', 'flour']
+const fruit = fruits.pop(); // 'banana'
+console.log(fruits); // ["apple", "orange"]
 ```
 Remove an item from the end and returns the removed item.
 
@@ -576,14 +576,14 @@ Add items to the beginning and returns the new array length.
 
 ### Method .concat()
 ```javascript
-const array = [3, 2, 1]
-const newFirstElement = 4
+const numbers = [3, 2, 1]
+const newFirstNumber = 4
     
 // => [ 4, 3, 2, 1 ]
-[newFirstElement].concat(array)
+[newFirstNumber].concat(numbers)
     
 // => [ 3, 2, 1, 4 ]
-array.concat(newFirstElement)
+numbers.concat(newFirstNumber)
 ```
 if you want to avoid mutating your original array, you can use concat.
 
@@ -610,14 +610,15 @@ while (i < 5) {
 ### Reverse Loop
 
 ```javascript
-const a = ['banana', 'cherry'];
+const fruits = ["apple", "orange", "banana"];
 
-for (let i = a.length - 1; i >= 0; i--){
-  console.log(`${i}. ${items[i]}`);
+for (let i = fruits.length - 1; i >= 0; i--) {
+  console.log(`${i}. ${fruits[i]}`);
 }
 
-// => 2. cherry
-// => 1. banana
+// => 2. banana
+// => 1. orange
+// => 0. apple
 ```
 
 
@@ -694,21 +695,27 @@ for (let i = 0; i < 2; i += 1) {
 ### for...in loop
 
 ```javascript
-let mobile = {brand: 'Apple', model: ''};
+const fruits = ["apple", "orange", "banana"];
 
-for (let key in mobile) {
-  console.log(`${key}: ${mobile[key]}`);
+for (let index in fruits) {
+  console.log(index);
 }
+// => 0
+// => 1
+// => 2
 ```
 
 ### for...of loop
 
 ```javascript
-let fruits = ["banana", "apple", "orange"];
+const fruits = ["apple", "orange", "banana"];
 
 for (let fruit of fruits) {
   console.log(fruit);
 }
+// => apple
+// => orange
+// => banana
 ```
 
 
@@ -752,9 +759,9 @@ printMsg(isEven, 4);
 ### Array Method .reduce()
 
 ```javascript
-const arrayOfNumbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4];
 
-const sum = arrayOfNumbers.reduce((accumulator, curVal) => {  
+const sum = numbers.reduce((accumulator, curVal) => {  
   return accumulator + curVal;
 });
 
@@ -765,11 +772,11 @@ console.log(sum); // 10
 ### Array Method .map()
 
 ```javascript
-const a = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];
+const members = ["Taylor", "Donald", "Don", "Natasha", "Bobby"];
 
-const announcements = a.map(member => {
-  return member + ' joined the contest.';
-})
+const announcements = members.map((member) => {
+  return member + " joined the contest.";
+});
 
 console.log(announcements);
 ```
