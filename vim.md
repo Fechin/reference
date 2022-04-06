@@ -689,8 +689,8 @@ Miscellaneous {.cols-3}
 | Shortcut                 | Description               |
 |--------------------------|---------------------------|
 | `%`                      | Nearest/matching `{[()]}` |
-| `[(` _\|_ `[{` _\|_ `[<` | Previous `(`, `{` or `<`  |
-| `])` _\|_ `]{` _\|_ `]>` | Next `)`, `}` or `>`      |
+| `[(` _\|_ `[{`           | Previous `(` or `{`       |
+| `])` _\|_ `]{`           | Next `)` or `}`           |
 | `[m`                     | Previous method start     |
 | `[M`                     | Previous method end       |
 {.shortcuts}
