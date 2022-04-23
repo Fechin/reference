@@ -60,6 +60,7 @@ HTTP Status code {.cols-3}
 * [416: Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4){data-tooltip="The requested byte range is not available and is out of bounds."}
 * [417: Expectation Failed](https://tools.ietf.org/html/rfc7231#section-6.5.14){data-tooltip="The expectation given in an Expect request-header field could not be met by this server."}
 * [426: Upgrade Required](https://tools.ietf.org/html/rfc7231#section-6.5.15){data-tooltip="The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol."}
+* [451: Unavailable For Legal Reasons](https://datatracker.ietf.org/doc/html/rfc7725#section-3){data-tooltip="This status code indicates that the server is denying access to the resource as a consequence of a legal demand."}
 
 
 
