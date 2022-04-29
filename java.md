@@ -506,7 +506,7 @@ while (count < 5) {
 ```java
 int count = 0;
 
-do{
+do {
   System.out.print(count);
   count++;
 } while (count < 5);
@@ -540,20 +540,30 @@ Java Collections Framework {.cols-3}
 
 ### Java Collections {.col-span-2}
 
-| Collection                                                                              | Interface   | Ordered | Sorted | Thread safe | Duplicate | Nullable           |
-|-----------------------------------------------------------------------------------------|-------------|---------|--------|-------------|-----------|--------------------|
-| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)         | List        | Y       | _N_    | _N_         | Y         | Y                  |
-| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)               | List        | Y       | _N_    | Y           | Y         | Y                  |
-| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)       | List, Deque | Y       | _N_    | _N_         | Y         | Y                  |
-| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)             | Set         | _N_     | _N_    | _N_         | _N_       | One `null`         |
-| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html) | Set         | Y       | _N_    | _N_         | _N_       | One `null`         |
-| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)             | Set         | Y       | Y      | _N_         | _N_       | _N_                |
-| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)             | Map         | _N_     | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
-| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)         | Map         | _N_     | _N_    | Y           | _N (key)_ | _N (key)_          |
-| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html) | Map         | Y       | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
-| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)             | Map         | Y       | Y      | _N_         | _N (key)_ | _N (key)_          |
-| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)       | Deque       | Y       | _N_    | _N_         | Y         | _N_                |
-| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html) | Queue       | Y       | _N_    | _N_         | Y         | _N_                |
+| Collection                                                                                                         | Interface   | Ordered | Sorted | Thread safe | Duplicate | Nullable           |
+|--------------------------------------------------------------------------------------------------------------------|-------------|---------|--------|-------------|-----------|--------------------|
+| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)                                    | List        | Y       | _N_    | _N_         | Y         | Y                  |
+| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)                                          | List        | Y       | _N_    | Y           | Y         | Y                  |
+| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)                                  | List, Deque | Y       | _N_    | _N_         | Y         | Y                  |
+| [CopyOnWriteArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html)   | List        | Y       | _N_    | Y           | Y         | Y                  |
+| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)                                        | Set         | _N_     | _N_    | _N_         | _N_       | One `null`         |
+| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)                            | Set         | Y       | _N_    | _N_         | _N_       | One `null`         |
+| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)                                        | Set         | Y       | Y      | _N_         | _N_       | _N_                |
+| [CopyOnWriteArraySet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html)     | Set         | Y       | _N_    | Y           | _N_       | One `null`         |
+| [ConcurrentSkipListSet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListSet.html) | Set         | Y       | Y      | Y           | _N_       | _N_                |
+| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)                                        | Map         | _N_     | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
+| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)                                    | Map         | _N_     | _N_    | Y           | _N (key)_ | _N (key)_          |
+| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)                            | Map         | Y       | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
+| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)                                        | Map         | Y       | Y      | _N_         | _N (key)_ | _N (key)_          |
+| [ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)         | Map         | _N_     | _N_    | Y           | _N (key)_ | _N_                |
+| [ConcurrentSkipListMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListMap.html) | Map         | Y       | Y      | Y           | _N (key)_ | _N_                |
+| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)                                  | Deque       | Y       | _N_    | _N_         | Y         | _N_                |
+| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)                            | Queue       | Y       | _N_    | _N_         | Y         | _N_                |
+| [ConcurrentLinkedQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html) | Queue       | Y       | _N_    | Y           | Y         | _N_                |
+| [ConcurrentLinkedDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedDeque.html) | Deque       | Y       | _N_    | Y           | Y         | _N_                |
+| [ArrayBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html)       | Queue       | Y       | _N_    | Y           | Y         | _N_                |
+| [LinkedBlockingDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html)     | Deque       | Y       | _N_    | Y           | Y         | _N_                |
+| [PriorityBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html) | Queue       | Y       | _N_    | Y           | Y         | _N_                |
 {.show-header .left-text}
 
 
