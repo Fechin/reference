@@ -506,7 +506,7 @@ while (count < 5) {
 ```java
 int count = 0;
 
-do{
+do {
   System.out.print(count);
   count++;
 } while (count < 5);
