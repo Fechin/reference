@@ -898,5 +898,6 @@ Getting Started {.cols-3}
 | :volcano:                      | `:volcano:`                      |
 | :milky_way:                    | `:milky_way:`                    |
 | :partly_sunny:                 | `:partly_sunny:`                 |
+| :carrot:                       | `:carrot:`                       |
 {.plus-first}
 
