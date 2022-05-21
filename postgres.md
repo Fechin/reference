@@ -519,7 +519,7 @@ host  all  all  ::/0       md5
 ```
 Restart PostgreSQL server
 ```shell script
-$ sudo systemctl resatart postgresql
+$ sudo systemctl restart postgresql
 ```
 
 
