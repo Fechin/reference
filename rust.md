@@ -408,7 +408,7 @@ let left_shift = h << 4;  // => 32
 | Example        | Meaning                |
 |----------------|------------------------|
 | `c && d`       | Both are true _(AND)_  |
-| `c OR d`       | Either is true _(OR)_  |
+| `c || d`       | Either is true _(OR)_  |
 | `!c`           | `c` is false _(NOT)_   |
 
 ------
