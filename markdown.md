@@ -214,7 +214,7 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
 #### Reference style
 ```markdown
-![alt text][/images/logo.png]
+![alt text][logo]
 
 [logo]: /images/logo.png "Logo Title"
 ```
