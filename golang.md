@@ -736,8 +736,13 @@ r.Intn()
 
 ```go
 package main
+
+// An internal package may be imported only by another package
+// that is inside the tree rooted at the parent of the internal directory
+package internal
 ```
 
+See: [Internal packages](https://go.dev/doc/go1.4#internalpackages)
 
 ### Exporting names
 
