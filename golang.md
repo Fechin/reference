@@ -1019,6 +1019,7 @@ Miscellaneous {.cols-3}
 - map
 - struct
 - chan
+- close
 - else
 - goto
 - package
