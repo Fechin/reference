@@ -507,7 +507,7 @@ if let["Apple", _] = arr2{
 ```rust
 let tuple_1 = ("India", 7, 90, 90.432);
 if let(_, 7, 9, 78.99) = tuple_1{
-    println!("Works woth tuples too");
+    println!("Works with tuples too");
 }
 
 let tuple_2 = ( 9, 7, 89, 12, "Okay");
