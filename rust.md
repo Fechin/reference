@@ -56,7 +56,7 @@ println!("{} {}", 1, 3);
 println!("{0} is {1} {2}, also {0} is a {3} programming language", "Rust", "cool", "language", "safe");
 
 // Named Arguments
-println!("{country} is an diverse nation with unity.", country = "India");
+println!("{country} is a diverse nation with unity.", country = "India");
 
 // Placeholder traits :b for binary, :0x is for hex and :o is octal
 println!("Let us print 76 is binary which is {:b} , and hex equivalent is {:0x} and octal equivalent is {:o}", 76, 76, 76);
