@@ -21,7 +21,7 @@ Getting started {.cols-3}
 ### Hello.java {.row-span-2}
 ```java
 public class Hello {
-  // main methord
+  // main method
   public static void main(String[] args)
   {
     // Output: Hello, world!
