@@ -87,10 +87,8 @@ std::cout << "You entered " << num;
 
 ### Swap
 ```cpp
-int a = 5, b = 10, temp;
-temp = a;
-a = b;
-b = temp;
+int a = 5, b = 10;
+std::swap(a, b);
 
 // Outputs: a=10, b=5
 std::cout << "a=" << a << ", b=" << b;
