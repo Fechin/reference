@@ -182,17 +182,16 @@ C++ Arrays {.cols-3}
 ### Declaration
 
 ```cpp
-int marks[3]; // Declaration
+std::array<int, 3> marks; // Definition
 marks[0] = 92;
 marks[1] = 97;
 marks[2] = 98;
 
-// Declare and initialize
-int marks[3] = {92, 97, 98};
-int marks[]  = {92, 97, 98};
+// Define and initialize
+std::array<int, 3> = {92, 97, 98};
 
 // With empty members
-int marks[3] = {92, 97};
+std::array<int, 3> marks = {92, 97};
 std::cout << marks[2]; // Outputs: 0
 ```
 
@@ -208,7 +207,7 @@ std::cout << marks[2]; // Outputs: 0
 ---
 
 ```cpp
-int marks[6] = {92, 97, 98, 99, 98, 94};
+std::array<int, 6> marks = {92, 97, 98, 99, 98, 94};
 
 // Print first element
 std::cout << marks[0];
@@ -472,15 +471,12 @@ for(int i = 1; i > 0; i++) {
 ```cpp
 #include <iostream>
 
-void print(int num)
-{
-    std::cout << num << std::endl;
-}
-
 int main()
 {
-    int arr[4] = {1, 2, 3, 4 };
-    std::for_each(arr, arr + 4, print);
+    auto print = [](int num) { std::cout << num << std::endl; };
+
+    std::array<int, 4> arr = {1, 2, 3, 4};
+    std::for_each(arr.begin(), arr.end(), print);
     return 0;
 }
 ```
@@ -488,8 +484,7 @@ int main()
 ### Range-based (Since C++11)
 
 ```cpp
-int num_array[] = {1, 2, 3, 4, 5};
-for (int n : num_array) {
+for (int n : {1, 2, 3, 4, 5}) {
     std::cout << n << " ";
 }
 // Outputs: 1 2 3 4 5
