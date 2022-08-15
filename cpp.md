@@ -15,6 +15,7 @@ Getting started {.cols-3}
 --------
 
 ### hello.cpp
+
 ```cpp
 #include <iostream>
 
@@ -23,16 +24,17 @@ int main() {
     return 0;
 }
 ```
+
 Compiling and running
+
 ```shell script
 $ g++ hello.cpp -o hello
 $ ./hello
 Hello QuickRef
 ```
 
-
-
 ### Variables
+
 ```cpp
 int number = 5;       // Integer
 float f = 0.95;       // Floating number
@@ -44,17 +46,16 @@ bool isRight = true;  // Boolean
 // Constants
 const float RATE = 0.8;
 ```
+
 ----
+
 ```cpp
 int age {25};         // Since C++11
 std::cout << age;     // Print 25
 ```
 
+### Primitive Data Types
 
-
-
-
-### Primitive Data Types 
 | Data Type | Size           | Range               |
 |-----------|----------------|---------------------|
 | `int`     | 4 bytes        | -2^31^ ^to^ 2^31^-1 |
@@ -65,10 +66,6 @@ std::cout << age;     // Print 25
 | `void`    | _N/A_          | _N/A_               |
 | `wchar_t` | 2 ^or^ 4 bytes | 1 wide character    |
 {.show-header}
-
-
-
-
 
 ### User Input
 
@@ -81,11 +78,8 @@ std::cin >> num;
 std::cout << "You entered " << num;
 ```
 
-
-
-
-
 ### Swap
+
 ```cpp
 int a = 5, b = 10;
 std::swap(a, b);
@@ -94,10 +88,8 @@ std::swap(a, b);
 std::cout << "a=" << a << ", b=" << b;
 ```
 
-
-
-
 ### Comments
+
 ```cpp
 // A single one line comment in C++
 
@@ -105,29 +97,28 @@ std::cout << "a=" << a << ", b=" << b;
    in C++ */
 ```
 
-
-
 ### If statement
+
 ```cpp
 if (a == 10) {
     // do something
 }
 ```
+
 See: [Conditionals](#c-conditionals)
 
-
-
-
 ### Loops
+
 ```cpp
 for (int i = 0; i < 10; i++) {
     std::cout << i << "\n";
 }
 ```
+
 See: [Loops](#c-loops)
 
-
 ### Functions
+
 ```cpp
 #include <iostream>
  
@@ -141,11 +132,11 @@ void hello() { // Defining
     std::cout << "Hello QuickRef!\n";
 }
 ```
+
 See: [Functions](#c-functions)
 
-
-
 ### References
+
 ```cpp
 int i = 1;
 int& ri = i; // ri is a reference to i
@@ -156,10 +147,11 @@ std::cout << "i=" << i;
 i = 3;   // i is now changed to 3
 std::cout << "ri=" << ri;
 ```
+
 `ri` and `i` refer to the same memory location.
 
-
 ### Namespaces
+
 ```cpp
 #include <iostream>
 namespace ns1 {int val(){return 5;}}
@@ -168,7 +160,9 @@ int main()
     std::cout << ns1::val();
 }
 ```
+
 ---
+
 ```cpp
 #include <iostream>
 namespace ns1 {int val(){return 5;}}
@@ -179,12 +173,14 @@ int main()
     cout << val(); 
 }
 ```
+
 Namespaces allow global identifiers under a name
 
 C++ Arrays {.cols-3}
 ------
 
 ### Declaration
+
 ```cpp
 int marks[3]; // Declaration
 marks[0] = 92;
@@ -200,15 +196,17 @@ int marks[3] = {92, 97};
 std::cout << marks[2]; // Outputs: 0
 ```
 
-
 ### Manipulation
+
 ```cpp
 ┌─────┬─────┬─────┬─────┬─────┬─────┐
 | 92  | 97  | 98  | 99  | 98  | 94  |
 └─────┴─────┴─────┴─────┴─────┴─────┘
    0     1     2     3     4     5
 ```
+
 ---
+
 ```cpp
 int marks[6] = {92, 97, 98, 99, 98, 94};
 
@@ -223,6 +221,7 @@ std::cin >> marks[2];
 ```
 
 ### Displaying
+
 ```cpp
 char ref[5] = {'R', 'e', 'f'};
 
@@ -238,6 +237,7 @@ for (int i = 0; i < sizeof(ref); ++i) {
 ```
 
 ### Multidimensional
+
 ```cpp
      j0   j1   j2   j3   j4   j5
    ┌────┬────┬────┬────┬────┬────┐
@@ -246,7 +246,9 @@ i0 | 1  | 2  | 3  | 4  | 5  | 6  |
 i1 | 6  | 5  | 4  | 3  | 2  | 1  |
    └────┴────┴────┴────┴────┴────┘
 ```
+
 ---
+
 ```cpp
 int x[2][6] = {
     {1,2,3,4,5,6}, {6,5,4,3,2,1}
@@ -262,14 +264,16 @@ for (int i = 0; i < 2; ++i) {
 C++ Conditionals {.cols-3}
 ------------
 
-
 ### If Clause
+
 ```cpp
 if (a == 10) {
     // do something
 }
 ```
+
 ---
+
 ```cpp
 int number = 16;
 
@@ -285,9 +289,8 @@ else
 // Outputs: even
 ```
 
-
-
 ### Else if Statement
+
 ```cpp
 int score = 99;
 if (score == 100) {
@@ -307,7 +310,6 @@ else if (score >= 60)
 else
     std::cout << "What?";
 ```
-
 
 ### Operators {.row-span-2}
 
@@ -351,14 +353,16 @@ else
 | `a << b` | Binary Shift Left       |
 | `a >> b` | Binary Shift Right      |
 
-
 ### Ternary Operator
+
 ```
            ┌── True ──┐
 Result = Condition ? Exp1 : Exp2;
            └───── False ─────┘
 ```
+
 ---
+
 ```cpp
 int x = 3, y = 5, max;
 max = (x > y) ? x : y;
@@ -366,7 +370,9 @@ max = (x > y) ? x : y;
 // Outputs: 5
 std::cout << max << std::endl;
 ```
---- 
+
+---
+
 ```cpp
 int x = 3, y = 5, max;
 if (x > y) {
@@ -378,10 +384,8 @@ if (x > y) {
 std::cout << max << std::endl;
 ```
 
-
-
-
 ### Switch Statement
+
 ```cpp
 int num = 2;
 switch (num) {
@@ -403,15 +407,11 @@ switch (num) {
 }
 ```
 
-
-
-
 C++ Loops {.cols-3}
 ------------
 
-
-
 ### While
+
 ```cpp
 int i = 0;
 while (i < 6) {
@@ -422,6 +422,7 @@ while (i < 6) {
 ```
 
 ### Do-while
+
 ```cpp
 int i = 1;
 do {
@@ -431,8 +432,8 @@ do {
 // Outputs: 12345
 ```
 
-
 ### Continue statements
+
 ```cpp
 for (int i = 0; i < 10; i++) {
     if (i % 2 == 0) {
@@ -442,22 +443,24 @@ for (int i = 0; i < 10; i++) {
 } // Outputs: 13579
 ```
 
-
-
-
 ### Infinite loop
+
 ```cpp
 while (true) { // true or 1
     std::cout << "infinite loop";
 }
 ```
+
 ---
+
 ```cpp
 for (;;) {
     std::cout << "infinite loop";
 }
 ```
+
 ---
+
 ```cpp
 for(int i = 1; i > 0; i++) {
     std::cout << "infinite loop";
@@ -465,6 +468,7 @@ for(int i = 1; i > 0; i++) {
 ```
 
 ### for_each (Since C++11)
+
 ```cpp
 #include <iostream>
 
@@ -481,9 +485,8 @@ int main()
 }
 ```
 
-
-
 ### Range-based (Since C++11)
+
 ```cpp
 int num_array[] = {1, 2, 3, 4, 5};
 for (int n : num_array) {
@@ -491,7 +494,9 @@ for (int n : num_array) {
 }
 // Outputs: 1 2 3 4 5
 ```
+
 ---
+
 ```cpp
 std::string hello = "QuickRef.ME";
 for (char c: hello)
@@ -501,8 +506,8 @@ for (char c: hello)
 // Outputs: Q u i c k R e f . M E 
 ```
 
-
 ### Break statements
+
 ```cpp
 int password, times = 0;
 while (password != 1234) {
@@ -515,9 +520,8 @@ while (password != 1234) {
 }
 ```
 
-
-
 ### Several variations
+
 ```cpp
 for (int i = 0, j = 2; i < 3; i++, j--){
     std::cout << "i=" << i << ",";
@@ -526,13 +530,11 @@ for (int i = 0, j = 2; i < 3; i++, j--){
 // Outputs: i=0,j=2;i=1,j=1;i=2,j=0;
 ```
 
-
-
 C++ Functions {.cols-3}
 ------------
 
-
 ### Arguments & Returns
+
 ```cpp
 #include <iostream>
 
@@ -544,9 +546,11 @@ int main() {
     std::cout << add(10, 20); 
 }
 ```
+
 `add` is a function taking 2 ints and returning int
 
 ### Overloading
+
 ```cpp
 void fun(string a, string b) {
     std::cout << a + " " + b;
@@ -560,6 +564,7 @@ void fun(int a) {
 ```
 
 ### Built-in Functions
+
 ```cpp
 #include <iostream>
 #include <cmath> // import library
@@ -570,27 +575,29 @@ int main() {
 }
 ```
 
-
 C++ Classes & Objects {.cols-3}
 -----------------
 
-
 ### If statement
+
 ```cpp
 
 ```
 
 ### If statement
+
 ```cpp
 
 ```
 
 ### If statement
+
 ```cpp
 
 ```
 
 ### If statement
+
 ```cpp
 
 ```
@@ -599,6 +606,7 @@ C++ Preprocessor {.cols-3}
 ------------
 
 ### Preprocessor {.row-span-3}
+
 - [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 - [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 - [else](https://en.cppreference.com/w/cpp/preprocessor/conditional)
@@ -619,7 +627,6 @@ C++ Preprocessor {.cols-3}
 - [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
 {.style-none .cols-2}
 
-
 ### Includes
 
 ```cpp
@@ -637,6 +644,7 @@ C++ Preprocessor {.cols-3}
 ```
 
 ### If {.row-span-2}
+
 ```cpp
 #ifdef DEBUG
   console.log('hi');
@@ -683,7 +691,6 @@ char * a = STR(object);   #=> char * a = "object";
 #=> console.log("file.txt", 3, "hey")
 ```
 
-
 Miscellaneous {.cols-3}
 -------------
 
@@ -703,8 +710,8 @@ Miscellaneous {.cols-3}
 | `\?`             | Question mark         |
 | `\0`             | Null Character        |
 
-
 ### Keywords  {.col-span-2 .row-span-2}
+
 - [alignas](https://en.cppreference.com/w/cpp/keyword/alignas)
 - [alignof](https://en.cppreference.com/w/cpp/keyword/alignof)
 - [and](https://en.cppreference.com/w/cpp/keyword/and)
@@ -809,6 +816,7 @@ Miscellaneous {.cols-3}
 {.style-none .cols-5}
 
 ### Preprocessor
+
 - [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 - [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 - [else](https://en.cppreference.com/w/cpp/preprocessor/conditional)
@@ -829,10 +837,9 @@ Miscellaneous {.cols-3}
 - [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
 {.style-none .cols-2}
 
-
 ## Also see
-* [C++ Infographics & Cheat Sheets](https://hackingcpp.com/cpp/cheat_sheets.html) _(hackingcpp.com)_
-* [C++ reference](https://en.cppreference.com/w/) _(cppreference.com)_
-* [C++ Language Tutorials](http://www.cplusplus.com/doc/tutorial/) _(cplusplus.com)_
 
+- [C++ Infographics & Cheat Sheets](https://hackingcpp.com/cpp/cheat_sheets.html) _(hackingcpp.com)_
 
+- [C++ reference](https://en.cppreference.com/w/) _(cppreference.com)_
+- [C++ Language Tutorials](http://www.cplusplus.com/doc/tutorial/) _(cplusplus.com)_
