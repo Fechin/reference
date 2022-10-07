@@ -182,10 +182,11 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 #### External JavaScript
 
 ```html
-<head>
+<body>
     ...
+    
     <script src="app.js"></script>
-</head>
+</body>
 ```
 
 
@@ -202,10 +203,10 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 #### External stylesheet
 
 ```html
-<body>
+<head>
 ...
 <link rel="stylesheet" href="style.css"/>
-</body>
+</head>
 ```
 
 
