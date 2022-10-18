@@ -16,7 +16,6 @@ nohup.out
 .ipynb_checkpoints
 *.log
 uploads/
-note/
 .idea
 
 
