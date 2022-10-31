@@ -1,6 +1,6 @@
 # Contributing 
 
-Thanks for your interest on contributing to reference 👍👍, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Randy8080/reference/issues/new?assignee=Randy8080) and enhancement requests. 
+Thanks for your interest on contributing to reference 👍👍, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests. 
 
 A `{filename}.md` file will be processed into a cheat sheet, let's create or edit a markdown file:
 

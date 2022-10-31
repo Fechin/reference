@@ -13,14 +13,14 @@ Read the cheatsheet gracefully https://quickref.me
 
 ## Contributing
 
-See [the contribution guide](https://github.com/Randy8080/reference/blob/main/CONTRIBUTING.md) for ways to get started.
+See [the contribution guide](https://github.com/Fechin/reference/blob/main/CONTRIBUTING.md) for ways to get started.
 
-<a href="https://github.com/Randy8080/reference/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Randy8080/reference" />
+<a href="https://github.com/Fechin/reference/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Fechin/reference" />
 </a>
 
 
 
 ## License
-[MIT](https://github.com/Randy8080/reference/blob/main/LICENSE) © [Randy8080](https://github.com/Randy8080)
+[MIT](https://github.com/Fechin/reference/blob/main/LICENSE) © [Fechin](https://github.com/Fechin)
 
