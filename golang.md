@@ -107,7 +107,7 @@ s1 := "Hello" + "World"
 s2 := `A "raw" string literal
 can include line breaks.`
 
-// Outputs: 11
+// Outputs: 10
 fmt.Println(len(s1))
 
 // Outputs: Hello
