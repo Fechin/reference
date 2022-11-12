@@ -267,8 +267,8 @@ See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors
 | `div#idname`    | Div with certain ID                   |
 | `div p`         | Paragraphs inside divs                |
 | `div > p`       | All p tags<br>_one level deep in div_ |
-| `div + p`       | P tags immediately after div          |
-| `div ~ p`       | P tags preceded by div                |
+| `div + p`       | The parent element is the p tag of the div |
+| `div ~ p`       | All sibling P tags following the div  |
 See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) / [Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) / [Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
 
 
