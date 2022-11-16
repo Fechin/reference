@@ -34,5 +34,6 @@ package-lock.json
 
 # Other files #
 ######################
+themes/coo/source/css/style.css
 public/
 db.json
