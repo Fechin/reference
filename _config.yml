@@ -31,8 +31,6 @@ archive_dir: archives
 i18n_dir: :lang
 skip_render:
   - "assets/**/*"
-  - "_posts/README.md"
-  - "_posts/CONTRIBUTING.md"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -124,20 +122,6 @@ sitemap:
   path: sitemap.xml
   tags: false
   categories: false
-
-#  hexo-related-popular-posts
-# https://github.com/tea3/hexo-related-popular-posts/wiki/More-Settings#popular-posts
-popularPosts:
-  googleAnalyticsAPI:
-    clientId: 122889019292-92h297ceb29qnv9ulvgabad6q5kgv0an.apps.googleusercontent.com
-    serviceEmail: quickref-service@decent-courage-275204.iam.gserviceaccount.com
-    key: google-services-private-key.pem
-    viewId: 242826463
-    dateRange: 30       # (Optional) The period you want to get by Google Analytics page view. Default = 30
-    expiresDate: 10     # (optional) Expiration date of cache file. Default = 10
-    # cache:            # (Deprecated) This options is Deprecated > v0.1.3
-    #  path: hexo-related-popular-posts-ga-cached.json  # (Deprecated) This options is Deprecated > v0.1.3
-    #  expiresDate: 10  # (Deprecated) This options is Deprecated > v0.1.3
 
 
 # Markdown-it configuration
