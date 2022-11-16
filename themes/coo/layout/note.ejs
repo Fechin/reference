@@ -1,0 +1,20 @@
+<div class="max-container mx-auto flex flex-col items-center md:items-start md:flex-row md:justify-between md:mt-20">
+    <div class="w-full mb-6 px-2 md:px-6 lg:w-8/12 bg-white dark:bg-slate-800 shadow rounded-lg tracking-wide">
+        <div class="md:px-4 pt-4 pb-8">
+            <h1 class="font-semibold text-3xl my-5 text-slate-700 dark:text-slate-300 tracking-normal"><%- page.title %></h1>
+            <%- partial('_partial/note/tags') %>
+            <div class="note-content w-full dark:text-slate-300">
+                <!--[htmlclean-protect]-->
+                <%- page.content %>
+                <!--[/htmlclean-protect]-->
+            </div>
+        </div>
+        <div class="border-t border-slate-100 dark:border-slate-700 w-full"></div>
+        <div class="flex py-5 flex-col sm:flex-row items-center">
+            <%- partial('_partial/share', {extra: "mx-auto"}) %>
+        </div>
+    </div>
+    <div class="py-10 w-full md:py-0 md:w-4/12 -mx-8">
+        <%- partial('_partial/sidebar') %>
+    </div>
+</div>

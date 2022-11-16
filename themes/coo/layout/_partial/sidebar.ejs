@@ -1,0 +1,61 @@
+<!--<div class="md:px-0">-->
+<!--    <div class="flex flex-col max-w-sm mx-auto bg-white rounded-lg shadow">-->
+<!--        &lt;!&ndash; quickref.com_sidebar &ndash;&gt;-->
+<!--        <ins class="adsbygoogle"-->
+<!--             style="display:block"-->
+<!--             data-ad-client="ca-pub-8691406134231910"-->
+<!--             data-ad-slot="3880206190"-->
+<!--             data-ad-format="auto"-->
+<!--             data-full-width-responsive="true"></ins>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="md:px-6">
+    <div class="flex flex-col max-w-sm px-6 py-4 mx-auto bg-white dark:bg-slate-800 rounded-lg shadow">
+        <div class="flex flex-row justify-between text-blue-dark border-b dark:border-slate-700">
+            <h2 class="mb-4 text-xl font-medium text-slate-700 dark:text-slate-300">Popular</h2>
+            <div class="mt-2 sm:mt-0">
+                <a href="/"
+                   class="flex items-center text-white bg-blue-600  text-sm rounded px-2 py-1 hover:bg-blue-500 focus:outline-none focus:shadow-outline">
+                    <i class="icon icon-style mr-1"></i>
+                    <span class="inline">More</span>
+                </a>
+            </div>
+        </div>
+        <ul class="-mx-4">
+            <% topPosts(8).forEach(function (post){ %>
+                <li class="flex items-center mt-6 ml-4">
+                    <div class="flex justify-center w-10 h-10 text-white p-5 rounded-full mr-4 <%- post.background %>">
+                        <i class="self-center icon <%- post.icon %> text-2xl"></i>
+                    </div>
+                    <a href="<%- ext_url_for(post.path) %>" class="underline mx-1 font-medium text-slate-700 dark:text-slate-300">
+                        <%- post.title %> <span class="text-sm font-light text-slate-700 dark:text-slate-500">Cheat sheet</span>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+<% let posts = popular_posts_json({maxCount: 10}, page).json; %>
+<% if (posts.length > 0) { %>
+    <div class="md:px-6 mt-10">
+        <div class="flex flex-col max-w-sm px-6 py-4 mx-auto bg-white dark:bg-slate-800 rounded-lg shadow">
+            <div class="flex flex-row justify-between text-blue-dark border-b dark:border-slate-700">
+                <h2 class="mb-4 text-xl font-medium text-slate-700 dark:text-slate-300">Related Posts</h2>
+                <div class="mt-2 sm:mt-0">
+                    <a href="/notes/"
+                       class="flex items-center text-white bg-blue-600  text-sm rounded px-2 py-1 hover:bg-blue-500 focus:outline-none focus:shadow-outline">
+                        <i class="icon icon-style mr-1"></i>
+                        <span class="inline">More</span>
+                    </a>
+                </div>
+            </div>
+            <ul>
+                <% posts.forEach(function (post){ %>
+                    <li class="mt-2">
+                        <a href="<%- ext_url_for(post.path) %>" class="underline mx-1 text-sm text-slate-700 dark:text-slate-300"><%- post.title %></a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+<% } %>

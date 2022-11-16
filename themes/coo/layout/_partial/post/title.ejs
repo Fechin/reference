@@ -1,0 +1,13 @@
+<% if (page.link){ %>
+    <% if (page.title){ %>
+        <h1><a href="<%- page.link %>" target="_blank"><%= page.title || __('no_title') %></a></h1>
+    <% } else { %>
+        <h1><a href="<%- page.link %>" target="_blank"><%= page.link || __('no_title') %></a></h1>
+    <% } %>
+<% } else { %>
+    <% if (false){ %>
+        <h1><a href="<%- ext_url_for(page.path) %>"><%= page.title || __('no_title') %></a></h1>
+    <% } else { %>
+        <h1><%= page.title || __('no_title') %></h1>
+    <% } %>
+<% } %>

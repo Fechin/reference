@@ -1,0 +1,30 @@
+<footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14">
+    <% if (page.layout !== "note" && !page._isNotePagination) { %>
+        <div class="max-container mb-8 md:py-10 mx-auto flex md:items-center lg:items-start md:flex-row flex-col">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:flex-grow md:flex -mb-10 md:mt-0 mt-10">
+                <div class="md:w-1/2 md:pr-4">
+                    <%- partial('_partial/post/popular', {post: page || post}) %>
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                    <%- partial('_partial/post/recent') %>
+                </div>
+            </div>
+            <div class="hidden md:block flex-shrink-0 mx-auto block mt-8 md:mx-8 max-w-xs">
+                <%- partial('index/logo', {icon: false}) %>
+                <p class="mt-5 text-sm text-slate-500"><%- config.description %>.</p>
+                <div class="share mt-4">
+                    <a href="/notes">#Notes</a>
+                </div>
+                <div class="share mt-8">
+                    <%- partial('_partial/share', {extra: ""}) %>
+                </div>
+            </div>
+        </div>
+        <div class="max-container border-b border-slate-300 dark:border-slate-700"></div>
+    <% } %>
+    <div class="max-container flex flex-col sm:flex-row items-center ">
+        <p class="py-2 md:py-3 text-slate-500 text-sm text-center w-full">
+            © <%= new Date().getFullYear() %> QuickRef.ME, All rights reserved.
+        </p>
+    </div>
+</footer>

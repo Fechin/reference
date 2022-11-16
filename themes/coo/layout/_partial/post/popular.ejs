@@ -1,0 +1,14 @@
+<%
+let posts = popular_posts_json(theme.related_posts.params, page).json;
+let title = theme.related_posts.title;
+if (posts.length === 0) {
+    posts = topPosts();
+    title = theme.top_posts.title;
+}
+%>
+<h2 class="my-6 text-xl text-slate-700 dark:text-slate-300"><%= title %> <span class="text-slate-400">Cheatsheet</span></h2>
+<section class="w-full grid grid-cols-2 gap-2 md:gap-4">
+    <% posts.forEach(function (post){ %>
+        <%- partial('_partial/post/popular_card', {post: post}) %>
+    <% }); %>
+</section>

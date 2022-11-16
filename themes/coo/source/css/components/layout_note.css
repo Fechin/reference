@@ -1,0 +1,148 @@
+.note-content ul > li {
+    @apply py-2.5 md:px-2.5;
+    position: relative;
+}
+
+.note-content ul > li:first-child{
+    @apply pt-5;
+}
+
+.note-content {
+    color: #34495e;
+    font-display: swap;
+    font-size: 18px;
+    font-family: source sans pro, open sans, helvetica neue, Arial, sans-serif;
+    line-height: 1.8;
+    /*@apply dark:text-slate-300;*/
+}
+
+.note-width {
+    max-width: 46rem;
+}
+
+.note-content {
+    min-height: 100%;
+    overflow-wrap: break-word
+}
+
+.note-content ul, .note-content ol {
+    margin: 2px 0 16px
+}
+
+.note-content p {
+    margin: 4px 0;
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto
+}
+
+.node-item pre, .node-item pre > code,
+.note-content pre, .note-content pre > code{
+    @apply bg-[#f6f6f6] rounded-lg mt-3;
+    @apply dark:bg-slate-800;
+}
+
+.note-content a {
+    color: #0366d6;
+    text-decoration: none;
+    background-image: linear-gradient(transparent, transparent 6px, #34495e 6px, #34495e);
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-repeat: repeat-x
+}
+
+.note-content a:hover {
+    background-image: linear-gradient(transparent, transparent 4px, #2bbc8a 4px, #2bbc8a)
+}
+
+.note-content h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 24px 0 2px 0;
+}
+
+.note-content h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 24px 0 2px 0;
+}
+
+
+.note-content img, .note-content video {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto
+}
+
+.note-content blockquote {
+    border-left: 3px solid #2bbc8a;
+    border-left-width: 6px;
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.note-content blockquote p {
+    margin: 0
+}
+
+.note-content blockquote footer {
+    margin: 0;
+    color: #8c8c8c;
+    font-size: 11px
+}
+
+.note-content blockquote footer a {
+    background-image: linear-gradient(transparent, transparent 5px, #8c8c8c 5px, #8c8c8c);
+    color: #8c8c8c
+}
+
+.note-content blockquote footer a:hover {
+    background-image: linear-gradient(transparent, transparent 4px, #a3a3a3 4px, #a3a3a3);
+    color: #a3a3a3
+}
+
+.note-content blockquote footer cite:before {
+    padding: 0 .5em;
+    content: "â€”"
+}
+
+
+.note-content .h-anchor {
+    display: none;
+}
+
+.note-content ul.popular-posts > li {
+    @apply py-2.5 ;
+    position: relative;
+    border-bottom: solid 1px #ececec94;
+}
+
+.note-content ul.popular-posts > li:first-child{
+    @apply pt-5;
+}
+
+
+/* tags style  */
+.post-tags-list {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: table;
+}
+
+.post-tags-list-item {
+    float: left;
+    font-size: 12px;
+    margin-right: 10px;
+    background: rgba(102, 128, 153, 0.075);
+    border-radius: 4px;
+    padding: 2px 5px;
+    color: rgba(44, 63, 81, 0.5);
+}
+
+.post-tags-list-link {
+    cursor: default;
+}

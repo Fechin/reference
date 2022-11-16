@@ -1,0 +1,11 @@
+<section class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+    <% theme.index_recommends.forEach(function (filePath) { %>
+        <% let post = site.posts.findOne({slug: filePath}); %>
+        <a href="<%= ext_url_for(post.path) %>">
+            <div class="card <%= post.background %>">
+                <i class="icon <%= post.icon %>"></i>
+                <p><%= post.title %></p>
+            </div>
+        </a>
+    <% }); %>
+</section>

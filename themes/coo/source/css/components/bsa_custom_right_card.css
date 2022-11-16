@@ -1,0 +1,28 @@
+/**
+  Utils.externalLibrary(Utils.LIBRARY.bsa).then(() => {
+        let closeBtnHTML = '<a class="absolute -top-1.5 -right-1.5 h-5 w-5 z-50 inline-flex justify-center items-center rounded-full cursor-pointer bg-white dark:bg-slate-900" onclick="javascript:this.parentElement.remove();" style="animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;"><i class="icon icon-close text-sm text-slate-500 dark:text-slate-300"></i></a>';
+        if (typeof _bsa !== 'undefined' && _bsa) {
+            const bsa_custom_div = document.createElement("div");
+            bsa_custom_div["className"] = "flex fixed right-6 bottom-16 z-30"
+            bsa_custom_div["id"] = "bsa_custom"
+            bsa_custom_div["style"] = "max-width:330px;"
+            document.body.appendChild(bsa_custom_div);
+            // _bsa.init('custom', 'CVADC53U', 'placement:demo', {
+            _bsa.init('custom', 'CESILKQI', 'placement:quickrefme', {
+                target: '#bsa_custom',
+                template: `<a href="##link##" class="flex items-center z-30" style="animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+                              <div class="p-2 bg-white dark:bg-slate-800 flex items-center space-x-3 rounded-lg shadow dark:shadow-3xl cursor-pointer">
+                                <div class="flex items-center rounded-lg h-24 w-32 p-2" style="background-color: ##backgroundColor##">
+                                     <img src="##logo##" alt="ads via Carbon"/>
+                                </div>
+                                <div class="w-40">
+                                  <p class="text-gray-600 dark:text-slate-300 text-xs font-light">##description##</p>
+                                  <p class="text-slate-400 dark:text-slate-600 mt-2 uppercase" style="font-size: 8px">Sponsored by ##company##</p>
+                                </div>
+                              </div>
+                              ${closeBtnHTML}
+                            </a>`
+            });
+        }
+    });
+ */

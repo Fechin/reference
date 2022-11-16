@@ -1,7 +1,16 @@
 # Reference
 
-Share quick reference cheat sheet for developers.
-If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a PR.
+[![love](https://badgen.net/badge/make with/love/pink)](#)
+[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
+[![License](https://badgen.net/github/stars/Fechin/reference)](#)
+[![License](https://badgen.net/github/forks/Fechin/reference)](#)
+[![License](https://badgen.net/github/contributors/Fechin/reference)](#)
+
+
+
+**Reference** is a collection of **cheatsheets** contributed by open source angels. It shares a quick reference cheat sheet for developers in a beautiful layout.
+
+We're happy to see your best skill cheat sheets in **Reference**, If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a PR.
 
 
 ## Live Demo
@@ -11,9 +20,61 @@ Read the cheatsheet gracefully https://quickref.me
 
 
 
+## Directory structure
+```
+.
+├── source
+│   ├── _posts   # Source file for cheatsheet
+│   │   ├── bash.md
+│   │   ├── chmod.md
+│   │   ├── ...
+│   └── widget   # Widget that can be referenced
+│       └── chmod.html
+├── public        # Static files for distribution
+├── _config.yml
+├── gulpfile.js
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── themes
+    └── coo      # Hexo's theme
+```
+
 ## Contributing
 
-See [the contribution guide](https://github.com/Fechin/reference/blob/main/CONTRIBUTING.md) for ways to get started.
+Thanks for your interest on contributing to reference 👍👍, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
+
+
+#### Development setup
+
+1. Clone Github repo `git clone https://github.com/Fechin/reference.git`
+2. Install `npm` package manager (Read [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
+3. Run `npm install` in the root folder to install dependencies.
+4. Run `npm run dev` to start a dev server. This serves the project and live reloads when any files are changed, then visit http://127.0.0.1:4000 preview.
+5. Send us pull request and chill.
+
+A `source/_posts/{filename}.md` file will be processed into a cheat sheet, let's create or edit a markdown file:
+
+#### Front Matter
+```markdown
+---
+title: QuickRef
+date: 2020-11-25 18:28:43
+icon: icon-style
+background: bg-emerald-600
+tags:
+categories:
+- Other
+  intro: This is a reference of styles that you can use on quickref cheatsheets!
+---
+```
+Just need `title` and `intro`, and ignore other options. I will complete it if it can be released.
+
+#### CSS classes
+QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) and supports adding classes via its syntax. Also, there is a reference of styles that you can use on `quickref.me` cheat sheets:  https://quickref.me/quickref
+
+
+At last, It's a good practice to refer to the source code of the existing cheat sheet!
 
 <a href="https://github.com/Fechin/reference/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Fechin/reference" />

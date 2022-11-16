@@ -1,0 +1,7 @@
+<% if (page.tags && page.tags.length > 0){ %>
+    <div class="tags-row">
+        <% page.tags.forEach(function(tag) { %>
+            <a href="<%= config.root + tag.path %>"><%= tag.name %></a>
+        <% }); %>
+    </div>
+<% } %>

@@ -9,24 +9,30 @@ ehthumbs.db
 Thumbs.db
 nohup.out
 
-
+# Python files #
+######################
 .python-version
 .env
 .venv
 .ipynb_checkpoints
 *.log
-uploads/
+
+# Editor files #
+######################
 .idea
+.vscode
 
-
-# templates files #
+# Node files #
 ######################
 node_modules/
 dist/
-public/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
-db.json
 
+
+# Other files #
+######################
+public/
+db.json

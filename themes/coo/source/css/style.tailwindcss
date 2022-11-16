@@ -1,0 +1,346 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* Custom Components */
+@import "highlightjs/stackoverflow-light.min.css";
+@import "components/layout_table.css";
+@import "components/layout_list.css";
+@import "components/layout_note.css";
+@import "components/custom_tag.css";
+@import "components/code.css";
+@import "components/search.css";
+@import "components/pagination.css";
+@import "components/common.css";
+@import "components/bsa_carbon.css";
+@import "components/bsa_custom.css";
+
+
+html {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color */
+    -webkit-tap-highlight-color: transparent;
+}
+
+html.scrollbar {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+.max-container {
+    max-width: 1320px;
+    @apply mx-auto p-3;
+}
+
+.header-button {
+    @apply inline-flex items-center bg-slate-200 text-slate-600 transition duration-200 rounded-full border-0 p-3 ml-1 font-medium;
+    @apply hover:bg-slate-300 hover:text-slate-700 hover:shadow-lg;
+    @apply lg:px-6 lg:py-2 focus:outline-none;
+}
+
+.header-button > i {
+    @apply text-xl leading-5;
+    @apply lg:text-base lg:mr-2;
+}
+
+.home .card {
+    @apply p-4 flex items-center rounded-lg shadow-sm cursor-pointer text-slate-800 bg-opacity-60;
+    @apply dark:text-slate-300 dark:bg-opacity-50;
+    @apply hover:text-slate-100 hover:bg-opacity-100 hover:shadow-lg;
+}
+
+.home .card > i {
+    @apply text-3xl;
+}
+
+.home .card > p {
+    @apply text-sm ml-2 truncate;
+}
+
+.home .domain {
+    @apply text-slate-100;
+}
+
+/*************************Cheat sheet start****************************/
+.mdLayout {
+    color: #345;
+    @apply flex flex-col space-y-14;
+}
+
+.mdLayout h3 a.h-anchor, .mdLayout h4 a.h-anchor, .mdLayout h5 a.h-anchor {
+    @apply hidden;
+}
+
+/** H2 Wrap **/
+
+.mdLayout .h2-wrap:first-child:not(.show) > h2 {
+    /* @apply invisible; */
+}
+
+.mdLayout .h2-wrap > h2 {
+    @apply text-emerald-500 pr-2;
+    @apply dark:text-slate-300;
+}
+
+.mdLayout .h2-wrap > h2 > a.h-anchor {
+    @apply text-emerald-500 pr-2;
+}
+
+.mdLayout .h2-wrap > h2 > a.h-anchor:hover {
+    @apply text-emerald-600 no-underline cursor-pointer;
+}
+
+/** Grid layout. */
+.mdLayout .h2-wrap > .h3-wrap-list { @apply flex flex-col lg:grid lg:gap-7; }
+.mdLayout .h2-wrap.cols-1 > .h3-wrap-list { @apply lg:grid-cols-1; }
+.mdLayout .h2-wrap.cols-2 > .h3-wrap-list { @apply lg:grid-cols-2; }
+.mdLayout .h2-wrap.cols-3 > .h3-wrap-list { @apply lg:grid-cols-3; }
+.mdLayout .h2-wrap.cols-4 > .h3-wrap-list { @apply lg:grid-cols-4; }
+.mdLayout .h2-wrap.cols-5 > .h3-wrap-list { @apply lg:grid-cols-5; }
+.mdLayout .h2-wrap.cols-6 > .h3-wrap-list { @apply lg:grid-cols-6; }
+.mdLayout .h2-wrap.cols-7 > .h3-wrap-list { @apply lg:grid-cols-7; }
+.mdLayout .h2-wrap.cols-8 > .h3-wrap-list { @apply lg:grid-cols-8; }
+.mdLayout .h2-wrap.cols-9 > .h3-wrap-list { @apply lg:grid-cols-9; }
+.mdLayout .h2-wrap.cols-10 > .h3-wrap-list { @apply lg:grid-cols-10; }
+.mdLayout .h2-wrap.cols-11 > .h3-wrap-list { @apply lg:grid-cols-11; }
+.mdLayout .h2-wrap.cols-12 > .h3-wrap-list { @apply lg:grid-cols-12; }
+
+
+/** H3 Wrap **/
+.mdLayout .h3-wrap-list {
+    font-size: 0.925rem;
+    line-height: 1.325rem;
+}
+
+
+/** List Layout in h3-wrap **/
+.mdLayout .h3-wrap ul,.h3-wrap ol,.h3-wrap dl { @apply my-2 grid grid-cols-1 list-outside; }
+.mdLayout .h3-wrap .cols-1  { @apply grid-cols-1; }
+.mdLayout .h3-wrap .cols-2  { @apply grid-cols-2; }
+.mdLayout .h3-wrap .cols-3  { @apply grid-cols-3; }
+.mdLayout .h3-wrap .cols-4  { @apply grid-cols-4; }
+.mdLayout .h3-wrap .cols-5  { @apply grid-cols-5; }
+.mdLayout .h3-wrap .cols-6  { @apply grid-cols-6; }
+.mdLayout .h3-wrap .cols-7  { @apply grid-cols-7; }
+.mdLayout .h3-wrap .cols-8  { @apply grid-cols-8; }
+.mdLayout .h3-wrap .cols-9  { @apply grid-cols-9; }
+.mdLayout .h3-wrap .cols-10 { @apply grid-cols-10; }
+.mdLayout .h3-wrap .cols-11 { @apply grid-cols-11; }
+.mdLayout .h3-wrap .cols-12 { @apply grid-cols-12; }
+
+
+.mdLayout .h3-wrap {
+    @apply bg-white pt-6 mb-4 rounded-lg shadow flex flex-col relative overflow-hidden;
+    @apply lg:mb-0;
+    @apply dark:bg-slate-800 dark:text-slate-300;
+}
+
+.mdLayout .h3-wrap hr {
+    @apply text-slate-200 !important;
+    @apply dark:text-slate-700/50 !important;
+}
+
+.mdLayout .h3-wrap.boxed {
+    box-shadow: 0 0 0 1.6pt #10b981;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.mdLayout .h3-wrap.primary.boxed {
+    box-shadow: 0 0 0 1.6pt #f04444;
+}
+
+.mdLayout .h3-wrap.secondary.boxed {
+    box-shadow: 0 0 0 1.6pt #eaa13b;
+}
+
+.mdLayout .h3-wrap > h3 {
+    @apply bg-emerald-500 text-white px-3 py-1 tracking-wider text-xs absolute right-0 top-0 rounded-bl-lg z-10;
+    @apply dark:bg-opacity-70 dark:text-slate-200;
+}
+
+.mdLayout .h3-wrap.secondary, .h3-wrap.primary {
+    @apply shadow-md;
+}
+
+.mdLayout .h3-wrap.secondary > h3 {
+    @apply bg-amber-500;
+}
+
+.mdLayout .h3-wrap.primary > h3 {
+    @apply bg-red-500;
+}
+
+.mdLayout .h3-wrap > .section {
+    @apply flex flex-col h-full w-full z-0;
+}
+
+/* Paragraphs */
+.mdLayout .h3-wrap > .section > p {
+    background: #f8f9fa;
+    color: #345;
+    @apply w-full px-4 py-3 m-0;
+    @apply dark:bg-slate-900/30 dark:text-slate-400;
+}
+
+.mdLayout .h3-wrap > .section > p:first-child:before, .h3-wrap > .section > h4:first-child:before  {
+    content: '-';
+    color: #f8f9fa;
+    background: #f8f9fa;
+    line-height: 1.75rem;
+    top: -4px;
+    @apply w-full absolute left-0;
+    @apply dark:bg-slate-900/30 dark:text-slate-800/0;
+}
+
+.mdLayout .h3-wrap > .section > p:last-child {
+    /* https://stackoverflow.com/questions/31000885/align-an-element-to-bottom-with-flexbox */
+    margin-top: auto;
+}
+
+/* Headings in between bodies */
+.mdLayout .h3-wrap > .section > h4 {
+    @apply bg-slate-100 border-t border-slate-200 text-slate-500 m-0 px-4 py-1 text-center;
+    @apply dark:bg-slate-700/30 dark:text-slate-300 dark:border-slate-700/50;
+}
+
+/* Links */
+.mdLayout .h3-wrap > .section p a,
+.mdLayout .h3-wrap > .section p a:visited,
+.intro p a,
+.intro p a:visited {
+    color: #345;
+    text-decoration: none;
+    border-bottom: solid 1px rgba(85, 102, 119, 0.18);
+    @apply dark:text-slate-500;
+    @apply hover:underline hover:decoration-emerald-500 hover:underline-offset-2 hover:decoration-1;
+}
+
+.mdLayout .h3-wrap > .section p a:hover,
+.intro p a:hover {
+    @apply text-emerald-500;
+}
+
+
+/*******************************/
+
+/* For links with sources, eg, [Foo](foo.com) _(foo.com)_ */
+.mdLayout.mdLayout a + em {
+    opacity: 0.5;
+    @apply dark:opacity-80;
+}
+
+/* mdLayout context */
+.mdLayout h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+    margin-top: 64px;
+    position: relative;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 200;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .mdLayout h2 {
+        margin-bottom: 8px;
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mdLayout h2 {
+        margin-bottom: 8px;
+        margin-top: 32px;
+    }
+}
+
+.mdLayout a, .mdLayout a:visited {
+    color: #1959a2;
+    text-decoration: none;
+    background-image: linear-gradient(transparent,transparent 6px,#34495e 6px,#34495e);
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-repeat: repeat-x;
+    @apply dark:text-sky-600;
+    @apply hover:underline hover:decoration-emerald-500 hover:underline-offset-4 hover:decoration-2;
+}
+
+.mdLayout em, .mdLayout sup, .mdLayout sub {
+    font-style: normal;
+    color: #556677;
+}
+
+.mdLayout iframe {
+    border: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.local-anchor {
+    margin-left: -.9em;
+    margin-right: .1em;
+    padding: 0 .1em;
+}
+
+.mdLayout .local-anchor, .mdLayout .local-anchor:visited {
+    color: #556677;
+    text-decoration: inherit;
+    opacity: .5;
+}
+
+.mdLayout .local-anchor:target, .mdLayout :target > .local-anchor {
+    opacity: 1;
+    @apply text-emerald-500;
+}
+
+.mdLayout .local-anchor:hover, .mdLayout .local-anchor:focus {
+    opacity: 1;
+    text-decoration: inherit;
+    @apply text-white bg-emerald-500;
+}
+
+/* Crosslink (eg, phoenix.md) */
+.mdLayout.mdLayout img {
+    max-width: 100%;
+}
+
+.mdLayout.mdLayout p.link-arrow > a {
+    box-shadow: none;
+    text-decoration: none;
+    @apply text-emerald-500 block -mx-5 -my-3 p-3 border-0 text-center;
+    @apply hover:text-emerald-300 hover:bg-slate-200;
+}
+
+.mdLayout.mdLayout p.link-arrow > a:visited {
+    @apply text-emerald-500;
+}
+
+.mdLayout.mdLayout p.link-arrow > a::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(255%2C255%2C255)%22%20d%3D%22M85%20277.375h259.704L225.002%20397.077%20256%20427l171-171L256%2085l-29.922%2029.924%20118.626%20119.7H85v42.75z%22%2F%3E%3C%2Fsvg%3E") center center/16px 16px no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-right: 16px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    @apply bg-emerald-500;
+}
+
+.mdLayout.mdLayout p.link-arrow > a::before, .mdLayout.mdLayout p.link-arrow > a:visited::before {
+    @apply text-emerald-400 text-white;
+}
+
+.mdLayout.mdLayout p.link-arrow > a:hover, .mdLayout.mdLayout p.link-arrow > a:focus {
+    @apply text-emerald-500;
+}
+
+.mdLayout.mdLayout p.link-arrow > a:hover::before, .mdLayout.mdLayout p.link-arrow > a:focus::before {
+    @apply bg-emerald-500;
+}

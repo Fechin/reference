@@ -1,0 +1,11 @@
+a.underline {
+    text-decoration: none;
+    background-image: linear-gradient(transparent, transparent 6px, #34495e 6px, #34495e);
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-repeat: repeat-x;
+}
+
+a.underline:hover {
+    background-image: linear-gradient(transparent, transparent 4px, #1d1d1d 4px, #1D1D1DFF);
+}

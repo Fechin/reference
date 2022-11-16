@@ -1,0 +1,41 @@
+<div id="mysearch"
+     class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden">
+    <div id="mysearch-box"
+         class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full">
+        <div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700">
+            <div class="w-full h-full">
+                <form class="flex items-center w-full h-full outline-none rounded-tl-lg">
+                    <label for="mysearch-input" id="mysearch-label"
+                           class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200">
+                        <i class="icon icon-search text-2xl text-emerald-500"></i>
+                    </label>
+                    <div class="relative flex-1">
+                        <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out"
+                               id="mysearch-input"
+                               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                               placeholder="Search for cheatsheet" maxlength="128" type="text"
+                               enterkeyhint="go">
+                    </div>
+                    <button id="mysearch-clear" type="reset"
+                            class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex">
+                        <i class="icon icon-close text-xs font-bold"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div>
+            <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300">
+                Cancel
+            </button>
+        </div>
+        <div class="flex flex-grow overflow-hidden lg:rounded-br-lg">
+            <!-- Search result -->
+            <div class="relative w-full flex-none overflow-y-auto lg:w-1/2">
+                <ul id="mysearch-list"></ul>
+            </div>
+            <!-- Preview panel -->
+            <div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto">
+
+            </div>
+        </div>
+    </div>
+</div>

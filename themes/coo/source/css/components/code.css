@@ -1,0 +1,58 @@
+code {
+    @apply text-emerald-600;
+    @apply dark:text-slate-300;
+}
+
+pre {
+    line-height: 1.5;
+    @apply p-4 overflow-hidden overflow-x-auto bg-white;
+    @apply dark:bg-slate-800;
+}
+
+.mdLayout pre + p:not(:last-child) {
+    @apply border-t border-slate-200;
+    @apply dark:border-slate-700/50;
+}
+
+/* When there is only one pre code block, the scroll bar is displayed at the bottom */
+pre:only-child {
+    @apply h-full;
+}
+
+pre > code {
+    color: #345;
+    padding: 0!important;
+    background: transparent;
+    overflow: visible;
+}
+
+pre > code.wrap {
+    @apply break-words whitespace-pre-wrap !important;
+}
+
+.mdLayout .line-highlight {
+    transform: translate3d(0, 2px, 0);
+    background: linear-gradient(to right, rgba(20, 175, 131, 0.05) 25%, transparent);
+}
+
+.mdLayout .line-highlight[data-end] {
+    margin-top: 0;
+}
+
+.mdLayout .line-highlight::before, .mdLayout .line-highlight::after {
+    display: none;
+}
+
+.mdLayout code.hljs {
+    background: transparent;
+}
+
+
+.note-content pre {
+    padding: 6px 0 !important;
+}
+
+.note-content pre code {
+    padding: 1rem !important;
+}
+

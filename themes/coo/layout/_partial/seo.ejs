@@ -1,0 +1,77 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "<%- config.title %> - <%- config.subtitle %>",
+        "description": "<%- config.description %>",
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "<%- config.author %>"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "59"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "<%- config.url %>"
+        },
+        "headline": "Article headline",
+        "datePublished": "2019-06-31T08:00:00+08:00",
+        "dateModified": "2020-04-02T09:20:00+08:00",
+        "author": {
+            "@type": "Person",
+            "name": "<%- config.author %>"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "<%- config.author %>",
+            "url": "<%- config.url %>",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "<%- config.url %>/images/favicon.png"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1 401 590 9901 ",
+                "contactType": "Customer service"
+            }
+        }
+    }
+
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "<%- config.author %>",
+        "url": "<%- config.url %>"
+    }
+
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "HOME",
+                "item": "<%- config.url %>"
+            }
+        ]
+    }
+
+</script>

@@ -1,0 +1,50 @@
+#mysearch em {
+    @apply not-italic text-emerald-500;
+}
+
+.text-color-inherit {
+    color: inherit
+}
+
+@media (min-width: 1200px) {
+    .xl\:max-h-832 {
+        max-height: 800px
+    }
+}
+
+#mysearch-list li.inactive {
+    @apply border-slate-200;
+}
+
+#mysearch-list li.inactive > a.link {
+    @apply text-slate-900 bg-transparent;
+}
+
+#mysearch-list li.inactive .icon-enter {
+    @apply hidden;
+}
+
+#mysearch-list li.inactive i.icon, #mysearch-list li.inactive .sub-intro {
+    @apply text-slate-400;
+}
+
+#mysearch-list li.active {
+    @apply border-transparent z-10 shadow-sm;
+}
+
+#mysearch-list li.active > a {
+    @apply text-white bg-emerald-500 shadow;
+}
+
+#mysearch-list li.active em {
+    color: inherit;
+    @apply underline;
+}
+
+#mysearch-list li.active .icon-enter {
+    @apply block;
+}
+
+#mysearch-list li.active i.icon, #mysearch-list li.active .sub-intro {
+    @apply text-white;
+}

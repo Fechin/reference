@@ -1,0 +1,57 @@
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta http-equiv='content-language' content='en-gb'>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="app:pageurl" content="/"/>
+
+    <!-- title -->
+    <title><%- page_title() %></title>
+    <!-- keywords -->
+    <meta name="keywords" content="<%- page_keywords() %>"/>
+    <!-- description -->
+    <meta name="description" content="<%- page_description() %>"/>
+
+    <!-- for social -->
+    <meta property="og:url" content="<%- ext_url_for(url) %>"/>
+    <meta property="og:title" content="<%- page_title() %>"/>
+    <meta property="og:site_name" content="<%- config.title %>"/>
+    <meta property="og:description" content="<%- page_description() %>"/>
+    <meta property="og:image" content="<%- page_image() %>"/>
+    <meta property="og:image:width" content="2276"/>
+    <meta property="og:image:height" content="1240"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- twitter share-->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="<%- page_title() %>"/>
+    <meta name="twitter:site" content="@<%- config.author %>">
+    <meta name="twitter:creator" content="@<%- config.author %>">
+    <meta name="twitter:description" content="<%- page_description() %>"/>
+    <meta name="twitter:image" content="<%- page_image() %>"/>
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.png?v=1"/>
+    <link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"/>
+
+    <!-- misc -->
+    <link rel="canonical" href="<%- ext_url_for(url) %>"/>
+    <link rel="prefetch" href="<%- ext_url_for(config.url) %>"/>
+    <link rel="prerender" href="<%- ext_url_for(config.url) %>"/>
+    <link rel="alternate" href="/atom.xml" title="<%- config.title %>" type="application/atom+xml"/>
+
+    <!-- font -->
+    <link rel="preload" href="/font/iconfont.woff2?1641177301" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/font/iconfont.css">
+
+    <!-- styles -->
+    <%- css('css/style.css') %>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script>
+
+</head>

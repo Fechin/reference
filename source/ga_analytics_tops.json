@@ -1,0 +1,62 @@
+[
+  {
+    "icon": "icon-python",
+    "title": "Python",
+    "path": "python.html",
+    "background": "bg-[#436b97]"
+  },
+  {
+    "icon": "icon-vim",
+    "title": "Vim",
+    "path": "vim.html",
+    "background": "bg-[#46933f]"
+  },
+  {
+    "icon": "icon-javascript",
+    "title": "JavaScript",
+    "path": "javascript.html",
+    "background": "bg-[#ebd94e]"
+  },
+  {
+    "icon": "icon-bash",
+    "title": "Bash",
+    "path": "bash.html",
+    "background": "bg-[#3e4548]"
+  },
+  {
+    "icon": "icon-regex",
+    "title": "RegEX",
+    "path": "regex.html",
+    "background": "bg-[#e56d2d]"
+  },
+  {
+    "icon": "icon-sed",
+    "title": "Sed",
+    "path": "sed.html",
+    "background": "bg-red-400"
+  },
+  {
+    "icon": "icon-golang",
+    "title": "Golang",
+    "path": "golang.html",
+    "background": "bg-[#4ba4cc]"
+  },
+  {
+    "icon": "icon-html",
+    "title": "HTML",
+    "path": "html.html",
+    "background": "bg-[#cc5534]"
+  },
+  {
+    "icon": "icon-java",
+    "title": "Java",
+    "path": "java.html",
+    "background": "bg-[#d33731]"
+  },
+  {
+    "icon": "icon-postgres",
+    "title": "PostgreSQL",
+    "path": "postgres.html",
+    "background": "bg-[#3d6488]"
+  }
+]

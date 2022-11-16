@@ -1,0 +1,43 @@
+# Limit on the number of recent articles
+recent_posts_limits: 4
+
+# The categories and order displayed on the home page
+index_categories:
+  - Programming
+  - Toolkit
+  - Linux Command
+  - IDE
+  - Python
+  - Database
+  - Other
+
+# Home recommended posts
+index_recommends:
+  - bash
+  - python
+  - javascript
+  - golang
+  - vim
+  - regex
+  - awk
+  - markdown
+
+
+# Related popular posts
+# Dependencies: https://github.com/tea3/hexo-related-popular-posts
+related_posts:
+  enable: true
+  title: Related
+  params:
+    maxCount: 4
+    #PPMixingRate: 0.0
+    #isDate: false
+    #isImage: false
+    #isExcerpt: false
+
+top_posts:
+  enable: true
+  title: Top
+  params:
+    maxCount: 4
+    PPMixingRate: 1.0

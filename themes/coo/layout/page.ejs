@@ -1,0 +1,15 @@
+<div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center">
+    <div class="flex flex-col w-full mx-auto text-center my-8">
+        <div class="max-container w-full">
+            <h1 class="text-5xl mb-4">
+                <span class="text-slate-700 dark:text-slate-300 font-light"><%- page.title %></span>
+            </h1>
+            <div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600 dark:text-slate-500"><%- page.intro != null ? markdown(page.intro) : "" %></div>
+        </div>
+    </div>
+    <div id="mdLayout" class="mdLayout w-full max-container">
+        <!--[htmlclean-protect]-->
+        <%- page.content %>
+        <!--[/htmlclean-protect]-->
+    </div>
+</div>

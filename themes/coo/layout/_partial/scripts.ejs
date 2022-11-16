@@ -1,0 +1,16 @@
+<%- js('js/main.js') %>
+
+<% if (is_post() && page.plugins != undefined && page.plugins.includes("tooltip") ){ %>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof (tippy) !== 'undefined') {
+                document.querySelectorAll("a[data-tooltip]").forEach(function (x) {
+                    let content = x.getAttribute('data-tooltip');
+                    tippy(x, {content: content});
+                });
+            }
+        });
+    </script>
+<% } %>
