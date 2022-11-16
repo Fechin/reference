@@ -1,10 +1,10 @@
 # Reference
 
-[![love](https://badgen.net/badge/make with/love/pink)](#)
+[![love](https://badgen.net/badge/make%20with/love/pink)](#)
 [![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
-[![License](https://badgen.net/github/stars/Fechin/reference)](#)
-[![License](https://badgen.net/github/forks/Fechin/reference)](#)
-[![License](https://badgen.net/github/contributors/Fechin/reference)](#)
+[![contributors](https://badgen.net/github/contributors/Fechin/reference)](#)
+[![forks](https://badgen.net/github/forks/Fechin/reference)](#)
+[![starts](https://badgen.net/github/stars/Fechin/reference)](#)
 
 
 
@@ -24,11 +24,11 @@ Read the cheatsheet gracefully https://quickref.me
 ```
 .
 ├── source
-│   ├── _posts   # Source file for cheatsheet
+│   ├── _posts    # Source file for cheatsheet
 │   │   ├── bash.md
 │   │   ├── chmod.md
 │   │   ├── ...
-│   └── widget   # Widget that can be referenced
+│   └── widget    # Widget that can be referenced
 │       └── chmod.html
 ├── public        # Static files for distribution
 ├── _config.yml
@@ -37,7 +37,7 @@ Read the cheatsheet gracefully https://quickref.me
 ├── postcss.config.js
 ├── tailwind.config.js
 └── themes
-    └── coo      # Hexo's theme
+    └── coo       # Theme files
 ```
 
 ## Contributing
@@ -45,7 +45,7 @@ Read the cheatsheet gracefully https://quickref.me
 Thanks for your interest on contributing to reference 👍👍, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
 
 
-#### Development setup
+### Development setup
 
 1. Clone Github repo `git clone https://github.com/Fechin/reference.git`
 2. Install `npm` package manager (Read [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
@@ -55,7 +55,7 @@ Thanks for your interest on contributing to reference 👍👍, it's people like
 
 A `source/_posts/{filename}.md` file will be processed into a cheat sheet, let's create or edit a markdown file:
 
-#### Front Matter
+### Front Matter
 ```markdown
 ---
 title: QuickRef
@@ -70,7 +70,7 @@ categories:
 ```
 Just need `title` and `intro`, and ignore other options. I will complete it if it can be released.
 
-#### CSS classes
+### CSS classes
 QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) and supports adding classes via its syntax. Also, there is a reference of styles that you can use on `quickref.me` cheat sheets:  https://quickref.me/quickref
 
 
