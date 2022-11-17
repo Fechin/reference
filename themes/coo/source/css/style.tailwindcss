@@ -4,6 +4,7 @@
 
 
 /* Custom Components */
+@import "components/layer.css";
 @import "highlightjs/stackoverflow-light.min.css";
 @import "components/layout_table.css";
 @import "components/layout_list.css";

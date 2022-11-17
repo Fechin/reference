@@ -1,6 +1,9 @@
 module.exports = {
     darkMode: 'class', // or 'media' or 'class'
-    plugins: [],
+    plugins: [
+        // https://github.com/jamiebuilds/tailwindcss-animate
+        require("tailwindcss-animate"),
+    ],
     theme: {
         boxShadow: {
             /* Customized */

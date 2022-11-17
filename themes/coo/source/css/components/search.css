@@ -1,3 +1,11 @@
+#mysearch {
+    @apply animate-in fade-in duration-200;
+}
+
+#mysearch-box {
+    animation: 200ms cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both running openAnimation;
+}
+
 #mysearch em {
     @apply not-italic text-emerald-500;
 }

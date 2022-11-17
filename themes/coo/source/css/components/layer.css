@@ -1,0 +1,34 @@
+@layer components {
+    .openAnimation {
+        animation: 200ms cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both running openAnimation;
+    }
+
+    .closeAnimation {
+        animation: 200ms cubic-bezier(0.4, 0, 1, 1) 0s 1 normal both running closeAnimation;
+    }
+}
+
+
+@keyframes openAnimation {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes closeAnimation {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
