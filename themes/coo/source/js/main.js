@@ -170,14 +170,6 @@ window.addEventListener('load', () => {
                 _this.openModal(true);
             });
 
-            document.body.addEventListener('keydown', function (e) {
-                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                    _this.toggleModal();
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            });
-
             document.body.addEventListener('click', function (e) {
                 if (_this.isOpened()) {
                     if (!_this.box.contains(e.target) && !trigger.contains(e.target)) {
@@ -219,8 +211,12 @@ window.addEventListener('load', () => {
                     e.stopPropagation();
                 } else if (e.key === 'Escape') {
                     _this.closeModal();
-                } else if (e.metaKey && e.key === 'k') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                } else if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                     _this.toggleModal();
+                    e.preventDefault();
+                    e.stopPropagation();
                 }
             });
 
