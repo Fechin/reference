@@ -179,7 +179,7 @@ window.addEventListener('load', () => {
             });
 
             // Search input event
-            this.input.addEventListener("keydown", function (e) {
+            this.input.addEventListener("keyup", function (e) {
                 let value = _this.input.value
                 if (value === _this.lastSearch.query) {
                     return;
