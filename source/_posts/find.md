@@ -276,7 +276,7 @@ Find and {.cols-2}
 --------
 
 
-### Find and delete {.row-span-3}
+### Find and delete {.row-span-2}
 
 Find and remove multiple files
 
@@ -303,50 +303,77 @@ $ find / -type f -name *.mp3 -size +10m -exec rm {} \;
 
 ### Find and replace
 
+Find all files and modify the content `const` to `let`
+
 ```shell script {.wrap}
-$ find ./ -type f -exec sed -i 's/find/replace/g' {} \;
+$ find ./ -type f -exec sed -i 's/const/let/g' {} \;
+```
+
+Find readable and writable files and modify the content `old` to `new`
+
+```shell script {.wrap}
 $ find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
 ```
-See also: [sed](/sed) command
-
+See also: [sed cheatsheet](/sed)
+ 
 
 ### Find and rename
+
+Find and suffix (added `.bak`)
+
 ```shell script {.wrap}
-$ find . -type f -name 'file*' -exec mv {} {}_renamed \;
-$ find . -type f -name 'file*' -exec sh -c 'x="{}"; mv "$x" "${x}.bak"' \;
+$ find . -type f -name 'file*' -exec mv {} {}.bak\;
+```
+
+Find and rename extension (`.html` => `.gohtml`)
+```shell script {.wrap}
+$ find ./ -depth -name "*.html" -exec sh -c 'mv "$1" "${1%.html}.gohtml"' _ {} \;
 ```
 
 ### Find and move
 ```shell script
 $ find . -name '*.mp3' -exec mv {} /tmp/music \;
 ```
-Find and move it to a specific directory
+Find and move it to a specific directory (`/tmp/music`)
 
 ### Find and copy
 ```shell script
 $ find . -name '*2020*.xml' -exec cp -r "{}" /tmp/backup \;
 ```
-Find and copy it to a specific directory
+Find matching files and copy to a specific directory (`/tmp/backup`)
 
 
 ### Find and concatenate 
 
+Merge all csv files in the download directory into `merged.csv`
+
 ```shell script
 $ find download -type f -iname '*.csv' | xargs cat > merged.csv
-$ find download -type f -name '*.gz' -exec cat {} \; > output
 ```
 
+Merge all sorted csv files in the download directory into `merged.csv`
+
+```shell script {.wrap}
+$ find download -type f -iname '*.csv' | sort | xargs cat > merged.csv
+```
 
 
 ### Find and sort
 
+Find and sort in ascending
+
 ```shell script
-$ find . -printf "%T+\t%p\n" | sort
-$ find . -printf "%T+\t%p\n" | sort -r
+$ find . -type f | sort
+```
+
+find and sort descending
+
+```shell script
+$ find . -type f | sort -r
 ```
 
 
-### Find and chmod  {.row-span-2}
+### Find and chmod  {.row-span-1}
 
 Find files and set permissions to 644.
 
@@ -361,10 +388,18 @@ $ find / -type d -perm 777 -print -exec chmod 755 {} \;
 ```
 
 
-### Find and tar
+### Find and compress
+
+Find all `.java` files and compress it into `java.tar`
+
 ```shell script
-$ find . -type f -name "*.java" | xargs tar cvf myfile.tar
-$ find . -type f -name "*.java" | xargs tar rvf myfile.tar
+$ find . -type f -name "*.java" | xargs tar cvf java.tar
+```
+
+Find all `.csv` files and compress it into `quickref.zip`
+
+```shell script
+$ find . -type f -name "*.csv" | xargs zip quickref.zip
 ```
 
 
