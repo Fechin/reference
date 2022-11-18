@@ -338,13 +338,14 @@ Use `\` to search for these special characters: <br> `[ \ ^ $ . | ? * + ( ) { }`
 Order longer to shorter when alternatives overlap
 
 ### Character classes
-| Pattern       | Matches                                                            |
-|---------------|--------------------------------------------------------------------|
-| `[aeiou]`     | Match any vowel                                                    |
-| `[^aeiou]`    | Match a NON vowel                                                  |
-| `r[iau]ng`    | Match <yel>ring</yel>, w<yel>rang</yel>le, sp<yel>rung</yel>, etc. |
-| `gr[ae]y`     | Match <yel>gray</yel> or <yel>grey</yel>                           |
-| `[a-zA-Z0-9]` | Match any letter or digit                                          |
+| Pattern           | Matches                                                            |
+|-------------------|--------------------------------------------------------------------|
+| `[aeiou]`         | Match any vowel                                                    |
+| `[^aeiou]`        | Match a NON vowel                                                  |
+| `r[iau]ng`        | Match <yel>ring</yel>, w<yel>rang</yel>le, sp<yel>rung</yel>, etc. |
+| `gr[ae]y`         | Match <yel>gray</yel> or <yel>grey</yel>                           |
+| `[a-zA-Z0-9]`     | Match any letter or digit                                          |
+| `[\u3a00-\ufa99]` | Match any [Unicode Hàn (中文)](https://unicode.org/charts/unihan.html) |
 
 In `[ ]` always escape `. \ ]` and sometimes `^ - .`
 
