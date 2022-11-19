@@ -11,7 +11,7 @@
             </div>
             <div class="hidden md:block flex-shrink-0 mx-auto block mt-8 md:mx-8 max-w-xs">
                 <%- partial('index/logo', {icon: false}) %>
-                <p class="mt-5 text-sm text-slate-500"><%- config.description %>.</p>
+                <h4 class="mt-5 text-sm text-slate-500"><%- config.description %>.</h4>
                 <% if (site.posts.filter(post => post.layout === "note").length > 0) { %>
                     <div class="share mt-4">
                         <a href="/notes">#Notes</a>
