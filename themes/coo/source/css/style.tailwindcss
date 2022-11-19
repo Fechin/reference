@@ -131,7 +131,7 @@ html.scrollbar {
 
 
 .mdLayout .h3-wrap {
-    @apply bg-white pt-6 mb-4 rounded-lg shadow flex flex-col relative overflow-hidden;
+    @apply bg-white pt-6 mb-4 rounded-lg shadow flex flex-col relative overflow-hidden fadeIn;
     @apply lg:mb-0;
     @apply dark:bg-slate-800 dark:text-slate-300;
 }
