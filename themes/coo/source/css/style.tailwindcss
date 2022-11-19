@@ -45,7 +45,7 @@ html.scrollbar {
 }
 
 .home .card {
-    @apply p-4 flex items-center rounded-lg shadow-sm cursor-pointer text-slate-800 bg-opacity-60 fadeIn;
+    @apply p-4 flex items-center rounded-lg shadow-sm cursor-pointer text-slate-900/90 bg-opacity-[.65] fadeIn;
     @apply dark:text-slate-300 dark:bg-opacity-50;
     @apply hover:text-slate-50/90 hover:bg-opacity-100 hover:shadow-xl;
 }
