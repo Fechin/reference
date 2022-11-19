@@ -5,7 +5,7 @@
             <%- partial('index/logo', {icon: true}) %>
             <div class="md:ml-auto flex flex-wrap items-center text-base justify-center">
                 <button id="mysearch-trigger" type="button"
-                        class="inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 <%- is_home() ? "text-white" : "text-slate-700"  %>  md:hover:opacity-80">
+                        class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 <%- is_home() ? "text-white" : "text-slate-700"  %>  md:hover:opacity-80">
                     <i class="icon icon-search md:text-xl text-slate-700 dark:text-slate-300 <%- is_home() ? "md:text-white" : "" %> md:mr-2"></i>
                     <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span>
                     <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border <%- postPage ? "border-slate-400" : "border-slate-300" %> rounded-md">
@@ -15,7 +15,7 @@
                 </button>
                 <a href="/sponsor/">
                     <button type="button"
-                            class="inline-flex h-8 items-center rounded-full bg-slate-200 dark:bg-gray-900 text-slate-700 dark:text-gray-300 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:bg-slate-300 md:dark:hover:bg-slate-800">
+                            class="fadeIn inline-flex h-8 items-center rounded-full bg-slate-200 dark:bg-gray-900 text-slate-700 dark:text-gray-300 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:bg-slate-300 md:dark:hover:bg-slate-800">
                         <i class="icon icon-heart text-red-600 animate-pulse md:mr-2"></i>
                         <span class="hidden md:inline text-sm">Sponsor</span>
                     </button>
@@ -23,25 +23,25 @@
                 <% if (postPage) { %>
                     <a href="<%- edit_page() %>" target="_blank">
                         <button type="button"
-                                class="inline-flex h-8 items-center rounded-full bg-slate-200 dark:bg-gray-900 text-slate-700 dark:text-gray-300 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:bg-slate-300 md:dark:hover:bg-slate-800">
+                                class="fadeIn inline-flex h-8 items-center rounded-full bg-slate-200 dark:bg-gray-900 text-slate-700 dark:text-gray-300 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:bg-slate-300 md:dark:hover:bg-slate-800">
                             <i class="icon icon-github md:mr-2"></i>
                             <span class="hidden md:inline text-sm">Edit</span>
                         </button>
                     </a>
                 <% } %>
-                <button id="darkMode" class="inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900">
+                <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900">
                     <i class="icon icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"></i>
                 </button>
                 <a href="<%- share_link("facebook") %>" target="_blank">
                     <button type="button"
-                            class="inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
+                            class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
                         <i class="icon icon-facebook"></i>
                         <span class="hidden">Facebook</span>
                     </button>
                 </a>
                 <a href="<%- share_link("twitter") %>" target="_blank">
                     <button type="button"
-                            class="inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
+                            class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
                         <i class="icon icon-twitter"></i>
                         <span class="hidden">Twitter</span>
                     </button>

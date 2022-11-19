@@ -424,7 +424,7 @@ window.addEventListener('load', () => {
                 if (tagStr !== "") {
                     tagsHTML = `<div class="w-px h-3 bg-slate-300 mr-2"></div><span class="mr-2">${tagStr}</span>`
                 }
-                liHtml += `<li class="group ${activeStr} m-3" data-index="${itemIndex}">
+                liHtml += `<li class="group ${activeStr} m-3 fadeIn" data-index="${itemIndex}">
                                 <a href="${hit.path}" class="flex justify-between items-center rounded-lg py-1 px-4 transition-colors duration-100 ease-in-out overflow-hidden">
                                     <div class="flex items-start">
                                         <div class="flex justify-center items-center w-5 mr-5 mt-2 flex-none">
