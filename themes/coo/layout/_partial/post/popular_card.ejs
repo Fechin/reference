@@ -1,7 +1,7 @@
 <a href="<%= ext_url_for(post.path) %>"
    class="group flex items-center p-3 bg-white rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 ">
-    <div class="ml-4">
-        <p class="mb-1 text-sm font-medium text-slate-900  dark:text-slate-300 group-hover:text-white"><%= post.title %>
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white"><%= post.title %>
             <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
         </p>
         <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
