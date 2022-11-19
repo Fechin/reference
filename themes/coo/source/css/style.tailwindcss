@@ -137,8 +137,8 @@ html.scrollbar {
 }
 
 .mdLayout .h3-wrap hr {
-    @apply text-slate-200 !important;
-    @apply dark:text-slate-700/50 !important;
+    @apply border-slate-200 !important;
+    @apply dark:border-slate-600/50 !important;
 }
 
 .mdLayout .h3-wrap.boxed {
