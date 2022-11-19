@@ -12,9 +12,11 @@
             <div class="hidden md:block flex-shrink-0 mx-auto block mt-8 md:mx-8 max-w-xs">
                 <%- partial('index/logo', {icon: false}) %>
                 <p class="mt-5 text-sm text-slate-500"><%- config.description %>.</p>
-                <div class="share mt-4">
-                    <a href="/notes">#Notes</a>
-                </div>
+                <% if (site.posts.filter(post => post.layout === "note").length > 0) { %>
+                    <div class="share mt-4">
+                        <a href="/notes">#Notes</a>
+                    </div>
+                <% } %>
                 <div class="share mt-8">
                     <%- partial('_partial/share', {extra: ""}) %>
                 </div>
