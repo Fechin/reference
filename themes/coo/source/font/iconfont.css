@@ -1,8 +1,8 @@
 @font-face {
   font-family: "icon"; /* Project id 2226430 */
-  src: url('iconfont.woff2?1641177301') format('woff2'),
-       url('iconfont.woff?1641177301') format('woff'),
-       url('iconfont.ttf?1641177301') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_2226430_2mo75parafn.woff2?1668928635') format('woff2'),
+       url('//at.alicdn.com/t/c/font_2226430_2mo75parafn.woff?1668928635') format('woff'),
+       url('//at.alicdn.com/t/c/font_2226430_2mo75parafn.ttf?1668928635') format('truetype');
 }
 
 .icon {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star:before {
+  content: "\f0d4";
 }
 
 .icon-rust:before {

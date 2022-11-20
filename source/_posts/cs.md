@@ -13,7 +13,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 --------
 
 ### Hello.cs
@@ -150,7 +150,7 @@ foreach(int num in numbers) {
 
 
 
-C# Strings {.cols-3}
+C# Strings
 ----------------
 
 ### String concatenation
@@ -203,7 +203,7 @@ lengthOfString.Contains("How"); // => true
 
 
 
-Misc {.cols-3}
+Misc
 -----------
 
 ### General .NET Terms {.col-span-2}

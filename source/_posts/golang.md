@@ -12,7 +12,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 --------
 
 
@@ -96,7 +96,7 @@ See: [Flow control](#golang-flow-control)
 
 
 
-Golang Basic types {.cols-3}
+Golang Basic types
 --------
 
 ### Strings
@@ -288,7 +288,7 @@ fmt.Println(s) // Outputs: 90
 
 
 
-Golang Strings {.cols-3}
+Golang Strings
 --------
 
 ### Strings function
@@ -383,7 +383,7 @@ See also: [fmt](https://golang.org/pkg/fmt/)
 
 
 
-Golang Flow control {.cols-3}
+Golang Flow control
 --------
 
 ### Conditional
@@ -485,7 +485,7 @@ for {
 
 
 
-Golang Structs & Maps {.cols-3}
+Golang Structs & Maps
 --------
 
 ### Defining {.row-span-2}
@@ -559,7 +559,7 @@ Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
 
 
-Golang Functions {.cols-3}
+Golang Functions
 --------
 
 
@@ -691,7 +691,7 @@ fmt.Println(val)     // => 101
 ```
 
 
-Golang Packages {.cols-3}
+Golang Packages
 --------
 
 
@@ -757,7 +757,7 @@ See: [Exported names](https://tour.golang.org/basics/3)
 
 
 
-Golang Concurrency {.cols-3}
+Golang Concurrency
 --------
 
 ### Goroutines {.row-span-2}
@@ -870,7 +870,7 @@ See: [Buffered channels](https://tour.golang.org/concurrency/3)
 
 
 
-Golang Error control {.cols-3}
+Golang Error control
 --------
 
 ### Deferring functions 
@@ -1004,7 +1004,7 @@ func main() {
 }
 ```
 
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 ### Keywords

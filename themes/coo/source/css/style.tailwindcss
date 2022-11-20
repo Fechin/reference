@@ -92,7 +92,7 @@ html.scrollbar {
 }
 
 /** Grid layout. */
-.mdLayout .h2-wrap > .h3-wrap-list { @apply flex flex-col lg:grid lg:gap-7; }
+.mdLayout .h2-wrap > .h3-wrap-list { @apply flex flex-col lg:grid lg:grid-cols-3 lg:gap-7; }
 .mdLayout .h2-wrap.cols-1 > .h3-wrap-list { @apply lg:grid-cols-1; }
 .mdLayout .h2-wrap.cols-2 > .h3-wrap-list { @apply lg:grid-cols-2; }
 .mdLayout .h2-wrap.cols-3 > .h3-wrap-list { @apply lg:grid-cols-3; }

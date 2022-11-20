@@ -14,7 +14,7 @@ intro: |
     [Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Sed Usage
@@ -79,7 +79,7 @@ See: [Sed examples](#sed-examples)
 
 
 
-Sed commands {.cols-3}
+Sed commands
 -----------
 
 ### Commands {.col-span-2}
@@ -151,7 +151,7 @@ $ sed 's/old/new/[flags]' [input-file]
 
 
 
-Sed examples {.cols-3}
+Sed examples
 ----------
 
 

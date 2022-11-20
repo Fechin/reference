@@ -14,7 +14,7 @@ plugins:
     - tooltip
 ---
 
-HTTP Status code {.cols-3}
+HTTP Status code
 -----------
 
 

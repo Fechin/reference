@@ -15,7 +15,7 @@ plugins:
 ---
 
 
-Getting started {.cols-3}
+Getting started
 --------
 
 ### Hello.java {.row-span-2}
@@ -153,7 +153,7 @@ int num = in.nextInt();
 System.out.println(num);
 ```
 
-Java Strings {.cols-3}
+Java Strings
 -------
 
 ### Basic
@@ -283,7 +283,7 @@ Once created cannot be modified, any modification creates a new String
 
 
 
-Java Arrays {.cols-3}
+Java Arrays
 -------
 
 
@@ -362,7 +362,7 @@ Arrays.toString(chars);
 
 
 
-Java Conditionals {.cols-3}
+Java Conditionals
 -----------
 
 
@@ -459,7 +459,7 @@ System.out.println(max);
 ```
 
 
-Java Loops {.cols-3}
+Java Loops
 ----
 
 ### For Loop
@@ -535,7 +535,7 @@ for (int i = 0; i < 5; i++) {
 // Outputs: 0123
 ```
 
-Java Collections Framework {.cols-3}
+Java Collections Framework
 --------------------
 
 ### Java Collections {.col-span-2}
@@ -657,7 +657,7 @@ System.out.println(a.peek());
 System.out.println(a.pop());
 ```
 
-Misc {.cols-3}
+Misc
 ----
 
 

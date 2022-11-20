@@ -14,7 +14,7 @@ intro: |
 
 
 
-Getting Started {.cols-3}
+Getting Started
 ---------------
 
 
@@ -164,7 +164,7 @@ See: [Python F-Strings](#python-f-strings-since-python)
 
 
 
-Python Data Types {.cols-3}
+Python Data Types
 ---------------
 
 
@@ -278,7 +278,7 @@ z = str(3.0)  # z will be '3.0'
 
 
 
-Python Strings {.cols-3}
+Python Strings
 ------------
 
 ### Array-like
@@ -448,7 +448,7 @@ Get input data from console
 True
 ```
 
-Python F-Strings (Since Python 3.6+) {.cols-3}
+Python F-Strings (Since Python 3.6+)
 ----------------
 
 
@@ -555,7 +555,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 '-000012345'
 ```
 
-Python Lists {.cols-3}
+Python Lists
 ------------
 
 
@@ -730,7 +730,7 @@ IndexError: list index out of range
 ['re', 're', 're']
 ```
 
-Python Flow control {.cols-3}
+Python Flow control
 ------------
 
 ### Basic
@@ -767,7 +767,7 @@ else:
 
 
 
-Python Loops {.cols-3}
+Python Loops
 --------
 
 ### Basic
@@ -854,7 +854,7 @@ print(result)
 
 
 
-Python Functions {.cols-3}
+Python Functions
 --------
 
 ### Basic
@@ -924,7 +924,7 @@ add(5, 20)  # => 25
 
 
 
-Python Modules {.cols-3}
+Python Modules
 --------
 
 
@@ -970,7 +970,7 @@ dir(math)
 
 
 
-Python File Handling {.cols-3}
+Python File Handling
 ----------
 
 
@@ -1053,7 +1053,7 @@ os.rmdir("myfolder")
 
 
 
-Python Classes & Inheritance {.cols-3}
+Python Classes & Inheritance
 --------
 
 
@@ -1215,7 +1215,7 @@ Yoki.sound()     # => Woof!
 
 
 
-Miscellaneous {.cols-3}
+Miscellaneous
 ----------
 
 ### Comments

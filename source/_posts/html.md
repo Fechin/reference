@@ -12,7 +12,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 ------------
 
 ### hello.html {.col-span-2 .row-span-2}
@@ -211,7 +211,7 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 
 
-HTML5 Tags {.cols-3}
+HTML5 Tags
 -------------
 
 ### Document
@@ -356,7 +356,7 @@ HTML5 Tags {.cols-3}
 <p>I Love <mark>QuickRef.ME</mark></p>
 
 
-HTML Tables {.cols-3}
+HTML Tables
 --------------
 
 ### Table Example {.row-span-2}
@@ -424,7 +424,7 @@ See: [th\#Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 
 
 
-HTML Lists {.cols-3}
+HTML Lists
 --------------
 
 
@@ -466,7 +466,7 @@ See: [The Description List element](https://developer.mozilla.org/en-US/docs/Web
 
 
 
-HTML Forms {.cols-3}
+HTML Forms
 -----------
 
 

@@ -15,7 +15,7 @@ intro: |
   A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Motion Diagrams {.row-span-2}
@@ -213,7 +213,7 @@ G gg H M L k j ▶ print("to")
 You can save macro for any letters not just `i`
 
 
-Vim Operators {.cols-3}
+Vim Operators
 ---------
 
 ### Usage {.secondary}
@@ -281,7 +281,7 @@ Combine [operators](#available-operators) with [motions](#motions) to use them
 
 
 
-Vim Text objects {.cols-3}
+Vim Text objects
 ------------
 
 ### Usage {.secondary}
@@ -353,7 +353,7 @@ See `:help text-objects`
 
 
 
-Vim Multiple files {.cols-3}
+Vim Multiple files
 -------------
 
 
@@ -422,7 +422,7 @@ Vim Multiple files {.cols-3}
 
 
 
-Vim Search and Replace {.cols-3}
+Vim Search and Replace
 ------------------
 
 ### Search
@@ -567,7 +567,7 @@ Vim Search and Replace {.cols-3}
 
 
 
-Vimdiff {.cols-3}
+Vimdiff
 -------
 
 
@@ -632,7 +632,7 @@ See: [Ranges](#ranges)
 
 
 
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 

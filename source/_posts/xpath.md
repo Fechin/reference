@@ -107,7 +107,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 
 
-XPath Expressions {.cols-3}
+XPath Expressions
 -----------
 
 ### Steps and axes {.secondary}
@@ -140,7 +140,7 @@ XPath Expressions {.cols-3}
 
 
 
-XPath Predicates {.cols-3}
+XPath Predicates
 ----------
 
 ### Predicates

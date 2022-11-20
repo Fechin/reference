@@ -11,7 +11,7 @@ intro: |
 ---
 
 
-Getting Started  {.cols-3}
+Getting Started 
 ---------------
 
 ### Hello_World.rs
@@ -133,7 +133,7 @@ See: [Functions](#rust-functions)
 
 
 
-Rust Types {.cols-3}
+Rust Types
 --------------
 
 
@@ -259,7 +259,7 @@ let tuple = (1, 'A' , "Cool", 78, true);
 
 
 
-Rust Strings {.cols-3}
+Rust Strings
 --------------
 
 ### String Literal
@@ -324,7 +324,7 @@ println!("{hi}");
 
 
 
-Rust Operators {.cols-3}
+Rust Operators
 -----------
 
 
@@ -443,7 +443,7 @@ let mut l = k;
 
 
 
-Rust Flow Control {.cols-3}
+Rust Flow Control
 --------------
 
 ### If Expression
@@ -636,7 +636,7 @@ for (v, c) in (0..10+1).enumerate(){
 
 
 
-Rust Functions {.cols-3}
+Rust Functions
 --------------
 
 
@@ -749,7 +749,7 @@ fn multiply (mut arr: [i32 ; 5]) -> [i32 ; 5]{
 
 
 
-Misc {.cols-3}
+Misc
 --------------
 
 

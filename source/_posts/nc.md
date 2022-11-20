@@ -62,7 +62,7 @@ $ nc 192.168.1.9 8000
 
 
 
-Netcat Examples {.cols-3}
+Netcat Examples
 --------
 
 ### Banner grabbing

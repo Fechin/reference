@@ -15,7 +15,7 @@ intro: |
 
 
 
-Tmux CLI {.cols-3}
+Tmux CLI
 -------
 
 ### New session  {.row-span-2}
@@ -92,7 +92,7 @@ Mainly works like selecting text in [Vim](/vim#motions)
 
 
 
-Tmux shortcuts {.cols-3}
+Tmux shortcuts
 --------------
 
 ### Getting started {.secondary}
@@ -159,7 +159,7 @@ $ tmux info
 
 
 
-Tmux Command Mode {.cols-3}
+Tmux Command Mode
 -----------
 
 ### Usage {.secondary}

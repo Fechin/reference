@@ -13,7 +13,7 @@ intro: |
     This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Have a try
@@ -146,7 +146,7 @@ See: [Functions](#awk-functions)
 
 
 
-Awk Variables {.cols-3}
+Awk Variables
 ---------
 
 
@@ -262,7 +262,7 @@ awk -v varName="$PWD" '
 
 
 
-Awk Operators {.cols-3}
+Awk Operators
 ---------
 
 ### Operators
@@ -341,7 +341,7 @@ awk 'BEGIN {
 
 
 
-Awk Functions {.cols-3}
+Awk Functions
 ----------
 ### Common functions {.col-span-2}
 | Function              | Description                                                                     |
@@ -395,7 +395,7 @@ awk '
 
 
 
-Awk Arrays {.cols-3}
+Awk Arrays
 ---------
 
 
@@ -470,7 +470,7 @@ awk 'BEGIN {
 
 
 
-Awk Conditions {.cols-3}
+Awk Conditions
 ----------
 
 ### if-else statement
@@ -532,7 +532,7 @@ awk -F: '{
 ```
 
 
-Awk Loops {.cols-3}
+Awk Loops
 ----------
 
 ### for...i
@@ -663,7 +663,7 @@ awk 'BEGIN {
 
 
 
-Awk Formatted Printing {.cols-3}
+Awk Formatted Printing
 ---------
 
 ### Usage
@@ -727,7 +727,7 @@ daemon     /sbin
 
 
 
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 ### Regex Metacharacters

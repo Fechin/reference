@@ -13,7 +13,7 @@ categories:
 intro: This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Create a Repository
@@ -303,7 +303,7 @@ A `.gitignore` file specifies intentionally untracked files that Git should igno
 
 
 
-Git Tricks {.cols-3}
+Git Tricks
 ------
 
 ### Rename branch 

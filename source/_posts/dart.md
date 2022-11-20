@@ -191,7 +191,7 @@ switch(myPet){
 
 
 
-Control Flows : Loops {.cols-3}
+Control Flows : Loops
 ------------
 
 
@@ -319,7 +319,7 @@ list.forEach(
 //Prints: 0: apples 1: bananas 2: oranges
 ```
 
-Classes and Objects {.cols-3}
+Classes and Objects
 ----------
 
 ### Class
@@ -444,7 +444,7 @@ class SmartPhone extends Phone {
 }
 ```
 
-Exceptions {.cols-3}
+Exceptions
 ------------
 
 ### Throw

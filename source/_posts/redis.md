@@ -13,7 +13,7 @@ intro: |
 
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Getting started
@@ -526,7 +526,7 @@ Run algorithms (currently LCS) against strings
 
 
 
-Redis Set command {.cols-3}
+Redis Set command
 ------------
 
 
@@ -892,7 +892,7 @@ Add multiple sets and store the resulting set in a key
 
 
 
-Redis List command {.cols-3}
+Redis List command
 ------------
 
 ### Misc
@@ -1293,7 +1293,7 @@ Append an element to a list, only if the list exists
 
 
 
-Redis Hash command {.cols-3}
+Redis Hash command
 ------------
 
 
@@ -1552,7 +1552,7 @@ Get all the values in a hash
 
 
 
-Redis Sorted set command {.cols-3}
+Redis Sorted set command
 ------------
 
 ### BZPOPMIN

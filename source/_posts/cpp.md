@@ -11,7 +11,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 --------
 
 ### hello.cpp
@@ -176,7 +176,7 @@ int main()
 
 Namespaces allow global identifiers under a name
 
-C++ Arrays {.cols-3}
+C++ Arrays
 ------
 
 ### Declaration
@@ -260,7 +260,7 @@ for (int i = 0; i < 2; ++i) {
 // Outputs: 1 2 3 4 5 6 6 5 4 3 2 1 
 ```
 
-C++ Conditionals {.cols-3}
+C++ Conditionals
 ------------
 
 ### If Clause
@@ -406,7 +406,7 @@ switch (num) {
 }
 ```
 
-C++ Loops {.cols-3}
+C++ Loops
 ------------
 
 ### While
@@ -525,7 +525,7 @@ for (int i = 0, j = 2; i < 3; i++, j--){
 // Outputs: i=0,j=2;i=1,j=1;i=2,j=0;
 ```
 
-C++ Functions {.cols-3}
+C++ Functions
 ------------
 
 ### Arguments & Returns
@@ -570,7 +570,7 @@ int main() {
 }
 ```
 
-C++ Classes & Objects {.cols-3}
+C++ Classes & Objects
 -----------------
 
 ### If statement
@@ -597,7 +597,7 @@ C++ Classes & Objects {.cols-3}
 
 ```
 
-C++ Preprocessor {.cols-3}
+C++ Preprocessor
 ------------
 
 ### Preprocessor {.row-span-3}
@@ -686,7 +686,7 @@ char * a = STR(object);   #=> char * a = "object";
 #=> console.log("file.txt", 3, "hey")
 ```
 
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 ### Escape Sequences

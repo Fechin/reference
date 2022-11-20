@@ -5,7 +5,7 @@ intro: |
     We appreciate your help in order to pay for the hosting fees and ensuring I can spend enough time to create and optimize the cheatsheet webpage.
 ---
 
-Sponsor {.cols-3}
+Sponsor
 ---------------
 
 

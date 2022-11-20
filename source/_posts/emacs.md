@@ -448,7 +448,7 @@ Use `C-s` or `C-r` again to repeat the search in either direction. If Emacs is s
 
 
 
-Misc {.cols-3}
+Misc
 ----
 
 

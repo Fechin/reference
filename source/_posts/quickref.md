@@ -1,8 +1,8 @@
 ---
 title: QuickRef
 date: 2020-11-25 18:28:43
-icon: icon-style
-background: bg-emerald-600
+icon: icon-star
+background: bg-red-600
 tags:
     - guide
     - reference
@@ -11,7 +11,7 @@ categories:
 intro: This is a reference of styles that you can use on quickref cheatsheets!
 ---
 
-Variants {.cols-3}
+Variants
 --------
 
 ### H2 section
@@ -22,8 +22,7 @@ Variants {.cols-3}
 | `.cols-2`  |                        |
 | `.cols-3`  | three column           |
 | ...        |                        |
-| `.cols-11` |                        |
-| `.cols-12` |                        |
+| `.cols-6` |                         |
 
 
 
@@ -84,8 +83,7 @@ See: [Tables](#tables-2)
 | `.cols-2`  |                        |
 | `.cols-3`  | three column           |
 | ...        |                        |
-| `.cols-11` |                        |
-| `.cols-12` |                        |
+| `.cols-6`  |                        |
 
 See: [Lists](#lists-2)
 
@@ -122,7 +120,7 @@ See: [Paragraphs](#paragraphs-2)
 ### How to add variants {.secondary}
 
 ```
-H2 section {.cols-3}
+H2 section
 ----------
 
 ### H3 section {.col-span-2}
@@ -134,7 +132,24 @@ H2 section {.cols-3}
 
 QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs#markdown-it-attrs---), and supports adding classes via its syntax.
 
-Code {.cols-3}
+
+
+
+Layout Variants
+--------
+
+### H2 section
+
+| -          | -                      |
+|------------|------------------------|
+| `.cols-1`  | one column _(default)_ |
+| `.cols-2`  |                        |
+| `.cols-3`  | three column           |
+| ...        |                        |
+| `.cols-6` |                         |
+
+
+Code
 ----
 
 ### Basic code
@@ -192,7 +207,7 @@ function createNode(nodeName: string, options: { key: string }) {
 
 Long lines will have scrollbars.
 
-Paragraphs {.cols-3}
+Paragraphs
 --------
 
 ### Basic paragraphs
@@ -228,7 +243,7 @@ Add `{.link-arrow}` to make big loud external links:
 
 
 
-Tables Variants {.cols-3}
+Tables Variants
 ------
 
 
@@ -309,7 +324,7 @@ Tables Variants {.cols-3}
 
 
 
-Lists Variants {.cols-3}
+Lists Variants
 --------
 
 ### List Overview {.secondary}
@@ -469,7 +484,7 @@ H2 section {.cols-5}
 ```
 
 
-H3 section {.cols-3}
+H3 section
 ----------
 
 ### row-span-2  {.row-span-2}

@@ -11,7 +11,7 @@ intro: |
       This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
 ---
 
-Sass Basics {.cols-3}
+Sass Basics
 --------
 
 ### Introduction
@@ -124,7 +124,7 @@ text: {
 The `.sass` or `.sass` extension is optional.
 
 
-Sass Mixins {.cols-3}
+Sass Mixins
 ------
 
 
@@ -341,7 +341,7 @@ feature-exists(global-variable-shadowing)
 * units-level-3
 * at-error
 
-Sass Loops {.cols-3}
+Sass Loops
 --------
 
 ### For loops
@@ -386,7 +386,7 @@ $i: 6;
 }
 ```
 
-Sass Other features {.cols-3}
+Sass Other features
 --------
 
 ### Conditionals {.row-span-2}

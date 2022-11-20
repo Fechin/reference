@@ -12,7 +12,7 @@ intro: |
     This is a quick reference cheat sheet for understanding and writing JSON format configuration files.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 
@@ -210,7 +210,7 @@ Begins with `[` and ends with `]`
 
 
 
-Access JSON in JavaScript  {.cols-3}
+Access JSON in JavaScript 
 -------------------------
 
 ### Access Object

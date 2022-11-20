@@ -12,7 +12,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 
@@ -177,7 +177,7 @@ See: [Classes](#php-classes)
 
 
 
-PHP Types {.cols-3}
+PHP Types
 ---------------
 
 
@@ -268,7 +268,7 @@ foreach (bar() as $value) {
 ```
 
 
-PHP Strings {.cols-3}
+PHP Strings
 ---------------
 
 
@@ -329,7 +329,7 @@ See: [String Functions](https://www.php.net/manual/en/ref.strings.php)
 
 
 
-PHP Arrays {.cols-3}
+PHP Arrays
 ---------------
 
 ### Defining {.row-span-2}
@@ -554,7 +554,7 @@ $num /= $float;  // Divide and assign the quotient to $num
 
 
 
-PHP Conditionals {.cols-3}
+PHP Conditionals
 ---------------
 
 ### If elseif else
@@ -634,7 +634,7 @@ echo $result; # => young adult
 ```
 
 
-PHP Loops {.cols-3}
+PHP Loops
 ---------------
 
 
@@ -699,7 +699,7 @@ See: [Array iteration](#php-value-iteration)
 
 
 
-PHP Functions {.cols-3}
+PHP Functions
 ---------------
 
 
@@ -824,7 +824,7 @@ echo $fn2(5);   # => 6
 
 
 
-PHP Classes {.cols-3}
+PHP Classes
 ---------------
 
 
@@ -924,7 +924,7 @@ class Cls implements Foo, Bar
 }
 ```
 
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 ### Basic error handling

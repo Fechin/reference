@@ -12,7 +12,7 @@ intro: |
     This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 
@@ -177,7 +177,7 @@ YAML uses `---` to separate directives from document content.
 
 
 
-YAML Collections {.cols-3}
+YAML Collections
 -----------
 
 ### Sequence
@@ -369,7 +369,7 @@ ordered: !!omap
 
 
 
-YAML Reference {.cols-3}
+YAML Reference
 --------------
 
 ### Terms

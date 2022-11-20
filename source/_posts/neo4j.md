@@ -36,7 +36,7 @@ Neo4j is a Graph Database consisting of nodes connected together by relationship
 | **Properties** | Both nodes and relationships can have properties set against them.  Properties are [name-value pairs](https://neo4j.com/docs/cypher-manual/4.3/syntax/values/#cypher-values). |
 
 
-Neo4j Syntax {.cols-3}
+Neo4j Syntax
 ------
 
 ### Read query structure

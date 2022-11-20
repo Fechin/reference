@@ -56,7 +56,7 @@ Wildcards are accepted in filename.
 | `-n`   | grep -n "go" demo.txt                 | Show the line numbers of the matches                 |
 
 
-Grep regular expressions {.cols-3}
+Grep regular expressions
 ---------------
 
 ### Refer

@@ -57,7 +57,7 @@ Getting started {.cols-2}
 
 
 
-Lists of Aspect Ratios {.cols-3}
+Lists of Aspect Ratios
 -------------------
 
 

@@ -13,7 +13,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Usage
@@ -218,7 +218,7 @@ $ find . -type f -empty -delete
 ```
 
 
-Find Date and Time {.cols-3}
+Find Date and Time
 -------------
 
 

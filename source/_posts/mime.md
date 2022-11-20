@@ -50,7 +50,7 @@ Getting started {.cols-2}
 {.cols-4 .marker-none}
 
 
-Lists of MIME types
+Lists of MIME types {.cols-1}
 -------------------
 
 ### Common MIME (Media) types

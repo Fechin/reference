@@ -9,7 +9,7 @@ categories:
 intro:  Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
 ---
 
-Getting Started {.cols-3}
+Getting Started
 ----------
 
 ### People

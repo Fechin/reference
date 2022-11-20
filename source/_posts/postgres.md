@@ -14,7 +14,7 @@ intro: |
 
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Getting started
@@ -68,7 +68,7 @@ Run in PostgreSQL console
 
 
 
-PostgreSQL Working {.cols-3}
+PostgreSQL Working
 -------
 
 ### Recon
@@ -334,7 +334,7 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 
 
 
-PostgreSQL Commands {.cols-3}
+PostgreSQL Commands
 -----------
 
 ### Tables
@@ -456,7 +456,7 @@ PostgreSQL Commands {.cols-3}
 
 
 
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 

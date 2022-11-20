@@ -11,7 +11,7 @@ categories:
 intro: This is a reference of styles that you can use on quickref cheatsheets!
 ---
 
-Variants {.cols-3}
+Variants
 --------
 
 ### H2 section
@@ -122,7 +122,7 @@ See: [Paragraphs](#paragraphs-2)
 ### How to add variants {.secondary}
 
 ```
-H2 section {.cols-3}
+H2 section
 ----------
 
 ### H3 section {.col-span-2}
@@ -134,7 +134,7 @@ H2 section {.cols-3}
 
 QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs#markdown-it-attrs---), and supports adding classes via its syntax.
 
-Code {.cols-3}
+Code
 ----
 
 ### Basic code
@@ -192,7 +192,7 @@ function createNode(nodeName: string, options: { key: string }) {
 
 Long lines will have scrollbars.
 
-Paragraphs {.cols-3}
+Paragraphs
 --------
 
 ### Basic paragraphs
@@ -228,7 +228,7 @@ Add `{.link-arrow}` to make big loud external links:
 
 
 
-Tables {.cols-3}
+Tables
 ------
 
 ### Basic table
@@ -310,7 +310,7 @@ QuickRef uses markdown-it-multimd-table to render the table, See：[markdown-it-
 
 
 
-Lists {.cols-3}
+Lists
 --------
 
 ### One column (Default)
@@ -399,7 +399,7 @@ H2 section {.cols-5}
 ```
 
 
-H3 section {.cols-3}
+H3 section
 ----------
 
 ### row-span-2  {.row-span-2}

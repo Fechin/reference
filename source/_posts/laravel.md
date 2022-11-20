@@ -15,7 +15,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Requirements {.row-span-2}
@@ -80,7 +80,7 @@ Access application via `http://localhost`
 
 
 
-Configuration {.cols-3}
+Configuration
 ---------------
 
 ### .env {.cols-2}
@@ -143,7 +143,7 @@ php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
 ```
 Visit your application URL `https://example.com/1630542a-246b-4b66-afa1-dd72a4c43515` to set a cookie and bypass the maintenance screen
 
-Routing {.cols-3}
+Routing
 ---------------
 
 ### Router HTTP Methods {.row-span-2}
@@ -388,7 +388,7 @@ $action = Route::currentRouteAction();
 ```
 
 
-Helpers {.cols-3}
+Helpers
 ---------------
 
 ### routes {.row-span-2}
@@ -477,7 +477,7 @@ Report an exception but continue handling the current request
 Generate an HTTP exception response using status code
 
 
-Controllers {.cols-3}
+Controllers
 ---------------
 
 ### Basic
@@ -504,7 +504,7 @@ use App\Http\Controllers\UserController;
 Route::get('/user/{id}', [UserController::class, 'show']);
 ```
 
-Requests {.cols-3}
+Requests
 ---------------
 
 ### CSRF Protection
@@ -770,7 +770,7 @@ $path = $request->photo->storeAs('images', 'filename.jpg', 's3');
 See More: [Laravel File Storage](https://laravel.com/docs/8.x/filesystem)
 
 
-Views {.cols-3}
+Views
 ---------------
 ### Intro
 - [Laravel Docs - Views](https://laravel.com/docs/8.x/views)
@@ -829,7 +829,7 @@ return view('admin.profile');
 ```
 
 
-Blade Templates {.cols-3}
+Blade Templates
 ---------------
 
 ### Intro
@@ -991,7 +991,7 @@ Prepend to the beginning of a stack
 ```
 
 
-Forms {.cols-3}
+Forms
 ---------------
 ### Intro
 - [Laravel Docs - Forms](https://laravel.com/docs/8.x/blade#forms)
@@ -1043,7 +1043,7 @@ Or the `old()` helper
 <input type="text" name="title" value="{{ old('title') }}">
 ```
 
-Validation {.cols-3}
+Validation
 ---------------
 ### Intro
 - [Laravel Docs - Validation](https://laravel.com/docs/8.x/validation)
@@ -1280,7 +1280,7 @@ $email = $validated['email'];
 ```
 
 
-Session {.cols-3}
+Session
 ---------------
 ### Intro
 - [Laravel Docs - Session](https://laravel.com/docs/8.x/session)
@@ -1380,7 +1380,7 @@ $request->session()->push('user.teams', 'developers');
 ```
 
 
-Logging {.cols-3}
+Logging
 ---------------
 
 ### Configuration
@@ -1420,7 +1420,7 @@ Log::info('User failed to login.', ['id' => $user->id]);
 ```
 
 
-Deployment {.cols-3}
+Deployment
 ---------------
 ### Intro
 - [Laravel Docs - Deployment](https://laravel.com/docs/8.x/deployment)

@@ -12,7 +12,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 --------
 
 
@@ -117,7 +117,7 @@ d  rwx  r-x  r-x
 
 
 
-Chmod Examples {.cols-3}
+Chmod Examples
 --------
 
 
@@ -207,7 +207,7 @@ $ chmod u=rwx,g=rx,o=r foo.sh
 
 
 
-Chmod Practices {.cols-3}
+Chmod Practices
 ---------------
 
 ### SSH Permissions

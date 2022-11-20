@@ -15,7 +15,7 @@ intro: |
 
 
 
-Getting started {.cols-3}
+Getting started
 ------------
 
 ### Introduction
@@ -150,7 +150,7 @@ numberOfColumns = 8;
 
 
 
-JavaScript Conditionals {.cols-3}
+JavaScript Conditionals
 ------------
 
 
@@ -271,7 +271,7 @@ null === undefined // false
 The `==` just check the value, `===` check both the value and the type.
 
 
-JavaScript Functions {.cols-3}
+JavaScript Functions
 ------------
 
 
@@ -395,7 +395,7 @@ function add(num1, num2) {
 
 
 
-JavaScript Scope  {.cols-3}
+JavaScript Scope 
 ------------
 
 
@@ -480,7 +480,7 @@ The variable has its own copy using `let`, and the variable has shared copy usin
 
 
 
-JavaScript Arrays  {.cols-3}
+JavaScript Arrays 
 ------------
 
 
@@ -588,7 +588,7 @@ numbers.concat(newFirstNumber)
 if you want to avoid mutating your original array, you can use concat.
 
 
-JavaScript Loops  {.cols-3}
+JavaScript Loops 
 ------------
 
 
@@ -1016,7 +1016,7 @@ myCat.name = 'Yankee';
 
 
 
-JavaScript Classes {.cols-3}
+JavaScript Classes
 ------------
 
 
@@ -1470,7 +1470,7 @@ msg(); // Message: Hello World! <-- after 2 seconds
 
 
 
-JavaScript Requests {.cols-3}
+JavaScript Requests
 ------------
 
 ### JSON 

@@ -13,7 +13,7 @@ intro: |
     A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
 ---
 
-Getting Started {.cols-3}
+Getting Started
 --------
 
 ### Introduction
@@ -477,7 +477,7 @@ M(?(?=.*?\bher\b)s|r)\.
 requires lookaround for IF condition
 
 
-RegEx in Python {.cols-3}
+RegEx in Python
 ---------------
 
 ### Getting started
@@ -572,7 +572,7 @@ False
 
 
 
-Regex in JavaScript {.cols-3}
+Regex in JavaScript
 ---------------
 
 ### test()
@@ -683,7 +683,7 @@ console.log(result);
 
 
 
-Regex in PHP {.cols-3}
+Regex in PHP
 ------------
 
 ### Functions {.col-span-2}
@@ -764,7 +764,7 @@ print_r(preg_split($regex, $str));
 ```
 
 
-Regex in Java {.cols-3}
+Regex in Java
 -------------
 
 

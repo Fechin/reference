@@ -13,7 +13,7 @@ categories:
 intro: This is a quick reference cheat sheet to the Markdown syntax.
 ---
 
-Markdown Quick Reference {.cols-3}
+Markdown Quick Reference
 ---------------
 
 ### Headers (atx style)

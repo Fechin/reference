@@ -14,7 +14,7 @@ categories:
 intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### hello.sh
@@ -136,7 +136,7 @@ See: [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsub
 
 
 
-Bash Parameter expansions {.cols-3}
+Bash Parameter expansions
 --------------------
 
 
@@ -252,7 +252,7 @@ echo "${ARR[@]^}" # => Hello World
 
 
 
-Bash Arrays  {.cols-3}
+Bash Arrays 
 ------
 
 ### Defining arrays
@@ -339,7 +339,7 @@ extract Fruits 2     # => Orangle
 
 
 
-Bash Dictionaries {.cols-3}
+Bash Dictionaries
 ------------
 
 ### Defining
@@ -384,7 +384,7 @@ done
 
 
 
-Bash Conditionals {.cols-3}
+Bash Conditionals
 ------------
 
 ### Integer conditions
@@ -513,7 +513,7 @@ fi
 
 
 
-Bash Loops {.cols-3}
+Bash Loops
 -----
 
 ### Basic for loop
@@ -635,7 +635,7 @@ done
 
 
 
-Bash Functions {.cols-3}
+Bash Functions
 ---------
 
 ### Defining functions
@@ -778,7 +778,7 @@ Bash History {.cols-2}
 `!!` can be replaced with any valid expansion i.e. `!cat`, `!-2`, `!42`, etc.
 
 
-Miscellaneous  {.cols-3}
+Miscellaneous 
 -------------
 
 ### Numeric calculations

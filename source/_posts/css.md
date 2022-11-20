@@ -15,7 +15,7 @@ intro: |
 
 
 
-Getting started {.cols-3}
+Getting started
 ------------
 
 ### Introduction {.row-span-3}
@@ -206,7 +206,7 @@ element {
 See: [Dynamic content](#css-dynamic-content)
 
 
-CSS Selectors {.cols-3}
+CSS Selectors
 -----------
 
 
@@ -354,7 +354,7 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 
 
-CSS Fonts {.cols-3}
+CSS Fonts
 ------
 
 
@@ -420,7 +420,7 @@ text-transform: lowercase;
 
 
 
-CSS Colors {.cols-3}
+CSS Colors
 ------------
 
 
@@ -484,7 +484,7 @@ color: currentcolor; /* keyword */
 
 
 
-CSS Backgrounds {.cols-3}
+CSS Backgrounds
 ----------
 
 ### Properties {.row-span-2}
@@ -524,7 +524,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,232,230,1) 35%, rg
 
 
 
-CSS The Box Model {.cols-3}
+CSS The Box Model
 ------------
 
 
@@ -734,7 +734,7 @@ CSS Flexbox {.cols-2}
 }
 
 
-CSS Flexbox Tricks {.cols-3}
+CSS Flexbox Tricks
 --------------
 
 ### Vertical center
@@ -836,7 +836,7 @@ Vertically-center all items.
 
 
 
-CSS Grid Layout {.cols-3}
+CSS Grid Layout
 ------------
 
 
@@ -1001,7 +1001,7 @@ The grid items are positioned to the right (end) of the row.
 
 
 
-CSS Dynamic Content {.cols-3}
+CSS Dynamic Content
 ------------
 
 ### Variable
@@ -1069,7 +1069,7 @@ li::before {
 ```
 
 
-Css 3 tricks {.cols-3}
+Css 3 tricks
 ------------
 
 ### Scrollbar smooth

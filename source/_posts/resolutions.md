@@ -50,7 +50,7 @@ Getting started {.cols-2}
 - [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/resolutions#TableGenerator)
 {.cols-4 .marker-none}
 
-Lists of Resolutions
+Lists of Resolutions {.cols-1}
 -------------------
 
 ### Mobile Phones

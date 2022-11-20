@@ -13,7 +13,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Getting started

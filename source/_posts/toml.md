@@ -13,7 +13,7 @@ intro: |
 ---
 
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 ### Introduction
@@ -125,7 +125,7 @@ array3 = [
 
 
 
-TOML Strings {.cols-3}
+TOML Strings
 -----
 
 
@@ -164,7 +164,7 @@ is preserved.
 
 
 
-TOML Tables {.cols-3}
+TOML Tables
 -----
 ### Basic
 ```toml

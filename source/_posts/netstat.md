@@ -13,7 +13,7 @@ intro: |
     This quick reference cheat sheet provides various for using netstat command.
 ---
 
-Getting started {.cols-3}
+Getting started
 ---------------
 
 
