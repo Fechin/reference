@@ -228,84 +228,83 @@ Add `{.link-arrow}` to make big loud external links:
 
 
 
-Tables {.cols-3}
+Tables Variants {.cols-3}
 ------
 
-### Basic table
 
-#### Date
+### Table Overview {.secondary}
 
-| Example         | Output                 |
-|-----------------|------------------------|
-| `%m/%d/%Y`      | `06/05/2013`           |
-| `%A, %B %e, %Y` | `Sunday, June 5, 2013` |
-| `%b %e %a`      | `Jun 5 Sun`            |
-
-#### Time
-
-| Example    | Output     |
-|------------|------------|
-| `%H:%M`    | `23:05`    |
-| `%I:%M %p` | `11:05 PM` |
-
-A basic table with heading level 4.
-
-### Shortcuts
-
-| -   | -         |
-|-----|-----------|
-| `V` | Vector    |
-| `P` | Pencil    |
-| `T` | Text      |
-| `L` | Line      |
-| `R` | Rectangle |
-| `O` | Oval      |
-| `U` | Rounded   |
- {.shortcuts}
+| -                | -                            |
+|------------------|------------------------------|
+| `{.shortcuts}`   | Render shortcut key style    |
+| `{.show-header}` | Show the header of the table |
 
 
-Add `{.shortcuts}` to tables.
+### Basic table {.row-span-2}
 
-### Show headers
-
-| Prefix | Example               | What     |
-|--------|-----------------------|----------|
-| `//`   | `//hr[@class='edge']` | Anywhere |
-| `./`   | `./a`                 | Relative |
-| `/`    | `/html/body/div`      | Root     |
-{.show-header}
-
-Add `{.show-header}` to add headers.
+| Expression  | Description               |
+|-------------|---------------------------|
+| `$1` … `$9` | Parameter 1 ... 9         |
+| `$0`        | Name of the script itself |
+| `$1`        | First argument            |
+| `${10}`     | Positional parameter 10   |
+| `$#`        | Number of arguments       |
 
 
-### Rowspan {.col-span-2}
-| Stage              | Direct Products | ATP Yields |
-|--------------------|-----------------|------------|
-| Glycolysis         | 2 ATP           |            |
-| ^^                 | 2 NADH          | 3--5 ATP   |
-| Pyruvaye oxidation | 2 NADH          | 5 ATP      |
-| Citric acid cycle  | 2 ATP           |            |
-| ^^                 | 6 NADH          | 15 ATP     |
-| ^^                 | 2 FADH2         | 3 ATP      |
-| **30--32** ATP     |                 |            |
-{.show-header}
+#### ↓ Source Code
 
-#### Source Code
-
+```markdown
+| Expression  | Description               |
+|-------------|---------------------------|
+| `$1` … `$9` | Parameter 1 ... 9         |
+| `$0`        | Name of the script itself |
+| `$1`        | First argument            |
+| `${10}`     | Positional parameter 10   |
+| `$#`        | Number of arguments       |
 ```
-| Stage              | Direct Products | ATP Yields |
-|--------------------|-----------------|------------|
-| Glycolysis         | 2 ATP           |            |
-| ^^                 | 2 NADH          | 3--5 ATP   |
-| Pyruvaye oxidation | 2 NADH          | 5 ATP      |
-| Citric acid cycle  | 2 ATP           |            |
-| ^^                 | 6 NADH          | 15 ATP     |
-| ^^                 | 2 FADH2         | 3 ATP      |
-| **30--32** ATP     |                 |            |
+
+
+### .show-header {.row-span-2}
+
+| Expression  | Description               |
+|-------------|---------------------------|
+| `$1` … `$9` | Parameter 1 ... 9         |
+| `$0`        | Name of the script itself |
+| `$1`        | First argument            |
+| `${10}`     | Positional parameter 10   |
+{.show-header}
+
+
+#### ↓ Source Code
+
+```markdown
+| Expression  | Description               |
+|-------------|---------------------------|
+| `$1` … `$9` | Parameter 1 ... 9         |
+| `$0`        | Name of the script itself |
+| `$1`        | First argument            |
+| `${10}`     | Positional parameter 10   |
 {.show-header}
 ```
 
-QuickRef uses markdown-it-multimd-table to render the table, See：[markdown-it-multimd-table](https://www.npmjs.com/package/markdown-it-multimd-table#rowspan-optional)
+
+### .shortcuts
+
+| -           | -          |
+|-------------|------------|
+| `Ctrl` `N`  | New File   |
+| `Ctrl` `S`  | Save       |
+{.shortcuts}
+
+#### ↓ Source Code
+
+```markdown
+| -           | -          |
+|-------------|------------|
+| `Ctrl` `N`  | New File   |
+| `Ctrl` `S`  | Save       |
+{.shortcuts}
+```
 
 
 
@@ -313,7 +312,7 @@ QuickRef uses markdown-it-multimd-table to render the table, See：[markdown-it-
 Lists Variants {.cols-3}
 --------
 
-### Overflow {.secondary}
+### List Overview {.secondary}
 List columns
 
 | -            | -                      |
@@ -332,42 +331,40 @@ List markers
 | `{.marker-round}`  | Round marker         |
 
 
-### One column (Default)
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+### One Column (Default)
+- Share quick reference.
+- cheat sheet for developers.
+- Contributed by open source angels.
+- Manage your code snippets.
 
 #### ↓ Source Code
 ```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Share quick reference.
+- cheat sheet for developers.
+- Contributed by open source angels.
+- Manage your code snippets.
 ```
 
 
 ### .cols-3
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
-- Item 7
+- Share
+- Quick
+- Reference
+- And
+- Cheat Sheet
+- For
+- Developers
 {.cols-3}
  
 #### ↓ Source Code
 ```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
-- Item 7
+- Share
+- Quick
+- Reference
+- And
+- Cheat Sheet
+- For
+- Developers
 {.cols-3}
 ```
 
@@ -405,39 +402,35 @@ List markers
 ```
 
 ### .marker-none
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
+- Share
+- Quick
+- Reference
+- And
+- Cheat Sheet
 {.cols-2 .marker-none}
 
 #### ↓ Source Code
 ```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
+- Share
+- Quick
+- Reference
+- And
+- Cheat Sheet
 {.cols-2 .marker-none}
 ```
 
 
 ### .marker-round
-- Item 1
-- Item 2
-- Item 3
-- Item 4
+- Share
+- Quick
+- Reference
 {.marker-round}
 
 #### ↓ Source Code
 ```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
+- Share
+- Quick
+- Reference
 {.marker-round}
 ```
 

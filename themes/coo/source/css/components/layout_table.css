@@ -58,7 +58,6 @@
 
 .mdLayout table thead th {
     font-weight: normal;
-    @apply text-emerald-500;
 }
 
 
