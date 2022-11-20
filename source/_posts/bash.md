@@ -954,7 +954,7 @@ fi
 - \$
 - \*
 - \?
-{.cols-4 .style-none}
+{.cols-4 .marker-none}
 
 
 Escape these special characters with `\`

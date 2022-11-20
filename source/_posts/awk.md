@@ -295,14 +295,14 @@ Awk Operators {.cols-3}
 - `%`  
 - `++` 
 - `--` 
-{.cols-3 .style-none}
+{.cols-3 .marker-none}
 #### Shorthand assignments
 - `+=` 
 - `-=` 
 - `*=` 
 - `/=` 
 - `%=` 
-{.cols-3 .style-none}
+{.cols-3 .marker-none}
 #### Comparison operators
 - `==`
 - `!=`
@@ -310,7 +310,7 @@ Awk Operators {.cols-3}
 - `>`
 - `<=`
 - `>=`
-{.cols-3 .style-none}
+{.cols-3 .marker-none}
 
 
 
@@ -743,7 +743,7 @@ Miscellaneous {.cols-3}
 - `*`
 - `+`
 - `?`
-{.cols-3 .style-none}
+{.cols-3 .marker-none}
 
 ### Escape Sequences
 | -    | -                   |

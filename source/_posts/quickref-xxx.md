@@ -310,46 +310,15 @@ QuickRef uses markdown-it-multimd-table to render the table, See：[markdown-it-
 
 
 
-Lists Variants {.cols-3}
+Lists {.cols-3}
 --------
-
-### Overflow {.secondary}
-List columns
-
-| -            | -                      |
-|--------------|------------------------|
-| `{.cols-1}`  | one column _(default)_ |
-| `{.cols-2}`  | two columns            |
-| ...          |                        |
-| `{.cols-12}` |                        |
-
-List markers
-
-| -          | -                      |
-|------------|------------------------|
-| `{.marker-none}`  | Marker is not set |
-| `{.marker-timeline}`  | Marker style like timeline                       |
-| `{.marker-round}`  | Round marker         |
-
 
 ### One column (Default)
 - Item 1
 - Item 2
 - Item 3
-- Item 4
-- Item 5
 
-#### ↓ Source Code
-```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-```
-
-
-### .cols-3
+### Four column 
 - Item 1
 - Item 2
 - Item 3
@@ -357,89 +326,43 @@ List markers
 - Item 5
 - Item 6
 - Item 7
-{.cols-3}
- 
-#### ↓ Source Code
-```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
-- Item 7
-{.cols-3}
-```
+- Item 8
+- Item 9
+{.cols-4}
 
 
-### .marker-timeline {.row-span-2}
-- **Renamed** to `new_name`
+### Rename branch {.row-span-2}
+- #### **Renamed** to `new_name`
     ```shell script
     $ git branch -m <new_name>
     ```
-- **Push** and reset
+- #### **Push** and reset
     ```shell script
     $ git push origin -u <new_name>
     ```
-- **Delete** remote branch
+- #### **Delete** remote branch
     ```shell script
     $ git push origin --delete <old>
     ```
 {.marker-timeline}
 
-#### ↓ Source Code
-```markdown
-- **Renamed** to `new_name`
-    ```shell script
-    $ git branch -m <new_name>
-    ```
-- **Push** and reset
-    ```shell script
-    $ git push origin -u <new_name>
-    ```
-- **Delete** remote branch
-    ```shell script
-    $ git push origin --delete <old>
-    ```
-{.marker-timeline}
-```
 
-### .marker-none
+### No marker
 - Item 1
 - Item 2
 - Item 3
 - Item 4
 - Item 5
 - Item 6
-{.cols-2 .marker-none}
+  {.cols-2 .marker-none}
 
-#### ↓ Source Code
-```markdown
+
+### Round Style
 - Item 1
 - Item 2
 - Item 3
-- Item 4
-- Item 5
-- Item 6
-{.cols-2 .marker-none}
-```
-
-
-### .marker-round
-- Item 1
-- Item 2
-- Item 3
-- Item 4
 {.marker-round}
 
-#### ↓ Source Code
-```markdown
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-{.marker-round}
-```
 
 
 H2 section {.cols-5}

@@ -19,7 +19,7 @@ Getting started {.cols-2}
 - MIME types are defined and standardized in IETF's RFC 6838
 - Indicates the nature and format of a document, file, or assortment of bytes.
 - For file formats or format contents on the Internet
-  {.style-round}
+  {.marker-round}
 
 
 ### Multi-format of MIME types
@@ -47,7 +47,7 @@ Getting started {.cols-2}
 - [BBCode](https://tableconvert.com/html-to-bbcode?data=https://quickref.me/mime#TableGenerator)
 - [PDF](https://tableconvert.com/html-to-pdf?data=https://quickref.me/mime#TableGenerator)
 - [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/mime#TableGenerator)
-{.cols-4 .style-none}
+{.cols-4 .marker-none}
 
 
 Lists of MIME types

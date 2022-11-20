@@ -25,7 +25,7 @@ Getting started {.cols-3}
 - JSON is language agnostic data-interchange format
 - JSON filename extension is `.json`
 - JSON Internet Media type is `application/json`
-{.style-round}
+{.marker-round}
 
 
 

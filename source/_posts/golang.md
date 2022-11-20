@@ -1033,7 +1033,7 @@ Miscellaneous {.cols-3}
 - import
 - return
 - var
-{.cols-3 .style-none}
+{.cols-3 .marker-none}
 
 ### Operators and punctuation
 |   |    |     |     |      |    |     |   |   |

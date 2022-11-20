@@ -620,7 +620,7 @@ C++ Preprocessor {.cols-3}
 - [export](https://en.cppreference.com/w/cpp/keyword/export)
 - [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
 - [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
-{.style-none .cols-2}
+{.marker-none .cols-2}
 
 ### Includes
 
@@ -808,7 +808,7 @@ Miscellaneous {.cols-3}
 - [override](https://en.cppreference.com/w/cpp/language/override)
 - [transaction_safe](https://en.cppreference.com/w/cpp/language/transactional_memory)
 - [transaction_safe_dynamic](https://en.cppreference.com/w/cpp/language/transactional_memory)
-{.style-none .cols-5}
+{.marker-none .cols-5}
 
 ### Preprocessor
 
@@ -830,7 +830,7 @@ Miscellaneous {.cols-3}
 - [export](https://en.cppreference.com/w/cpp/keyword/export)
 - [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
 - [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
-{.style-none .cols-2}
+{.marker-none .cols-2}
 
 ## Also see
 

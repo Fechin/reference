@@ -20,7 +20,7 @@ Getting started {.cols-2}
 - Viewport is defined by the size of the rectangle filled by a web page on your screen
 - Screen resolution refers to the clarity of the text and images displayed on your screen
 - For design
-  {.style-round}
+  {.marker-round}
 
 
 ### Multi-format of Resolutions
@@ -48,7 +48,7 @@ Getting started {.cols-2}
 - [BBCode](https://tableconvert.com/html-to-bbcode?data=https://quickref.me/resolutions#TableGenerator)
 - [PDF](https://tableconvert.com/html-to-pdf?data=https://quickref.me/resolutions#TableGenerator)
 - [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/resolutions#TableGenerator)
-{.cols-4 .style-none}
+{.cols-4 .marker-none}
 
 Lists of Resolutions
 -------------------

@@ -24,7 +24,7 @@ Getting started {.cols-2}
 - It's usually written as two numbers separated by a colon or "x", ex: 16:9 or 16x9
 - Which is interpreted as W pixels in width for every H pixel in height.
 - Resolution is the number of pixels (individual points of color)
-{.style-round}
+{.marker-round}
 
 
 ### Multi-format of Aspect Ratio
@@ -52,7 +52,7 @@ Getting started {.cols-2}
 - [BBCode](https://tableconvert.com/html-to-bbcode?data=https://quickref.me/aspect-ratio#TableGenerator)
 - [PDF](https://tableconvert.com/html-to-pdf?data=https://quickref.me/aspect-ratio#TableGenerator)
 - [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/aspect-ratio#TableGenerator)
-{.cols-4 .style-none}
+{.cols-4 .marker-none}
 
 
 

@@ -44,7 +44,7 @@ Ensure your web server directs all requests to your application's
     $ cd example-app
     $ ./vendor/bin/sail up
     ```
-{.style-timeline}
+{.marker-timeline}
 
 Access application via `http://localhost`
 
@@ -58,7 +58,7 @@ Access application via `http://localhost`
     $ cd example-app
     $ ./vendor/bin/sail up
     ```
-{.style-timeline}
+{.marker-timeline}
 
 Access application via `http://localhost`
 

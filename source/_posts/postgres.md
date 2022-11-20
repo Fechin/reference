@@ -476,7 +476,7 @@ $ pg_dump -d mydb -f mydb_backup.sql
 - &nbsp; `-C` &nbsp; Create database before restoring
 - &nbsp; `-t` &nbsp; Dump the named table(s) only
 - &nbsp; `-F` &nbsp; Format (`c`: custom, `d`: directory, `t`: tar)
-{.style-none}
+{.marker-none}
 
 Use `pg_dump -?` to get the full list of options
 
@@ -497,7 +497,7 @@ $ pg_restore -d mydb mydb_backup.sql -c
 - &nbsp; `-C` &nbsp; Create database before restoring
 - &nbsp; `-e` &nbsp; Exit if an error has encountered
 - &nbsp; `-F` &nbsp; Format (`c`: custom, `d`: directory, `t`: tar, `p`: plain text sql(default))
-{.style-none}
+{.marker-none}
 
 Use `pg_restore -?` to get the full list of options
 

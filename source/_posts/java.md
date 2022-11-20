@@ -376,7 +376,7 @@ Java Conditionals {.cols-3}
 - <a href="javascript:void(0);" data-tooltip="Increment operator; increments a value by 1">++</a>
 - <a href="javascript:void(0);" data-tooltip="Decrement operator; decrements a value by 1">--</a>
 - <a href="javascript:void(0);" data-tooltip="Logical complement operator; inverts the value of a boolean">!</a>
-{.style-none .cols-4}
+{.marker-none .cols-4}
 
 ----
 
@@ -386,19 +386,19 @@ Java Conditionals {.cols-3}
 - <a href="javascript:void(0);" data-tooltip="Greater than or equal to">>=</a>
 - <a href="javascript:void(0);" data-tooltip="Less than"><</a>
 - <a href="javascript:void(0);" data-tooltip="Less than or equal to"><=</a>
-{.style-none .cols-4}
+{.marker-none .cols-4}
 
 ----
 
 - <a href="javascript:void(0);" data-tooltip="Conditional-AND">&&</a>
 - <a href="javascript:void(0);" data-tooltip="Conditional-OR">||</a>
 - [?:](#ternary-operator){data-tooltip="Ternary (shorthand for if-then-else statement)"}
-{.style-none .cols-4}
+{.marker-none .cols-4}
 
 ----
 
 - <a href="javascript:void(0);" data-tooltip="Compares an object to a specified type">instanceof</a>
-{.style-none}
+{.marker-none}
 
 ----
 
@@ -409,7 +409,7 @@ Java Conditionals {.cols-3}
 - <a href="javascript:void(0);" data-tooltip="Bitwise AND">&</a>
 - <a href="javascript:void(0);" data-tooltip="Bitwise exclusive OR">^</a>
 - <a href="javascript:void(0);" data-tooltip="Bitwise inclusive OR">|</a>
-{.style-none .cols-4}
+{.marker-none .cols-4}
 
 
 ### If else
@@ -753,7 +753,7 @@ multi-line comment!
 - native
 - super
 - while
-{.style-none .cols-7}
+{.marker-none .cols-7}
 
 ### Math methods 
 

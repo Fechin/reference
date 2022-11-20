@@ -1059,7 +1059,7 @@ h3::before {
 ```css
 ol {
   counter-reset: section;   
-  list-style-type: none;
+  list-marker-type: none;
 }
 
 li::before {

@@ -319,7 +319,7 @@ Git Tricks {.cols-3}
     ```shell script
     $ git push origin --delete <old>
     ```
-{.style-timeline}
+{.marker-timeline}
 
 
 ### Log

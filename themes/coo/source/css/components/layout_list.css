@@ -11,23 +11,23 @@
     padding: 0;
 }
 
-.mdLayout .h3-wrap > .section ul:not(.style-none) > li::before {
+.mdLayout .h3-wrap > .section ul:not(.marker-none) > li::before {
     content: '';
     position: absolute;
     display: inline-block;
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     background: #556677;
     border-radius: 50%;
     left: 14px;
     top: 18px;
 }
 
-.mdLayout .h3-wrap > .section ul.style-round > li {
+.mdLayout .h3-wrap > .section ul.marker-round > li {
     padding-left: 30px;
 }
 
-.mdLayout .h3-wrap > .section ul.style-round > li::before{
+.mdLayout .h3-wrap > .section ul.marker-round > li::before{
     content: "";
     top: 16px;
     @apply inline-block w-2 h-2 bg-white border border-2 border-emerald-600 rounded-full;
@@ -38,12 +38,12 @@
 
 
 
-.mdLayout .h3-wrap > .section > ul.style-timeline {
+.mdLayout .h3-wrap > .section > ul.marker-timeline {
     counter-reset: stepCount;
     margin-top:1rem;
 }
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li {
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li {
     padding-top: 0;
     padding-bottom: 1.5rem;
     border-left: 2px solid #48c78e;
@@ -55,17 +55,17 @@
 }
 
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li:last-child {
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child {
     padding-bottom: 0.8rem;
 }
 
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li > :not(:first-child) {
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li > :not(:first-child) {
     padding: 0px;
     margin-top: 1rem;
 }
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li::before {
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li::before {
     counter-increment: stepCount;
     content: counter(stepCount);
     left: -14px;
@@ -75,18 +75,18 @@
 }
 
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li:first-child::before {
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li:first-child::before {
     background: #48c78e;
     color:white;
 }
 
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li:last-child{
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child{
     border-image: linear-gradient(to bottom, #48c78e, rgba(0, 0, 0, 0)) 1 100%;
 }
 
 
-.mdLayout .h3-wrap > .section > ul.style-timeline > li > h4 {
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li > h4 {
     color: #2a2839;
     font-family: "Poppins", sans-serif;
     font-weight: 500;

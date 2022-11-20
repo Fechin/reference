@@ -26,7 +26,7 @@ Getting started {.cols-3}
 - End your YAML file with the `.yaml` or `.yml` extension
 - YAML is a superset of JSON
 - Ansible playbooks are YAML files
-{.style-round}
+{.marker-round}
 
 
 ### Scalar types {.row-span-2}
@@ -377,7 +377,7 @@ YAML Reference {.cols-3}
 - Sequences aka arrays or lists
 - Scalars aka strings or numbers
 - Mappings aka hashes or dictionaries
-{.style-round}
+{.marker-round}
 
 Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 
@@ -468,7 +468,7 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 - `\x12` (8-bit)
 - `\u1234` (16-bit)
 - `\U00102030` (32-bit)
-  {.cols-2 .style-none}
+  {.cols-2 .marker-none}
 
 #### Protective
 
@@ -476,7 +476,7 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 - `\"` (")
 - `\ ` ( )
 - `\<TAB>` (TAB)
-  {.cols-3 .style-none}
+  {.cols-3 .marker-none}
 
 #### C
 - `\0` (NUL)
@@ -487,7 +487,7 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 - `\r` (CR)
 - `\t` (TAB)
 - `\v` (VTAB)
-  {.cols-3 .style-none}
+  {.cols-3 .marker-none}
 
 #### Additional
 
@@ -496,7 +496,7 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 - `\N` (NEL)
 - `\L` (LS)
 - `\P` (PS)
-  {.cols-3 .style-none}
+  {.cols-3 .marker-none}
   
 ### More types
 
