@@ -110,7 +110,7 @@ window.addEventListener('load', () => {
         let anchor = document.querySelector(`a[class="h-anchor"][href="${hash}"]`);
         if (anchor != null) {
             let anchorSection = anchor.parentElement.parentElement;
-            document.querySelectorAll(".h3-wrap.boxed").forEach((e) => {
+            document.querySelectorAll(".boxed").forEach((e) => {
                 e.classList.remove("boxed")
             });
             let timer = setTimeout(function () {

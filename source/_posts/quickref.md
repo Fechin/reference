@@ -135,18 +135,287 @@ QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs#ma
 
 
 
-Layout Variants
+H2 Layout Variants
 --------
 
-### H2 section
+### H2 Overview {.secondary}
+ 
 
-| -          | -                      |
-|------------|------------------------|
-| `.cols-1`  | one column _(default)_ |
-| `.cols-2`  |                        |
-| `.cols-3`  | three column           |
-| ...        |                        |
-| `.cols-6` |                         |
+| -           | -                               |
+|-------------|---------------------------------|
+| `{.cols-1}` | one-column layout               |
+| `{.cols-2}` | two-column layout               |
+| `{.cols-3}` | three-column layout _(default)_ |
+| ...         |                                 |
+| `{.cols-6}` | six-column layout               |
+
+------- 
+- `H2` section contains multiple cards (aka `H3` section)
+- Use {.cols-`n`} to specify h2 as a `n`-column layout
+- Click the preview button below to focus on the h2 section
+ 
+[Preview](/quickref#h2-layout-variants) {.link-arrow}
+
+
+### .cols-1
+```text
+# One Column Example {.cols-1}
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈1╮ 
+┆                                     ┆ 
+╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ 
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈2╮
+┆                                     ┆
+╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
+```
+
+#### ↓ Source Code
+
+```markdown
+One Column Example {.cols-1}
+----------
+
+### 1
+### 2
+```
+
+[Preview](resolutions#lists-of-resolutions) {.link-arrow}
+
+
+### .cols-2
+```text
+# Two Columns Example
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈2╮
+┆                 ┆ ┆                 ┆
+╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈3╮
+┆                 ┆
+╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
+```
+
+#### ↓ Source Code
+
+```markdown
+Two Columns Example {.cols-2}
+----------
+
+### 1
+### 2
+### 3
+```
+
+[Preview](resolutions#getting-started) {.link-arrow}
+
+
+
+### .cols-3 (default)
+
+```text
+# Default
+╭┈┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈┈2╮ ╭┈┈┈┈┈┈┈┈┈3╮
+┆          ┆ ┆          ┆ ┆          ┆
+╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈┈4╮ 
+┆          ┆ 
+╰┈┈┈┈┈┈┈┈┈┈╯ 
+```
+
+#### ↓ Source Code
+
+```markdown
+Default
+----------
+
+### 1
+### 2
+### 3
+### 4
+```
+
+
+
+
+H3 Layout Variants
+--------
+
+### H3 Overview {.secondary}
+
+#### Specifies the number of columns the card spans
+
+| -               | - |
+|-----------------|---|
+| `{.col-span-1}` |   |
+| `{.col-span-2}` | [Example](#col-span-2)  |
+| ...             |   |
+| `.col-span-6}`  |   |
+
+#### Specifies the number of rows the card spans {.text-left}
+
+| -               | - |
+|-----------------|---|
+| `{.row-span-1}` |   |
+| `{.row-span-2}` | [Example](#row-span-2)  |
+| ...             |   |
+| `{.row-span-6}` |   |
+
+#### Emphasize card (aka `H3` Section)
+
+| -              | -                                                     |
+|----------------|-------------------------------------------------------|
+| `{.primary}`   | Red titles                                            |
+| `{.secondary}` | Yellow titles, The current card is a `secondary` card |
+
+
+
+
+### .col-span-2 {.row-span-2}
+
+#### The fifth card spans two columns
+
+```markdown
+╭┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈2╮ ╭┈┈┈┈┈┈┈┈3╮
+┆         ┆ ┆         ┆ ┆         ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈4╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈5╮
+┆         ┆ ┆                     ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
+```
+-----------
+```markdown
+### 1
+### 2
+### 3
+### 4
+### 5 {.col-span-2}
+```
+
+
+#### The second card spans two columns
+
+```markdown
+╭┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈2╮
+┆         ┆ ┆                     ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈3╮ ╭┈┈┈┈┈┈┈┈4╮ ╭┈┈┈┈┈┈┈┈5╮
+┆         ┆ ┆         ┆ ┆         ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+```
+-----------
+```markdown
+### 1
+### 2 {.col-span-2}
+### 3
+### 4
+### 5
+```
+
+#### The fourth card spans two columns
+
+```markdown
+╭┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈2╮ ╭┈┈┈┈┈┈┈┈3╮
+┆         ┆ ┆         ┆ ┆         ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈4╮ ╭┈┈┈┈┈┈┈┈5╮ 
+┆                     ┆ ┆         ┆ 
+╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ 
+```
+-----------
+```markdown
+### 1
+### 2
+### 3
+### 4 {.col-span-2}
+### 5
+```
+
+
+
+
+
+### .row-span-2 {.row-span-2}
+
+#### The first card spans two rows
+
+```markdown
+╭┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆ 1      ┆ ┆ 2       ┆ ┆ 3       ┆
+┆        ┆ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+┆        ┆ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆        ┆ ┆ 4       ┆ ┆ 5       ┆
+╰┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+```
+----------
+```markdown
+### 1 {.row-span-2}
+### 2
+### 3
+### 4
+### 5
+```
+
+#### The second card spans two rows
+
+```markdown
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆ 1       ┆ ┆ 2      ┆ ┆ 3       ┆
+╰┈┈┈┈┈┈┈┈┈╯ ┆        ┆ ╰┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈┈╮ ┆        ┆ ╭┈┈┈┈┈┈┈┈┈╮
+┆ 4       ┆ ┆        ┆ ┆ 5       ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+```
+---------
+```markdown
+### 1
+### 2 {.row-span-2}
+### 3
+### 4
+### 5
+```
+
+#### The third card spans two rows
+
+```markdown
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈╮ 
+┆ 1       ┆ ┆ 2       ┆ ┆ 3      ┆ 
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ┆        ┆ 
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ┆        ┆ 
+┆ 4       ┆ ┆ 5       ┆ ┆        ┆ 
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈╯ 
+```
+-----------
+```markdown
+### 1
+### 2
+### 3 {.row-span-2}
+### 4
+### 5
+```
+
+
+
+### .col-span-2 .row-span-2
+
+```markdown
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆ 1                   ┆ ┆ 2       ┆
+┆                     ┆ ╰┈┈┈┈┈┈┈┈┈╯
+┆                     ┆ ╭┈┈┈┈┈┈┈┈┈╮
+┆                     ┆ ┆ 3       ┆
+╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆ 4       ┆ ┆ 5       ┆ ┆ 6       ┆
+╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
+```
+
+#### ↓ Source Code
+
+```markdown
+### 1 {.col-span-2 .row-span-2}
+### 2
+### 3
+### 4
+### 5
+```
+Spans rows and columns at the same time
 
 
 Code

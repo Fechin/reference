@@ -73,6 +73,9 @@ html.scrollbar {
 }
 
 /** H2 Wrap **/
+.mdLayout .h2-wrap {
+    @apply rounded-lg;
+}
 
 .mdLayout .h2-wrap:first-child:not(.show) > h2 {
     /* @apply invisible; */
@@ -99,12 +102,6 @@ html.scrollbar {
 .mdLayout .h2-wrap.cols-4 > .h3-wrap-list { @apply lg:grid-cols-4; }
 .mdLayout .h2-wrap.cols-5 > .h3-wrap-list { @apply lg:grid-cols-5; }
 .mdLayout .h2-wrap.cols-6 > .h3-wrap-list { @apply lg:grid-cols-6; }
-.mdLayout .h2-wrap.cols-7 > .h3-wrap-list { @apply lg:grid-cols-7; }
-.mdLayout .h2-wrap.cols-8 > .h3-wrap-list { @apply lg:grid-cols-8; }
-.mdLayout .h2-wrap.cols-9 > .h3-wrap-list { @apply lg:grid-cols-9; }
-.mdLayout .h2-wrap.cols-10 > .h3-wrap-list { @apply lg:grid-cols-10; }
-.mdLayout .h2-wrap.cols-11 > .h3-wrap-list { @apply lg:grid-cols-11; }
-.mdLayout .h2-wrap.cols-12 > .h3-wrap-list { @apply lg:grid-cols-12; }
 
 
 /** H3 Wrap **/
@@ -122,12 +119,6 @@ html.scrollbar {
 .mdLayout .h3-wrap .cols-4  { @apply grid-cols-4; }
 .mdLayout .h3-wrap .cols-5  { @apply grid-cols-5; }
 .mdLayout .h3-wrap .cols-6  { @apply grid-cols-6; }
-.mdLayout .h3-wrap .cols-7  { @apply grid-cols-7; }
-.mdLayout .h3-wrap .cols-8  { @apply grid-cols-8; }
-.mdLayout .h3-wrap .cols-9  { @apply grid-cols-9; }
-.mdLayout .h3-wrap .cols-10 { @apply grid-cols-10; }
-.mdLayout .h3-wrap .cols-11 { @apply grid-cols-11; }
-.mdLayout .h3-wrap .cols-12 { @apply grid-cols-12; }
 
 
 .mdLayout .h3-wrap {
@@ -141,9 +132,9 @@ html.scrollbar {
     @apply dark:border-slate-600/50 !important;
 }
 
-.mdLayout .h3-wrap.boxed {
+.mdLayout .h2-wrap.boxed, .mdLayout .h3-wrap.boxed {
     box-shadow: 0 0 0 1.6pt #10b981;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out;
 }
 
 .mdLayout .h3-wrap.primary.boxed {
