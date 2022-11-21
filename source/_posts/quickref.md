@@ -8,7 +8,7 @@ tags:
     - reference
 categories:
     - Other
-intro: This is a reference of styles that you can use on quickref cheatsheets!
+intro: This is a style grammar reference that you can use on QuickRef.ME, made for contributors.
 ---
 
 
