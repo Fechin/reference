@@ -44,14 +44,14 @@
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li {
-    padding-top: 0;
-    padding-bottom: 1.5rem;
+    padding-top: 2px;
+    padding-bottom: 1.25rem;
     border-left: 2px solid #48c78e;
     position: relative;
-    padding-left: 30px;
+    padding-left: 22px;
     margin-left: 30px;
-    border-bottom: 0px;
-    @apply dark:border-slate-600;
+    border-bottom: 0;
+    @apply text-slate-900 dark:text-slate-50 dark:border-slate-600;
 }
 
 
@@ -60,8 +60,8 @@
 }
 
 
-.mdLayout .h3-wrap > .section > ul.marker-timeline > li > :not(:first-child) {
-    padding: 0px;
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li > pre {
+    padding: 0;
     margin-top: 1rem;
 }
 
@@ -70,7 +70,7 @@
     content: counter(stepCount);
     left: -14px;
     border: 2px solid #48c78e;
-    @apply absolute rounded-lg w-6 h-6 top-0 text-center bg-white text-sm;
+    @apply absolute rounded-full w-6 h-6 top-0 text-center bg-white text-sm;
     @apply dark:border-slate-600 dark:bg-slate-800;
 }
 

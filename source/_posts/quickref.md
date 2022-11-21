@@ -1,8 +1,8 @@
 ---
 title: QuickRef
 date: 2020-11-25 18:28:43
-icon: icon-star
-background: bg-red-600
+icon: icon-logo
+background: bg-gradient-to-l from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500
 tags:
     - guide
     - reference
@@ -11,50 +11,82 @@ categories:
 intro: This is a reference of styles that you can use on quickref cheatsheets!
 ---
 
-Getting Started
---------
 
-### Overview {.primary}
+
+Getting Started
+--------------------
+
+### Develop setup
+
+- Clone Repository [View on Github](https://github.com/Fechin/reference.git)
+    ```shell script {.wrap}
+    $ git clone https://github.com/Fechin/reference.git
+    ```
+- Install Dependencies in the project directory
+    ```shell script
+    $ npm install
+    ```
+- Start a Dev Server [http://localhost:4000](http://localhost:4000)
+    ```shell script
+    $ npm run dev
+    ```
+- Create or modify `source/_posts/{name}.md`
+- Send us pull request and chill
+{.marker-timeline}
+ 
+It's a good practice to refer to the source code of the [QuickRef cheatsheet](/quickref).
+
+
+
+
+### Directory structure
+
+```yaml
+.
+├── source
+│   ├── _posts   # Cheatsheet source files
+│   │   ├── awk.md
+│   │   ├── vim.md # => quickref.me/vim
+│   │   ├── php.md
+│   │   ├── css.md # => quickref.me/css
+│   │   ├── ...
+│   └── widget   # Widget files
+│       └── chmod.html
+├── public       # Distribution files
+├── _config.yml
+├── gulpfile.js
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── themes
+    └── coo      # Theme files
+```
+
+
+
+
+### Syntax Variants
 
 - [Section Variants](#section-variants)
 - [Card Variants](#card-variants)
-- [Tables Variants](#tables-variants)
-- [Lists Variants](#lists-variants)
+- [Table Variants](#table-variants)
+- [List Variants](#list-variants)
 - [Code Variants](#code-variants)
 - [Paragraph Variants](#paragraph-variants)
-
-
-### Global
-
-| -         | -               |
-|-----------|-----------------|
-| `.hidden` | Hide an element |
-
-
-
-### How to add variants {.secondary}
-
-```
-H2 section
-----------
-
-### H3 card {.col-span-2}
-
-### primary section {.primary}
-
-[Home](/) {.link-arrow}
-```
+- [Cards Example](#cards-example)
 
 QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs#markdown-it-attrs---), and supports adding classes via its syntax.
 
 
 
 
+
+
 Section Variants
---------
+--------------------
 
 ### Section Overview {.secondary}
- 
+
 
 | -           | -                               |
 |-------------|---------------------------------|
@@ -68,8 +100,10 @@ Section Variants
 - Section contains multiple cards
 - Use {.cols-`n`} to specify section as a `n`-column layout
 - Click the preview button below to focus on the section
- 
+
 [Preview](/quickref#section-variants) {.link-arrow}
+
+
 
 
 ### .cols-1
@@ -96,6 +130,8 @@ One Column Example {.cols-1}
 [Preview](resolutions#lists-of-resolutions) {.link-arrow}
 
 
+
+
 ### .cols-2
 ```text
 # Two Columns Example
@@ -119,6 +155,7 @@ Two Columns Example {.cols-2}
 ```
 
 [Preview](resolutions#getting-started) {.link-arrow}
+
 
 
 
@@ -150,7 +187,7 @@ Default
 
 
 Card Variants
---------
+--------------------
 
 ### Card Overview {.secondary}
 
@@ -183,6 +220,7 @@ A complete example: [Cards Example](#cards-example)
 
 
 
+
 ### .col-span-2 {.row-span-2}
 
 #### The fifth card spans two columns
@@ -203,7 +241,6 @@ A complete example: [Cards Example](#cards-example)
 ### 4
 ### 5 {.col-span-2}
 ```
-
 
 #### The second card spans two columns
 
@@ -308,6 +345,7 @@ A complete example: [Cards Example](#cards-example)
 
 
 
+
 ### .col-span-2 .row-span-2
 
 ```markdown
@@ -336,10 +374,8 @@ Spans rows and columns at the same time
 
 
 
-
-Tables Variants
-------
-
+Table Variants
+--------------------
 
 ### Table Overview {.secondary}
 
@@ -354,6 +390,8 @@ Tables Variants
 | `{.no-wrap}`     | Don't wrap text              |
 
 
+
+
 ### Basic table
 
 | Pattern  | Description            |
@@ -361,7 +399,6 @@ Tables Variants
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
 | `[a-z]`  | Match a tot z          |
-
 
 #### ↓ Source Code
 
@@ -372,6 +409,8 @@ Tables Variants
 | `[^abc]` | Match except a, b or c |
 | `[a-z]`  | Match a tot z          |
 ```
+
+
 
 
 ### .shortcuts
@@ -391,6 +430,7 @@ Tables Variants
 | `Ctrl` `S`  | Save       |
 {.shortcuts}
 ```
+
 
 
 
@@ -416,6 +456,7 @@ Tables Variants
 
 
 
+
 ### .left-text
 
 | Pattern  | Description            |
@@ -435,6 +476,7 @@ Tables Variants
 | `[a-z]`  | Match a tot z          |
 {.left-text}
 ```
+
 
 
 
@@ -460,8 +502,9 @@ Tables Variants
 
 
 
-Lists Variants
---------
+
+List Variants
+--------------------
 
 ### List Overview {.secondary}
 List columns
@@ -482,6 +525,8 @@ List markers
 | `{.marker-round}`  | Round marker         |
 
 
+
+
 ### One Column (Default)
 - Share quick reference.
 - cheat sheet for developers.
@@ -489,12 +534,15 @@ List markers
 - Manage your code snippets.
 
 #### ↓ Source Code
+
 ```markdown
 - Share quick reference.
 - cheat sheet for developers.
 - Contributed by open source angels.
 - Manage your code snippets.
 ```
+
+
 
 
 ### .cols-3
@@ -518,6 +566,8 @@ List markers
 - Developers
 {.cols-3}
 ```
+
+
 
 
 ### .marker-timeline {.row-span-2}
@@ -552,6 +602,9 @@ List markers
 {.marker-timeline}
 ```
 
+
+
+
 ### .marker-none
 - Share
 - Quick
@@ -571,6 +624,8 @@ List markers
 ```
 
 
+
+
 ### .marker-round
 - Share
 - Quick
@@ -586,8 +641,10 @@ List markers
 ```
 
 
+
+
 Code Variants
-----
+--------------------
 
 ### Basic code
 
@@ -655,6 +712,7 @@ Code blocks can have headings.
 
 
 
+
 ### Line wrapping
 
 ```js {.wrap}
@@ -673,6 +731,7 @@ Add `{.wrap}` to wrap long lines.
 
 
 
+
 ### Long lines (default)
 
 ```js
@@ -684,8 +743,10 @@ function createNode(nodeName: string, options: { key: string }) {
 Long lines will have scrollbars.
 
 
-Paragraphs
---------
+
+
+Paragraph Variants
+--------------------
 
 ### Header paragraphs
 
@@ -699,6 +760,7 @@ The text that appears in the header
 The text that appears in the header
 
 ```
+
 
 
 
@@ -731,6 +793,7 @@ quickref.is(() => {
 
 
 
+
 ### Footer paragraphs {.row-span-2}
 
 ```js
@@ -754,6 +817,7 @@ This paragraph will appear in the footer
 
 
 
+
 ### Crosslink
 
 Add `{.link-arrow}` to make big loud external links:
@@ -766,8 +830,9 @@ Add `{.link-arrow}` to make big loud external links:
 
 
 
+
 Cards Example
-----------
+--------------------
 
 ### row-span-2  {.row-span-2}
 
@@ -776,11 +841,16 @@ Cards Example
 ```
 
 
+
+
 ### col-span-2   {.col-span-2}
 
 ```
 2
 ```
+
+
+
 
 ### Primary Card {.primary}
 
@@ -790,12 +860,18 @@ Cards Example
 Add `{.primary}` to make the title red.
 
 
+
+
 ### Secondary Card {.secondary}
 
 ```
 4
 ```
 Add `{.secondary}` to make the title yellow.
+
+
+
+
 
 ### col-span-3 {.col-span-3}
 
