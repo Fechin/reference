@@ -11,102 +11,17 @@ categories:
 intro: This is a reference of styles that you can use on quickref cheatsheets!
 ---
 
-Variants
+Getting Started
 --------
 
-### H2 section
+### Overview {.primary}
 
-| -          | -                      |
-|------------|------------------------|
-| `.cols-1`  | one column _(default)_ |
-| `.cols-2`  |                        |
-| `.cols-3`  | three column           |
-| ...        |                        |
-| `.cols-6` |                         |
-
-
-
-See: [H2 section](#h2-section-2)
-
-### H3 section
-
-
-| -            | -                 |
-|--------------|-------------------|
-| `.primary`   | Primary section   |
-| `.secondary` | Secondary section |
-#### Span n columns
-| -              | - |
-|----------------|---|
-| `.col-span-1`  |   |
-| ...            |   |
-| `.col-span-12` |   |
-#### Span n rows
-| -              | - |
-|----------------|---|
-| `.row-span-1`  |   |
-| ...            |   |
-| `.row-span-12` |   |
-|                |   |
-
-See: [H3 section](#h3-section-2)
-
-### Tables 
-
-
-| -              | -                          |
-|----------------|----------------------------|
-| `.bold-first`  | Bold first column          |
-| `.plus-first`  | Plus first column          |
-| `.show-header` | Show headers               |
-| `.left-text`   | Align the last column left |
-| `.no-wrap`     | Don't wrap text            |
-| `.shortcuts`   | Shortcut keys style        |
-
-See: [Tables](#tables-2)
-
-
-### Lists {.row-span-2}
-
-
-| -                 | -              |
-|-------------------|----------------|
-| `.marker-none`     | No marker      |
-| `.marker-round`    | Round style    |
-| `.marker-timeline` | Timeline style |
-
-#### Layout
-
-| -          | -                      |
-|------------|------------------------|
-| `.cols-1`  | one column _(default)_ |
-| `.cols-2`  |                        |
-| `.cols-3`  | three column           |
-| ...        |                        |
-| `.cols-6`  |                        |
-
-See: [Lists](#lists-2)
-
-
-
-### Code
-
-
-| -       | -                     |
-|---------|-----------------------|
-| `.wrap` | Enables line-wrapping |
-
-See: [Code](#code-2)
-
-### Paragraphs
-
-
-| -             | -                        |
-|---------------|--------------------------|
-| `.link-arrow` | Pretty links with arrows |
-
-See: [Paragraphs](#paragraphs-2) 
-
+- [Section Variants](#section-variants)
+- [Card Variants](#card-variants)
+- [Tables Variants](#tables-variants)
+- [Lists Variants](#lists-variants)
+- [Code Variants](#code-variants)
+- [Paragraph Variants](#paragraph-variants)
 
 
 ### Global
@@ -123,7 +38,7 @@ See: [Paragraphs](#paragraphs-2)
 H2 section
 ----------
 
-### H3 section {.col-span-2}
+### H3 card {.col-span-2}
 
 ### primary section {.primary}
 
@@ -135,10 +50,10 @@ QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs#ma
 
 
 
-H2 Layout Variants
+Section Variants
 --------
 
-### H2 Overview {.secondary}
+### Section Overview {.secondary}
  
 
 | -           | -                               |
@@ -150,21 +65,21 @@ H2 Layout Variants
 | `{.cols-6}` | six-column layout               |
 
 ------- 
-- `H2` section contains multiple cards (aka `H3` section)
-- Use {.cols-`n`} to specify h2 as a `n`-column layout
-- Click the preview button below to focus on the h2 section
+- Section contains multiple cards
+- Use {.cols-`n`} to specify section as a `n`-column layout
+- Click the preview button below to focus on the section
  
-[Preview](/quickref#h2-layout-variants) {.link-arrow}
+[Preview](/quickref#section-variants) {.link-arrow}
 
 
 ### .cols-1
 ```text
 # One Column Example {.cols-1}
-╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈1╮ 
-┆                                     ┆ 
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ 
+┆  1                                  ┆ 
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ 
-╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈2╮
-┆                                     ┆
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
+┆  2                                  ┆
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
 ```
 
@@ -184,11 +99,11 @@ One Column Example {.cols-1}
 ### .cols-2
 ```text
 # Two Columns Example
-╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈2╮
-┆                 ┆ ┆                 ┆
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
+┆  1              ┆ ┆  2              ┆
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
-╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈3╮
-┆                 ┆
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
+┆  3              ┆
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
 ```
 
@@ -211,11 +126,11 @@ Two Columns Example {.cols-2}
 
 ```text
 # Default
-╭┈┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈┈2╮ ╭┈┈┈┈┈┈┈┈┈3╮
-┆          ┆ ┆          ┆ ┆          ┆
+╭┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈╮
+┆  1       ┆ ┆  2       ┆ ┆  3       ┆
 ╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯
-╭┈┈┈┈┈┈┈┈┈4╮ 
-┆          ┆ 
+╭┈┈┈┈┈┈┈┈┈┈╮ 
+┆  4       ┆ 
 ╰┈┈┈┈┈┈┈┈┈┈╯ 
 ```
 
@@ -234,17 +149,17 @@ Default
 
 
 
-H3 Layout Variants
+Card Variants
 --------
 
-### H3 Overview {.secondary}
+### Card Overview {.secondary}
 
 #### Specifies the number of columns the card spans
 
 | -               | - |
 |-----------------|---|
-| `{.col-span-1}` |   |
 | `{.col-span-2}` | [Example](#col-span-2)  |
+| `{.col-span-3}` |   |
 | ...             |   |
 | `.col-span-6}`  |   |
 
@@ -252,8 +167,8 @@ H3 Layout Variants
 
 | -               | - |
 |-----------------|---|
-| `{.row-span-1}` |   |
 | `{.row-span-2}` | [Example](#row-span-2)  |
+| `{.row-span-3}` |   |
 | ...             |   |
 | `{.row-span-6}` |   |
 
@@ -261,9 +176,10 @@ H3 Layout Variants
 
 | -              | -                                                     |
 |----------------|-------------------------------------------------------|
-| `{.primary}`   | Red titles                                            |
-| `{.secondary}` | Yellow titles, The current card is a `secondary` card |
+| `{.primary}`   | Red titles, [Example](#primary-card) |
+| `{.secondary}` | Yellow titles, [Example](#secondary-card) |
 
+A complete example: [Cards Example](#cards-example)
 
 
 
@@ -272,11 +188,11 @@ H3 Layout Variants
 #### The fifth card spans two columns
 
 ```markdown
-╭┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈2╮ ╭┈┈┈┈┈┈┈┈3╮
-┆         ┆ ┆         ┆ ┆         ┆
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆  1      ┆ ┆  2      ┆ ┆  2      ┆
 ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
-╭┈┈┈┈┈┈┈┈4╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈5╮
-┆         ┆ ┆                     ┆
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
+┆  4      ┆ ┆  5                  ┆
 ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
 ```
 -----------
@@ -292,11 +208,11 @@ H3 Layout Variants
 #### The second card spans two columns
 
 ```markdown
-╭┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈2╮
-┆         ┆ ┆                     ┆
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
+┆  1      ┆ ┆  2                  ┆
 ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
-╭┈┈┈┈┈┈┈┈3╮ ╭┈┈┈┈┈┈┈┈4╮ ╭┈┈┈┈┈┈┈┈5╮
-┆         ┆ ┆         ┆ ┆         ┆
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆  3      ┆ ┆  4      ┆ ┆  5      ┆
 ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
 ```
 -----------
@@ -311,11 +227,11 @@ H3 Layout Variants
 #### The fourth card spans two columns
 
 ```markdown
-╭┈┈┈┈┈┈┈┈1╮ ╭┈┈┈┈┈┈┈┈2╮ ╭┈┈┈┈┈┈┈┈3╮
-┆         ┆ ┆         ┆ ┆         ┆
+╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
+┆  1      ┆ ┆  2      ┆ ┆  3      ┆
 ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
-╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈4╮ ╭┈┈┈┈┈┈┈┈5╮ 
-┆                     ┆ ┆         ┆ 
+╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ 
+┆  4                  ┆ ┆  5      ┆ 
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ 
 ```
 -----------
@@ -418,97 +334,6 @@ H3 Layout Variants
 Spans rows and columns at the same time
 
 
-Code
-----
-
-### Basic code
-
-```js
-here.is(() => {
-  some.code()
-})
-```
-
-```js
-here.is.some.more()
-```
-
-Code blocks can be placed one after the other.
-<br>
-<br>
-See: [Cheatsheets](/)
-
-### Code with headings
-
-#### index.js
-
-```js
-here.is(() => {
-  some.code()
-})
-```
-
-#### other.js
-
-```js
-here.is.some.more()
-```
-
-Code blocks can have headings.
-
-
-### Line wrapping
-
-```js {.wrap}
-<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
-```
-
-Add `{.wrap}` to wrap long lines.
-
-
-### Long lines
-
-```js
-function createNode(nodeName: string, options: { key: string }) {
-  return true
-}
-```
-
-Long lines will have scrollbars.
-
-Paragraphs
---------
-
-### Basic paragraphs
-The text that appears in the header
-
-This is a basic section with paragraphs in it. When paragraphs are the first elements in an H3 section's body, they appear as white.
-
-
-### Description
-```
-...
-```
-A gray background
-```
-···
-```
-
-When paragraphs appear after `pre`/`table`/`ul`, they appear with a gray background.
-
-
-### Crosslink
-
-Add `{.link-arrow}` to make big loud external links:
-
-```
-···
-···
-···
-```
-
-[Home](/) {.link-arrow}
-
 
 
 
@@ -520,55 +345,32 @@ Tables Variants
 
 | -                | -                            |
 |------------------|------------------------------|
-| `{.shortcuts}`   | Render shortcut key style    |
 | `{.show-header}` | Show the header of the table |
+| `{.shortcuts}`   | Render shortcut key style    |
+| `{.bold-first}`  | Bold first column            |
+| `{.plus-first}`  | Plus first column            |
+| `{.show-header}` | Show headers                 |
+| `{.left-text}`   | Align the last column left   |
+| `{.no-wrap}`     | Don't wrap text              |
 
 
-### Basic table {.row-span-2}
+### Basic table
 
-| Expression  | Description               |
-|-------------|---------------------------|
-| `$1` … `$9` | Parameter 1 ... 9         |
-| `$0`        | Name of the script itself |
-| `$1`        | First argument            |
-| `${10}`     | Positional parameter 10   |
-| `$#`        | Number of arguments       |
-
-
-#### ↓ Source Code
-
-```markdown
-| Expression  | Description               |
-|-------------|---------------------------|
-| `$1` … `$9` | Parameter 1 ... 9         |
-| `$0`        | Name of the script itself |
-| `$1`        | First argument            |
-| `${10}`     | Positional parameter 10   |
-| `$#`        | Number of arguments       |
-```
-
-
-### .show-header {.row-span-2}
-
-| Expression  | Description               |
-|-------------|---------------------------|
-| `$1` … `$9` | Parameter 1 ... 9         |
-| `$0`        | Name of the script itself |
-| `$1`        | First argument            |
-| `${10}`     | Positional parameter 10   |
-{.show-header}
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
 
 
 #### ↓ Source Code
 
 ```markdown
-| Expression  | Description               |
-|-------------|---------------------------|
-| `$1` … `$9` | Parameter 1 ... 9         |
-| `$0`        | Name of the script itself |
-| `$1`        | First argument            |
-| `${10}`     | Positional parameter 10   |
-{.show-header}
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
 ```
 
 
@@ -590,6 +392,71 @@ Tables Variants
 {.shortcuts}
 ```
 
+
+
+### .show-header
+
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
+{.show-header}
+
+#### ↓ Source Code
+
+```markdown
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
+{.show-header}
+```
+
+
+
+### .left-text
+
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
+{.left-text}
+
+#### ↓ Source Code
+
+```markdown
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
+{.left-text}
+```
+
+
+
+### .bold-first
+
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
+{.bold-first}
+
+#### ↓ Source Code
+
+```markdown
+| Pattern  | Description            |
+|----------|------------------------|
+| `[abc]`  | Match a, b or c        |
+| `[^abc]` | Match except a, b or c |
+| `[a-z]`  | Match a tot z          |
+{.bold-first}
+```
 
 
 
@@ -638,8 +505,8 @@ List markers
 - Cheat Sheet
 - For
 - Developers
-{.cols-3}
- 
+  {.cols-3}
+
 #### ↓ Source Code
 ```markdown
 - Share
@@ -691,7 +558,7 @@ List markers
 - Reference
 - And
 - Cheat Sheet
-{.cols-2 .marker-none}
+  {.cols-2 .marker-none}
 
 #### ↓ Source Code
 ```markdown
@@ -708,7 +575,7 @@ List markers
 - Share
 - Quick
 - Reference
-{.marker-round}
+  {.marker-round}
 
 #### ↓ Source Code
 ```markdown
@@ -719,96 +586,219 @@ List markers
 ```
 
 
-H2 section {.cols-5}
-----------
+Code Variants
+----
 
-### One
+### Basic code
 
-```
-···
-```
-
-### Two
-
-```
-···
+```js
+quickref.me.is(() => {
+  awesome.site()
+})
 ```
 
-### Three
-
-```
-···
+```js
+here.is.some.more()
 ```
 
-### Four
+#### ↓ Source Code
+```markdown
+
+```js
+quickref.me.is(() => {
+  awesome.site()
+})
+\```
+
+```js
+here.is.some.more()
+\```
+```
+
+Code blocks can be placed one after the other.
+
+
+
+
+### Code with headings
+
+#### index.js
+
+```js
+quickref.me.is(() => {
+    awesome.site()
+})
+```
+
+#### other.js
+
+```js
+here.is.some.more()
+```
+
+#### ↓ Source Code
+
+```markdown
+#### index.js
+```js
+quickref.me.is(() => {
+    awesome.site()
+})
+\```
+#### other.js
+```js
+here.is.some.more()
+\```
+```
+
+Code blocks can have headings.
+
+
+
+### Line wrapping
+
+```js {.wrap}
+<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
+```
+
+#### ↓ Source Code
+
+```markdown {.wrap}
+```js {.wrap}
+<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
+\```
+```
+
+Add `{.wrap}` to wrap long lines.
+
+
+
+### Long lines (default)
+
+```js
+function createNode(nodeName: string, options: { key: string }) {
+  return true
+}
+```
+
+Long lines will have scrollbars.
+
+
+Paragraphs
+--------
+
+### Header paragraphs
+
+The text that appears in the header
+
+
+#### ↓ Source Code
+
+```markdown {.wrap}
+### Basic paragraphs
+The text that appears in the header
 
 ```
-···
+
+
+
+### Middle paragraphs {.row-span-2}
+
+- This is a list
+
+This paragraph will appear in the middle
+
+```js
+quickref.is(() => {
+  awesome.site()
+})
 ```
 
-### Five
+#### ↓ Source Code
+```markdown
+### Middle paragraphs
 
+- This is a list
+
+This paragraph will appear in the middle
+
+```js
+quickref.is(() => {
+  awesome.site()
+})
+\```
 ```
-···
+
+
+
+### Footer paragraphs {.row-span-2}
+
+```js
+quickref.is(() => {
+  awesome.site()
+})
 ```
 
+#### ↓ Source Code
+```markdown
+```js
+quickref.is(() => {
+  awesome.site()
+})
+\```
 
-H3 section
+This paragraph will appear in the footer
+```
+
+This paragraph will appear in the footer
+
+
+
+### Crosslink
+
+Add `{.link-arrow}` to make big loud external links:
+
+```js
+[Home](/) {.link-arrow}
+```
+
+[Home](/) {.link-arrow}
+
+
+
+Cards Example
 ----------
 
 ### row-span-2  {.row-span-2}
 
 ```
-···
+1
 ```
 
 
 ### col-span-2   {.col-span-2}
 
 ```
-···
+2
 ```
 
-### Primary section {.primary}
+### Primary Card {.primary}
 
 ```
-···
-···
+3
 ```
 Add `{.primary}` to make the title red.
 
 
-### Secondary section {.secondary}
+### Secondary Card {.secondary}
 
 ```
-···
+4
 ```
 Add `{.secondary}` to make the title yellow.
 
 ### col-span-3 {.col-span-3}
 
 ```
-···
+5
 ```
-
-### Supported
-
-Each section can have the following children:
-
-#### White
-
-- `pre`
-- `ul`
-- `table`
-
-#### Gray
-
-- `p`
-- `h4`
-
-### H3 section
-
-Every box is an H3 section. The box will encompass everything inside the body of the H3.
-
-This is a basic section with paragraphs in it.
-
