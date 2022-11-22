@@ -164,7 +164,7 @@ See: [Python F-Strings](#python-f-strings-since-python)
 
 
 
-Python Data Types
+Python Built-in Data Types
 ---------------
 
 
@@ -276,7 +276,7 @@ y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0'
 ```
 
-Python Data Structures
+Python Advanced Data Types
 -----------------------
 ### Heaps {.col-span-2 .row-span-3}
 ```python
