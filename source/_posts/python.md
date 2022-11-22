@@ -160,7 +160,7 @@ message += "Part 2."
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 ```
-See: [Python F-Strings](#python-f-strings-since-python)
+See: [Python F-Strings](#python-f-strings-since-python-3-6)
 
 
 
