@@ -300,7 +300,7 @@ heapq.heapify(myList)
 x = heapq.heappop(myList)
 print(-x) # => 9 (making sure to multiply by -1 again)
 ```
-Heaps are binary trees for which every parent node has a value less than or equal to any of its children. Useful for accessing min/max value quickly. Time complexity: O(n) for heapify, O(log n) push and pops. See: [Heapq](https://docs.python.org/3/library/heapq.html)
+Heaps are binary trees for which every parent node has a value less than or equal to any of its children. Useful for accessing min/max value quickly. Time complexity: O(n) for heapify, O(log n) push and pop. See: [Heapq](https://docs.python.org/3/library/heapq.html)
 
 ### Stacks and Queues {.row-span-3}
 ```python
