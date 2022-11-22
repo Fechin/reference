@@ -26,9 +26,9 @@ Read the cheatsheet gracefully https://quickref.me
 ├── source
 │   ├── _posts   # Cheatsheet source files
 │   │   ├── awk.md
-│   │   ├── vim.md # => quickref.me/vim
+│   │   ├── vim.md # => https://quickref.me/vim
 │   │   ├── php.md
-│   │   ├── css.md # => quickref.me/css
+│   │   ├── css.md # => https://quickref.me/css
 │   │   ├── ...
 │   └── widget   # Widget files
 │       └── chmod.html
