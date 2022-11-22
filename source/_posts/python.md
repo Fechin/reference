@@ -284,12 +284,12 @@ import heapq
 
 myList = [9, 5, 4, 1, 3, 2]
 heapq.heapify(myList) # turn myList into a Min Heap
-print(myList) # => [1, 3, 2, 5, 9, 4]
+print(myList)    # => [1, 3, 2, 5, 9, 4]
 print(myList[0]) # first value is always the smallest in the heap
 
 heapq.heappush(myList, 10) # insert 10
-x = heapq.heappop(myList) # pop and return smallest item
-print(x) # => 1
+x = heapq.heappop(myList)  # pop and return smallest item
+print(x)                   # => 1
 ```
 #### Negate all values to use Min Heap as Max Heap 
 ```python
@@ -306,21 +306,21 @@ Heaps are binary trees for which every parent node has a value less than or equa
 ```python
 from collections import deque
 
-q = deque() # empty
+q = deque()          # empty
 q = deque([1, 2, 3]) # with values
 
-q.append(4) # append to right side
+q.append(4)     # append to right side
 q.appendleft(0) # append to left side
-print(q) # => deque([0, 1, 2, 3, 4])
+print(q)    # => deque([0, 1, 2, 3, 4])
 
 x = q.pop() # remove & return from right
 y = q.popleft() # remove & return from left
-print(x) # => 4
-print(y) # => 0
-print(q) # => deque([1, 2, 3])
+print(x)    # => 4
+print(y)    # => 0
+print(q)    # => deque([1, 2, 3])
 
 q.rotate(1) # rotate 1 step to the right
-print(q) # => deque([3, 1, 2])
+print(q)    # => deque([3, 1, 2])
 ```
 Deque is a double-ended queue with O(1) time for append/pop operations from both sides. Used as stacks and queues. See: [Deque](https://docs.python.org/3/library/collections.html#collections.deque)
 
@@ -815,6 +815,7 @@ else:
 
 
 
+
 Python Loops
 --------
 
@@ -825,6 +826,8 @@ primes = [2, 3, 5, 7]
 for prime in primes:
     print(prime)
 ```
+Prints: 2 3 5 7
+
 
 
 
@@ -832,9 +835,12 @@ for prime in primes:
 
 ```python
 animals = ["dog", "cat", "mouse"]
+# enumerate() adds counter to an iterable
 for i, value in enumerate(animals):
     print(i, value)
 ```
+Prints: 0 dog 1 cat 2 mouse
+
 
 
 ### While
@@ -844,10 +850,12 @@ while x < 4:
     print(x)
     x += 1  # Shorthand for x = x + 1
 ```
+Prints: 0 1 2 3
 
 
 
-### Break 
+
+### Break
 ```python
 x = 0
 for index in range(10):
@@ -856,6 +864,8 @@ for index in range(10):
     	break
     print(x)
 ```
+Prints: 0 10 20 30 40
+
 
 
 ### Continue
@@ -867,6 +877,8 @@ for index in range(3, 8):
     	continue
     print(x)
 ```
+Prints: 30 40 60 70
+
 
 
 ### Range
@@ -882,22 +894,30 @@ for i in range(4, 10, 2):
 ```
 
 
+
 ### With zip()
 ```python
-name = ['Pete', 'John', 'Elizabeth']
-age = [6, 23, 44]
-for n, a in zip(name, age):
-    print('%s is %d years old' %(n, a))
+words = ['Mon', 'Tue', 'Wed']
+nums = [1, 2, 3]
+# Use zip to pack into a tuple list
+for w, n in zip(words, nums):
+    print('%d:%s, ' %(n, w))
 ```
+Prints: 1:Mon, 2:Tue, 3:Wed,
 
-### List Comprehension {.col-span-2}
+
+
+### for/else
 ```python
-result = [x**2 for x in range(10) if x % 2 == 0]
- 
-print(result)
-# [0, 4, 16, 36, 64]
+nums = [60, 70, 30, 110, 90]
+for n in nums:
+    if n > 100:
+        print("%d is bigger than 100" %n)
+        break
+else:
+    print("Not found!")
 ```
-
+Also see: [Python Tips](https://book.pythontips.com/en/latest/for_-_else.html)
 
 
 
