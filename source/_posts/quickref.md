@@ -8,7 +8,7 @@ tags:
     - reference
 categories:
     - Other
-intro: This is a style grammar reference that you can use on QuickRef.ME, made for contributors.
+intro: This is the magic syntax variant manual that you can use on QuickRef.ME, It's a good practice for contributors.
 ---
 
 
@@ -16,7 +16,7 @@ intro: This is a style grammar reference that you can use on QuickRef.ME, made f
 Getting Started
 --------------------
 
-### Develop setup
+### Develop Setup
 
 - Clone Repository [View on Github](https://github.com/Fechin/reference.git)
     ```shell script {.wrap}
@@ -34,12 +34,12 @@ Getting Started
 - Send us pull request and chill
 {.marker-timeline}
  
-It's a good practice to refer to the source code of the [QuickRef cheatsheet](/quickref).
+It's a good practice to refer to the source code of the [QuickRef cheatsheet](https://github.com/Fechin/reference/blob/main/source/_posts/quickref.md).
 
 
 
 
-### Directory structure
+### Directory Structure
 
 ```yaml
 .
@@ -62,12 +62,45 @@ It's a good practice to refer to the source code of the [QuickRef cheatsheet](/q
     └── coo      # Theme files
 ```
 
+### Cheatsheet Structure {.row-span-2}
+
+```yaml
+.
+├── Section 1
+│   ├── Card 1
+│   ├── Card 2
+│   ├── Card 3
+│   ├── ...
+├── Section 2
+│   ├── Card 1
+│   │   ├── Paragraph
+│   │   ├── Code
+│   │   ├── <hr/> (aka "---")
+│   │   ├── List
+│   │   │   ├── Paragraph
+│   │   │   └── Code
+│   │   └── Table
+│   │       ├── Paragraph
+│   │       └── Code
+│   ├── Card 2
+│   ├── Card 3
+│   └── ...
+├── Section 3
+├── Section 4
+└── ...
+```
+---------
+- One cheatsheet contains multiple sections
+- One section contains multiple cards
+- One card can contain Code, Table, List and Paragraph
+- One list can contain Code and Paragraph
+- One table can contain Code and Paragraph
 
 
 
 ### Syntax Variants
 
-- [Section Variants](#section-variants)
+- [Section Variants](#section-variants) 
 - [Card Variants](#card-variants)
 - [Table Variants](#table-variants)
 - [List Variants](#list-variants)
@@ -75,8 +108,27 @@ It's a good practice to refer to the source code of the [QuickRef cheatsheet](/q
 - [Paragraph Variants](#paragraph-variants)
 - [Cards Example](#cards-example)
 
-QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs#markdown-it-attrs---), and supports adding classes via its syntax.
+All the magic variants supported by QuickRef.ME
 
+
+### Create source/_posts/demo.md
+
+```markdown
+Getting Started
+---------------
+
+### List Card {.col-span-2}
+- Share quick reference
+- Cheatsheet for developers
+...
+{.style-timeline}
+
+### Table Card
+| id | name    |
+|----|---------|
+| 1  | Roberta |
+{.show-header}
+```
 
 
 
