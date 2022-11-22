@@ -67,8 +67,3 @@ hexo.extend.helper.register("page_image", function () {
     }
     return imageURL;
 });
-
-hexo.extend.helper.register("ext_url_for", function (url) {
-    url = this.url_for(url);
-    return url.replace(/(\/index)?\.html$/, "");
-});

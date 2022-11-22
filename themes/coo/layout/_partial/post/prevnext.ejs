@@ -1,6 +1,6 @@
 <% if (page.prev) { %>
     <p>
-        <a href="<%= ext_url_for(page.prev.path) %>" rel="next" title="<%= page.prev.title %>">
+        <a href="<%= url_for(page.prev.path) %>" rel="next" title="<%= page.prev.title %>">
             <%= __('prev', page.prev.title) %>
         </a>
     </p>
@@ -8,7 +8,7 @@
 
 <% if (page.next) { %>
     <p>
-        <a href="<%= ext_url_for(page.next.path) %>" rel="next" title="<%= page.next.title %>">
+        <a href="<%= url_for(page.next.path) %>" rel="next" title="<%= page.next.title %>">
             <%= __('next', page.next.title) %>
         </a>
     </p>

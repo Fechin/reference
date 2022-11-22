@@ -3,7 +3,7 @@ const {encodeURL} = require('hexo-util');
 hexo.extend.helper.register("share_link", function (type) {
     let title = this.page_title();
     let description = this.page_description();
-    let url = this.ext_url_for(this.url);
+    let url = this.url_for(this.url);
     let link = "";
     switch (type) {
         case "facebook":

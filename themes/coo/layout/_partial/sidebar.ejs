@@ -27,7 +27,7 @@
                     <div class="flex justify-center w-10 h-10 text-white p-5 rounded-full mr-4 <%- post.background %>">
                         <i class="self-center icon <%- post.icon %> text-2xl"></i>
                     </div>
-                    <a href="<%- ext_url_for(post.path) %>" class="underline mx-1 font-medium text-slate-700 dark:text-slate-300">
+                    <a href="<%- url_for(post.path) %>" class="underline mx-1 font-medium text-slate-700 dark:text-slate-300">
                         <%- post.title %> <span class="text-sm font-light text-slate-700 dark:text-slate-500">Cheat sheet</span>
                     </a>
                 </li>
@@ -52,7 +52,7 @@
             <ul>
                 <% posts.forEach(function (post){ %>
                     <li class="mt-2">
-                        <a href="<%- ext_url_for(post.path) %>" class="underline mx-1 text-sm text-slate-700 dark:text-slate-300"><%- post.title %></a>
+                        <a href="<%- url_for(post.path) %>" class="underline mx-1 text-sm text-slate-700 dark:text-slate-300"><%- post.title %></a>
                     </li>
                 <% }); %>
             </ul>

@@ -6,7 +6,7 @@
     <% } %>
 <% } else { %>
     <% if (false){ %>
-        <h1><a href="<%- ext_url_for(page.path) %>"><%= page.title || __('no_title') %></a></h1>
+        <h1><a href="<%- url_for(page.path) %>"><%= page.title || __('no_title') %></a></h1>
     <% } else { %>
         <h1><%= page.title || __('no_title') %></h1>
     <% } %>

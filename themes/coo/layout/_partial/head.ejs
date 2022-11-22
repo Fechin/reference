@@ -14,7 +14,7 @@
     <meta name="description" content="<%- page_description() %>"/>
 
     <!-- for social -->
-    <meta property="og:url" content="<%- ext_url_for(url) %>"/>
+    <meta property="og:url" content="<%- url_for(url) %>"/>
     <meta property="og:title" content="<%- page_title() %>"/>
     <meta property="og:site_name" content="<%- config.title %>"/>
     <meta property="og:description" content="<%- page_description() %>"/>
@@ -36,9 +36,9 @@
     <link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"/>
 
     <!-- misc -->
-    <link rel="canonical" href="<%- ext_url_for(url) %>"/>
-    <link rel="prefetch" href="<%- ext_url_for(config.url) %>"/>
-    <link rel="prerender" href="<%- ext_url_for(config.url) %>"/>
+    <link rel="canonical" href="<%- url_for(url) %>"/>
+    <link rel="prefetch" href="<%- url_for(config.url) %>"/>
+    <link rel="prerender" href="<%- url_for(config.url) %>"/>
     <link rel="alternate" href="/atom.xml" title="<%- config.title %>" type="application/atom+xml"/>
 
     <!-- font -->
