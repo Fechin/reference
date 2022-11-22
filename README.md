@@ -8,9 +8,9 @@
 
 
 
-**Reference** is a collection of **cheatsheets** contributed by open source angels. It shares a quick reference cheat sheet for developers in a beautiful layout.
+**Reference** is a collection of **cheatsheets** contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout.
 
-We're happy to see your best skill cheat sheets in **Reference**, If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a PR.
+We're happy to see your best skill cheat sheets in **Reference**, If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a [PR](#contributing).
 
 
 ## Live Demo
@@ -24,25 +24,29 @@ Read the cheatsheet gracefully https://quickref.me
 ```
 .
 ├── source
-│   ├── _posts    # Source file for cheatsheet
-│   │   ├── bash.md
-│   │   ├── chmod.md
+│   ├── _posts   # Cheatsheet source files
+│   │   ├── awk.md
+│   │   ├── vim.md # => quickref.me/vim
+│   │   ├── php.md
+│   │   ├── css.md # => quickref.me/css
 │   │   ├── ...
-│   └── widget    # Widget that can be referenced
+│   └── widget   # Widget files
 │       └── chmod.html
-├── public        # Static files for distribution
+├── public       # Distribution files
 ├── _config.yml
 ├── gulpfile.js
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js
 └── themes
-    └── coo       # Theme files
+    └── coo      # Theme files
 ```
 
 ## Contributing
 
-Thanks for your interest on contributing to reference 👍👍, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
+Thanks for your interest on contributing to reference, it's people like you that make [QuickRef.ME](https://quickref.me) such a amazing site 🎉🎉. Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
+
+**It's a good practice to refer to the cheatsheet of the [QuickRef Cheatsheet](https://quickref.me/quickref)**.
 
 
 ### Development setup
@@ -73,8 +77,6 @@ Just need `title` and `intro`, and ignore other options. I will complete it if i
 ### CSS classes
 QuickRefs uses [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) and supports adding classes via its syntax. Also, there is a reference of styles that you can use on `quickref.me` cheat sheets:  https://quickref.me/quickref
 
-
-At last, It's a good practice to refer to the source code of the existing cheat sheet!
 
 <a href="https://github.com/Fechin/reference/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Fechin/reference" />
