@@ -1,7 +1,7 @@
 ---
 title: Todoist
 date: 2022-11-23 16:23:31.696934
-icon: icon-style
+icon: icon-todoist
 label: 
 tags: 
     - shortcut

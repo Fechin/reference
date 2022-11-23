@@ -1,7 +1,7 @@
 ---
 title: Unity 3D
 date: 2022-11-23 16:23:31.692703
-icon: icon-style
+icon: icon-unity 3d
 label: 
 tags: 
     - shortcut

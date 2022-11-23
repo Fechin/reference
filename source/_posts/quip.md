@@ -1,7 +1,7 @@
 ---
 title: Quip.com
 date: 2022-11-23 16:23:31.697261
-icon: icon-style
+icon: icon-quip.com
 label: 
 tags: 
     - shortcut

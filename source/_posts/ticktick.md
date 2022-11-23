@@ -1,7 +1,7 @@
 ---
 title: TickTick
 date: 2022-11-23 16:23:31.696573
-icon: icon-style
+icon: icon-ticktick
 label: 
 tags: 
     - shortcut

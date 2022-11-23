@@ -1,7 +1,7 @@
 ---
 title: Postman
 date: 2022-11-23 16:23:31.703572
-icon: icon-style
+icon: icon-postman
 label: 
 tags: 
     - shortcut

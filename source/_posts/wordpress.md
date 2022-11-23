@@ -1,7 +1,7 @@
 ---
 title: WordPress
 date: 2022-11-23 16:23:31.697854
-icon: icon-style
+icon: icon-wordpress
 label: 
 tags: 
     - shortcut

@@ -1,7 +1,7 @@
 ---
 title: Figma
 date: 2022-11-23 16:23:31.706507
-icon: icon-style
+icon: icon-figma
 label: 
 tags: 
     - shortcut

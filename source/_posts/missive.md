@@ -1,7 +1,7 @@
 ---
 title: Missive
 date: 2022-11-23 16:23:31.695283
-icon: icon-style
+icon: icon-missive
 label: 
 tags: 
     - shortcut

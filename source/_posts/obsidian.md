@@ -1,7 +1,7 @@
 ---
 title: Obsidian
 date: 2022-11-23 16:23:31.700412
-icon: icon-style
+icon: icon-obsidian
 label: 
 tags: 
     - shortcut

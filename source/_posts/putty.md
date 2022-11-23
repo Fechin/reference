@@ -1,7 +1,7 @@
 ---
 title: PuTTy
 date: 2022-11-23 16:23:31.701654
-icon: icon-style
+icon: icon-putty
 label: 
 tags: 
     - shortcut

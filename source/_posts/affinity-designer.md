@@ -1,7 +1,7 @@
 ---
 title: Affinity Designer
 date: 2022-11-23 16:23:31.702748
-icon: icon-style
+icon: icon-affinity-designer
 label: 
 tags: 
     - shortcut

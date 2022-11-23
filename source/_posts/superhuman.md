@@ -1,7 +1,7 @@
 ---
 title: Superhuman
 date: 2022-11-23 16:23:31.694365
-icon: icon-style
+icon: icon-superhuman
 label: mac
 tags: 
     - shortcut

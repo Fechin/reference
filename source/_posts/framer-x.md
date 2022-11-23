@@ -1,7 +1,7 @@
 ---
 title: Framer X
 date: 2022-11-23 16:23:31.701096
-icon: icon-style
+icon: icon-framer x
 label: mac
 tags: 
     - shortcut

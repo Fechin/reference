@@ -1,7 +1,7 @@
 ---
 title: SoundCloud
 date: 2022-11-23 16:23:31.705804
-icon: icon-style
+icon: icon-soundcloud
 label: 
 tags: 
     - shortcut

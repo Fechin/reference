@@ -1,7 +1,7 @@
 ---
 title: VLC Player
 date: 2022-11-23 16:23:31.696412
-icon: icon-style
+icon: icon-vlc
 label: 
 tags: 
     - shortcut

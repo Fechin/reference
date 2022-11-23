@@ -1,7 +1,7 @@
 ---
 title: Adobe XD
 date: 2022-11-23 16:23:31.703379
-icon: icon-style
+icon: icon-adobe-xd
 label: 
 tags: 
     - shortcut

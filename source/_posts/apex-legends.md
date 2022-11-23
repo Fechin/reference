@@ -1,7 +1,7 @@
 ---
 title: Apex Legends
 date: 2022-11-23 16:23:31.706352
-icon: icon-style
+icon: icon-apex legends
 label: 
 tags: 
     - shortcut

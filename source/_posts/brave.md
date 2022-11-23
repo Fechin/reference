@@ -1,7 +1,7 @@
 ---
 title: Brave Browser
 date: 2022-11-23 16:23:31.698868
-icon: icon-style
+icon: icon-brave-browser
 label: 
 tags: 
     - shortcut

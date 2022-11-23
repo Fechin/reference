@@ -1,7 +1,7 @@
 ---
 title: Pocket
 date: 2022-11-23 16:23:31.702053
-icon: icon-style
+icon: icon-pocket
 label: 
 tags: 
     - shortcut

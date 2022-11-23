@@ -1,7 +1,7 @@
 ---
 title: GitLab
 date: 2022-11-23 16:23:31.693478
-icon: icon-style
+icon: icon-gitlab
 label: 
 tags: 
     - shortcut

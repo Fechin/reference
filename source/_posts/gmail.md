@@ -1,7 +1,7 @@
 ---
 title: Gmail
 date: 2022-11-23 16:23:31.699967
-icon: icon-style
+icon: icon-gmail
 label: 
 tags: 
     - shortcut

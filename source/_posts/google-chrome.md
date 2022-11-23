@@ -1,7 +1,7 @@
 ---
 title: Google Chrome
 date: 2022-11-23 16:23:31.696190
-icon: icon-style
+icon: icon-chrome
 label: 
 tags: 
     - shortcut

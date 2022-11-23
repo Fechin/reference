@@ -1,7 +1,7 @@
 ---
 title: Sequel Pro
 date: 2022-11-23 16:23:31.701510
-icon: icon-style
+icon: icon-sequel-pro
 label: mac
 tags: 
     - shortcut

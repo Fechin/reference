@@ -1,7 +1,7 @@
 ---
 title: Firefox
 date: 2022-11-23 16:23:31.703957
-icon: icon-style
+icon: icon-firefox
 label: 
 tags: 
     - shortcut

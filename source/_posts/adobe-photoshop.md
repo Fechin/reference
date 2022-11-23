@@ -1,7 +1,7 @@
 ---
 title: Adobe Photoshop
 date: 2022-11-23 16:23:31.706034
-icon: icon-style
+icon: icon-adobe-photoshop
 label: 
 tags: 
     - shortcut

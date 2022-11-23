@@ -1,7 +1,7 @@
 ---
 title: Google Drive
 date: 2022-11-23 16:23:31.701360
-icon: icon-style
+icon: icon-google-drive
 label: 
 tags: 
     - shortcut

@@ -1,7 +1,7 @@
 ---
 title: Arduino IDE
 date: 2022-11-23 16:23:31.697581
-icon: icon-style
+icon: icon-arduino ide
 label: 
 tags: 
     - shortcut

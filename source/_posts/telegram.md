@@ -1,7 +1,7 @@
 ---
 title: Telegram Desktop
 date: 2022-11-23 16:23:31.700963
-icon: icon-style
+icon: icon-telegram
 label: 
 tags: 
     - shortcut

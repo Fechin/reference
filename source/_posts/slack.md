@@ -1,7 +1,7 @@
 ---
 title: Slack
 date: 2022-11-23 16:23:31.705147
-icon: icon-style
+icon: icon-slack
 label: 
 tags: 
     - shortcut

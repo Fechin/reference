@@ -1,7 +1,7 @@
 ---
 title: TablePlus
 date: 2022-11-23 16:23:31.706905
-icon: icon-style
+icon: icon-tableplus
 label: 
 tags: 
     - shortcut

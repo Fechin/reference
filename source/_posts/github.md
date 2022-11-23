@@ -1,7 +1,7 @@
 ---
 title: Github
 date: 2022-11-23 16:23:31.704787
-icon: icon-style
+icon: icon-github
 label: 
 tags: 
     - shortcut

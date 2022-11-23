@@ -1,7 +1,7 @@
 ---
 title: Affinity Photo
 date: 2022-11-23 16:23:31.694998
-icon: icon-style
+icon: icon-affinity-photo
 label: 
 tags: 
     - shortcut

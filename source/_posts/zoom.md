@@ -1,7 +1,7 @@
 ---
 title: Zoom 
 date: 2022-11-23 16:23:31.704621
-icon: icon-style
+icon: icon-zoom 
 tags: 
     - shortcut
     - keyboard

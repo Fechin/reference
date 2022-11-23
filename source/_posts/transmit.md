@@ -1,7 +1,7 @@
 ---
 title: Transmit
 date: 2022-11-23 16:23:31.695841
-icon: icon-style
+icon: icon-transmit
 label: mac
 tags: 
     - shortcut

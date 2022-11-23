@@ -1,7 +1,7 @@
 ---
 title: Adobe Lightroom CC
 date: 2022-11-23 16:23:31.702312
-icon: icon-style
+icon: icon-adobe-lightroom 
 label: 
 tags: 
     - shortcut

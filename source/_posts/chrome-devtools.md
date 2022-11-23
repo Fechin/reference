@@ -1,7 +1,7 @@
 ---
 title: Chrome Developer Tools
 date: 2022-11-23 16:23:31.696017
-icon: icon-style
+icon: icon-developer-tools
 label: 
 tags: 
     - shortcut

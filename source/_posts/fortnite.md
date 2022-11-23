@@ -1,7 +1,7 @@
 ---
 title: Fortnite
 date: 2022-11-23 16:23:31.699229
-icon: icon-style
+icon: icon-fortnite
 label: 
 tags: 
     - shortcut

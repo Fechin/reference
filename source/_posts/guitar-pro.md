@@ -1,7 +1,7 @@
 ---
 title: Guitar Pro
 date: 2022-11-23 16:23:31.693917
-icon: icon-style
+icon: icon-guitar pro
 label: 
 tags: 
     - shortcut

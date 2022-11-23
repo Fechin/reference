@@ -1,7 +1,7 @@
 ---
 title: Vivaldi Browser
 date: 2022-11-23 16:23:31.694597
-icon: icon-style
+icon: icon-vivaldi-browser
 label: 
 tags: 
     - shortcut

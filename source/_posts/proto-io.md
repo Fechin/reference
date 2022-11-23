@@ -1,7 +1,7 @@
 ---
 title: Proto.io
 date: 2022-11-23 16:23:31.694775
-icon: icon-style
+icon: icon-proto.io
 label: 
 tags: 
     - shortcut

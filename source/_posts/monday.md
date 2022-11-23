@@ -1,7 +1,7 @@
 ---
 title: Monday.com
 date: 2022-11-23 16:23:31.694181
-icon: icon-style
+icon: icon-monday
 label: 
 tags: 
     - shortcut

@@ -1,7 +1,7 @@
 ---
 title: FileZilla
 date: 2022-11-23 16:23:31.705296
-icon: icon-style
+icon: icon-filezilla
 label: 
 tags: 
     - shortcut

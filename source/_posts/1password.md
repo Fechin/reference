@@ -1,7 +1,7 @@
 ---
 title: 1Password
 date: 2022-11-23 16:23:31.701231
-icon: icon-style
+icon: icon-1password
 label: 
 tags: 
     - shortcut

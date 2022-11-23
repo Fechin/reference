@@ -1,7 +1,7 @@
 ---
 title: Apple Music
 date: 2022-11-23 16:23:31.700157
-icon: icon-style
+icon: icon-apple music
 label: mac
 tags: 
     - shortcut

@@ -1,7 +1,7 @@
 ---
 title: Jira
 date: 2022-11-23 16:23:31.697708
-icon: icon-style
+icon: icon-jira
 label: 
 tags: 
     - shortcut

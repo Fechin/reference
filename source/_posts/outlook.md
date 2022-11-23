@@ -1,7 +1,7 @@
 ---
 title: Microsoft Outlook
 date: 2022-11-23 16:23:31.698084
-icon: icon-style
+icon: icon-microsoft-outlook
 label: 
 tags: 
     - shortcut

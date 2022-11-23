@@ -1,7 +1,7 @@
 ---
 title: Spotify
 date: 2022-11-23 16:23:31.699093
-icon: icon-style
+icon: icon-spotify
 label: 
 tags: 
     - shortcut
