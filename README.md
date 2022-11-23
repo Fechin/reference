@@ -8,7 +8,7 @@
 
 
 
-**Reference** is a collection of **cheatsheets** contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[[Chinese Version](https://github.com/jaywcjlove/reference)\]
+**Reference** is a collection of **cheatsheets** contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[ [中文版](https://github.com/jaywcjlove/reference) | ... \]
 
 We're happy to see your best skill cheat sheets in **Reference**, If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a [PR](#contributing).
 
