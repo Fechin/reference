@@ -1,5 +1,5 @@
 <a href="<%- url_for(url) %>">
-    <div class="card <%- background %>">
+    <div class="card <%- background %>" <% if (label) { %> data-label="<%- label %>" <% }%> >
         <i class="icon <%- icon %>"></i>
         <p><%- title %></p>
     </div>

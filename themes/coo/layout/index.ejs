@@ -13,6 +13,7 @@
                         <%- partial('_partial/index/card', {
                             url: url_for(post.path),
                             title: post.title,
+                            label: post.label,
                             icon: post.icon == undefined ? 'icon-style' : post.icon,
                             background: post.background == undefined ? 'bg-emerald-500' : post.background
                         }) %>
