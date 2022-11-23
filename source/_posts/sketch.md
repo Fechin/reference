@@ -2,7 +2,7 @@
 title: Sketch
 date: 2022-11-23 16:23:31.699427
 icon: icon-sketch
-label: mac
+label: Mac
 tags: 
     - shortcut
     - keyboard

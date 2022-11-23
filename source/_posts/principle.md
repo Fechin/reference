@@ -2,7 +2,7 @@
 title: Principle
 date: 2022-11-23 16:23:31.698567
 icon: icon-principle
-label: mac
+label: Mac
 tags: 
     - shortcut
     - keyboard
