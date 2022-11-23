@@ -17,7 +17,7 @@ plugins:
 ---
 
 
-Getting started
+Getting Started
 ------------
 
 

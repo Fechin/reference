@@ -12,7 +12,7 @@ intro: |
     This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 

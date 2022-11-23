@@ -12,7 +12,7 @@ intro: |
     This is a quick reference cheat sheet for understanding and writing JSON format configuration files.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 

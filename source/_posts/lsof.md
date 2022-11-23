@@ -13,7 +13,7 @@ intro: |
      This quick reference cheat sheet provides various for using lsof command.
 ---
 
-Getting started
+Getting Started
 --------------
 
 ### Introduction

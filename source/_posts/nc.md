@@ -14,7 +14,7 @@ categories:
 intro:  This cheat sheet provides various for using Netcat on both Linux and Unix.
 ---
 
-Getting started {.cols-5}
+Getting Started {.cols-5}
 ---------------
 
 ### Usage {.col-span-2}

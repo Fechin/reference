@@ -10,7 +10,7 @@ intro: |
 ---
 
 
-Getting started {.cols-2}
+Getting Started {.cols-2}
 ---------------
 
 ### Introduction

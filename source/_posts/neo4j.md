@@ -12,7 +12,7 @@ intro: |
     A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
 ---
 
-Getting started {.cols-2}
+Getting Started {.cols-2}
 ---------------
 
 ### Getting Started with Neo4j

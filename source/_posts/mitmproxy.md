@@ -14,7 +14,7 @@ intro: |
     [mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 ### Usage {.col-span-2}

@@ -14,7 +14,7 @@ categories:
 intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 ### hello.sh

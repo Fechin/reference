@@ -14,7 +14,7 @@ intro: |
     This quick reference cheat sheet provides various for using SSH.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 ### Connecting

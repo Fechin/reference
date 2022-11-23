@@ -13,7 +13,7 @@ intro: |
 ---
 
 
-Getting started
+Getting Started
 --------
 
 ### Hello.cs

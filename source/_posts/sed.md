@@ -14,7 +14,7 @@ intro: |
     [Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 ### Sed Usage

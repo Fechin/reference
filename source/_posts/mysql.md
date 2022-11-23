@@ -14,7 +14,7 @@ plugins:
 ---
 
 
-Getting started {.cols-2}
+Getting Started {.cols-2}
 ---------------
 
 

@@ -15,7 +15,7 @@ intro: |
 ---
 
 
-Getting started
+Getting Started
 ---------------
 
 ### Requirements {.row-span-2}

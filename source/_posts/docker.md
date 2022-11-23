@@ -12,7 +12,7 @@ intro: |
     This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
 ---
 
-Getting started {.cols-2}
+Getting Started {.cols-2}
 ---------------
 
 ### Getting started 

@@ -13,7 +13,7 @@ categories:
 intro: This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 ---
 
-Getting started
+Getting Started
 ---------------
 
 ### Create a Repository

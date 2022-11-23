@@ -15,7 +15,7 @@ intro: |
 
 
 
-Getting started
+Getting Started
 ------------
 
 ### Introduction

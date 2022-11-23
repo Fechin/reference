@@ -15,7 +15,7 @@ plugins:
 ---
 
 
-Getting started
+Getting Started
 --------
 
 ### Hello.java {.row-span-2}

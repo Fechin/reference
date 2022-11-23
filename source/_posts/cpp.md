@@ -11,7 +11,7 @@ intro: |
 ---
 
 
-Getting started
+Getting Started
 --------
 
 ### hello.cpp

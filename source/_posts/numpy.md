@@ -12,7 +12,7 @@ intro: |
     [NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.
 ---
 
-Getting started {.cols-2}
+Getting Started {.cols-2}
 ---------------
 
 ### Introduction

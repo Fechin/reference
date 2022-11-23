@@ -12,7 +12,7 @@ intro: |
 ---
 
 
-Getting started
+Getting Started
 ------------
 
 ### hello.html {.col-span-2 .row-span-2}
