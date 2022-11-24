@@ -1,11 +1,10 @@
 ---
-title: Roam Research
+title: Roam Research Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693680
 icon: icon-roam-research
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `/`  | Bring up a menu of many core functions
 `Ctrl` `U`  | Search the database
@@ -37,7 +36,7 @@ shortcuts | description
 
 ### Lists and Blocks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Indent block
 `Shift` `Tab`  | Un-indent block
@@ -68,7 +67,7 @@ shortcuts | description
 
 ### Version Control
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `,`  | Add a version
 `Ctrl` `Shift` `.`  | Cycle versions to the right
@@ -79,7 +78,7 @@ shortcuts | description
 
 ### Formatting
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `1-3`  | Toggle between heading styles
 `Ctrl` `Alt` `0`  | Reset heading, or set to paragraph

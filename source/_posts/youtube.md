@@ -1,11 +1,10 @@
 ---
-title: YouTube
+title: YouTube Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700304
 icon: icon-youtube
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Play/Pause when the seek bar is selected, activate a button if a button has focus
 `K`  | Play/Pause in player

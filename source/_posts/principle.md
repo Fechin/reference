@@ -1,11 +1,10 @@
 ---
-title: Principle
+title: Principle Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698567
 icon: icon-principle
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `R`  | Add rectangle
 `Opt` `R`  | Add rectangle as a child
@@ -40,7 +39,7 @@ shortcuts | description
 
 ### Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `(arrows)`  | Nudge
 `Shift` `(arrows)`  | Large nudge
@@ -51,7 +50,7 @@ shortcuts | description
 
 ### Canvas Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space` `(drag)`  | Pan
 `Cmd` `=`  | Zoom in
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Select parent
 `Enter`  | Select child
@@ -77,7 +76,7 @@ shortcuts | description
 
 ### Preview
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `W`  | Rewind prototype
 `Ctrl` `V`  | Start recording video

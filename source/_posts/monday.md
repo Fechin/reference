@@ -1,11 +1,10 @@
 ---
-title: Monday.com
+title: Monday.com Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694181
 icon: icon-monday
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### System
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bolt Switch (quick switch between boards)
 `Esc`  | Close Item Page
@@ -33,7 +32,7 @@ shortcuts | description
 
 ### Board
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Down`  | Navigate Down
 `Up`  | Navigate Up

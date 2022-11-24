@@ -1,11 +1,10 @@
 ---
-title: PhpStorm
+title: PhpStorm Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703719
 icon: icon-phpstorm
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Misc
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `A`  | Find Action
 {.shortcuts}
@@ -30,7 +29,7 @@ shortcuts | description
 
 ### Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Space`  | Basic code completion
 `Alt` `Enter`  | Show intention actions and quick-fixes
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Debugging
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F8`  | Step over
 `F7`  | Step into
@@ -79,7 +78,7 @@ shortcuts | description
 
 ### Running
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `F10`  | Run
 `Shift` `F9`  | Debug
@@ -90,7 +89,7 @@ shortcuts | description
 
 ### Search/Replace
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F/R`  | Find/Replace
 `F3`  | Find next
@@ -101,7 +100,7 @@ shortcuts | description
 
 ### Usage Search
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `F7`  | Find usages
 `Ctrl` `F7`  | Find usages in file
@@ -112,7 +111,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Go to class
 `Ctrl` `Shift` `N`  | Go to file
@@ -139,7 +138,7 @@ shortcuts | description
 
 ### Refactoring
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F5/F6`  | Copy/Move
 `Alt` `Delete`  | Safe delete
@@ -152,7 +151,7 @@ shortcuts | description
 
 ### VCS/Local History
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` <code>\`</code> | VCS quick popup
 `Ctrl` `K`  | Commit project to VCS
@@ -163,7 +162,7 @@ shortcuts | description
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift x2`  | Search everywhere
 `Ctrl` `Shift` `A`  | Find Action
@@ -179,7 +178,7 @@ shortcuts | description
 
 ### Live Templates/Snippets
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `J`  | Insert Live Template
 `eco`  | 'echo' statement

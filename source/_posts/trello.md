@@ -1,11 +1,10 @@
 ---
-title: Trello
+title: Trello Keyboard Shortcuts
 date: 2022-11-23 16:23:31.702599
 icon: icon-trello
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up/Down/Left/Right`  | Navigate Cards
 `B`  | Open Header Boards Menu

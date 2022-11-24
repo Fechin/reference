@@ -1,11 +1,10 @@
 ---
-title: Jira
+title: Jira Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697708
 icon: icon-jira
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Global Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `D`  | Go to Dashboard
 `G` `P`  | Browse to a Project
@@ -43,7 +42,7 @@ shortcuts | description
 
 ### Agile Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `J`  | Next Issue
 `K`  | Previous Issue
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Issue Actions and Navigator Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `O`  | View selected issue
 `J`  | Next Issue

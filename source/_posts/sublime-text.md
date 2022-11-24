@@ -1,11 +1,10 @@
 ---
-title: Sublime Text
+title: Sublime Text Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695666
 icon: icon-sublime-text
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `X`  | Cut line
 `Ctrl` `Enter`  | Insert line after
@@ -54,7 +53,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `P`  | Quick-open files by name
 `Ctrl` `R`  | Goto symbol
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `P`  | Command prompt
 `Ctrl` `K, B`  | Toggle sidebar
@@ -75,7 +74,7 @@ shortcuts | description
 
 ### Find/Replace
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Find
 `Ctrl` `H`  | Replace
@@ -85,7 +84,7 @@ shortcuts | description
 
 ### Split window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Shift` `1`  | Revert view to single column
 `Alt` `Shift` `2`  | Split view into two columns
@@ -100,7 +99,7 @@ shortcuts | description
 
 ### Bookmarks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F2`  | Toggle bookmark
 `F2`  | Next bookmark
@@ -111,7 +110,7 @@ shortcuts | description
 
 ### Text manipulation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `K, U`  | Transform to uppercase
 `Ctrl` `K, L`  | Transform to lowercase

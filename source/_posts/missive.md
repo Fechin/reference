@@ -1,11 +1,10 @@
 ---
-title: Missive
+title: Missive Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695283
 icon: icon-missive
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Down`  | Next item
 `Up`  | Previous item
@@ -39,7 +38,7 @@ shortcuts | description
 
 ### Jumping
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `1-9`  | Go to Mailbox 1-9
 {.shortcuts}
@@ -47,7 +46,7 @@ shortcuts | description
 
 ### Selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Up`  | Select next conversation
 `Shift` `Down`  | Select previous conversation
@@ -59,7 +58,7 @@ shortcuts | description
 
 ### Application
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Compose new email
 `Ctrl` `Shift` `N`  | Create new conversation
@@ -82,7 +81,7 @@ shortcuts | description
 
 ### Actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Back`  | Archive or remove label
 `Alt` `Back`  | Close
@@ -115,7 +114,7 @@ shortcuts | description
 
 ### Composer
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Enter`  | Send
 `Ctrl` `Shift` `Enter`  | Send and archive
@@ -129,7 +128,7 @@ shortcuts | description
 
 ### Formatting
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `-`  | Decrease text size
 `Ctrl` `Shift` `=`  | Increase text size
@@ -145,7 +144,7 @@ shortcuts | description
 
 ### Calendar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Create event
 `Ctrl` `R`  | Refresh

@@ -1,11 +1,10 @@
 ---
-title: Microsoft Outlook
+title: Microsoft Outlook Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698084
 icon: icon-microsoft-outlook
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Frequently used
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Close
 `Alt` `H`  | Go to Home tab
@@ -46,7 +45,7 @@ shortcuts | description
 
 ### Basic navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `1`  | Switch to Mail view
 `Ctrl` `2`  | Switch to Calendar view
@@ -74,7 +73,7 @@ shortcuts | description
 
 ### Search
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `E`  | Find a message or other item
 `Esc`  | Clear the search results
@@ -90,7 +89,7 @@ shortcuts | description
 
 ### Flags
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `G`  | Open the Flag for Follow Up dialog box
 {.shortcuts}
@@ -98,7 +97,7 @@ shortcuts | description
 
 ### Color categories
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `D`  | Delete the selected category from the list in the Color categories box
 {.shortcuts}
@@ -106,7 +105,7 @@ shortcuts | description
 
 ### Create an item or file
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `A`  | Create an appointment
 `Ctrl` `Shift` `C`  | Create a contact
@@ -126,7 +125,7 @@ shortcuts | description
 
 ### Commands in most views
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `S`  | Save (except in Tasks view)
 `Alt` `S`  | Save and close (except in Mail view)
@@ -150,7 +149,7 @@ shortcuts | description
 
 ### Mail
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `I`  | Switch to Inbox
 `Ctrl` `Shift` `O`  | Switch to Outbox
@@ -192,7 +191,7 @@ shortcuts | description
 
 ### Calendar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Create an appointment
 `Ctrl` `Shift` `A`  | Create an appointment (any Outlook view)
@@ -218,7 +217,7 @@ shortcuts | description
 
 ### People
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `D`  | Dial a new call
 `F3`  | Find a contact or other item
@@ -246,7 +245,7 @@ shortcuts | description
 
 ### Tasks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Accept a task request
 `Ctrl` `D`  | Decline a task request
@@ -268,7 +267,7 @@ shortcuts | description
 
 ### Format text
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `O`  | Display the Format menu
 `Ctrl` `Shift` `P`  | Display the Font dialog box
@@ -302,7 +301,7 @@ shortcuts | description
 
 ### Add web information to items
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `K`  | Insert or edit a hyperlink in the body of an item
 {.shortcuts}
@@ -310,7 +309,7 @@ shortcuts | description
 
 ### Printing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `F, P`  | Open the Print tab in Backstage view
 `Alt` `F, P, F`  | Print an item fron an open window
@@ -322,7 +321,7 @@ shortcuts | description
 
 ### Send/Receive
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F9`  | Start a send/receive for all defined groups
 `Shift` `F9`  | Start a send/receive for the current folder
@@ -333,7 +332,7 @@ shortcuts | description
 
 ### Visual Basic Editor
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `F11`  | Open Visual Basic Editor
 {.shortcuts}
@@ -341,7 +340,7 @@ shortcuts | description
 
 ### Macros
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `F8`  | Play macro
 {.shortcuts}
@@ -349,7 +348,7 @@ shortcuts | description
 
 ### Forms
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Create an InfoPath form
 `Ctrl` `Shift` `Alt` `T`  | Close an InfoPath form

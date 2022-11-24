@@ -1,11 +1,10 @@
 ---
-title: Gmail
+title: Gmail Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699967
 icon: icon-gmail
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Compose and Chat
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `P`  | Previous message in an open conversation
 `N`  | Next message in an open conversation
@@ -42,7 +41,7 @@ shortcuts | description
 
 ### Formatting Text
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `5`  | Previous font
 `Ctrl` `Shift` `6`  | Next font
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `,`  | Move focus to toolbar
 `X`  | Select conversation
@@ -97,7 +96,7 @@ shortcuts | description
 
 ### Hangouts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `H` `M`  | Show menu
 `H` `A`  | Show archived hangouts
@@ -109,7 +108,7 @@ shortcuts | description
 
 ### Jumping
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `I`  | Go to inbox
 `G` `S`  | Go to starred conversations
@@ -125,7 +124,7 @@ shortcuts | description
 
 ### Threadlist Selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `8` `A`  | Select all conversations
 `Shift` `8` `N`  | Deselect all conversations
@@ -138,7 +137,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `N`  | Go to next page
 `G` `P`  | Go to previous page
@@ -153,7 +152,7 @@ shortcuts | description
 
 ### Application
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Compose
 `D`  | Compose in a new tab

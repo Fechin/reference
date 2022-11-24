@@ -1,11 +1,10 @@
 ---
-title: Code Editor for iOS
+title: Code Editor for iOS Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697110
 icon: icon-code-editor
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Show completions
 `Tab`  | Insert indent, depending on the preferences of tabs or spaces

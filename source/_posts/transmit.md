@@ -1,11 +1,10 @@
 ---
-title: Transmit
+title: Transmit Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695841
 icon: icon-transmit
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Transmit Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `,`  | Preferences...
 `Cmd` `H`  | Hide Transmit
@@ -34,7 +33,7 @@ shortcuts | description
 
 ### File Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `N`  | New window
 `Cmd` `T`  | New tab
@@ -57,7 +56,7 @@ shortcuts | description
 
 ### Edit Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Z`  | Undo
 `Cmd` `Shift` `Z`  | Redo
@@ -73,7 +72,7 @@ shortcuts | description
 
 ### View Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `L`  | Show transfers
 `Cmd` `Opt` `L`  | Show transfers window
@@ -93,7 +92,7 @@ shortcuts | description
 
 ### Go Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `[`  | Back
 `Cmd` `]`  | Forward
@@ -107,7 +106,7 @@ shortcuts | description
 
 ### Transfer Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `R`  | Transfer selected items
 `Cmd` `Opt` `Shift` `R`  | Transfer selected items without rules
@@ -117,7 +116,7 @@ shortcuts | description
 
 ### Servers Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `A`  | Add new server
 `Cmd` `Shift` `F`  | Show quick connect
@@ -127,7 +126,7 @@ shortcuts | description
 
 ### Window Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `M`  | Minimize
 `Cmd` `Opt` `M`  | Minimize all

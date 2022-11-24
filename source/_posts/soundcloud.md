@@ -1,11 +1,10 @@
 ---
-title: SoundCloud
+title: SoundCloud Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705804
 icon: icon-soundcloud
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Play or pause
 `Shift` `Right`  | Play next track

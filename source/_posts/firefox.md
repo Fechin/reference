@@ -1,11 +1,10 @@
 ---
-title: Firefox
+title: Firefox Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703957
 icon: icon-firefox
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Left`  | Back
 `Ctrl` `Right`  | Forward
@@ -36,7 +35,7 @@ shortcuts | description
 
 ### Current Page
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Focus Next Link or Input Field
 `Shift` `Tab`  | Focus Previous Link or Input Field
@@ -56,7 +55,7 @@ shortcuts | description
 
 ### Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Copy
 `Ctrl` `X`  | Cut
@@ -73,7 +72,7 @@ shortcuts | description
 
 ### Search
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Find
 `Ctrl` `G`  | Find Again
@@ -89,7 +88,7 @@ shortcuts | description
 
 ### Windows and Tabs
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `W`  | Close Tab
 `Ctrl` `Shift` `W`  | Close Window
@@ -121,7 +120,7 @@ shortcuts | description
 
 ### History
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `H`  | History sidebar
 `Ctrl` `Shift` `Delete`  | Clear Recent History
@@ -130,7 +129,7 @@ shortcuts | description
 
 ### Bookmarks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `D`  | Bookmark All Tabs
 `Ctrl` `D`  | Bookmark This Page
@@ -142,7 +141,7 @@ shortcuts | description
 
 ### Tools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `J`  | Downloads
 `Ctrl` `Shift` `A`  | Add-ons
@@ -164,7 +163,7 @@ shortcuts | description
 
 ### PDF Viewer
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `N/J/Right`  | Next page
 `P/K/Left`  | Previous page
@@ -182,7 +181,7 @@ shortcuts | description
 
 ### Miscellaneous
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Enter`  | Complete .com address
 `Shift` `Enter`  | Complete .net address
@@ -197,7 +196,7 @@ shortcuts | description
 
 ### Media Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Toggle Play/Pause
 `Down`  | Decrease volume

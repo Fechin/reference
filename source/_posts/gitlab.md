@@ -1,11 +1,10 @@
 ---
-title: GitLab
+title: GitLab Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693478
 icon: icon-gitlab
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Global
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `?`  | Show or hide the shortcut reference sheet
 `Shift` `P`  | Go to your projects page
@@ -41,7 +40,7 @@ shortcuts | description
 
 ### Project
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `P`  | Go to the project home page
 `G` `V`  | Go to the project activity feed
@@ -66,7 +65,7 @@ shortcuts | description
 
 ### Issues and Merge Requests
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `E`  | Edit description
 `A`  | Change assignee
@@ -82,7 +81,7 @@ shortcuts | description
 
 ### Project Files
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up`  | Move selection up
 `Down`  | Move selection down
@@ -94,7 +93,7 @@ shortcuts | description
 
 ### Web IDE
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `P`  | Search for, and then open, another file for editing
 `Ctrl` `Enter`  | Commit, when editing the commit message
@@ -103,7 +102,7 @@ shortcuts | description
 
 ### Repository Graph
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Left`  | Scroll left
 `Right`  | Scroll right
@@ -116,7 +115,7 @@ shortcuts | description
 
 ### Wiki Pages
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `E`  | Edit wiki page
 {.shortcuts}
@@ -124,7 +123,7 @@ shortcuts | description
 
 ### Filtered Search
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Backspace`  | Clear entire search filter
 `Alt` `Backspace`  | Clear one token at a time
@@ -133,7 +132,7 @@ shortcuts | description
 
 ### Epics
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `R`  | Start writing a comment, if any text is selected it will be quoted
 `E`  | Edit description

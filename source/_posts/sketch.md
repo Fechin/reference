@@ -1,11 +1,10 @@
 ---
-title: Sketch
+title: Sketch Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699427
 icon: icon-sketch
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `C`  | Copy
 `Cmd` `X`  | Cut
@@ -64,7 +63,7 @@ shortcuts | description
 
 ### Inserting Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `R`  | Rectangle
 `O`  | Oval
@@ -81,7 +80,7 @@ shortcuts | description
 
 ### Selecting Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `A`  | Select all
 `Cmd` `Shift` `A`  | Select all Artboards
@@ -93,7 +92,7 @@ shortcuts | description
 
 ### Moving and Resizing Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Opt`  | Display distance between other layers (while hovering)
 `Cmd` `D`  | Duplicate
@@ -110,7 +109,7 @@ shortcuts | description
 
 ### Editing Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | Edit layer
 `Esc`  | Finish editing
@@ -138,7 +137,7 @@ shortcuts | description
 
 ### Vector Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Opt` `O`  | Open or close path
 `Tab`  | Selects next point
@@ -152,7 +151,7 @@ shortcuts | description
 
 ### Text Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `Opt` `V`  | Paste as rich text
 `Cmd` `T`  | Change typeface
@@ -174,7 +173,7 @@ shortcuts | description
 
 ### Arranging Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `G`  | Group
 `Cmd` `Shift` `G`  | Ungroup
@@ -197,7 +196,7 @@ shortcuts | description
 
 ### Exporting Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `E`  | Export
 `Cmd` `E`  | Export selected layer(s)
@@ -206,7 +205,7 @@ shortcuts | description
 
 ### Zoom and Focus
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `0`  | Zoom to 100%
 `Cmd` `1`  | Zoom to all elements on Canvas
@@ -223,7 +222,7 @@ shortcuts | description
 
 ### Text Fields
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Opt` `Tab`  | Focus Inspector
 `Tab`  | Select next field
@@ -241,7 +240,7 @@ shortcuts | description
 
 ### Miscellaneous
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift`  | Launch Sketch with all plugins disabled (hold on startup)
 `Cmd` `Ctrl` `D`  | Detach from Symbol

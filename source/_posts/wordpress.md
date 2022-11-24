@@ -1,11 +1,10 @@
 ---
-title: WordPress
+title: WordPress Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697854
 icon: icon-wordpress
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Editor
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Copy
 `Ctrl` `V`  | Paste

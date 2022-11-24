@@ -1,11 +1,10 @@
 ---
-title: Github
+title: Github Keyboard Shortcuts
 date: 2022-11-23 16:23:31.704787
 icon: icon-github
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Site wide shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `S`  | Focus the search bar
 `G` `N`  | Go to your notifications
@@ -33,7 +32,7 @@ shortcuts | description
 
 ### Repositories
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `C`  | Go to the Code tab
 `G` `I`  | Go to the Issues tab
@@ -45,7 +44,7 @@ shortcuts | description
 
 ### Source code editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Start searching in file editor
 `Ctrl` `G`  | Find next
@@ -60,7 +59,7 @@ shortcuts | description
 
 ### Source code browsing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `T`  | Activates the file finder
 `L`  | Jump to a line in your code
@@ -73,7 +72,7 @@ shortcuts | description
 
 ### Comments
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Inserts Markdown formatting for bolding text
 `Ctrl` `I`  | Inserts Markdown formatting for italicizing text
@@ -88,7 +87,7 @@ shortcuts | description
 
 ### Issue and pull request lists
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Create an issue
 `Ctrl` `/`  | Focus your cursor on the issues or pull requests search bar
@@ -102,7 +101,7 @@ shortcuts | description
 
 ### Issues and pull requests
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Q`  | Request a reviewer
 `M`  | Set a milestone
@@ -113,7 +112,7 @@ shortcuts | description
 
 ### Changes in pull requests
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Open the list of commits in the pull request
 `T`  | Open the list of changed files in the pull request
@@ -126,7 +125,7 @@ shortcuts | description
 
 ### Project boards
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter/Space`  | Start moving the focused column
 `Esc`  | Cancel the move in progress
@@ -155,7 +154,7 @@ shortcuts | description
 
 ### Notifications
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `E/L/Y`  | Mark as read
 `Shift` `M`  | Mute thread
@@ -164,7 +163,7 @@ shortcuts | description
 
 ### Network graph
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Left/H`  | Scroll left
 `Right/L`  | Scroll right

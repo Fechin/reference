@@ -1,11 +1,10 @@
 ---
-title: Fortnite
+title: Fortnite Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699229
 icon: icon-fortnite
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Main Controls
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `R`  | Reload
 `Q`  | Switch between combat mode and build mode
@@ -44,7 +43,7 @@ shortcuts | description
 
 ### Building
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `R`  | Rotate building piece
 `Z`  | Wall mode
@@ -60,7 +59,7 @@ shortcuts | description
 
 ### Communication
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | Chat
 `B`  | Emote

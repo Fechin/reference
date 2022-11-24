@@ -1,11 +1,10 @@
 ---
-title: Obsidian
+title: Obsidian Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700412
 icon: icon-obsidian
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Default Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `S`  | Save a file in the editor
 `Ctrl` `N`  | Create a new note
@@ -40,7 +39,7 @@ shortcuts | description
 
 ### Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bold selected text
 `Ctrl` `I`  | Italic selected text

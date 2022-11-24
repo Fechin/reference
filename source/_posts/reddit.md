@@ -1,11 +1,10 @@
 ---
-title: Reddit
+title: Reddit Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705575
 icon: icon-reddit
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `?`  | Show shortcuts
 `J`  | Next post or comment
@@ -37,7 +36,7 @@ shortcuts | description
 
 ### Action
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `A`  | Upvote
 `Z`  | Downvote

@@ -1,11 +1,10 @@
 ---
-title: Asana
+title: Asana Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697445
 icon: icon-asana
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### My Tasks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab` `Y`  | Mark as Today in your My Tasks
 `Tab` `U`  | Mark as Upcoming in your My Tasks
@@ -32,7 +31,7 @@ shortcuts | description
 
 ### Inbox
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `K/J`  | Move Up/Down
 `H`  | Jump to Inbox tab
@@ -45,7 +44,7 @@ shortcuts | description
 
 ### Task Actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | New Task
 `Tab` `Backspace`  | Delete Selected Task(s)
@@ -63,7 +62,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab` `Z`  | Navigate to My Tasks
 `Tab` `I`  | Navigate to Inbox
@@ -79,7 +78,7 @@ shortcuts | description
 
 ### Selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up/Down`  | Change Selection
 `Shift` `(click)`  | Select Range
@@ -90,7 +89,7 @@ shortcuts | description
 
 ### Application
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `/`  | Show Keyboard Shortcuts
 `Tab`  | Expand the right pane

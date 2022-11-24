@@ -1,11 +1,10 @@
 ---
-title: Blender
+title: Blender Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700590
 icon: icon-blender
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Universal
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Cancels Blender functions without changes
 `Space`  | Open the toolbox
@@ -69,7 +68,7 @@ shortcuts | description
 
 ### Object Mode
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Home`  | All objects in the visible layer are displayed completely, centered in the window
 `PgUp`  | Select the next object key, if more than one is selected the selection is shifted up cyclically
@@ -134,7 +133,7 @@ shortcuts | description
 
 ### Edit Mode - General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Start or stop edit mode
 `Alt` `E`  | Start or stop edit mode (alternative)
@@ -156,7 +155,7 @@ shortcuts | description
 
 ### Edit Mode - Mesh
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `+`  | Adds to selection all vertices connected by an edge to an already selected vertex
 `Ctrl` `-`  | Removes from selection all vertices of the outer ring of selected vertices
@@ -193,7 +192,7 @@ shortcuts | description
 
 ### Edit Mode - Curve
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Set the selected curves to cyclic or turn cyclic off
 `E`  | Extrude curve
@@ -214,7 +213,7 @@ shortcuts | description
 
 ### Edit Mode - Surface
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Toggle cyclic menu
 `E`  | Extrude selected
@@ -230,7 +229,7 @@ shortcuts | description
 
 ### Edit Mode - Font
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Right`  | Move text cursor one position forward
 `Shift` `Right`  | Move text cursor to the end of the line
@@ -247,7 +246,7 @@ shortcuts | description
 
 ### VertexPaint
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `K`  | All vertex colors are erased, they are changed to the current drawing color
 `U`  | Undo, press twice redos the undone
@@ -257,7 +256,7 @@ shortcuts | description
 
 ### UV Editor
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `E`  | LSCM unwrapping, launches on the faces visible in the UV editor
 `P`  | Pin selected vertices, they will stay in place on the UV editor when executing an LSCM unwrap
@@ -267,7 +266,7 @@ shortcuts | description
 
 ### FaceSelect
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Switches to edit mode
 `F`  | With multiple, co-planar faces selected, this will merge them into one FGon so long as they remain co-planar

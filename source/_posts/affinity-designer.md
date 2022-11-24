@@ -1,11 +1,10 @@
 ---
-title: Affinity Designer
+title: Affinity Designer Keyboard Shortcuts
 date: 2022-11-23 16:23:31.702748
 icon: icon-affinity-designer
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -20,9 +19,9 @@ Keyboard Shortcuts
 
 
 
-### Designer Persona
+### Designer Persona {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Cancel operation
 `F1`  | Help
@@ -87,9 +86,10 @@ shortcuts | description
 {.shortcuts}
 
 
+
 ### Pixel Persona
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `W`  | Selection brush
 `E`  | Erase brush
@@ -108,30 +108,11 @@ shortcuts | description
 {.shortcuts}
 
 
-### Advanced Text
-
-shortcuts | description
----|---
-`Ctrl` `T`  | Character panel
-`Ctrl` `Shift` `T`  | Typography dialog
-`Ctrl` `B`  | Bold
-`Ctrl` `I`  | Italic
-`Ctrl` `U`  | Underline
-`Ctrl` `Alt` `L`  | Align left
-`Ctrl` `Alt` `C`  | Align center
-`Ctrl` `Alt` `R`  | Align right
-`Alt` `Shift` `Left`  | Tighten spacing more
-`Alt` `Shift` `Right`  | Loosen spacing more
-`Ctrl` `Alt` `Shift` `Up`  | Precise raise baseline
-`Ctrl` `Alt` `Shift` `Down`  | Precise lower baseline
-`Ctrl` `Alt` `Down`  | Precise increase leading
-`Ctrl` `Alt` `Up`  | Precise decrease leading
-{.shortcuts}
 
 
-### Modifiers and Layer Control
+### Modifiers and Layer Control {.row-span-2} 
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt`  | Drawing and painting - temporarily switches to the color picker tool
 `Shift`  | Freehand selection tools - connects clicked points with straight lines
@@ -154,6 +135,30 @@ shortcuts | description
 `Alt`  | Vector drawing tools - sets node to sharp for creating cusps
 `Ctrl`  | Vector drawing tools - temporarily switches to node editing from pen
 {.shortcuts}
+
+
+
+### Advanced Text
+
+Shortcut | Action
+---|---
+`Ctrl` `T`  | Character panel
+`Ctrl` `Shift` `T`  | Typography dialog
+`Ctrl` `B`  | Bold
+`Ctrl` `I`  | Italic
+`Ctrl` `U`  | Underline
+`Ctrl` `Alt` `L`  | Align left
+`Ctrl` `Alt` `C`  | Align center
+`Ctrl` `Alt` `R`  | Align right
+`Alt` `Shift` `Left`  | Tighten spacing more
+`Alt` `Shift` `Right`  | Loosen spacing more
+`Ctrl` `Alt` `Shift` `Up`  | Precise raise baseline
+`Ctrl` `Alt` `Shift` `Down`  | Precise lower baseline
+`Ctrl` `Alt` `Down`  | Precise increase leading
+`Ctrl` `Alt` `Up`  | Precise decrease leading
+{.shortcuts}
+
+
 
 
 

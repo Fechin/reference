@@ -1,11 +1,10 @@
 ---
-title: Audacity
+title: Audacity Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701833
 icon: icon-audacity
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### File Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New
 `Ctrl` `O`  | Open
@@ -37,7 +36,7 @@ shortcuts | description
 
 ### Edit Menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Y`  | Redo
@@ -69,85 +68,11 @@ shortcuts | description
 {.shortcuts}
 
 
-### Select Menu
-
-shortcuts | description
----|---
-`Ctrl` `A`  | Select all
-`Ctrl` `Shift` `A`  | Select none
-`Z`  | Select at zero crossings
-`Ctrl` `Shift` `K`  | Select in all tracks
-`Ctrl` `Shift` `Y`  | Select in all sync-locked tracks
-`[`  | Left at playback position
-`]`  | Right at playback position
-`Shift` `J`  | Track start to cursor
-`Shift` `K`  | Cursor to track end
-`Q`  | Toggle spectral selection
-`Ctrl` `Alt` `P`  | Previous clip
-`Ctrl` `Alt` `N`  | Next clip
-{.shortcuts}
 
 
-### View Menu
+### Extra Menu {.row-span-4}
 
-shortcuts | description
----|---
-`Ctrl` `1`  | Zoom in
-`Ctrl` `2`  | Zoom normal
-`Ctrl` `3`  | Zoom out
-`Ctrl` `E`  | Zoom to selection
-`Shift` `Z`  | Zoom toggle
-`Ctrl` `F`  | Fit to width
-`Ctrl` `Shift` `F`  | Fit to height
-`Ctrl` `Shift` `C`  | Collapse all tracks
-`Ctrl` `Shift` `X`  | Expand collapsed tracks
-`Ctrl` `[`  | Skip to selection start
-`Ctrl` `]`  | Skip to selection end
-{.shortcuts}
-
-
-### Transport Menu
-
-shortcuts | description
----|---
-`Space`  | Play or stop
-`X`  | Play or stop and set cursor
-`Shift` `Space`  | Loop play
-`P`  | Pause
-`R`  | Record
-`Shift` `R`  | Record new track
-`Shift` `T`  | Timer record...
-`Shift` `D`  | Punch and roll record
-`P`  | Pause
-`J`  | Cursor to track start
-`K`  | Cursor to track end
-`Home`  | Cursor to project start
-`End`  | Cursor to project end
-{.shortcuts}
-
-
-### Tracks Menu
-
-shortcuts | description
----|---
-`Ctrl` `Shift` `N`  | Add new mono track
-`Ctrl` `Shift` `M`  | Mix and render to new track
-`Ctrl` `U`  | Mute all tracks
-`Ctrl` `Shift` `U`  | Unmute all tracks
-{.shortcuts}
-
-
-### Effect Menu
-
-shortcuts | description
----|---
-`Ctrl` `R`  | Repeat last effect
-{.shortcuts}
-
-
-### Extra Menu
-
-shortcuts | description
+Shortcut | Action
 ---|---
 `F11`  | Toggle full screen
 `1`  | Play one second
@@ -210,6 +135,84 @@ shortcuts | description
 `Shift` `C`  | Close focused track
 {.shortcuts}
 
+
+
+
+
+### Select Menu
+
+Shortcut | Action
+---|---
+`Ctrl` `A`  | Select all
+`Ctrl` `Shift` `A`  | Select none
+`Z`  | Select at zero crossings
+`Ctrl` `Shift` `K`  | Select in all tracks
+`Ctrl` `Shift` `Y`  | Select in all sync-locked tracks
+`[`  | Left at playback position
+`]`  | Right at playback position
+`Shift` `J`  | Track start to cursor
+`Shift` `K`  | Cursor to track end
+`Q`  | Toggle spectral selection
+`Ctrl` `Alt` `P`  | Previous clip
+`Ctrl` `Alt` `N`  | Next clip
+{.shortcuts}
+
+
+### View Menu
+
+Shortcut | Action
+---|---
+`Ctrl` `1`  | Zoom in
+`Ctrl` `2`  | Zoom normal
+`Ctrl` `3`  | Zoom out
+`Ctrl` `E`  | Zoom to selection
+`Shift` `Z`  | Zoom toggle
+`Ctrl` `F`  | Fit to width
+`Ctrl` `Shift` `F`  | Fit to height
+`Ctrl` `Shift` `C`  | Collapse all tracks
+`Ctrl` `Shift` `X`  | Expand collapsed tracks
+`Ctrl` `[`  | Skip to selection start
+`Ctrl` `]`  | Skip to selection end
+{.shortcuts}
+
+
+### Transport Menu
+
+Shortcut | Action
+---|---
+`Space`  | Play or stop
+`X`  | Play or stop and set cursor
+`Shift` `Space`  | Loop play
+`P`  | Pause
+`R`  | Record
+`Shift` `R`  | Record new track
+`Shift` `T`  | Timer record...
+`Shift` `D`  | Punch and roll record
+`P`  | Pause
+`J`  | Cursor to track start
+`K`  | Cursor to track end
+`Home`  | Cursor to project start
+`End`  | Cursor to project end
+{.shortcuts}
+
+
+### Tracks Menu
+
+Shortcut | Action
+---|---
+`Ctrl` `Shift` `N`  | Add new mono track
+`Ctrl` `Shift` `M`  | Mix and render to new track
+`Ctrl` `U`  | Mute all tracks
+`Ctrl` `Shift` `U`  | Unmute all tracks
+{.shortcuts}
+
+
+### Effect Menu
+
+Shortcut | Action
+---|---
+`Ctrl` `R`  | Repeat last effect
+{.shortcuts}
 
 
 

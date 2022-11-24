@@ -1,11 +1,10 @@
 ---
-title: Spotify
+title: Spotify Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699093
 icon: icon-spotify
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Create new playlist
 `Ctrl` `X`  | Cut

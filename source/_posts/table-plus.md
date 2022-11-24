@@ -1,11 +1,10 @@
 ---
-title: TablePlus
+title: TablePlus Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706905
 icon: icon-tableplus
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Global
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Open a new connection
 `Ctrl` `Q`  | Quit app
@@ -33,7 +32,7 @@ shortcuts | description
 
 ### Workspace
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `W`  | Close a tab/window
 `Ctrl` `S`  | Commit the changes
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Table Data
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Toggle row detail when row selected
 `Ctrl` `C`  | Copy rows

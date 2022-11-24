@@ -1,11 +1,10 @@
 ---
-title: Superhuman
+title: Superhuman Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694365
 icon: icon-superhuman
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `K`  | Superhuman command
 `/`  | Search
@@ -35,7 +34,7 @@ shortcuts | description
 
 ### Filters
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `U`  | Unread
 `Shift` `S`  | Starred
@@ -46,7 +45,7 @@ shortcuts | description
 
 ### Messages
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Compose
 `Enter`  | Reply all
@@ -61,7 +60,7 @@ shortcuts | description
 
 ### Conversations
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `E`  | Mark done (archive)
 `Shift` `E`  | Mark as not done
@@ -77,7 +76,7 @@ shortcuts | description
 
 ### Folders (Press keys separately)
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `I`  | Go to inbox or important
 `G` `O`  | Go to other
@@ -97,7 +96,7 @@ shortcuts | description
 
 ### Format
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `B`  | Bold
 `Cmd` `I`  | Italics
@@ -117,7 +116,7 @@ shortcuts | description
 
 ### Labels
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `L`  | Add or remove a label
 `Y`  | Remove label
@@ -130,7 +129,7 @@ shortcuts | description
 
 ### Calendar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `0`  | Toggle calendar
 `-`  | Previous day
@@ -140,7 +139,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up/Down/Left/Right`  | Superhuman focus
 `Tab`  | Next split
@@ -168,7 +167,7 @@ shortcuts | description
 
 ### Compose
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `O`  | To
 `Cmd` `Shift` `C`  | CC
@@ -190,7 +189,7 @@ shortcuts | description
 
 ### Pop Out Compose
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `P`  | Pop draft in or out
 `Shift` `R`  | Pop out reply

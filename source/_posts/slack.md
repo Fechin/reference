@@ -1,11 +1,10 @@
 ---
-title: Slack
+title: Slack Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705147
 icon: icon-slack
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Move focus to the next element
 `Shift` `Tab`  | Move focus to the previous element
@@ -59,7 +58,7 @@ shortcuts | description
 
 ### All Unreads navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `A`  | Open All Unreads view
 `Alt` `(click a message)`  | Mark message as unread
@@ -70,7 +69,7 @@ shortcuts | description
 
 ### Switch workspaces
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `Tab`  | Switch to previous workspace
 `Ctrl` `Tab`  | Switch to next workspace
@@ -80,7 +79,7 @@ shortcuts | description
 
 ### Mark messages read or unread
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Mark all messages in current channel or DM as read
 `Shift` `Esc`  | Mark all messages as read
@@ -90,7 +89,7 @@ shortcuts | description
 
 ### Message shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up`  | Edit your last message
 `Shift` `Up`  | Select text to beginning of current line
@@ -110,7 +109,7 @@ shortcuts | description
 
 ### Message autocomplete
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `[character]` `Tab`  | Autocomplete @display name beginning with [character]
 `#[character]` `Tab`  | Autocomplete channel beginning with [character]
@@ -120,7 +119,7 @@ shortcuts | description
 
 ### File and snippets
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `U`  | Upload a file
 `Ctrl` `Shift` `Enter`  | Create a new snippet
@@ -129,7 +128,7 @@ shortcuts | description
 
 ### Call actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `M`  | Toggle mute on and off
 `V`  | Toggle video on and off

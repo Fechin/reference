@@ -1,11 +1,10 @@
 ---
-title: Webflow
+title: Webflow Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703217
 icon: icon-webflow
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `/`  | Show shortcut cheatsheet
 `Ctrl` `Shift` `S`  | Save as a snapshot
@@ -36,7 +35,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `P`  | Preview mode
 `Ctrl` `Shift` `G`  | Guide overlay
@@ -47,7 +46,7 @@ shortcuts | description
 
 ### Left-hand Toolbar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `A`  | Show add panel
 `Z`  | Show navigator tab
@@ -60,7 +59,7 @@ shortcuts | description
 
 ### Right-hand Tabs
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `S`  | Show style tab
 `D`  | Show settings tab
@@ -71,7 +70,7 @@ shortcuts | description
 
 ### Copy/Paste
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Copy
 `Ctrl` `X`  | Cut
@@ -82,7 +81,7 @@ shortcuts | description
 
 ### Undo/Redo
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Shift` `Z`  | Redo
@@ -91,7 +90,7 @@ shortcuts | description
 
 ### Device View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `1`  | Desktop
 `2`  | Tablet
@@ -102,7 +101,7 @@ shortcuts | description
 
 ### Style Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `(drag)`  | Margin or padding (on all sides)
 `Alt` `(drag)`  | Margin or padding (top and bottom, or left and right)
@@ -113,7 +112,7 @@ shortcuts | description
 
 ### Find
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `K`  | Quick find
 {.shortcuts}
@@ -121,7 +120,7 @@ shortcuts | description
 
 ### Other
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `(click)`  | Expand or collapse panel sections
 `Up/Down`  | Select parent or child element

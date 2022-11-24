@@ -1,11 +1,10 @@
 ---
-title: Bear
+title: Bear Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705436
 icon: icon-bear
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Text Styles
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Option` `Cmd` `1-6`  | Headings
 `Option` `Cmd` `S`  | Line separator
@@ -44,7 +43,7 @@ shortcuts | description
 
 ### Todos
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Cmd` `T`  | Toggle Todo
 `Option` `Cmd` `T`  | Mark Todo as completed
@@ -54,7 +53,7 @@ shortcuts | description
 
 ### Structure
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `]`  | Shift line right
 `Cmd` `[`  | Shift line left
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Lists
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Shift the list element right
 `Shift` `Tab`  | Shift the list element left
@@ -75,7 +74,7 @@ shortcuts | description
 
 ### Dates
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Cmd` `7`  | Long Form Date with time (11 Jul 2017, 10:43)
 `Shift` `Cmd` `8`  | Long Form Date (11 Jul 2017)
@@ -86,7 +85,7 @@ shortcuts | description
 
 ### Control
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `A`  | Select all
 `Cmd` `Enter`  | End editing
@@ -96,7 +95,7 @@ shortcuts | description
 
 ### Zoom
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `+`  | Zoom in
 `Cmd` `-`  | Zoom out
@@ -106,7 +105,7 @@ shortcuts | description
 
 ### Panels and search
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Cmd` `I`  | Toggle information panel
 `Cmd` `F`  | Search inside the current note
@@ -117,7 +116,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `N`  | Create a new note
 `Option` `Cmd` `N`  | Create a new note in a new window
@@ -143,7 +142,7 @@ shortcuts | description
 
 ### Saving and importing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Cmd` `S`  | Export selected notes
 `Shift` `Cmd` `O`  | Import notes
@@ -152,7 +151,7 @@ shortcuts | description
 
 ### Window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `1`  | Show sidebar, note list and editor
 `Ctrl` `2`  | Show note list and editor

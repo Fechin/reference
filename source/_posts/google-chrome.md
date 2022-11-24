@@ -1,11 +1,10 @@
 ---
-title: Google Chrome
+title: Google Chrome Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696190
 icon: icon-chrome
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Tab and window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Open a new window
 `Ctrl` `Shift` `N`  | Open a new window in Incognito mode
@@ -46,7 +45,7 @@ shortcuts | description
 
 ### Google Chrome features
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `F`  | Open the Chrome menu
 `Ctrl` `Shift` `B`  | Show or hide the Bookmarks bar
@@ -70,7 +69,7 @@ shortcuts | description
 
 ### Address bar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `(type)` `Enter`  | Search with your default search engine
 `(type)` `Tab`  | Search using a different search engine
@@ -84,7 +83,7 @@ shortcuts | description
 
 ### Webpage shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `P`  | Open options to print the current page
 `Ctrl` `S`  | Open options to save the current page

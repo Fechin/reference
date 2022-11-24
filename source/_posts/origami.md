@@ -1,11 +1,10 @@
 ---
-title: Origami Studio
+title: Origami Studio Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695481
 icon: icon-origami-studio
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Opt` `Enter`  | Insert patch
 `Cmd` `Enter`  | Insert layer
@@ -32,7 +31,7 @@ shortcuts | description
 
 ### Patches
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `I`  | Interaction
 `S`  | Switch
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Organizing Patches
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Enter`  | Rename patch
 `Cmd` `[`  | Align patches left
@@ -85,7 +84,7 @@ shortcuts | description
 
 ### Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Enter`  | Rename layer
 `Cmd` `Shift` `H`  | Hide or show layer
@@ -109,7 +108,7 @@ shortcuts | description
 
 ### Viewer
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `R`  | Restart prototype
 `Opt` `D`  | Toggle device
@@ -122,7 +121,7 @@ shortcuts | description
 
 ### Number Inputs
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up`  | Increase number by one
 `Down`  | Decrease number by one

@@ -1,11 +1,10 @@
 ---
-title: Skype
+title: Skype Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698711
 icon: icon-skype
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `O`  | Open Notification panel
 `Ctrl` `,`  | Open app settings

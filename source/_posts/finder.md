@@ -1,11 +1,10 @@
 ---
-title: Finder
+title: Finder Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693285
 icon: icon-finder
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Finder Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `D`  | Duplicate the selected files
 `Cmd` `E`  | Eject the selected disk or volume

@@ -1,11 +1,10 @@
 ---
-title: Airtable
+title: Airtable Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699659
 icon: icon-airtable
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -20,9 +19,9 @@ Keyboard Shortcuts
 
 
 
-### General
+### General {.row-span-3}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo action
 `Ctrl` `Shift` `Z`  | Redo action
@@ -39,9 +38,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Grid View
+### Grid View {.row-span-3}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Copy a cell or range of cells
 `Ctrl` `X`  | Cut a cell or range of cells
@@ -62,7 +61,7 @@ shortcuts | description
 
 ### Gallery View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Up/Down`  | Scroll to edge of gallery
 {.shortcuts}
@@ -70,7 +69,7 @@ shortcuts | description
 
 ### Kanban View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Left`  | Scroll kanban board to the left by one stack
 `Right`  | Scroll kanban board to the right by one stack
@@ -83,7 +82,7 @@ shortcuts | description
 
 ### Expanded Record
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `<`  | Move to the previous record while viewing an expanded record
 `Ctrl` `Shift` `>`  | Move to the next record while viewing an expanded record

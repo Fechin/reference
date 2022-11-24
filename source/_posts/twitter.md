@@ -1,11 +1,10 @@
 ---
-title: Twitter
+title: Twitter Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705009
 icon: icon-twitter
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `N`  | New tweet
 `L`  | Like tweet
@@ -40,7 +39,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `?`  | Full keyboard menu
 `J`  | Next tweet
@@ -52,7 +51,7 @@ shortcuts | description
 
 ### Timelines
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `N`  | Home timeline
 `G` `O`  | Moments

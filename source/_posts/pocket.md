@@ -1,11 +1,10 @@
 ---
-title: Pocket
+title: Pocket Keyboard Shortcuts
 date: 2022-11-23 16:23:31.702053
 icon: icon-pocket
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Viewing Your List
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `L`  | Go to My List
 `G` `A`  | Go to Archive
@@ -48,7 +47,7 @@ shortcuts | description
 
 ### Item Actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `O`  | Open the original in a new tab
 `A`  | Archive the selected item
@@ -63,7 +62,7 @@ shortcuts | description
 
 ### Article View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `=`  | Increase the font size
 `Ctrl` `-`  | Decrease the font size

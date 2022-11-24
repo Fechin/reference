@@ -1,11 +1,10 @@
 ---
-title: GIMP
+title: GIMP Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696743
 icon: icon-gimp
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Help
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F1`  | Help
 `Shift` `F1`  | Context help
@@ -31,7 +30,7 @@ shortcuts | description
 
 ### Toolbox
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `R`  | Rectangle select
 `E`  | Ellipse select
@@ -67,7 +66,7 @@ shortcuts | description
 
 ### File
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New image
 `Ctrl` `O`  | Open image
@@ -82,7 +81,7 @@ shortcuts | description
 
 ### Dialogs
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `L`  | Layers
 `Ctrl` `Shift` `B`  | Brushes
@@ -107,7 +106,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F10`  | Main menu
 `Shift` `F10`  | Drop-down menu
@@ -126,7 +125,7 @@ shortcuts | description
 
 ### Edit
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Y`  | Redo
@@ -147,7 +146,7 @@ shortcuts | description
 
 ### Layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `PgUp`  | Select the layer above
 `PgDn`  | Select the layer below
@@ -160,7 +159,7 @@ shortcuts | description
 
 ### Selections
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `T`  | Toggle selections
 `Ctrl` `A`  | Select all
@@ -173,7 +172,7 @@ shortcuts | description
 
 ### Plug-Ins
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Repeat last plug-in
 `Ctrl` `Shift` `F`  | Reshow last plug-in

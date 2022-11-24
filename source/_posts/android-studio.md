@@ -1,11 +1,10 @@
 ---
-title: Android Studio
+title: Android Studio Keyboard Shortcuts
 date: 2022-11-23 16:23:31.704217
 icon: icon-android-studio
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `S`  | Save all
 `Ctrl` `Alt` `Y`  | Synchronize
@@ -36,9 +35,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Navigating and Searching
+### Navigating and Searching {.row-span-2} 
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Shift`  | Search everything, including code and menus
 `Ctrl` `F`  | Find
@@ -67,55 +66,10 @@ shortcuts | description
 {.shortcuts}
 
 
-### Viewing Layouts
 
-shortcuts | description
----|---
-`Ctrl` `+`  | Zoom in
-`Ctrl` `-`  | Zoom out
-`Ctrl` `0`  | Fit to screen
-`Ctrl` `Shift` `1`  | Actual size
-{.shortcuts}
+### Writing Code {.row-span-4}
 
-
-### Layout Editor
-
-shortcuts | description
----|---
-`B`  | Toggle between Design and Blueprint modes
-`O`  | Toggle between Portrait and Landscaope modes
-`D`  | Toggle devices
-`R`  | Force refresh
-`E`  | Toggle render errors panel
-`Del`  | Delete constraints
-`Ctrl` `+`  | Zoom in
-`Ctrl` `-`  | Zoom out
-`Ctrl` `0`  | Zoom to fit
-`Ctrl` `B`  | Go to XML
-`Ctrl` `A`  | Select all components
-`Shift` `(click)`  | Select multiple components
-{.shortcuts}
-
-
-### Navigation Editor
-
-shortcuts | description
----|---
-`Ctrl` `+`  | Zoom in
-`Ctrl` `-`  | Zoom out
-`Ctrl` `0`  | Zoom to fit
-`Ctrl` `B`  | Go to XML
-`E`  | Toggle render errors panel
-`Ctrl` `G`  | Group into a nested graph
-`Tab`  | Cycle through destinations
-`Ctrl` `A`  | Select all destinations
-`Ctrl` `(click)`  | Select multiple destinations
-{.shortcuts}
-
-
-### Writing Code
-
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Insert`  | Generate code, e.g. getters, setters, constructors, new class
 `Ctrl` `O`  | Override methods
@@ -163,9 +117,56 @@ shortcuts | description
 {.shortcuts}
 
 
+### Viewing Layouts
+
+Shortcut | Action
+---|---
+`Ctrl` `+`  | Zoom in
+`Ctrl` `-`  | Zoom out
+`Ctrl` `0`  | Fit to screen
+`Ctrl` `Shift` `1`  | Actual size
+{.shortcuts}
+
+
+### Layout Editor
+
+Shortcut | Action
+---|---
+`B`  | Toggle between Design and Blueprint modes
+`O`  | Toggle between Portrait and Landscaope modes
+`D`  | Toggle devices
+`R`  | Force refresh
+`E`  | Toggle render errors panel
+`Del`  | Delete constraints
+`Ctrl` `+`  | Zoom in
+`Ctrl` `-`  | Zoom out
+`Ctrl` `0`  | Zoom to fit
+`Ctrl` `B`  | Go to XML
+`Ctrl` `A`  | Select all components
+`Shift` `(click)`  | Select multiple components
+{.shortcuts}
+
+
+### Navigation Editor
+
+Shortcut | Action
+---|---
+`Ctrl` `+`  | Zoom in
+`Ctrl` `-`  | Zoom out
+`Ctrl` `0`  | Zoom to fit
+`Ctrl` `B`  | Go to XML
+`E`  | Toggle render errors panel
+`Ctrl` `G`  | Group into a nested graph
+`Tab`  | Cycle through destinations
+`Ctrl` `A`  | Select all destinations
+`Ctrl` `(click)`  | Select multiple destinations
+{.shortcuts}
+
+
+
 ### Build and Run
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F9`  | Build
 `Shift` `F10`  | Build and run
@@ -176,7 +177,7 @@ shortcuts | description
 
 ### Debugging
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `F9`  | Debug
 `F8`  | Step over
@@ -193,7 +194,7 @@ shortcuts | description
 
 ### Refactoring
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F5`  | Copy
 `F6`  | Move
@@ -211,7 +212,7 @@ shortcuts | description
 
 ### Version Control
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `K`  | Commit project to VCS
 `Ctrl` `T`  | Update project from VCS

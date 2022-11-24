@@ -21,7 +21,7 @@ Windows Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `P`  | Show Command Palette
 `Ctrl` `P`  | Quick Open, Go to File...
@@ -34,7 +34,7 @@ shortcuts | description
 
 ### Basic Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `X`  | Cut line (empty selection)
 `Ctrl` `C`  | Copy line (empty selection)
@@ -66,7 +66,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `T`  | Show all Symbols
 `Ctrl` `G`  | Go to Line...
@@ -83,7 +83,7 @@ shortcuts | description
 
 ### Search and replace
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Find
 `Ctrl` `H`  | Replace
@@ -98,7 +98,7 @@ shortcuts | description
 
 ### Multi-cursor and selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Click`  | Insert cursor
 `Ctrl` `Alt` `Up/Down`  | Insert cursor above/below
@@ -117,7 +117,7 @@ shortcuts | description
 
 ### Rich languages editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Space`  | Trigger suggestion
 `Ctrl` `Shift` `Space`  | Trigger parameter hints
@@ -136,7 +136,7 @@ shortcuts | description
 
 ### Editor management
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F4`  | Close editor
 `Ctrl` `W`  | Close editor
@@ -151,7 +151,7 @@ shortcuts | description
 
 ### File management
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New File
 `Ctrl` `O`  | Open File...
@@ -172,7 +172,7 @@ shortcuts | description
 
 ### Display
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F11`  | Toggle full screen
 `Shift` `Alt` `0`  | Toggle editor layout (horizontal/vertical)
@@ -194,7 +194,7 @@ shortcuts | description
 
 ### Debug
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F9`  | Toggle breakpoint
 `F5`  | Start/Continue
@@ -208,7 +208,7 @@ shortcuts | description
 
 ### Integrated terminal
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` <code>\`</code> | Show integrated terminal
 `Ctrl` `Shift` <code>\`</code> | Create new terminal

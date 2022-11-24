@@ -1,11 +1,10 @@
 ---
-title: Google Drive
+title: Google Drive Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701360
 icon: icon-google-drive
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Navigation and views
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `N`  | Go to navigation panel (folders list)
 `G` `L`  | Go to items view
@@ -38,7 +37,7 @@ shortcuts | description
 
 ### Select items
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `X`  | Select or deselect item
 `J/Down`  | Select next item down
@@ -56,7 +55,7 @@ shortcuts | description
 
 ### Move between items
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Down`  | Move down without changing selection
 `Ctrl` `Up`  | Move up without changing selection
@@ -67,7 +66,7 @@ shortcuts | description
 
 ### Take action on selected items
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | Open selected item
 `N`  | Rename selected item
@@ -83,7 +82,7 @@ shortcuts | description
 
 ### Create new items
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `T`  | Document
 `Shift` `P`  | Presentation
@@ -96,7 +95,7 @@ shortcuts | description
 
 ### Open menus
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Create menu
 `A`  | More actions menu
@@ -108,7 +107,7 @@ shortcuts | description
 
 ### Application actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `/`  | Display keyboard shortcuts list
 `Q` `Q`  | Choose next visual density
@@ -121,7 +120,7 @@ shortcuts | description
 
 ### Preview mode actions
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Close
 `Space`  | Play/pause

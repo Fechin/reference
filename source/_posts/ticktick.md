@@ -1,11 +1,10 @@
 ---
-title: TickTick
+title: TickTick Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696573
 icon: icon-ticktick
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `A`  | Show quick add bar
 `Ctrl` `Shift` `L`  | Show or hide mini window

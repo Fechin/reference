@@ -1,11 +1,10 @@
 ---
-title: Apex Legends
+title: Apex Legends Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706352
 icon: icon-apex legends
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Movement
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `W`  | Move forward
 `S`  | Move back
@@ -37,7 +36,7 @@ shortcuts | description
 
 ### Weapons and Abilities
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Q`  | Tactical ability
 `Z`  | Ultimate ability
@@ -60,7 +59,7 @@ shortcuts | description
 
 ### Communication
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F`  | Ping enemy here
 `T`  | Hold to use push to talk

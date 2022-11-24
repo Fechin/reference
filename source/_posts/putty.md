@@ -1,11 +1,10 @@
 ---
-title: PuTTy
+title: PuTTy Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701654
 icon: icon-putty
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `(right click)`  | Open context menu
 `Ctrl` `A`  | Jump to the start of the line

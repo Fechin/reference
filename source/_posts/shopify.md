@@ -1,11 +1,10 @@
 ---
-title: Shopify
+title: Shopify Keyboard Shortcuts
 date: 2022-11-23 16:23:31.704478
 icon: icon-shopify
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `?`  | Keyboard help
 `S`  | Focus search bar
@@ -35,7 +34,7 @@ shortcuts | description
 
 ### Adding Items
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `A` `P`  | Add product
 `A` `C`  | Add collection
@@ -50,7 +49,7 @@ shortcuts | description
 
 ### Navigating Admin Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `H`  | Go to home
 `G` `P` `P`  | Go to products

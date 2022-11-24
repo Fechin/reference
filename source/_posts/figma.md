@@ -1,11 +1,10 @@
 ---
-title: Figma
+title: Figma Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706507
 icon: icon-figma
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Essential
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `\`  | Show/Hide UI
 `Ctrl` `C`  | Pick Color
@@ -32,7 +31,7 @@ shortcuts | description
 
 ### Tools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `V`  | Move Tool
 `F`  | Frame Tool
@@ -51,7 +50,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `R`  | Toggle Rulers
 `Ctrl` `Y`  | Show Outlines
@@ -68,7 +67,7 @@ shortcuts | description
 
 ### Zoom
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space` `(drag)`  | Pan
 `+`  | Zoom In
@@ -87,7 +86,7 @@ shortcuts | description
 
 ### Text
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bold
 `Ctrl` `I`  | Italic
@@ -105,7 +104,7 @@ shortcuts | description
 
 ### Shape
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `P`  | Pen
 `Shift` `P`  | Pencil
@@ -124,7 +123,7 @@ shortcuts | description
 
 ### Selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `A`  | Select All
 `Ctrl` `Shift` `A`  | Select Inverse
@@ -145,7 +144,7 @@ shortcuts | description
 
 ### Cursor
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt`  | Measure to Selection (while pointing)
 `Alt`  | Duplicate Selection (while moving)
@@ -161,7 +160,7 @@ shortcuts | description
 
 ### Edit
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Copy
 `Ctrl` `X`  | Cut
@@ -177,7 +176,7 @@ shortcuts | description
 
 ### Transform
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `H`  | Flip Horizontal
 `Shift` `V`  | Flip Vertical
@@ -193,7 +192,7 @@ shortcuts | description
 
 ### Arrange
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `]`  | Bring Forward
 `Ctrl` `[`  | Send Backward
@@ -213,7 +212,7 @@ shortcuts | description
 
 ### Components
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `2`  | Show Components
 `Ctrl` `Shift` `O`  | Team Library

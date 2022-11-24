@@ -1,11 +1,10 @@
 ---
-title: Adobe XD
+title: Adobe XD Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703379
 icon: icon-adobe-xd
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Keys for Edit menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Shift` `Z`  | Redo
@@ -39,7 +38,7 @@ shortcuts | description
 
 ### Keys for File menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New
 `Ctrl` `Shift` `O`  | Open...
@@ -54,7 +53,7 @@ shortcuts | description
 
 ### Keys for Pen/Path
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `P`  | Switch to Pen tool
 `Alt`  | Asymmetric control point
@@ -68,9 +67,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Keys for Layers (Objects), Groups, and Artboards
+### Keys for Layers (Objects), Groups, and Artboards {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `G`  | Group layers
 `Ctrl` `Shift` `G`  | Ungroup layers
@@ -87,7 +86,7 @@ shortcuts | description
 
 ### Keys for Align
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `Left`  | Left
 `Shift` `C`  | Center (horizontally)
@@ -100,7 +99,7 @@ shortcuts | description
 
 ### Keys for Arrange
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `]`  | Bring to front
 `Ctrl` `]`  | Bring forward
@@ -111,7 +110,7 @@ shortcuts | description
 
 ### Keys for Distribute
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `H`  | Horizontal
 `Ctrl` `Shift` `V`  | Vertical
@@ -120,7 +119,7 @@ shortcuts | description
 
 ### Keys for Text
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bold
 `Ctrl` `I`  | Italic
@@ -131,7 +130,7 @@ shortcuts | description
 
 ### Keys for Operations menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt`  | From center
 `Shift`  | Constrain
@@ -146,7 +145,7 @@ shortcuts | description
 
 ### Keys for Tools menu
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `V`  | Select
 `R`  | Rectangle
@@ -164,7 +163,7 @@ shortcuts | description
 
 ### Keys for Interface and Viewing Options
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `+`  | Zoom in
 `Ctrl` `-`  | Zoom out
@@ -184,7 +183,7 @@ shortcuts | description
 
 ### Keys for Design Specs
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `+/-`  | Zoom
 `Ctrl` `0`  | Reset zoom
@@ -197,7 +196,7 @@ shortcuts | description
 
 ### Keys for Vector Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | Start editing selected vector object
 `Esc`  | Stop editing selected vector object
@@ -206,7 +205,7 @@ shortcuts | description
 
 ### Keys for Prototyping
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `A`  | See all connections in prototype mode
 `Ctrl` `Enter`  | Preview

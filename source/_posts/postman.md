@@ -1,11 +1,10 @@
 ---
-title: Postman
+title: Postman Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703572
 icon: icon-postman
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Navigational Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `1`  | Focus Sidebar
 `Ctrl` `Alt` `2`  | Focus Builder
@@ -41,7 +40,7 @@ shortcuts | description
 
 ### Manipulation Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `C`  | Copy
 `Ctrl` `V`  | Paste
@@ -53,7 +52,7 @@ shortcuts | description
 
 ### Global Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `S`  | Save
 `Ctrl` `Shift` `S`  | Save As

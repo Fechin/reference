@@ -1,11 +1,10 @@
 ---
-title: Microsoft Teams
+title: Microsoft Teams Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706764
 icon: icon-microsoft-teams
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `.`  | Show keyboard shortcuts
 `Ctrl` `E`  | Go to search
@@ -40,7 +39,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `1`  | Open activity
 `Ctrl` `2`  | Open chat
@@ -59,7 +58,7 @@ shortcuts | description
 
 ### Messaging
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Shift` `C`  | Go to compose box
 `Ctrl` `Shift` `X`  | Expand compose box
@@ -72,7 +71,7 @@ shortcuts | description
 
 ### Meetings and Calls
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `A`  | Accept video call
 `Ctrl` `Shift` `S`  | Accept audio call

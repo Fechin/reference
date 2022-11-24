@@ -1,11 +1,10 @@
 ---
-title: KanbanMail
+title: KanbanMail Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698423
 icon: icon-kanbanmail
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Global
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `\`  | Toggle split view
 {.shortcuts}
@@ -30,7 +29,7 @@ shortcuts | description
 
 ### Board
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C`  | Open composer
 `Ctrl` `N`  | New note in the to-do column
@@ -42,7 +41,7 @@ shortcuts | description
 
 ### Email
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `S`  | Star or unstar
 `I`  | Mark as important or not important
@@ -65,7 +64,7 @@ shortcuts | description
 
 ### Composer
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Enter`  | Send email
 `Ctrl` `S`  | Save as draft
@@ -75,7 +74,7 @@ shortcuts | description
 
 ### Editor
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bold
 `Ctrl` `I`  | Italic

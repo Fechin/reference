@@ -1,11 +1,10 @@
 ---
-title: FileZilla
+title: FileZilla Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705296
 icon: icon-filezilla
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F2`  | Rename selected file
 `F3`  | Search remote files

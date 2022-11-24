@@ -1,11 +1,10 @@
 ---
-title: Affinity Photo
+title: Affinity Photo Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694998
 icon: icon-affinity-photo
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -20,9 +19,9 @@ Keyboard Shortcuts
 
 
 
-### Editing
+### Editing {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `I`  | Resize document
 `Ctrl` `Alt` `C`  | Resize canvas
@@ -40,18 +39,24 @@ shortcuts | description
 {.shortcuts}
 
 
-### Vector Graphics
 
-shortcuts | description
+### Tools (Tone Mapping Persona)
+
+Shortcut | Action
 ---|---
-`Ctrl`  | Edit curves as you draw using node editing (from pen)
-`Ctrl` `Enter`  | Convert to curves
+`H`  | View tool
+`Z`  | Zoom tool
+`B`  | Overlay paint tool
+`E`  | Overlay erase tool
+`G`  | Overlay gradient tool
 {.shortcuts}
+
+
 
 
 ### Files
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New document
 `Ctrl` `Shift` `Alt` `N`  | New from clipboard
@@ -65,9 +70,49 @@ shortcuts | description
 {.shortcuts}
 
 
+
+
+### Vector Graphics
+
+Shortcut | Action
+---|---
+`Ctrl`  | Edit curves as you draw using node editing (from pen)
+`Ctrl` `Enter`  | Convert to curves
+{.shortcuts}
+
+
+
+### Tools (Export Persona)
+
+Shortcut | Action
+---|---
+`S`  | Slice tool
+`L`  | Layer select tool
+{.shortcuts}
+
+
+
+### Tools (Develop Persona)
+
+Shortcut | Action
+---|---
+`S`  | Sampler tool
+`W`  | White balance tool
+`R`  | Red eye removal tool
+`L`  | Blemish removal tool
+`B`  | Overlay paint tool
+`E`  | Overlay erase tool
+`G`  | Overlay gradient tool
+`C`  | Crop tool
+`Z`  | Zoom tool
+`H`  | View tool
+{.shortcuts}
+
+
+
 ### Tools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G`  | Flood fill tool/gradient cycle
 `H`  | View tool
@@ -88,9 +133,10 @@ shortcuts | description
 {.shortcuts}
 
 
+
 ### Tools (Liquify Persona)
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `P`  | Liquify push forward tool
 `L`  | Liquify push left tool
@@ -106,104 +152,11 @@ shortcuts | description
 {.shortcuts}
 
 
-### Tools (Develop Persona)
-
-shortcuts | description
----|---
-`S`  | Sampler tool
-`W`  | White balance tool
-`R`  | Red eye removal tool
-`L`  | Blemish removal tool
-`B`  | Overlay paint tool
-`E`  | Overlay erase tool
-`G`  | Overlay gradient tool
-`C`  | Crop tool
-`Z`  | Zoom tool
-`H`  | View tool
-{.shortcuts}
 
 
-### Tools (Export Persona)
+### Text {.row-span-3}
 
-shortcuts | description
----|---
-`S`  | Slice tool
-`L`  | Layer select tool
-{.shortcuts}
-
-
-### Tools (Panorama Persona)
-
-shortcuts | description
----|---
-`A`  | Transform source image tool
-`L`  | Add to source image mask tool
-`U`  | Erase from source image mask tool
-{.shortcuts}
-
-
-### Tools (Tone Mapping Persona)
-
-shortcuts | description
----|---
-`H`  | View tool
-`Z`  | Zoom tool
-`B`  | Overlay paint tool
-`E`  | Overlay erase tool
-`G`  | Overlay gradient tool
-{.shortcuts}
-
-
-### Edit
-
-shortcuts | description
----|---
-`Ctrl` `Z`  | Undo
-`Ctrl` `Shift` `Z`  | Redo
-`Ctrl` `Shift` `C`  | Copy merged
-`Ctrl` `Shift` `V`  | Paste style
-`Ctrl` `Alt` `V`  | Paste FX
-`Ctrl` `Shift` `Alt` `V`  | Paste without format
-`Ctrl` `Alt` `V`  | Paste inside
-`Shift` `F5`  | Fill
-`Alt` `Tab`  | Inpaint
-{.shortcuts}
-
-
-### Layer Operations
-
-shortcuts | description
----|---
-`Ctrl` `Alt` `A`  | Select all layers
-`Ctrl` `G`  | Group
-`Ctrl` `Shift` `G`  | Ungroup
-`Ctrl` `J`  | Duplicate
-`Ctrl` `I`  | Invert
-`Ctrl` `Shift` `]`  | Move to front
-`Ctrl` `]`  | Move forward one
-`Ctrl` `Shift` `[`  | Move to back
-`Ctrl` `[`  | Move back one
-`Ctrl` `Shift` `N`  | New layer
-`Ctrl` `E`  | Merge down
-`Ctrl` `Shift` `E`  | Merge selected
-`Ctrl` `Shift` `Alt` `E`  | Merge visible
-`F`  | Toggle between frequency separation layers
-`Ctrl` `Alt` `P`  | Edit live projection
-{.shortcuts}
-
-
-### Brush
-
-shortcuts | description
----|---
-`0-9`  | Change selected layer content/brush tool's opacity
-`[/]`  | Increase/decrease brush width
-{.shortcuts}
-
-
-### Text
-
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `>`  | Bigger text
 `Ctrl` `<`  | Smaller text
@@ -241,9 +194,70 @@ shortcuts | description
 {.shortcuts}
 
 
+
+### Tools (Panorama Persona)
+
+Shortcut | Action
+---|---
+`A`  | Transform source image tool
+`L`  | Add to source image mask tool
+`U`  | Erase from source image mask tool
+{.shortcuts}
+
+
+
+
+
+### Edit
+
+Shortcut | Action
+---|---
+`Ctrl` `Z`  | Undo
+`Ctrl` `Shift` `Z`  | Redo
+`Ctrl` `Shift` `C`  | Copy merged
+`Ctrl` `Shift` `V`  | Paste style
+`Ctrl` `Alt` `V`  | Paste FX
+`Ctrl` `Shift` `Alt` `V`  | Paste without format
+`Ctrl` `Alt` `V`  | Paste inside
+`Shift` `F5`  | Fill
+`Alt` `Tab`  | Inpaint
+{.shortcuts}
+
+
+### Layer Operations
+
+Shortcut | Action
+---|---
+`Ctrl` `Alt` `A`  | Select all layers
+`Ctrl` `G`  | Group
+`Ctrl` `Shift` `G`  | Ungroup
+`Ctrl` `J`  | Duplicate
+`Ctrl` `I`  | Invert
+`Ctrl` `Shift` `]`  | Move to front
+`Ctrl` `]`  | Move forward one
+`Ctrl` `Shift` `[`  | Move to back
+`Ctrl` `[`  | Move back one
+`Ctrl` `Shift` `N`  | New layer
+`Ctrl` `E`  | Merge down
+`Ctrl` `Shift` `E`  | Merge selected
+`Ctrl` `Shift` `Alt` `E`  | Merge visible
+`F`  | Toggle between frequency separation layers
+`Ctrl` `Alt` `P`  | Edit live projection
+{.shortcuts}
+
+
+### Brush
+
+Shortcut | Action
+---|---
+`0-9`  | Change selected layer content/brush tool's opacity
+`[/]`  | Increase/decrease brush width
+{.shortcuts}
+
+
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `+`  | Zoom in
 `Ctrl` `-`  | Zoom out
@@ -266,7 +280,7 @@ shortcuts | description
 
 ### Pixel Selection / Mask
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `A`  | Select all
 `Ctrl` `D`  | Deselect
@@ -285,7 +299,7 @@ shortcuts | description
 
 ### Workspace
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `H`  | Show or hide studio panels
 `Ctrl` `Alt` `T`  | Show or hide toolbar
@@ -296,7 +310,7 @@ shortcuts | description
 
 ### Adjustment and Filter
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `L`  | Levels adjustment
 `Ctrl` `U`  | HSL adjustment
@@ -309,7 +323,7 @@ shortcuts | description
 
 ### Liquify Persona
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `D`  | Mask all
 `Ctrl` `I`  | Invert mask
@@ -319,7 +333,7 @@ shortcuts | description
 
 ### Misc
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `,`  | Preferences
 `Ctrl` `Alt` `L`  | Liquify persona

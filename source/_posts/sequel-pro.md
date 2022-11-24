@@ -1,11 +1,10 @@
 ---
-title: Sequel Pro
+title: Sequel Pro Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701510
 icon: icon-sequel-pro
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Main Tabs
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `1`  | Table Structure
 `Cmd` `2`  | Table Content
@@ -35,7 +34,7 @@ shortcuts | description
 
 ### General Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `N`  | New window (connection file)
 `Cmd` `T`  | New tab (connection file)
@@ -78,7 +77,7 @@ shortcuts | description
 
 ### Select
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `W`  | Select current word
 `Ctrl` `L`  | Select current line
@@ -89,7 +88,7 @@ shortcuts | description
 
 ### Table Structure Tab
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Opt` `A`  | Add a new field
 `Del`  | Delete selected field
@@ -101,7 +100,7 @@ shortcuts | description
 
 ### Table Content Tab
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Opt` `A`  | Add a new row
 `Del`  | Delete selected row(s)
@@ -112,7 +111,7 @@ shortcuts | description
 
 ### Custom Query Tab
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Opt` `R`  | Run all queries (1.0+) / Run current query or selection (<=0.9.9.1)
 `Cmd` `R`  | Run current query or selection (1.0+) / Run all queries (<=0.9.9.1)

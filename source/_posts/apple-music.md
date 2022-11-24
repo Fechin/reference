@@ -1,11 +1,10 @@
 ---
-title: Apple Music
+title: Apple Music Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700157
 icon: icon-apple music
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -20,9 +19,9 @@ Keyboard Shortcuts
 
 
 
-### Playing Music
+### Playing Music {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Start playing or pause the selected song
 `Enter`  | Play the currently selected song from the beginning
@@ -46,7 +45,7 @@ shortcuts | description
 
 ### Playlists
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `N`  | Create a new playlist
 `Cmd` `Shift` `N`  | Create a playlist from a selection of songs
@@ -59,26 +58,10 @@ shortcuts | description
 {.shortcuts}
 
 
-### Library
 
-shortcuts | description
----|---
-`Cmd` `O`  | Add a file to your library
-`Cmd` `Shift` `R`  | Show where a song file is located
-`Cmd` `F`  | Select the search field
-`Cmd` `Z`  | Undo your last typing change while editing an item
-`Cmd` `X`  | Cut the selected song's information or artwork
-`Cmd` `C`  | Copy the selected song's information or artwork
-`Cmd` `V`  | Paste the selected song's information or artwork
-`Cmd` `A`  | Select all the songs in the list
-`Cmd` `B`  | Show or hide the column browser
-`Cmd` `Shift` `A`  | De-select all the songs in the list
-{.shortcuts}
+### Window Options {.row-span-2}
 
-
-### Window Options
-
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Shift` `M`  | Open the MiniPlayer
 `Cmd` `Shift` `F`  | Open the Full Screen Player
@@ -101,9 +84,27 @@ shortcuts | description
 {.shortcuts}
 
 
+### Library
+
+Shortcut | Action
+---|---
+`Cmd` `O`  | Add a file to your library
+`Cmd` `Shift` `R`  | Show where a song file is located
+`Cmd` `F`  | Select the search field
+`Cmd` `Z`  | Undo your last typing change while editing an item
+`Cmd` `X`  | Cut the selected song's information or artwork
+`Cmd` `C`  | Copy the selected song's information or artwork
+`Cmd` `V`  | Paste the selected song's information or artwork
+`Cmd` `A`  | Select all the songs in the list
+`Cmd` `B`  | Show or hide the column browser
+`Cmd` `Shift` `A`  | De-select all the songs in the list
+{.shortcuts}
+
+
+
 ### iTunes Store
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Opt` `Enter`  | Initiate a search in the iTunes Store
 `Cmd` `]`  | Go to the next page in the iTunes Store
@@ -114,7 +115,7 @@ shortcuts | description
 
 ### Other
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `,`  | Open Music Preferences
 `Cmd` `Q`  | Quit the Music app

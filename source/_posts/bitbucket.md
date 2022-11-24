@@ -1,11 +1,10 @@
 ---
-title: Bitbucket
+title: Bitbucket Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699805
 icon: icon-bitbucket
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### All pages
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `?`  | Display keyboard shortcuts
 `[`  | Expand and collapse left navigation
@@ -32,7 +31,7 @@ shortcuts | description
 
 ### Most pages (except Your Work and Source)
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `.`  | Open the Omnibar
 `J`  | Select next item
@@ -47,7 +46,7 @@ shortcuts | description
 
 ### Repository pages with sidebar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `]`  | Expand and collapse right sidebar
 {.shortcuts}
@@ -55,7 +54,7 @@ shortcuts | description
 
 ### Repository source
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F`  | Focus the file filter
 {.shortcuts}
@@ -63,7 +62,7 @@ shortcuts | description
 
 ### Repository pages (except for Source)
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `C` `R`  | Create a repository
 `I` `R`  | Import a repository
@@ -81,7 +80,7 @@ shortcuts | description
 
 ### Repository pages (except for Source and Settings)
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `X` `F`  | Fork repository
 `X` `B`  | Create branch
@@ -93,7 +92,7 @@ shortcuts | description
 
 ### Pull requests
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Enter`  | Submit a comment
 `T` `C`  | Toggle display of inline comments

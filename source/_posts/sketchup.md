@@ -1,11 +1,10 @@
 ---
-title: SketchUp Pro
+title: SketchUp Pro Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693091
 icon: icon-sketchup
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `A`  | 2 point arc tool
 `C`  | Circle tool

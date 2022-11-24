@@ -1,11 +1,10 @@
 ---
-title: Todoist
+title: Todoist Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696934
 icon: icon-todoist
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Task Quick Add
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `@`  | Add a label
 `#`  | Pick a project
@@ -36,7 +35,7 @@ shortcuts | description
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Click`  | Select and change multiple tasks at once
 `Q`  | Add task
@@ -53,7 +52,7 @@ shortcuts | description
 
 ### Adding or editing tasks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Cancel current changes
 `Enter`  | Save a newly created task and create a new one below it
@@ -66,7 +65,7 @@ shortcuts | description
 
 ### Creating and completing sub-tasks
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `Right`  | Increase task indent
 `Ctrl` `Alt` `Left`  | Decrease task indent
@@ -76,7 +75,7 @@ shortcuts | description
 
 ### Sorting tasks inside a project
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `S`  | Sort by date
 `P`  | Sort by priority
@@ -86,7 +85,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `1`  | Inbox
 `Ctrl` `Shift` `1`  | Team Inbox (Todoist Business only)

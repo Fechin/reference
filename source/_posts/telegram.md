@@ -1,11 +1,10 @@
 ---
-title: Telegram Desktop
+title: Telegram Desktop Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700963
 icon: icon-telegram
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Chats
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up/Down`  | In-Chat Navigation
 `Up/Down/Left/Right`  | Suggested Stickers Navigation
@@ -38,7 +37,7 @@ shortcuts | description
 
 ### Messages
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Up/Down`  | Reply to a Message
 `Ctrl` `Down`  | Cancel Reply
@@ -52,7 +51,7 @@ shortcuts | description
 
 ### Search
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Search Selected Chat
 `Esc`  | Exit Search
@@ -61,7 +60,7 @@ shortcuts | description
 
 ### QuickShare Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Up/Down`  | Navigate
 `Enter`  | Select Chat
@@ -72,7 +71,7 @@ shortcuts | description
 
 ### Jump to
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Enter`  | Jump to the bottom of the chat
 `Alt` `Enter`  | Scroll the chat list to the top
@@ -85,7 +84,7 @@ shortcuts | description
 
 ### Window Related
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `W`  | Minimize to System Tray
 `Ctrl` `Q`  | Quit Telegram
@@ -96,7 +95,7 @@ shortcuts | description
 
 ### Selected Text
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bold
 `Ctrl` `I`  | Italic

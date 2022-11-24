@@ -1,10 +1,9 @@
 ---
-title: Zoom 
+title: Zoom  Keyboard Shortcuts
 date: 2022-11-23 16:23:31.704621
 icon: icon-zoom 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -21,7 +20,7 @@ Mac Keyboard Shortcuts
 
 ### Meetings
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `J`  | Join meeting
 `Cmd` `Ctrl` `V`  | Start meeting
@@ -55,7 +54,7 @@ shortcuts | description
 
 ### Chat Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `K`  | Jump to chat with someone
 `Cmd` `T`  | Screenshot
@@ -64,7 +63,7 @@ shortcuts | description
 
 ### General Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `W`  | Close the current window
 `Cmd` `L`  | Switch to portrait or landscape view, depending on current view
@@ -83,7 +82,7 @@ Windows Keyboard Shortcuts
 
 ### All Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F6`  | Navigate among Zoom popup windows
 `Ctrl` `Alt` `Shift`  | Move focus to Zoom's meeting controls

@@ -1,11 +1,10 @@
 ---
-title: Adobe Lightroom CC
+title: Adobe Lightroom CC Keyboard Shortcuts
 date: 2022-11-23 16:23:31.702312
 icon: icon-adobe-lightroom 
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -20,9 +19,9 @@ Keyboard Shortcuts
 
 
 
-### Working with panels
+### Working with panels {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Show/hide side panels
 `Shift` `Tab`  | Show/hide all panels
@@ -42,7 +41,7 @@ shortcuts | description
 
 ### Navigating modules
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `1`  | Go to Library module
 `Ctrl` `Alt` `2`  | Go to Develop module
@@ -54,29 +53,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Changing view and screen modes
-
-shortcuts | description
----|---
-`E`  | Enter Library Loupe view
-`G`  | Enter Library Grid view
-`C`  | Enter Library Compare view
-`N`  | Enter Library Survey view
-`D`  | Open selected photo in the Develop module
-`L`  | Cycle forward through Lights Out modes
-`Shift` `L`  | Cycle backward through Lights Out modes
-`Ctrl` `Shift` `L`  | Toggle Lights Dim mode
-`F`  | Cycle screen modes
-`Ctrl` `Shift` `F`  | Switich between Normal and full-screen, hide panels
-`Ctrl` `Alt` `F`  | Go to Normal screen mode
-`I`  | Cycle info overlay
-`Ctrl` `I`  | Show/hide info overlay
-{.shortcuts}
-
-
 ### Using a secondary window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F11`  | Open secondary window
 `Shift` `G`  | Enter Grid view
@@ -91,142 +70,10 @@ shortcuts | description
 {.shortcuts}
 
 
-### Managing photos and catalogs
 
-shortcuts | description
----|---
-`Ctrl` `Shift` `I`  | Import photos from disk
-`Ctrl` `O`  | Open catalog
-`Ctrl` `,`  | Open Preferences
-`Ctrl` `Alt` `,`  | Open Catalog Settings
-`Ctrl` `Shift` `T`  | Create new subfolder (segmented tethered capture)
-`Ctrl` `T`  | Hide/show tether capture bar
-`Ctrl` `Shift` `N`  | Create a new folder in the Library module
-`Ctrl` `'`  | Create virtual copy (Library and Develop module only)
-`Ctrl` `R`  | Show in Explorer/Finder (Library and Develop module only)
-`Right/Left`  | Go to next/previous photo in the Filmstrip
-`Shift/Ctrl` `Click`  | Select multiple folders or collections (in Library, Slideshow, Print, and Web modules)
-`F2`  | Rename photo (in Library module)
-`Delete`  | Delete selected photo(s)
-`Alt` `Backspace`  | Remove selected photo(s) from catalog
-`Ctrl` `Alt` `Shift` `Backspace`  | Delete selected photo(s) and move to Trash
-`Ctrl` `Backspace`  | Delete rejected photo(s)
-`Ctrl` `E`  | Edit in Photoshop
-`Ctrl` `Alt` `E`  | Open in other editor
-`Ctrl` `Shift` `E`  | Export selected photo(s)
-`Ctrl` `Alt` `Shift` `E`  | Export with previous settings
-`Ctrl` `Alt` `Shift` `,`  | Open plug-in manager
-`Ctrl` `P`  | Print selected photo
-`Ctrl` `Shift` `P`  | Open Page Setup dialog box
-{.shortcuts}
+### Working in the Develop module {.row-span-3}
 
-
-### Comparing photos in the Library module
-
-shortcuts | description
----|---
-`E/Enter`  | Switch to Loupe view
-`G/Esc`  | Switch to Grid view
-`C`  | Switch to Compare view
-`N`  | Switch to Survey view
-`Space/E`  | Switch from Grid to Loupe view
-`Down`  | Swap select and candidate photos in Compare view
-`Up`  | Make next photos select and candidate in Compare view
-`Z`  | Toggle Zoom view
-`Ctrl` `+/-`  | Zoom in/out in Loupe view
-`PgUp/PgDown`  | Scroll up/down zoomed photo in Loupe view
-`Home/End`  | Go to beginning/end of Grid view
-`Ctrl` `Enter`  | Play impromptu slide show
-`Ctrl` `]`  | Rotate photo right (clockwise)
-`Ctrl` `[`  | Rotate photo left (counterclockwise)
-`=/-`  | Increase/decreate Grid thumbnail size
-`PgUp/PgDown`  | Scroll up/down Grid thumbnails
-`Ctrl` `Shift` `H`  | Toggle cell extras
-`Ctrl` `Alt` `Shift` `H`  | Show/hide badges
-`J`  | Cycle Grid views
-`Ctrl` `J`  | Open Library view options
-`Ctrl` `(click)`  | Select multiple discrete photos
-`Shift` `(click)`  | Select multiple contiguous photos
-`Ctrl` `A`  | Select all photos
-`Ctrl` `D`  | Deselect all photos
-`Ctrl` `Shift` `D`  | Select only active photo
-`/`  | Deselect active photo
-`Shift` `Left/Right`  | Add previous/next photo to selection
-`Ctrl` `Alt` `A`  | Select flagged photos
-`Ctrl` `Alt` `Shift` `D`  | Deselect unflagged photos
-`Ctrl` `G`  | Group into stack
-`Ctrl` `Shift` `G`  | Unstack
-`S`  | Toggle stack
-`Shift` `S`  | Move to top of stack
-`Shift` `[`  | Move up in stack
-`Shift` `]`  | Move down in stack
-{.shortcuts}
-
-
-### Rating and filtering photos
-
-shortcuts | description
----|---
-`1-5`  | Set star rating
-`Shift` `1-5`  | Set star rating and go to next photo
-`0`  | Remove star rating
-`Shift` `0`  | Remove star rating and go to next photo
-`]/[`  | Increase/decrease rating by one star
-`6`  | Assign a red label
-`7`  | Assign a yellow label
-`8`  | Assign a green label
-`9`  | Assign a blue label
-`Shift` `6-9`  | Assign a color label and go to next photo
-`P`  | Flag photo as a pick
-`Shift` `P`  | Flag photo as a pick and go to next photo
-`X`  | Flag photo as a reject
-`Shift` `X`  | Flag photo as a reject and go to next photo
-`U`  | Unflag photo
-`Shift` `U`  | Unflag photo and go to next photo
-`Ctrl` `Up/Down`  | Increase/decrease flag status
-<code>\`</code> | Cycle flag settings
-`Ctrl` `Alt` `R`  | Refine photos
-`\`  | Show/hide Library Filter bar
-`Shift` `(click filter labels)`  | Open multiple filters in the Filter bar
-`Shift` `L`  | Toggle filters on/off
-`Ctrl` `F`  | Find photo in the Library module
-{.shortcuts}
-
-
-### Working with collections
-
-shortcuts | description
----|---
-`Ctrl` `N`  | Create a new collection in the Library module
-`B`  | Add to Quick Collection
-`Shift` `B`  | Add to Quick Collection and go to next photo
-`Ctrl` `B`  | Show Quick Collection
-`Ctrl` `Alt` `B`  | Save Quick Collection
-`Ctrl` `Shift` `B`  | Clear Quick Collection
-`Ctrl` `Alt` `Shift` `B`  | Set as target collection
-{.shortcuts}
-
-
-### Working with metadata and keywords in the Library module
-
-shortcuts | description
----|---
-`Ctrl` `K`  | Add keywords
-`Ctrl` `Shift` `K`  | Edit keywords
-`Ctrl` `Alt` `Shift` `K`  | Set a keyword shortcut
-`Shift` `K`  | Add/remove keyword shortcut from selected photo
-`Ctrl` `Alt` `K`  | Enable painting
-`Alt` `1-9`  | Add a keyword from a keyword set to selected photo
-`Alt` `0`  | Cycle forward through keyword sets
-`Alt` `Shift` `0`  | Cycle backword through keyword sets
-`Ctrl` `Alt` `Shift` `C/V`  | Copy/paste metadata
-`Ctrl` `S`  | Save metadata to file
-{.shortcuts}
-
-
-### Working in the Develop module
-
-shortcuts | description
+Shortcut | Action
 ---|---
 `V`  | Convert to grayscale
 `Ctrl` `U`  | Auto tone
@@ -294,9 +141,163 @@ shortcuts | description
 {.shortcuts}
 
 
+### Changing view and screen modes
+
+Shortcut | Action
+---|---
+`E`  | Enter Library Loupe view
+`G`  | Enter Library Grid view
+`C`  | Enter Library Compare view
+`N`  | Enter Library Survey view
+`D`  | Open selected photo in the Develop module
+`L`  | Cycle forward through Lights Out modes
+`Shift` `L`  | Cycle backward through Lights Out modes
+`Ctrl` `Shift` `L`  | Toggle Lights Dim mode
+`F`  | Cycle screen modes
+`Ctrl` `Shift` `F`  | Switich between Normal and full-screen, hide panels
+`Ctrl` `Alt` `F`  | Go to Normal screen mode
+`I`  | Cycle info overlay
+`Ctrl` `I`  | Show/hide info overlay
+{.shortcuts}
+
+
+
+### Managing photos and catalogs
+
+Shortcut | Action
+---|---
+`Ctrl` `Shift` `I`  | Import photos from disk
+`Ctrl` `O`  | Open catalog
+`Ctrl` `,`  | Open Preferences
+`Ctrl` `Alt` `,`  | Open Catalog Settings
+`Ctrl` `Shift` `T`  | Create new subfolder (segmented tethered capture)
+`Ctrl` `T`  | Hide/show tether capture bar
+`Ctrl` `Shift` `N`  | Create a new folder in the Library module
+`Ctrl` `'`  | Create virtual copy (Library and Develop module only)
+`Ctrl` `R`  | Show in Explorer/Finder (Library and Develop module only)
+`Right/Left`  | Go to next/previous photo in the Filmstrip
+`Shift/Ctrl` `Click`  | Select multiple folders or collections (in Library, Slideshow, Print, and Web modules)
+`F2`  | Rename photo (in Library module)
+`Delete`  | Delete selected photo(s)
+`Alt` `Backspace`  | Remove selected photo(s) from catalog
+`Ctrl` `Alt` `Shift` `Backspace`  | Delete selected photo(s) and move to Trash
+`Ctrl` `Backspace`  | Delete rejected photo(s)
+`Ctrl` `E`  | Edit in Photoshop
+`Ctrl` `Alt` `E`  | Open in other editor
+`Ctrl` `Shift` `E`  | Export selected photo(s)
+`Ctrl` `Alt` `Shift` `E`  | Export with previous settings
+`Ctrl` `Alt` `Shift` `,`  | Open plug-in manager
+`Ctrl` `P`  | Print selected photo
+`Ctrl` `Shift` `P`  | Open Page Setup dialog box
+{.shortcuts}
+
+
+### Comparing photos in the Library module
+
+Shortcut | Action
+---|---
+`E/Enter`  | Switch to Loupe view
+`G/Esc`  | Switch to Grid view
+`C`  | Switch to Compare view
+`N`  | Switch to Survey view
+`Space/E`  | Switch from Grid to Loupe view
+`Down`  | Swap select and candidate photos in Compare view
+`Up`  | Make next photos select and candidate in Compare view
+`Z`  | Toggle Zoom view
+`Ctrl` `+/-`  | Zoom in/out in Loupe view
+`PgUp/PgDown`  | Scroll up/down zoomed photo in Loupe view
+`Home/End`  | Go to beginning/end of Grid view
+`Ctrl` `Enter`  | Play impromptu slide show
+`Ctrl` `]`  | Rotate photo right (clockwise)
+`Ctrl` `[`  | Rotate photo left (counterclockwise)
+`=/-`  | Increase/decreate Grid thumbnail size
+`PgUp/PgDown`  | Scroll up/down Grid thumbnails
+`Ctrl` `Shift` `H`  | Toggle cell extras
+`Ctrl` `Alt` `Shift` `H`  | Show/hide badges
+`J`  | Cycle Grid views
+`Ctrl` `J`  | Open Library view options
+`Ctrl` `(click)`  | Select multiple discrete photos
+`Shift` `(click)`  | Select multiple contiguous photos
+`Ctrl` `A`  | Select all photos
+`Ctrl` `D`  | Deselect all photos
+`Ctrl` `Shift` `D`  | Select only active photo
+`/`  | Deselect active photo
+`Shift` `Left/Right`  | Add previous/next photo to selection
+`Ctrl` `Alt` `A`  | Select flagged photos
+`Ctrl` `Alt` `Shift` `D`  | Deselect unflagged photos
+`Ctrl` `G`  | Group into stack
+`Ctrl` `Shift` `G`  | Unstack
+`S`  | Toggle stack
+`Shift` `S`  | Move to top of stack
+`Shift` `[`  | Move up in stack
+`Shift` `]`  | Move down in stack
+{.shortcuts}
+
+
+### Rating and filtering photos
+
+Shortcut | Action
+---|---
+`1-5`  | Set star rating
+`Shift` `1-5`  | Set star rating and go to next photo
+`0`  | Remove star rating
+`Shift` `0`  | Remove star rating and go to next photo
+`]/[`  | Increase/decrease rating by one star
+`6`  | Assign a red label
+`7`  | Assign a yellow label
+`8`  | Assign a green label
+`9`  | Assign a blue label
+`Shift` `6-9`  | Assign a color label and go to next photo
+`P`  | Flag photo as a pick
+`Shift` `P`  | Flag photo as a pick and go to next photo
+`X`  | Flag photo as a reject
+`Shift` `X`  | Flag photo as a reject and go to next photo
+`U`  | Unflag photo
+`Shift` `U`  | Unflag photo and go to next photo
+`Ctrl` `Up/Down`  | Increase/decrease flag status
+<code>\`</code> | Cycle flag settings
+`Ctrl` `Alt` `R`  | Refine photos
+`\`  | Show/hide Library Filter bar
+`Shift` `(click filter labels)`  | Open multiple filters in the Filter bar
+`Shift` `L`  | Toggle filters on/off
+`Ctrl` `F`  | Find photo in the Library module
+{.shortcuts}
+
+
+### Working with collections
+
+Shortcut | Action
+---|---
+`Ctrl` `N`  | Create a new collection in the Library module
+`B`  | Add to Quick Collection
+`Shift` `B`  | Add to Quick Collection and go to next photo
+`Ctrl` `B`  | Show Quick Collection
+`Ctrl` `Alt` `B`  | Save Quick Collection
+`Ctrl` `Shift` `B`  | Clear Quick Collection
+`Ctrl` `Alt` `Shift` `B`  | Set as target collection
+{.shortcuts}
+
+
+### Working with metadata and keywords in the Library module
+
+Shortcut | Action
+---|---
+`Ctrl` `K`  | Add keywords
+`Ctrl` `Shift` `K`  | Edit keywords
+`Ctrl` `Alt` `Shift` `K`  | Set a keyword shortcut
+`Shift` `K`  | Add/remove keyword shortcut from selected photo
+`Ctrl` `Alt` `K`  | Enable painting
+`Alt` `1-9`  | Add a keyword from a keyword set to selected photo
+`Alt` `0`  | Cycle forward through keyword sets
+`Alt` `Shift` `0`  | Cycle backword through keyword sets
+`Ctrl` `Alt` `Shift` `C/V`  | Copy/paste metadata
+`Ctrl` `S`  | Save metadata to file
+{.shortcuts}
+
+
 ### Working in the Slideshow module
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | Play slide show
 `Ctrl` `Enter`  | Play impromptu slide show
@@ -319,7 +320,7 @@ shortcuts | description
 
 ### Working in the Print module
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `P`  | Print
 `Ctrl` `Alt` `P`  | Print one copy
@@ -346,7 +347,7 @@ shortcuts | description
 
 ### Working in the Web module
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `R`  | Reload web gallery
 `Ctrl` `Alt` `P`  | Preview in browser
@@ -360,7 +361,7 @@ shortcuts | description
 
 ### Using help
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `/`  | Display current module shortcuts
 `(click)`  | Hide current module shortcuts

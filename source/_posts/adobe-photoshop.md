@@ -1,11 +1,10 @@
 ---
-title: Adobe Photoshop
+title: Adobe Photoshop Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706034
 icon: icon-adobe-photoshop
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Popular shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `T`  | Free transform
 `[`  | Decrease brush size
@@ -44,7 +43,7 @@ shortcuts | description
 
 ### Use function keys
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F1`  | Start help
 `F2`  | Cut
@@ -62,9 +61,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Select tools
+### Select tools {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `V`  | Move tool
 `M`  | Rectangular marquee tool
@@ -101,9 +100,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### View images
+### View images {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Tab`  | Cycle through open documents
 `Ctrl` `Shift` `Tab`  | Switch to previous document
@@ -126,7 +125,7 @@ shortcuts | description
 
 ### Use Puppet Warp
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Esc`  | Cancel completely
 `Ctrl` `Z`  | Undo last pin adjustment
@@ -138,7 +137,7 @@ shortcuts | description
 
 ### Use Refine Edge
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `R`  | Open the Refine Edge dialog box
 `F`  | Cycle forward through preview modes
@@ -152,7 +151,7 @@ shortcuts | description
 
 ### Use the Filter Gallery
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `F`  | Reapply last-used filter
 `Ctrl`  | Change Cancel button to Default
@@ -165,7 +164,7 @@ shortcuts | description
 
 ### Use the Liquify filter
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `W`  | Forward warp tool
 `R`  | Reconstruct tool
@@ -186,7 +185,7 @@ shortcuts | description
 
 ### Use Vanishing Point
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `X`  | Zoom 2x (temporary)
 `Ctrl` `+`  | Zoom in
@@ -207,9 +206,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Use the Camera Raw dialog box
+### Use the Camera Raw dialog box {.row-span-4}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Z`  | Zoom tool
 `H`  | Hand tool
@@ -270,7 +269,7 @@ shortcuts | description
 
 ### Use the Black-and-White dialog box
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `Alt` `B`  | Open the Black-and-White dialog box
 `Up/Down`  | Increase/decrease selected value by 1%
@@ -280,7 +279,7 @@ shortcuts | description
 
 ### Use Curves
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `M`  | Open the Curves dialog box
 `+`  | Select next point on the curve
@@ -294,7 +293,7 @@ shortcuts | description
 
 ### Transform selections, selection borders, and paths
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt`  | Transform from center or reflect
 `Shift`  | Constrain
@@ -308,7 +307,7 @@ shortcuts | description
 
 ### Edit paths
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl`  | Switch from path selection, pen, add anchor point, delete anchor point, or convert point tools to direct selection tool
 `Alt`  | Switch from pen tool to freeform pen tool to convert point tool when pointer is over anchor or direction point
@@ -317,7 +316,7 @@ shortcuts | description
 
 ### Use for painting
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Shift` `0-9`  | Mixer brush changes mix setting
 `0-9`  | Mixer brush changes wet setting
@@ -332,9 +331,9 @@ shortcuts | description
 {.shortcuts}
 
 
-### Use for blending modes
+### Use for blending modes {.row-span-2}
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `-/+`  | Cycle through blending modes
 `Shift` `Alt` `N`  | Normal
@@ -368,7 +367,7 @@ shortcuts | description
 
 ### Format type
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `L/C/R`  | Align left, center, or right
 `Ctrl` `Shift` `X`  | Choose 100% horizontal scale
@@ -388,7 +387,7 @@ shortcuts | description
 
 ### Use panels
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Enter`  | Apply value and keep text box active
 `Tab`  | Show/Hide all panels
@@ -400,7 +399,7 @@ shortcuts | description
 
 ### Use adjustment layers
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `3`  | Choose red channel for adjustment
 `Alt` `4`  | Choose green channel for adjustment
@@ -412,7 +411,7 @@ shortcuts | description
 
 ### Use the Brush panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `,/.`  | Select previous/next brush size
 `Shift` `,/.`  | Select first/last brush
@@ -423,7 +422,7 @@ shortcuts | description
 
 ### Use the Clone Source panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `Shift`  | Show Clone Source (overlays iamge)
 `Alt` `Shift` `(arrows)`  | Nudge Clone Source
@@ -434,7 +433,7 @@ shortcuts | description
 
 ### Use the Layers panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `N`  | New layer
 `Ctrl` `J`  | New layer via copy

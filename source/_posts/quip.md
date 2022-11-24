@@ -1,11 +1,10 @@
 ---
-title: Quip.com
+title: Quip.com Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697261
 icon: icon-quip.com
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Anywhere
 
-shortcuts | description
+Shortcut | Action
 ---|---
 <code>\`</code> | Toggle styles between different types of headings and lists
 `Tab`  | Indent a list item
@@ -41,7 +40,7 @@ shortcuts | description
 
 ### Style Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `B`  | Bold the selected text
 `Ctrl` `I`  | Italicize the selected text
@@ -59,7 +58,7 @@ shortcuts | description
 
 ### Editing Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `Up`  | Move a list item up one line
 `Ctrl` `Alt` `Down`  | Move a list item down one line
@@ -82,7 +81,7 @@ shortcuts | description
 
 ### Spreadsheets
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `(arrows)`  | Move to the edge of dat or the next non-empty cell
 `Ctrl` `Shift` `(arrows)`  | Expand select to the edge of data or the next non-empty cell

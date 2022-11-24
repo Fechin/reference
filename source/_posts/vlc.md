@@ -1,11 +1,10 @@
 ---
-title: VLC Player
+title: VLC Player Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696412
 icon: icon-vlc
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F`  | Fullscreen
 `Esc`  | Leave fullscreen

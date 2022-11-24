@@ -1,11 +1,10 @@
 ---
-title: Arduino IDE
+title: Arduino IDE Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697581
 icon: icon-arduino ide
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `S`  | Save
 `Ctrl` `Shift` `S`  | Save as

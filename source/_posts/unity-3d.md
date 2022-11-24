@@ -1,11 +1,10 @@
 ---
-title: Unity 3D
+title: Unity 3D Keyboard Shortcuts
 date: 2022-11-23 16:23:31.692703
 icon: icon-unity 3d
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Tools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Q`  | Pan
 `W`  | Move
@@ -38,7 +37,7 @@ shortcuts | description
 
 ### GameObject
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `N`  | New empty game object
 `Alt` `Shift` `N`  | New empty child to selected game object
@@ -50,7 +49,7 @@ shortcuts | description
 
 ### Window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `1`  | Scene
 `Ctrl` `2`  | Game
@@ -67,7 +66,7 @@ shortcuts | description
 
 ### Edit
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Shift` `Z`  | Redo (MacOS)
@@ -88,7 +87,7 @@ shortcuts | description
 
 ### Selection
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `1-9`  | Load selection 1-9
 `Ctrl` `Alt` `1-9`  | Save selection 1-9
@@ -97,7 +96,7 @@ shortcuts | description
 
 ### Assets
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `R`  | Refresh
 {.shortcuts}
@@ -105,7 +104,7 @@ shortcuts | description
 
 ### Animation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `,`  | First keyframe
 `Shift` `K`  | Key modified

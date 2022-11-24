@@ -1,11 +1,10 @@
 ---
-title: Guitar Pro
+title: Guitar Pro Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693917
 icon: icon-guitar pro
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Track
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `Insert`  | Add
 `Ctrl` `Shift` `Delete`  | Delete
@@ -34,7 +33,7 @@ shortcuts | description
 
 ### Bar - General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Insert`  | Insert bar
 `Ctrl` `Delete`  | Delete bar
@@ -54,7 +53,7 @@ shortcuts | description
 
 ### Bar - Section
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `Insert`  | Insert or remove
 `Alt` `Left`  | Previous section
@@ -64,7 +63,7 @@ shortcuts | description
 
 ### Bar - Simile Mark
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `5`  | Repeat one bar
 `Ctrl` `Shift` `5`  | Repeat two bars
@@ -73,7 +72,7 @@ shortcuts | description
 
 ### Note - General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Insert`  | Insert a beat
 `Shift` `Delete`  | Delete the beats
@@ -102,7 +101,7 @@ shortcuts | description
 
 ### Note - Duration
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `+/-`  | Increase or decrease (whole note, half note, etc)
 `Shift` `5`  | Dotting
@@ -113,7 +112,7 @@ shortcuts | description
 
 ### Note - Accidentals
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `7`  | Double flat
 `Ctrl` `7`  | Flat
@@ -126,7 +125,7 @@ shortcuts | description
 
 ### Effects - General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `X`  | Dead note
 `O`  | Ghost note
@@ -158,7 +157,7 @@ shortcuts | description
 
 ### Effects - Grace Note
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G`  | Before the beat
 `Alt` `G`  | On the beat
@@ -167,7 +166,7 @@ shortcuts | description
 
 ### Effects - Vibrato
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `V`  | Left-hand vibrato (slight)
 `Alt` `V`  | Left-hand vibrato (wide)
@@ -176,7 +175,7 @@ shortcuts | description
 
 ### Effects - Vibrato with Trem. Bar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `W`  | Vibrato with trem. bar (slight)
 `Alt` `W`  | Vibrato with trem. bar (wide)
@@ -185,7 +184,7 @@ shortcuts | description
 
 ### Effects - Slide
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `S`  | Legato slide
 `Alt` `S`  | Shift slide
@@ -194,7 +193,7 @@ shortcuts | description
 
 ### Effects - Tremolo
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Shift` `'`  | Thirty-second note
 {.shortcuts}
@@ -202,7 +201,7 @@ shortcuts | description
 
 ### Tools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F4`  | Check the bars' duration
 `Ctrl` `Shift` `M`  | Move or swap voices
@@ -211,7 +210,7 @@ shortcuts | description
 
 ### Sound
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Play
 `Ctrl` `Space`  | Play from the beginning
@@ -226,7 +225,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Alt` `D`  | Design mode
 `F3`  | Multitrack
@@ -240,7 +239,7 @@ shortcuts | description
 
 ### Edit
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Shift` `Z`  | Redo
@@ -259,7 +258,7 @@ shortcuts | description
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New steel guitar
 `Ctrl` `O`  | Open

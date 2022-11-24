@@ -1,11 +1,10 @@
 ---
-title: Framer X
+title: Framer X Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701096
 icon: icon-framer x
 label: Mac
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - mac
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Tools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F`  | Frame
 `U`  | Round
@@ -35,7 +34,7 @@ shortcuts | description
 
 ### Graphics
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G`  | Graphic
 `P`  | Path
@@ -49,7 +48,7 @@ shortcuts | description
 
 ### Layout
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `Enter`  | Add Frame
 `Cmd` `Opt` `Enter`  | Add Stack
@@ -61,7 +60,7 @@ shortcuts | description
 
 ### Components
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `K`  | Create from Design
 `Cmd` `Shift` `K`  | Create from Code
@@ -70,7 +69,7 @@ shortcuts | description
 
 ### Text
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `B`  | Bold
 `Cmd` `I`  | Italic
@@ -81,7 +80,7 @@ shortcuts | description
 
 ### Editing
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `(arrows)`  | Object Size
 `Cmd` `Shift` `(arrows)`  | Object Size by 10px
@@ -99,7 +98,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Z`  | Zoom
 `Cmd` `+`  | Zoom In
@@ -113,7 +112,7 @@ shortcuts | description
 
 ### Window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Cmd` `M`  | Minimize
 `Cmd` `Shift` `1`  | Welcome

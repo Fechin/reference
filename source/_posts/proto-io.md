@@ -1,11 +1,10 @@
 ---
-title: Proto.io
+title: Proto.io Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694775
 icon: icon-proto.io
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Main
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `F`  | Find
 `Ctrl` `K`  | Show keyboard shortcuts
@@ -35,7 +34,7 @@ shortcuts | description
 
 ### History
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo
 `Ctrl` `Shift` `Z`  | Redo
@@ -46,7 +45,7 @@ shortcuts | description
 
 ### Edit
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `A`  | Select all
 `Ctrl` `X`  | Cut
@@ -59,7 +58,7 @@ shortcuts | description
 
 ### Grid
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `'`  | Toggle grid
 `Ctrl` `\`  | Toggle grid system
@@ -71,7 +70,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `+`  | Zoom in
 `Ctrl` `-`  | Zoom out
@@ -87,7 +86,7 @@ shortcuts | description
 
 ### Item
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Up`  | Bring to front
 `Ctrl` `Down`  | Send to back
@@ -107,7 +106,7 @@ shortcuts | description
 
 ### Group
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `G`  | Group selected
 `Ctrl` `Shift` `G`  | Ungroup selected
@@ -116,7 +115,7 @@ shortcuts | description
 
 ### States Preview
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Space`  | Play or pause state transition
 `.`  | Forward state transition

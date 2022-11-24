@@ -1,11 +1,10 @@
 ---
-title: Brave Browser
+title: Brave Browser Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698868
 icon: icon-brave-browser
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Tabs and Windows
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | Open a new window
 `Ctrl` `Shift` `N`  | Open a new window in Private mode
@@ -46,7 +45,7 @@ shortcuts | description
 
 ### Browser
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Alt` `F`  | Open the main menu
 `Ctrl` `Shift` `B`  | Show or hide the bookmarks bar
@@ -69,7 +68,7 @@ shortcuts | description
 
 ### Address Bar
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Enter`  | Search with your default search engine (after typing)
 `Tab`  | Search using a different search engine (after typing)
@@ -83,7 +82,7 @@ shortcuts | description
 
 ### Webpage
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `P`  | Open options to print the current page
 `Ctrl` `S`  | Open options to save the current page

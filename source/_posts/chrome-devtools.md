@@ -1,11 +1,10 @@
 ---
-title: Chrome Developer Tools
+title: Chrome Developer Tools Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696017
 icon: icon-developer-tools
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Opening DevTools
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `I`  | Open whatever panel you used last
 `Ctrl` `Shift` `J`  | Open the Console panel
@@ -32,7 +31,7 @@ shortcuts | description
 
 ### Global Shortcuts
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `F1`  | Show Settings
 `Ctrl` `]`  | Focus the next panel
@@ -56,7 +55,7 @@ shortcuts | description
 
 ### Elements Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Z`  | Undo change
 `Ctrl` `Y`  | Redo change
@@ -73,7 +72,7 @@ shortcuts | description
 
 ### Sources Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `\`  | Pause script execution (if running), or resume (if paused)
 `Ctrl` `'`  | Step over next function call
@@ -89,7 +88,7 @@ shortcuts | description
 
 ### Code Editor
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Del`  | Delete all characters in the last word, up to the cursor
 `Ctrl` `M`  | Go to matching bracket
@@ -101,7 +100,7 @@ shortcuts | description
 
 ### Performance Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `E`  | Start or stop recording
 `Ctrl` `S`  | Save recording
@@ -111,7 +110,7 @@ shortcuts | description
 
 ### Memory Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `E`  | Start or stop recording
 {.shortcuts}
@@ -119,7 +118,7 @@ shortcuts | description
 
 ### Console Panel
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Tab`  | Accept autocomplete suggestion
 `Esc`  | Reject autocomplete suggestion

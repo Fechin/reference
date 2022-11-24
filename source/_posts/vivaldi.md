@@ -1,11 +1,10 @@
 ---
-title: Vivaldi Browser
+title: Vivaldi Browser Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694597
 icon: icon-vivaldi-browser
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### Window
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `N`  | New window
 `Ctrl` `Shift` `N`  | New private window
@@ -47,7 +46,7 @@ shortcuts | description
 
 ### View
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `Shift` `F`  | Fullscreen mode
 `Ctrl` `Shift` `B`  | Bookmarks bar
@@ -69,7 +68,7 @@ shortcuts | description
 
 ### Tab
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `T`  | New tab
 `Ctrl` `W`  | Close tab
@@ -92,7 +91,7 @@ shortcuts | description
 
 ### Page
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `Ctrl` `D`  | Create bookmark
 `Ctrl` `L`  | Focus address field

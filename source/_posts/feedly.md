@@ -1,11 +1,10 @@
 ---
-title: Feedly
+title: Feedly Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705686
 icon: icon-feedly
 label: 
 tags: 
-    - shortcut
-    - keyboard
+    - 
     - 
 categories:
     - Keyboard Shortcuts
@@ -22,7 +21,7 @@ Keyboard Shortcuts
 
 ### General
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `?`  | Show keyboard shortcuts
 {.shortcuts}
@@ -30,7 +29,7 @@ shortcuts | description
 
 ### Navigation
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `G` `T`  | Show Today
 `G` `A`  | Show All
@@ -47,7 +46,7 @@ shortcuts | description
 
 ### Lists
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `J`  | Inline next artlcke
 `K`  | Inline previous article
@@ -59,7 +58,7 @@ shortcuts | description
 
 ### Selected Article
 
-shortcuts | description
+Shortcut | Action
 ---|---
 `O`  | Inline or close the currently selected article
 `V`  | View the original in a new tab
