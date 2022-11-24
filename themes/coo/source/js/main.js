@@ -1,11 +1,6 @@
 let Utils = (function () {
     return {
         LIBRARY: {
-            ad: {
-                lib: ['//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8691406134231910'],
-                instance: 'adsbygoogle',
-                attr: {crossorigin: "anonymous", async: true}
-            },
             gtag: {
                 lib: ['https://www.googletagmanager.com/gtag/js?id=G-6SZEXN62V8'],
                 instance: 'gtag',
