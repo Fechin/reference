@@ -599,7 +599,7 @@ r1, r2 := func() (string, string) {
 fmt.Println(r1, r2)
 ```
 
-### Named return
+### Naked returns
 
 ```go
 func split(sum int) (x, y int) {
@@ -612,6 +612,8 @@ x, y := split(17)
 fmt.Println(x)   // => 7
 fmt.Println(y)   // => 10
 ```
+
+Note that using naked returns hurts readability.
 
 ### Variadic functions
 ```go
