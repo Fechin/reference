@@ -587,14 +587,15 @@ fmt.Println(a)    // => 3
 fmt.Println(b)    // => 7
 ```
 
-### Anonymous function
+### Function literals
+
 ```go
 r1, r2 := func() (string, string) {
-    x := []string{"hello", "world"}
+    x := []string{"hello", "quickref.me"}
     return x[0], x[1]
 }()
 
-// => hello world
+// => hello quickref.me
 fmt.Println(r1, r2)
 ```
 
