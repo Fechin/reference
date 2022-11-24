@@ -1,7 +1,7 @@
 ---
 title: 1Password Keyboard Shortcuts
-date: 2022` `11` `23 16:23:31.701231
-icon: icon` `1password
+date: 2022-11-23 16:23:31.702312
+icon: icon-1password
 label:
 tags:
     - tools
