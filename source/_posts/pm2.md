@@ -2,13 +2,13 @@
 title: PM2
 date: 2022-11-25 18:10:00
 icon: icon-pm2
-background: bg-red-500
+background: bg-[#230769]
 tags:
-    - pm2
+    - process
 categories:
     - Linux Command
 intro: |
-    [PM2] is a daemon process manager that will help you manage and keep your application online. Getting started with PM2 is straightforward, it is offered as a simple and intuitive CLI, installable via NPM..
+    [PM2] is a daemon process manager that will help you manage and keep your application online. Getting started with PM2 is straightforward, it is offered as a simple and intuitive CLI.
 ---
 
 
@@ -16,7 +16,7 @@ intro: |
 Getting Started
 ---------------
 
-### Create a Repository
+### Install
 The latest PM2 version is installable with NPM or Yarn
 ``` shell script
 $ npm install pm2@latest -g
@@ -41,7 +41,7 @@ $ pm2 start python-app.py --watch
 $ pm2 start binary-file -- --port 1520
 ```
 
-### Some options you can pass to the CLI
+### Some options you can pass to the CLI {.row-span-3}
 
 Specify an app name
 ``` shell script
@@ -103,15 +103,13 @@ $ pm2 stop app_name
 $ pm2 delete app_name
 ```
 
-Instead of app_name you can pass:
+#### Instead of app_name you can pass
 
-`all` to act on all processes
+- `all` to act on all processes
+- `id` to act on a specific process id
+ 
 
-`id` to act on a specific process id
-
-` `
-
-### Check status, logs, metrics
+### Check status, logs, metrics {.row-span-2}
 
 Now that you have started this application, you can check its status, logs, metrics and even get the online dashboard with [pm2.io](https://pm2.io/).
 
@@ -152,7 +150,7 @@ Read more about cluster mode [here](https://pm2.keymetrics.io/docs/usage/quick-s
 
 
 
-### Ecosystem File
+### Ecosystem File {.row-span-2}
 
 You can also create a configuration file, called Ecosystem File, to manage multiple applications. To generate an Ecosystem file
 ``` shell script
@@ -208,16 +206,6 @@ This will watch & restart the app on any file change from the current directory 
 You can then use `pm2 logs` to check for restarted app logs.
 
 ------
-
-### Updating PM2
-We made it simple, there is no breaking change between releases and the procedure is straightforward
-```shell script
-$ npm install pm2@latest -g
-```
-Then update the in-memory PM2
-```shell script
-$ pm2 update
-```
 
 
 ### CheatSheet {.row-span-2 .col-span-2}
@@ -279,5 +267,20 @@ $ pm2 start app.js --no-vizion
 $ pm2 start app.js --no-autorestart
 ```
 
-## Also see {.cols-1}
-See also: [QUICK START](https://pm2.keymetrics.io/docs/usage/quick-start/)
+
+### Updating PM2
+We made it simple, there is no breaking change between releases and the procedure is straightforward
+```shell script
+$ npm install pm2@latest -g
+```
+Then update the in-memory PM2
+```shell script
+$ pm2 update
+```
+
+
+
+Also see
+--------
+
+- [QUICK START](https://pm2.keymetrics.io/docs/usage/quick-start/) _(pm2.keymetrics.io)_
