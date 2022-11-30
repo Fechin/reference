@@ -1,8 +1,8 @@
 @font-face {
   font-family: "icon"; /* Project id 2226430 */
-  src: url('//at.alicdn.com/t/c/font_2226430_7hdlgojm6n3.woff2?1669194761') format('woff2'),
-       url('//at.alicdn.com/t/c/font_2226430_7hdlgojm6n3.woff?1669194761') format('woff'),
-       url('//at.alicdn.com/t/c/font_2226430_7hdlgojm6n3.ttf?1669194761') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_2226430_1gzd7ua42v7.woff2?1669773269') format('woff2'),
+       url('//at.alicdn.com/t/c/font_2226430_1gzd7ua42v7.woff?1669773269') format('woff'),
+       url('//at.alicdn.com/t/c/font_2226430_1gzd7ua42v7.ttf?1669773269') format('truetype');
 }
 
 .icon {
@@ -11,6 +11,34 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-placeholder:before {
+  content: "\e6a7";
+}
+
+.icon-unity:before {
+  content: "\ec29";
+}
+
+.icon-pm2:before {
+  content: "\e61f";
+}
+
+.icon-heart:before {
+  content: "\f16e";
+}
+
+.icon-arrow:before {
+  content: "\e614";
+}
+
+.icon-share:before {
+  content: "\e66e";
+}
+
+.icon-shopify:before {
+  content: "\ec1e";
 }
 
 .icon-outlook:before {
@@ -247,10 +275,6 @@
 
 .icon-search:before {
   content: "\e7ea";
-}
-
-.icon-heart:before {
-  content: "\e66a";
 }
 
 .icon-permission:before {
