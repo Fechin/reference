@@ -1,7 +1,7 @@
 ---
 title: Bear Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705436
-icon: icon-bear
+icon: 
 label: Mac
 tags: 
     - 

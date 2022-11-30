@@ -1,7 +1,7 @@
 ---
 title: TablePlus Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706905
-icon: icon-tableplus
+icon: 
 label: 
 tags: 
     - 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Outlook Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698084
-icon: icon-microsoft-outlook
+icon: icon-outlook
 label: 
 tags: 
     - 

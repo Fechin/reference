@@ -1,7 +1,7 @@
 ---
 title: TickTick Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696573
-icon: icon-ticktick
+icon: 
 label: 
 tags: 
     - 

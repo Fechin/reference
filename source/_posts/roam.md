@@ -1,7 +1,7 @@
 ---
 title: Roam Research Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693680
-icon: icon-roam-research
+icon: 
 label: 
 tags: 
     - 

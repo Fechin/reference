@@ -1,7 +1,7 @@
 ---
 title: Guitar Pro Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693917
-icon: icon-guitar pro
+icon: 
 label: 
 tags: 
     - 

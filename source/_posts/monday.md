@@ -1,7 +1,7 @@
 ---
 title: Monday.com Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694181
-icon: icon-monday
+icon: 
 label: 
 tags: 
     - 

@@ -1,7 +1,7 @@
 ---
 title: Audacity Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701833
-icon: icon-audacity
+icon: 
 label: 
 tags: 
     - 

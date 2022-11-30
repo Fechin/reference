@@ -1,7 +1,7 @@
 ---
 title: Code Editor for iOS Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697110
-icon: icon-code-editor
+icon: 
 label: Mac
 tags: 
     - 

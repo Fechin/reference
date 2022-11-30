@@ -1,7 +1,7 @@
 ---
 title: Missive Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695283
-icon: icon-missive
+icon: 
 label: 
 tags: 
     - 

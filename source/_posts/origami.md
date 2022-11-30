@@ -1,7 +1,7 @@
 ---
 title: Origami Studio Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695481
-icon: icon-origami-studio
+icon: 
 label: Mac
 tags: 
     - 

@@ -1,7 +1,7 @@
 ---
 title: KanbanMail Keyboard Shortcuts
 date: 2022-11-23 16:23:31.698423
-icon: icon-kanbanmail
+icon: 
 label: 
 tags: 
     - 

@@ -1,7 +1,7 @@
 ---
 title: Proto.io Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694775
-icon: icon-proto.io
+icon: 
 label: 
 tags: 
     - 

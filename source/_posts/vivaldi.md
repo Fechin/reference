@@ -1,7 +1,7 @@
 ---
 title: Vivaldi Browser Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694597
-icon: icon-vivaldi-browser
+icon: 
 label: 
 tags: 
     - 

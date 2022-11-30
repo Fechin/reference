@@ -1,7 +1,7 @@
 ---
 title: Apex Legends Keyboard Shortcuts
 date: 2022-11-23 16:23:31.706352
-icon: icon-apex legends
+icon: 
 label: 
 tags: 
     - 

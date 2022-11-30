@@ -1,7 +1,7 @@
 ---
 title: Affinity Photo Keyboard Shortcuts
 date: 2022-11-23 16:23:31.694998
-icon: icon-affinity-photo
+icon: 
 label: 
 tags: 
     - 

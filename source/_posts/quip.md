@@ -1,7 +1,7 @@
 ---
 title: Quip.com Keyboard Shortcuts
 date: 2022-11-23 16:23:31.697261
-icon: icon-quip.com
+icon: 
 label: 
 tags: 
     - 
