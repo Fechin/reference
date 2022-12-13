@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -34,6 +34,14 @@ Shortcut | Action
 `Ctrl` `Right`  | Next track
 `Ctrl` `Left`  | Previous track
 `Ctrl` `Up`  | Volume up
+{.shortcuts}
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `Ctrl` `Down`  | Volume down
 `Ctrl` `Shift` `Down`  | Mute
 `Ctrl` `Shift` `Up`  | Max volume

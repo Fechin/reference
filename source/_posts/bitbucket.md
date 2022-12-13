@@ -44,21 +44,6 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Repository pages with sidebar
-
-Shortcut | Action
----|---
-`]`  | Expand and collapse right sidebar
-{.shortcuts}
-
-
-### Repository source
-
-Shortcut | Action
----|---
-`F`  | Focus the file filter
-{.shortcuts}
-
 
 ### Repository pages (except for Source)
 
@@ -78,7 +63,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Repository pages (except for Source and Settings)
+### Repository pages (except for Source and Settings) {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -90,7 +75,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Pull requests
+### Pull requests {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -102,6 +87,22 @@ Shortcut | Action
 `Shift` `T`  | Show the list of tasks
 {.shortcuts}
 
+
+
+### Repository pages with sidebar
+
+Shortcut | Action
+---|---
+`]`  | Expand and collapse right sidebar
+{.shortcuts}
+
+
+### Repository source
+
+Shortcut | Action
+---|---
+`F`  | Focus the file filter
+{.shortcuts}
 
 
 

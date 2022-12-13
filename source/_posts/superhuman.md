@@ -137,7 +137,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Navigation
+### Navigation {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -165,6 +165,22 @@ Shortcut | Action
 {.shortcuts}
 
 
+
+### Pop Out Compose
+
+Shortcut | Action
+---|---
+`Cmd` `Shift` `P`  | Pop draft in or out
+`Shift` `R`  | Pop out reply
+`Shift` `Enter`  | Pop out reply-all
+`Shift` `C`  | Pop out new message
+`Shift` `F`  | Pop out forward
+`Cmd` `/`  | Pop out a draft and search
+`Cmd` `D`  | Switch to or from a draft
+{.shortcuts}
+
+
+
 ### Compose
 
 Shortcut | Action
@@ -184,20 +200,6 @@ Shortcut | Action
 `Cmd` `Enter`  | Send
 `Cmd` `Shift` `Enter`  | Send and mark done
 `Cmd` `Shift` `Z`  | Instant send
-{.shortcuts}
-
-
-### Pop Out Compose
-
-Shortcut | Action
----|---
-`Cmd` `Shift` `P`  | Pop draft in or out
-`Shift` `R`  | Pop out reply
-`Shift` `Enter`  | Pop out reply-all
-`Shift` `C`  | Pop out new message
-`Shift` `F`  | Pop out forward
-`Cmd` `/`  | Pop out a draft and search
-`Cmd` `D`  | Switch to or from a draft
 {.shortcuts}
 
 

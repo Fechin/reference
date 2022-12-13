@@ -14,12 +14,12 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts  {.cols-2}
 ------------------
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -44,6 +44,15 @@ Shortcut | Action
 `Shift` `O`  | Orbit tool - activate pan tool
 `B`  | Paint bucket tool
 `Alt` `B`  | Paint bucket tool - fill material, paint all matching adjacent faces
+`Shift` `B`  | Paint bucket tool - replace material, paint all matching faces in the model
+{.shortcuts}
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `Shift` `B`  | Paint bucket tool - replace material, paint all matching faces in the model
 `Alt` `Shift` `B`  | Paint bucket tool - replace material on object, paint all matching faces on the same object
 `Ctrl` `B`  | Paint bucket tool - sample material

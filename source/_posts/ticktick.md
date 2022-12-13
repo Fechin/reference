@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -35,6 +35,14 @@ Shortcut | Action
 `Ctrl` `1`  | Set today
 `Ctrl` `2`  | Set tomorrow
 `Ctrl` `3`  | Set next week
+{.shortcuts}
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `Ctrl` `0`  | Set no priority
 `Ctrl` `1`  | Set low priority
 `Ctrl` `2`  | Set medium priority

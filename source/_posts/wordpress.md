@@ -14,12 +14,11 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts  {.cols-2}
 ------------------
 
 
-
-### Editor
+### Editor I
 
 Shortcut | Action
 ---|---
@@ -40,6 +39,13 @@ Shortcut | Action
 `Alt` `Shift` `D`  | Strikethrough
 `Alt` `Shift` `R`  | Align text right
 `Alt` `Shift` `U`  | Unordered list
+{.shortcuts}
+
+
+### Editor II
+
+Shortcut | Action
+---|---
 `Alt` `Shift` `A`  | Insert a link
 `Alt` `Shift` `O`  | Ordered list
 `Alt` `Shift` `S`  | Remove a link

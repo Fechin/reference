@@ -29,7 +29,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Patches
+### Patches {.row-span-3}
 
 Shortcut | Action
 ---|---
@@ -82,7 +82,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Layers
+### Layers {.row-span-2}
 
 Shortcut | Action
 ---|---

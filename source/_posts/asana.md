@@ -42,7 +42,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Task Actions
+### Task Actions {.row-span-2} 
 
 Shortcut | Action
 ---|---

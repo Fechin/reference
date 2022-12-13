@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### Editing
+### Editing  {.row-span-3}
 
 Shortcut | Action
 ---|---

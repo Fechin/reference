@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -51,6 +51,15 @@ Shortcut | Action
 `Right`  | Navigate right
 `Shift` `M`  | Go to the DVD menu
 `Shift` `O`  | Select previous DVD title
+{.shortcuts}
+
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `Shift` `B`  | Select next DVD title
 `Shift` `P`  | Select previous DVD chapter
 `Shift` `N`  | Select next DVD chapter
@@ -79,6 +88,16 @@ Shortcut | Action
 `Shift` `R`  | Record
 `Shift` `D`  | Dump
 `Z`  | Zoom
+{.shortcuts}
+
+
+
+
+
+### General III
+
+Shortcut | Action
+---|---
 `Shift` `Z`  | Un-Zoom
 `W`  | Toggle wallpaper mode
 `Alt` `Shift` `M`  | Display OSD menu on top
@@ -106,7 +125,6 @@ Shortcut | Action
 `Ctrl` `F1-F10`  | Set playlist bookmark 1-10
 `F1-F10`  | Play playlist bookmark 1-10
 {.shortcuts}
-
 
 
 

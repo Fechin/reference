@@ -39,7 +39,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Email
+### Email  {.row-span-2}
 
 Shortcut | Action
 ---|---

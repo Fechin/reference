@@ -87,22 +87,6 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Flags
-
-Shortcut | Action
----|---
-`Ctrl` `Shift` `G`  | Open the Flag for Follow Up dialog box
-{.shortcuts}
-
-
-### Color categories
-
-Shortcut | Action
----|---
-`Alt` `D`  | Delete the selected category from the list in the Color categories box
-{.shortcuts}
-
-
 ### Create an item or file
 
 Shortcut | Action
@@ -147,7 +131,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Mail
+### Mail {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -243,7 +227,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Tasks
+### Tasks {.row-span-3}
 
 Shortcut | Action
 ---|---
@@ -265,7 +249,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Format text
+### Format text {.row-span-4}
 
 Shortcut | Action
 ---|---
@@ -354,6 +338,22 @@ Shortcut | Action
 `Ctrl` `Shift` `Alt` `T`  | Close an InfoPath form
 {.shortcuts}
 
+
+
+### Flags
+
+Shortcut | Action
+---|---
+`Ctrl` `Shift` `G`  | Open the Flag for Follow Up dialog box
+{.shortcuts}
+
+
+### Color categories
+
+Shortcut | Action
+---|---
+`Alt` `D`  | Delete the selected category from the list in the Color categories box
+{.shortcuts}
 
 
 

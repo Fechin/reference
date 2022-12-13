@@ -64,7 +64,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Edit
+### Edit {.row-span-2}
 
 Shortcut | Action
 ---|---

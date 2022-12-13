@@ -19,16 +19,8 @@ Keyboard Shortcuts
 
 
 
-### Help
 
-Shortcut | Action
----|---
-`F1`  | Help
-`Shift` `F1`  | Context help
-{.shortcuts}
-
-
-### Toolbox
+### Toolbox {.row-span-2} 
 
 Shortcut | Action
 ---|---
@@ -123,7 +115,22 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Edit
+
+### Layers
+
+Shortcut | Action
+---|---
+`PgUp`  | Select the layer above
+`PgDn`  | Select the layer below
+`Home`  | Select the first layer
+`End`  | Select the last layer
+`Ctrl` `M`  | Merge visible layers
+`Ctrl` `H`  | Anchor layer
+{.shortcuts}
+
+
+
+### Edit {.row-span-2} 
 
 Shortcut | Action
 ---|---
@@ -143,18 +150,6 @@ Shortcut | Action
 `Ctrl` `;`  | Fill with pattern
 {.shortcuts}
 
-
-### Layers
-
-Shortcut | Action
----|---
-`PgUp`  | Select the layer above
-`PgDn`  | Select the layer below
-`Home`  | Select the first layer
-`End`  | Select the last layer
-`Ctrl` `M`  | Merge visible layers
-`Ctrl` `H`  | Anchor layer
-{.shortcuts}
 
 
 ### Selections
@@ -176,6 +171,16 @@ Shortcut | Action
 ---|---
 `Ctrl` `F`  | Repeat last plug-in
 `Ctrl` `Shift` `F`  | Reshow last plug-in
+{.shortcuts}
+
+
+
+### Help
+
+Shortcut | Action
+---|---
+`F1`  | Help
+`Shift` `F1`  | Context help
 {.shortcuts}
 
 

@@ -31,7 +31,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### File Menu
+### File Menu {.row-span-2} 
 
 Shortcut | Action
 ---|---

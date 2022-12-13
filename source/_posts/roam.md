@@ -34,7 +34,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Lists and Blocks
+### Lists and Blocks  {.row-span-2}
 
 Shortcut | Action
 ---|---

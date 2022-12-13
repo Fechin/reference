@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### Layers
+### Layers {.row-span-2}
 
 Shortcut | Action
 ---|---

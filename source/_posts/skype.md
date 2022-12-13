@@ -14,12 +14,12 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -39,6 +39,14 @@ Shortcut | Action
 `Ctrl` `Alt` `O`  | Send feedback
 `Ctrl` `R`  | Refresh the app
 `Ctrl` `T`  | Open themes
+{.shortcuts}
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `Ctrl` `Shift` `T`  | Toggle between light and dark mode
 `Ctrl` `+/-/0`  | Zoom in, out, or actual size
 `Ctrl` `Shift` `E`  | Edit the last message sent
@@ -55,7 +63,6 @@ Shortcut | Action
 `Ctrl` `Shift` `H`  | Hang up
 `Ctrl` `Shift` `M`  | Toggle mute
 {.shortcuts}
-
 
 
 

@@ -36,14 +36,6 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Jumping
-
-Shortcut | Action
----|---
-`Ctrl` `1-9`  | Go to Mailbox 1-9
-{.shortcuts}
-
-
 ### Selection
 
 Shortcut | Action
@@ -79,7 +71,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Actions
+### Actions {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -155,6 +147,15 @@ Shortcut | Action
 `W`  | Week view
 `M`  | Month view
 `A`  | Agenda view
+{.shortcuts}
+
+
+
+### Jumping
+
+Shortcut | Action
+---|---
+`Ctrl` `1-9`  | Go to Mailbox 1-9
 {.shortcuts}
 
 

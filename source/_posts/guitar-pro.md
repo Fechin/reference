@@ -31,7 +31,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Bar - General
+### Bar - General {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -70,7 +70,19 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Note - General
+### Note - Duration
+
+Shortcut | Action
+---|---
+`+/-`  | Increase or decrease (whole note, half note, etc)
+`Shift` `5`  | Dotting
+`Ctrl` `Shift` `5`  | Double dotting
+`/`  | Triplet
+{.shortcuts}
+
+
+
+### Note - General  {.row-span-6}
 
 Shortcut | Action
 ---|---
@@ -99,31 +111,8 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Note - Duration
 
-Shortcut | Action
----|---
-`+/-`  | Increase or decrease (whole note, half note, etc)
-`Shift` `5`  | Dotting
-`Ctrl` `Shift` `5`  | Double dotting
-`/`  | Triplet
-{.shortcuts}
-
-
-### Note - Accidentals
-
-Shortcut | Action
----|---
-`Ctrl` `Alt` `7`  | Double flat
-`Ctrl` `7`  | Flat
-`Ctrl` `8`  | Natural
-`Ctrl` `9`  | Sharp
-`Ctrl` `Alt` `9`  | Double sharp
-`Ctrl` `Alt` `8`  | Change the accidental
-{.shortcuts}
-
-
-### Effects - General
+### Effects - General  {.row-span-6}
 
 Shortcut | Action
 ---|---
@@ -152,6 +141,21 @@ Shortcut | Action
 `Ctrl` `Shift` `./,`  | Volume swell
 `Alt` `O`  | Wah open
 `Alt` `C`  | Wah close
+{.shortcuts}
+
+
+
+
+### Note - Accidentals
+
+Shortcut | Action
+---|---
+`Ctrl` `Alt` `7`  | Double flat
+`Ctrl` `7`  | Flat
+`Ctrl` `8`  | Natural
+`Ctrl` `9`  | Sharp
+`Ctrl` `Alt` `9`  | Double sharp
+`Ctrl` `Alt` `8`  | Change the accidental
 {.shortcuts}
 
 

@@ -14,7 +14,7 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts  {.cols-2}
 ------------------
 
 
@@ -50,6 +50,16 @@ Shortcut | Action
 `Cmd` `/`  | Hide or show the status bar in Finder windows
 `Cmd` `J`  | Show view options
 `Cmd` `K`  | Open the Connect to Server window
+{.shortcuts}
+
+
+
+
+
+### Finder Shortcuts
+
+Shortcut | Action
+---|---
 `Cmd` `Ctrl` `A`  | Make an alias of the selected item
 `Cmd` `N`  | Open a new Finder window
 `Cmd` `Opt` `N`  | Create a new Smart Folder
@@ -79,7 +89,6 @@ Shortcut | Action
 `Ctrl` `Down`  | Show all windows of the front app
 `Opt` `Vol`  | Open Sound preferences
 {.shortcuts}
-
 
 
 

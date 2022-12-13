@@ -62,7 +62,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Actions
+### Actions {.row-span-2}
 
 Shortcut | Action
 ---|---

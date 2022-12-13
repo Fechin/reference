@@ -29,7 +29,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Global Shortcuts
+### Global Shortcuts  {.row-span-2}
 
 Shortcut | Action
 ---|---

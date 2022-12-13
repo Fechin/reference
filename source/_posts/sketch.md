@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### General
+### General {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -149,7 +149,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Text Editing
+### Text Editing {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -171,7 +171,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Arranging Layers
+### Arranging Layers  {.row-span-2}
 
 Shortcut | Action
 ---|---
