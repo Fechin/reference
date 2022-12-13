@@ -14,12 +14,12 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### General Shortcuts
+### General Shortcuts I
 
 Shortcut | Action
 ---|---
@@ -38,6 +38,14 @@ Shortcut | Action
 `Ctrl` `M`  | Manual transfer
 `Ctrl` `Shift` `N`  | Create a new directory
 `Ctrl` `O`  | Enable directory comparison
+{.shortcuts}
+
+
+
+### General Shortcuts II
+
+Shortcut | Action
+---|---
 `Ctrl` `P`  | Process queue
 `Ctrl` `Q`  | Exit
 `Ctrl` `R`  | Reconnects to server
@@ -54,6 +62,7 @@ Shortcut | Action
 `Left`  | Nothing in a files view, up on level in a tree view
 `Right`  | Down one level in a tree view if there are subfolders, nothing if there are none
 {.shortcuts}
+
 
 
 

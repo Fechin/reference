@@ -123,7 +123,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Project boards
+### Project boards {.row-span-2}
 
 Shortcut | Action
 ---|---

@@ -14,12 +14,12 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -33,6 +33,15 @@ Shortcut | Action
 `Up`  | Increase volume 5%
 `Down`  | Decrease volume 5%
 `1-9`  | Seek to the 10-90% of the video
+{.shortcuts}
+
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `0`  | Seek to the beginning of the video
 `Shift` `1`  | Move between H1 headers
 `/`  | Go to search box
@@ -44,7 +53,6 @@ Shortcut | Action
 `.`  | Move forward a single frame (while paused)
 `,`  | Move back a single frame (while paused)
 {.shortcuts}
-
 
 
 

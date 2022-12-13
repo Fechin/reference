@@ -18,16 +18,7 @@ Keyboard Shortcuts
 ------------------
 
 
-
-### General
-
-Shortcut | Action
----|---
-`?`  | Show keyboard shortcuts
-{.shortcuts}
-
-
-### Navigation
+### Navigation {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -56,7 +47,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Selected Article
+### Selected Article {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -69,6 +60,15 @@ Shortcut | Action
 `B`  | Save to Buffer
 `C`  | Clip to Evernote
 `Shift` `V`  | Preview
+{.shortcuts}
+
+
+
+### Help
+
+Shortcut | Action
+---|---
+`?`  | Show keyboard shortcuts
 {.shortcuts}
 
 

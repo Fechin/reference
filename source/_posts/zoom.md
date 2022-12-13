@@ -13,12 +13,12 @@ intro: |
 
 
 
-Mac Keyboard Shortcuts
+Mac Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### Meetings
+### Meetings I
 
 Shortcut | Action
 ---|---
@@ -35,6 +35,15 @@ Shortcut | Action
 `Cmd` `Shift` `T`  | Pause or resume screen share
 `Cmd` `Shift` `R`  | Start local recording
 `Cmd` `Shift` `C`  | Start cloud recording
+{.shortcuts}
+
+
+
+
+### Meetings II
+
+Shortcut | Action
+---|---
 `Cmd` `Shift` `P`  | Pause or resume recording
 `Cmd` `Shift` `W`  | Switch to active speaker view or gallery view, depending on current view
 `Ctrl` `P`  | View previous 25 participants in gallery view
@@ -75,12 +84,12 @@ Shortcut | Action
 
 
 
-Windows Keyboard Shortcuts
+Windows Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### All Shortcuts
+### All Shortcuts II
 
 Shortcut | Action
 ---|---
@@ -101,6 +110,17 @@ Shortcut | Action
 `Alt` `C`  | Start or stop cloud recording
 `Alt` `P`  | Pause or resume recording
 `Alt` `N`  | Switch camera
+`Alt` `F`  | Enter or exit full screen
+{.shortcuts}
+
+
+
+
+
+### All Shortcuts II
+
+Shortcut | Action
+---|---
 `Alt` `F`  | Enter or exit full screen
 `Alt` `H`  | Display or hide in-meeting chat panel
 `Alt` `U`  | Display or hide participants panel

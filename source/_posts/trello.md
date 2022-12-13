@@ -14,12 +14,12 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### General
+### General I
 
 Shortcut | Action
 ---|---
@@ -38,6 +38,14 @@ Shortcut | Action
 `M`  | Add/Remove Members
 `N`  | Insert New Card
 `,/./</>`  | Move Card to Adjacent List
+{.shortcuts}
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `Q`  | My Cards Filter
 `S`  | Watch
 `Space`  | Assign Self

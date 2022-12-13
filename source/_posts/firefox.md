@@ -86,7 +86,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Windows and Tabs
+### Windows and Tabs {.row-span-2}
 
 Shortcut | Action
 ---|---

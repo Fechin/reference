@@ -14,12 +14,13 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### General
+
+### General I
 
 Shortcut | Action
 ---|---
@@ -33,6 +34,15 @@ Shortcut | Action
 `S`  | Search
 `G` `L`  | Navigate to likes
 `G` `C`  | Navigate to library
+{.shortcuts}
+
+
+
+
+### General II
+
+Shortcut | Action
+---|---
 `G` `H`  | Navigate to history
 `Shift` `S`  | Shuffle
 `Shift` `Down`  | Decrease volume
@@ -46,8 +56,6 @@ Shortcut | Action
 `G` `P`  | Navigate to profile
 `Q`  | Show next up
 {.shortcuts}
-
-
 
 
 Also see

@@ -14,12 +14,12 @@ intro: |
 
 
 
-Keyboard Shortcuts
+Keyboard Shortcuts {.cols-2}
 ------------------
 
 
 
-### General Shortcuts
+### General Shortcuts I
 
 Shortcut | Action
 ---|---
@@ -44,6 +44,13 @@ Shortcut | Action
 `Cmd` `Shift` `]`  | Move to next tab
 `Cmd` `4`  | Toggle preview, in editor only
 `Cmd` `K`  | Clear scrollback, in terminal and playgrounds only
+{.shortcuts}
+
+
+### General Shortcuts II
+
+Shortcut | Action
+---|---
 `Cmd` `R`  | Reload, in preview only
 `Cmd` `Left`  | Back, in preview only
 `Cmd` `Right`  | Forward, in preview only

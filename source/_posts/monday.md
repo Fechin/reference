@@ -30,7 +30,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Board
+### Board I
 
 Shortcut | Action
 ---|---
@@ -43,6 +43,14 @@ Shortcut | Action
 `Enter`  | Edit Cell Content
 `Backspace`  | Clear Cell Content
 `Space`  | Open Column View
+{.shortcuts}
+
+
+
+### Board II
+
+Shortcut | Action
+---|---
 `Ctrl` `F`  | Search Board
 `Ctrl` `C`  | Copy Cell Content
 `Ctrl` `V`  | Paste Cell Content
@@ -55,6 +63,7 @@ Shortcut | Action
 `Ctrl` `(click)`  | Sort Another Column
 `Ctrl` `G`  | Collapse/Expand All Groups
 {.shortcuts}
+
 
 
 

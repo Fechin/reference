@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### Text Styles
+### Text Styles {.row-span-3}
 
 Shortcut | Action
 ---|---
@@ -103,18 +103,8 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Panels and search
 
-Shortcut | Action
----|---
-`Shift` `Cmd` `I`  | Toggle information panel
-`Cmd` `F`  | Search inside the current note
-`Option` `Cmd` `F`  | Search and replace inside the current note
-`Shift` `Cmd` `F`  | Search inside the note list
-{.shortcuts}
-
-
-### Navigation
+### Navigation {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -137,6 +127,17 @@ Shortcut | Action
 `Cmd` `6`  | Select Trash in the sidebar
 `Option` `Cmd` `Left`  | Navigate back in visualized notes history
 `Option` `Cmd` `Right`  | Navigate forward in visualized notes history
+{.shortcuts}
+
+
+### Panels and search
+
+Shortcut | Action
+---|---
+`Shift` `Cmd` `I`  | Toggle information panel
+`Cmd` `F`  | Search inside the current note
+`Option` `Cmd` `F`  | Search and replace inside the current note
+`Shift` `Cmd` `F`  | Search inside the note list
 {.shortcuts}
 
 

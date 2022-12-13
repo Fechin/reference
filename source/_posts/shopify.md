@@ -47,7 +47,10 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Navigating Admin Panel
+
+
+
+### Admin Panel I
 
 Shortcut | Action
 ---|---
@@ -63,6 +66,15 @@ Shortcut | Action
 `G` `W` `T`  | Go to online store, themes
 `G` `W` `D`  | Go to online store, domains
 `G` `T` `L`  | Go to settings, locations
+{.shortcuts}
+
+
+
+
+### Admin Panel II
+
+Shortcut | Action
+---|---
 `G` `S` `P`  | Go to settings, payments
 `G` `S` `S`  | Go to settings, shipping
 `G` `S` `N`  | Go to settings, notifications
@@ -76,6 +88,15 @@ Shortcut | Action
 `G` `S`  | Go to settings
 `G` `P` `T`  | Go to products, transfers
 `G` `P` `C`  | Go to products, collections
+{.shortcuts}
+
+
+
+
+### Admin Panel III
+
+Shortcut | Action
+---|---
 `G` `W` `O`  | Go to online store, overview
 `G` `W` `P`  | Go to online store, pages
 `G` `W` `N`  | Go to line store, navigation
@@ -88,7 +109,6 @@ Shortcut | Action
 `G` `S` `T`  | Go to settings, point of sale
 `G` `S` `B`  | Go to settings, billing
 {.shortcuts}
-
 
 
 

@@ -19,7 +19,7 @@ Keyboard Shortcuts
 
 
 
-### Navigation
+### Navigation {.row-span-4}
 
 Shortcut | Action
 ---|---
@@ -87,7 +87,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Message shortcuts
+### Message shortcuts {.row-span-2}
 
 Shortcut | Action
 ---|---

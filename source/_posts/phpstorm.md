@@ -19,15 +19,7 @@ Keyboard Shortcuts
 
 
 
-### Misc
-
-Shortcut | Action
----|---
-`Ctrl` `Shift` `A`  | Find Action
-{.shortcuts}
-
-
-### Editing
+### Editing {.row-span-4}
 
 Shortcut | Action
 ---|---
@@ -109,7 +101,7 @@ Shortcut | Action
 {.shortcuts}
 
 
-### Navigation
+### Navigation {.row-span-2}
 
 Shortcut | Action
 ---|---
@@ -189,6 +181,15 @@ Shortcut | Action
 `prof`  | protected function
 `pubf`  | public function
 `rqr/rqro`  | 'require'/'require_once' statement
+{.shortcuts}
+
+
+
+### Misc
+
+Shortcut | Action
+---|---
+`Ctrl` `Shift` `A`  | Find Action
 {.shortcuts}
 
 
