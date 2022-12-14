@@ -838,3 +838,4 @@ Miscellaneous
 
 - [C++ reference](https://en.cppreference.com/w/) _(cppreference.com)_
 - [C++ Language Tutorials](http://www.cplusplus.com/doc/tutorial/) _(cplusplus.com)_
+- [Learn C++ in Detail](https://www.scaler.com/topics/cpp/) _(Scaler Topics)_
