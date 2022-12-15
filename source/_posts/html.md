@@ -106,7 +106,7 @@ See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML
 <i>Italic Text</i>
 <em>This text is emphasized</em>
 <u>Underline Text</u>
-<pre>Preformatted text</pre>
+<pre>Pre-formatted Text</pre>
 <code>Source code</code>
 <del>Deleted text</del>
 <mark>Highlighted text (HTML5)</mark>
@@ -114,7 +114,6 @@ See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML
 <sup>Makes text superscripted</sup>
 <sub>Makes text subscripted</sub>
 <small>Makes text smaller</small>
-<-- <pre>Pre-formatted Text</pre> -->
 <kbd>Ctrl</kbd>
 <blockquote>Text Block Quote</blockquote>
 ```
