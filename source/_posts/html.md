@@ -114,7 +114,7 @@ See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML
 <sup>Makes text superscripted</sup>
 <sub>Makes text subscripted</sub>
 <small>Makes text smaller</small>
-<pre>Pre-formatted Text</pre>
+<-- <pre>Pre-formatted Text</pre> -->
 <kbd>Ctrl</kbd>
 <blockquote>Text Block Quote</blockquote>
 ```
