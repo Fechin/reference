@@ -14,7 +14,7 @@ hexo.extend.generator.register('json', function (locals) {
         temp_data.index = index;
         temp_data.title = data.title;
         temp_data.path = data.permalink.replace(hexo.config.url, "");
-        temp_data.icon = data.icon;
+        temp_data.icon = data.icon || "icon-placeholder";
         temp_data.background = data.background;
         temp_data.intro = data.intro;
 

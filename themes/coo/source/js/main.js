@@ -423,7 +423,7 @@ window.addEventListener('load', () => {
                                 <a href="${hit.path}" class="flex justify-between items-center rounded-lg py-1 px-4 transition-colors duration-100 ease-in-out overflow-hidden">
                                     <div class="flex items-start">
                                         <div class="flex justify-center items-center w-5 mr-5 mt-2 flex-none">
-                                            <i class="icon ${hit.icon === undefined ? "icon-placeholder" : hit.icon} text-2xl"></i>
+                                            <i class="icon ${hit.icon} text-2xl"></i>
                                         </div>
                                         <div class="flex flex-col truncate">
                                             <span class="font-semibold dark:text-slate-300 dark:group-hover:text-white">${hit.title}</span>
