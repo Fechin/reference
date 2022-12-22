@@ -1,6 +1,7 @@
 ---
 title: Bitbucket Keyboard Shortcuts
 date: 2022-11-23 16:23:31.699805
+background: bg-[#4382f7]
 icon: icon-bitbucket
 label: 
 tags: 

@@ -1,6 +1,7 @@
 ---
 title: Reddit Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705575
+background: bg-[#eb5528]
 icon: icon-reddit
 label: 
 tags: 

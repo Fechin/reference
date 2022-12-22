@@ -1,6 +1,7 @@
 ---
 title: Affinity Designer Keyboard Shortcuts
 date: 2022-11-23 16:23:31.702748
+background: bg-[#79cdf1]
 icon: 
 label: 
 tags: 

@@ -1,6 +1,7 @@
 ---
 title: Sequel Pro Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701510
+background: bg-[#ca9c3d]
 icon: 
 label: Mac
 tags: 

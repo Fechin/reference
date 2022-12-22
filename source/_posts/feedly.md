@@ -1,6 +1,7 @@
 ---
 title: Feedly Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705686
+background: bg-[#55a955]
 icon: icon-feedly
 label: 
 tags: 

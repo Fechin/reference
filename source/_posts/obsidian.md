@@ -1,6 +1,7 @@
 ---
 title: Obsidian Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700412
+background: bg-[#463793]
 icon: 
 label: 
 tags: 

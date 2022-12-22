@@ -1,6 +1,7 @@
 ---
 title: Sublime Text Keyboard Shortcuts
 date: 2022-11-23 16:23:31.695666
+background: bg-[#e8973e]
 icon: icon-sublime-text
 label: 
 tags: 

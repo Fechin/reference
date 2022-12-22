@@ -1,6 +1,7 @@
 ---
 title: PhpStorm Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703719
+background: bg-[#b24de9]
 icon: icon-phpstorm
 label: 
 tags: 

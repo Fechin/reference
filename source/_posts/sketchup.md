@@ -1,6 +1,7 @@
 ---
 title: SketchUp Pro Keyboard Shortcuts
 date: 2022-11-23 16:23:31.693091
+background: bg-[#265a94]
 icon: icon-sketchup
 label: 
 tags: 

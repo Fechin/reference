@@ -1,6 +1,7 @@
 ---
 title: Framer X Keyboard Shortcuts
 date: 2022-11-23 16:23:31.701096
+background: bg-[#2151ed]
 icon: 
 label: Mac
 tags: 

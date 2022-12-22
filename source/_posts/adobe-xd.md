@@ -1,6 +1,7 @@
 ---
 title: Adobe XD Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703379
+background: bg-[#400835]
 icon: icon-adobe-xd
 label: 
 tags: 

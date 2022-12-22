@@ -1,6 +1,7 @@
 ---
 title: Zoom  Keyboard Shortcuts
 date: 2022-11-23 16:23:31.704621
+background: bg-[#2858ee]
 icon: icon-zoom 
 tags: 
     - 

@@ -1,6 +1,7 @@
 ---
 title: Chrome Developer Tools Keyboard Shortcuts
 date: 2022-11-23 16:23:31.696017
+background: bg-[#c64d3e]
 icon: icon-chrome
 label: 
 tags: 

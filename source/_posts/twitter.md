@@ -1,6 +1,7 @@
 ---
 title: Twitter Keyboard Shortcuts
 date: 2022-11-23 16:23:31.705009
+background: bg-[#4894e2]
 icon: icon-twitter
 label: 
 tags: 

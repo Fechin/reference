@@ -1,6 +1,7 @@
 ---
 title: Blender Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700590
+background: bg-[#e48040]
 icon: icon-blender
 label: 
 tags: 

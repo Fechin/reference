@@ -1,6 +1,7 @@
 ---
 title: Telegram Desktop Keyboard Shortcuts
 date: 2022-11-23 16:23:31.700963
+background: bg-[#50a1dc]
 icon: icon-telegram
 label: 
 tags: 
