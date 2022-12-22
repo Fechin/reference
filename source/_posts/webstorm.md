@@ -8,7 +8,7 @@ tags:
     - web
     - shortcut
 categories:
-    - IDE
+    - Keyboard Shortcuts
 intro: |
     This quick reference cheat sheet lists the default keyboard shortcuts for WebStorm running on Windows/Linux or Mac
 ---

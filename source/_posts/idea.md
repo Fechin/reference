@@ -8,7 +8,7 @@ tags:
     - java
     - shortcut
 categories:
-    - IDE
+    - Keyboard Shortcuts
 intro: |
     IntelliJ IDEA is a very good Java IDE, most of its commands have shortcuts to keep your hands from leaving the keyboard
 ---

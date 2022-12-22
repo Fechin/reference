@@ -1,8 +1,8 @@
 @font-face {
   font-family: "icon"; /* Project id 2226430 */
-  src: url('//at.alicdn.com/t/c/font_2226430_1gzd7ua42v7.woff2?1669773269') format('woff2'),
-       url('//at.alicdn.com/t/c/font_2226430_1gzd7ua42v7.woff?1669773269') format('woff'),
-       url('//at.alicdn.com/t/c/font_2226430_1gzd7ua42v7.ttf?1669773269') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_2226430_ksxf1nwyezn.woff2?1671683508') format('woff2'),
+       url('//at.alicdn.com/t/c/font_2226430_ksxf1nwyezn.woff?1671683508') format('woff'),
+       url('//at.alicdn.com/t/c/font_2226430_ksxf1nwyezn.ttf?1671683508') format('truetype');
 }
 
 .icon {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phpstorm:before {
+  content: "\e615";
 }
 
 .icon-placeholder:before {
@@ -99,10 +103,6 @@
 
 .icon-todoist:before {
   content: "\ecde";
-}
-
-.icon-phpstorm:before {
-  content: "\e615";
 }
 
 .icon-sketchup:before {

@@ -1,12 +1,11 @@
 ---
 title: PhpStorm Keyboard Shortcuts
 date: 2022-11-23 16:23:31.703719
-background: bg-[#b24de9]
+background: bg-gradient-to-r from-[#be4fe9] to-[#715bef] hover:from-emerald-400 hover:to-blue-500
 icon: icon-phpstorm
 label: 
-tags: 
-    - 
-    - 
+tags:
+    - jetbrains
 categories:
     - Keyboard Shortcuts
 intro: |
