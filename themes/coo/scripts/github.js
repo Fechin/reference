@@ -8,5 +8,10 @@ hexo.extend.helper.register("contributing", function () {
 
 
 hexo.extend.helper.register("edit_page", function () {
-    return `https://github.com/Fechin/reference/blob/main/source/_posts/${this.page.slug}.md`
+    let postPage = this.page['layout'] === 'post';
+    let url = "https://github.com/Fechin/reference";
+    if (postPage) {
+        url += `/blob/main/source/_posts/${this.page.slug}.md`;
+    }
+    return url;
 });
