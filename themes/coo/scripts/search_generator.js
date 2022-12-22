@@ -1,7 +1,7 @@
 hexo.extend.generator.register('json', function (locals) {
 
     let searchName = "search.json";
-    let datas = locals.posts.sort('-date') || [];
+    let datas = locals.posts.sort('date') || [];
 
     let res = []
     let index = 0
