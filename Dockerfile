@@ -52,7 +52,7 @@ COPY httpd.conf .
 # Copy your static files
 COPY public .
 
-chmod +x /busybox
+RUN chmod +x /busybox
 
 # Run busybox httpd
 CMD ["/busybox", "httpd", "-f", "-v", "-p", "3000", "-c", "httpd.conf"]
