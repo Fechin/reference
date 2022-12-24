@@ -1,7 +1,9 @@
 FROM alpine:latest
 
 # Install thttpd
-RUN apk add thttpd
+RUN apk update \
+    && apk upgrade \
+    && apk add --no-cache thttpd
 
 # Create a non-root user to own the files and run our server
 RUN adduser -D static
