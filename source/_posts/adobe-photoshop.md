@@ -1,5 +1,5 @@
 ---
-title: Adobe Photoshop Keyboard Shortcuts
+title: Adobe Photoshop
 date: 2022-11-23 16:23:31.706034
 background: bg-[#071c25]
 icon: icon-adobe-photoshop

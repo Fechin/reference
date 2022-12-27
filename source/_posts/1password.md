@@ -1,5 +1,5 @@
 ---
-title: 1Password Keyboard Shortcuts
+title: 1Password
 date: 2022-11-23 16:23:31.702312
 background: bg-[#397fe4]
 icon: icon-1password

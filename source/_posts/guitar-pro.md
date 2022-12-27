@@ -1,5 +1,5 @@
 ---
-title: Guitar Pro Keyboard Shortcuts
+title: Guitar Pro
 date: 2022-11-23 16:23:31.693917
 background: bg-[#659af0]
 icon: 

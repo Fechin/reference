@@ -1,5 +1,5 @@
 ---
-title: Sketch Keyboard Shortcuts
+title: Sketch
 date: 2022-11-23 16:23:31.699427
 background: bg-[#d36f2b]
 icon: icon-sketch

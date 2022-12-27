@@ -1,5 +1,5 @@
 ---
-title: WordPress Keyboard Shortcuts
+title: WordPress
 date: 2022-11-23 16:23:31.697854
 background: bg-[#434140]
 icon: icon-wordpress

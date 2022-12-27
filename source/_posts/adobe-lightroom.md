@@ -1,5 +1,5 @@
 ---
-title: Adobe Lightroom CC Keyboard Shortcuts
+title: Adobe Lightroom CC
 date: 2022-11-23 16:23:31.702312
 background: bg-[#081c32]
 icon: icon-adobe-lightroom 

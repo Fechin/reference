@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams Keyboard Shortcuts
+title: Microsoft Teams
 date: 2022-11-23 16:23:31.706764
 background: bg-[#4aa4ea]
 icon: icon-microsoft-teams

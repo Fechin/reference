@@ -1,5 +1,5 @@
 ---
-title: Todoist Keyboard Shortcuts
+title: Todoist
 date: 2022-11-23 16:23:31.696934
 background: bg-[#cc4d3b]
 icon: icon-todoist

@@ -1,5 +1,5 @@
 ---
-title: YouTube Keyboard Shortcuts
+title: YouTube
 date: 2022-11-23 16:23:31.700304
 background: bg-[#e6332e]
 icon: icon-youtube

@@ -1,5 +1,5 @@
 ---
-title: Android Studio Keyboard Shortcuts
+title: Android Studio
 date: 2022-11-23 16:23:31.704217
 background: bg-[#6bd488]
 icon: icon-android-studio

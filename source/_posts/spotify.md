@@ -1,5 +1,5 @@
 ---
-title: Spotify Keyboard Shortcuts
+title: Spotify
 date: 2022-11-23 16:23:31.699093
 background: bg-[#65d46e]
 icon: icon-spotify

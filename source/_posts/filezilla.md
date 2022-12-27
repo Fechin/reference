@@ -1,5 +1,5 @@
 ---
-title: FileZilla Keyboard Shortcuts
+title: FileZilla
 date: 2022-11-23 16:23:31.705296
 background: bg-[#a42115]
 icon: icon-filezilla

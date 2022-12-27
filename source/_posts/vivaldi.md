@@ -1,5 +1,5 @@
 ---
-title: Vivaldi Browser Keyboard Shortcuts
+title: Vivaldi Browser
 date: 2022-11-23 16:23:31.694597
 background: bg-[#d54840]
 icon: 

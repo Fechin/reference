@@ -1,5 +1,5 @@
 ---
-title: Firefox Keyboard Shortcuts
+title: Firefox
 date: 2022-11-23 16:23:31.703957
 background: bg-[#e34e4b]
 icon: icon-firefox

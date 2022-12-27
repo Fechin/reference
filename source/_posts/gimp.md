@@ -1,5 +1,5 @@
 ---
-title: GIMP Keyboard Shortcuts
+title: GIMP
 date: 2022-11-23 16:23:31.696743
 background: bg-[#554f42]
 icon: 
