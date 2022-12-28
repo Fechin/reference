@@ -423,7 +423,7 @@ window.addEventListener('load', () => {
                                 <a href="${hit.path}" class="flex justify-between items-center rounded-lg py-1 px-4 transition-colors duration-100 ease-in-out overflow-hidden">
                                     <div class="flex items-start">
                                         <div class="flex justify-center items-center w-5 mr-5 mt-2 flex-none">
-                                            <i class="icon ${hit.icon} text-2xl"></i>
+                                            <i class="icon text-2xl">${hit.icon}</i>
                                         </div>
                                         <div class="flex flex-col truncate">
                                             <span class="font-semibold dark:text-slate-300 dark:group-hover:text-white">${hit.title}</span>
@@ -470,7 +470,7 @@ window.addEventListener('load', () => {
             document.querySelector(".preview-panel").innerHTML = `<section class="w-full py-3 px-5">
                 <div class="flex justify-center pt-1 pb-4">
                     <div class="flex justify-center items-center w-8 h-8 rounded ${hit.background === undefined ? 'bg-emerald-500' : hit.background} shadow-lg">
-                        <i class="icon ${hit.icon === undefined ? "icon-placeholder" : hit.icon} text-2xl text-slate-100"></i>
+                        <i class="text-2xl text-slate-100">${hit.icon}</i>
                     </div>
                 </div>
                 <div class="flex justify-center items-center font-medium flex-wrap dark:text-slate-200">${hit.title}</div>

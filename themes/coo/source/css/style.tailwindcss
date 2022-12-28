@@ -47,7 +47,7 @@ html.scrollbar {
 .home .card {
     @apply relative p-4 flex items-center rounded-lg shadow-sm cursor-pointer text-slate-900/90 bg-opacity-[.65] fadeIn;
     @apply dark:text-slate-300 dark:bg-opacity-50;
-    @apply hover:text-slate-50/90 hover:bg-opacity-100 hover:shadow-xl;
+    @apply hover:text-slate-100/90 hover:bg-opacity-100 hover:shadow-xl;
 }
 
 .home .card[data-label]::before {
@@ -62,12 +62,12 @@ html.scrollbar {
     padding: 1px 3px 2px 3px;
 }
 
-.home .card > i {
+.home .card > svg {
     @apply text-3xl;
 }
 
 .home .card > p {
-    @apply text-sm ml-2 truncate;
+    @apply text-sm ml-2 truncate max-w-[75%];
 }
 
 .home .domain {

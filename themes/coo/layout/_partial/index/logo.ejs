@@ -1,7 +1,9 @@
 <a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300">
     <% if (icon) { %>
-        <div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3">
-            <i class="self-center icon icon-logo text-2xl"></i>
+        <div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl">
+            <div class="self-center">
+                <%- icon("logo") %>
+            </div>
         </div>
     <% } %>
     <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">Quick<span class="text-emerald-400">Ref</span>.ME</span>
