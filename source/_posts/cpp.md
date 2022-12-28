@@ -348,7 +348,7 @@ else
 | `a & b`  | Binary AND              |
 | `a | b`  | Binary OR               |
 | `a ^ b`  | Binary XOR              |
-| `a ~ b`  | Binary One's Complement |
+| `~ a`    | Binary One's Complement |
 | `a << b` | Binary Shift Left       |
 | `a >> b` | Binary Shift Right      |
 
