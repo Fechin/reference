@@ -2,7 +2,6 @@
 title: Skype
 date: 2022-11-23 16:23:31.698711
 background: bg-[#52ace2]
-icon: icon-skype
 label: 
 tags: 
     - 

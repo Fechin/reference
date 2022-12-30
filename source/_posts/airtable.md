@@ -2,7 +2,6 @@
 title: Airtable
 date: 2022-11-23 16:23:31.699659
 background: bg-[#f1b73f]
-icon: icon-airtable
 label: 
 tags: 
     - 

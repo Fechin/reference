@@ -1,7 +1,6 @@
 ---
 title: Dart
 date: 2021-11-04 10:12:25
-icon: icon-dart
 background: bg-[#58aee9]
 tags:
     - dart

@@ -1,7 +1,6 @@
 ---
 title: PM2
 date: 2022-11-25 18:10:00
-icon: icon-pm2
 background: bg-[#230769]
 tags:
     - process

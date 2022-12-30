@@ -1,6 +1,5 @@
 ---
 title: Redis
-icon: icon-redis
 background: bg-[#c13b2c]
 tags:
     - cache

@@ -1,7 +1,6 @@
 ---
 title: HTML
 date: 2021-07-20 19:16:42
-icon: icon-html
 background: bg-[#cc5534]
 tags:
     - web

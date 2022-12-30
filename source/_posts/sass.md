@@ -1,7 +1,6 @@
 ---
 title: Sass
 date: 2020-12-20 22:15:43
-icon: icon-sass
 background: bg-[#ba6993]
 label: CSS
 tags:

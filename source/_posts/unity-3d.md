@@ -2,7 +2,6 @@
 title: Unity 3D
 date: 2022-11-23 16:23:31.692703
 background: bg-[#7c7c7c]
-icon: icon-unity
 label: 
 tags: 
     - 

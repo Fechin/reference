@@ -1,7 +1,6 @@
 ---
 title: Awk
 date: 2020-12-31 15:18:34
-icon: icon-style
 background: bg-slate-600
 tags:
     - bash

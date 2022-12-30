@@ -1,7 +1,6 @@
 ---
 title: Emacs
 date: 2020-12-17 16:21:49
-icon: icon-emacs
 background: bg-[#7752a9]
 tags:
     - editor

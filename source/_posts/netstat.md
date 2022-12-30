@@ -1,7 +1,6 @@
 ---
 title: Netstat
 date: 2021-01-27 11:44:21
-icon: icon-netstat
 background: bg-slate-700
 tags:
     - network

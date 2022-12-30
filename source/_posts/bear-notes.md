@@ -2,7 +2,6 @@
 title: Bear
 date: 2022-11-23 16:23:31.705436
 background: bg-[#cd5654]
-icon: 
 label: Mac
 tags: 
     - 

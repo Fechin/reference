@@ -2,7 +2,6 @@
 title: Finder
 date: 2022-11-23 16:23:31.693285
 background: bg-[#4b9be8]
-icon: icon-finder
 label: Mac
 tags: 
     - 

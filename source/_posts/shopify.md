@@ -2,7 +2,6 @@
 title: Shopify
 date: 2022-11-23 16:23:31.704478
 background: bg-[#8bbb55]
-icon: icon-shopify
 label: 
 tags: 
     - 

@@ -1,7 +1,6 @@
 ---
 title: GraphQL
 date: 2021-07-15 20:51:44
-icon: icon-graphql
 background: bg-[#cc44a2]
 tags:
     - query

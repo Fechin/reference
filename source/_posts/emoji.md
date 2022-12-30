@@ -1,7 +1,6 @@
 ---
 title: Emoji
 date: 2020-12-15 18:28:43
-icon: icon-emoji
 background: bg-[#ebbe46]
 tags:
 categories:

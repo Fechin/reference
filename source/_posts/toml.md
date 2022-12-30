@@ -1,7 +1,6 @@
 ---
 title: TOML
 date: 2020-12-29 20:36:35
-icon: icon-toml
 background: bg-[#848484]
 tags:
     - config

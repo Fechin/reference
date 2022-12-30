@@ -2,7 +2,6 @@
 title: VLC Player
 date: 2022-11-23 16:23:31.696412
 background: bg-[#e7792e]
-icon: icon-vlc
 label: 
 tags: 
     - 

@@ -1,7 +1,6 @@
 ---
 title: Laravel
 date: 2021-11-09 18:26:55
-icon: icon-laravel
 background: bg-[#e44230]
 label: PHP
 tags:

@@ -2,7 +2,6 @@
 title: Apple Music
 date: 2022-11-23 16:23:31.700157
 background: bg-[#e05564]
-icon: icon-apple-music
 label: Mac
 tags: 
     - 

@@ -1,7 +1,6 @@
 ---
 title: CSS 3
 date: 2020-12-25 20:22:47
-icon: icon-css
 background: bg-[#3473b5]
 tags:
     - web

@@ -2,7 +2,6 @@
 title: Fortnite
 date: 2022-11-23 16:23:31.699229
 background: bg-[#8d2fc9]
-icon: 
 label: 
 tags: 
     - 

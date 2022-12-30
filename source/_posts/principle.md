@@ -2,7 +2,6 @@
 title: Principle
 date: 2022-11-23 16:23:31.698567
 background: bg-[#b245c6]
-icon: icon-principle
 label: Mac
 tags: 
     - 

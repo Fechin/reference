@@ -1,7 +1,6 @@
 ---
 title: Markdown
 date: 2020-12-14 18:28:43
-icon: icon-markdown
 background: bg-[#6319bf]
 tags:
     - md

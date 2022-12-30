@@ -2,7 +2,6 @@
 title: PuTTy
 date: 2022-11-23 16:23:31.701654
 background: bg-[#0403ed]
-icon: 
 label: 
 tags: 
     - 

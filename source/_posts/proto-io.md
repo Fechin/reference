@@ -2,7 +2,6 @@
 title: Proto.io
 date: 2022-11-23 16:23:31.694775
 background: bg-[#5697a9]
-icon: 
 label: 
 tags: 
     - 

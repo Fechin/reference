@@ -1,7 +1,6 @@
 ---
 title: QuickRef
 date: 2020-11-25 18:28:43
-icon: icon-logo
 background: bg-gradient-to-l from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500
 tags:
     - guide

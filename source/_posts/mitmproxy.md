@@ -1,7 +1,6 @@
 ---
 title: Mitmproxy
 date: 2020-12-22 20:10:08
-icon: icon-mitmproxy
 background: bg-[#d86138]
 tags:
     - capture

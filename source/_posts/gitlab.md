@@ -2,7 +2,6 @@
 title: GitLab
 date: 2022-11-23 16:23:31.693478
 background: bg-[#e47030]
-icon: icon-gitlab
 label: 
 tags: 
     - 

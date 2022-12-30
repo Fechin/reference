@@ -1,7 +1,6 @@
 ---
 title: JSON
 date: 2021-09-14 18:26:55
-icon: icon-json
 background: bg-[#646464]
 tags:
    - config

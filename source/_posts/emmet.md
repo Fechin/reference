@@ -1,7 +1,6 @@
 ---
 title: Emmet
 date: 2020-12-14 18:28:43
-icon: icon-emmet
 background: bg-[#95c844]
 tags:
     - snippets

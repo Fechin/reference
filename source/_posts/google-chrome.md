@@ -2,7 +2,6 @@
 title: Google Chrome
 date: 2022-11-23 16:23:31.696190
 background: bg-[#ca4732]
-icon: icon-chrome
 label: 
 tags: 
     - 

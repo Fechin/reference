@@ -2,7 +2,6 @@
 title: Transmit
 date: 2022-11-23 16:23:31.695841
 background: bg-[#646fed]
-icon: 
 label: Mac
 tags: 
     - 

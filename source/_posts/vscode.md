@@ -1,7 +1,6 @@
 ---
 title: VSCode
 date: 2021-12-16 13:41:00
-icon: icon-vscode
 background: bg-[#5ba3e6]
 tags:
     - text

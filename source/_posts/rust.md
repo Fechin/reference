@@ -1,7 +1,6 @@
 ---
 title: Rust
 date: 2022-01-01 11:51:44
-icon: icon-rust
 background: bg-black
 tags:
 categories:

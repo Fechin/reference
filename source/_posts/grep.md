@@ -1,7 +1,6 @@
 ---
 title: Grep
 date: 2020-11-25 18:28:43
-icon: icon-grep
 background: bg-emerald-400
 tags: 
     - egrep

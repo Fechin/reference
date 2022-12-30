@@ -2,7 +2,6 @@
 title: Slack
 date: 2022-11-23 16:23:31.705147
 background: bg-[#4d1a51]
-icon: icon-slack
 label: 
 tags: 
     - 

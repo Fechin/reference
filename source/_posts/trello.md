@@ -2,7 +2,6 @@
 title: Trello
 date: 2022-11-23 16:23:31.702599
 background: bg-[#417eef]
-icon: icon-trello
 label: 
 tags: 
     - 

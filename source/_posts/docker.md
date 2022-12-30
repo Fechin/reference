@@ -1,7 +1,6 @@
 ---
 title: Docker
 date: 2020-12-30 10:55:24
-icon: icon-docker
 background: bg-[#488fdf]
 tags:
     - container

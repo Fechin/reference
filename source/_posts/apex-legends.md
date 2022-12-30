@@ -2,7 +2,6 @@
 title: Apex Legends
 date: 2022-11-23 16:23:31.706352
 background: bg-[#a74145]
-icon: 
 label: 
 tags: 
     - 

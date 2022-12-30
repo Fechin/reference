@@ -1,7 +1,6 @@
 ---
 title: Python
 date: 2020-12-23 18:41:20
-icon: icon-python
 background: bg-[#436b97]
 tags:
     - script

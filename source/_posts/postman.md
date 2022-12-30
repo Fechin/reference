@@ -2,7 +2,6 @@
 title: Postman
 date: 2022-11-23 16:23:31.703572
 background: bg-[#cf5e3c]
-icon: icon-postman
 label: 
 tags: 
     - 

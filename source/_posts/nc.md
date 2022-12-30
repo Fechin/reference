@@ -1,7 +1,6 @@
 ---
 title: Netcat
 date: 2020-11-25 18:28:43
-icon: icon-netcat
 background: bg-blue-600
 tags: 
     - ncat

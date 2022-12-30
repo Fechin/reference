@@ -1,7 +1,6 @@
 ---
 title: Sed
 date: 2020-12-27 18:34:08
-icon: icon-sed
 background: bg-red-400
 tags:
     - editor

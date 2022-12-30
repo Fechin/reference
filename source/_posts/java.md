@@ -1,7 +1,6 @@
 ---
 title: Java
 date: 2021-03-10 19:50:01
-icon: icon-java
 background: bg-[#d33731]
 tags:
     - object-oriented

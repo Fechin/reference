@@ -1,6 +1,5 @@
 ---
 title: Find
-icon: icon-search
 date: 2020-12-28 16:52:20
 tags:
     - search

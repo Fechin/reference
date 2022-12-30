@@ -1,6 +1,5 @@
 ---
 title: PostgreSQL
-icon: icon-postgres
 background: bg-[#3d6488]
 tags:
     - DB

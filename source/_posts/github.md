@@ -2,7 +2,6 @@
 title: Github
 date: 2022-11-23 16:23:31.704787
 background: bg-[#17191e]
-icon: icon-github
 label: 
 tags: 
     - 
