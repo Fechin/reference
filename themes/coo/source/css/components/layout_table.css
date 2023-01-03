@@ -111,3 +111,29 @@
     opacity: 0.6;
     @apply dark:opacity-90;
 }
+
+
+.mdLayout table.style-list td + td,
+.mdLayout table.style-list-arrow td + td {
+  padding-top: 0 !important;
+}
+
+.mdLayout table.style-list td,
+.mdLayout table.style-list-arrow td {
+  display: block;
+  text-align: left !important;
+}
+
+
+.mdLayout table.style-list-arrow td:first-child::before,
+ul.style-arrow li:before {
+  content: '';
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-right: 6px solid transparent;
+  border-top: 5px solid transparent;
+  border-left: 6px solid #228e6c;
+  border-bottom: 5px solid transparent;
+}
+
