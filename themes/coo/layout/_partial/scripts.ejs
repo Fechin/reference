@@ -19,18 +19,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" crossorigin="anonymous"></script>
     <script>
-        const render = function (text, el) {
-            // Do stuff if text starts with `latex`
-            var renderedKatex = katex.renderToString(
-                text.replace('KaTeX:', ''),
-                { throwOnError: false }
-            );
-            // Populate katex and additional markup for formatting
-            el.outerHTML = `<span class="katex-wrap">${renderedKatex}</span>`;
-        }
         document.querySelectorAll('code').forEach(function (el) {
-            if (el.textContent.startsWith('KaTeX:') || el.classList.contains("language-KaTeX")) {
-                render(el.textContent, el)
+            const text = el.textContent;
+            if (text.startsWith('KaTeX:') || el.classList.contains("language-KaTeX")) {
+                // Do stuff if text starts with `latex`
+                const renderedKatex = katex.renderToString(
+                    text.replace('KaTeX:', ''),
+                    { throwOnError: false }
+                );
+                // Populate katex and additional markup for formatting
+                el.outerHTML = `<span class="katex-wrap">${renderedKatex}</span>`;
             }
 
         })
