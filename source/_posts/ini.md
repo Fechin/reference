@@ -40,6 +40,9 @@ organization=Acme Products
 server=192.0.2.42
 port=143
 file="acme payroll.dat"
+
+[section.subsection]
+foo = bar
 ```
 
 
@@ -101,7 +104,7 @@ The same as `JSON` below 👇
 
 ```ini
 [section]
-domain = jaywcjlove.github.io
+domain = quickref.me
 [section.subsection]
 foo = bar
 ```
@@ -111,7 +114,7 @@ The same as `JSON` below 👇
 ```js
 {
   "section": {
-    "domain": "jaywcjlove.github.io"
+    "domain": "quickref.me"
     "subsection": {
       "foo": "bar"
     }
@@ -123,14 +126,14 @@ Nest to previous section (shorthand)
 
 ```ini
 [section]
-domain = jaywcjlove.github.io
+domain = quickref.me
 [.subsection]
 foo = bar
 ```
 
 
 
-### escape character
+### Escape character
 
 sequence | meaning
 :-| :-
@@ -151,11 +154,11 @@ sequence | meaning
 
 
 
-### array
+### Array
 
 ```ini
 [section]
-domain = jaywcjlove.github.io
+domain = quickref.me
 array[]=first value
 array[]=second value
 ```
@@ -164,12 +167,13 @@ The same as `JSON` below 👇
 
 ```js
 {
-  "section": {
-    "domain": "jaywcjlove.github.io",
-    "array": [
-      "first value", "second value"
-    ]
-  }
+    "section": {
+        "domain": "quickref.me",
+            "array": [
+            "first value",
+            "second value"
+        ]
+    }
 }
 ```
 
