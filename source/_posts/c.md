@@ -1,7 +1,7 @@
 ---
 title: C
 date: 2022-12-30 09:51:44
-background: bg-[#6d94c7]
+background: bg-[#2a338a]
 tags:
 categories:
   - Programming
@@ -898,8 +898,8 @@ void myFunction() { // declaration declaration
 ```
 
 ----
--`Declaration` declares the function name, return type and parameters _(if any)_
--`Definition` function body _(code to execute)_
+- `Declaration` declares the function name, return type and parameters _(if any)_
+- `Definition` function body _(code to execute)_
 
 ----
 
@@ -1037,16 +1037,15 @@ printf("%f", pow(4, 3)); // x(4) to the power of y(3)
 
 ----
 
--`abs(x)` absolute value
--`acos(x)` arc cosine value
--`asin(x)` arc sine
--`atan(x)` arc tangent
--`cbrt(x)` cube root
--`cos(x)` cosine
--the value of `exp(x)` Ex
--`sin(x)` the sine of x
--tangent of `tan(x)` angle
-<!--rehype:className=cols-2-->
+- `abs(x)` absolute value
+- `acos(x)` arc cosine value
+- `asin(x)` arc sine
+- `atan(x)` arc tangent
+- `cbrt(x)` cube root
+- `cos(x)` cosine
+- the value of `exp(x)` Ex
+- `sin(x)` the sine of x
+- tangent of `tan(x)` angle
 
 C Structures
 ---
