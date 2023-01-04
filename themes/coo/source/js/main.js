@@ -139,6 +139,7 @@ window.addEventListener('load', () => {
         start: function () {
             const _this = this;
 
+            _this.fetchData(); // Prepare search data
             this.search = document.querySelector(this.container);
             this.box = document.querySelector("#mysearch-box");
             this.input = document.querySelector("#mysearch-input");
