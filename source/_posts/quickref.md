@@ -560,12 +560,12 @@ List Variants
 ### List Overview {.secondary}
 List columns
 
-| -            | -                      |
-|--------------|------------------------|
-| `{.cols-1}`  | one column _(default)_ |
-| `{.cols-2}`  | two columns            |
-| ...          |                        |
-| `{.cols-12}` |                        |
+| -           | -                      |
+|-------------|------------------------|
+| `{.cols-1}` | one column _(default)_ |
+| `{.cols-2}` | two columns            |
+| ...         |                        |
+| `{.cols-6}` |                        |
 
 List markers
 

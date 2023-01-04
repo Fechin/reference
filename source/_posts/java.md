@@ -752,7 +752,7 @@ multi-line comment!
 - native
 - super
 - while
-{.marker-none .cols-7}
+{.marker-none .cols-6}
 
 ### Math methods 
 
