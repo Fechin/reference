@@ -355,11 +355,12 @@ $ git checkout <branch> -- <file>
 
 
 
-### Commit
+### Rewriting history
 Rewrite last commit message
 ```shell script
-$ git commit -v --amend
+$ git commit --amend -m "new message"
 ```
+See also: [Rewriting history](https://www.atlassian.com/git/tutorials/rewriting-history)
 
 
 ### Git Aliases
