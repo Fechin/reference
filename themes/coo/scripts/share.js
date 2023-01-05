@@ -24,6 +24,9 @@ hexo.extend.helper.register("share_link", function (type) {
         case "mail":
             link = `mailto:?subject=${title}&body=\n${description}\n\n${url}`;
             break;
+        case "line":
+            link = `https://social-plugins.line.me/lineit/share?url=${url}`;
+            break;
     }
     return encodeURL(link);
 });
