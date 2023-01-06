@@ -154,7 +154,7 @@ Awk Variables
 |----------------|-----------------------------------------------------|
 | `$0`           | Whole line                                          |
 | `$1, $2...$NF` | First, second… last field                           |
-| `NR`           | Total `N`umber of `R`ecords                         |
+| `NR`           | `N`umber of `R`ecords                               |
 | `NF`           | `N`umber of `F`ields                                |
 | `OFS`          | `O`utput `F`ield `S`eparator  <br> _(default " ")_  |
 | `FS`           | input `F`ield `S`eparator <br> _(default " ")_      |
