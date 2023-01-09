@@ -1,7 +1,7 @@
 ---
 title: ES6
 date: 2023-01-08 18:26:55
-background: bg-[#646464]
+background: bg-[#edc545]
 tags:
    - config
    - format
