@@ -1,5 +1,5 @@
 ---
-title: Golang
+title: Go
 date: 2020-12-17 21:51:44
 background: bg-[#4ba4cc]
 tags:
@@ -7,7 +7,7 @@ tags:
 categories:
     - Programming
 intro: |
-    This cheat sheet provided basic syntax and methods to help you using [Golang](https://golang.org/). 
+    This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/). 
 ---
 
 
@@ -51,7 +51,7 @@ b, c := 1, 2             // int
 d := true                // bool
 ```
 
-See: [Basic types](#golang-basic-types)
+See: [Basic types](#go-basic-types)
 
 
 
@@ -71,7 +71,7 @@ func say(message string) {
     fmt.Println("You said: ", message)
 }
 ```
-See: [Functions](#golang-functions)
+See: [Functions](#go-functions)
 
 
 
@@ -91,11 +91,11 @@ if true {
     fmt.Println("Yes!")
 }
 ```
-See: [Flow control](#golang-flow-control)
+See: [Flow control](#go-flow-control)
 
 
 
-Golang Basic types
+Go Basic types
 --------
 
 ### Strings
@@ -133,7 +133,7 @@ x++
 fmt.Println("x + 4 =", x + 4)
 fmt.Println("x * 4 =", x * 4) 
 ```
-See: [More Operators](#golang-operators-and-punctuation)
+See: [More Operators](#go-operators-and-punctuation)
 
 
 
@@ -153,7 +153,7 @@ fmt.Println(true || true)   // true
 fmt.Println(true || false)  // true
 fmt.Println(!true)          // false
 ```
-See: [More Operators](#golang-operators-and-punctuation)
+See: [More Operators](#go-operators-and-punctuation)
 
 
 
@@ -224,7 +224,7 @@ a := new(int)
 *a = 234
 ```
 
-See: [Pointers](https://tour.golang.org/moretypes/1)
+See: [Pointers](https://tour.go.dev/moretypes/1)
 
 
 ### Slices
@@ -287,7 +287,7 @@ fmt.Println(s) // Outputs: 90
 
 
 
-Golang Strings
+Go Strings
 --------
 
 ### Strings function
@@ -359,7 +359,7 @@ func main() {
 }
 
 ```
-See also: [fmt](https://golang.org/pkg/fmt/)
+See also: [fmt](https://go.dev/pkg/fmt/)
 
 
 
@@ -382,7 +382,7 @@ See also: [fmt](https://golang.org/pkg/fmt/)
 
 
 
-Golang Flow control
+Go Flow control
 --------
 
 ### Conditional
@@ -484,7 +484,7 @@ for {
 
 
 
-Golang Structs & Maps
+Go Structs & Maps
 --------
 
 ### Defining {.row-span-2}
@@ -508,7 +508,7 @@ func main() {
 }
 ```
 
-See: [Structs](https://tour.golang.org/moretypes/2)
+See: [Structs](https://tour.go.dev/moretypes/2)
 
 ### Literals
 
@@ -558,7 +558,7 @@ Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
 
 
-Golang Functions
+Go Functions
 --------
 
 
@@ -693,7 +693,7 @@ fmt.Println(val)     // => 101
 ```
 
 
-Golang Packages
+Go Packages
 --------
 
 
@@ -711,7 +711,7 @@ import (
 )
 ```
 
-See: [Importing](https://tour.golang.org/basics/1)
+See: [Importing](https://tour.go.dev/basics/1)
 
 
 
@@ -755,11 +755,11 @@ func Hello () {
 }
 ```
 
-See: [Exported names](https://tour.golang.org/basics/3)
+See: [Exported names](https://tour.go.dev/basics/3)
 
 
 
-Golang Concurrency
+Go Concurrency
 --------
 
 ### Goroutines {.row-span-2}
@@ -792,7 +792,7 @@ func main() {
 ```
 
 
-See: [Goroutines](https://tour.golang.org/concurrency/1), [Channels](https://tour.golang.org/concurrency/2)
+See: [Goroutines](https://tour.go.dev/concurrency/1), [Channels](https://tour.go.dev/concurrency/2)
 
 
 
@@ -825,7 +825,7 @@ func main() {
 	wg.Wait()
 }
 ```
-See: [WaitGroup](https://golang.org/pkg/sync/#WaitGroup)
+See: [WaitGroup](https://go.dev/pkg/sync/#WaitGroup)
 
 
 
@@ -851,7 +851,7 @@ for i := range ch {
 v, ok := <- ch
 ```
 
-See: [Range and close](https://tour.golang.org/concurrency/4)
+See: [Range and close](https://tour.go.dev/concurrency/4)
 
 
 
@@ -866,13 +866,13 @@ ch <- 3
 // all goroutines are asleep - deadlock
 ```
 
-See: [Buffered channels](https://tour.golang.org/concurrency/3)
+See: [Buffered channels](https://tour.go.dev/concurrency/3)
 
 
 
 
 
-Golang Error control
+Go Error control
 --------
 
 ### Deferring functions 
@@ -914,11 +914,11 @@ func main() {
 }
 ```
 
-See: [Defer, panic and recover](https://blog.golang.org/defer-panic-and-recover)
+See: [Defer, panic and recover](https://blog.go.dev/defer-panic-and-recover)
 
 
 
-Golang Methods  {.cols-2}
+Go Methods  {.cols-2}
 --------
 
 ### Receivers
@@ -941,7 +941,7 @@ v := Vertex{1, 2}
 v.Abs()
 ```
 
-See: [Methods](https://tour.golang.org/methods/1)
+See: [Methods](https://tour.go.dev/methods/1)
 
 ### Mutation
 
@@ -959,9 +959,9 @@ v.Scale(0.5)
 // `v` is updated
 ```
 
-See: [Pointer receivers](https://tour.golang.org/methods/4)
+See: [Pointer receivers](https://tour.go.dev/methods/4)
 
-Golang Interfaces {.cols-2}
+Go Interfaces {.cols-2}
 --------
 
 ### A basic interface
@@ -1052,9 +1052,9 @@ Miscellaneous
 Also see {.cols-1}
 --------
 - [Devhints](https://devhints.io/go) _(devhints.io)_
-- [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
-- [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
-- [Effective Go](https://golang.org/doc/effective_go.html) _(golang.org)_
+- [A tour of Go](https://tour.go.dev/welcome/1) _(tour.go.dev)_
+- [Go wiki](https://github.com/golang/go/wiki/) _(github.com)_
+- [Effective Go](https://go.dev/doc/effective_go) _(go.dev)_
 - [Go by Example](https://gobyexample.com/) _(gobyexample.com)_
 - [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_
 - [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_
