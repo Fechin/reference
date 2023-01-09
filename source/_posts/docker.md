@@ -72,14 +72,14 @@ Docker Containers {.cols-2}
 ### Starting & Stopping
 | Description                   | Example                             |
 |-------------------------------|-------------------------------------|
-| `docker start nginx-server`   | Starting                            |
-| `docker stop nginx-server`    | Stopping                            |
-| `docker restart nginx-server` | Restarting                          |
-| `docker pause nginx-server`   | Pausing                             |
-| `docker unpause nginx-server` | Unpausing                           |
-| `docker wait nginx-server`    | Blocking a Container                |
-| `docker kill nginx-server`    | Sending a SIGKILL                   |
-| `docker attach nginx-server`  | Connecting to an Existing Container |
+| `docker start my-nginx`   | Starting                            |
+| `docker stop my-nginx`    | Stopping                            |
+| `docker restart my-nginx` | Restarting                          |
+| `docker pause my-nginx`   | Pausing                             |
+| `docker unpause my-nginx` | Unpausing                           |
+| `docker wait my-nginx`    | Blocking a Container                |
+| `docker kill my-nginx`    | Sending a SIGKILL                   |
+| `docker attach my-nginx`  | Connecting to an Existing Container |
 
 
 
@@ -89,13 +89,13 @@ Docker Containers {.cols-2}
 |-------------------------------|----------------------------------------|
 | `docker ps`                   | List running containers                |
 | `docker ps -a`                | List all containers                    |
-| `docker logs nginx-server`    | Container Logs                         |
-| `docker inspect nginx-server` | Inspecting Containers                  |
-| `docker events nginx-server`  | Containers Events                      |
-| `docker port nginx-server`    | Public Ports                           |
-| `docker top nginx-server`     | Running Processes                      |
-| `docker stats nginx-server`   | Container Resource Usage               |
-| `docker diff nginx-server`    | Lists the changes made to a container. |
+| `docker logs my-nginx`    | Container Logs                         |
+| `docker inspect my-nginx` | Inspecting Containers                  |
+| `docker events my-nginx`  | Containers Events                      |
+| `docker port my-nginx`    | Public Ports                           |
+| `docker top my-nginx`     | Running Processes                      |
+| `docker stats my-nginx`   | Container Resource Usage               |
+| `docker diff my-nginx`    | Lists the changes made to a container. |
 
 
 ### Creating
@@ -122,15 +122,15 @@ $ docker create --name my_redis --expose 6379 redis:3.0.2
 ### Manipulating
 Renaming a Container
 ```shell script
-docker rename my-nginx nginx-server
+docker rename my-nginx my-nginx
 ```
 Removing a Container
 ```shell script
-docker rm nginx-server
+docker rm my-nginx
 ```
 Updating a Container
 ```shell script
-docker update --cpu-shares 512 -m 300M nginx-server
+docker update --cpu-shares 512 -m 300M my-nginx
 ```
 
 
@@ -159,7 +159,7 @@ $ docker build .
 $ docker build github.com/creack/docker-firefox
 $ docker build - < Dockerfile
 $ docker build - < context.tar.gz
-$ docker build -t eon/nginx-server .
+$ docker build -t eon/my-nginx .
 $ docker build -f myOtherDockerfile .
 $ curl example.com/remote/Dockerfile | docker build -f - .
 ```
@@ -219,6 +219,54 @@ docker network create -d overlay \
   --aux-address="my-nas=192.170.1.6" \
   MyOverlayNetwork
 ```
+
+
+
+Clean Up {.cols-2}
+-------------
+
+
+### Clean All
+```shell
+docker system prune
+```
+Cleans up dangling images, containers, volumes, and networks (ie, not associated with a container)
+
+-------
+
+```shell
+docker system prune -a
+```
+Additionally, remove any stopped containers and all unused images (not just dangling images)
+
+
+
+### Containers
+
+Stop all running containers
+```shell
+docker stop $(docker ps -a -q)
+```
+
+Delete stopped containers
+```shell
+docker container prune
+```
+
+### Images
+
+```shell
+docker image prune [-a]
+```
+Delete all the images
+
+
+### Volumes
+
+```shell
+docker volume prune
+```
+Delete all the volumes
 
 
 
