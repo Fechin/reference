@@ -227,17 +227,18 @@ Clean Up {.cols-2}
 
 
 ### Clean All
+Cleans up dangling images, containers, volumes, and networks (ie, not associated with a container)
 ```shell
 docker system prune
 ```
-Cleans up dangling images, containers, volumes, and networks (ie, not associated with a container)
 
 -------
+
+Additionally, remove any stopped containers and all unused images (not just dangling images)
 
 ```shell
 docker system prune -a
 ```
-Additionally, remove any stopped containers and all unused images (not just dangling images)
 
 
 
@@ -255,10 +256,15 @@ docker container prune
 
 ### Images
 
+Remove all dangling (not tagged and is not associated with a container) images:
 ```shell
-docker image prune [-a]
+docker image prune
 ```
-Delete all the images
+
+Remove all images which are not used by existing containers
+```shell
+docker image prune -a
+```
 
 
 ### Volumes
@@ -266,8 +272,7 @@ Delete all the images
 ```shell
 docker volume prune
 ```
-Delete all the volumes
-
+Remove all volumes not used by at least one container
 
 
 
