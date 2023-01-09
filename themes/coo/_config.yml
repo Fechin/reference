@@ -16,7 +16,7 @@ index_recommends:
   - bash
   - python
   - javascript
-  - golang
+  - go
   - vim
   - regex
   - awk
