@@ -435,4 +435,5 @@ PgUp / | PgDn Scroll page up/down
 
 Also see
 --------
-- [Keyboard shortcuts for Visual Studio Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) _(code.visualstudio.com)_
+- [VS Code Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) _(code.visualstudio.com)_
+- [VS Code Keyboard shortcuts for macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) _(code.visualstudio.com)_
