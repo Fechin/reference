@@ -426,8 +426,8 @@ Shortcut | Action
 ⌃⇧\`|  Create new terminal
 ⌘C | Copy selection
 ⌘↑ / ↓ | Scroll up/down
-PgUp / | PgDn Scroll page up/down
-⌘Home / | End Scroll to top/bottom
+PgUp / PgDn | Scroll page up/down
+⌘Home / End | Scroll to top/bottom
 
 
 
