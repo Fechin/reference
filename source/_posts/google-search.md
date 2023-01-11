@@ -104,3 +104,10 @@ Getting Started {.cols-1}
  `has:userlabels` | Search for messages that have custom user labels | Mail 
  ` ` | Search for messages that have no custom user labels | Mail 
 
+
+
+
+Also see
+--------
+
+- [Google Search Operators Cheat Sheet](https://static.semrush.com/blog/uploads/files/39/12/39121580a18160d3587274faed6323e2.pdf) _(static.semrush.com)_
