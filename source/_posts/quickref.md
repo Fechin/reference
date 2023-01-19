@@ -449,7 +449,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z          |
 
 #### ↓ Source Code
 
