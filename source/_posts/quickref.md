@@ -449,7 +449,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z          |
+| `[a-z]`  | Match a to z           |
 
 #### ↓ Source Code
 
@@ -458,7 +458,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 ```
 
 
@@ -491,7 +491,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 {.show-header}
 
 #### ↓ Source Code
@@ -501,7 +501,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 {.show-header}
 ```
 
@@ -514,7 +514,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 {.left-text}
 
 #### ↓ Source Code
@@ -524,7 +524,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 {.left-text}
 ```
 
@@ -537,7 +537,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 {.bold-first}
 
 #### ↓ Source Code
@@ -547,7 +547,7 @@ Table Variants
 |----------|------------------------|
 | `[abc]`  | Match a, b or c        |
 | `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a tot z          |
+| `[a-z]`  | Match a to z           |
 {.bold-first}
 ```
 
