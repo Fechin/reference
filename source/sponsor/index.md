@@ -41,7 +41,7 @@ Sponsor
         <span>0x38415CEb0215b69cF67f6750cf69c2c9b609873a</span>
     </div>
     <div class="flex items-center mt-3">
-        <a class="text-blue-500" target="_blank" rel="noopener external nofollow noreferrer" href="https://twitter.com/QuickRef_ME">Request more...</a>
+        <a class="text-blue-500" target="_blank" rel="noopener external nofollow noreferrer" href="https://twitter.com/FechinLi">Request more...</a>
     </div>
 </div>
 
