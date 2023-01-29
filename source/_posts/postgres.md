@@ -332,6 +332,26 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 ```
 
 
+### Dates
+
+Show [current date](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT) YYYY-MM-DD
+```sql  {.wrap}
+SELECT current_date;
+```
+Calculate [age](https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=age%20(%20timestamp%2C%20timestamp%20)%20%E2%86%92%20interval) between two dates
+```sql {.wrap}
+SELECT age(timestamp, timestamp);
+```
+Show [current time](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT) with time zone
+```sql  {.wrap}
+SELECT current_time;
+```
+[Make](https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=make_date%20(%20year%20int%2C%20month%20int%2C%20day%20int%20)%20%E2%86%92%20date) dates using integers
+```sql {.wrap}
+SELECT make_date(2021,03,25);
+```
+
+
 
 PostgreSQL Commands
 -----------
