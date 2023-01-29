@@ -19,8 +19,9 @@ Getting Started
 ```c
 #include <stdio.h>
 
-int main() {
-  printf("Hello World!");
+int main(void) {
+  printf("Hello World!\n");
+
   return 0;
 }
 ```
@@ -28,7 +29,7 @@ int main() {
 Compile `hello.c` file with `gcc`
 
 ```bash
-$ gcc -o hello hello.c
+$ gcc hello.c -o hello
 ```
 
 Run the compiled binary `hello`
@@ -84,7 +85,7 @@ const int BIRTHYEAR = 1980;
 
 ```c
 // this is a comment
-printf("Hello World!"); // comment
+printf("Hello World!"); // Can comment anywhere in file
 
 /*Multi-line comment, print Hello World!
 to the screen, it's awesome */
@@ -128,10 +129,10 @@ printf("a=%hX, b=%X, c=%lX\n", a, b, c);
 ### Control the number of spaces
 
 ```c
-int a1=20, a2=345, a3=700;
-int b1=56720, b2=9999, b3=20098;
-int c1=233, c2=205, c3=1;
-int d1=34, d2=0, d3=23;
+int a1 = 20, a2 = 345, a3 = 700;
+int b1 = 56720, b2 = 9999, b3 = 20098;
+int c1 = 233, c2 = 205, c3 = 1;
+int d1 = 34, d2 = 0, d3 = 23;
 
 printf("%-9d %-9d %-9d\n", a1, a2, a3);
 printf("%-9d %-9d %-9d\n", b1, b2, b3);
@@ -214,8 +215,8 @@ if (time < 10) {
 ### Ternary operator {.col-span-2}
 
 ```c
-int time = 20;
-(time < 18) ? printf("Goodbye!") : printf("Good evening!");
+int age = 20;
+(age > 19) ? printf("Adult") : printf("Teenager");
 ```
 
 
@@ -229,7 +230,7 @@ switch (day) {
   case 3: printf("Wednesday"); break;
   case 4: printf("Thursday"); break;
   default:
-    printf("Looking forward to the weekend");
+    printf("Weekend!");
 }
 // output -> "Thursday" (day 4)
 ```
@@ -267,9 +268,7 @@ do {
 ### For Loop
 
 ```c
-int i;
-
-for (i = 0; i < 5; i++) {
+for (int i = 0; i < 5; i++) {
   printf("%d\n", i);
 }
 ```
@@ -279,9 +278,7 @@ for (i = 0; i < 5; i++) {
 ### Break out of the loop Break/Continue {.row-span-2}
 
 ```c
-int i;
-
-for (i = 0; i < 10; i++) {
+for (int i = 0; i < 10; i++) {
   if (i == 4) {
     break;
   }
@@ -292,8 +289,7 @@ for (i = 0; i < 10; i++) {
 break out of the loop when `i` is equal to `4`
 
 ```c
-int i;
-for (i = 0; i < 10; i++) {
+for (int i = 0; i < 10; i++) {
   if (i == 4) {
     continue;
   }
@@ -315,6 +311,7 @@ while (i < 10) {
     break;
   }
   printf("%d\n", i);
+
   i++;
 }
 ```
@@ -328,6 +325,7 @@ int i = 0;
 
 while (i < 10) {
   i++;
+
   if (i == 4) {
     continue;
   }
@@ -341,6 +339,7 @@ while (i < 10) {
 
 ```c
 int myNumbers[] = {25, 50, 75, 100};
+
 printf("%d", myNumbers[0]);
 // output 25
 ```
@@ -370,6 +369,7 @@ set array size
 ```c
 // Declare an array of four integers:
 int myNumbers[4];
+
 // add element
 myNumbers[0] = 25;
 myNumbers[1] = 50;
@@ -410,11 +410,11 @@ enum week {Mon = 1, Tues, Wed, Thurs} day;
 
 scanf("%d", &day);
 
-switch(day){
+switch(day) {
   case Mon: puts("Monday"); break;
   case Tues: puts("Tuesday"); break;
   case Wed: puts("Wednesday"); break;
-case Thursday: puts("Thursday"); break;
+  case Thursday: puts("Thursday"); break;
   default: puts("Error!");
 }
 ```
@@ -447,7 +447,7 @@ char firstName[30];
 // Ask the user to enter some text
 printf("Enter your name: \n");
 // get and save the text
-scanf("%s", firstName);
+scanf("%s", &firstName);
 // output text
 printf("Hello %s.", firstName);
 ```
@@ -508,7 +508,7 @@ printf("%p\n", ptr);
 printf("%d\n", *ptr);
 ```
 
-C Operator
+Operators
 ---
 
 
@@ -527,11 +527,11 @@ int sum3 = sum2 + sum2; // 800 (400 + 400)
 | Operator | Name      | Example |
 |----------|-----------|---------|
 | `+`      | Add       | `x + y` |
-| `-`      | Subtract  | `x -y`  |
-| `*`      | Multiply  | `x *y`  |
-| `/`      | Divide    | `x /y`  |
+| `-`      | Subtract  | `x - y`  |
+| `*`      | Multiply  | `x * y`  |
+| `/`      | Divide    | `x / y`  |
 | `%`      | Modulo    | `x % y` |
-| `++`     | Increment | `++`    |
+| `++`     | Increment | `++x`    |
 | `--`     | Decrement | `--x`   |
 
 
@@ -547,7 +547,7 @@ int sum3 = sum2 + sum2; // 800 (400 + 400)
 | x `/=` 3  | x `=` x `/` 3  |
 | x `%=` 3  | x `=` x `%` 3  |
 | x `&=` 3  | x `=` x `&` 3  |
-| x `\|=` 3 | x `=` x `\|` 3 |
+| x `|=` 3 | x `=` x `|` 3 |
 | x `^=` 3  | x `=` x `^` 3  |
 | x `>>=` 3 | x `=` x `>>` 3 |
 | x `<<=` 3 | x `=` x `<<` 3 |
@@ -583,8 +583,8 @@ Comparison operators are used to compare two values
 
 | Symbol | Name | Description | Example |
 | --------| --------| --------| --------|
-| `&&` | `and` logic | returns true if both statements are true | `x < 5 && x < 10` |
-| `\|\|` | `or`logical | returns true if one of the statements is true | `x < 5 \|\| x < 4` |
+| `&&` | `and` logical | returns true if both statements are true | `x < 5 && x < 10` |
+| `||` | `or` logical | returns true if one of the statements is true | `x < 5 || x < 4` |
 | `!` | `not` logical | Invert result, return false if true | `!(x < 5 && x < 10)` |
 
 
@@ -597,18 +597,18 @@ unsigned int b = 13; /*13 = 0000 1101 */
 int c = 0;
 
 c = a & b; /*12 = 0000 1100 */
-printf("Line 1 -the value of c is %d\n", c );
+printf("Line 1 -the value of c is %d\n", c);
 
 c = a | b; /*61 = 0011 1101 */
-printf("Line 2 -the value of c is %d\n", c );
+printf("Line 2 -the value of c is %d\n", c);
 c = a ^ b; /*49 = 0011 0001 */
-printf("Line 3 -the value of c is %d\n", c );
+printf("Line 3 -the value of c is %d\n", c);
 c = ~a; /*-61 = 1100 0011 */
-printf("Line 4 -The value of c is %d\n", c );
+printf("Line 4 -The value of c is %d\n", c);
 c = a << 2; /*240 = 1111 0000 */
-printf("Line 5 -the value of c is %d\n", c );
+printf("Line 5 -the value of c is %d\n", c);
 c = a >> 2; /*15 = 0000 1111 */
-printf("Line 6 -The value of c is %d\n", c );
+printf("Line 6 -The value of c is %d\n", c);
 ```
 
 
@@ -618,13 +618,13 @@ printf("Line 6 -The value of c is %d\n", c );
 operator | description | instance
 :-|:-|:-
 `&` | Bitwise AND operation, "AND" operation by binary digits | `(A & B)` will get `12` which is 0000 1100
-`\|` | Bitwise OR operator, "or" operation by binary digit | `(A \| B)` will get `61` which is 0011 1101
+`|` | Bitwise OR operator, "or" operation by binary digit | `(A | B)` will get `61` which is 0011 1101
 `^` | XOR operator, perform "XOR" operation by binary digits | `(A ^ B)` will get `49` which is 0011 0001
 `~` | Inversion operator, perform "inversion" operation by binary bit | `(~A)` will get `-61` which is 1100 0011
 `<<` | binary left shift operator | `A << 2` will get `240` which is 1111 0000
 `>>` | binary right shift operator | `A >> 2` will get `15` which is 0000 1111
 
-Data Types Data Types
+Data Types
 ---
 
 
@@ -645,9 +645,9 @@ Data Types Data Types
 | `long int` | 4 bytes | `-2,147,483,648` ~ `2,147,483,647` | |
 | `signed long int` | 4 bytes | `-2,147,483,648` ~ `2,147,483,647` | |
 | `unsigned long int` | 4 bytes | `0` ~ `4,294,967,295` | |
-| `float` | 4 bytes | | |
-| `double` | 8 bytes | | |
-| `long double` | 10 bytes | | |
+| `float` | 4 bytes | `3.4E-38` ~ `3.4E+38` | |
+| `double` | 8 bytes | `1.7E-308` ~ `1.7E+308` | |
+| `long double` | 10 bytes | `3.4E-4932` ~ `1.1E+4932` | |
 
 
 
@@ -770,7 +770,7 @@ macro | description
 #include <stdio.h>
 
 int main() {
-printf("File :%s\n", __FILE__);
+  printf("File :%s\n", __FILE__);
   printf("Date :%s\n", __DATE__);
   printf("Time :%s\n", __TIME__);
   printf("Line :%d\n", __LINE__);
@@ -803,6 +803,7 @@ If the macro is too long to fit on a single line, use the macro continuation ope
 
 int main(void) {
   message_for(Carole, Debra);
+
   return 0;
 }
 ```
@@ -823,9 +824,10 @@ When you need to convert a macro parameter to a string constant, use the string 
 
 #define tokenpaster(n) printf ("token" #n " = %d", token##n)
 
-int main(void){
+int main(void) {
   int token34 = 40;
   tokenpaster(34);
+
   return 0;
 }
 ```
@@ -843,6 +845,7 @@ int main(void){
 
 int main(void) {
   printf("Here is the message: %s\n", MESSAGE);
+
   return 0;
 }
 ```
@@ -853,25 +856,26 @@ int main(void) {
 
 ```c
 int square(int x) {
-return x *x;
+  return x * x;
 }
 ```
 
 The macro rewrites the above code as follows:
 
 ```c
-#define square(x) ((x) *(x))
+#define square(x) ( (x) * (x) )
 ```
 
 No spaces are allowed between the macro name and the opening parenthesis
 
 ```c
 #include <stdio.h>
-#define MAX(x,y) ((x) > (y) ? (x) : (y))
+#define MAX(x,y) ( (x) > (y) ? (x) : (y) )
 
 int main(void) {
-   printf("Max between 20 and 10 is %d\n", MAX(10, 20));
-   return 0;
+  printf("Max between 20 and 10 is %d\n", MAX(10, 20));
+
+  return 0;
 }
 ```
 
@@ -883,8 +887,9 @@ C Function
 ### Function declaration and definition {.row-span-2}
 
 ```c
-int main() {
+int main(void) {
   printf("Hello World!");
+
   return 0;
 }
 ```
@@ -909,8 +914,10 @@ void myFunction();
 // main method
 int main() {
   myFunction(); // --> call the function
+
   return 0;
 }
+
 void myFunction() {// Function definition
   printf("Good evening!");
 }
@@ -925,9 +932,11 @@ void myFunction() {// Function definition
 void myFunction() {
   printf("Good evening!");
 }
+
 int main() {
   myFunction(); // call the function
   myFunction(); // can be called multiple times
+
   return 0;
 }
 // Output -> "Good evening!"
@@ -942,9 +951,11 @@ int main() {
 void myFunction(char name[]) {
   printf("Hello %s\n", name);
 }
+
 int main() {
-myFunction("Liam");
+  myFunction("Liam");
   myFunction("Jenny");
+
   return 0;
 }
 // Hello Liam
@@ -962,6 +973,7 @@ void myFunction(char name[], int age) {
 int main() {
   myFunction("Liam", 3);
   myFunction("Jenny", 14);
+
   return 0;
 }
 // Hi Liam you are 3 years old.
@@ -996,6 +1008,7 @@ int main() {
   // store the result in a variable
   int result = myFunction(5, 3);
   printf("Result = %d", result);
+
   return 0;
 }
 // result: 8 (5 + 3)
@@ -1008,9 +1021,11 @@ int main() {
 
 ```c
 int sum(int k);
+
 int main() {
   int result = sum(10);
   printf("%d", result);
+
   return 0;
 }
 
@@ -1029,10 +1044,13 @@ int sum(int k) {
 
 ```c
 #include <math.h>
-printf("%f", sqrt(16)); // square root
-printf("%f", ceil(1.4)); // round up (round)
-printf("%f", floor(1.4)); // round up (round)
-printf("%f", pow(4, 3)); // x(4) to the power of y(3)
+
+void main(void) {
+  printf("%f", sqrt(16)); // square root
+  printf("%f", ceil(1.4)); // round up (round)
+  printf("%f", floor(1.4)); // round up (round)
+  printf("%f", pow(4, 3)); // x(4) to the power of y(3)
+}
 ```
 
 ----
@@ -1071,6 +1089,7 @@ struct myStructure {
 
 int main() {
   struct myStructure s1;
+
   return 0;
 }
 ```
@@ -1091,6 +1110,7 @@ int main() {
   strcpy(s1. myString, "Some text");
   // print value
   printf("my string: %s", s1.myString);
+
   return 0;
 }
 ```
@@ -1104,7 +1124,7 @@ Assigning values ​​to strings using the `strcpy` function
 ```c{11,12,16}
 // create a structure called myStructure
 struct myStructure {
-int myNum;
+  int myNum;
   char myLetter;
 };
 
@@ -1121,6 +1141,7 @@ int main() {
   // print value
   printf("My number: %d\n", s1.myNum);
   printf("My letter: %c\n", s1.myLetter);
+
   return 0;
 }
 ```
@@ -1220,15 +1241,16 @@ Mode Mode | Description Description
 ```c{6}
 #include <stdio.h>
 
-void main( ) {
+void main() {
   FILE *fp;
   char ch;
+
   fp = fopen("file_handle.c", "r");
 
   while (1) {
     ch = fgetc(fp);
     if (ch == EOF)
-    break;
+      break;
     printf("%c", ch);
   }
   fclose(fp);
@@ -1244,12 +1266,13 @@ After performing all operations on the file, the file must be closed with `fclos
 ```c{7}
 #include <stdio.h>
 
-main() {
+void main() {
   FILE *fp;
   fp = fopen("file.txt", "w"); // open the file
+
   // write data to file
   fprintf(fp, "Hello file for fprintf..\n");
-fclose(fp); // close the file
+  fclose(fp); // close the file
 }
 ```
 
@@ -1259,11 +1282,14 @@ fclose(fp); // close the file
 
 ```c{6}
 #include <stdio.h>
-main(){
+
+void main() {
   FILE *fp;
+
   char buff[255]; // Create a char array to store file data
   fp = fopen("file.txt", "r");
-  while(fscanf(fp, "%s", buff)!=EOF) {
+
+  while(fscanf(fp, "%s", buff) != EOF) {
     printf("%s ", buff);
   }
   fclose(fp);
@@ -1277,7 +1303,7 @@ main(){
 ```c{6}
 #include <stdio.h>
 
-main(){
+void main() {
   FILE *fp;
   fp = fopen("file1.txt", "w"); // open the file
   fputc('a',fp); // write a single character to the file
@@ -1292,15 +1318,20 @@ main(){
 ```c{8}
 #include <stdio.h>
 #include <conio.h>
+
 void main() {
   FILE *fp;
   char c;
+
   clrscr();
-  fp=fopen("myfile.txt", "r");
-  while((c=fgetc(fp))!=EOF){
+
+  fp = fopen("myfile.txt", "r");
+
+  while( (c = fgetc(fp) ) != EOF) {
     printf("%c", c);
   }
   fclose(fp);
+
   getch();
 }
 ```
@@ -1313,12 +1344,15 @@ void main() {
 #include<stdio.h>
 #include<conio.h>
 
-void main(){
+void main() {
   FILE *fp;
+
   clrscr();
+
   fp = fopen("myfile2.txt","w");
   fputs("hello c programming",fp);
   fclose(fp);
+
   getch();
 }
 ```
@@ -1334,10 +1368,13 @@ void main(){
 void main() {
   FILE *fp;
   char text[300];
+
   clrscr();
-fp=fopen("myfile2.txt", "r");
+
+  fp = fopen("myfile2.txt", "r");
   printf("%s", fgets(text, 200, fp));
   fclose(fp);
+
   getch();
 }
 ```
@@ -1348,13 +1385,16 @@ fp=fopen("myfile2.txt", "r");
 
 ```c{8}
 #include <stdio.h>
-void main(){
+
+void main(void) {
   FILE *fp;
+
   fp = fopen("myfile.txt","w+");
   fputs("This is Book", fp);
 
-  // Set the file pointer to the given position
+  // Set file pointer to the given position
   fseek(fp, 7, SEEK_SET);
+
   fputs("Kenny Wong", fp);
   fclose(fp);
 }
@@ -1369,19 +1409,26 @@ set the file pointer to the given position
 ```c{11}
 #include <stdio.h>
 #include <conio.h>
-void main(){
+
+void main() {
   FILE *fp;
   char c;
+
   clrscr();
-  fp=fopen("file.txt", "r");
-while((c=fgetc(fp)) != EOF){
+
+  fp = fopen("file.txt", "r");
+
+  while( (c = fgetc(fp) ) != EOF) {
     printf("%c", c);
   }
+
   rewind(fp); // move the file pointer to the beginning of the file
-  while((c=fgetc(fp)) != EOF){
+
+  while( (c = fgetc(fp) ) != EOF) {
     printf("%c", c);
   }
   fclose(fp);
+
   getch();
 }
 // output
@@ -1396,17 +1443,20 @@ while((c=fgetc(fp)) != EOF){
 #include <stdio.h>
 #include <conio.h>
 
-void main (){
+void main () {
    FILE *fp;
    int length;
+
    clrscr();
+
    fp = fopen("file.txt", "r");
+
    fseek(fp, 0, SEEK_END);
-
    length = ftell(fp); // return current position
-
    fclose(fp);
+
    printf("File size: %d bytes", length);
+
    getch();
 }
 // output
