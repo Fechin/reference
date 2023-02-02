@@ -148,7 +148,7 @@ command | description
 ### Multiple file upload {.col-span-2}
 
 ```bash
-$ curl -v -include \
+$ curl -v --include \
 --form key1=value1 \
     --form upload=@localfilename URL
 ```
