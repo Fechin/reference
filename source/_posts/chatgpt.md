@@ -169,3 +169,13 @@ Getting Started
 
 [I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
+
+
+
+
+
+
+Also see
+--------
+
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
