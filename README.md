@@ -1,16 +1,18 @@
-# Reference
+# Reference 
+
 
 [![love](https://badgen.net/badge/make%20with/love/pink)](#)
 [![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
-[![contributors](https://badgen.net/github/contributors/Fechin/reference)](https://github.com/Fechin/reference/graphs/contributors)
-[![forks](https://badgen.net/github/forks/Fechin/reference)](https://github.com/Fechin/reference/network/members)
-[![starts](https://badgen.net/github/stars/Fechin/reference)](#)
+[![Follow us on Twitter](https://img.shields.io/twitter/follow/FechinLi?style=social)](https://twitter.com/FechinLi)
 
 
 
-**Reference** is a collection of **cheatsheets** contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[ [中文版](https://github.com/jaywcjlove/reference) | ... \]
 
-We're happy to see your best skill cheat sheets in **Reference**, If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a [PR](#contributing).
+
+Reference is a collection of cheatsheets contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[ [中文版](https://github.com/jaywcjlove/reference) | ... \]
+
+
+We're happy to see your best skill cheat sheets in Reference, If you see a cheatsheet here is not fit, you can fix it or provide a better cheatsheet by submitting a [PR](#contributing).
 
 
 ## Live Demo
