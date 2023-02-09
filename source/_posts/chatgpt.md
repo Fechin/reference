@@ -8,7 +8,7 @@ tags:
     - Prompts
     - Tips
 categories:
-    - Programming
+    - Toolkit
 intro: This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively
 ---
 
@@ -24,7 +24,7 @@ Getting Started
 - _Ask ChatGPT to_ give you gift ideas for business partners, customers, or clients
 - _Ask ChatGPT to_ choose a random contest winner(s) from a long list of names or emails
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -37,7 +37,7 @@ Getting Started
 - _Ask ChatGPT to_ code an entire software program
 - _Ask ChatGPT to_ generate regular expressions (regex)
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -49,7 +49,7 @@ Getting Started
 - _Ask ChatGPT to_ create dummy data for placeholders
 - _Ask ChatGPT to_ help create a complex macro
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -61,7 +61,7 @@ Getting Started
 - _Ask ChatGPT for_ font pairings
 - _Ask ChatGPT for_ color pairings
  
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -70,7 +70,7 @@ Getting Started
 - _Ask ChatGPT to_ create tables from the text or data you provide
 - _Ask ChatGPT to_ filter data from large lists
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -80,7 +80,7 @@ Getting Started
 - _Ask ChatGPT to_ translate foreign languages
 - _Ask ChatGPT for_ books that are like another book
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -91,7 +91,7 @@ Getting Started
 - _Ask ChatGPT for_ Facebook audience suggestions
 - _Ask ChatGPT to_ create body text, headlines and/or calls to action for your ads
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -103,7 +103,7 @@ Getting Started
 - _Ask ChatGPT to_ help you find items that could be sold as bundles
 - _Ask ChatGPT to_ organize product and pricing data
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -113,7 +113,7 @@ Getting Started
 - _Ask ChatGPT to_ give you ideas for memes on any topic
 - _Ask ChatGPT to_ give you an idea for a post that can drive engagement on any topic
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -133,7 +133,7 @@ Getting Started
 - _Ask ChatGPT to_ detect plagiarism in any text
 - _Ask ChatGPT to_ provide you with domain name ideas
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -144,7 +144,7 @@ Getting Started
 - _Ask ChatGPT to_ create a curve based on test scores
 - _Ask ChatGPT to_ grade an assignment
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -159,7 +159,7 @@ Getting Started
 - _Ask ChatGPT to_ analyze your script or transcript and tell you the tone of it
 - _Ask ChatGPT for_ video ideas on any topic
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -167,7 +167,7 @@ Getting Started
 ### Research
 - _Ask ChatGPT to_ help research anything that happened before 2021
 
-[I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
