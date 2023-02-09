@@ -60,6 +60,7 @@ Getting Started
 - _Use ChatGPT to_ format and proofread email
 - _Use ChatGPT to_ provides tips for effective email marketing
 - _Use ChatGPT to_ automate email responses
+- _Use ChatGPT to_ extract email address from text
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
