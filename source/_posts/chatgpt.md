@@ -113,6 +113,8 @@ Getting Started
 ### Social Media
 - _Use ChatGPT to_ give you ideas for memes on any topic
 - _Use ChatGPT to_ give you an idea for a post that can drive engagement on any topic
+- _Use ChatGPT to_ generate hashtags and captions
+- _Use ChatGPT to_ offer suggestions reply 
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
