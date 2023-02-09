@@ -13,6 +13,7 @@ index_categories:
 
 # Home recommended posts
 index_recommends:
+  - chatgpt
   - bash
   - python
   - javascript
@@ -20,7 +21,6 @@ index_recommends:
   - vim
   - regex
   - awk
-  - markdown
 
 
 # Related popular posts
