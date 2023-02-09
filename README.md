@@ -3,9 +3,6 @@
 
 [![love](https://badgen.net/badge/make%20with/love/pink)](#)
 [![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
-[![contributors](https://badgen.net/github/contributors/Fechin/reference)](https://github.com/Fechin/reference/graphs/contributors)
-[![forks](https://badgen.net/github/forks/Fechin/reference)](https://github.com/Fechin/reference/network/members)
-[![starts](https://badgen.net/github/stars/Fechin/reference)](#)
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/FechinLi?style=social)](https://twitter.com/FechinLi)
 
 
