@@ -44,17 +44,6 @@ Getting Started
 
 
 
-### Spreadsheets
-- _Use ChatGPT to_ help create a spreadsheet formula
-- _Use ChatGPT to_ explain a formula to you
-- _Use ChatGPT to_ create dummy data for placeholders
-- _Use ChatGPT to_ help create a complex macro
-
-[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
-
-
-
-
 ### Email
 - _Use ChatGPT to_ creating email campaigns
 - _Use ChatGPT to_ format and proofread email
@@ -63,6 +52,19 @@ Getting Started
 - _Use ChatGPT to_ extract email address from text
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+
+
+
+
+### Spreadsheets
+- _Use ChatGPT to_ help create a spreadsheet formula
+- _Use ChatGPT to_ explain a formula to you
+- _Use ChatGPT to_ create dummy data for placeholders
+- _Use ChatGPT to_ help create a complex macro
+- _Use ChatGPT to_ Provide tips for improving spreadsheet efficiency
+
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+
 
 
 
