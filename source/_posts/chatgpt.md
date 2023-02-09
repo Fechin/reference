@@ -55,6 +55,16 @@ Getting Started
 
 
 
+### Email
+- _Use ChatGPT to_ creating email campaigns
+- _Use ChatGPT to_ format and proofread email
+- _Use ChatGPT to_ provides tips for effective email marketing
+- _Use ChatGPT to_ automate email responses
+
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+
+
+
 
 ### Design
 - _Use ChatGPT to_ create an AI design prompt for you
