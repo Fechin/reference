@@ -36,6 +36,7 @@ Getting Started
 - _Ask ChatGPT to_ change the HTML of a line of code
 - _Ask ChatGPT to_ code an entire software program
 - _Ask ChatGPT to_ generate regular expressions (regex)
+- _Ask ChatGPT to_ add comments to your codebase
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
