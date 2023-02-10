@@ -16,27 +16,89 @@ Getting Started
 ---------------
 
 
-
 ### General
-- _Use ChatGPT to_ name your business or idea
-- _Use ChatGPT to_ create an outline for a course or training program
-- _Use ChatGPT to_ ask you interview questions for a specific job
-- _Use ChatGPT to_ give you gift ideas for business partners, customers, or clients
-- _Use ChatGPT to_ choose a random contest winner(s) from a long list of names or emails
+- **Name your business or idea**
+    ``` {.wrap}
+    1. Can you suggest a creative name for my tech startup?
+    2. Help me come up with a catchy name for my bakery business.
+    ```
+- **Create an outline for a course or training program**
+    ``` {.wrap}
+    1. Please create an outline for a course on web development for beginners.
+    2. Can you make a training program outline for a customer service workshop?
+    ```
+- **Ask you interview questions for a specific job**
+    ``` {.wrap}
+    1. I'm interviewing for a software engineer position, can you give me some interview questions?
+    2. Please provide me with some common interview questions for a marketing manager role.
+    ```
+- **Give you gift ideas for business partners, customers, or clients**
+    ``` {.wrap}
+    1. I need gift ideas for my clients, can you help?
+    2. What are some unique gifts I can give to my business partners?
+    ```
+- **Choose a random contest winner(s) from a long list of names or emails**
+    ``` {.wrap}
+    1. I want to choose a winner from a list of 100 names, can you help?
+    2. Can you randomly pick 5 email addresses from a list of 1000 for a giveaway contest?
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
-
 ### Coding
-- _Use ChatGPT to_ explain why a line of code isn't working
-- _Use ChatGPT to_ explain what a piece of code means
-- _Use ChatGPT to_ change the CSS of a line of code
-- _Use ChatGPT to_ change the HTML of a line of code
-- _Use ChatGPT to_ code an entire software program
-- _Use ChatGPT to_ generate regular expressions (regex)
-- _Use ChatGPT to_ add comments to your codebase
+
+- **Explain why a piece of code isn't working**
+    ``` {.wrap}
+    Why this code is not working?
+    var x = 5;
+    var y = 0;
+    console.log(x/y);
+    ```
+- **Explain what a piece of code means**
+    ``` {.wrap}
+    What this code does?
+    function addNumbers(a, b) {
+        return a + b;
+    }
+    ```
+- **Rewrite the code using the specified language**
+    ``` {.wrap}
+    Translate this code into Python:
+    function addNumbers(a, b) {
+        return a + b;
+    }
+    ```
+- **Code an entire software program**
+    ``` {.wrap}
+    1. Write a program that calculates the factorial of a given number in python?
+    2. How do I make an HTTP request in Javascript?
+    ```
+- **Generate regular expressions (regex)**
+    ``` {.wrap}
+    1. Create a regex that matches all email addresses?
+    2. Generate 8-digit password regex
+    ```
+- **Add comments to your codebase**
+    ``` {.wrap}
+    Add comments to this code: 
+    function addNumbers(a, b) {
+        return a + b;
+    }
+    ```
+- **Change the CSS of a line of code**
+    ``` {.wrap}
+    Update the CSS for this line to change the font color to blue?
+    <p class="example">Hello, QuickRef.ME!</p>
+    ```
+- **Change the HTML of a line of code**
+    ``` {.wrap}
+    Add a class of "header" to this header tag?
+    <h1>Hello, QuickRef.ME!</h1>
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -45,11 +107,29 @@ Getting Started
 
 
 ### Email
-- _Use ChatGPT to_ creating email campaigns
-- _Use ChatGPT to_ format and proofread email
-- _Use ChatGPT to_ provides tips for effective email marketing
-- _Use ChatGPT to_ automate email responses
-- _Use ChatGPT to_ extract email address from text
+- **Creating email campaigns**
+    ``` {.wrap}
+    1. Email inviting Jack to dinner on the weekend
+    2. 
+
+    ```
+- **Format and proofread email**
+    ``` {.wrap}
+
+    ```
+- **Provides tips for effective email marketing**
+    ``` {.wrap}
+
+    ```
+- **Automate email responses**
+    ``` {.wrap}
+
+    ```
+- **Extract email address from text**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -57,11 +137,27 @@ Getting Started
 
 
 ### Spreadsheets
-- _Use ChatGPT to_ help create a spreadsheet formula
-- _Use ChatGPT to_ explain a formula to you
-- _Use ChatGPT to_ create dummy data for placeholders
-- _Use ChatGPT to_ help create a complex macro
-- _Use ChatGPT to_ Provide tips for improving spreadsheet efficiency
+- **Help create a spreadsheet formula**
+    ``` {.wrap}
+
+    ```
+- **Explain a formula to you**
+    ``` {.wrap}
+
+    ```
+- **Create dummy data for placeholders**
+    ``` {.wrap}
+
+    ```
+- **Help create a complex macro**
+    ``` {.wrap}
+
+    ```
+- **Provide tips for improving spreadsheet efficiency**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -70,19 +166,42 @@ Getting Started
 
 
 ### Design
-- _Use ChatGPT to_ create an AI design prompt for you
-- _Use ChatGPT for_ suggestions on thumbnails for blogs or videos
-- _Use ChatGPT for_ font pairings
-- _Use ChatGPT for_ color pairings
- 
+- **Create an AI design prompt for you**
+    ``` {.wrap}
+
+    ```
+- **Suggestions on thumbnails for blogs or videos**
+    ``` {.wrap}
+
+    ```
+- **Font pairings**
+    ``` {.wrap}
+
+    ```
+- **Color pairings**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
+
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
 ### Analyzing Data
-- _Use ChatGPT to_ pull out numbers from large chunks of text
-- _Use ChatGPT to_ create tables from the text or data you provide
-- _Use ChatGPT to_ filter data from large lists
+- **Pull out numbers from large chunks of text**
+    ``` {.wrap}
+
+    ```
+- **Create tables from the text or data you provide**
+    ``` {.wrap}
+
+    ```
+- **Filter data from large lists**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -90,20 +209,46 @@ Getting Started
 
 
 ### Reading
-- _Use ChatGPT to_ summarize long selections of text
-- _Use ChatGPT to_ translate foreign languages
-- _Use ChatGPT for_ books that are like another book
+- **Summarize long selections of text**
+    ``` {.wrap}
+
+    ```
+- **Translate foreign languages**
+    ``` {.wrap}
+
+    ```
+- **Books that are like another book**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
 ### Paid Ads
-- _Use ChatGPT to_ give you ad creative ideas
-- _Use ChatGPT to_ review the tracking code for errors (tag manager, etc.)
-- _Use ChatGPT to_ give you ad copy ideas
-- _Use ChatGPT for_ Facebook audience suggestions
-- _Use ChatGPT to_ create body text, headlines and/or calls to action for your ads
+- **Give you ad creative ideas**
+    ``` {.wrap}
+
+    ```
+- **Review the tracking code for errors (tag manager, etc.)**
+    ``` {.wrap}
+
+    ```
+- **Give you ad copy ideas**
+    ``` {.wrap}
+
+    ```
+- **Facebook audience suggestions**
+    ``` {.wrap}
+
+    ```
+- **Create body text, headlines and/or calls to action for your ads**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -111,11 +256,27 @@ Getting Started
 
 
 ### Amazon FBA
-- _Use ChatGPT to_ write or rewrite your product descriptions
-- _Use ChatGPT to_ write or rewrite appeal letters
-- _Use ChatGPT to_ write or rewrite supplier outreach emails
-- _Use ChatGPT to_ help you find items that could be sold as bundles
-- _Use ChatGPT to_ organize product and pricing data
+- **Write or rewrite your product descriptions**
+    ``` {.wrap}
+
+    ```
+- **Write or rewrite appeal letters**
+    ``` {.wrap}
+
+    ```
+- **Write or rewrite supplier outreach emails**
+    ``` {.wrap}
+
+    ```
+- **Help you find items that could be sold as bundles**
+    ``` {.wrap}
+
+    ```
+- **Organize product and pricing data**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -124,10 +285,23 @@ Getting Started
 
 
 ### Social Media
-- _Use ChatGPT to_ give you ideas for memes on any topic
-- _Use ChatGPT to_ give you an idea for a post that can drive engagement on any topic
-- _Use ChatGPT to_ generate hashtags and captions
-- _Use ChatGPT to_ offer suggestions reply 
+- **Give you ideas for memes on any topic**
+    ``` {.wrap}
+
+    ```
+- **Give you an idea for a post that can drive engagement on any topic**
+    ``` {.wrap}
+
+    ```
+- **Generate hashtags and captions**
+    ``` {.wrap}
+
+    ```
+- **Offer suggestions reply**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -135,30 +309,86 @@ Getting Started
 
 
 ### Writing/Blogging
-- _Use ChatGPT to_ create titles for any of your creative writing projects
-- _Use ChatGPT to_ create outlines
-- _Use ChatGPT to_ generate content ideas
-- _Use ChatGPT to_ summarize any text you give it
-- _Use ChatGPT to_ create entire blog posts
-- _Use ChatGPT to_ expand on a sentence, paragraph, or long text selection
-- _Use ChatGPT to_ change the tone of your writing
-- _Use ChatGPT to_ proofread or edit your writing
-- _Use ChatGPT to_ format text with headings (great for blog posts)
-- _Use ChatGPT to_ create WordPress Schema
-- _Use ChatGPT to_ check any text for bias
-- _Use ChatGPT to_ detect plagiarism in any text
-- _Use ChatGPT to_ provide you with domain name ideas
+- **Create titles for any of your creative writing projects**
+    ``` {.wrap}
+
+    ```
+- **Create outlines**
+    ``` {.wrap}
+
+    ```
+- **Generate content ideas**
+    ``` {.wrap}
+
+    ```
+- **Summarize any text you give it**
+    ``` {.wrap}
+
+    ```
+- **Create entire blog posts**
+    ``` {.wrap}
+
+    ```
+- **Expand on a sentence, paragraph, or long text selection**
+    ``` {.wrap}
+
+    ```
+- **Change the tone of your writing**
+    ``` {.wrap}
+
+    ```
+- **Proofread or edit your writing**
+    ``` {.wrap}
+
+    ```
+- **Format text with headings (great for blog posts)**
+    ``` {.wrap}
+
+    ```
+- **Create WordPress Schema**
+    ``` {.wrap}
+
+    ```
+- **Check any text for bias**
+    ``` {.wrap}
+
+    ```
+- **Detect plagiarism in any text**
+    ``` {.wrap}
+
+    ```
+- **Provide you with domain name ideas**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
 ### Teachers/Course Creators
-- _Use ChatGPT to_ turn a list of facts or statistics into multiple-choice quizzes
-- _Use ChatGPT for_ assignment ideas on a specific topic
-- _Use ChatGPT to_ create assigned groups from a list of students
-- _Use ChatGPT to_ create a curve based on test scores
-- _Use ChatGPT to_ grade an assignment
+- **Turn a list of facts or statistics into multiple-choice quizzes**
+    ``` {.wrap}
+
+    ```
+- **Assignment ideas on a specific topic**
+    ``` {.wrap}
+
+    ```
+- **Create assigned groups from a list of students**
+    ``` {.wrap}
+
+    ```
+- **Create a curve based on test scores**
+    ``` {.wrap}
+
+    ```
+- **Grade an assignment**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -167,13 +397,35 @@ Getting Started
 
 
 ### YouTube
-- _Use ChatGPT to_ create timestamps from a transcript
-- _Use ChatGPT to_ convert YouTube videos to blog posts with formatting
-- _Use ChatGPT to_ come up with a video outline or script
-- _Use ChatGPT to_ create a response to a comment
-- _Use ChatGPT to_ give you ideas for your thumbnails
-- _Use ChatGPT to_ analyze your script or transcript and tell you the tone of it
-- _Use ChatGPT for_ video ideas on any topic
+- **Create timestamps from a transcript**
+    ``` {.wrap}
+
+    ```
+- **Convert YouTube videos to blog posts with formatting**
+    ``` {.wrap}
+
+    ```
+- **Come up with a video outline or script**
+    ``` {.wrap}
+
+    ```
+- **Create a response to a comment**
+    ``` {.wrap}
+
+    ```
+- **Give you ideas for your thumbnails**
+    ``` {.wrap}
+
+    ```
+- **Analyze your script or transcript and tell you the tone of it**
+    ``` {.wrap}
+
+    ```
+- **Video ideas on any topic**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
@@ -181,12 +433,13 @@ Getting Started
 
 
 ### Research
-- _Use ChatGPT to_ help research anything that happened before 2021
+- **Help research anything that happened before 2021**
+    ``` {.wrap}
+
+    ```
+{.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
-
-
-
 
 
 
@@ -195,3 +448,11 @@ Also see
 --------
 
 - [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
+
+
+
+<style>
+em { font-size: 0.785em; }
+strong {font-weight: 500;}
+ul.collapsible > li > pre { padding-left: 0; padding-right: 0; font-size: 0.925em;}
+</style>

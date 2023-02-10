@@ -11,7 +11,7 @@
     padding: 0;
 }
 
-.mdLayout .h3-wrap > .section ul:not(.marker-none) > li::before {
+.mdLayout .h3-wrap > .section ul:not(.marker-none):not(.collapsible) > li::before {
     content: '';
     position: absolute;
     display: inline-block;
@@ -34,9 +34,21 @@
 }
 
 
+.mdLayout .h3-wrap > .section > ul.collapsible > li > pre {
+    display: none;
+}
 
+.mdLayout .h3-wrap > .section > ul.collapsible > li.active > pre {
+    display: block;
+}
 
-
+.mdLayout .h3-wrap > .section > ul.collapsible > li:before {
+    content: "▶"; /*▼*/
+    position: absolute;
+    left: 10px;
+    font-size: 0.825em;
+    @apply text-emerald-500;
+}
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline {
     counter-reset: stepCount;

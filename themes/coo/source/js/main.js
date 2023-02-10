@@ -72,6 +72,15 @@ window.addEventListener('load', () => {
         localStorage.theme = isDarkMode ? "dark" : "";
     });
 
+    /******** List Collapsible ***********/
+    document.querySelectorAll("ul.collapsible > li").forEach(function (li) {
+        li.classList.add("active");
+        // li.addEventListener("click", function () {
+        //     this.classList.toggle("active");
+        // });
+    });
+
+
     /******** google analytics ***********/
     Utils.externalLibrary(Utils.LIBRARY.gtag).then(() => {
         window.dataLayer = window.dataLayer || [];
