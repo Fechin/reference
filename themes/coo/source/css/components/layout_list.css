@@ -42,6 +42,9 @@
     display: block;
 }
 
+.mdLayout .h3-wrap > .section > ul.collapsible > li.arrow-down:before {
+    content: "▼"; /*▼*/
+}
 .mdLayout .h3-wrap > .section > ul.collapsible > li:before {
     content: "▶"; /*▼*/
     position: absolute;

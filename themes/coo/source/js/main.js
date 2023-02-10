@@ -75,9 +75,10 @@ window.addEventListener('load', () => {
     /******** List Collapsible ***********/
     document.querySelectorAll("ul.collapsible > li").forEach(function (li) {
         li.classList.add("active");
-        // li.addEventListener("click", function () {
-        //     this.classList.toggle("active");
-        // });
+        li.addEventListener("click", function () {
+            // this.classList.toggle("active");
+            // this.classList.toggle("arrow-down");
+        });
     });
 
 
