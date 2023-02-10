@@ -75,8 +75,8 @@ window.addEventListener('load', () => {
     /******** List Collapsible ***********/
     document.querySelectorAll("ul.collapsible > li > strong").forEach(function (strong) {
         let li = strong.parentElement;
-        // li.classList.add("active");
-        // strong.classList.toggle("arrow-down");
+        li.classList.add("active");
+        strong.classList.toggle("arrow-down");
         strong.addEventListener("click", function () {
             li.classList.toggle("active");
             this.classList.toggle("arrow-down");
