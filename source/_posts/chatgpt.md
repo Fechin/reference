@@ -167,6 +167,49 @@ Getting Started
 
 
 
+### Social Media
+- **Give you ideas for memes on any topic**
+    ``` {.wrap}
+    Can you give me some meme ideas for [dogs]?
+    ```
+- **Give you an idea for a post that can drive engagement on any topic**
+    ``` {.wrap}
+    I want to create a post about climate change that can engage my followers. Can you help me with some ideas?
+    ```
+- **Generate hashtags and captions**
+    ``` {.wrap}
+    I need some hashtags and a caption for a picture of a scenic sunset. Can you generate some for me?
+    ```
+- **Offer suggestions reply**
+    ``` {.wrap}
+    I just received an message asking about the status of a project. Can you suggest a reply for me?
+    ```
+{.collapsible}
+
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+
+
+
+
+### Reading
+- **Summarize long selections of text**
+    ``` {.wrap}
+    Can you please summarize this article for me? [your text]
+    ```
+- **Translate foreign languages**
+    ``` {.wrap}
+    Can you translate this sentence into Spanish? [your text]
+    ```
+- **Books that are like another book**
+    ``` {.wrap}
+    Can you recommend books similar to 'The Hunger Games'?
+    ```
+{.collapsible}
+
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+
+
+
 
 ### Design
 - **Create an AI design prompt for you**
@@ -208,25 +251,6 @@ Getting Started
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
-
-
-
-### Reading
-- **Summarize long selections of text**
-    ``` {.wrap}
-    Can you please summarize this article for me? [your text]
-    ```
-- **Translate foreign languages**
-    ``` {.wrap}
-    Can you translate this sentence into Spanish? [your text]
-    ```
-- **Books that are like another book**
-    ``` {.wrap}
-    Can you recommend books similar to 'The Hunger Games'?
-    ```
-{.collapsible}
-
-[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -283,30 +307,6 @@ Getting Started
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
-
-
-
-
-### Social Media
-- **Give you ideas for memes on any topic**
-    ``` {.wrap}
-    Can you give me some meme ideas for [dogs]?
-    ```
-- **Give you an idea for a post that can drive engagement on any topic**
-    ``` {.wrap}
-    I want to create a post about climate change that can engage my followers. Can you help me with some ideas?
-    ```
-- **Generate hashtags and captions**
-    ``` {.wrap}
-    I need some hashtags and a caption for a picture of a scenic sunset. Can you generate some for me?
-    ```
-- **Offer suggestions reply**
-    ``` {.wrap}
-    I just received an message asking about the status of a project. Can you suggest a reply for me?
-    ```
-{.collapsible}
-
-[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
 
 
@@ -435,13 +435,23 @@ Getting Started
 - **Help research anything that happened before 2021**
     ``` {.wrap}
     1. Explain quantum computing in simple terms
+  
     2. Got any creative ideas for a 10 year old’s birthday?
+  
     3. How do I make an HTTP request in Javascript?
+  
     4. Can you tell me about the events leading up to the American Civil War?
+  
     5. What can you tell me about the invention of the printing press?
+  
     6. Can you research the history of the Olympic Games?
+  
     7. Can you give me information about the French Revolution?
+  
     8. I'm interested in the history of the Byzantine Empire. Can you help me learn more?
+  
+    9. etc...
+  
     ```
 {.collapsible}
 
