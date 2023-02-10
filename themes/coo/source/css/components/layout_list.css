@@ -38,14 +38,19 @@
     display: none;
 }
 
-.mdLayout .h3-wrap > .section > ul.collapsible > li.active > pre {
+.mdLayout .h3-wrap > .section > ul.collapsible > li.active  > pre {
     display: block;
 }
 
-.mdLayout .h3-wrap > .section > ul.collapsible > li.arrow-down:before {
+.mdLayout .h3-wrap > .section > ul.collapsible > li > strong:hover{
+    cursor: pointer;
+}
+
+.mdLayout .h3-wrap > .section > ul.collapsible > li > strong.arrow-down:before {
     content: "▼"; /*▼*/
 }
-.mdLayout .h3-wrap > .section > ul.collapsible > li:before {
+
+.mdLayout .h3-wrap > .section > ul.collapsible > li > strong:before {
     content: "▶"; /*▼*/
     position: absolute;
     left: 10px;
