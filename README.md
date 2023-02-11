@@ -1,4 +1,4 @@
-# 🔥 Reference - Cheat Sheets for Developers
+# 📖 Reference - Cheat Sheets for Developers
 
 [![love](https://badgen.net/badge/make%20with/love/pink)](#)
 [![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
@@ -18,6 +18,12 @@ You can view the cheat sheets live at https://quickref.me
 
 [![Quick reference](https://quickref.me/assets/image/preview.png)](https://quickref.me/)
 
+
+Reference provides cheat sheets for the following:
+
+## 📚 Cheat Sheets List
+
+Reference provides cheat sheets for the following:
 
 
 <details>
