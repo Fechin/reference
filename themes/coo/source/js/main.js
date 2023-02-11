@@ -456,7 +456,7 @@ window.addEventListener('load', () => {
             this.addEventToResult();
         },
         renderPreview() {
-            const active = document.querySelector("li.active");
+            const active = this.search.querySelector("li.active");
             if (active == null) {
                 return;
             }
