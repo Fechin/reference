@@ -49,6 +49,26 @@ hexo.extend.generator.register('json', function (locals) {
     return {path: searchName, data: json};
 });
 
+
+hexo.extend.generator.register('list', function (locals) {
+    const themeConfig = hexo.theme.config;
+    let content = "";
+
+    themeConfig.index_categories.forEach(function (category) {
+        content += `<details>\n<summary>${category}</summary>\n\n`;
+        locals.categories.findOne({name: category}).posts.sort('-date').map(function (post) {
+            content += `- [${post.title}](https://quickref.me/${post.path}): ${post.intro.trim()}\n`;
+        })
+        content += `\n</details>\n\n`;
+    });
+
+    return {
+        path: 'list.md',
+        data: content
+    };
+});
+
+
 function svgIcon(name) {
     // Check file exists
     let svgPath = path.resolve("./", "source/assets/icon/", `${name}.svg`);
