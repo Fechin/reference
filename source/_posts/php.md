@@ -598,7 +598,7 @@ print($x ?: 'Does');
 
 $a = null;
 $b = 'Does print';
-# => a is unsert
+# => a is unset
 echo $a ?? 'a is unset';
 # => print
 echo $b ?? 'b is unset';
