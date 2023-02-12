@@ -7,7 +7,7 @@
 
 Reference is a collection of cheatsheets contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[ [中文版](https://github.com/jaywcjlove/reference) | ... \]
 
-We encourage you to share your own cheat sheets with the community and make Reference even better. If you notice a cheat sheet that could be improved, feel free to submit a [pull request](#contributing).
+We encourage you to share your own cheat sheets with the community and make Reference even better. If you notice a cheat sheet that could be improved, feel free to submit a [pull request](#-contributing).
 
 
 
