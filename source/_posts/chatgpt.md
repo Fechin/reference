@@ -459,6 +459,121 @@ Getting Started
 
 
 
+### SEO
+- **Generate or find keywords**
+    ``` {.wrap}
+    1. Generate a list of related keywords for [topic]
+
+    2. Identify long-tail keywords for [topic] content optimization
+
+    3. Find top-performing keywords for [topic]
+
+    4. Generate a list of LSI keywords for [topic]
+
+    5. Find keywords with low competition for [topic]
+
+    6. Create a list of synonyms for [topic] keywords
+
+    7. Find the best keywords for [topic] PPC campaigns
+
+    8. Find the best keywords for [topic] voice search optimization
+
+    9. List the best keywords for [topic] featured snippets
+
+    10. Find the best keywords for [topic] video optimization
+
+    11. Find the best keywords for [topic]
+
+    12. Find the best keywords for [topic] AMP optimization
+
+    13. Find the best keywords for [topic] social media optimization
+
+    ```
+- **More ChatGPT prompts about SEO** {.active}
+    ```{.wrap}
+    1. Create meta descriptions and title tags for [topic]
+
+    2. Find opportunities for internal linking related to [topic]
+
+    3. Generate ideas for blog posts and article topics on [topic]
+
+    4. Research industry-specific terminology for use in [topic] content
+
+    5. Find authoritative websites to acquire backlinks for [topic] content
+
+    6. Create an XML sitemap example related to [topic]
+
+    7. Research the best meta tags for [topic]
+
+    8. Research the best internal linking structure for [topic] content
+
+    9. Generate a list of questions people ask about [topic]
+
+    10. Create a list of the best alt tags for images related to [topic]
+
+    11. Create a list of related subtopics for [topic]
+
+    12. Find the best time to publish content related to [topic]
+
+    13. Research the best external linking strategies for [topic]
+
+    14. Find the most popular tools used for [topic] SEO
+
+    15. Create a list of potential influencers for [topic]
+
+    16. Research the best schema markup for [topic]
+
+    17. Find the best header tags for [topic] content
+
+    18. Create a list of potential link-building opportunities for [topic]
+
+    19. Research the best anchor text for [topic] backlinks
+
+    20. Create a list of potential guest blogging opportunities for [topic]
+
+    21. Research the best local SEO strategies for [topic]
+
+    22. Research the best analytics tools for [topic] website performance
+
+    23. Create a list of potential partnerships for [topic]
+
+    24. Research the best tactics for [topic] mobile optimization
+
+    25. Research the best tactics for [topic] e-commerce optimization. Provide keyword clusters.
+
+    26. Create a list of potential affiliate marketing opportunities for [topic]
+
+    27. What are the best affiliate marketing websites for [topic]
+
+    28. What are the best tactics for [topic] international SEO
+
+    29. Create a list of potential podcast or podcast guest opportunities for [topic]
+
+    30. Research the best tactics for [topic] Google My Business optimization
+
+    31. Find popular content topics related to [topic]
+
+    32. Research the best SEO tactics for [topic] and provide actionable steps
+
+    33. Create a list of potential video series or webinar ideas related to [topic]
+
+    34. Research competitor strategies related to [topic]
+
+    35. Find canonical tag examples related to [topic]
+
+    36. Create an example keyword list targeting multiple geographic locations for [topic]
+
+    37. Generate keyword ideas targeting different stages of the customer purchase funnel for [topic]
+
+    38. Identify industry hashtags related to [topic].
+
+    ```
+{.collapsible}
+
+[💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+
+
+
 
 Also see
 --------
