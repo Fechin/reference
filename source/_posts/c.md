@@ -38,7 +38,7 @@ Run the compiled binary `hello`
 $ ./hello
 ```
 
-Output => Hello World
+Output => Hello World!
 
 
 
