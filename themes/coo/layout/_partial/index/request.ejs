@@ -2,20 +2,31 @@
     <div class=" mx-auto flex py-12 items-center justify-center flex-col">
         <span class="inline-block h-1 w-10 rounded-full bg-emerald-500 mt-8 mb-6"></span>
         <div class="text-center lg:w-2/3 w-full">
-            <h3 class="sm:text-4xl text-3xl mb-4 font-medium text-slate-800 dark:text-slate-300">See something missing?</h3>
+            <h3 class="sm:text-4xl text-3xl mb-4 font-medium text-slate-800 dark:text-slate-300">See something
+                missing?</h3>
             <p class="mb-8 leading-relaxed dark:text-slate-300">
-                The above list does not see what you want? Are you looking for some cheatsheets or references, or you
-                have
-                some snippet cheatsheets to share, it's a best chance to do it!
+                Feel free to contribute to the code on my GitHub repository or follow me to stay updated on the latest
+                cheat sheets in real-time,  it's a best chance to do it!
+
             </p>
             <div class="flex flex-col md:flex-row justify-center">
-                <a href="<%- request_cheatsheet() %>"
-                   class="inline-flex text-slate-50 dark:text-slate-300 bg-emerald-500 dark:bg-opacity-80 self-center md:self-auto border-0 py-2 px-6 focus:outline-none hover:shadow-xl hover:bg-emerald-600 rounded-full text-lg fadeIn">
-                    Request cheatsheet
+                <a href="<%- contributing() %>" target="_blank">
+                    <button type="button"
+                            class="mt-5 fadeIn inline-flex items-center rounded-full  bg-[#364153] text-slate-100 text-lg ml-1 lg:ml-4 py-2 px-8 md:hover:opacity-80">
+                        <div class="mr-3">
+                            <%- icon("github") %>
+                        </div>
+                        Contribute on Github
+                    </button>
                 </a>
-                <a href="<%- contributing() %>"
-                   class="mt-6 md:mt-0 md:ml-4 inline-flex text-slate-700 dark:text-slate-300 bg-slate-300 dark:bg-slate-800 self-center md:self-auto  border-0 py-2 px-6 focus:outline-none hover:shadow-xl hover:bg-slate-400 rounded-full text-lg fadeIn">
-                    I have a cheatsheet
+                <a href="https://twitter.com/FechinLi" target="_blank">
+                    <button type="button"
+                            class="mt-5 fadeIn inline-flex items-center rounded-full  bg-[#4d9feb] text-slate-100 text-lg ml-1 lg:ml-4 py-2 px-8 md:hover:opacity-80">
+                        <div class="mr-3">
+                            <%- icon("twitter") %>
+                        </div>
+                        Follow Me
+                    </button>
                 </a>
             </div>
         </div>

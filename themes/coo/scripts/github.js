@@ -3,7 +3,7 @@ hexo.extend.helper.register("request_cheatsheet", function () {
 });
 
 hexo.extend.helper.register("contributing", function () {
-    return `https://github.com/Fechin/reference/blob/main/README.md#contributing`;
+    return `https://github.com/Fechin/reference`;
 });
 
 
