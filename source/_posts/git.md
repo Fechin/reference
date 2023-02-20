@@ -59,6 +59,14 @@ Commit all your tracked files to versioned history
 ``` shell script
 $ git commit -am "commit message"
 ```
+Discard changes in working directory which is not staged
+``` shell script
+$ git restore [file]
+```
+Unstage a stagged file or file which is staged
+``` shell script
+$ git restore --staged [file]
+```
 
 Unstages file, keeping the file changes
 ``` shell script
