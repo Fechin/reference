@@ -38,7 +38,7 @@ Run the compiled binary `hello`
 $ ./hello
 ```
 
-Output => Hello World
+Output => Hello World!
 
 
 
@@ -184,6 +184,14 @@ char greetings[] = {'H','e','l','l','\0'};
 printf("%s", greetings);
 // print "Hell!"
 ```
+
+Creating String using character pointer (String Literals)
+```c
+char *greetings = "Hello";
+printf("%s", greetings);
+// print "Hello!"
+```
+**NOTE**: String literals might be stored in read-only section of memory. Modifying a string literal invokes undefined behavior. You can't modify it.!
 
 `C` **does not** have a String type, use `char` type and create an `array` of characters
 
