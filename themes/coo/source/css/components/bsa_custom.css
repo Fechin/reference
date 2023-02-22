@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.75ex 2ch;
+    /*padding: 1.75ex 2ch;*/
     color: #ffffff;
 }
 
@@ -37,7 +37,7 @@
     border-radius: 0.5ex;
     margin-right: 1ch;
     line-height: 1;
-    padding: 1ex 1ch;
+    /*padding: 1ex 1ch;*/
     font-weight: 600;
     font-size: 0.75em;
     text-transform: uppercase;

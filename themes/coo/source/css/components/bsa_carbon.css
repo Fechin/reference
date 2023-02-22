@@ -1,19 +1,19 @@
 #carbonads {
     display: flex;
     position: fixed;
-    bottom: 60px;
+    bottom: 50px;
     right: 20px;
-    max-width: 330px;
+    max-width: 315px;
     background-color: hsl(0, 0%, 98%);
     box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03), 0 1px 2px rgba(102, 119, 136, 0.3);
     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    @apply dark:bg-slate-800 rounded-lg z-30 dark:shadow-3xl;
+    @apply dark:bg-slate-800 rounded-lg z-20 dark:shadow-3xl;
 }
 
 #carbonads > span {
     display: block;
     position: relative;
-    padding: 10px;
+    padding: 6px;
     background-color: #fff;
     @apply dark:bg-slate-800 rounded-lg;
 }
