@@ -3,8 +3,8 @@ title: Kotlin
 date: 2023-02-26 16:24:31
 background: bg-[#7954f6]
 tags:
-  - cross-platform
-  - modern
+  - Cross-platform
+  - Android
 categories:
   - Programming
 intro: |
