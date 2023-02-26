@@ -65,8 +65,8 @@ Min  Hour Day  Mon  Weekday
 
 | `15 2 * * 1L`  | At 2:15am on the last monday of every month          |
 | `15 0 * * 4#2` | At 00:15am on the second thursday of every month     |
-| `0 0 0 1 * *`  | Every 1st of month (monthly)                         |
-| `0 0 0 1 1 *`  | Every 1st of january (yearly)                        |
+| `0 0 1 * *`    | Every 1st of month (monthly)                         |
+| `0 0 1 1 *`    | Every 1st of january (yearly)                        |
 
 | `@reboot`      | Every reboot <br>_(non-standard)_                        |
 
