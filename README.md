@@ -19,8 +19,6 @@ You can view the cheat sheets live at https://quickref.me
 [![Quick reference](https://quickref.me/assets/image/preview.png)](https://quickref.me/)
 
 
-Reference provides cheat sheets for the following:
-
 ## 📚 Cheat Sheets List
 
 Reference provides cheat sheets for the following:
