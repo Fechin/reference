@@ -250,18 +250,26 @@ import Foundation
 
 let df = DateFormatter()
 df.dateFormat = "d MMMM yyyy"
-var birth = df. date(from: "5 June 1999")!
 
-var age: Int {
-  Calendar.current
-    .dateComponents([.year],
-                  from: birth,
-                  to: Date()).year!
+guard var birth = df.date(from: "5 June 1999") else {
+    print("Date is not valid")
+    return
 }
 
+var age: Int {
+    Calendar.current
+        .dateComponents([.year],
+                        from: birth,
+                        to: Date()).year!
+}
+
+print(age) // 23
+guard let birth2 = df.date(from: "5 June 2002") else {
+    print("Date is not valid")
+    return
+}
+birth = birth2
 print(age) // 20
-birth = df.date(from: "5 June 2002")!
-print(age) // 17
 ```
 
 In the example below, distanceInFeet has a `getter` and a `setter`. Because of the `setter`, the `getter` requires the keyword `get`:
