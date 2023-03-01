@@ -274,7 +274,7 @@ var distanceInFeet: Float {
     distanceInMeters *3.28
   }
   set(newDistance) {
-distanceInMeters = newDistance /3.28
+    distanceInMeters = newDistance /3.28
   }
 }
 
@@ -1307,7 +1307,7 @@ structure
 struct Building {
   var address: String
   var floors: Int
-init(address: String, floors: Int) {
+  init(address: String, floors: Int) {
     self.address = address
     self. floors = floors
   }
@@ -1342,7 +1342,7 @@ struct Person {
   var age: Int
 
   init(name: String, age: Int) {
-self.name = name
+    self.name = name
     self. age = age
   }
 }
