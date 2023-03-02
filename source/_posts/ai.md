@@ -9,7 +9,7 @@ tags:
   - Resources
 categories:
   - Other
-intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
+intro: This is a quick reference list of cheat sheets for the AI Navigation Directory, designed to help you discover exciting AI tools.
 ---
 
 Getting Started
