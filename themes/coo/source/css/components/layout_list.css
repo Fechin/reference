@@ -114,3 +114,21 @@
 }
 
 
+.mdLayout .h3-wrap > .section > ul.icon-list {
+    @apply list-none list-inside;
+}
+
+.mdLayout .h3-wrap > .section > ul.icon-list > li {
+    padding: 9px;
+}
+
+.mdLayout .h3-wrap > .section > ul.icon-list > li a {
+    @apply flex items-center hover:bg-gray-200 rounded-lg p-3 text-slate-800;
+    @apply fadeIn no-underline;
+}
+
+.mdLayout .h3-wrap > .section > ul.icon-list > li a img {
+    @apply h-6 mr-4;
+}
+
+
