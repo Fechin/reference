@@ -10,6 +10,8 @@ tags:
 categories:
     - Toolkit
 intro: This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively
+plugins:
+    - copyCode
 ---
 
 Getting Started
@@ -19,28 +21,38 @@ Getting Started
 ### General
 - **Name your business or idea**
     ``` {.wrap}
-    1. Can you suggest a creative name for my tech startup?
-    2. Help me come up with a catchy name for my bakery business.
+    Can you suggest a creative name for my tech startup?
+    ```
+    ``` {.wrap}
+    Help me come up with a catchy name for my bakery business.
     ```
 - **Create an outline for a course or training program**
     ``` {.wrap}
-    1. Please create an outline for a course on web development for beginners.
-    2. Can you make a training program outline for a customer service workshop?
+    Please create an outline for a course on web development for beginners.
+    ```
+    ``` {.wrap}
+    Can you make a training program outline for a customer service workshop?
     ```
 - **Ask you interview questions for a specific job**
     ``` {.wrap}
-    1. I'm interviewing for a software engineer position, can you give me some interview questions?
-    2. Please provide me with some common interview questions for a marketing manager role.
+    I'm interviewing for a software engineer position, can you give me some interview questions?
+    ```
+    ``` {.wrap}
+    Please provide me with some common interview questions for a marketing manager role.
     ```
 - **Give you gift ideas for business partners, customers, or clients**
     ``` {.wrap}
-    1. I need gift ideas for my clients, can you help?
-    2. What are some unique gifts I can give to my business partners?
+    I need gift ideas for my clients, can you help?
+    ```
+    ``` {.wrap}
+    What are some unique gifts I can give to my business partners?
     ```
 - **Choose a random contest winner(s) from a long list of names or emails**
     ``` {.wrap}
-    1. I want to choose a winner from a list of 100 names, can you help?
-    2. Can you randomly pick 5 email addresses from a list of 1000 for a giveaway contest?
+    I want to choose a winner from a list of 100 names, can you help?
+    ```
+    ``` {.wrap}
+    Can you randomly pick 5 email addresses from a list of 1000 for a giveaway contest?
     ```
 {.collapsible}
 
@@ -73,13 +85,18 @@ Getting Started
     ```
 - **Code an entire software program**
     ``` {.wrap}
-    1. Write a program that calculates the factorial of a given number in python?
-    2. How do I make an HTTP request in Javascript?
+    Write a program that calculates the factorial of a given number in python?
+    ```
+    ``` {.wrap}
+    How do I make an HTTP request in Javascript?
     ```
 - **Generate regular expressions (regex)**
     ``` {.wrap}
-    1. Create a regex that matches all email addresses?
-    2. Generate 8-digit password regex
+    Create a regex that matches all email addresses?
+    ```
+    ``` {.wrap}
+    Generate 8-digit password regex
+    ```
     ```
 - **Add comments to your codebase**
     ``` {.wrap}
@@ -109,8 +126,11 @@ Getting Started
 ### Email
 - **Creating email campaigns**
     ``` {.wrap}
-    1. Email inviting Jack to dinner on the weekend
-    2. Create an email sequence for our new customer onboarding process
+    Email inviting Jack to dinner on the weekend
+    ```
+    ``` {.wrap}
+    Create an email sequence for our new customer onboarding process
+    ```
     ```
 - **Format and proofread email**
     ``` {.wrap}
@@ -119,8 +139,11 @@ Getting Started
     ```
 - **Provides tips for effective email marketing**
     ``` {.wrap}
-    1. Give me some tips on how to increase open and click-through rates for my email campaigns
-    2. Suggest ways to make my email content more engaging and relevant to my subscribers.
+    Give me some tips on how to increase open and click-through rates for my email campaigns
+    ```
+    ``` {.wrap}
+    Suggest ways to make my email content more engaging and relevant to my subscribers.
+    ```
     ```
 - **Automate email responses**
     ``` {.wrap}
@@ -434,24 +457,41 @@ Getting Started
 ### Research
 - **Help research anything that happened before 2021**
     ``` {.wrap}
-    1. Explain quantum computing in simple terms
-  
-    2. Got any creative ideas for a 10 year old’s birthday?
-  
-    3. How do I make an HTTP request in Javascript?
-  
-    4. Can you tell me about the events leading up to the American Civil War?
-  
-    5. What can you tell me about the invention of the printing press?
-  
-    6. Can you research the history of the Olympic Games?
-  
-    7. Can you give me information about the French Revolution?
-  
-    8. I'm interested in the history of the Byzantine Empire. Can you help me learn more?
-  
-    9. etc...
-  
+    Explain quantum computing in simple terms
+    ```
+
+    ``` {.wrap}
+    Got any creative ideas for a 10 year old’s birthday?
+    ```
+
+    ``` {.wrap}
+    How do I make an HTTP request in Javascript?
+    ```
+
+    ``` {.wrap}
+    Can you tell me about the events leading up to the American Civil War?
+    ```
+
+    ``` {.wrap}
+    What can you tell me about the invention of the printing press?
+    ```
+
+    ``` {.wrap}
+    Can you research the history of the Olympic Games?
+    ```
+
+    ``` {.wrap}
+    Can you give me information about the French Revolution?
+    ```
+
+    ``` {.wrap}
+    I'm interested in the history of the Byzantine Empire. Can you help me learn more?
+    ```
+
+    ``` {.wrap}
+    etc...
+    ```
+
     ```
 {.collapsible}
 
@@ -462,111 +502,209 @@ Getting Started
 ### SEO
 - **Generate or find keywords**
     ``` {.wrap}
-    1. Generate a list of related keywords for [topic]
+    Generate a list of related keywords for [topic]
+    ```
 
-    2. Identify long-tail keywords for [topic] content optimization
+    ``` {.wrap}
+    Identify long-tail keywords for [topic] content optimization
+    ```
 
-    3. Find top-performing keywords for [topic]
+    ``` {.wrap}
+    Find top-performing keywords for [topic]
+    ```
 
-    4. Generate a list of LSI keywords for [topic]
+    ``` {.wrap}
+    Generate a list of LSI keywords for [topic]
+    ```
 
-    5. Find keywords with low competition for [topic]
+    ``` {.wrap}
+    Find keywords with low competition for [topic]
+    ```
 
-    6. Create a list of synonyms for [topic] keywords
+    ``` {.wrap}
+    Create a list of synonyms for [topic] keywords
+    ```
 
-    7. Find the best keywords for [topic] PPC campaigns
+    ``` {.wrap}
+    Find the best keywords for [topic] PPC campaigns
+    ```
 
-    8. Find the best keywords for [topic] voice search optimization
+    ``` {.wrap}
+    Find the best keywords for [topic] voice search optimization
+    ```
 
-    9. List the best keywords for [topic] featured snippets
+    ``` {.wrap}
+    List the best keywords for [topic] featured snippets
+    ```
 
-    10. Find the best keywords for [topic] video optimization
+    ``` {.wrap}
+    Find the best keywords for [topic] video optimization
+    ```
 
-    11. Find the best keywords for [topic]
+    ``` {.wrap}
+    Find the best keywords for [topic]
+    ```
 
-    12. Find the best keywords for [topic] AMP optimization
+    ``` {.wrap}
+    Find the best keywords for [topic] AMP optimization
+    ```
 
-    13. Find the best keywords for [topic] social media optimization
+    ``` {.wrap}
+    Find the best keywords for [topic] social media optimization
+    ```
 
     ```
 - **More ChatGPT prompts about SEO** {.active}
-    ```{.wrap}
-    1. Create meta descriptions and title tags for [topic]
+    ``` {.wrap}
+    Create meta descriptions and title tags for [topic]
+    ```
 
-    2. Find opportunities for internal linking related to [topic]
+    ``` {.wrap}
+    Find opportunities for internal linking related to [topic]
+    ```
 
-    3. Generate ideas for blog posts and article topics on [topic]
+    ``` {.wrap}
+    Generate ideas for blog posts and article topics on [topic]
+    ```
 
-    4. Research industry-specific terminology for use in [topic] content
+    ``` {.wrap}
+    Research industry-specific terminology for use in [topic] content
+    ```
 
-    5. Find authoritative websites to acquire backlinks for [topic] content
+    ``` {.wrap}
+    Find authoritative websites to acquire backlinks for [topic] content
+    ```
 
-    6. Create an XML sitemap example related to [topic]
+    ``` {.wrap}
+    Create an XML sitemap example related to [topic]
+    ```
 
-    7. Research the best meta tags for [topic]
+    ``` {.wrap}
+    Research the best meta tags for [topic]
+    ```
 
-    8. Research the best internal linking structure for [topic] content
+    ``` {.wrap}
+    Research the best internal linking structure for [topic] content
+    ```
 
-    9. Generate a list of questions people ask about [topic]
+    ``` {.wrap}
+    Generate a list of questions people ask about [topic]
+    ```
 
-    10. Create a list of the best alt tags for images related to [topic]
+    ``` {.wrap}
+    Create a list of the best alt tags for images related to [topic]
+    ```
 
-    11. Create a list of related subtopics for [topic]
+    ``` {.wrap}
+    Create a list of related subtopics for [topic]
+    ```
 
-    12. Find the best time to publish content related to [topic]
+    ``` {.wrap}
+    Find the best time to publish content related to [topic]
+    ```
 
-    13. Research the best external linking strategies for [topic]
+    ``` {.wrap}
+    Research the best external linking strategies for [topic]
+    ```
 
-    14. Find the most popular tools used for [topic] SEO
+    ``` {.wrap}
+    Find the most popular tools used for [topic] SEO
+    ```
 
-    15. Create a list of potential influencers for [topic]
+    ``` {.wrap}
+    Create a list of potential influencers for [topic]
+    ```
 
-    16. Research the best schema markup for [topic]
+    ``` {.wrap}
+    Research the best schema markup for [topic]
+    ```
 
-    17. Find the best header tags for [topic] content
+    ``` {.wrap}
+    Find the best header tags for [topic] content
+    ```
 
-    18. Create a list of potential link-building opportunities for [topic]
+    ``` {.wrap}
+    Create a list of potential link-building opportunities for [topic]
+    ```
 
-    19. Research the best anchor text for [topic] backlinks
+    ``` {.wrap}
+    Research the best anchor text for [topic] backlinks
+    ```
 
-    20. Create a list of potential guest blogging opportunities for [topic]
+    ``` {.wrap}
+    Create a list of potential guest blogging opportunities for [topic]
+    ```
 
-    21. Research the best local SEO strategies for [topic]
+    ``` {.wrap}
+    Research the best local SEO strategies for [topic]
+    ```
 
-    22. Research the best analytics tools for [topic] website performance
+    ``` {.wrap}
+    Research the best analytics tools for [topic] website performance
+    ```
 
-    23. Create a list of potential partnerships for [topic]
+    ``` {.wrap}
+    Create a list of potential partnerships for [topic]
+    ```
 
-    24. Research the best tactics for [topic] mobile optimization
+    ``` {.wrap}
+    Research the best tactics for [topic] mobile optimization
+    ```
 
-    25. Research the best tactics for [topic] e-commerce optimization. Provide keyword clusters.
+    ``` {.wrap}
+    Research the best tactics for [topic] e-commerce optimization. Provide keyword clusters.
+    ```
 
-    26. Create a list of potential affiliate marketing opportunities for [topic]
+    ``` {.wrap}
+    Create a list of potential affiliate marketing opportunities for [topic]
+    ```
 
-    27. What are the best affiliate marketing websites for [topic]
+    ``` {.wrap}
+    What are the best affiliate marketing websites for [topic]
+    ```
 
-    28. What are the best tactics for [topic] international SEO
+    ``` {.wrap}
+    What are the best tactics for [topic] international SEO
+    ```
 
-    29. Create a list of potential podcast or podcast guest opportunities for [topic]
+    ``` {.wrap}
+    Create a list of potential podcast or podcast guest opportunities for [topic]
+    ```
 
-    30. Research the best tactics for [topic] Google My Business optimization
+    ``` {.wrap}
+    Research the best tactics for [topic] Google My Business optimization
+    ```
 
-    31. Find popular content topics related to [topic]
+    ``` {.wrap}
+    Find popular content topics related to [topic]
+    ```
 
-    32. Research the best SEO tactics for [topic] and provide actionable steps
+    ``` {.wrap}
+    Research the best SEO tactics for [topic] and provide actionable steps
+    ```
 
-    33. Create a list of potential video series or webinar ideas related to [topic]
+    ``` {.wrap}
+    Create a list of potential video series or webinar ideas related to [topic]
+    ```
 
-    34. Research competitor strategies related to [topic]
+    ``` {.wrap}
+    Research competitor strategies related to [topic]
+    ```
 
-    35. Find canonical tag examples related to [topic]
+    ``` {.wrap}
+    Find canonical tag examples related to [topic]
+    ```
 
-    36. Create an example keyword list targeting multiple geographic locations for [topic]
+    ``` {.wrap}
+    Create an example keyword list targeting multiple geographic locations for [topic]
+    ```
 
-    37. Generate keyword ideas targeting different stages of the customer purchase funnel for [topic]
+    ``` {.wrap}
+    Generate keyword ideas targeting different stages of the customer purchase funnel for [topic]
+    ```
 
-    38. Identify industry hashtags related to [topic].
-
+    ``` {.wrap}
+    Identify industry hashtags related to [topic].
     ```
 {.collapsible}
 
