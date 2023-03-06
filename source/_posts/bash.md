@@ -11,6 +11,8 @@ tags:
 categories:
     - Programming
 intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
+plugins:
+    - copyCode
 ---
 
 Getting Started

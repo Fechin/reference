@@ -12,6 +12,8 @@ categories:
     - Toolkit
 intro: |
     [Emmet](https://emmet.io/) is a web-developer’s toolkit for boosting HTML & CSS code writing, which allows you to write large HTML code blocks at speed of light using well-known CSS selectors.
+plugins:
+    - copyCode
 ---
 
 

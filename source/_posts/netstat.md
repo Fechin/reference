@@ -10,6 +10,8 @@ categories:
     - Linux Command
 intro: |
     This quick reference cheat sheet provides various for using netstat command.
+plugins:
+    - copyCode
 ---
 
 Getting Started

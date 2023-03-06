@@ -9,6 +9,7 @@ intro: |
     This cheat sheet summarizes a reference list of [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of [KaTeX](https://katex.org/).
 plugins:
   - katex
+  - copyCode
 ---
 
 Getting Started

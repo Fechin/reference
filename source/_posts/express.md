@@ -9,6 +9,8 @@ categories:
   - Programming
 intro: |
   A quick reference cheatsheet for Express, a flexible and streamlined web framework for Node.js
+plugins:
+    - copyCode
 ---
 
 Getting Started

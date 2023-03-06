@@ -7,6 +7,8 @@ categories:
     - Programming
 intro: |
     The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
+plugins:
+    - copyCode
 ---
 
 

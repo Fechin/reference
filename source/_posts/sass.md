@@ -9,6 +9,8 @@ categories:
     - Programming
 intro: |
       This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
+plugins:
+    - copyCode
 ---
 
 Sass Basics

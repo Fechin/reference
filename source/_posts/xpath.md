@@ -10,6 +10,8 @@ categories:
     - Toolkit
 intro: |
     This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors
+plugins:
+    - copyCode
 ---
 
 XPath Selectors {.cols-6}

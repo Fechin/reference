@@ -7,6 +7,8 @@ categories:
   - Programming
 intro: |
     This is a quick reference cheat sheet for understanding and writing INI-format configuration files.
+plugins:
+    - copyCode
 ---
 
 Getting Started

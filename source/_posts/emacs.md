@@ -11,6 +11,8 @@ categories:
 intro: |
     [Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.
     This reference was made for Emacs 27.
+plugins:
+    - copyCode
 ---
 
 

@@ -10,6 +10,8 @@ categories:
     - Linux Command
 intro: |
     This is a quick reference guide cheat sheet for the screen command.
+plugins:
+    - copyCode
 ---
 
 

@@ -9,6 +9,8 @@ categories:
     - Programming
 intro: |
     This is a quick reference cheat sheet to the TOML format configuration file syntax.
+plugins:
+    - copyCode
 ---
 
 

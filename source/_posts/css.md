@@ -10,6 +10,8 @@ categories:
     - Programming
 intro: |
     This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.
+plugins:
+    - copyCode
 ---
 
 

@@ -10,6 +10,8 @@ categories:
     - Programming
 intro: |
     This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.
+plugins:
+    - copyCode
 ---
 
 

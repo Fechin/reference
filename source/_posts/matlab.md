@@ -7,6 +7,8 @@ categories:
   - Programming
 intro: |
     This quick reference cheat sheet provides an example introduction to using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
+plugins:
+    - copyCode
 ---
 
 Getting Started

@@ -11,6 +11,8 @@ categories:
     - Toolkit
 intro: |
     [mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.
+plugins:
+    - copyCode
 ---
 
 Getting Started

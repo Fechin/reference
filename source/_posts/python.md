@@ -9,6 +9,8 @@ categories:
     - Programming
 intro: |
     The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.
+plugins:
+    - copyCode
 ---
 
 

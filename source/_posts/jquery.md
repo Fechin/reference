@@ -13,6 +13,7 @@ intro: |
     This [jQuery](https://jquery.com/) cheat sheet is a great reference for both beginners and experienced developers. 
 plugins:
     - tooltip
+    - copyCode
 ---
 
 

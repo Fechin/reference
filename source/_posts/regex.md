@@ -10,6 +10,8 @@ categories:
     - Toolkit
 intro: |
     A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
+plugins:
+    - copyCode
 ---
 
 Getting Started

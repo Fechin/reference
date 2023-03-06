@@ -9,6 +9,8 @@ categories:
   - Database
 intro: |
     A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
+plugins:
+    - copyCode
 ---
 
 Getting Started {.cols-2}

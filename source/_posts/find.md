@@ -9,6 +9,8 @@ categories:
     - Linux Command
 intro: |
     This is a quick reference list of cheatsheet for linux find command, contains common options and examples.
+plugins:
+    - copyCode
 ---
 
 

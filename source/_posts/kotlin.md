@@ -9,6 +9,8 @@ categories:
   - Programming
 intro: |
   A quick reference cheatsheet for Kotlin that includes usage, examples, and more.
+plugins:
+    - copyCode
 ---
 
 

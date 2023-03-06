@@ -11,6 +11,8 @@ tags:
 categories:
     - Linux Command
 intro:  This cheat sheet provides various for using Netcat on both Linux and Unix.
+plugins:
+    - copyCode
 ---
 
 Getting Started {.cols-5}

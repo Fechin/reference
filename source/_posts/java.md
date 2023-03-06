@@ -11,6 +11,7 @@ intro: |
     This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.
 plugins:
     - tooltip
+    - copyCode
 ---
 
 

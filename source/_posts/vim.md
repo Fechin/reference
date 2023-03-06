@@ -11,7 +11,9 @@ tags:
 categories:
     - Toolkit
 intro: |
-  A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.
+    A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.
+plugins:
+    - copyCode
 ---
 
 Getting Started

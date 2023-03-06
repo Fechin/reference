@@ -10,6 +10,8 @@ tags:
 categories:
     - Programming
 intro: This is a quick reference cheat sheet to the Markdown syntax.
+plugins:
+    - copyCode
 ---
 
 Markdown Quick Reference

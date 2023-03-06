@@ -9,6 +9,8 @@ categories:
     - Programming
 intro: |
     This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
+plugins:
+    - copyCode
 ---
 
 Getting Started {.cols-2}

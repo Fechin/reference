@@ -8,6 +8,8 @@ categories:
     - Linux Command
 intro: |
     This quick reference cheat sheet provides a brief overview of file permissions, and the operation of the chmod command
+plugins:
+    - copyCode
 ---
 
 

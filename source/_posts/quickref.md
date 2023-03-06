@@ -8,6 +8,8 @@ tags:
 categories:
     - Other
 intro: This is the magic syntax variant manual that you can use on QuickRef.ME, It's a good practice for contributors.
+plugins:
+    - copyCode
 ---
 
 

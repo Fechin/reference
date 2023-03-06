@@ -9,6 +9,8 @@ categories:
     - Linux Command
 intro: |
     This [Curl](https://github.com/curl/curl) cheat sheet contains commands and examples of some common Curl tricks.
+plugins:
+    - copyCode
 ---
 
 Getting Started

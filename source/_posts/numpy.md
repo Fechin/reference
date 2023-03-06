@@ -9,6 +9,8 @@ categories:
     - Python
 intro: |
     [NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.
+plugins:
+    - copyCode
 ---
 
 Getting Started {.cols-2}

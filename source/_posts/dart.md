@@ -9,6 +9,8 @@ categories:
   - Programming
 intro: |
     A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+plugins:
+    - copyCode
 ---
 
 

@@ -9,6 +9,8 @@ categories:
    - Programming
 intro: |
     A quick reference cheatsheet of what's new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond
+plugins:
+    - copyCode
 ---
 
 

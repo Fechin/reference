@@ -9,6 +9,8 @@ categories:
     - Programming
 intro: |
     This quick reference cheat sheet provides a brief overview of GraphQL.
+plugins:
+    - copyCode
 ---
 
 

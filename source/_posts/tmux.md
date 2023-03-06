@@ -10,6 +10,8 @@ categories:
     - Linux Command
 intro: |
     The tmux cheat sheet quick reference of most commonly used shortcuts and commands
+plugins:
+    - copyCode
 ---
 
 

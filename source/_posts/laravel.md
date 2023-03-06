@@ -12,6 +12,8 @@ categories:
 intro: |
     [Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. 
     This cheat sheet provides a reference for common commands and features for Laravel 8. 
+plugins:
+    - copyCode
 ---
 
 
