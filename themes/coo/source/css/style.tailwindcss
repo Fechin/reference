@@ -159,7 +159,7 @@ html.scrollbar {
 }
 
 .mdLayout .h3-wrap > h3 {
-    @apply bg-emerald-500 text-white px-3 py-1 tracking-wider text-xs absolute right-0 top-0 rounded-bl-lg z-10;
+    @apply bg-emerald-500 shadow text-white px-3 py-1 tracking-wider text-xs absolute right-0 top-0 rounded-bl-lg z-10;
     @apply dark:bg-opacity-70 dark:text-slate-200;
 }
 
