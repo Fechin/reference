@@ -1,18 +1,17 @@
-FROM alpine:latest
+FROM nginx:1.23.3-alpine
 
-# Install thttpd
-RUN apk add --no-cache thttpd
+# Remove the default Nginx configuration
+RUN rm -rf /etc/nginx/conf.d/
 
-# Create a non-root user to own the files and run our server
-RUN adduser -D static
-USER static
-WORKDIR /home/static
+# Copy our Nginx configuration
+COPY nginx.conf /etc/nginx/
 
 # Copy the static website
 # Use the .dockerignore file to control what ends up inside the image!
-COPY public .
+COPY public /usr/share/nginx/html/
 
-# Run thttpd
-CMD ["thttpd", "-D", "-h", "0.0.0.0", "-p", "3000", "-d", "/home/static", "-u", "static", "-l", "-", "-M", "60"]
-
+# Expose port 80
 EXPOSE 3000
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
