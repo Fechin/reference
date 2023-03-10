@@ -259,7 +259,7 @@ VALUES ( <value1>,<value2> );
 
 
 ### Data
-[Select](http://www.postgresql.org/docs/current/static/sql-select.html] all data
+[Select](http://www.postgresql.org/docs/current/static/sql-select.html) all data
 ```sql  {.wrap}
 SELECT * FROM <table_name>;
 ```
