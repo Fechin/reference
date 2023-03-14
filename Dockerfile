@@ -1,17 +1,14 @@
-FROM nginx:1.23.3-alpine
-
-# Remove the default Nginx configuration
-RUN rm -rf /etc/nginx/conf.d/
-
-# Copy our Nginx configuration
+# Stage 1: build the application
+FROM nginx:alpine AS build
+RUN rm -rf /etc/nginx/conf.d/*
 COPY nginx.conf /etc/nginx/
-
-# Copy the static website
-# Use the .dockerignore file to control what ends up inside the image!
 COPY public /usr/share/nginx/html/
+EXPOSE 80
 
-# Expose port 80
-EXPOSE 3000
-
-# Start Nginx
+# Stage 2: final image
+FROM alpine:latest
+RUN apk add --no-cache nginx && mkdir -p /run/nginx
+COPY --from=build /usr/share/nginx/html/ /usr/share/nginx/html/
+COPY --from=build /etc/nginx/nginx.conf /etc/nginx/nginx.conf
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
