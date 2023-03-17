@@ -257,6 +257,14 @@ Insert "Example: " before each line that contains "hello"
 ```shell script
 $ sed '/hello/i Example: ' file.txt
 ```
+Insert lines from file1 before line 5
+```shell script
+$ sed '5 r file1' file.txt
+```
+Insert lines from file1 after the line that starts with "hello"
+```shell script
+$ sed '/^hello/ r file1' file.txt
+```
 
 
 
