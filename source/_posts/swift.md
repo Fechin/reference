@@ -910,7 +910,7 @@ print(setC) // print: ["D", "C"]
 ```
 
 
-### .union() 合并去重
+### .union()
 
 ```swift
 var setA: Set = ["A", "B", "C", "D"]
@@ -1275,7 +1275,7 @@ func season(month: Int, name: inout String) {
       name = "Unknown"
   }
 }
-season(monthNum: 4, name: &currentSeason)
+season(month: 4, name: &currentSeason)
 
 print(currentSeason) // Spring 🌱
 ```
@@ -1369,7 +1369,7 @@ struct TV {
   var type: String
   
   init(size: Int, type: String) {
-    self. size = size
+    self.size = size
     self.type = type
   }
 }
@@ -1407,8 +1407,8 @@ Using the `Menu` class
 
 ```swift
 var dinerMenu = Menu()
-dinerMenu. addToMenu(dish: "Toast")
-print(dinerMenu. menuItems)
+dinerMenu.addToMenu(dish: "Toast")
+print(dinerMenu.menuItems)
 // prints: ["Fries", "Burgers", "Toast"]
 ```
 
@@ -1633,7 +1633,7 @@ enum Season: CaseIterable {
   case falls
 }
 
-for season in Season. allCases {
+for season in Season.allCases {
   print(season)
 }
 ```
