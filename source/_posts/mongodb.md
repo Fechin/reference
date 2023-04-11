@@ -63,9 +63,8 @@ load("myScript.js")
 
 ## Crud
 
-### Create & Delete
+### Create
 
-#### Create
 ```mongosh
 db.coll.insertOne({name: "Max"})
 db.coll.insert([{name: "Max"}, {name:"Alex"}]) // ordered bulk insert
@@ -74,7 +73,7 @@ db.coll.insert({date: ISODate()})
 db.coll.insert({name: "Max"}, {"writeConcern": {"w": "majority", "wtimeout": 5000}})
 ```
 
-#### Delete
+### Delete
 
 ```mongosh
 db.coll.remove({name: "Max"})
@@ -99,7 +98,7 @@ db.coll.update({"_id": 1}, {$currentDate: {"lastModified": true}})
 db.coll.update({"_id": 1}, {$currentDate: {"lastModified": {$type: "timestamp"}}})
 ```
 
-#### Array
+### Array { .row-span-2 }
 
 ```mongosh
 db.coll.update({"_id": 1}, {$push :{"array": 1}})
@@ -114,46 +113,44 @@ db.coll.updateMany({}, {$inc: {"grades.$[]": 10}})
 db.coll.update({}, {$set: {"grades.$[element]": 100}}, {multi: true, arrayFilters: [{"element": {$gte: 100}}]})
 ```
 
-#### Update many
+### Update many { .row-span-1 }
 
 ```mongosh
 db.coll.update({"year": 1999}, {$set: {"decade": "90's"}}, {"multi":true})
 db.coll.updateMany({"year": 1999}, {$set: {"decade": "90's"}})
 ```
 
-#### FindOneAndUpdate
+### FindOneAndUpdate { .row-span-1 }
 
 ```mongosh
 db.coll.findOneAndUpdate({"name": "Max"}, {$inc: {"points": 5}}, {returnNewDocument: true})
 ```
 
-#### Upsert
+### Upsert { .row-span-1 }
 
 ```mongosh
 db.coll.update({"_id": 1}, {$set: {item: "apple"}, $setOnInsert: {defaultQty: 100}}, {upsert: true})
 ```
 
-#### Replace
+### Replace { .row-span-1 }
 
 ```mongosh
 db.coll.replaceOne({"name": "Max"}, {"firstname": "Maxime", "surname": "Beugnet"})
 ```
 
-#### Save
+### Save { .row-span-1 }
 
 ```mongosh
 db.coll.save({"item": "book", "qty": 40})
 ```
 
-#### Write concern
+### Write concern { .row-span-1 }
 
 ```mongosh
 db.coll.update({}, {$set: {"x": 1}}, {"writeConcern": {"w": "majority", "wtimeout": 5000}})
 ```
 
-### Read {.row-span-3}
-
-#### Find
+### Find { .row-span-2 }
 
 ```mongosh
 db.coll.findOne() // returns a single document
@@ -165,7 +162,7 @@ db.coll.find({name: "Max", age: 32}).explain("executionStats") // or "queryPlann
 db.coll.distinct("name")
 ```
 
-#### Count
+### Count
 
 ```mongosh
 db.coll.count({age: 32})          // estimation based on collection metadata
@@ -173,7 +170,7 @@ db.coll.estimatedDocumentCount()  // estimation based on collection metadata
 db.coll.countDocuments({age: 32}) // alias for an aggregation pipeline - accurate count
 ```
 
-#### Comparison
+### Comparison
 
 ```mongosh
 db.coll.find({"year": {$gt: 1970}})
@@ -185,7 +182,7 @@ db.coll.find({"year": {$in: [1958, 1959]}})
 db.coll.find({"year": {$nin: [1958, 1959]}})
 ```
 
-#### Logical
+### Logical
 
 ```mongosh
 db.coll.find({name:{$not: {$eq: "Max"}}})
@@ -199,7 +196,7 @@ $and: [
 })
 ```
 
-#### Element
+### Element
 
 ```mongosh
 db.coll.find({name: {$exists: true}})
@@ -207,7 +204,7 @@ db.coll.find({"zipCode": {$type: 2 }})
 db.coll.find({"zipCode": {$type: "string"}})
 ```
 
-#### Aggregation Pipeline
+### Aggregation Pipeline
 
 ```mongosh
 db.coll.aggregate([
@@ -217,20 +214,20 @@ db.coll.aggregate([
 ])
 ```
 
-#### Text search with a "text" index
+### Text search with a "text" index
 
 ```mongosh
 db.coll.find({$text: {$search: "cake"}}, {score: {$meta: "textScore"}}).sort({score: {$meta: "textScore"}})
 ```
 
-#### Regex
+### Regex
 
 ```mongosh
 db.coll.find({name: /^Max/}) // regex: starts by letter "M"
 db.coll.find({name: /^Max$/i}) // regex case insensitive
 ```
 
-#### Array
+### Array
 
 ```mongosh
 db.coll.find({tags: {$all: ["Realm", "Charts"]}})
@@ -238,7 +235,7 @@ db.coll.find({field: {$size: 2}}) // impossible to index - prefer storing the si
 db.coll.find({results: {$elemMatch: {product: "xyz", score: {$gte: 8}}}})
 ```
 
-#### Projections
+### Projections
 
 ```mongosh
 db.coll.find({"x": 1}, {"actors": 1}) // actors + \_id
@@ -246,32 +243,29 @@ db.coll.find({"x": 1}, {"actors": 1, "\_id": 0}) // actors
 db.coll.find({"x": 1}, {"actors": 0, "summary": 0}) // all but "actors" and "summary"
 ```
 
-#### Sort, skip, limit
+### Sort, skip, limit
 
 ```mongosh
 db.coll.find({}).sort({"year": 1, "rating": -1}).skip(10).limit(3)
 ```
 
-#### Read Concern
+### Read Concern
 
 ```mongosh
 db.coll.find().readConcern("majority")
 ```
 
----
 
-## Databases and Collections
+## Databases and Collections { .cols-2 }
 
-### Drop
+### Drop { .row-span-1 }
 
 ```mongosh
 db.coll.drop()    // removes the collection and its index definitions
 db.dropDatabase() // double check that you are *NOT* on the PROD cluster... :-)
 ```
 
-### Create Collection
-
-Create collection with a $jsonschema
+### Create Collection { .row-span-2}
 
 ```mongosh
 db.createCollection("contacts", {
@@ -297,7 +291,7 @@ db.createCollection("contacts", {
 })
 ```
 
-### Other Collection Functions
+### Other Collection Functions { .row-span-1}
 
 ```mongosh
 db.coll.stats()
@@ -308,17 +302,18 @@ db.coll.validate({full: true})
 db.coll.renameCollection("new_coll", true) // 2nd parameter to drop the target collection if exists
 ```
 
----
 
 ## Indexes {.cols-2}
 
 ### Basics
 
 #### List
+
 ```mongosh
 db.coll.getIndexes()
 db.coll.getIndexKeys()
 ```
+
 #### Drop Indexes
 
 ```mongosh
@@ -353,12 +348,9 @@ db.coll.createIndex({"name": 1}, {collation: {locale: 'en', strength: 1}})    //
 db.coll.createIndex({"name": 1 }, {sparse: true})
 ```
 
+## Others { .cols-2 }
 
-
-
-## Others
-
-### Handy commands
+### Handy commands { .row-span-3 }
 
 ```mongosh
 use admin
@@ -401,19 +393,7 @@ db.getFreeMonitoringStatus()
 db.createView("viewName", "sourceColl", [{$project:{department: 1}}])
 ```
 
-### Change Streams
-
-```mongosh
-watchCursor = db.coll.watch( [ { $match : {"operationType" : "insert" } } ] )
-
-while (!watchCursor.isExhausted()){
-   if (watchCursor.hasNext()){
-      print(tojson(watchCursor.next()));
-   }
-}
-```
-
-### Replica Set
+### Replica Set { .row-span-2}
 
 ```mongosh
 rs.status()
@@ -435,7 +415,7 @@ rs.slaveOk()
 rs.stepDown(20, 5) // (stepDownSecs, secondaryCatchUpPeriodSecs)
 ```
 
-### Sharded Cluster
+### Sharded Cluster { .row-span-2 }
 
 ```mongosh
 sh.status()
@@ -464,4 +444,15 @@ sh.removeShardTag("shard0000", "NYC")
 sh.addShardToZone("shard0000", "JFK")
 sh.removeShardFromZone("shard0000", "NYC")
 sh.removeRangeFromZone("mydb.coll", {a: 1, b: 1}, {a: 10, b: 10})
+```
+### Change Streams {.row-span-1 }
+
+```mongosh
+watchCursor = db.coll.watch( [ { $match : {"operationType" : "insert" } } ] )
+
+while (!watchCursor.isExhausted()){
+   if (watchCursor.hasNext()){
+      print(tojson(watchCursor.next()));
+   }
+}
 ```
