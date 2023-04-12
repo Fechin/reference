@@ -8,38 +8,52 @@ tags:
   - Framework
 categories:
   - Programming
-intro: What is the "E" for? "Embedded?" Could be. How about "Effective," "Elegant," or just "Easy"? EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness about how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript.
+intro: EJS(Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.
 plugins:
   - copyCode
 ---
 
-## Get Started { .cols-2 }
+Get Started { .cols-3 }
+-----------
 
-### Install
+### Hello world
 
+#### install
 ```
 npm install ejs
 ```
 
-### Use
+#### hello.ejs
+```html
+<% if (user.email) { %>
+  <h1><%= user.email %></h1>
+<% } %>
+```
 
-Pass EJS a template string and some data. BOOM, you've got some HTML.
+#### CLI
+```shell
+$ ejs hello.ejs -o hello.html
+```
+
+
+
+### Render with Data
+
 ```
 let ejs = require('ejs');
+
 let people = ['geddy', 'neil', 'alex'];
-let html = ejs.render('<%= people.join(", "); %>', {people: people});
-```
+let tpl = '<%= people.join(", "); %>';
 
-### CLI
+let html = ejs.render(tpl, {people: people});
+console.log(html);
+```
+Pass EJS a template string and some data. 
 
-Feed it a template file and a data file, and specify an output file.
-```
-ejs ./template_file.ejs -f data_file.json -o ./output.html
-```
+
 
 ### Browser Support
 
-Download a browser build from the latest release, and use it in a script tag.
 ```
 <script src="ejs.js"></script>
 <script>
@@ -47,21 +61,53 @@ Download a browser build from the latest release, and use it in a script tag.
   let html = ejs.render('<%= people.join(", "); %>', {people: people});
 </script>
 ```
+Use ejs in a script tag.
 
-## Docs
 
-### Example
+
+### Variables
+|              |                                  |
+|--------------|----------------------------------|
+| `<%= var %>` | Prints the value of the variable |
+| `<%- var %>` | Prints without HTML escaping     |
+
+
+### CLI
+
+Render and specify an output file.
+```shell
+$ ejs hello.ejs -o hello.html
+```
+
+Feed it a template file and a data file
+```shell
+$ ejs hello.ejs -f data.json -o hello.html
+```
+
+
+
+### Comments
+```html
+<%# This line will denote a comment %>
+```
+---------
+```html
+<%# This is a multi-line EJS comment.
+    It can span multiple lines,
+    but will not be displayed 
+    in the final HTML output. 
+%>
+```
+
+
+
+
+### Method
 
 ```
-<% if (user) { %>
-  <h2><%= user.name %></h2>
-<% } %>
-```
-
-### Usage
-
-```
+let ejs = require('ejs');
 let template = ejs.compile(str, options);
+
 template(data);
 // => Rendered HTML string
 
@@ -73,15 +119,57 @@ ejs.renderFile(filename, data, options, function(err, str){
 });
 ```
 
-### Includes
 
+
+### Including Files
+
+```html
+<%- include('partials/navbar.ejs') %>
 ```
+
+Include a template with data:
+
+```html
+<% include('header', { title: 'My Page' }) %>
+```
+------------
+
+```html
 <ul>
   <% users.forEach(function(user){ %>
-    <%- include('user/show', {user: user}); %>
+    <%- include('item', {user: user}); %>
   <% }); %>
 </ul>
 ```
+
+To include a template, needs a file name option, paths are relative
+
+
+
+Docs {.cols-3}
+--------
+
+
+### Conditionals
+```html
+<% if (userLoggedIn) { %>
+  <p>Welcome, <%= username %>!</p>
+<% } else { %>
+  <p>Please log in.</p>
+<% } %>
+```
+
+
+### Using loops
+```html
+<% if (userLoggedIn) { %>
+  <p>Welcome, <%= username %>!</p>
+<% } else { %>
+  <p>Please log in.</p>
+<% } %>
+```
+
+
 
 ### Custom delimiters
 
@@ -90,22 +178,29 @@ let ejs = require('ejs'),
     users = ['geddy', 'neil', 'alex'];
 
 // Just one template
-ejs.render('<?= users.join(" | "); ?>', {users: users},
+ejs.render('<?= users.join(" | "); ?>',
+    {users: users},
     {delimiter: '?'});
 // => 'geddy | neil | alex'
 
 // Or globally
 ejs.delimiter = '$';
-ejs.render('<$= users.join(" | "); $>', {users: users});
+ejs.render('<$= users.join(" | "); $>',
+    {users: users});
 // => 'geddy | neil | alex'
 ```
+
+
+
 
 ### Caching
 
 ```
 let ejs = require('ejs'),
 LRU = require('lru-cache');
-ejs.cache = LRU(100); // LRU cache with 100-item limit
+
+// LRU cache with 100-item limit
+ejs.cache = LRU(100);
 ```
 
 ### Custom file loader
@@ -132,7 +227,7 @@ ejs.fileLoader = myFileLoader;
 <%- include('footer'); -%>
 ```
 
-## Client-side support { .cols-1 }
+## Client-side support { .cols-2 }
 
 ### Example
 
