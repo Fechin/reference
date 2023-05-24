@@ -12,7 +12,7 @@ categories:
 intro: This cheat covers all major script concepts, client API methods, handlers and other tools to create a multimodal conversational experience with Alan AI
 ---
 
-### Legend
+### Legend 
 
 - ``pattern`` — phrase to invoke a voice/text command or a response to be played
 - ``value`` — specified value
