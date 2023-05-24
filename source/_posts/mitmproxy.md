@@ -54,6 +54,51 @@ h ◀ ─── + ─── ▶ l           ││ page
 
 
 
+### Copy to Clipboard
+
+
+Command Syntax:
+```
+:export.clip format flow
+```
+----------------
+Example:
+
+| Description                    | Command Example                    |
+|--------------------------------|------------------------------------|
+| 1. Copy as a curl command      | `:export.clip curl @focus`         |
+| 2. Copy as a httpie            | `:export.clip httpie @focus`       |
+| 2. Copy as a raw               | `:export.clip raw @focus`          |
+| 2. Copy as a raw HTTP request  | `:export.clip raw_request @focus`  |
+| 2. Copy as a raw HTTP response | `:export.clip raw_response @focus` |
+{.style-list}
+
+Export a flow to the system clipboard.
+
+
+
+
+### Save to File
+
+Command Syntax:
+```
+:export.file format flow path
+```
+----------------
+Example:
+
+| Description                  | Command Example                                    |
+|------------------------------|----------------------------------------------------|
+| 1. Export to /tmp/a.curl     | `:export.file curl @focus /tmp/a.curl`             |
+| 2. Export to /tmp/a.httpie   | `:export.file httpie @focus /tmp/a.httpie`         |
+| 2. Export to /tmp/a.raw      | `:export.file raw @focus  /tmp/a.raw`              |
+| 2. Export to /tmp/a.request  | `:export.file raw_request @focus /tmp/a.request`   |
+| 2. Export to /tmp/a.response | `:export.file raw_response @focus /tmp/a.response` |
+{.style-list}
+
+Export a flow to the system clipboard.
+
+
 
 ### Common Keybindings
 | -       | -                |

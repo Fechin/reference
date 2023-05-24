@@ -1,0 +1,12 @@
+node_modules/
+test
+*.log
+Dockerfile*
+README.md
+LICENSE
+style.tailwindcss
+
+.idea/
+.github/
+.travis.yml
+.eslintignore
