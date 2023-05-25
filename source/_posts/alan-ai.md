@@ -12,18 +12,27 @@ categories:
 intro: This cheat covers all major script concepts, client API methods, handlers and other tools to create a multimodal conversational experience with Alan AI
 ---
 
+### Legend 
+
+- ``pattern`` — phrase to invoke a voice/text command or a response to be played
+- ``value`` — specified value
+- ``params`` — passed parameters
+- ``action`` — action to be performed
+- ``output`` — data outcome
+- ``[...]`` — optional data or parameters
+
 Dialog script
 -------------
 
 ### Intents & patterns
 
-Define a voice command to play a response
+Define a voice/text command to play a response
 
 ``` {.wrap}
 intent('pattern'[, 'patternN'], reply('pattern'))
 ```
 
-Define a voice command to play a response or perform an action
+Define a voice/text command to play a response or perform an action
 ``` {.wrap}
 intent('pattern'[, 'patternN'], p => { action })
 ```
@@ -384,7 +393,7 @@ Send information about the visual state from the client app to the dialog script
 setVisualState(visualStateData:object)
 ```
 
-Send data or perform actions without a voice command
+Send data or perform actions without a voice/text command
 
 ``` {.wrap}
 projectAPI.method = function(p, param, callback) {
