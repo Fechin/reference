@@ -16,7 +16,7 @@ plugins:
 
 ### Install
 
-If not installed, instll Command Line Tools (CTL)
+If not installed, install Command Line Tools (CLT)
 
 ```
 xcode-select --install
