@@ -5,7 +5,7 @@
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/FechinLi?style=social)](https://twitter.com/FechinLi)
 
 
-Reference is a collection of cheatsheets contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[ [中文版](https://github.com/jaywcjlove/reference) | ... \]
+Reference is a collection of cheat sheets contributed by open source angels. It shares a quick reference cheat sheet for developers in a nice layout. \[ [中文版](https://github.com/jaywcjlove/reference) | ... \]
 
 We encourage you to share your own cheat sheets with the community and make Reference even better. If you notice a cheat sheet that could be improved, feel free to submit a [pull request](#-contributing).
 
@@ -28,7 +28,7 @@ Reference provides cheat sheets for the following:
 <summary>Programming</summary>
 
 - [Kubernetes](https://quickref.me/kubernetes.html): This page contains a list of commonly used kubectl commands and flags.
-- [ES6](https://quickref.me/es6.html): A quick reference cheatsheet of what's new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond
+- [ES6](https://quickref.me/es6.html): A quick reference cheat sheet of what's new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond
 - [MATLAB](https://quickref.me/matlab.html): This quick reference cheat sheet provides an example introduction to using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
 - [C](https://quickref.me/c.html): C quick reference cheat sheet that provides basic syntax and methods.
 - [INI](https://quickref.me/ini.html): This is a quick reference cheat sheet for understanding and writing INI-format configuration files.
@@ -85,7 +85,7 @@ This reference was made for Emacs 27.
 - [Netstat](https://quickref.me/netstat.html): This quick reference cheat sheet provides various for using netstat command.
 - [Screen](https://quickref.me/screen.html): This is a quick reference guide cheat sheet for the screen command.
 - [Awk](https://quickref.me/awk.html): This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.
-- [Find](https://quickref.me/find.html): This is a quick reference list of cheatsheet for linux find command, contains common options and examples.
+- [Find](https://quickref.me/find.html): This is a quick reference list of cheat sheet for linux find command, contains common options and examples.
 - [Sed](https://quickref.me/sed.html): [Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.
 - [Cron](https://quickref.me/cron.html): [Cron](https://en.wikipedia.org/wiki/Cron) is most suitable for scheduling repetitive tasks. Scheduling one-time tasks can be accomplished using the associated at utility.
 - [Git](https://quickref.me/git.html): This cheat sheet summarizes commonly used Git command line instructions for quick reference.
@@ -197,9 +197,9 @@ This reference was made for Emacs 27.
 <summary>Other</summary>
 
 - [Google Search](https://quickref.me/google-search.html): This quick reference cheat sheet lists of Google advanced search operators.
-- [ASCII Code](https://quickref.me/ascii-code.html): This cheatsheet is a complete list of ASCII Code Table with their numbers and names.
+- [ASCII Code](https://quickref.me/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with their numbers and names.
 - [Aspect Ratio](https://quickref.me/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their pixel resolutions. Always confirm your final delivery ratio when shooting.
-- [HTML Characters Entities](https://quickref.me/html-char.html): This cheatsheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.
+- [HTML Characters Entities](https://quickref.me/html-char.html): This cheat sheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.
 - [ISO 639-1 Language Code](https://quickref.me/iso-639-1.html): This is a list of the ISO language codes that conform to the ISO 639-1 standard, it provide reference for multi-language website.
 - [Resolutions](https://quickref.me/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
 - [HTTP Status Code](https://quickref.me/http-status-code.html): The http status codes cheat sheet. a quick reference to every HTTP status code.
@@ -215,7 +215,7 @@ This reference was made for Emacs 27.
 ```
 .
 ├── source
-│   ├── _posts   # Cheatsheet source files
+│   ├── _posts   # Cheat sheet source files
 │   │   ├── awk.md
 │   │   ├── vim.md # => https://quickref.me/vim
 │   │   ├── php.md
@@ -240,7 +240,7 @@ This reference was made for Emacs 27.
 
 We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes QuickRef.ME a truly amazing resource. Please feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
 
-For consistency, we encourage you to refer to the [https://quickref.me/quickref](https://quickref.me/quickref) when creating or editing cheatsheets. To get started with development, follow these steps:
+For consistency, we encourage you to refer to the [https://quickref.me/quickref](https://quickref.me/quickref) when creating or editing cheat sheets. To get started with development, follow these steps:
 
 1. Clone Github repo `git clone https://github.com/Fechin/reference.git`
 2. Install `npm` package manager (Read [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
@@ -262,7 +262,7 @@ background: bg-emerald-600
 tags:
 categories:
 - Other
-  intro: This is a reference of styles that you can use on quickref cheatsheets!
+  intro: This is a reference of styles that you can use on quickref cheat sheets!
 ---
 ```
 Only the `title` and `intro` fields are required, and the other options can be left blank. 
