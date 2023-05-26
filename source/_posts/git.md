@@ -52,12 +52,12 @@ Stage all changed files, ready for commit
 $ git add .
 ```
 
-Commit all staged files to versioned history
+Commit all staged files to version history
 ``` shell script
 $ git commit -m "commit message"
 ```
 
-Commit all your tracked files to versioned history
+Commit all your tracked files to version history
 ``` shell script
 $ git commit -am "commit message"
 ```
@@ -65,12 +65,12 @@ Discard changes in working directory which is not staged
 ``` shell script
 $ git restore [file]
 ```
-Unstage a stagged file or file which is staged
+Unstage a staged file or file which is staged
 ``` shell script
 $ git restore --staged [file]
 ```
 
-Unstages file, keeping the file changes
+Unstage a file, keeping the file changes
 ``` shell script
 $ git reset [file]
 ```
@@ -85,7 +85,7 @@ Diff of what is changed but not staged
 $ git diff
 ```
 
-Diff of what is staged but not yet commited
+Diff of what is staged but not yet committed
 ``` shell script
 $ git diff --staged
 ```
