@@ -54,7 +54,7 @@ mysql -h <host> -u <user> -p [db_name]
 | `TRUNCATE TABLE `t`;`    | Remove all data in a table |
 | `DROP TABLE `t`;`        | Delete table               |
 
-#### Proccess
+#### Process
 
 | -                   | -              |
 |---------------------|----------------|
