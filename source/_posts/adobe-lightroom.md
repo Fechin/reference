@@ -97,7 +97,7 @@ Shortcut | Action
 `Ctrl` `Alt` `Shift` `M`  | Match total exposures
 `W`  | Select White Balance tool (from any module)
 `R`  | Select the Crop tool (from any module)
-`A`  | Contrain aspect ratio when Crop tool is selected
+`A`  | Constrain aspect ratio when Crop tool is selected
 `Shift` `A`  | Crop to same aspect ratio as previous crop
 `Alt` `(drag)`  | Crop from center of photo
 `O`  | Cycle Crop grid overlay
@@ -105,7 +105,7 @@ Shortcut | Action
 `X`  | Switch crop between portrait and landscape orientation
 `Ctrl` `Alt` `R`  | Reset crop
 `Shift` `T`  | Select the Guided Upright tool
-`Q`  | Select the Sopt Removal tool
+`Q`  | Select the Spot Removal tool
 `Shift` `T`  | Toggle Brush between Clone and Heal modes when Spot Removal tool is selected
 `K`  | Select the Adjustment Brush tool (from any module)
 `M`  | Select the Graduated Filter tool
@@ -119,7 +119,7 @@ Shortcut | Action
 `O`  | Show/hide local adjustment mask overlay
 `Shift` `O`  | Cycle local adjustment mask overlay colors
 `Ctrl` `Alt` `Shift` `T`  | Select Targeted Adjustment tool to apply a Tone Curve adjustment
-`Ctrl` `Alt` `Shift` `H`  | Select Targeted Adjustment tool to applay a Hue adjustment
+`Ctrl` `Alt` `Shift` `H`  | Select Targeted Adjustment tool to apply a Hue adjustment
 `Ctrl` `Alt` `Shift` `S`  | Select Targeted Adjustment tool to apply a Saturation adjustment
 `Ctrl` `Alt` `Shift` `L`  | Select Targeted Adjustment tool to apply a Luminance adjustment
 `Ctrl` `Alt` `Shift` `G`  | Select Targeted Adjustment tool to apply a Grayscale Mix adjustment
@@ -154,7 +154,7 @@ Shortcut | Action
 `Shift` `L`  | Cycle backward through Lights Out modes
 `Ctrl` `Shift` `L`  | Toggle Lights Dim mode
 `F`  | Cycle screen modes
-`Ctrl` `Shift` `F`  | Switich between Normal and full-screen, hide panels
+`Ctrl` `Shift` `F`  | Switch between Normal and full-screen, hide panels
 `Ctrl` `Alt` `F`  | Go to Normal screen mode
 `I`  | Cycle info overlay
 `Ctrl` `I`  | Show/hide info overlay
@@ -210,7 +210,7 @@ Shortcut | Action
 `Ctrl` `Enter`  | Play impromptu slide show
 `Ctrl` `]`  | Rotate photo right (clockwise)
 `Ctrl` `[`  | Rotate photo left (counterclockwise)
-`=/-`  | Increase/decreate Grid thumbnail size
+`=/-`  | Increase/decrease Grid thumbnail size
 `PgUp/PgDown`  | Scroll up/down Grid thumbnails
 `Ctrl` `Shift` `H`  | Toggle cell extras
 `Ctrl` `Alt` `Shift` `H`  | Show/hide badges
@@ -289,7 +289,7 @@ Shortcut | Action
 `Ctrl` `Alt` `K`  | Enable painting
 `Alt` `1-9`  | Add a keyword from a keyword set to selected photo
 `Alt` `0`  | Cycle forward through keyword sets
-`Alt` `Shift` `0`  | Cycle backword through keyword sets
+`Alt` `Shift` `0`  | Cycle backward through keyword sets
 `Ctrl` `Alt` `Shift` `C/V`  | Copy/paste metadata
 `Ctrl` `S`  | Save metadata to file
 {.shortcuts}
