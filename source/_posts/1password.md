@@ -77,7 +77,7 @@ intro: |
 
 | `Shortcut               `   | Action                                                                                    |
 |-----------------------------|-------------------------------------------------------------------------------------------|
-| `Shift` `cmd` `X        `   | Open or close the 1Password pop` `up in Chrome, Edge, Brave, or Safari.                   |
+| `Shift` `cmd` `X        `   | Open or close the 1Password pop-up in Chrome, Edge, Brave, or Safari.                   |
 | `cmd` `.` | Open or close the 1Password pop-up in Firefox. |
 | `cmd` `F              `     | Search for items.                                                                         |
 | `Esc                    `   | Clear the search field.                                                                   |
@@ -100,7 +100,7 @@ intro: |
 | `cmd` `G              `     | Show the password generator.                                                              |
 | `cmd` `C              `     | Copy a password from the password generator.                                              |
 | `Shift` `cmd` `L        `   | Lock 1Password.                                                                           |
-| `Esc                    `   | Close the 1Password pop` `up.                                                             |
+| `Esc                    `   | Close the 1Password pop-up.                                                             |
 {.shortcuts}
 
 
@@ -234,7 +234,7 @@ intro: |
 
 | `Shortcut                            ` | Action                                                                                    |
 |---------------------------------------|-------------------------------------------------------------------------------------------|
-| `Ctrl` `Shift` `X                    ` | Open or close the 1Password pop` `up in Chrome, Edge, or Brave.                           |
+| `Ctrl` `Shift` `X                    ` | Open or close the 1Password pop-up in Chrome, Edge, or Brave.                           |
 | `Ctrl` `.`                            | Open or close the 1Password pop-up in Firefox. |
 | `Ctrl` `F                            ` | Search for items.                                                                         |
 | `Esc                                 ` | Clear the search field.                                                                   |
@@ -257,7 +257,7 @@ intro: |
 | `Ctrl` `G                            ` | Show the password generator.                                                              |
 | `Ctrl` `C                            ` | Copy a password from the password generator.                                              |
 | `Ctrl` `Shift` `L                    ` | Lock 1Password.                                                                           |
-| `Esc                                 ` | Close the 1Password pop` `up.                                                             |
+| `Esc                                 ` | Close the 1Password pop-up.                                                             |
 {.shortcuts}
 
 
@@ -343,7 +343,7 @@ intro: |
 
 | `Shortcut                    ` | Action                                                                                    |
 |--------------------------------|-------------------------------------------------------------------------------------------|
-| `Ctrl` `Shift` `X            ` | Open or close the 1Password pop` `up in Chrome, Edge, or Brave.                           |
+| `Ctrl` `Shift` `X            ` | Open or close the 1Password pop-up in Chrome, Edge, or Brave.                           |
 | `Ctrl` `.`  | Open or close the 1Password pop-up in Firefox. |
 | `Ctrl` `F                    ` | Search for items.                                                                         |
 | `Esc                         ` | Clear the search field.                                                                   |
@@ -366,7 +366,7 @@ intro: |
 | `Ctrl` `G                    ` | Show the password generator.                                                              |
 | `Ctrl` `C                    ` | Copy a password from the password generator.                                              |
 | `Ctrl` `Shift` `L            ` | Lock 1Password.                                                                           |
-| `Esc                         ` | Close the 1Password pop` `up.                                                             |
+| `Esc                         ` | Close the 1Password pop-up.                                                             |
 {.shortcuts}
 
 
