@@ -171,14 +171,14 @@ Awk Variables
 |---------------------|------------------------------------|
 | `$1 == "root"`      | First field equals root            |
 | `{print $(NF-1)}`   | Second last field                  |
-| `NR!=1{print $0}`   | From 2th record                    |
+| `NR!=1{print $0}`   | From 2nd record                    |
 | `NR > 3`            | From 4th record                    |
 | `NR == 1`           | First record                       |
 | `END{print NR}`     | Total records                      |
 | `BEGIN{print OFMT}` | Output format                      |
 | `{print NR, $0}`    | Line number                        |
 | `{print NR "	" $0}` | Line number (tab)                  |
-| `{$1 = NR; print}`  | Replace 1th field with line number |
+| `{$1 = NR; print}`  | Replace 1st field with line number |
 | `$NF > 4`           | Last field > 4                     |
 | `NR % 2 == 0`       | Even records                       |
 | `NR==10, NR==20`    | Records 10 to 20                   |
