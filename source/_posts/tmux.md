@@ -123,11 +123,11 @@ $ tmux info
 | `Ctrl+b` <Arrow\>      | Navigate panes     |
 | `Ctrl+b` <Space\>      | Toggle layouts     |
 | `Ctrl+b` `{` _/_ `}`   | Move to Left/Right |
-| `Ctrl+b` `o`           | Goto next panes    |
-| `Ctrl+b` `z`           | toggle full-screen |
+| `Ctrl+b` `o`           | Go to next panes    |
+| `Ctrl+b` `z`           | Toggle full-screen |
 | `Ctrl+b` `;`           | Toggle Last pane   |
 | `Ctrl+b` `q`           | Show numbers       |
-| `Ctrl+b` `q` `0`...`9` | Goto # pane        |
+| `Ctrl+b` `q` `0`...`9` | Go to # pane        |
 {.shortcuts}
 
 
@@ -144,7 +144,7 @@ $ tmux info
 | `Ctrl+b` `l`         | Last window          |
 | `Ctrl+b` `.`         | Move window          |
 | `Ctrl+b` `&`         | Close window         |
-| `Ctrl+b` `0`...`9`   | Goto # window        |
+| `Ctrl+b` `0`...`9`   | Go to # window        |
 {.shortcuts}
 
 
