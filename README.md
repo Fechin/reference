@@ -204,7 +204,7 @@ This reference was made for Emacs 27.
 - [Resolutions](https://quickref.me/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
 - [HTTP Status Code](https://quickref.me/http-status-code.html): The http status codes cheat sheet. a quick reference to every HTTP status code.
 - [Emoji](https://quickref.me/emoji.html): Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
-- [QuickRef](https://quickref.me/quickref.html): This is the magic syntax variant manual that you can use on QuickRef.ME, It's a good practice for contributors.
+- [CheatSheets](https://quickref.me/quickref.html): This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.
 - [MIME types](https://quickref.me/mime.html): This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
 
 </details>
@@ -238,7 +238,7 @@ This reference was made for Emacs 27.
 
 ## 🤝 Contributing
 
-We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes QuickRef.ME a truly amazing resource. Please feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
+We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes CheatSheets.zip a truly amazing resource. Please feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
 
 For consistency, we encourage you to refer to the [https://quickref.me/quickref](https://quickref.me/quickref) when creating or editing cheatsheets. To get started with development, follow these steps:
 
@@ -255,7 +255,7 @@ To create or edit a cheat sheet, you'll need to create or edit a markdown file i
 
 ```markdown
 ---
-title: QuickRef
+title: CheatSheets
 date: 2020-11-25 18:28:43
 icon: icon-style
 background: bg-emerald-600

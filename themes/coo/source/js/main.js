@@ -1,11 +1,6 @@
 let Utils = (function () {
     return {
         LIBRARY: {
-            gtag: {
-                lib: ['https://www.googletagmanager.com/gtag/js?id=G-6SZEXN62V8'],
-                instance: 'gtag',
-                attr: {async: true}
-            },
             fuse: {
                 lib: ['/js/fuse_6.4.6.js'],
                 instance: 'Fuse',
@@ -83,18 +78,6 @@ window.addEventListener('load', () => {
         });
     });
 
-
-    /******** google analytics ***********/
-    Utils.externalLibrary(Utils.LIBRARY.gtag).then(() => {
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-6SZEXN62V8');
-    });
 
     /******** Remove bottom border noise ********/
     document.querySelectorAll(".h3-wrap ul").forEach(function (ul, i) {

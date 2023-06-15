@@ -80,7 +80,7 @@ Getting Started
 ```json {.wrap}
 {
   "url": "https://quickref.me",
-  "msg" : "Hi,\n\"QuickRef.ME\"",
+  "msg" : "Hi,\n\"CheatSheets.zip\"",
   "intro": "Share quick reference and cheat sheet for developers."
 }
 ```

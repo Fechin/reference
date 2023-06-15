@@ -23,7 +23,7 @@ Introduction to Kotlin
 
 ```kotlin
 fun main() {
-  println("Greetings, QuickRef.ME!")
+  println("Greetings, CheatSheets.zip!")
   // Code goes here
 }
 ```

@@ -108,12 +108,12 @@ Getting Started
 - **Change the CSS of a line of code**
     ``` {.wrap}
     Update the CSS for this line to change the font color to blue?
-    <p class="example">Hello, QuickRef.ME!</p>
+    <p class="example">Hello, CheatSheets.zip!</p>
     ```
 - **Change the HTML of a line of code**
     ``` {.wrap}
     Add a class of "header" to this header tag?
-    <h1>Hello, QuickRef.ME!</h1>
+    <h1>Hello, CheatSheets.zip!</h1>
     ```
 {.collapsible}
 

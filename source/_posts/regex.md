@@ -706,16 +706,16 @@ Regex in PHP
 $str = "Visit Microsoft!";
 $regex = "/microsoft/i";
 
-// Output: Visit QuickRef!
-echo preg_replace($regex, "QuickRef", $str); 
+// Output: Visit CheatSheets!
+echo preg_replace($regex, "CheatSheets", $str); 
 ```
 
 
 
 ### preg_match
 ```php 
-$str = "Visit QuickRef";
-$regex = "#quickref#i";
+$str = "Visit CheatSheets";
+$regex = "#cheatsheets#i";
 
 // Output: 1
 echo preg_match($regex, $str);

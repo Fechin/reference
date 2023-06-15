@@ -1153,11 +1153,11 @@ func washCar() -> Void {
 
 ```swift
 func greetLearner() {
- print("Welcome to QuickRef.ME!")
+ print("Welcome to CheatSheets.zip!")
 }
 // function call:
 greetLearner()
-// print: Welcome to QuickRef.ME!
+// print: Welcome to CheatSheets.zip!
 ```
 
 
