@@ -24,9 +24,9 @@ $ chmod [options] <permissions> <file>
 #### Example
 ```shell
 $ chmod 755 foo.txt
-$ chmod +x quickref.py
-$ chmod u-x quickref.py
-$ chmod u=rwx,g=rx,o= quickref.sh
+$ chmod +x cheatsheets.py
+$ chmod u-x cheatsheets.py
+$ chmod u=rwx,g=rx,o= cheatsheets.sh
 ```
 #### Change files and directories recursively
 ```shell

@@ -397,10 +397,10 @@ Find all `.java` files and compress it into `java.tar`
 $ find . -type f -name "*.java" | xargs tar cvf java.tar
 ```
 
-Find all `.csv` files and compress it into `quickref.zip`
+Find all `.csv` files and compress it into `cheatsheets.zip`
 
 ```shell script
-$ find . -type f -name "*.csv" | xargs zip quickref.zip
+$ find . -type f -name "*.csv" | xargs zip cheatsheets.zip
 ```
 
 

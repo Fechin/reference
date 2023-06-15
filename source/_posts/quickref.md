@@ -824,7 +824,7 @@ The text that appears in the header
 This paragraph will appear in the middle
 
 ```js
-quickref.is(() => {
+cheatsheets.is(() => {
   awesome.site()
 })
 ```
@@ -838,7 +838,7 @@ quickref.is(() => {
 This paragraph will appear in the middle
 
 ```js
-quickref.is(() => {
+cheatsheets.is(() => {
   awesome.site()
 })
 \```
@@ -850,7 +850,7 @@ quickref.is(() => {
 ### Footer paragraphs {.row-span-2}
 
 ```js
-quickref.is(() => {
+cheatsheets.is(() => {
   awesome.site()
 })
 ```
@@ -858,7 +858,7 @@ quickref.is(() => {
 #### ↓ Source Code
 ```markdown
 ```js
-quickref.is(() => {
+cheatsheets.is(() => {
   awesome.site()
 })
 \```
