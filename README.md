@@ -14,9 +14,9 @@ We encourage you to share your own cheat sheets with the community and make Refe
 
 ## 👀 Live Demonstration
 
-You can view the cheat sheets live at [https://reference-ashy.vercel.app](https://reference-ashy.vercel.app/)
+You can view the cheat sheets live at [https://cheatsheets.zip](https://cheatsheets.zip/)
 
-[![Quick reference](https://cheatsheets.zip/assets/image/preview.png)](https://reference-ashy.vercel.app)
+[![Quick reference](https://cheatsheets.zip/assets/image/preview.png)](https://cheatsheets.zip)
 
 
 ## 📚 Cheat Sheets List
