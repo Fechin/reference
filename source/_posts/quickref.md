@@ -47,9 +47,9 @@ It's a good practice to refer to the source code of the [CheatSheets reference](
 ├── source
 │   ├── _posts   # Cheatsheet source files
 │   │   ├── awk.md
-│   │   ├── vim.md # => quickref.me/vim
+│   │   ├── vim.md # => cheatsheets.zip/vim
 │   │   ├── php.md
-│   │   ├── css.md # => quickref.me/css
+│   │   ├── css.md # => cheatsheets.zip/css
 │   │   ├── ...
 │   └── widget   # Widget files
 │       └── chmod.html
@@ -702,7 +702,7 @@ Code Variants
 ### Basic code
 
 ```js
-quickref.me.is(() => {
+cheatsheets.zip.is(() => {
   awesome.site()
 })
 ```
@@ -715,7 +715,7 @@ here.is.some.more()
 ```markdown
 
 ```js
-quickref.me.is(() => {
+cheatsheets.zip.is(() => {
   awesome.site()
 })
 \```
@@ -735,7 +735,7 @@ Code blocks can be placed one after the other.
 #### index.js
 
 ```js
-quickref.me.is(() => {
+cheatsheets.zip.is(() => {
     awesome.site()
 })
 ```
@@ -751,7 +751,7 @@ here.is.some.more()
 ```markdown
 #### index.js
 ```js
-quickref.me.is(() => {
+cheatsheets.zip.is(() => {
     awesome.site()
 })
 \```

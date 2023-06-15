@@ -31,7 +31,7 @@ $ find . -name "json_*"
 ```
 
 ----
-- [Regex reference](/regex) _(quickref.me)_
+- [Regex reference](/regex) _(cheatsheets.zip)_
 - [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _(gist.github.com)_
 
 ### Option Examples {.col-span-2}

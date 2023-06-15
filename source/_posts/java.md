@@ -44,7 +44,7 @@ int num = 5;
 float floatNum = 5.99f;
 char letter = 'D';
 boolean bool = true;
-String site = "quickref.me";
+String site = "cheatsheets.zip";
 ```
 
 ### Primitive Data Types {.row-span-2}

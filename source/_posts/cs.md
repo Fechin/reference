@@ -44,7 +44,7 @@ double doubleNum = 99.999;
 decimal decimalNum = 99.9999M;
 char letter = 'D';
 bool @bool = true;
-string site = "quickref.me";
+string site = "cheatsheets.zip";
 
 var num = 999;
 var str = "999";

@@ -22,7 +22,7 @@ Getting Started
 <?php // begin with a PHP open tag.
 
 echo "Hello World\n";
-print("Hello quickref.me");
+print("Hello cheatsheets.zip");
 
 ?>
 ```
@@ -52,7 +52,7 @@ See: [Types](#php-types)
 
 ### Strings
 ```php
-$url = "quickref.me";
+$url = "cheatsheets.zip";
 echo "I'm learning PHP at $url";
 
 // Concatenate strings

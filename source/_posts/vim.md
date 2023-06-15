@@ -48,7 +48,7 @@ Getting Started
    │ │       └─▷    
    │ │ ┌───┬───▷ print("Welcome")
 G gg H M L k j ▶ print("to")
-│        │   └─▷ print("quickref.me")
+│        │   └─▷ print("cheatsheets.zip")
 │        │       print("/vim")
 │        │     
 │        └─────▷ 

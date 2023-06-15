@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quickref.me/sitemap.xml
+Sitemap: https://cheatsheets.zip/sitemap.xml

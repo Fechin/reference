@@ -136,12 +136,12 @@ Example {.cols-6}
 
 command | description
 :-| :-
-`curl -I https://quickref.me` | `curl` sends a request
-`curl -v -I https://quickref.me` | `curl` request with details
-`curl -X GET https://quickref.me` | use explicit http method for `curl`
+`curl -I https://cheatsheets.zip` | `curl` sends a request
+`curl -v -I https://cheatsheets.zip` | `curl` request with details
+`curl -X GET https://cheatsheets.zip` | use explicit http method for `curl`
 `curl --noproxy 127.0.0.1 http://www.stackoverflow.com` | `curl` without http proxy
-`curl --connect-timeout 10 -I -k https://quickref.me` | `curl` has no timeout by default
-`curl --verbose --header "Host: www.mytest.com:8182" quickref.me` | `curl` get extra header
+`curl --connect-timeout 10 -I -k https://cheatsheets.zip` | `curl` has no timeout by default
+`curl --verbose --header "Host: www.mytest.com:8182" cheatsheets.zip` | `curl` get extra header
 `curl -k -v https://www.google.com` | `curl` get response with headers
 <!--rehype:class=auto-wrap-->
 

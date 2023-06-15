@@ -57,7 +57,7 @@ hexo.extend.generator.register('list', function (locals) {
     themeConfig.index_categories.forEach(function (category) {
         content += `<details>\n<summary>${category}</summary>\n\n`;
         locals.categories.findOne({name: category}).posts.sort('-date').map(function (post) {
-            content += `- [${post.title}](https://quickref.me/${post.path}): ${post.intro.trim()}\n`;
+            content += `- [${post.title}](https://cheatsheets.zip/${post.path}): ${post.intro.trim()}\n`;
         })
         content += `\n</details>\n\n`;
     });

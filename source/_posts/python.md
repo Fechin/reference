@@ -22,7 +22,7 @@ Getting Started
 ### Introduction
 - [Python](https://www.python.org/)  _(python.org)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
-- [Regex in python](/regex#regex-in-python) _(quickref.me)_
+- [Regex in python](/regex#regex-in-python) _(cheatsheets.zip)_
 
 
 

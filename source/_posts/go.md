@@ -592,11 +592,11 @@ fmt.Println(b)    // => 7
 
 ```go
 r1, r2 := func() (string, string) {
-    x := []string{"hello", "quickref.me"}
+    x := []string{"hello", "cheatsheets.zip"}
     return x[0], x[1]
 }()
 
-// => hello quickref.me
+// => hello cheatsheets.zip
 fmt.Println(r1, r2)
 ```
 

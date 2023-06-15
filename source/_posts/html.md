@@ -61,7 +61,7 @@ See: [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/E
 ### HTML link
 
 ```html 
-<a href="https://quickref.me">CheatSheets</a>
+<a href="https://cheatsheets.zip">CheatSheets</a>
 <a href="mailto:jack@abc.com">Email</a>
 <a href="tel:+12345678">Call</a>
 <a href="sms:+12345678&body=ha%20ha">Msg</a>
@@ -849,7 +849,7 @@ The meta tag describes meta data within an HTML document. It explains additional
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_CA">
 <meta property="og:title" content="HTML cheatsheet">
-<meta property="og:url" content="https://quickref.me/html">
+<meta property="og:url" content="https://cheatsheets.zip/html">
 <meta property="og:image" content="https://xxx.com/image.jpg">
 <meta property="og:site_name" content="Name of your website">
 <meta property="og:description" content="Description of this page">
@@ -862,7 +862,7 @@ Used by Facebook, Instagram, Pinterest, LinkedIn, etc.
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@FechinLi">
 <meta name="twitter:title" content="HTML cheatsheet">
-<meta name="twitter:url" content="https://quickref.me/html">
+<meta name="twitter:url" content="https://cheatsheets.zip/html">
 <meta name="twitter:description" content="Description of this page">
 <meta name="twitter:image" content="https://xxx.com/image.jpg">
 ```
