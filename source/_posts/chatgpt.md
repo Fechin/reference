@@ -88,7 +88,7 @@ Getting Started
     Write a program that calculates the factorial of a given number in python?
     ```
     ``` {.wrap}
-    How do I make an HTTP request in Javascript?
+    How do I make an HTTP request in JavaScript?
     ```
 - **Generate regular expressions (regex)**
     ``` {.wrap}
@@ -465,7 +465,7 @@ Getting Started
     ```
 
     ``` {.wrap}
-    How do I make an HTTP request in Javascript?
+    How do I make an HTTP request in JavaScript?
     ```
 
     ``` {.wrap}

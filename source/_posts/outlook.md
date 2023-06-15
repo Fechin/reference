@@ -57,7 +57,7 @@ Shortcut | Action
 `Ctrl` `.`  | Switch to next open message
 `Ctrl` `,`  | Switch to previous open message
 `Ctrl` `Shift` `Tab`  | Move between Folder/Outlook/Reading/To-Do
-`Ctrl` `Tab`  | Move ar ound message header lines in the Folder pane
+`Ctrl` `Tab`  | Move around message header lines in the Folder pane
 `Arrows`  | Move around within the Folder pane
 `Ctrl` `Y`  | Go to a different folder
 `Ctrl` `E`  | Go to the Search box
@@ -124,7 +124,7 @@ Shortcut | Action
 `Ctrl` `Shift` `G`  | Flag for follow-up
 `Ctrl` `F`  | Forward
 `Alt` `S`  | Send or post or invite all
-`F2`  | Endable editing in a field, all views except Mail/Icon
+`F2`  | Enable editing in a field, all views except Mail/Icon
 `Ctrl` `L`  | Left align text
 `Ctrl` `E`  | Center text
 `Ctrl` `R`  | Right align text
@@ -296,7 +296,7 @@ Shortcut | Action
 Shortcut | Action
 ---|---
 `Alt` `F, P`  | Open the Print tab in Backstage view
-`Alt` `F, P, F`  | Print an item fron an open window
+`Alt` `F, P, F`  | Print an item from an open window
 `Alt` `S`  | Open the Page Setup dialog box from Print view
 `Alt` `F, P, I`  | Select a printer from Print view
 `Alt` `F, P, R`  | Open the Print Options dialog box

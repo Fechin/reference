@@ -949,6 +949,7 @@ Getting Started
 
 
 ### Education assistant
+- [![Favicon](https://icon.horse/icon/brain-buddy.com) Brain Buddy](https://brain-buddy.com/)
 - [![Favicon](https://icon.horse/icon/kobra.dev) Kobra](https://kobra.dev)
 - [![Favicon](https://icon.horse/icon/boldvoice.com) Boldvoice](https://boldvoice.com)
 - [![Favicon](https://icon.horse/icon/prepai.in/us) Prepai](https://prepai.in/us)

@@ -213,7 +213,7 @@ std::array<int, 6> marks = {92, 97, 98, 99, 98, 94};
 // Print first element
 std::cout << marks[0];
 
-// Change 2th element to 99
+// Change 2nd element to 99
 marks[1] = 99;
 
 // Take input from the user
