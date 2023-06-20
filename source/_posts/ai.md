@@ -1219,6 +1219,7 @@ Getting Started
 - [![Favicon](https://icon.horse/icon/giftastic.ai) Giftastic.ai](https://giftastic.ai)
 - [![Favicon](https://icon.horse/icon/coolgiftideas.io) Cool gift ideas](https://coolgiftideas.io)
 - [![Favicon](https://icon.horse/icon/elfhelp.ai) Elf help](https://elfhelp.ai)
+- [![Favicon](https://icon.horse/icon/giftideasai.xyz) Gift Ideas AI](https://www.giftideasai.xyz)
   {.icon-list .marker-none}
 
 
