@@ -794,6 +794,7 @@ Getting Started
 
 
 ### Api
+- [![Favicon](https://icon.horse/icon/beam.cloud) Beam](https://beam.cloud)
 - [![Favicon](https://icon.horse/icon/deepgram.com) Deepgram](https://deepgram.com)
 - [![Favicon](https://icon.horse/icon/banana.dev) Banana](https://banana.dev)
 - [![Favicon](https://icon.horse/icon/perspectiveapi.com) Perspective](https://perspectiveapi.com)
