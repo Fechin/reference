@@ -1331,7 +1331,7 @@ def calc_summary(*args: int):
 print(calc_summary(3, 1, 4))  # => 8
 ```
 
-Indicate all arguments type is int.
+Indicate all arguments' type is int.
 
 
 ### Returned
@@ -1371,8 +1371,6 @@ Indicate all parameters' value type is int.
 def resp200() -> (int, str):
     return 200, "OK"
 ```
-
-Type hits of function is optional.
 
 
 ### Complex returned (3.10+)
@@ -1431,14 +1429,14 @@ T = TypeVar("T")
 
 # "mapper" is a type, like int, str, MyClass and so on.
 # "default" is an instance of type T, such as 314, "string", MyClass() and so on.
-# "returned" is an instance of type T too.
+# returned is an instance of type T too.
 def converter(raw, mapper: Type[T], default: T) -> T:
     try:
         return mapper(raw)
     except:
         return default
 
-raw: str = input("Enter an interger: ")
+raw: str = input("Enter an integer: ")
 result: int = converter(raw, mapper=int, default=0)
 ```
 
