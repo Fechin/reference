@@ -1455,7 +1455,7 @@ def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
 
 # Callable[[Any], T] means a function declare like:
 # def anynomous(arg: Any) -> T:
-#     return T(arg)
+#     pass
 
 def is_success(value) -> bool:
     return value in (0, "OK", True, "success")
