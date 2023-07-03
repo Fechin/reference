@@ -1296,30 +1296,55 @@ Python Type Hints (Since Python 3.5)
 --------
 
 
-### Variable
+### Variable & Parameter
 ```python
 string: str = "ha"
 times: int = 3
 
-print(string * times)  # => hahaha
-```
 
-
-### Variable
-```python
-# wrong hit, but can run correctly
-result: int = 1 + 2
-
+# wrong hit, but run correctly
+result: str = 1 + 2
 print(result)  # => 3
-```
 
 
-### Parameter
-```python
 def say(name: str, start: str = "Hi"):
     return start + ", " + name
 
 print(say("Python"))  # => Hi, Python
+```
+
+
+### Built-in date type
+```python
+from typing import Dict, Tuple, List
+
+bill: Dict[str, float] = {
+    "apple": 3.14,
+    "watermelon": 15.92,
+    "pineapple": 6.53,
+}
+completed: Tuple[str] = ("DONE",)
+succeeded: Tuple[int, str] = (1, "SUCCESS")
+statuses: Tuple[str, ...] = (
+    "DONE", "SUCCESS", "FAILED", "ERROR",
+)
+codes: List[int] = (0, 1, -1, -2)
+```
+
+
+### Built-in date type (3.10+)
+```python
+bill: dict[str, float] = {
+    "apple": 3.14,
+    "watermelon": 15.92,
+    "pineapple": 6.53,
+}
+completed: tuple[str] = ("DONE",)
+succeeded: tuple[int, str] = (1, "SUCCESS")
+statuses: tuple[str, ...] = (
+    "DONE", "SUCCESS", "FAILED", "ERROR",
+)
+codes: list[int] = (0, 1, -1, -2)
 ```
 
 
@@ -1344,7 +1369,7 @@ print(say_hello(var))  # => Hello, Python
 ```
 
 
-### Complex returned
+### Union returned
 ```python
 from typing import Union
 
@@ -1370,10 +1395,14 @@ Indicate all parameters' value type is int.
 ```python
 def resp200() -> (int, str):
     return 200, "OK"
+
+returns = resp200()
+print(returns)  # => (200, 'OK')
+print(type(returns))  # tuple
 ```
 
 
-### Complex returned (3.10+)
+### Union returned (3.10+)
 ```python
 def resp200(meaningful) -> int | str:
     return "OK" if meaningful else 200
@@ -1395,19 +1424,21 @@ class Employee:
 ```
 
 
-### Hit self
+### Self instance
 ```python
 class Employee:
     name: str
-    age: int
 
     def set_name(self, name) -> "Employee":
         self.name = name
         return self
+
+    def copy(self) -> 'Employee':
+        return type(self)(self.name)
 ```
 
 
-### Hit self (3.11+)
+### Self instance (3.11+)
 ```python
 from typing import Self
 
@@ -1421,7 +1452,7 @@ class Employee:
 ```
 
 
-### Typing a type {.col-span-2}
+### Type & Generic {.col-span-2}
 ```python
 from typing import TypeVar, Type
 
@@ -1441,7 +1472,7 @@ result: int = converter(raw, mapper=int, default=0)
 ```
 
 
-### Typing a function {.col-span-2}
+### Function {.col-span-2}
 ```python
 from typing import TypeVar, Callable, Any
 
@@ -1453,8 +1484,16 @@ def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
     except:
         return default
 
-# Callable[[Any], T] means a function declare like:
-# def anynomous(arg: Any) -> T:
+# Callable[[Any], ReturnType] means a function declare like:
+# def func(arg: Any) -> ReturnType:
+#     pass
+
+# Callable[[str, int], ReturnType] means a function declare like:
+# def func(string: str, times: int) -> ReturnType:
+#     pass
+
+# Callable[..., ReturnType] means a function declare like:
+# def func(*args, **kwargs) -> ReturnType:
 #     pass
 
 def is_success(value) -> bool:
