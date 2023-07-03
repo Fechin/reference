@@ -21,6 +21,7 @@ Getting Started
 
 ### Introduction
 - [Python](https://www.python.org/)  _(python.org)_
+- [Python Document](https://docs.python.org/3/index.html)  _(docs.python.org)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
 - [Regex in python](/regex#regex-in-python) _(cheatsheets.zip)_
 
@@ -953,6 +954,9 @@ def varargs(*args):
 varargs(1, 2, 3)  # => (1, 2, 3)
 ```
 
+Type of "args" is tuple.
+
+
 ### Keyword arguments
 ```python
 def keyword_args(**kwargs):
@@ -961,6 +965,9 @@ def keyword_args(**kwargs):
 # => {"big": "foot", "loch": "ness"}
 keyword_args(big="foot", loch="ness")
 ```
+
+Type of "kwargs" is dict.
+
 
 ### Returning multiple
 ```python
@@ -1281,6 +1288,182 @@ print(Yoki.name) # => YOKI
 print(Yoki.legs) # => 4
 Yoki.sound()     # => Woof!
 ```
+
+
+
+
+Python Type Hints (Since Python 3.5)
+--------
+
+
+### Variable
+```python
+string: str = "ha"
+times: int = 3
+
+print(string * times)  # => hahaha
+```
+
+
+### Variable
+```python
+# wrong hit, but can run correctly
+result: int = 1 + 2
+
+print(result)  # => 3
+```
+
+
+### Parameter
+```python
+def say(name: str, start: str = "Hi"):
+    return start + ", " + name
+
+print(say("Python"))  # => Hi, Python
+```
+
+
+### Positional argument
+```python
+def calc_summary(*args: int):
+    return sum(args)
+
+print(calc_summary(3, 1, 4))  # => 8
+```
+
+Indicate all arguments' type is int.
+
+
+### Returned
+```python
+def say_hello(name) -> str:
+    return "Hello, " + name
+
+var = "Python"
+print(say_hello(var))  # => Hello, Python
+```
+
+
+### Complex returned
+```python
+from typing import Union
+
+def resp200(meaningful) -> Union[int, str]:
+    return "OK" if meaningful else 200
+```
+
+Means returned value type may be int or str.
+
+
+### Keyword argument
+```python
+def calc_summary(**kwargs: int):
+    return sum(kwargs.values())
+
+print(calc_summary(a=1, b=2))  # => 3
+```
+
+Indicate all parameters' value type is int.
+
+
+### Multiple returns
+```python
+def resp200() -> (int, str):
+    return 200, "OK"
+```
+
+
+### Complex returned (3.10+)
+```python
+def resp200(meaningful) -> int | str:
+    return "OK" if meaningful else 200
+```
+
+Since Python 3.10
+
+
+### Property
+```python
+class Employee:
+    name: str
+    age: int
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.graduated: bool = False
+```
+
+
+### Hit self
+```python
+class Employee:
+    name: str
+    age: int
+
+    def set_name(self, name) -> "Employee":
+        self.name = name
+        return self
+```
+
+
+### Hit self (3.11+)
+```python
+from typing import Self
+
+class Employee:
+    name: str
+    age: int
+
+    def set_name(self: Self, name) -> Self:
+        self.name = name
+        return self
+```
+
+
+### Typing a type {.col-span-2}
+```python
+from typing import TypeVar, Type
+
+T = TypeVar("T")
+
+# "mapper" is a type, like int, str, MyClass and so on.
+# "default" is an instance of type T, such as 314, "string", MyClass() and so on.
+# returned is an instance of type T too.
+def converter(raw, mapper: Type[T], default: T) -> T:
+    try:
+        return mapper(raw)
+    except:
+        return default
+
+raw: str = input("Enter an integer: ")
+result: int = converter(raw, mapper=int, default=0)
+```
+
+
+### Typing a function {.col-span-2}
+```python
+from typing import TypeVar, Callable, Any
+
+T = TypeVar("T")
+
+def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
+    try:
+        return mapper(raw)
+    except:
+        return default
+
+# Callable[[Any], T] means a function declare like:
+# def anynomous(arg: Any) -> T:
+#     pass
+
+def is_success(value) -> bool:
+    return value in (0, "OK", True, "success")
+
+resp = dict(code=0, message="OK", data=[])
+successed: bool = converter(resp.message, mapper=is_success, default=False)
+```
+
 
 
 
