@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ## Setting like Kubernetes with 1 pod(our localhost) but 2 containers, so it will use port 80 to open the application  
+  reference_app:
+    build: ./
+    network_mode: host
+  reference_proxy:
+    build: ./nginx
+    network_mode: host
+
+  ## Setting if you want to use another port instead of 80
+  # reference_app:
+  #   build: ./
+  #   network_mode: service:reference_proxy
+  # reference_proxy:
+  #   build: ./nginx
+  #   ports:
+  #     - 3000:80
