@@ -815,6 +815,19 @@ else:
     print("Value is True")
 ```
 
+### match case
+
+```python
+x = 1
+match x:
+  case 0:
+    print("zero")
+  case 1:
+    print("one")
+  case _:
+    print("multiple")
+```
+
 
 
 
