@@ -370,6 +370,13 @@ Rewrite last commit message
 ```shell script
 $ git commit --amend -m "new message"
 ```
+
+Amend the latest commit without changing the commit message.
+```shell script
+$ git commit --amend --no-edit
+```
+
+
 See also: [Rewriting history](https://www.atlassian.com/git/tutorials/rewriting-history)
 
 
@@ -381,3 +388,54 @@ git config --global alias.ci commit
 git config --global alias.st status
 ```
 See also: [More Aliases](https://gist.github.com/johnpolacek/69604a1f6861129ef088)
+
+
+Advanced Git
+------------
+
+### Submodules
+
+Create a new submodule within your repository:
+```shell script
+$ git submodule add <repository_url> <path>
+```
+
+Clone a repository and initialize its submodules:
+```shell script
+$ git clone --recursive <repository_url>
+```
+Update all the submodules in your repository to the latest commit of their respective branches:
+```shell script
+$ git submodule update
+```
+
+Pull the latest changes from the remote repositories of the submodules and update them in your main repository:
+```shell script
+$ git submodule update --remote
+```
+
+Remove a submodule from your repository:
+```shell script
+$ git submodule deinit <path>
+$ git rm <path>
+$ git commit -m "Removed submodule"
+```
+
+### Cherry-picking
+Cherry-picking allows you to apply a specific commit from one branch to another branch.
+
+```shell script
+$ git cherry-pick <commit_hash>
+```
+
+### Reflog
+
+Display the reflog, showing the history of HEAD and branch movements:
+```shell script
+$ git reflog
+```
+
+Find the hash of the lost commit or branch using the reflog and then checkout to that hash to restore it:
+```shell script
+$ git checkout <commit_or_branch_hash>
+```
