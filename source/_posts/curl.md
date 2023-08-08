@@ -98,7 +98,9 @@ Getting Started
 
 -b name=val   # --cookie
 
--b FILE       # --cookie
+-b, --cookie FILE           # Load cookies from the specified file for the URL
+-c, --cookie-jar FILE       # Save cookies to the specified file from the URL
+
 -H "X-Foo: y" # --header
 
 --compressed  # use deflate/gzip
