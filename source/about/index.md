@@ -3,7 +3,7 @@ title: About
 date: 2020-03-26 20:45:53
 ---
 
-Welcome to [QuickRef] – your go-to resource for [describe content]. Designed with [developers/students/professionals] in mind, our quick reference provides a comprehensive collection of [topics/sections] to help you [solve problems/learn efficiently/etc.].
+Welcome to [QuickRef] – your go-to resource for [describing content]. Designed with [developers/students/professionals] in mind, our quick reference provides a comprehensive collection of [topics/sections] to help you [solve problems/learn efficiently/etc.].
 
 Our user-friendly interface ensures rapid access to the information you need. Whether you're [coding/studying/working], you'll find [specific benefits or standout features].
 
