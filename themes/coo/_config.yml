@@ -13,14 +13,14 @@ index_categories:
 
 # Home recommended posts
 index_recommends:
-  - chatgpt
-  - bash
-  - python
-  - javascript
+  - vscode
+  - dart
+  - docker
+  - kubernetes
+  - homebrew
   - go
   - vim
   - regex
-  - awk
 
 
 # Related popular posts
