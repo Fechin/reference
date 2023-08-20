@@ -499,7 +499,7 @@ int*ptr = &myAge; // pointer variable named ptr, used to store the address of my
 
 printf("%d\n", myAge); // print the value of myAge (43)
 
-printf("%p\n", \&myAge); // output the memory address of myAge (0x7ffe5367e044)
+printf("%p\n", &myAge); // output the memory address of myAge (0x7ffe5367e044)
 printf("%p\n", ptr); // use the pointer (0x7ffe5367e044) to output the memory address of myAge
 ```
 
