@@ -875,6 +875,7 @@ Getting Started
 
 ### Photography
 - [![Favicon](https://icon.horse/icon/portrait.vana.com) Portrait by vana](https://portrait.vana.com)
+- [![Favicon](https://icon.horse/icon/headshotgenerator.io) HeadshotGenerator](https://www.headshotgenerator.io/)
 - [![Favicon](https://icon.horse/icon/photorestoration.ai) Photorestoration](https://photorestoration.ai)
 - [![Favicon](https://icon.horse/icon/ecosnap.vercel.app) Ecosnap](https://ecosnap.vercel.app)
 - [![Favicon](https://icon.horse/icon/github.com/yemount/pose-animator) Pose animator](https://github.com/yemount/pose-animator)
