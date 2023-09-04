@@ -28,11 +28,23 @@ class Hello {
   }
 }
 ```
+
+Creates a project directory for new console application
+```cs
+$ dotnet new console
+```
+
+lists all the applications templates
+```cs
+$ dotnet new list 
+```
+
 Compiling and running (make sure you are in the project directory)
 ```shell script
 $ dotnet run
 Hello, world!
 ```
+
 
 
 ### Variables

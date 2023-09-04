@@ -5,6 +5,7 @@ recent_posts_limits: 4
 index_categories:
   - Programming
   - Toolkit
+  - Operating System
   - Linux Command
   - Python
   - Database
