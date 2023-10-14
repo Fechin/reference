@@ -690,7 +690,7 @@ for _ in 1...3 {
 
 ```swift
 var counter = 1
-var stopNum = Int. random(in: 1...10)
+var stopNum = Int.random(in: 1...10)
 
 while counter < stopNum {
   print(counter)
@@ -773,7 +773,7 @@ var moon = ["🌖", "🌗", "🌘", "🌑"]
 moon.insert("🌕", at: 0)
 // ["🌕", "🌖", "🌗", "🌘", "🌑"]
 
-moon. remove(at: 4)
+moon.remove(at: 4)
 // ["🌕", "🌖", "🌗", "🌘"]
 ```
 
@@ -1036,10 +1036,10 @@ var bookShelf = [
 bookShelf["The BFG"] = nil
 
 // remove value using .removeValue()
-bookShelf. removeValue(forKey: "Goodnight")
+bookShelf.removeValue(forKey: "Goodnight")
 
 // remove all values
-bookShelf. removeAll()
+bookShelf.removeAll()
 ```
 
 ### Modify the key-value pair {.row-span-2}
@@ -1055,7 +1055,7 @@ var change = [
 change["Quarter"] = .25
 
 // Change the value using .updateValue()
-change. updateValue(.10, forKey: "Dime")
+change.updateValue(.10, forKey: "Dime")
 ```
 
 To change the value of a key-value pair, use the `.updateValue()` method or the subscript syntax by appending brackets `[ ]` with the existing keys within to the name of the dictionary, then adding the assignment operator _(`= `)_ followed by the modified value
@@ -1120,11 +1120,11 @@ for (emoji, meaning) in emojiMeaning {
   print("\(emoji) is called '\(meaning)Emoji'")
 }
 // iterate through keys only
-for emoji in emojiMeaning. keys {
+for emoji in emojiMeaning.keys {
   print(emoji)
 }
 // iterate through values only
-for meaning in emojiMeaning. values {
+for meaning in emojiMeaning.values {
   print(meaning)
 }
 ```
@@ -1319,7 +1319,7 @@ struct Building {
   var floors: Int
   init(address: String, floors: Int) {
     self.address = address
-    self. floors = floors
+    self.floors = floors
   }
 }
 ```
@@ -1353,7 +1353,7 @@ struct Person {
 
   init(name: String, age: Int) {
     self.name = name
-    self. age = age
+    self.age = age
   }
 }
 
@@ -1521,11 +1521,11 @@ class BankAccount {
 
 ```swift
 class SavingsAccount: BankAccount {
-  varinterest = 0.0
+  var interest = 0.0
 
   func addInterest() {
     let interest = balance *0.005
-    self. deposit(amount: interest)
+    self.deposit(amount: interest)
   }
 }
 ```
@@ -1683,7 +1683,7 @@ enum Traffic {
 
 var currentTraffic: Traffic = .light
 
-currentTraffic. reportAccident()
+currentTraffic.reportAccident()
 // currentTraffic is now .heavy
 ```
 
