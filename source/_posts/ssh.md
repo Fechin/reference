@@ -84,7 +84,7 @@ $ scp user@server:/dir/* .
 | `~/.ssh/config`          | User-specific config |
 | `~/.ssh/id_{type}`       | Private key          |
 | `~/.ssh/id_{type}.pub`   | Public key           |
-| `~/.ssh/known_hosts`     | Logged in host       |
+| `~/.ssh/known_hosts`     | Known Servers        |
 | `~/.ssh/authorized_keys` | Authorized login key |
 
 
