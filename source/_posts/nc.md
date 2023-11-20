@@ -152,12 +152,12 @@ Suppose you want to transfer a directory over the network from A to B.
 
 Server (192.168.1.9)
 ```shell script
-$ nc -l 8000 | openssl enc -d -des3 -pass pass:password > file.txt
+$ openssl enc -des3 -in file.txt -pass pass:password | nc -l 8000
 ```
 
 Client
 ```shell script
-$ openssl enc -des3 -pass pass:password | nc 192.168.1.9 8000
+$ nc 192.168.1.9 8000 | openssl enc -des3 -d -pass pass:password -out file.txt
 ```
 
 Encrypt data before transfering over the network
