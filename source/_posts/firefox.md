@@ -23,8 +23,8 @@ Keyboard Shortcuts
 
 Shortcut | Action
 ---|---
-`Ctrl` `Left`  | Back
-`Ctrl` `Right`  | Forward
+`Alt` `Left`  | Back
+`Alt` `Right`  | Forward
 `Alt` `Home`  | Home
 `Ctrl` `O`  | Open File
 `Ctrl` `R`  | Reload
