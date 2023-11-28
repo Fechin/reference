@@ -91,7 +91,7 @@ This reference was made for Emacs 27.
 - [Git](https://cheatsheets.zip/git.html): This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 - [Grep](https://cheatsheets.zip/grep.html): This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program grep and assumes you already understand its usage.
 - [Netcat](https://cheatsheets.zip/nc.html): This cheat sheet provides various for using Netcat on both Linux and Unix.
-
+- [Taskset](https://cheatsheets.zip/taskset): This quick reference cheat sheet for tasket command.
 </details>
 
 <details>
