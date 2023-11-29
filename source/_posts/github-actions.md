@@ -1,15 +1,16 @@
 ---
 title: Github Actions
-date: 
+date: 2023-11-28
 icon: 
-background: 
+background: bg-[#808080]
 tags:
+  - Github
+  - CICD
 categories:
-- Other
-  intro: |
-    A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.
-plugins:
-    - copyCode
+  - Toolkit
+intro: A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.
+plugins: 
+  - copyCode
 ---
 
 Getting Started
@@ -33,16 +34,14 @@ jobs:
         run: echo "Hello World!"
 ```
 
-### Viewing your workflow runs
-1. On GitHub.com, navigate to the main page of the repository.
-2. Under your repository name, click `Actions`.
-3. In the left sidebar, click the workflow you want to display, in this example "hello-world"
+**Viewing your workflow runs**
+
+- On GitHub.com, navigate to the main page of the repository.
+- Under your repository name, click `Actions`.
+- In the left sidebar, click the workflow you want to display, in this example "hello-world"
 ----
 
-
-Workflow Syntax
-------------
-### Github Actions
+### Workflow Syntax 
 
 ```yaml
 name: learn-github-actions
@@ -59,7 +58,9 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 ```
-----
+
+### Workflow Syntax Descriptions
+
 | Line | Description |
 | :--- | :--- |
 | `name:` | Sets the name of the GitHub Actions workflow. It's a label used for identifying the workflow in the repository. |
@@ -72,10 +73,6 @@ jobs:
 | `uses:` | Used to specify an action to include as part of a step. For example, `actions/checkout@v4` checks out the repository, and `actions/setup-node@v3` sets up a Node environment. |
 | `with:` | Specifies additional parameters for the action. It's used in conjunction with `uses` to configure the action. |
 | `node-version:` | Contains parameter under `with`, specifying the version of Node.js to be set up by the `setup-node` action. In this case, it's set to version '14'. |
-
-
-Workflow References
-------------
 
 ### Events
 
@@ -94,10 +91,10 @@ jobs:
 
 ```
 
-### Event Triggers
+**Event Triggers**
 
 | Event Name                 | Description                                    |
-|----------------------------|------------------------------------------------|
+| :--- | :--- |
 | `push`                     | Triggers on a push to the repository.          |
 | `pull_request`             | Triggers on pull request events.               |
 | `pull_request_review`      | Triggers on pull request review events.        |
@@ -230,6 +227,8 @@ jobs:
 
 ### Environment Variables 
 
+Custom variable defined using environments.
+
 ```yaml
 jobs:
   build:
@@ -281,6 +280,8 @@ jobs:
 
 ### Caching Dependencies 
 
+Dependency caches stores downloaded packages or compiled binaries of your workflows.
+
 ```yaml
 jobs:
   build:
@@ -321,7 +322,7 @@ jobs:
         CI: true
 ```
 
-### Conditionas and Expressions 
+### Conditions and Expressions 
 
 Branch Conditions:
 
@@ -354,22 +355,25 @@ jobs:
 
 ### Workflow Commands 
 
+Depending on your OS, if you are running ubuntu-latest, bash commands should work 
+
 ```yaml
 steps:
   - name: Set environment variable
     run: echo "NAME=value" >> $GITHUB_ENV
-    # Depending on your OS, if you are running ubuntu-latest, bash commands should work 
 ```
 
 ### Concurrency
+
+The concurrency field creates a group based on the `github.head_ref`. If a new run starts within the same concurrency group, it cancels any in-progress runs.
 
 ```yaml
 jobs:
   my_job:
     runs-on: ubuntu-latest
-    concurrency: # the concurrency field creates a group based on the github.head_ref
+    concurrency: 
       group: ${{ github.head_ref }}
-      cancel-in-progress: true # If a new run starts within the same concurrency group, it cancels any in-progress runs.
+      cancel-in-progress: true
     steps:
     - name: Run a script
       run: echo "Running script..."
