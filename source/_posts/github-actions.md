@@ -1,16 +1,16 @@
 ---
 title: Github Actions
 date: 2023-11-28
-icon: icon-github
+icon: 
 background: bg-[#808080]
 tags:
-  - github
+  - Github
   - CICD
 categories:
-- Toolkit
+  - Toolkit
 intro: A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.
 plugins: 
-  -copyCode
+  - copyCode
 ---
 
 Getting Started
@@ -34,13 +34,14 @@ jobs:
         run: echo "Hello World!"
 ```
 
-### Viewing your workflow runs
-1. On GitHub.com, navigate to the main page of the repository.
-2. Under your repository name, click `Actions`.
-3. In the left sidebar, click the workflow you want to display, in this example "hello-world"
+**Viewing your workflow runs**
+
+- On GitHub.com, navigate to the main page of the repository.
+- Under your repository name, click `Actions`.
+- In the left sidebar, click the workflow you want to display, in this example "hello-world"
 ----
 
-### Workflow Syntax
+### Workflow Syntax 
 
 ```yaml
 name: learn-github-actions
@@ -57,7 +58,9 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 ```
-----
+
+### Workflow Syntax Descriptions
+
 | Line | Description |
 | :--- | :--- |
 | `name:` | Sets the name of the GitHub Actions workflow. It's a label used for identifying the workflow in the repository. |
@@ -88,10 +91,10 @@ jobs:
 
 ```
 
-### Event Triggers
+**Event Triggers**
 
 | Event Name                 | Description                                    |
-|----------------------------|------------------------------------------------|
+| :--- | :--- |
 | `push`                     | Triggers on a push to the repository.          |
 | `pull_request`             | Triggers on pull request events.               |
 | `pull_request_review`      | Triggers on pull request review events.        |
@@ -224,6 +227,8 @@ jobs:
 
 ### Environment Variables 
 
+Custom variable defined using environments.
+
 ```yaml
 jobs:
   build:
@@ -275,6 +280,8 @@ jobs:
 
 ### Caching Dependencies 
 
+Dependency caches stores downloaded packages or compiled binaries of your workflows.
+
 ```yaml
 jobs:
   build:
@@ -315,7 +322,7 @@ jobs:
         CI: true
 ```
 
-### Conditionas and Expressions 
+### Conditions and Expressions 
 
 Branch Conditions:
 
@@ -348,22 +355,25 @@ jobs:
 
 ### Workflow Commands 
 
+Depending on your OS, if you are running ubuntu-latest, bash commands should work 
+
 ```yaml
 steps:
   - name: Set environment variable
     run: echo "NAME=value" >> $GITHUB_ENV
-    # Depending on your OS, if you are running ubuntu-latest, bash commands should work 
 ```
 
 ### Concurrency
+
+The concurrency field creates a group based on the `github.head_ref`. If a new run starts within the same concurrency group, it cancels any in-progress runs.
 
 ```yaml
 jobs:
   my_job:
     runs-on: ubuntu-latest
-    concurrency: # the concurrency field creates a group based on the github.head_ref
+    concurrency: 
       group: ${{ github.head_ref }}
-      cancel-in-progress: true # If a new run starts within the same concurrency group, it cancels any in-progress runs.
+      cancel-in-progress: true
     steps:
     - name: Run a script
       run: echo "Running script..."
