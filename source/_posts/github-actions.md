@@ -1,15 +1,16 @@
 ---
 title: Github Actions
-date: 
-icon: 
-background: 
+date: 2023-08-21
+icon: icon-github
+background: bg-[#808080]
 tags:
+  - github
+  - CICD
 categories:
-- Other
-  intro: |
-    A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.
-plugins:
-    - copyCode
+- Toolkit
+intro: A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.
+plugins: 
+  -copyCode
 ---
 
 Getting Started
@@ -39,10 +40,7 @@ jobs:
 3. In the left sidebar, click the workflow you want to display, in this example "hello-world"
 ----
 
-
-Workflow Syntax
-------------
-### Github Actions
+### Workflow Syntax
 
 ```yaml
 name: learn-github-actions
@@ -72,10 +70,6 @@ jobs:
 | `uses:` | Used to specify an action to include as part of a step. For example, `actions/checkout@v4` checks out the repository, and `actions/setup-node@v3` sets up a Node environment. |
 | `with:` | Specifies additional parameters for the action. It's used in conjunction with `uses` to configure the action. |
 | `node-version:` | Contains parameter under `with`, specifying the version of Node.js to be set up by the `setup-node` action. In this case, it's set to version '14'. |
-
-
-Workflow References
-------------
 
 ### Events
 
