@@ -1,6 +1,6 @@
 ---
 title: Github Actions
-date: 2023-08-21
+date: 2023-11-28
 icon: icon-github
 background: bg-[#808080]
 tags:
