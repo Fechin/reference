@@ -471,11 +471,20 @@ public function isValid($value)
 ```
 Report an exception but continue handling the current request
 
- ### HTTP Exceptions
- ```php
- // page not found
- abort(404);
- ```
+### HTTP Exceptions
+```php
+// page not found
+abort(404);
+
+// Unauthorized
+abort(401);
+
+// Forbidden
+abort(403);
+
+// Server Error
+abort(500);
+```
 Generate an HTTP exception response using status code
 
 
