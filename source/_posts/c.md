@@ -1058,7 +1058,7 @@ int sum(int k) {
 void main(void) {
   printf("%f", sqrt(16)); // square root
   printf("%f", ceil(1.4)); // round up (round)
-  printf("%f", floor(1.4)); // round up (round)
+  printf("%f", floor(1.4)); // round down (round)
   printf("%f", pow(4, 3)); // x(4) to the power of y(3)
 }
 ```
