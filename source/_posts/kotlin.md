@@ -431,7 +431,7 @@ var myAge = 22
 var sisterAge = 21
 
 myAge == sisterAge // false
-myAge !== sisterAge // true
+myAge != sisterAge // true
 ```
 
 
