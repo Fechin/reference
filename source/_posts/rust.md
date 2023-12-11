@@ -386,7 +386,7 @@ let modulus: i32 = a % b;        // => 4
 | `g & h`  | Binary AND              |
 | `g | h`  | Binary OR               |
 | `g ^ h`  | Binary XOR              |
-| `g ~ h`  | Binary one's complement |
+| `!g`  | Binary one's complement |
 | `g << h` | Binary shift left       |
 | `g >> h` | Binary shift right      |
 
