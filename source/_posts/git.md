@@ -439,3 +439,6 @@ Find the hash of the lost commit or branch using the reflog and then checkout to
 ```shell script
 $ git checkout <commit_or_branch_hash>
 ```
+### Visual Git cheat sheet
+
+If you're a more visual person, check out this visual [Git cheat sheet](https://www.git-tower.com/learn/cheat-sheets/git) available in multiple languages as well as light and dark modes.
