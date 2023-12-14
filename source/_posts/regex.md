@@ -962,4 +962,6 @@ mysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 3, 1);
 7
 ```
 
+## Also see {.cols-1}
+* [Regex Cheat Sheet](https://www.git-tower.com/learn/cheat-sheets/regex) _(git-tower.com)_
 
