@@ -437,3 +437,4 @@ Also see
 --------
 - [VS Code Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) _(code.visualstudio.com)_
 - [VS Code Keyboard shortcuts for macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) _(code.visualstudio.com)_
+- [Visual Studio Code Cheat Sheet](https://www.git-tower.com/learn/cheat-sheets/vscode) _(git-tower.com)_
