@@ -885,3 +885,4 @@ Also see
 --------
 
 - [HTML 4.01 Specification](https://www.w3.org/TR/REC-html40/cover.html#minitoc) _(w3.org)_
+- [Visual HTML Cheat Sheet](https://www.git-tower.com/learn/cheat-sheets/html) _(Tower)_
