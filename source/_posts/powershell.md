@@ -376,3 +376,4 @@ New-Module -Name trevor -ScriptBlock {
 
 ## Also see {.cols-1}
 * [Microsoft Powershell](https://learn.microsoft.com/en-us/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.3) _(learn.microsoft.com)_
+* [PowerShell Cheat Sheet](https://www.git-tower.com/learn/cheat-sheets/powershell) _(git-tower.com)_
