@@ -1722,3 +1722,6 @@ const response = await fetch(endpoint, {cache: 'no-cache'});
   }
 }
 ```
+### Downloadable Visual JavaScript Cheat Sheet
+
+If you're a more visual person, check out this visual [JavaScript cheat sheet](https://www.git-tower.com/learn/cheat-sheets/javascript) available in light and dark modes.
