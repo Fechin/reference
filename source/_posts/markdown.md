@@ -238,3 +238,7 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 | \.         | \\\.   | dot                   |
 | \!         | \\\!   | exclamation mark      |
 {.show-header}
+
+### Visual Markdown cheat sheet
+
+If you're a more visual person, check out this visual [Markdown cheat sheet](https://www.git-tower.com/learn/cheat-sheets/markdown) available in light and dark versions.
