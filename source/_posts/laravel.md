@@ -734,6 +734,11 @@ if ($request->has(['name', 'email'])) {
 if ($request->hasAny(['name', 'email'])) {
     //
 }
+
+// if a file is present on request
+if ($request->hasFile('image')) {
+    // 
+}
 ```
 
 ### Old Input
