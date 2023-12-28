@@ -172,7 +172,7 @@ String s = 3 + 3 + "str";     // 6str
 String s = "3" + 3 + "str";   // 33str
 String s = "3" + "3" + "23";  // 3323
 String s = "" + 3 + 3 + "23"; // 3323
-String s = 3 + 3 + 23;        // 29
+String s = 3 + 3 + 23;        // Incompatible types
 ```
 
 
@@ -326,7 +326,7 @@ for (int i=0; i < arr.length; i++) {
 ### Loop (Read)
 ```java
 String[] arr = {"a", "b", "c"};
-for (int a: arr) {
+for (String a: arr) {
     System.out.print(a + " ");
 }
 // Outputs: a b c 
@@ -339,8 +339,9 @@ int[][] matrix = { {1, 2, 3}, {4, 5} };
 
 int x = matrix[1][0];  // 4
 // [[1, 2, 3], [4, 5]]
-Arrays.deepToString(matrix)
+Arrays.deepToString(matrix);
 
+int[][] a = matrix;
 for (int i = 0; i < a.length; ++i) {
   for(int j = 0; j < a[i].length; ++j) {
     System.out.println(a[i][j]);
