@@ -437,6 +437,63 @@ myAge != sisterAge // true
 
 
 
+
+Null-Safety
+----
+
+
+
+### Nullable vs Not-Nullable
+
+```kotlin
+var a: String = "Kotlin" // a can never be null
+a = null // compilation error
+var b: String? = "Kotlin" // b can be null
+b = null // ok
+```
+
+
+
+### Safe-Calls
+
+```kotlin
+val a = "Kotlin"
+val b: String? = null
+println(a.length) // can be called safely, because a is never null
+println(b?.length) // b?.length returns the length of b, or null if b is null
+println(a?.length) // Unnecessary safe call
+```
+
+
+
+### Chaining Safe-Calls
+
+```kotlin
+bob?.department?.head?.name // chain returns null if any property is null
+```
+
+
+
+### Elvis Operator
+
+```kotlin
+val l = b?.length ?: -1 // if b is null, return the default value -1
+// equval to:
+val l: Int = if (b != null) b.length else -1
+```
+
+
+
+### Not Null Assertion Operator
+
+```kotlin
+val l = b!!.length // throws a NullPointerException, if b is null
+```
+
+
+
+
+
 Collections
 ---
 
