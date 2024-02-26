@@ -436,6 +436,19 @@ if weather == "sunny" {
 
 
 
+### Range Operators
+
+```swift
+a...b      // numbers between a and b (including both a and b)
+a..<b      // numbers between a and b (including a but excluding b)
+...b      // numbers till b (including b)
+```
+
+-`a...b`  Closed Range
+-`a..<b`  Half-Open Range
+-`...b` One-Sided Range {.style-round cols-2}
+
+
 ### Ternary conditional operator
 
 ```swift
