@@ -427,13 +427,26 @@ if weather == "sunny" {
 "B" != "b" // true
 ```
 
--`<`  less than
--`>`  greater than
--`<=` less than or equal to
--`>=` greater than or equal to
--`==` is equal to
--`!=` is not equal to {.style-round cols-2}
+-`<`  less than <br>
+-`>`  greater than <br>
+-`<=` less than or equal to <br>
+-`>=` greater than or equal to <br>
+-`==` is equal to <br>
+-`!=` is not equal to 
 
+
+
+### Range Operators
+
+```swift
+a...b      // numbers between a and b (including both a and b)
+a..<b      // numbers between a and b (including a but excluding b)
+...b      // numbers till b (including b)
+```
+
+-`a...b`  Closed Range <br>
+-`a..<b`  Half-Open Range <br>
+-`...b` One-Sided Range
 
 
 ### Ternary conditional operator
