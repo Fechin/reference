@@ -162,11 +162,11 @@ Docs {.cols-3}
 
 ### Using loops
 ```html
-<% if (userLoggedIn) { %>
-  <p>Welcome, <%= username %>!</p>
-<% } else { %>
-  <p>Please log in.</p>
-<% } %>
+<ul>
+  <% for(i=0; i < users.length; i++) { %>
+  <li> <%= users[i].username %> </li>
+  <% } %>
+</ul>
 ```
 
 
