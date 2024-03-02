@@ -1513,7 +1513,7 @@ def is_success(value) -> bool:
     return value in (0, "OK", True, "success")
 
 resp = dict(code=0, message="OK", data=[])
-successed: bool = converter(resp.message, mapper=is_success, default=False)
+successed: bool = converter(resp["message"], mapper=is_success, default=False)
 ```
 
 
