@@ -424,7 +424,7 @@ switch(day) {
   case Mon: puts("Monday"); break;
   case Tues: puts("Tuesday"); break;
   case Wed: puts("Wednesday"); break;
-  case Thursday: puts("Thursday"); break;
+  case Thurs: puts("Thursday"); break;
   default: puts("Error!");
 }
 ```
