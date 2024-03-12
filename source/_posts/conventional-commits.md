@@ -13,15 +13,26 @@ plugins:
 
 
 
-Getting Started {.cols-2}
+Getting Started {.cols-3}
 ----
 
-### Getting Started
+### Quick Guide
 
-The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of
-rules for creating an explicit commit history; which makes it easier to write automated tools on top of.
 
-#### Syntax
+#### What's Conventional Commits
+- Easy-to-follow structure for commit messages.
+- Clearly states the nature of changes.
+- Ensures uniformity in commit messages across teams.
+- Enables automated versioning and changelog generation.
+- Makes commit history easy to browse.
+- Allows the specification of 'scope' for more clarity.
+- Has a special notation for breaking changes.
+- Facilitates better understanding among team members.
+- Makes the review process efficient.
+- Helps in future troubleshooting with descriptive commit messages.
+
+
+#### Structure
 
 ```javascript
 <type>[optional scope]: <description>
@@ -31,31 +42,45 @@ rules for creating an explicit commit history; which makes it easier to write au
 [optional footer(s)]
 ```
 
-#### Examples
-
-- feat: new feature
-- fix(scope): bug in scope
-- feat!: breaking change in API
-- chore(deps): update dependencies
-
 [Official Website](https://www.conventionalcommits.org/en) {.link-arrow}
 
+
+
+### Examples
+
+- feat: add jwt support
+- feat!: breaking change in API
+- feat!(ui): redesign user profile page
+- fix: fix SQL injection vulnerability
+- fix(database): resolve data race condition
+- docs: update setup section of README
+- style(login): correct indentation in login component
+- refactor: refactor user database schema
+- perf: optimize user retrieval code for faster response
+- test: add tests for jwt authentication
+- test(payment): add tests for the payment gateway
+- chore: update build script
+- chore(deps): update dependencies
+- build(docker): update Dockerfile to use node 14
+- ci: add job for integration tests
+- revert: revert commit a1b2c3d4e5f
+
+
+
 ### Types
-
-| Type     | Description                                                                                                 |
-|----------|-------------------------------------------------------------------------------------------------------------|
-| `feat`   | A new feature                                                                                               |
-| `chore`  | Other changes that don’t modify src or test files                                                           |
-| `fix`    | A bug fix                                                                                                   |
-| `docs`   | Documentation only changes                                                                                  |
-| `style`  | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |
-| refactor | A code change that neither fixes a bug nor adds a feature                                                   |
-| perf     | A code change that improves performance                                                                     |
-| `test`   | Adding missing tests or correcting existing tests                                                           |
-| build    | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |
-| ci       | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |
-| revert   | Reverts a previous commit                                                                                   |
-
+| Type     | Description                                                                                                      |
+|----------|------------------------------------------------------------------------------------------------------------------|
+| `feat`   | Introduces a new feature                                                                                         |
+| `fix`    | Fixes a bug                                                                                                      |
+| `docs`   | Changes in documentation only                                                                                    |
+| `style`  | Code changes that do not impact the functionality (e.g., formatting, white-space, etc)                           |
+| refactor | Code changes that neither fix a bug nor introduce a feature, typically improving code readability or structure   |
+| perf     | Code changes that improve performance                                                                            |
+| test     | Addition of missing tests or corrections to existing tests                                                       |
+| `chore`  | Changes that do not modify the source code or test files, like tweaking the build process or adding dependencies |
+| build    | Changes affecting the build system or external dependencies (e.g., changes in webpack, npm packages)             |
+| ci       | Changes to Continuous Integration configuration files and scripts (e.g., Travis, CircleCI, Jenkins)              |
+| revert   | Reverts a previously made commit                                                                                 |
 {.bold-first}
 
 
