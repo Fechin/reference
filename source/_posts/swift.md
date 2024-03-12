@@ -719,7 +719,7 @@ Arrays and collections
 
 
 
-### Array array
+### Array
 
 ```swift
 var scores = [Int]()
@@ -765,6 +765,15 @@ var snowfall = [2.4, 3.6, 3.4, 1.8, 0.0]
 var temp: [Int] = [33, 31, 30, 38, 44]
 ```
 
+### Initialize with default value
+
+```swift
+var teams = [Int](repeating: 0, count: 3)
+print(teams) // prints: [0, 0, 0]
+// or with Array type
+var sizes = Array<Int>(repeating: 0, count: 3)
+print(sizes) // prints: [0, 0, 0]
+```
 
 
 ### .append() method and += operator
@@ -792,7 +801,7 @@ moon.remove(at: 4)
 
 
 
-### Traverse the array
+### Iterate over an array
 
 ```swift
 var employees = ["Peter", "Denial", "Jame"]
@@ -877,6 +886,16 @@ if names.contains("Waldo"){
   print("Where's Waldo?")
 }
 // print: There's Waldo!
+```
+
+### .isEmpty property
+
+```swift
+var emptyList = [String]()
+print(emptyList.isEmpty)     // print: true
+
+var populatedList: [Int] = [1, 2, 3]
+print(populatedList.isEmpty) // print: false
 ```
 
 ### Iterate over a collection
