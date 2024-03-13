@@ -19,7 +19,7 @@ Getting Started {.cols-3}
 ### Quick Guide
 
 
-#### What's Conventional Commits
+#### Why Conventional Commits
 - Easy-to-follow structure for commit messages.
 - Clearly states the nature of changes.
 - Ensures uniformity in commit messages across teams.
