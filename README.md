@@ -39,6 +39,7 @@ Reference provides cheat sheets for the following:
 This cheat sheet provides a reference for common commands and features for Laravel 8.
 - [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 - [JSON](https://cheatsheets.zip/json.html): This is a quick reference cheat sheet for understanding and writing JSON format configuration files.
+- [Hook](https://cheatsheets.zip/hook.html): The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
 - [HTML](https://cheatsheets.zip/html.html): This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.
 - [GraphQL](https://cheatsheets.zip/graphql.html): This quick reference cheat sheet provides a brief overview of GraphQL.
 - [C++](https://cheatsheets.zip/cpp.html): C++ quick reference cheat sheet that provides basic syntax and methods.
