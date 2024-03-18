@@ -383,3 +383,188 @@ export default function Weather(props) {
 }
 ```
 Note: Make sure to import Axios first to your project.
+
+
+HOOKS
+------------
+
+### useState Hook
+
+```javascript
+import React, { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+Note: The useState Hook is a built-in React Hook that allows functional components to manage local state. It provides a way to declare state variables and update them within a functional component.
+Example code illustrating how to use it
+
+
+### Multiple State Variable Declaration
+
+```javascript
+import React, { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState("");
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const toggleCompletion = () => {
+    setIsCompleted(!isCompleted);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+
+      <input type="text" value={name} onChange={handleNameChange} placeholder="Enter your name" />
+
+      <label>
+        <input type="checkbox" checked={isCompleted} onChange={toggleCompletion} />
+        Completed
+      </label>
+    </div>
+  );
+}
+
+export default Counter;
+```
+Note: You can declare multiple state variables using the useState Hook by calling it multiple times in a functional component. Each call to useState manages a separate piece of state.
+
+### Input State Management
+
+```javascript
+import { useState } from "react";
+
+function FormExample() {
+  const [formData, setFormData] = useState({name: "",email: "",message: ""});
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
+    );
+};
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="name">Name:</label>
+      <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
+
+      <label htmlFor="email">Email:</label>
+      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
+
+      <label htmlFor="message">Message:</label>
+      <textarea id="message" name="message" value={formData.message} onChange={handleChange}/>
+
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default FormExample;
+```
+
+### useEffect Hook
+
+```javascript
+import React, { useState, useEffect } from "react";
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prevSeconds) => prevSeconds + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <div>Seconds: {seconds}</div>;
+}
+
+export default Timer;
+```
+Note: The useEffect Hook in React is used for performing side effects in functional components. It allows you to execute code based on component lifecycle events like mounting, updating, and unmounting.
+
+### Fetch API using useEffect
+
+```javascript
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+function UserList() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/users")
+      .then(response => {
+        setUsers(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching users:", error);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h2>User List</h2>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default UserList;
+```
+Note: Make sure to import Axios first to your project.
+
+###  Custom Hook creation useLocalStorage
+
+```javascript
+import { useState, useEffect } from "react";
+
+function useLocalStorage(key, initialValue) {
+  const [value, setValue] = useState(() => {
+    const storedValue = localStorage.getItem(key);
+    return storedValue !== null ? JSON.parse(storedValue) : initialValue;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+
+  return [value, setValue];
+}
+
+export default useLocalStorage;
+```
+Note: Custom Hooks are reusable functions in React that contain logic shared across multiple components. They allow you to extract stateful logic from components into standalone functions.
