@@ -6,9 +6,9 @@ tags:
   - response
   - server
 categories:
-  - HTTP
+  - Other
 intro: |
-The HTTP status codes cheat sheet. A quick reference to every HTTP status code.
+  The HTTP status codes cheat sheet. A quick reference to every HTTP status code.
 plugins:
   - tooltip
 ---
