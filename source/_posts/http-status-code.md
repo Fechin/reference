@@ -25,12 +25,6 @@ HTTP Status code
 - [4xx: Client Error](#4xx-client-error){data-tooltip="It means the request contains incorrect syntax or cannot be fulfilled."}
 - [5xx: Server Error](#5xx-server-error){data-tooltip="It means the server failed to fulfill an apparently valid request."}
 
-### 1xx. Information
-* [100: Continue](https://tools.ietf.org/html/rfc7231#section-6.2.1){data-tooltip="Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request."}
-* [101: Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2){data-tooltip="The server switches protocol."}
-* [102: Processing](https://tools.ietf.org/html/rfc2518#section-10.1){data-tooltip="An interim response used to inform the client that the server has accepted the complete request, but has not yet completed it."}
-* [103: Early Hints](https://tools.ietf.org/html/rfc8297){data-tooltip="Indicates to the client that the server is likely to send a final response with the header fields included in the informational response."}
-
 
 ### 2xx. Successful {.row-span-2}
 * [200: OK](https://tools.ietf.org/html/rfc7231#section-6.3.1){data-tooltip="The request is OK."}
@@ -44,19 +38,8 @@ HTTP Status code
 * [208: Already Reported](https://tools.ietf.org/html/rfc5842#section-7.1){data-tooltip="Used inside a DAV: propstat response element to avoid enumerating the internal members of multiple bindings to the same collection repeatedly."}
 * [226: IM Used](https://tools.ietf.org/html/rfc3229#section-10.4.1){data-tooltip="The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance."}
 
-### 3xx. Redirection
-* [300: Multiple Choices](https://tools.ietf.org/html/rfc7231#section-6.4.1){data-tooltip="A link list. The user can select a link and go to that location. Maximum five addresses."}
-* [301: Moved Permanently](https://tools.ietf.org/html/rfc7231#section-6.4.2){data-tooltip="The requested page has moved to a new URL."}
-* [302: Found](https://tools.ietf.org/html/rfc7231#section-6.4.3){data-tooltip="The requested page has moved temporarily to a new URL."}
-* [303: See Other](https://tools.ietf.org/html/rfc7231#section-6.4.4){data-tooltip="The requested page can be found under a different URL."}
-* [304: Not Modified](https://tools.ietf.org/html/rfc7232#section-4.1){data-tooltip="This is the response code to an If-Modified-Since or If-None-Match header, where the URL has not been modified since the specified date."}
-* [305: Use Proxy](https://tools.ietf.org/html/rfc7231#section-6.4.5){data-tooltip="The requested URL must be accessed through the proxy mentioned in the Location header."}
-* [306: Unused](https://tools.ietf.org/html/rfc7231#section-6.4.6){data-tooltip="This code was used in a previous version. It is no longer used, but the code is reserved."}
-* [307: Temporary Redirect](https://tools.ietf.org/html/rfc7231#section-6.4.7){data-tooltip="The requested page has moved temporarily to a new URL."}
-* [308: Permanent Redirect](https://tools.ietf.org/html/rfc7538#section-3){data-tooltip="The request and all future requests should be repeated using another URI."}
 
-
-### 4xx. Client Error   {.row-span-3}
+### 4xx. Client Error {.row-span-3}
 * [400: Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1){data-tooltip="The server did not understand the request."}
 * [401: Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1){data-tooltip="The requested page needs a username and a password."}
 * [402: Payment Required](https://tools.ietf.org/html/rfc7231#section-6.5.2){data-tooltip="You can not use this code yet."}
@@ -81,6 +64,26 @@ HTTP Status code
 * [429: Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4){data-tooltip="The user has sent too many requests in a given amount of time."}
 * [431: Request Header Fields Too Large](https://tools.ietf.org/html/rfc6585#section-5){data-tooltip="The server is unwilling to process the request because its header fields are too large."}
 * [451: Unavailable For Legal Reasons](https://datatracker.ietf.org/doc/html/rfc7725#section-3){data-tooltip="This status code indicates that the server is denying access to the resource as a consequence of a legal demand."}
+
+
+### 1xx. Information
+* [100: Continue](https://tools.ietf.org/html/rfc7231#section-6.2.1){data-tooltip="Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request."}
+* [101: Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2){data-tooltip="The server switches protocol."}
+* [102: Processing](https://tools.ietf.org/html/rfc2518#section-10.1){data-tooltip="An interim response used to inform the client that the server has accepted the complete request, but has not yet completed it."}
+* [103: Early Hints](https://tools.ietf.org/html/rfc8297){data-tooltip="Indicates to the client that the server is likely to send a final response with the header fields included in the informational response."}
+
+
+### 3xx. Redirection
+* [300: Multiple Choices](https://tools.ietf.org/html/rfc7231#section-6.4.1){data-tooltip="A link list. The user can select a link and go to that location. Maximum five addresses."}
+* [301: Moved Permanently](https://tools.ietf.org/html/rfc7231#section-6.4.2){data-tooltip="The requested page has moved to a new URL."}
+* [302: Found](https://tools.ietf.org/html/rfc7231#section-6.4.3){data-tooltip="The requested page has moved temporarily to a new URL."}
+* [303: See Other](https://tools.ietf.org/html/rfc7231#section-6.4.4){data-tooltip="The requested page can be found under a different URL."}
+* [304: Not Modified](https://tools.ietf.org/html/rfc7232#section-4.1){data-tooltip="This is the response code to an If-Modified-Since or If-None-Match header, where the URL has not been modified since the specified date."}
+* [305: Use Proxy](https://tools.ietf.org/html/rfc7231#section-6.4.5){data-tooltip="The requested URL must be accessed through the proxy mentioned in the Location header."}
+* [306: Unused](https://tools.ietf.org/html/rfc7231#section-6.4.6){data-tooltip="This code was used in a previous version. It is no longer used, but the code is reserved."}
+* [307: Temporary Redirect](https://tools.ietf.org/html/rfc7231#section-6.4.7){data-tooltip="The requested page has moved temporarily to a new URL."}
+* [308: Permanent Redirect](https://tools.ietf.org/html/rfc7538#section-3){data-tooltip="The request and all future requests should be repeated using another URI."}
+
 
 ### 5xx. Server Error
 * [500: Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1){data-tooltip="The request was not completed. The server met an unexpected condition."}
