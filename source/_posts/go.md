@@ -1006,8 +1006,46 @@ func main() {
   var r Shape = Rectangle{Length: 3, Width: 4}
   fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
 }
-```
 
+```
+-------------
+
+### Go generics
+
+
+```go
+package main
+
+import "fmt"
+
+// comparable represents types that can be compared.
+type comparable interface {
+	int | float64 | string
+}
+
+// Max returns the maximum of two comparable values.
+func Max[T comparable](a, b T) T {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func main() {
+	// Find the maximum of two integers.
+	maxInt := Max(10, 20)
+	fmt.Println("Max integer:", maxInt) // Output: Max integer: 20
+
+	// Find the maximum of two floats.
+	maxFloat := Max(3.14, 2.71)
+	fmt.Println("Max float:", maxFloat) // Output: Max float: 3.14
+
+	// Find the maximum of two strings.
+	maxString := Max("apple", "banana")
+	fmt.Println("Max string:", maxString) // Output: Max string: banana
+}
+
+```
 Miscellaneous
 -------------
 
@@ -1037,6 +1075,8 @@ Miscellaneous
 - import
 - return
 - var
+- iota
+
 {.cols-3 .marker-none}
 
 ### Operators and punctuation
