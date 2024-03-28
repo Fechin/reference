@@ -990,6 +990,7 @@ Getting Started
 
 
 ### Dev
+- [![Favicon](https://icon.horse/icon/apyhub.com)ApyHub](https://apyhub.com)
 - [![Favicon](https://icon.horse/icon/edenai.co) Eden ai](https://edenai.co)
 - [![Favicon](https://icon.horse/icon/meetmaya.world) Maya ai](https://meetmaya.world)
 - [![Favicon](https://icon.horse/icon/testkit.app) Testkit](https://testkit.app)
