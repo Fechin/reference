@@ -378,7 +378,7 @@ then, true || evaluates to false and eventually returns true
 
 ```kotlin
 var studied = true
-var well Rested = true
+var wellRested = true
 
 if (wellRested) {
   println("Good luck today!")
