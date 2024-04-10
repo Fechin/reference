@@ -558,7 +558,7 @@ ON t(c3,c4)
 Drop an index
 
 ```sql
-DROP INDEX idx_name;
+DROP INDEX idx_name ON t;
 ```
 
 
