@@ -277,7 +277,7 @@ println!("Share {cs} for developers");
 
 ```rust
 // Creating an empty string object
-let my_string = String::new;
+let my_string = String::new();
 
 // Converting to a string object
 let S_string = a_string.to_string()
