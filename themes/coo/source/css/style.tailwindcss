@@ -28,6 +28,11 @@ html.scrollbar {
     scroll-padding-top: 20px;
 }
 
+/***Scrollbars***/
+:root.dark {
+    color-scheme: dark;
+}
+
 .max-container {
     max-width: 1320px;
     @apply mx-auto p-3;
