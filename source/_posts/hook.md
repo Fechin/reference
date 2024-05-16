@@ -4,18 +4,17 @@ date: 2024-03-13 18:20:00
 icon: icon-style
 background: bg-[#58aee9]
 tags:
-    - script
-    - interpret
+  - script
+  - interpret
 categories:
-    - Programming
+  - Programming
 intro: |
-    The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
+  The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Getting Started
----------------
+## Getting Started
 
 ### Introduction
 
@@ -65,8 +64,7 @@ install
 
 This is how you can install it on `Windows`.
 
-Types and Values
-----------------
+## Types and Values
 
 ### Basic Types
 
@@ -93,7 +91,7 @@ Bool is a boolean type. So, it can be `true` or `false`.
 ```js
 let x = 0;
 let degree = 45; // integer number
-let pi = 3.14;   // floating-point number
+let pi = 3.14; // floating-point number
 ```
 
 Numbers can be integers or floating-point.
@@ -124,11 +122,7 @@ Ranges are a sequence of integers.
 ### Arrays
 
 ```js
-let fruits = [
-  "apple",
-  "banana",
-  "cherry"
-];
+let fruits = ["apple", "banana", "cherry"];
 
 println(fruits);
 // ["apple", "banana", "cherry"]
@@ -153,9 +147,10 @@ Records maps fields to values.
 let x = nil;
 var y;
 ```
+
 ```js
-println(x);  // nil
-println(y);  // nil
+println(x); // nil
+println(y); // nil
 ```
 
 `nil` is the absence of a value.
@@ -175,8 +170,7 @@ if ({}) "true" else "false";    // true
 
 Just `nil` and `false` are falsy.
 
-Syntax
-------
+## Syntax
 
 ### Comments
 
@@ -192,6 +186,7 @@ Hook supports single-line comments only. Sorry!
 
 ### Semi-colons {.col-span-2}
 
+<!-- prettier-ignore -->
 ```js
 println(1) ; println(2) ; println(3) ;
 println(4) ; println(5)
@@ -216,14 +211,14 @@ Blocks are used to define a scope.
 
 ### Reserved words
 
-|         |          |            |            |
-| ------- | :------- | :--------- | :--------- |
-| `as`    | `break`  | `continue` | `do`       |
-| `else`  | `false`  | `fn`       | `for`      |
-| `from`  | `if`     | `import`   | `in`       |
-| `inout` | `let`    | `loop`     | `match`    |
-| `nil`   | `return` | `struct`   | `trait`    |
-| `true`  |  `var`   | `while`    |            |
+|         |          |            |         |
+| ------- | :------- | :--------- | :------ |
+| `as`    | `break`  | `continue` | `do`    |
+| `else`  | `false`  | `fn`       | `for`   |
+| `from`  | `if`     | `import`   | `in`    |
+| `inout` | `let`    | `loop`     | `match` |
+| `nil`   | `return` | `struct`   | `trait` |
+| `true`  | `var`    | `while`    |         |
 
 There are few reserved words.
 
@@ -240,15 +235,14 @@ var _123;
 
 Identifiers are case-sensitive.
 
-Variables
----------
+## Variables
 
 ### Variables
 
 ```js
-var x;      // x contains nil
-x = 5;      // now, x contains a number
-x = "foo";  // a string
+var x; // x contains nil
+x = 5; // now, x contains a number
+x = "foo"; // a string
 
 println(x);
 ```
@@ -260,9 +254,9 @@ Values have types, but variables don't.
 ```js
 let x = 5;
 
-x = 10;    // error: cannot assign to immutable variable `x`
+x = 10; // error: cannot assign to immutable variable `x`
 
-let y;     // error: unexpected token `;`
+let y; // error: unexpected token `;`
 ```
 
 Immutable variables must be initialized when declared.
@@ -276,8 +270,8 @@ let x = 5;
   println(x); // 10
   println(y); // 15
 }
-println(x);   // 5
-println(y);   // error: variable `y` is used but not defined
+println(x); // 5
+println(y); // error: variable `y` is used but not defined
 ```
 
 When a heap-allocated variable goes out of scope, it is automatically deallocated.
@@ -290,13 +284,12 @@ let x = 5;
   let x = 10; // shadows the outer `x`
   println(x); // 10
 }
-println(x);   // 5
+println(x); // 5
 ```
 
 Variables can be shadowed.
 
-Operators and Expressions
--------------------------
+## Operators and Expressions
 
 ### Arithmetic
 
@@ -306,7 +299,7 @@ println(5 - 10); // -5
 println(5 * 10); // 50
 println(5 / 10); // 0.5
 println(5 % 10); // 5
-println(-5);     // -5
+println(-5); // -5
 ```
 
 The basic arithmetic operators.
@@ -316,8 +309,8 @@ The basic arithmetic operators.
 ```js
 println(5 == 10); // false
 println(5 != 10); // true
-println(5 < 10);  // true
-println(5 > 10);  // false
+println(5 < 10); // true
+println(5 > 10); // false
 println(5 <= 10); // true
 println(5 >= 10); // false
 ```
@@ -329,7 +322,7 @@ The comparison operators.
 ```js
 println(true && false); // false
 println(true || false); // true
-println(!true);         // false
+println(!true); // false
 ```
 
 The logical operators.
@@ -340,7 +333,7 @@ The logical operators.
 println(5 & 10); // 0
 println(5 | 10); // 15
 println(5 ^ 10); // 15
-println(~5);     // -6
+println(~5); // -6
 println(5 << 1); // 10
 println(5 >> 1); // 2
 ```
@@ -351,18 +344,18 @@ The bitwise and shift operators.
 
 ```js
 var x = 5; // 5
-x += 10;   // 15
-x -= 10;   // 5
-x *= 10;   // 50
-x /= 10;   // 5
-x %= 10;   // 5
-x &= 10;   // 0
-x |= 10;   // 10
-x ^= 5;    // 15
-x <<= 5;   // 480
-x >>= 5;   // 15
-x++;       // 16
-x--;       // 15
+x += 10; // 15
+x -= 10; // 5
+x *= 10; // 50
+x /= 10; // 5
+x %= 10; // 5
+x &= 10; // 0
+x |= 10; // 10
+x ^= 5; // 15
+x <<= 5; // 480
+x >>= 5; // 15
+x++; // 16
+x--; // 15
 ```
 
 The assignment operators.
@@ -379,8 +372,7 @@ println(y);
 
 In Hook, the ternary operator is `if else`.
 
-Branching
----------
+## Branching
 
 ### If
 
@@ -402,10 +394,8 @@ let x = 11;
 
 if (x == 5) {
   println("x is 5");
-
 } else if (x == 10) {
   println("x is 10");
-
 } else {
   println("x is neither 5 nor 10");
 }
@@ -424,14 +414,13 @@ match (x) {
   2 => println("two");
   3 => println("three");
   _ => println("other");
-} 
+}
 // other
 ```
 
 The `match` statement.
 
-Looping
--------
+## Looping
 
 ### While
 
@@ -486,7 +475,8 @@ The unconditional `loop`.
 
 ```js
 var i = 0;
-``` 
+```
+
 ```rs
 loop {
   if (i == 5) break;
@@ -503,7 +493,8 @@ Use `break` to exit a loop.
 
 ```js
 var i = 0;
-``` 
+```
+
 ```rs
 loop {
   i += 1;
@@ -518,17 +509,16 @@ if (i == 5) break;
 
 Use `continue` to skip the rest of the loop body.
 
-Strings
--------
+## Strings
 
 ### Indexing a string
 
 ```js
 let s = "Hello";
 
-println(s[0]);   // H
-println(s[1]);   // e
-println(s[4]);   // o
+println(s[0]); // H
+println(s[1]); // e
+println(s[4]); // o
 ```
 
 Indexing a string returns a 1-character string.
@@ -555,17 +545,16 @@ println(greeting);
 
 Use the `+` operator to concatenate strings.
 
-Arrays
-------
+## Arrays
 
 ### Indexing an array
 
 ```js
 let a = [1, 2, 3];
 
-println(a[0]);     // 1
-println(a[1]);     // 2
-println(a[2]);     // 3
+println(a[0]); // 1
+println(a[1]); // 2
+println(a[2]); // 3
 ```
 
 Indexing an array returns an element.
@@ -634,8 +623,7 @@ println(c);
 
 Get the difference between two arrays.
 
-Functions and Closures
-----------------------
+## Functions and Closures
 
 ### Function declaration
 
@@ -681,6 +669,7 @@ Anonymous functions are also supported.
 ```js
 let pi = 3.14;
 ```
+
 ```rs
 fn area(r) {
   return pi * r * r;
@@ -752,17 +741,16 @@ There are many built-in functions.
 
 ### More built-in functions
 
-|             |            |             | 
-| ----------- | :--------- | :---------- | 
-| `print`     | `println`  | `type`      |
-| `is_nil`    | `is_bool`  | `to_number` |
-| `to_string` | `hex`      | `len`       |
-| `exit`      | `assert`   | `panic`     |
+|             |           |             |
+| ----------- | :-------- | :---------- |
+| `print`     | `println` | `type`      |
+| `is_nil`    | `is_bool` | `to_number` |
+| `to_string` | `hex`     | `len`       |
+| `exit`      | `assert`  | `panic`     |
 
 See: [Built-in Functions](https://github.com/hook-lang/hook/blob/main/docs/built-in.md)
 
-Structs
--------
+## Structs
 
 ### Structs
 
@@ -771,6 +759,7 @@ struct Point {
   x, y
 }
 ```
+
 ```js
 let p = Point { 5, 10 };
 
@@ -801,8 +790,7 @@ println(p);
 
 Update a value of a field in a record.
 
-Destructuring
--------------
+## Destructuring
 
 ### Destructuring an array
 
@@ -810,8 +798,8 @@ Destructuring
 let a = [1, 2];
 let [x, y] = a;
 
-println(x);     // 1
-println(y);     // 2
+println(x); // 1
+println(y); // 2
 ```
 
 Varuables are declared and assigned.
@@ -835,20 +823,20 @@ let a = [1, 2];
 let [x] = a;
 let [_, y] = a;
 
-println(x);     // 1
-println(y);     // 2
+println(x); // 1
+println(y); // 2
 ```
 
 Use `_` skip leading or middle elements.
 
-Modularity
-----------
+## Modularity
 
 ### Importing a module
 
 ```js
 import math;
 ```
+
 ```js
 println(math.sqrt(25));
 // 5
@@ -874,6 +862,7 @@ Return a record with the symbols to export.
 ```python
 import "./my_module.hk" as my;
 ```
+
 ```js
 println(my.useful());
 // Nothing
@@ -897,11 +886,11 @@ Use `{}` to import specific symbols.
 
 ### Core modules
 
-|            |          |          |           |
-| ---------- | :------- | :------- | :-------- |
-| `math`     | `os`     | `io`     | `numbers` |
-| `strings`  | `arrays` | `utf8`   | `hashing` |
-| `encoding` | `socket` | `json`   | `lists`   |
+|            |          |        |           |
+| ---------- | :------- | :----- | :-------- |
+| `math`     | `os`     | `io`   | `numbers` |
+| `strings`  | `arrays` | `utf8` | `hashing` |
+| `encoding` | `socket` | `json` | `lists`   |
 
 See: [Core Modules](https://github.com/hook-lang/hook/blob/main/docs/core-modules.md)
 
@@ -931,6 +920,7 @@ Printing to `stderr` using `io` module.
 ```python
 import hashing as h;
 ```
+
 ```js
 let d = h.sha256("Hello, world!");
 
@@ -945,20 +935,20 @@ println(hex(d));
 ```js
 import json;
 ```
+
 ```js
 let j = '{"x": 1, "y": 2}';
 let p = json.decode(j);
 
-println(p.x);               // 1
+println(p.x); // 1
 
 let k = json.encode(p);
-println(type(k));           // string
+println(type(k)); // string
 ```
 
 Use `json` module for working with JSON.
 
-Error Handling
---------------
+## Error Handling
 
 ### Errors {.col-span-2}
 
@@ -975,7 +965,7 @@ Hook uses panic mode for error handling. When an error occurs, the interpreter s
 ### Syntax error
 
 ```js
-println("Hello, World!")
+println("Hello, World!");
 
 // syntax error: unexpected end of file
 //   at main() in example.hk:1,25
