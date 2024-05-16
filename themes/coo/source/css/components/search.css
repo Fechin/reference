@@ -1,58 +1,60 @@
 #mysearch {
-    @apply animate-in fade-in duration-200;
+  @apply duration-200 animate-in fade-in;
 }
 
 #mysearch-box {
-    animation: 200ms cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both running openAnimation;
+  animation: 200ms cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both running openAnimation;
 }
 
 #mysearch em {
-    @apply not-italic text-emerald-500;
+  @apply not-italic text-emerald-500;
 }
 
 .text-color-inherit {
-    color: inherit
+  color: inherit;
 }
 
 @media (min-width: 1200px) {
-    .xl\:max-h-832 {
-        max-height: 800px
-    }
+  .xl\:max-h-832 {
+    max-height: 800px;
+  }
 }
 
 #mysearch-list li.inactive {
-    @apply border-slate-200;
+  @apply border-slate-200;
 }
 
 #mysearch-list li.inactive > a.link {
-    @apply text-slate-900 bg-transparent;
+  @apply bg-transparent text-slate-900;
 }
 
 #mysearch-list li.inactive .icon-enter {
-    @apply hidden;
+  @apply hidden;
 }
 
-#mysearch-list li.inactive i.icon, #mysearch-list li.inactive .sub-intro {
-    @apply text-slate-400;
+#mysearch-list li.inactive i.icon,
+#mysearch-list li.inactive .sub-intro {
+  @apply text-slate-400;
 }
 
 #mysearch-list li.active {
-    @apply border-transparent z-10 shadow-sm;
+  @apply z-10 border-transparent shadow-sm;
 }
 
 #mysearch-list li.active > a {
-    @apply text-white bg-emerald-500 shadow;
+  @apply bg-emerald-500 text-white shadow;
 }
 
 #mysearch-list li.active em {
-    color: inherit;
-    @apply underline;
+  color: inherit;
+  @apply underline;
 }
 
 #mysearch-list li.active .icon-enter {
-    @apply block;
+  @apply block;
 }
 
-#mysearch-list li.active i.icon, #mysearch-list li.active .sub-intro {
-    @apply text-white;
+#mysearch-list li.active i.icon,
+#mysearch-list li.active .sub-intro {
+  @apply text-white;
 }

@@ -1,69 +1,71 @@
 #carbonads {
-    display: flex;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    max-width: 315px;
-    background-color: hsl(0, 0%, 98%);
-    box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03), 0 1px 2px rgba(102, 119, 136, 0.3);
-    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    @apply dark:bg-slate-800 rounded-lg z-20 dark:shadow-3xl;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  max-width: 315px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow:
+    0 6px 8px rgba(102, 119, 136, 0.03),
+    0 1px 2px rgba(102, 119, 136, 0.3);
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  @apply z-20 rounded-lg dark:bg-slate-800 dark:shadow-3xl;
 }
 
 #carbonads > span {
-    display: block;
-    position: relative;
-    padding: 6px;
-    background-color: #fff;
-    @apply dark:bg-slate-800 rounded-lg;
+  display: block;
+  position: relative;
+  padding: 6px;
+  background-color: #fff;
+  @apply rounded-lg dark:bg-slate-800;
 }
 
 #carbonads .carbon-wrap {
-    display: flex;
+  display: flex;
 }
 
 #carbonads .carbon-img {
-    margin-right: 10px;
-    line-height: 1;
+  margin-right: 10px;
+  line-height: 1;
 }
 
-#carbonads .carbon-img > img{
-    @apply rounded-lg;
+#carbonads .carbon-img > img {
+  @apply rounded-lg;
 }
 
 #carbonads .carbon-text {
-    margin-bottom: 12px;
-    font-size: 12px;
-    line-height: 1.45;
-    text-decoration: none;
-    color: #637381;
-    @apply dark:text-slate-300;
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  text-decoration: none;
+  color: #637381;
+  @apply dark:text-slate-300;
 }
 
 #carbonads .carbon-poweredby {
-    position: absolute;
-    bottom: 10px;
-    left: 152px;
+  position: absolute;
+  bottom: 10px;
+  left: 152px;
 
-    font-size: 8px;
-    font-weight: 500;
-    line-height: 1;
-    text-decoration: none;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-    color: #c5cdd0;
-    @apply dark:text-slate-600;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #c5cdd0;
+  @apply dark:text-slate-600;
 }
 
 @keyframes scale-up-center {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

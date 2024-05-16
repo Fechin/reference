@@ -1,15 +1,15 @@
 yel {
-    @apply text-amber-600;
+  @apply text-amber-600;
 }
 
 red {
-    @apply text-red-600;
+  @apply text-red-600;
 }
 
 pur {
-    @apply text-purple-600;
+  @apply text-purple-600;
 }
 
 blu {
-    @apply text-blue-600;
+  @apply text-blue-600;
 }
