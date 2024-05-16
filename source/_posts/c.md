@@ -148,14 +148,14 @@ char greetings[] = "Hello World!";
 printf("%s", greetings);
 ```
 
-access string
+Access string
 
 ```c
 char greetings[] = "Hello World!";
 printf("%c", greetings[0]);
 ```
 
-modify string
+Modify string
 
 ```c
 char greetings[] = "Hello World!";
@@ -273,7 +273,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-break out of the loop when `i` is equal to `4`
+Break out of the loop when `i` is equal to `4`
 
 ```c
 for (int i = 0; i < 10; i++) {
@@ -325,7 +325,7 @@ printf("%d", myNumbers[0]);
 // output 25
 ```
 
-change array elements
+Change array elements
 
 ```c
 int myNumbers[] = {25, 50, 75, 100};
@@ -345,7 +345,7 @@ for (i = 0; i < 4; i++) {
 }
 ```
 
-set array size
+Set array size
 
 ```c
 // Declare an array of four integers:
@@ -364,7 +364,7 @@ myNumbers[3] = 100;
 enum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun };
 ```
 
-define enum variable
+Define enum variable
 
 ```c
 enum week a, b, c;
@@ -498,7 +498,7 @@ int sum3 = sum2 + sum2; // 800 (400 + 400)
 
 ### Assignment operator
 
-| example              | as                        |
+| Example              | As                        |
 | -------------------- | ------------------------- |
 | x `=` 5              | x `=` 5                   |
 | x `+=` 3             | x `=` x `+` 3             |
@@ -567,7 +567,7 @@ printf("Line 6 -The value of c is %d\n", c);
 
 ### Bitwise operators {.col-span-2}
 
-| operator        | description                                                     | instance                                              |
+| Operator        | Description                                                     | Instance                                              |
 | :-------------- | :-------------------------------------------------------------- | :---------------------------------------------------- |
 | `&`             | Bitwise AND operation, "AND" operation by binary digits         | `(A & B)` will get `12` which is 0000 1100            |
 | <code>\|</code> | Bitwise OR operator, "or" operation by binary digit             | <code>(A \| B)</code> will get`61` which is 0011 1101 |
@@ -580,11 +580,11 @@ printf("Line 6 -The value of c is %d\n", c);
 
 ### Basic data types {.col-span-2}
 
-| Data Type            | Size Size        | Range Range                        | Description Description             |
+| Data Type            | Size             | Range                              | Description                         |
 | -------------------- | ---------------- | ---------------------------------- | ----------------------------------- |
 | `char`               | 1 byte           | `−128` ~ `127`                     | single character/alphanumeric/ASCII |
-| `signed char`        | 1 byte           | `−128` ~ `127`                     | -                                   |
-| `unsigned char`      | 1 byte           | `0` ~ `255`                        | -                                   |
+| `signed char`        | 1 byte           | `−128` ~ `127`                     |                                     |
+| `unsigned char`      | 1 byte           | `0` ~ `255`                        |                                     |
 | `int`                | `2` to `4` bytes | `−32,768` ~ `32,767`               | store integers                      |
 | `signed int`         | 2 bytes          | `−32,768` ~ `32,767`               |                                     |
 | `unsigned int`       | 2 bytes          | `0` ~ `65,535`                     |                                     |
