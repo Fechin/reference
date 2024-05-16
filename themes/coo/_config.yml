@@ -23,7 +23,6 @@ index_recommends:
   - regex
   - awk
 
-
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
