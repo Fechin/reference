@@ -4,17 +4,16 @@ date: 2020-12-15 18:28:43
 background: bg-[#ebbe46]
 tags:
 categories:
-    - Other
-intro:  Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
+  - Other
+intro: Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
 ---
 
-Getting Started
-----------
+## Getting Started
 
 ### People
 
 | -                              | -                                |
-|--------------------------------|----------------------------------|
+| ------------------------------ | -------------------------------- |
 | :smile:                        | `:smile:`                        |
 | :laughing:                     | `:laughing:`                     |
 | :blush:                        | `:blush:`                        |
@@ -192,15 +191,11 @@ Getting Started
 | :busts_in_silhouette:          | `:busts_in_silhouette:`          |
 | :speech_balloon:               | `:speech_balloon:`               |
 | :thought_balloon:              | `:thought_balloon:`              |
-{.plus-first .shortcuts-right}
-
-
-
 
 ### Symbols
 
 | -                                 | -                                   |
-|-----------------------------------|-------------------------------------|
+| --------------------------------- | ----------------------------------- |
 | :one:                             | `:one:`                             |
 | :two:                             | `:two:`                             |
 | :three:                           | `:three:`                           |
@@ -392,14 +387,11 @@ Getting Started
 | :small_orange_diamond:            | `:small_orange_diamond:`            |
 | :small_red_triangle:              | `:small_red_triangle:`              |
 | :small_red_triangle_down:         | `:small_red_triangle_down:`         |
-{.plus-first}
-
-
 
 ### Objects {.row-span-2}
 
 | -                                | -                                  |
-|----------------------------------|------------------------------------|
+| -------------------------------- | ---------------------------------- |
 | :bamboo:                         | `:bamboo:`                         |
 | :gift_heart:                     | `:gift_heart:`                     |
 | :dolls:                          | `:dolls:`                          |
@@ -660,14 +652,11 @@ Getting Started
 | :eggplant:                       | `:eggplant:`                       |
 | :tomato:                         | `:tomato:`                         |
 | :corn:                           | `:corn:`                           |
-{.plus-first}
-
-
 
 ### Places
 
 | -                         | -                           |
-|---------------------------|-----------------------------|
+| ------------------------- | --------------------------- |
 | :house:                   | `:house:`                   |
 | :house_with_garden:       | `:house_with_garden:`       |
 | :school:                  | `:school:`                  |
@@ -774,16 +763,11 @@ Getting Started
 | :gb:                      | `:gb:`                      |
 | :uk:                      | `:uk:`                      |
 | :de:                      | `:de:`                      |
-{.plus-first}
-
-
-
-
 
 ### Nature
 
 | -                              | -                                |
-|--------------------------------|----------------------------------|
+| ------------------------------ | -------------------------------- |
 | :sunny:                        | `:sunny:`                        |
 | :umbrella:                     | `:umbrella:`                     |
 | :cloud:                        | `:cloud:`                        |
@@ -898,5 +882,3 @@ Getting Started
 | :milky_way:                    | `:milky_way:`                    |
 | :partly_sunny:                 | `:partly_sunny:`                 |
 | :carrot:                       | `:carrot:`                       |
-{.plus-first}
-
