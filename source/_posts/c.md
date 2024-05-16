@@ -543,6 +543,8 @@ Comparison operators are used to compare two values
 | <code>\|\|</code> | `or` logical  | returns true if one of the statements is true | <code>x < 5 \|\| x < 4</code> |
 | `!`               | `not` logical | Invert result, return false if true           | `!(x < 5 && x < 10)`          |
 
+{.show-header}
+
 ### Operator Examples {.row-span-2}
 
 ```c
@@ -576,12 +578,14 @@ printf("Line 6 -The value of c is %d\n", c);
 | `<<`            | binary left shift operator                                      | `A << 2` will get `240` which is 1111 0000            |
 | `>>`            | binary right shift operator                                     | `A >> 2` will get `15` which is 0000 1111             |
 
+{.show-header}
+
 ## Data Types
 
 ### Basic data types {.col-span-2}
 
 | Data Type            | Size             | Range                              | Description                         |
-| -------------------- | ---------------- | ---------------------------------- | ----------------------------------- |
+| -------------------- | ---------------- | ---------------------------------- | :---------------------------------- |
 | `char`               | 1 byte           | `−128` ~ `127`                     | single character/alphanumeric/ASCII |
 | `signed char`        | 1 byte           | `−128` ~ `127`                     |                                     |
 | `unsigned char`      | 1 byte           | `0` ~ `255`                        |                                     |
@@ -597,6 +601,8 @@ printf("Line 6 -The value of c is %d\n", c);
 | `float`              | 4 bytes          | `3.4E-38` ~ `3.4E+38`              |                                     |
 | `double`             | 8 bytes          | `1.7E-308` ~ `1.7E+308`            |                                     |
 | `long double`        | 10 bytes         | `3.4E-4932` ~ `1.1E+4932`          |                                     |
+
+{.show-header}
 
 ### Data types
 
@@ -628,21 +634,25 @@ printf("%lf\n", myDouble);
 
 ### Basic format specifiers
 
-| format specifier | data type                                             |
-| ---------------- | ----------------------------------------------------- |
+| Format Specifier | Data Type                                             |
+| ---------------- | :---------------------------------------------------- |
 | `%d` or `%i`     | `int` integer                                         |
 | `%f`             | `float` single-precision decimal type                 |
 | `%lf`            | `double` high precision floating point data or number |
 | `%c`             | `char` character                                      |
 | `%s`             | for `strings` strings                                 |
 
-### Basic format specifiers
+{.show-header}
 
-|             | short        | int        | long         |
-| ----------- | ------------ | ---------- | ------------ |
-| Octal       | `%ho`        | `%o`       | `%lo`        |
-| Decimal     | `%hd`        | `%d`       | `%ld`        |
-| Hexadecimal | `%hx` /`%hX` | `%x` /`%X` | `%lx` /`%lX` |
+### Separate base format specifiers
+
+| Format      | Short         | Int         | Long          |
+| ----------- | ------------- | ----------- | :------------ |
+| Octal       | `%ho`         | `%o`        | `%lo`         |
+| Decimal     | `%hd`         | `%d`        | `%ld`         |
+| Hexadecimal | `%hx` / `%hX` | `%x` / `%X` | `%lx` / `%lX` |
+
+{.show-header}
 
 ### Data format example
 
@@ -660,8 +670,8 @@ printf("%c\n", myLetter);
 
 ### Preprocessor Directives {.row-span-2}
 
-| command    | description                                                          |
-| ---------- | -------------------------------------------------------------------- |
+| Directive  | Description                                                          |
+| ---------- | :------------------------------------------------------------------- |
 | `#define`  | define a macro                                                       |
 | `#include` | include a source code file                                           |
 | `#undef`   | undefined macro                                                      |
@@ -673,6 +683,8 @@ printf("%c\n", myLetter);
 | `#endif`   | End a `#if...#else` conditional compilation block                    |
 | `#error`   | Print an error message when standard error is encountered            |
 | `#pragma`  | Issue special commands to the compiler using the standardized method |
+
+{.show-header}
 
 ```c
 // replace all MAX_ARRAY_LENGTH with 20
@@ -687,15 +699,15 @@ printf("%c\n", myLetter);
 
 ### Predefined macros {.row-span-2}
 
-| macro      | description                                                           |
-| ---------- | --------------------------------------------------------------------- |
+| Macro      | Description                                                           |
+| ---------- | :-------------------------------------------------------------------- |
 | `__DATE__` | The current date, a character constant in the format "MMM DD YYYY"    |
 | `__TIME__` | The current time, a character constant in the format "HH:MM:SS"       |
 | `__FILE__` | This will contain the current filename, a string constant             |
 | `__LINE__` | This will contain the current line number, a decimal constant         |
 | `__STDC__` | Defined as `1` when the compiler compiles against the `ANSI` standard |
 
-<!--rehype:className=style-list-->
+{.show-header}
 
 `ANSI C` defines a number of macros that you can use, but you cannot directly modify these predefined macros
 
@@ -713,7 +725,7 @@ int main() {
 }
 ```
 
-### Macro continuation operator (\)
+### Macro continuation operator (\\)
 
 A macro is usually written on a single line.
 
@@ -912,7 +924,7 @@ int main() {
 // output 8 (5 + 3)
 ```
 
-two parameters
+Two parameters
 
 ```c
 int myFunction(int x, int y) {
@@ -1093,12 +1105,12 @@ printf("%d %c %s",
     s1.myLetter);
 ```
 
-## file processing
+## File Processing
 
 ### File processing function
 
-| function    | description Description                           |
-| ----------- | ------------------------------------------------- |
+| Function    | Description                                       |
+| ----------- | :------------------------------------------------ |
 | `fopen()`   | `open` a new or existing file                     |
 | `fprintf()` | write data to `file`                              |
 | `fscanf()`  | `read` data from a file                           |
@@ -1111,24 +1123,28 @@ printf("%d %c %s",
 | `ftell()`   | returns the current `position`                    |
 | `rewind()`  | set the file pointer to the beginning of the file |
 
+{.show-header}
+
 There are many functions in the C library to `open`/`read`/`write`/`search` and `close` files
 
 ### Open mode parameter
 
-| Mode Mode | Description Description                                                                      |
-| --------- | -------------------------------------------------------------------------------------------- |
-| `r`       | Open a text file in `read` mode, allowing the file to be read                                |
-| `w`       | Open a text file in `write` mode, allowing writing to the file                               |
-| `a`       | Open a text file in `append` mode<br />If the file does not exist, a new one will be created |
-| `r+`      | Open a text file in `read-write` mode, allowing reading and writing of the file              |
-| `w+`      | Open a text file in `read-write` mode, allowing reading and writing of the file              |
-| `a+`      | Open a text file in `read-write` mode, allowing reading and writing of the file              |
-| `rb`      | Open a binary file in `read` mode                                                            |
-| `wb`      | Open binary file in `write` mode                                                             |
-| `ab`      | Open a binary file in `append` mode                                                          |
-| `rb+`     | open binary file in `read-write` mode                                                        |
-| `wb+`     | Open binary file in `read-write` mode                                                        |
-| `ab+`     | open binary file in `read-write` mode                                                        |
+| Mode  | Description                                                                                                 |
+| ----- | :---------------------------------------------------------------------------------------------------------- |
+| `r`   | Open a text file in `read` mode, allowing the file to be read                                               |
+| `w`   | Open a text file in `write` mode, allowing writing to the file                                              |
+| `a`   | Open a text file in `append` mode<br /><small>If the file does not exist, a new one will be created</small> |
+| `r+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |
+| `w+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |
+| `a+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |
+| `rb`  | Open a binary file in `read` mode                                                                           |
+| `wb`  | Open binary file in `write` mode                                                                            |
+| `ab`  | Open a binary file in `append` mode                                                                         |
+| `rb+` | open binary file in `read-write` mode                                                                       |
+| `wb+` | Open binary file in `read-write` mode                                                                       |
+| `ab+` | open binary file in `read-write` mode                                                                       |
+
+{.show-header}
 
 ### Open the file: fopen()
 
@@ -1280,7 +1296,7 @@ void main(void) {
 }
 ```
 
-set the file pointer to the given position
+Set the file pointer to the given position
 
 ### rewind()
 
