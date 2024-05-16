@@ -35,8 +35,8 @@ Reference provides cheat sheets for the following:
 - [LaTeX](https://cheatsheets.zip/latex.html): This cheat sheet summarizes a reference list of [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of [KaTeX](https://katex.org/).
 - [Rust](https://cheatsheets.zip/rust.html): The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
 - [C#](https://cheatsheets.zip/cs.html): C# quick reference cheat sheet that provides basic syntax and methods.
-- [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. 
-This cheat sheet provides a reference for common commands and features for Laravel 8.
+- [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP.
+  This cheat sheet provides a reference for common commands and features for Laravel 8.
 - [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 - [JSON](https://cheatsheets.zip/json.html): This is a quick reference cheat sheet for understanding and writing JSON format configuration files.
 - [Hook](https://cheatsheets.zip/hook.html): The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
@@ -55,7 +55,7 @@ This cheat sheet provides a reference for common commands and features for Larav
 - [Sass](https://cheatsheets.zip/sass.html): This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
 - [Go](https://cheatsheets.zip/go.html): This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).
 - [Markdown](https://cheatsheets.zip/markdown.html): This is a quick reference cheat sheet to the Markdown syntax.
-- [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with linux bash shell scripting.
+- [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with Linux bash shell scripting.
 
 </details>
 
@@ -64,10 +64,10 @@ This cheat sheet provides a reference for common commands and features for Larav
 
 - [ChatGPT](https://cheatsheets.zip/chatgpt.html): This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively
 - [VSCode](https://cheatsheets.zip/vscode.html): This VSCode (Visual Studio Code) quick reference cheat sheet shows its keyboard shortcuts and commands.
-- [Mitmproxy](https://cheatsheets.zip/mitmproxy.html): [mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.
+- [Mitmproxy](https://cheatsheets.zip/mitmproxy.html): [Mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the Mitmproxy.
 - [XPath](https://cheatsheets.zip/xpath.html): This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors
 - [Emacs](https://cheatsheets.zip/emacs.html): [Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.
-This reference was made for Emacs 27.
+  This reference was made for Emacs 27.
 - [Emmet](https://cheatsheets.zip/emmet.html): [Emmet](https://emmet.io/) is a web-developer’s toolkit for boosting HTML & CSS code writing, which allows you to write large HTML code blocks at speed of light using well-known CSS selectors.
 - [RegEX](https://cheatsheets.zip/regex.html): A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
 - [Vim](https://cheatsheets.zip/vim.html): A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.
@@ -86,19 +86,19 @@ This reference was made for Emacs 27.
 - [Netstat](https://cheatsheets.zip/netstat.html): This quick reference cheat sheet provides various for using netstat command.
 - [Screen](https://cheatsheets.zip/screen.html): This is a quick reference guide cheat sheet for the screen command.
 - [Awk](https://cheatsheets.zip/awk.html): This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.
-- [Find](https://cheatsheets.zip/find.html): This is a quick reference list of cheat sheet for linux find command, contains common options and examples.
+- [Find](https://cheatsheets.zip/find.html): This is a quick reference list of cheat sheet for Linux find command, contains common options and examples.
 - [Sed](https://cheatsheets.zip/sed.html): [Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.
 - [Cron](https://cheatsheets.zip/cron.html): [Cron](https://en.wikipedia.org/wiki/Cron) is most suitable for scheduling repetitive tasks. Scheduling one-time tasks can be accomplished using the associated at utility.
 - [Git](https://cheatsheets.zip/git.html): This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 - [Grep](https://cheatsheets.zip/grep.html): This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program grep and assumes you already understand its usage.
-- [Netcat](https://cheatsheets.zip/nc.html): This cheat sheet provides various for using Netcat on both Linux and Unix.
+- [Netcat](https://cheatsheets.zip/nc.html): This cheat sheet provides various for using netcat on both Linux and Unix.
 - [Taskset](https://cheatsheets.zip/taskset): This quick reference cheat sheet for tasket command.
 </details>
 
 <details>
 <summary>Python</summary>
 
-- [Numpy](https://cheatsheets.zip/numpy.html): [NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.
+- [NumPy](https://cheatsheets.zip/numpy.html): [NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.
 
 </details>
 
@@ -107,7 +107,7 @@ This reference was made for Emacs 27.
 
 - [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
 - [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.
-- [Redis](https://cheatsheets.zip/redis.html): This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
+- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
 - [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.
 
 </details>
@@ -127,7 +127,7 @@ This reference was made for Emacs 27.
 - [Slack](https://cheatsheets.zip/slack.html): A visual cheat-sheet for the 62 keyboard shortcuts found in Slack
 - [SoundCloud](https://cheatsheets.zip/soundcloud.html): A visual cheat-sheet for the 22 keyboard shortcuts found on SoundCloud
 - [Twitter](https://cheatsheets.zip/twitter.html): A visual cheat-sheet for the 26 keyboard shortcuts found on Twitter
-- [Android Studio](https://cheatsheets.zip/android-studio.html): A visual cheat-sheet for the 130 keyboard shortcuts found in the Andriod Studio software
+- [Android Studio](https://cheatsheets.zip/android-studio.html): A visual cheat-sheet for the 130 keyboard shortcuts found in the Android Studio software
 - [Github](https://cheatsheets.zip/github.html): A visual cheat-sheet for the 80 keyboard shortcuts found on Github.com
 - [Shopify](https://cheatsheets.zip/shopify.html): A visual cheat-sheet for the 50 keyboard shortcuts found on the Shopify website
 - [Zoom](https://cheatsheets.zip/zoom.html): A visual cheat-sheet for the 32 keyboard shortcuts found in Zoom. These shortcuts are for MacOS, for Windows visit /zoom-windows.
@@ -203,7 +203,7 @@ This reference was made for Emacs 27.
 - [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.
 - [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that conform to the ISO 639-1 standard, it provide reference for multi-language website.
 - [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
-- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. a quick reference to every HTTP status code.
+- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick reference to every HTTP status code.
 - [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
 - [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.
 - [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
