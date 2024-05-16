@@ -6,14 +6,12 @@ tags:
 categories:
   - Programming
 intro: |
-    C++ quick reference cheat sheet that provides basic syntax and methods.
+  C++ quick reference cheat sheet that provides basic syntax and methods.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-Getting Started
---------
+## Getting Started
 
 ### hello.cpp
 
@@ -48,7 +46,7 @@ bool isRight = true;  // Boolean
 const float RATE = 0.8;
 ```
 
-----
+---
 
 ```cpp
 int age {25};         // Since C++11
@@ -58,7 +56,7 @@ std::cout << age;     // Print 25
 ### Primitive Data Types
 
 | Data Type | Size           | Range               |
-|-----------|----------------|---------------------|
+| --------- | -------------- | ------------------- |
 | `int`     | 4 bytes        | -2^31^ ^to^ 2^31^-1 |
 | `float`   | 4 bytes        | _N/A_               |
 | `double`  | 8 bytes        | _N/A_               |
@@ -66,6 +64,7 @@ std::cout << age;     // Print 25
 | `bool`    | 1 byte         | true / false        |
 | `void`    | _N/A_          | _N/A_               |
 | `wchar_t` | 2 ^or^ 4 bytes | 1 wide character    |
+
 {.show-header}
 
 ### User Input
@@ -122,13 +121,13 @@ See: [Loops](#c-loops)
 
 ```cpp
 #include <iostream>
- 
+
 void hello(); // Declaring
- 
+
 int main() {  // main function
     hello();    // Calling
 }
- 
+
 void hello() { // Defining
     std::cout << "Hello CheatSheets!\n";
 }
@@ -171,14 +170,13 @@ using namespace ns1;
 using namespace std;
 int main()
 {
-    cout << val(); 
+    cout << val();
 }
 ```
 
 Namespaces allow global identifiers under a name
 
-C++ Arrays
-------
+## C++ Arrays
 
 ### Declaration
 
@@ -258,11 +256,10 @@ for (int i = 0; i < 2; ++i) {
         std::cout << x[i][j] << " ";
     }
 }
-// Outputs: 1 2 3 4 5 6 6 5 4 3 2 1 
+// Outputs: 1 2 3 4 5 6 6 5 4 3 2 1
 ```
 
-C++ Conditionals
-------------
+## C++ Conditionals
 
 ### If Clause
 
@@ -316,7 +313,7 @@ else
 #### Relational Operators
 
 |          |                              |
-|----------|------------------------------|
+| -------- | ---------------------------- |
 | `a == b` | a is equal to b              |
 | `a != b` | a is NOT equal to b          |
 | `a < b`  | a is less than b             |
@@ -326,32 +323,32 @@ else
 
 #### Assignment Operators
 
-| Example  | Equivalent to   |
-|----------|-----------------|
-| `a += b` | _Aka_ a = a + b |
-| `a -= b` | _Aka_ a = a - b |
-| `a *= b` | _Aka_ a = a * b |
-| `a /= b` | _Aka_ a = a / b |
-| `a %= b` | _Aka_ a = a % b |
+| Example  | Equivalent to    |
+| -------- | ---------------- |
+| `a += b` | _Aka_ a = a + b  |
+| `a -= b` | _Aka_ a = a - b  |
+| `a *= b` | _Aka_ a = a \* b |
+| `a /= b` | _Aka_ a = a / b  |
+| `a %= b` | _Aka_ a = a % b  |
 
 #### Logical Operators
 
-| Example        | Meaning                |
-|----------------|------------------------|
-| `exp1 && exp2` | Both are true _(AND)_  |
-| `exp1 || exp2` | Either is true _(OR)_  |
-| `!exp`         | `exp` is false _(NOT)_ |
+| Example                     | Meaning                |
+| --------------------------- | ---------------------- |
+| `exp1 && exp2`              | Both are true _(AND)_  |
+| <code>exp1 \|\| exp2</code> | Either is true _(OR)_  |
+| `!exp`                      | `exp` is false _(NOT)_ |
 
 #### Bitwise Operators
 
-| Operator | Description             |
-|----------|-------------------------|
-| `a & b`  | Binary AND              |
-| `a | b`  | Binary OR               |
-| `a ^ b`  | Binary XOR              |
-| `~ a`    | Binary One's Complement |
-| `a << b` | Binary Shift Left       |
-| `a >> b` | Binary Shift Right      |
+| Operator            | Description             |
+| ------------------- | ----------------------- |
+| `a & b`             | Binary AND              |
+| <code>a \| b</code> | Binary OR               |
+| `a ^ b`             | Binary XOR              |
+| `~ a`               | Binary One's Complement |
+| `a << b`            | Binary Shift Left       |
+| `a >> b`            | Binary Shift Right      |
 
 ### Ternary Operator
 
@@ -407,8 +404,7 @@ switch (num) {
 }
 ```
 
-C++ Loops
-------------
+## C++ Loops
 
 ### While
 
@@ -499,7 +495,7 @@ for (char c: hello)
 {
     std::cout << c << " ";
 }
-// Outputs: Q u i c k R e f . M E 
+// Outputs: Q u i c k R e f . M E
 ```
 
 ### Break statements
@@ -526,8 +522,7 @@ for (int i = 0, j = 2; i < 3; i++, j--){
 // Outputs: i=0,j=2;i=1,j=1;i=2,j=0;
 ```
 
-C++ Functions
-------------
+## C++ Functions
 
 ### Arguments & Returns
 
@@ -535,11 +530,11 @@ C++ Functions
 #include <iostream>
 
 int add(int a, int b) {
-    return a + b;  
+    return a + b;
 }
 
 int main() {
-    std::cout << add(10, 20); 
+    std::cout << add(10, 20);
 }
 ```
 
@@ -564,15 +559,14 @@ void fun(int a) {
 ```cpp
 #include <iostream>
 #include <cmath> // import library
- 
+
 int main() {
     // sqrt() is from cmath
     std::cout << sqrt(9);
 }
 ```
 
-C++ Classes & Objects {.cols-2}
------------------
+## C++ Classes & Objects {.cols-2}
 
 ### Defining a Class
 
@@ -643,7 +637,6 @@ MyClass myObj;  // Create an object of MyClass
 
 ```
 
-
 ### Class Methods
 
 ```cpp
@@ -659,7 +652,6 @@ class MyClass {
 MyClass myObj;  // Create an object of MyClass
 myObj.myMethod();  // Call the method
 ```
-
 
 ### Access Modifiers
 
@@ -679,7 +671,6 @@ myObj.y = 50;  // Not allowed (private)
 myObj.z = 75;  // Not allowed (protected)
 
 ```
-
 
 ### Getters and Setters
 
@@ -702,7 +693,6 @@ cout << myObj.getMyNum() << endl;  // Output 15
 
 ```
 
-
 ### Inheritance
 
 ```cpp
@@ -724,10 +714,7 @@ myCar.honk();  // Output "Tuut, tuut!"
 cout << myCar.brand + " " + myCar.model << endl;  // Output "Ford Mustang"
 ```
 
-
-
-C++ Preprocessor
-------------
+## C++ Preprocessor
 
 ### Preprocessor {.row-span-3}
 
@@ -744,11 +731,12 @@ C++ Preprocessor
 - [error](https://en.cppreference.com/w/cpp/preprocessor/error)
 - [pragma](https://en.cppreference.com/w/cpp/preprocessor/impl)
 - [defined](https://en.cppreference.com/w/cpp/preprocessor/conditional)
-- [__has_include](https://en.cppreference.com/w/cpp/feature_test)
-- [__has_cpp_attribute](https://en.cppreference.com/w/cpp/feature_test)
+- [\_\_has_include](https://en.cppreference.com/w/cpp/feature_test)
+- [\_\_has_cpp_attribute](https://en.cppreference.com/w/cpp/feature_test)
 - [export](https://en.cppreference.com/w/cpp/keyword/export)
-- [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
-- [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
+- [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&action=edit&redlink=1)
+- [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&action=edit&redlink=1)
+
 {.marker-none .cols-2}
 
 ### Includes
@@ -815,13 +803,12 @@ char * a = STR(object);   #=> char * a = "object";
 #=> console.log("file.txt", 3, "hey")
 ```
 
-Miscellaneous
--------------
+## Miscellaneous
 
 ### Escape Sequences
 
 | Escape Sequences | Characters            |
-|------------------|-----------------------|
+| ---------------- | --------------------- |
 | `\b`             | Backspace             |
 | `\f`             | Form feed             |
 | `\n`             | Newline               |
@@ -834,7 +821,7 @@ Miscellaneous
 | `\?`             | Question mark         |
 | `\0`             | Null Character        |
 
-### Keywords  {.col-span-2 .row-span-2}
+### Keywords {.col-span-2 .row-span-2}
 
 - [alignas](https://en.cppreference.com/w/cpp/keyword/alignas)
 - [alignof](https://en.cppreference.com/w/cpp/keyword/alignof)
@@ -936,8 +923,7 @@ Miscellaneous
 - [final](https://en.cppreference.com/w/cpp/language/final)
 - [override](https://en.cppreference.com/w/cpp/language/override)
 - [transaction_safe](https://en.cppreference.com/w/cpp/language/transactional_memory)
-- [transaction_safe_dynamic](https://en.cppreference.com/w/cpp/language/transactional_memory)
-{.marker-none .cols-5}
+- [transaction_safe_dynamic](https://en.cppreference.com/w/cpp/language/transactional_memory) {.marker-none .cols-5}
 
 ### Preprocessor
 
@@ -954,12 +940,12 @@ Miscellaneous
 - [error](https://en.cppreference.com/w/cpp/preprocessor/error)
 - [pragma](https://en.cppreference.com/w/cpp/preprocessor/impl)
 - [defined](https://en.cppreference.com/w/cpp/preprocessor/conditional)
-- [__has_include](https://en.cppreference.com/w/cpp/feature_test)
-- [__has_cpp_attribute](https://en.cppreference.com/w/cpp/feature_test)
+- [\_\_has_include](https://en.cppreference.com/w/cpp/feature_test)
+- [\_\_has_cpp_attribute](https://en.cppreference.com/w/cpp/feature_test)
 - [export](https://en.cppreference.com/w/cpp/keyword/export)
-- [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
-- [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
-{.marker-none .cols-2}
+- [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&action=edit&redlink=1)
+- [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&action=edit&redlink=1) {.marker-none
+  .cols-2}
 
 ## Also see
 
