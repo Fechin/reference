@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-.mdLayout .h3-wrap > .section ul:not(.marker-none):not(.collapsible) > li::before {
+.mdLayout .h3-wrap > .section ul:not(.marker-none, .collapsible, .marker-timeline) > li::before {
   content: "";
   position: absolute;
   display: inline-block;
