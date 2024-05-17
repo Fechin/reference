@@ -1,4 +1,17 @@
-# Django Cheat Sheet
+---
+title: Django
+date: 2024-05-15 10:12:25
+background: bg-[#1e3e2e]
+tags:
+  - python
+  - web
+categories:
+  - Programming
+intro: |
+   A Django cheat sheet. 
+plugins:
+  - copyCode
+---
 
 ### Contents
 
