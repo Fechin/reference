@@ -11,7 +11,8 @@ plugins:
   - copyCode
 ---
 
-## Getting Started
+Getting Started
+----------
 
 ### Helloworld.nim
 
@@ -98,7 +99,9 @@ const
   compileBadCode = false
 ```
 
-<!-- ### Basic data types -->
+Basic data types
+----------------- 
+
 
 ### Integers
 
@@ -239,7 +242,8 @@ echo "q is still: ", q
 #p is still: abcdef
 #q is still: xyz
 ```
-
+Opatators
+------------
 ### Relational operators
 
 ```nim
@@ -321,7 +325,8 @@ echo "not F: ", not false
 #not F: true
 ```
 
-
+Control flow
+--------------
 ### If statement
 
 ```nim
