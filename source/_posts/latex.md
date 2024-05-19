@@ -248,7 +248,7 @@ preview | method | preview | method | preview | method | preview | method
 :- | :- | :- | :-
 :- | :- | :- | :-
 | Correct: |  <pur>`\tan(at-n\pi)`</pur> | `KaTeX:\rightarrow` | `KaTeX:\tan(at-n\pi)`|
-| Incorrect: | <pur>`tan(at-n\pi)`</pur> | `katex:\rightarrow` | `KaTeX:tan(at-n\pi)` | {.left-align}
+| Incorrect: | <pur>`tan(at-n\pi)`</pur> | `KaTeX:\rightarrow` | `KaTeX:tan(at-n\pi)` | {.left-align}
 
 ### Logic and Set Theory{.col-span-3}
 

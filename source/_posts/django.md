@@ -1,13 +1,14 @@
 ---
-title: django
-date: 2024-05-15 13:10:13
-background: bg-slate-600
+title: Django
+date: 2024-05-15 10:12:25
+background: bg-[#1e3e2e]
 tags:
-  - config
-  - reference
+  - python
+  - web
 categories:
-  - Other
-intro: A quick reference cheatsheet for Django, a high-level Python web framework
+  - Programming
+intro: |
+   A Django cheat sheet. 
 plugins:
   - copyCode
 ---
