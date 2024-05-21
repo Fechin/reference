@@ -1310,6 +1310,6 @@ myAssert(a == b)
 
 ```
 
-## Also see {.cols-1}
+## Also see
 
 - [Nim Cheat sheet](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_
