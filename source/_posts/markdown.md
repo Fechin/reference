@@ -159,13 +159,33 @@ console.log("This is a block code");
     4 space indent makes a code block
 ```
 
+### Escaped code
+
+Escaped code blocks can be done with more back ticks on the outside or a different symbol.
+
+<!-- prettier-ignore -->
+`````markdown
+````markdown
+```bash
+echo hi
+```
+````
+
+~~~markdown
+```bash
+echo hi
+```
+~~~
+
+`````
+
 #### Inline code
 
 ```markdown
 `Inline code` has back-ticks around it
 ```
 
-### Tables {.col-span-2}
+### Tables
 
 ```markdown
 | Left column | Center column | Right column |
