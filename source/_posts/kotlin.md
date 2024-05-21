@@ -10,16 +10,12 @@ categories:
 intro: |
   A quick reference cheatsheet for Kotlin that includes usage, examples, and more.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
+## Introduction to Kotlin
 
-Introduction to Kotlin
-----
-
-
-
-### main() 
+### main()
 
 ```kotlin
 fun main() {
@@ -29,8 +25,6 @@ fun main() {
 ```
 
 The main() function is the starting point of every Kotlin program and must be included in the code before execution
-
-
 
 ### Print statement
 
@@ -46,8 +40,6 @@ Take me to your leader.
 */
 ```
 
-
-
 ### Notes
 
 ```kotlin
@@ -61,8 +53,6 @@ many
 */
 ```
 
-
-
 ### Execution order
 
 ```kotlin
@@ -73,10 +63,7 @@ fun main() {
 }
 ```
 
-Data Types and Variables
----
-
-
+## Data Types and Variables
 
 ### Mutable variables
 
@@ -85,15 +72,11 @@ var age = 25
 age = 26
 ```
 
-
-
 ### Immutable variables
 
 ```kotlin
 val goldenRatio = 1.618
 ```
-
-
 
 ### Type inference
 
@@ -103,8 +86,6 @@ val goldenRatio = 1.618
 
 var color = "Purple"
 ```
-
-
 
 ### String concatenation
 
@@ -116,8 +97,6 @@ println(streetAddress + " " + cityState)
 // Print: 123 Main St. Brooklyn, NY
 ```
 
-
-
 ### String Templates
 
 ```kotlin
@@ -126,9 +105,8 @@ println("The address is $address")
 // prints: The address is 123 Main St.
 ```
 
-
-
 ### Built-in Properties and Functions
+
 ```kotlin
 var monument = "the Statue of Liberty"
 
@@ -137,8 +115,6 @@ println(monument. capitalize())
 println(monument. length)
 // print: 21
 ```
-
-
 
 ### Character escape {.row-span-2}
 
@@ -156,8 +132,6 @@ print("\"Excellent!\" I cried. \"Elementary,\" said he.")
 - `\\` inserts a backslash
 - `\$` inserts a dollar sign
 
-
-
 ### Arithmetic Operators
 
 ```kotlin
@@ -170,8 +144,6 @@ print("\"Excellent!\" I cried. \"Elementary,\" said he.")
 
 `+` addition, `-` subtraction, `*` multiplication, `/` division, and `%` modulus
 
-
-
 ### Order of operations
 
 ```kotlin
@@ -182,21 +154,17 @@ print("\"Excellent!\" I cried. \"Elementary,\" said he.")
 6 -3 % 2 + 2   // 7
 ```
 
-
-
 ### Enhanced assignment operator
 
 ```kotlin
 var batteryPercentage = 80
 
 // long syntax
-batteryPercentage = batteryPercantage + 10
+batteryPercentage = batteryPercentage + 10
 
 // short syntax with augmented assignment operator
 batteryPercentage += 10
 ```
-
-
 
 ### Increment and decrement operators
 
@@ -205,8 +173,6 @@ var year = 2019
 year++   // 2020
 year--   // 2019
 ```
-
-
 
 ### Math library
 
@@ -217,13 +183,7 @@ Math.max(10, 12)   // 12
 Math. round(13.7)  // 14
 ```
 
-
-
-
-
-Conditional Expression
-----
-
+## Conditional Expression
 
 ### If expression
 
@@ -235,8 +195,6 @@ if (morning) {
 }
 // Print: Rise and shine!
 ```
-
-
 
 ### Else-expression
 
@@ -250,8 +208,6 @@ if (rained) {
 }
 // print: The plant needs watering!
 ```
-
-
 
 ### Else-If expressions
 
@@ -269,8 +225,6 @@ if (age < 18 ) {
 // print: you are considered senior
 ```
 
-
-
 ### Comparison Operators
 
 ```kotlin
@@ -283,8 +237,6 @@ myAge < cousinAge  // false
 myAge >= cousinAge // true
 myAge <= sisterAge // false
 ```
-
-
 
 ### Logical Operators
 
@@ -300,8 +252,6 @@ println(jacket && raining)
 println(humid || raining)
 // print: true
 ```
-
-
 
 ### AND operator: &&
 
@@ -321,8 +271,6 @@ println(sunny && raining) // false
 println(shorts && sunny)  // false
 ```
 
-
-
 ### Or operator:||
 
 ```kotlin
@@ -341,8 +289,6 @@ println(underslept || late)    // true
 println(checkEmails || underslept) // false
 ```
 
-
-
 ### NOT operator
 
 ```kotlin
@@ -352,8 +298,6 @@ var full = false
 println(!hungry) // false
 println(!full)   // true
 ```
-
-
 
 ### Evaluation order
 
@@ -371,8 +315,6 @@ Then true && true is evaluated, returning true.
 then, true || evaluates to false and eventually returns true
 */
 ```
-
-
 
 ### Nested conditions
 
@@ -393,8 +335,6 @@ if (wellRested) {
 // print: You should be ready for the exam!
 ```
 
-
-
 ### When expression
 
 ```kotlin
@@ -409,8 +349,6 @@ when (grade) {
 // print: Great job!
 ```
 
-
-
 ### Range operator
 
 ```kotlin {.wrap}
@@ -422,8 +360,6 @@ if (height in 1..53) {
 // Prints: Sorry, you must be at least 54 inches to ride the roller coaster
 ```
 
-
-
 ### Equality Operators
 
 ```kotlin
@@ -434,14 +370,7 @@ myAge == sisterAge // false
 myAge != sisterAge // true
 ```
 
-
-
-
-
-Null-Safety
-----
-
-
+## Null-Safety
 
 ### Nullable vs Not-Nullable
 
@@ -451,8 +380,6 @@ a = null // compilation error
 var b: String? = "Kotlin" // b can be null
 b = null // ok
 ```
-
-
 
 ### Safe-Calls
 
@@ -464,15 +391,11 @@ println(b?.length) // b?.length returns the length of b, or null if b is null
 println(a?.length) // Unnecessary safe call
 ```
 
-
-
 ### Chaining Safe-Calls
 
 ```kotlin
 bob?.department?.head?.name // chain returns null if any property is null
 ```
-
-
 
 ### Elvis Operator
 
@@ -482,38 +405,25 @@ val l = b?.length ?: -1 // if b is null, return the default value -1
 val l: Int = if (b != null) b.length else -1
 ```
 
-
-
 ### Not Null Assertion Operator
 
 ```kotlin
 val l = b!!.length // throws a NullPointerException, if b is null
 ```
 
-
-
-
-
-Collections
----
-
-
+## Collections
 
 ### Immutable list
 
 ```kotlin {.wrap}
 var programmingLanguages = listOf("C#", "Java", "Kotlin", "Ruby")
-``` 
-
-
+```
 
 ### Mutable List
 
 ```kotlin {.wrap}
 var fruits = mutableListOf("Orange", "Apple", "Banana", "Mango")
 ```
-
-
 
 ### Access List
 
@@ -523,21 +433,17 @@ var cars = listOf("BMW", "Ferrari", "Volvo", "Tesla")
 println(cars[2]) // Prints: Volvo
 ```
 
-
-
 ### Size Attribute
 
 ```kotlin {.wrap}
 var worldContinents = listOf("Asia", "Africa", "North America", "South America", "Antarctica", "Europe", "Australia")
 
 println(worldContinents.size) // Prints: 7
-``` 
-
-
+```
 
 ### List Manipulation {.row-span-2}
 
-```kotlin  {.wrap}
+```kotlin {.wrap}
 var seas = listOf("Black Sea", "Caribbean Sea", "North Sea")
 println(seas. contains("North Sea")) // Prints: true
 
@@ -546,23 +452,17 @@ seas.add("Baltic Sea") // Error: cannot write to immutable list
 // The add() function can only be called on mutable lists, so the code above throws an error
 ```
 
-
-
 ### Immutable Sets
 
 ```kotlin {.wrap}
 var primaryColors = setOf("Red", "Blue", "Yellow")
 ```
 
-
-
 ### Mutable Sets
 
 ```kotlin {.wrap}
 var womenInTech = mutableSetOf("Ada Lovelace", "Grace Hopper", "Radia Perlman", "Sister Mary Kenneth Keller")
 ```
-
-
 
 ### Access Collection Elements {.row-span-2}
 
@@ -577,27 +477,21 @@ println(companies.elementAtOrNull(4))
 // Prints: null
 ```
 
-
-
 ### Immutable Map
 
 ```kotlin {.wrap}
 var averageTemp = mapOf("winter" to 35,  "spring" to 60,  "summer" to 85, "fall" to 55)
 ```
 
-
-
 ### Mutable Mapping
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 var europeanDomains = mutableMapOf("Germany" to "de", "Slovakia" to "sk", "Hungary" to "hu", "Norway" to "no")
 ```
 
-
-
 ### Retrieve map keys and values
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 var oscarWinners = mutableMapOf("Parasite" to "Bong Joon-ho", "Green Book" to "Jim Burke", "The Shape Of Water" to "Guillermo del Toro")
 
 println(oscarWinners.keys)
@@ -609,11 +503,9 @@ println(oscarWinners["Parasite"])
 // Prints: Bong Joon-ho
 ```
 
-
-
 ### Add and remove map entries
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 var worldCapitals = mutableMapOf("United States" to "Washington D.C.", "Germany" to "Berlin", "Mexico" to "Mexico City", "France" to "Paris")
 
 worldCapitals.put("Brazil", "Brasilia")
@@ -625,13 +517,7 @@ println(worldCapitals)
 // Prints: {United States=Washington D.C., Mexico=Mexico City, France=Paris, Brazil=Brasilia}
 ```
 
-
-
-
-Function
----
-
-
+## Function
 
 ### Function
 
@@ -646,46 +532,40 @@ fun main() {
 }
 ```
 
-
-
 ### Function Parameters
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 fun birthday(name: String, age: Int) {
    println("Happy birthday $name! You turn $age today!")
 }
 
 fun main() {
-  birthday("Oscar", 26) 
+  birthday("Oscar", 26)
   //Prints: Happy birthday Oscar! You turn 25 today!
-  birthday("Amarah", 30) 
+  birthday("Amarah", 30)
   //Prints: Happy birthday Amarah! You turn 30 today!
 }
 ```
-
-
 
 ### Default Parameters
 
 ```kotlin {.wrap}
 fun favoriteLanguage(name, language = "Kotlin") {
-  println("Hello, $name. Your favorite programming language is $language")  
+  println("Hello, $name. Your favorite programming language is $language")
 }
 
 fun main() {
-  favoriteLanguage("Manon") 
+  favoriteLanguage("Manon")
   //Prints: Hello, Manon. Your favorite programming language is Kotlin
-  
-  favoriteLanguage("Lee", "Java") 
+
+  favoriteLanguage("Lee", "Java")
   //Prints: Hello, Lee. Your favorite programming language is Java
 }
 ```
 
-
-
 ### Named Parameters
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 fun findMyAge(currentYear: Int, birthYear: Int) {
    var myAge = currentYear -birthYear
 println("I am $myAge years old.")
@@ -699,11 +579,9 @@ fun main() {
 }
 ```
 
-
-
 ### Return Statement
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 //Return type is declared outside the parentheses
 fun getArea(length: Int, width: Int): Int {
   var area = length *width
@@ -719,8 +597,6 @@ println("The area is $myArea.")
 }
 ```
 
-
-
 ### Single expression function
 
 ```kotlin{.wrap}
@@ -733,8 +609,6 @@ fun main() {
   //Prints: Kai Gittens
 }
 ```
-
-
 
 ### Function Literals
 
@@ -753,12 +627,7 @@ return num1 *num2
 }
 ```
 
-
-
-
-Class
----
-
+## Class
 
 ### Class Example
 
@@ -774,7 +643,6 @@ class Student {
 class Student
 ```
 
-
 ### Class Instance
 
 ```kotlin
@@ -786,36 +654,34 @@ var gpa = 3.95
 }
 
 fun main() {
-  var student = Student()   
+  var student = Student()
   // Instance
-  println(student.name)     
+  println(student.name)
   // Prints: Lucia
-  println(student.semester) 
+  println(student.semester)
   // Prints: Fall
-  println(student.gpa)      
-  // Prints: 3.95  
-} 
+  println(student.gpa)
+  // Prints: 3.95
+}
 ```
 
 ### Primary Constructor
 
-```kotlin {.wrap} 
-class Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int) 
+```kotlin {.wrap}
+class Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int)
 
 fun main() {
-  var student = Student("Lucia", 3.95, "Fall", 2022) 
-  println(student.name)     
+  var student = Student("Lucia", 3.95, "Fall", 2022)
+  println(student.name)
   //Prints: Lucia
   println(student.gpa)
   //Prints: 3.95
-  println(student.semester) 
+  println(student.semester)
   //Prints: Fall
-  println(student.estimatedGraduationYear) 
+  println(student.estimatedGraduationYear)
   //Prints: 2022
 }
 ```
-
-
 
 ### Initialization Block
 
@@ -828,15 +694,13 @@ class Student(val name: String, val gpa: Double, val semester: String, val estim
 
 fun main() {
   var student = Student("Lucia", 3.95, "Fall", 2022)
-//Prints: Lucia has 2 years left in college. 
+//Prints: Lucia has 2 years left in college.
 }
 ```
 
-
-
 ### Member Function {.col-span-2}
 
-```kotlin {.wrap} 
+```kotlin {.wrap}
 class Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int) {
 
   init {
@@ -864,7 +728,6 @@ fun main() {
 }
 ```
 
-See Also
----
+## See Also
 
 - [Kotlin Language Official Documentation](https://kotlinlang.org/) _(kotlinlang.org)_
