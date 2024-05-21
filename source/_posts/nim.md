@@ -11,8 +11,7 @@ plugins:
   - copyCode
 ---
 
-Getting Started
-----------
+## Getting Started
 
 ### Helloworld.nim
 
@@ -58,13 +57,12 @@ $ nim c -r helloworld.nim
 
 ```
 
-
 ### Variable declaration
 
 ```nim
 
-var                    
-  letter: char = 'n'    
+var
+  letter: char = 'n'
   lang = "N" & "im"
   nLength: int = len(lang)
   boat: float
@@ -75,15 +73,14 @@ var
   e = '!'
 ```
 
-
 ### Let
 
 ```nim
-# Use let to declare and bind variables 
-let            
-  legs = 400  
+# Use let to declare and bind variables
+let
+  legs = 400
  #legs is immutable.
-  arms = 2_000 
+  arms = 2_000
   # are ignored and are useful for long numbers.
   aboutPi = 3.15
   let input = readLine(stdin)  # works
@@ -92,16 +89,16 @@ let
 ### Const
 
 ```nim
-# Constants are computed at compile 
-const           
-  debug = true 
+# Constants are computed at compile
+const
+  debug = true
    # performance and is useful in compile time expressions.
   compileBadCode = false
 ```
 
 Basic data types
------------------ 
 
+---
 
 ### Integers
 
@@ -242,8 +239,9 @@ echo "q is still: ", q
 #p is still: abcdef
 #q is still: xyz
 ```
-Opatators
-------------
+
+## Opatators
+
 ### Relational operators
 
 ```nim
@@ -325,8 +323,8 @@ echo "not F: ", not false
 #not F: true
 ```
 
-Control flow
---------------
+## Control flow
+
 ### If statement
 
 ```nim
@@ -355,7 +353,9 @@ if a+b > c:
 #b is smaller than c
 #not only that, b is *much* smaller than c
 ```
+
 ### Case statement
+
 ```nim
 let name = readLine(stdin)
 case name
@@ -368,23 +368,29 @@ of "Dave", "Frank":
 else:
   echo "Hi, ", name, "!"
 
-```  
+```
+
 ### While statement
+
 ```nim
 echo "What's your name? "
 var name = readLine(stdin)
 while name == "":
   echo "Please tell me your name: "
   name = readLine(stdin) # no `var`, because we do not declare a new variable here
- ```
+```
+
 ### For statement
+
 ```nim
 echo "Counting to ten: "
 for i in countup(1, 10):
   echo i
 # --> Outputs 1 2 3 4 5 6 7 8 9 10 on different lines
 ```
+
 ### Scopes and the block statement
+
 ```nim
 while false:
   var x = "hi"
@@ -394,7 +400,9 @@ block myblock:
   var x = "hi"
 echo x # does not work either
 ```
+
 ### Break statement
+
 ```nim
 block myblock:
   echo "entering block"
@@ -405,13 +413,17 @@ block myblock:
 echo "outside the block"
 
 ```
+
 ### Continue statement
+
 ```nim
 for i in 1 .. 5:
   if i <= 3: continue
   echo i # will only print 4 and 5
-  ```
+```
+
 ### When statement
+
 ```nim
   when system.hostOS == "windows":
   echo "running on Windows!"
@@ -421,8 +433,10 @@ elif system.hostOS == "macosx":
   echo "running on Mac OS X!"
 else:
   echo "unknown operating system"
-```  
+```
+
 ### Statements and indentation
+
 ```nim
 # no indentation needed for single-assignment statement:
 if x: x = false
@@ -438,8 +452,10 @@ if x:
 if x:
   x = false
   y = false
-```  
+```
+
 ### Procedures
+
 ```nim
 proc yes(question: string): bool =
   echo question, " (y/n)"
@@ -453,8 +469,10 @@ if yes("Should I delete all your important files?"):
   echo "I'm sorry Dave, I'm afraid I can't do that."
 else:
   echo "I think you know what the problem is just as well as I do."
- ``` 
+```
+
 ### Result variable
+
 ```nim
 proc sumTillNegative(x: varargs[int]): int =
   for i in x:
@@ -466,13 +484,15 @@ echo sumTillNegative() # echoes 0
 echo sumTillNegative(3, 4, 5) # echoes 12
 echo sumTillNegative(3, 4 , -1 , 6) # echoes 7
 ```
+
 ### Parameters
+
 ```nim
 proc printSeq(s: seq, nprinted: int = -1) =
   var nprinted = if nprinted == -1: s.len else: min(nprinted, s.len)
   for i in 0 ..< nprinted:
     echo s[i]
-#------------------- #    
+#------------------- #
 proc divmod(a, b: int; res, remainder: var int) =
   res = a div b        # integer division
   remainder = a mod b  # integer modulo operation
@@ -483,7 +503,9 @@ divmod(8, 5, x, y) # modifies x and y
 echo x
 echo y
 ```
+
 ### Discard statement
+
 ```nim
 discard yes("May I ask a pointless question?")
 
@@ -492,7 +514,9 @@ proc p(x, y: int): int {.discardable.} =
 
 p(3, 4) # now valid
 ```
+
 ### Named arguments
+
 ```nim
 proc createWindow(x, y, width, height: int; title: string;  show: bool): Window = ...
 
@@ -501,16 +525,20 @@ var w = createWindow(show = true, title = "My Aplication", x = 0, y = 0, height 
 var w = createWindow(0, 0, title = "My Application",
                      height = 600, width = 800, true)
 ```
+
 ### Default values
+
 ```nim
 proc createWindow(x = 0, y = 0, width = 500, height = 700,
                   title = "unknown",
                   show = true): Window =
-   
+
 
 var w = createWindow(title = "My Application", height = 600, width = 800)
 ```
+
 ### Overloaded procedures
+
 ```nim
 proc toString(x: int): string =
   result =
@@ -525,10 +553,12 @@ proc toString(x: bool): string =
 
 assert toString(13) == "positive"
  # calls the toString(x: int) proc
-assert toString(true) == "yep"  
+assert toString(true) == "yep"
  # calls the toString(x: bool) proc
 ```
+
 ### Forward declarations
+
 ```nim
 proc odd(n: int): bool =
   assert(n >= 0) # makes sure we don't run into negative recursion
@@ -541,8 +571,10 @@ proc even(n: int): bool =
   if n == 1: false
   else:
     n == 0 or odd(n-1)
- ```
+```
+
 ### Iterators
+
 ```nim
 echo "Counting to ten: "
 for i in countup(1, 10):
@@ -559,16 +591,20 @@ iterator countup(a, b: int): int =
   while res <= b:
     yield res
     inc(res)
-  ```  
+```
+
 ### Type Conversion
+
 ```nim
 var
   x: int32 = 1.int32   # same as calling int32(1)
   y: int8  = int8('a') # 'a' == 97'i8
   z: float = 2.5       # int(2.5) rounds down to 2
   sum: int = int(x) + int(y) + int(z) # sum == 100
-```  
+```
+
 ### Internal type representation
+
 ```nim
 var
   myBool = true
@@ -587,36 +623,43 @@ echo myInteger, ":", repr(myInteger)
 echo myFloat, ":", repr(myFloat)
 # --> 3.14:3.14
 ```
+
 ### Enumerations
+
 ```nim
 type
   Direction = enum
     north, east, south, west
 
-var x = south  
+var x = south
 # `x` is of type `Direction`; its value is `south`
 #prints "south"
-echo x  
+echo x
 ```
+
 ### Ordinal types
 
-| Operation |     Comment |  
- |:-----------|:------------:|
-| ord(x)  |	returns the integer value that is used to represent x's value |
-inc(x)	|increments x by one 
-inc(x, n)|	increments x by n; n is an integer
-dec(x)	|decrements x by one
-dec(x, n)|decrements x by n; n is an integer
-succ(x)|	returns the successor of x
-succ(x, n)|	returns the n'th successor of x
-pred(x)	|returns the predecessor of x
-pred(x, n)|	returns the n'th predecessor of x                         
+| Operation  |                            Comment                            |
+| :--------- | :-----------------------------------------------------------: |
+| ord(x)     | returns the integer value that is used to represent x's value |
+| inc(x)     |                      increments x by one                      |
+| inc(x, n)  |              increments x by n; n is an integer               |
+| dec(x)     |                      decrements x by one                      |
+| dec(x, n)  |              decrements x by n; n is an integer               |
+| succ(x)    |                  returns the successor of x                   |
+| succ(x, n) |                returns the n'th successor of x                |
+| pred(x)    |                 returns the predecessor of x                  |
+| pred(x, n) |               returns the n'th predecessor of x               |
+
 ### Subranges
+
 ```nim
 type
   MySubrange = range[0..5]
- ``` 
+```
+
 ### Sets
+
 ```nim
   var s: set[int64]
   # Error: set is too large; use `std/sets` for ordinal types
@@ -629,16 +672,18 @@ x = {'a'..'z', '0'..'9'}
  # This constructs a set that contains the
  # letters from 'a' to 'z' and the digits
  # from '0' to '9'
- ```
- ### Bit fields
- ```nim
- type
-  MyFlag* {.size: sizeof(cint).} = enum
-    A
-    B
-    C
-    D
-  MyFlags = set[MyFlag]
+```
+
+### Bit fields
+
+```nim
+type
+ MyFlag* {.size: sizeof(cint).} = enum
+   A
+   B
+   C
+   D
+ MyFlags = set[MyFlag]
 
 proc toNum(f: MyFlags): int = cast[cint](f)
 proc toFlags(v: int): MyFlags = cast[MyFlags](v)
@@ -650,7 +695,9 @@ assert toNum({A, C}) == 5
 assert toFlags(0) == {}
 assert toFlags(7) == {A, B, C}
 ```
+
 ### Arrays
+
 ```nim
 type
   IntArray = array[0..5, int] # an array that is indexed with 0..5
@@ -659,8 +706,10 @@ var
 x = [1, 2, 3, 4, 5, 6]
 for i in low(x) .. high(x):
   echo x[i]
-  ```
+```
+
 ### Sequences
+
 ```nim
   var
   x: seq[int] # a reference to a sequence of integers
@@ -677,30 +726,34 @@ for i, value in @[3, 4, 5]:
 # --> index: 1, value:4
 # --> index: 2, value:5
 ```
+
 ### Open arrays
+
 ```nim
 var
-  fruits:   seq[string]   
+  fruits:   seq[string]
  # reference to a sequence of strings that is initialized with '@[]'
   capitals: array[3, string]
-  
+
  # array of strings with a fixed size
 
-capitals = ["New York", "London", "Berlin"]  
+capitals = ["New York", "London", "Berlin"]
  # array 'capitals' allows assignment of only three elements
-fruits.add("Banana")  
+fruits.add("Banana")
  # sequence 'fruits' is dynamically expandable during runtime
 fruits.add("Mango")
 
 proc openArraySize(oa: openArray[string]): int =
   oa.len
 
-assert openArraySize(fruits) == 2   
+assert openArraySize(fruits) == 2
   # procedure accepts a sequence as parameter
-assert openArraySize(capitals) == 3 
+assert openArraySize(capitals) == 3
   # but also an array type
 ```
+
 ### Varargs
+
 ```nim
 proc myWriteln(f: File, a: varargs[string]) =
   for s in items(a):
@@ -711,7 +764,9 @@ myWriteln(stdout, "abc", "def", "xyz")
 # is transformed by the compiler to:
 myWriteln(stdout, ["abc", "def", "xyz"])
 ```
+
 ### Slices
+
 ```nim
 var
   a = "Nim is a programming language"
@@ -721,7 +776,9 @@ echo a[7 .. 12] # --> 'a prog'
 b[11 .. ^2] = "useful"
 echo b # --> 'Slices are useful.'
 ```
+
 ### Objects
+
 ```nim
 type
   Person = object
@@ -750,15 +807,17 @@ let person4 = Person(age: 3)
 # values. In this case it is the empty string.
 doAssert person4.name == ""
 ```
+
 ### Tuples
+
 ```nim
 type
   Person = tuple
     name: string
     age: int
-  
+
   PersonX = tuple[name: string, age: int]
-  
+
   PersonY = (string, int)
 
 var
@@ -789,7 +848,9 @@ building = ("Rue del Percebe", 13)
 echo building.street
 
 ```
+
 ### Reference and pointer types
+
 ```nim
 type
   Node = ref object
@@ -800,7 +861,9 @@ var n = Node(data: 9)
 echo n.data
 # no need to write n[].data; in fact n[].data is highly discouraged!
 ```
+
 ### Procedural type
+
 ```nim
 proc greet(name: string): string =
   "Hello, " & name & "!"
@@ -814,7 +877,9 @@ proc communicate(greeting: proc (x: string): string, name: string) =
 communicate(greet, "John")
 communicate(bye, "Mary")
 ```
+
 ### Modules
+
 ```nim
 # Module A
 var
@@ -831,8 +896,10 @@ when isMainModule:
   assert(@[1, 2, 3] * @[1, 2, 3] == @[1, 4, 9])
 
 
- ``` 
+```
+
 ### Excluding symbols
+
 ```nim
 import mymodule except y
 
@@ -840,20 +907,22 @@ import mymodule except y
 from mymodule import x, y, z
 from mymodule import x, y, z
 
-x()  
+x()
   # use x without any qualification
 
 #Include statement
 include fileA, fileB, fileC
 
 ```
+
 ### Inheritance
+
 ```nim
 type
   Person = ref object of RootObj
     name*: string  # the * means that `name` is accessible from other modules
     age: int       # no * means that the field is hidden from other modules
-  
+
   Student = ref object of Person # Student inherits from Person
     id: int                      # with an id field
 
@@ -865,26 +934,30 @@ assert(student of Student) # is true
 student = Student(name: "Anton", age: 5, id: 2)
 echo student[]
 ```
+
 ### Mutually recursive types
+
 ```nim
 type
-  Node = ref object 
+  Node = ref object
  # a reference to an object with the following field:
-    le, ri: Node 
+    le, ri: Node
    # left and right subtrees
-    sym: ref Sym  
+    sym: ref Sym
   # leaves contain a reference to a Sym
-  
-  Sym = object     
+
+  Sym = object
     # a symbol
-    name: string    
+    name: string
      # the symbol's name
-    line: int   
+    line: int
    # the line the symbol was declared in
-    code: Node 
+    code: Node
     # the symbol's abstract syntax tree
-  ```
+```
+
 ### Object variants
+
 ```nim
 # This is an example how an abstract syntax tree could be modelled in Nim
 type
@@ -910,7 +983,9 @@ var n = Node(kind: nkFloat, floatVal: 1.0)
 # n.kind's value does not fit:
 n.strVal = ""
 ```
+
 ### Method call syntax
+
 ```nim
 import std/strutils
 
@@ -925,7 +1000,9 @@ stdout.writeLine("Give a list of numbers (separated by spaces): ")
 stdout.write(stdin.readLine.splitWhitespace.map(parseInt).max.`$`)
 stdout.writeLine(" is the maximum!")
 ```
+
 ### Properties
+
 ```nim
 type
   Socket* = ref object of RootObj
@@ -963,7 +1040,9 @@ proc `[]`* (v: Vector, i: int): float =
   of 2: result = v.z
   else: assert(false)
 ```
+
 ### Dynamic dispatch
+
 ```nim
 type
   Expression = ref object of RootObj ## abstract base class for an expression
@@ -985,7 +1064,9 @@ proc newPlus(a, b: Expression): PlusExpr = PlusExpr(a: a, b: b)
 
 echo eval(newPlus(newPlus(newLit(1), newLit(2)), newLit(4)))
 ```
+
 ### Raise statement
+
 ```nim
 var
   e: ref OSError
@@ -995,7 +1076,9 @@ raise e
 
 raise newException(OSError, "the request to the OS failed")
 ```
+
 ### Try statement
+
 ```nim
 from std/strutils import parseInt
 
@@ -1020,16 +1103,20 @@ if open(f, "numbers.txt"):
     raise
   finally:
     close(f)
-```    
+```
+
 ### Annotating procs with raised exceptions
+
 ```nim
 proc complexProc() {.raises: [IOError, ArithmeticDefect].} =
-  
+
 
 proc simpleProc() {.raises: [].} =
   ...
 ```
-###  Generics
+
+### Generics
+
 ```nim
  type
   BinaryTree*[T] = ref object # BinaryTree is a generic type with
@@ -1085,8 +1172,10 @@ add(root, newNode("hello")) # instantiates `newNode` and `add`
 add(root, "world")          # instantiates the second `add` proc
 for str in preorder(root):
   stdout.writeLine(str)
-```  
+```
+
 ### Templates
+
 ```nim
 template `!=` (a, b: untyped): untyped =
   # this definition exists in the System module
@@ -1121,7 +1210,9 @@ withFile(txt, "ttempl3.txt", fmWrite):
   txt.writeLine("line 2")
 
 ```
+
 ### Static Arguments
+
 ```nim
 import std/macros
 
@@ -1130,14 +1221,18 @@ macro myMacro(arg: static[int]): untyped =
 
 myMacro(1 + 2 * 3)
 ```
+
 ### Code Blocks as Arguments
+
 ```nim
 echo "Hello ":
   let a = "Wor"
   let b = "ld!"
   a & b
-  ```
+```
+
 ### The Syntax Tree
+
 ```nim
 dumpTree:
   var mt: MyType = MyType(a:123.456, b:"abcdef")
@@ -1157,34 +1252,40 @@ dumpTree:
 #             Ident "b"
 #             StrLit "abcdef"
 ```
+
 ### Custom Semantic Checking
+
 ```nim
 macro myAssert(arg: untyped): untyped =
   arg.expectKind nnkInfix
-  ```
-  ### Generating Code
-  ```nim
+```
+
+### Generating Code
+
+```nim
 import std/macros
 
 type
-  MyType = object
-    a: float
-    b: string
+MyType = object
+  a: float
+  b: string
 
 macro myMacro(arg: untyped): untyped =
-  var mt: MyType = MyType(a:123.456, b:"abcdef")
-  
-  # 
-  
-  let mtLit = newLit(mt)
-  
-  result = quote do:
-    echo `arg`
-    echo `mtLit`
+var mt: MyType = MyType(a:123.456, b:"abcdef")
+
+#
+
+let mtLit = newLit(mt)
+
+result = quote do:
+  echo `arg`
+  echo `mtLit`
 
 myMacro("Hallo")
 ```
+
 ### Building Your First Macro
+
 ```nim
 import std/macros
 
@@ -1196,7 +1297,7 @@ macro myAssert(arg: untyped): untyped =
   let op  = newLit(" " & arg[0].repr & " ")
   let lhs = arg[1]
   let rhs = arg[2]
-  
+
   result = quote do:
     if not `arg`:
       raise newException(AssertionDefect,$`lhs` & `op` & $`rhs`)
@@ -1208,3 +1309,7 @@ myAssert(a != b)
 myAssert(a == b)
 
 ```
+
+## Also see {.cols-1}
+
+- [Nim Cheat sheet](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_
