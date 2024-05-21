@@ -11,12 +11,18 @@ plugins:
   - copyCode
 ---
 
-## Getting Started
+Getting Started
+----------
 
 ### Helloworld.nim
 
 ```nim
 echo "Hello World!"
+#---------------------------#
+# This is a comment
+echo "What's your name? "
+var name: string = readLine(stdin)
+echo "Hi, ", name, "!"
 ```
 
 #### Compiling and Running
@@ -42,40 +48,23 @@ $ nim c -r helloworld.nim
 
 ```nim
 # This is a comment
+
+
 #[
   This is a multiline comment.
   In Nim, multiline comments can be nested, beginning with #[
   ... and ending with ]#
 ]#
-discard """
-This can also work as a multiline comment.
-Or for unparsable, broken code
-"""
-# Note: The compiler will complain if the result of an expression
-              # is unused. `discard` bypasses this.
+
 ```
 
-### Naming values
-
-```nim
-pi = 3.14, #the name pi is connected to the value 3.14
-firstName = Alice, #where firstName is the name of a variable with the value Alice
-```
 
 ### Variable declaration
 
 ```nim
-#Nim is a statically
-#typed programming language, meaning that the type of
-#an assignment needs to be declared before using the value.
-#The type of a variable can be declared by using the var keyword.
 
-var <name>: <type> # syntax
-var <name>: <type> = <value> # syntax
-var <name> = <value>
-#example
-var                     # Declare (and assign) variables,
-  letter: char = 'n'    # with or without type annotations
+var                    
+  letter: char = 'n'    
   lang = "N" & "im"
   nLength: int = len(lang)
   boat: float
@@ -86,28 +75,35 @@ var                     # Declare (and assign) variables,
   e = '!'
 ```
 
-### Immutable assignment
 
-#### Let
+### Let
 
 ```nim
-let            # Use let to declare and bind variables *once*.
-  legs = 400   # legs is immutable.
-  arms = 2_000 # _ are ignored and are useful for long numbers.
+# Use let to declare and bind variables 
+let            
+  legs = 400  
+ #legs is immutable.
+  arms = 2_000 
+  # are ignored and are useful for long numbers.
   aboutPi = 3.15
+  let input = readLine(stdin)  # works
 ```
 
-#### Const
+### Const
 
 ```nim
-const            # Constants are computed at compile time. This provides
-  debug = true   # performance and is useful in compile time expressions.
+# Constants are computed at compile 
+const           
+  debug = true 
+   # performance and is useful in compile time expressions.
   compileBadCode = false
 ```
 
-### Basic data types
+Basic data types
+----------------- 
 
-#### Integers
+
+### Integers
 
 ```nim
 et
@@ -129,7 +125,7 @@ echo "a mod b = ", a mod b
 #a mod b = 3
 ```
 
-#### Floats
+### Floats
 
 ```nim
 let
@@ -147,7 +143,7 @@ echo "c / d = ", c / d
 #c / d = 3.0
 ```
 
-#### Strings
+### Strings
 
 ```nim
 #Strings can be described
@@ -161,7 +157,7 @@ let
   q = "!"
 ```
 
-#### Characters
+### Characters
 
 ```nim
 #Characters are single
@@ -175,7 +171,7 @@ let
   l = 'xy' # error
 ```
 
-#### Special characters
+### Special characters
 
 ```nim
 #\n is a newline character
@@ -192,7 +188,7 @@ echo r"some\nim\tips"
 #some\nim\tips
 ```
 
-#### Boolean
+### Boolean
 
 ```nim
 #A boolean (or just bool)
@@ -246,7 +242,8 @@ echo "q is still: ", q
 #p is still: abcdef
 #q is still: xyz
 ```
-
+Opatators
+------------
 ### Relational operators
 
 ```nim
@@ -328,38 +325,9 @@ echo "not F: ", not false
 #not F: true
 ```
 
-## Exercises
-
-1.  create an immutable variable containing your age (in years). Print your age in days. (1 year = 365 days)
-
-2.  Check if your age is divisible by 3. (Hint: use mod)
-
-3.  Create an immutable variable containing your height in centimeters. Print your height in inches. (1 in = 2.54 cm)
-
-4.  A pipe has a 3/8 inch diameter. Express the diameter in centimeters.
-
-5.  Create an immutable variable containing your first name, and another one containing your last name. Make a variable fullName by concatenating the previous two variables. Don’t forget to put a whitespace in-between. Print your full name.
-
-6.  Alice earns $400 every 15 days. Bob earns $3.14 per hour and works 8 hours a day, 7 days a week. After 30 days, has Alice earned more than Bob? (Hint: use relational operators)
-
-### Control flow
-
-```nim
-#pseudocode
-if eggPrice < wantedPrice:
-  buyEggs
-
-if isRaining:
-  bring umbrella
-else:
-  bring sunglasses
-
-#If statement
-if <condition>:
-  <indented block>
-```
-
-#### If statement
+Control flow
+--------------
+### If statement
 
 ```nim
 let
@@ -386,4 +354,857 @@ if a+b > c:
 #a is smaller than b
 #b is smaller than c
 #not only that, b is *much* smaller than c
+```
+### Case statement
+```nim
+let name = readLine(stdin)
+case name
+of "":
+  echo "Poor soul, you lost your name?"
+of "name":
+  echo "Very funny, your name is name."
+of "Dave", "Frank":
+  echo "Cool name!"
+else:
+  echo "Hi, ", name, "!"
+
+```  
+### While statement
+```nim
+echo "What's your name? "
+var name = readLine(stdin)
+while name == "":
+  echo "Please tell me your name: "
+  name = readLine(stdin) # no `var`, because we do not declare a new variable here
+ ```
+### For statement
+```nim
+echo "Counting to ten: "
+for i in countup(1, 10):
+  echo i
+# --> Outputs 1 2 3 4 5 6 7 8 9 10 on different lines
+```
+### Scopes and the block statement
+```nim
+while false:
+  var x = "hi"
+echo x # does not work
+#-----------------------#
+block myblock:
+  var x = "hi"
+echo x # does not work either
+```
+### Break statement
+```nim
+block myblock:
+  echo "entering block"
+  while true:
+    echo "looping"
+    break # leaves the loop, but not the block
+  echo "still in block"
+echo "outside the block"
+
+```
+### Continue statement
+```nim
+for i in 1 .. 5:
+  if i <= 3: continue
+  echo i # will only print 4 and 5
+  ```
+### When statement
+```nim
+  when system.hostOS == "windows":
+  echo "running on Windows!"
+elif system.hostOS == "linux":
+  echo "running on Linux!"
+elif system.hostOS == "macosx":
+  echo "running on Mac OS X!"
+else:
+  echo "unknown operating system"
+```  
+### Statements and indentation
+```nim
+# no indentation needed for single-assignment statement:
+if x: x = false
+
+# indentation needed for nested if statement:
+if x:
+  if y:
+    y = false
+  else:
+    y = true
+
+# indentation needed, because two statements follow the condition:
+if x:
+  x = false
+  y = false
+```  
+### Procedures
+```nim
+proc yes(question: string): bool =
+  echo question, " (y/n)"
+  while true:
+    case readLine(stdin)
+    of "y", "Y", "yes", "Yes": return true
+    of "n", "N", "no", "No": return false
+    else: echo "Please be clear: yes or no"
+
+if yes("Should I delete all your important files?"):
+  echo "I'm sorry Dave, I'm afraid I can't do that."
+else:
+  echo "I think you know what the problem is just as well as I do."
+ ``` 
+### Result variable
+```nim
+proc sumTillNegative(x: varargs[int]): int =
+  for i in x:
+    if i < 0:
+      return
+    result = result + i
+
+echo sumTillNegative() # echoes 0
+echo sumTillNegative(3, 4, 5) # echoes 12
+echo sumTillNegative(3, 4 , -1 , 6) # echoes 7
+```
+### Parameters
+```nim
+proc printSeq(s: seq, nprinted: int = -1) =
+  var nprinted = if nprinted == -1: s.len else: min(nprinted, s.len)
+  for i in 0 ..< nprinted:
+    echo s[i]
+#------------------- #    
+proc divmod(a, b: int; res, remainder: var int) =
+  res = a div b        # integer division
+  remainder = a mod b  # integer modulo operation
+
+var
+  x, y: int
+divmod(8, 5, x, y) # modifies x and y
+echo x
+echo y
+```
+### Discard statement
+```nim
+discard yes("May I ask a pointless question?")
+
+proc p(x, y: int): int {.discardable.} =
+  return x + y
+
+p(3, 4) # now valid
+```
+### Named arguments
+```nim
+proc createWindow(x, y, width, height: int; title: string;  show: bool): Window = ...
+
+var w = createWindow(show = true, title = "My Aplication", x = 0, y = 0, height = 600, width = 800)
+
+var w = createWindow(0, 0, title = "My Application",
+                     height = 600, width = 800, true)
+```
+### Default values
+```nim
+proc createWindow(x = 0, y = 0, width = 500, height = 700,
+                  title = "unknown",
+                  show = true): Window =
+   
+
+var w = createWindow(title = "My Application", height = 600, width = 800)
+```
+### Overloaded procedures
+```nim
+proc toString(x: int): string =
+  result =
+    if x < 0: "negative"
+    elif x > 0: "positive"
+    else: "zero"
+
+proc toString(x: bool): string =
+  result =
+    if x: "yep"
+    else: "nope"
+
+assert toString(13) == "positive"
+ # calls the toString(x: int) proc
+assert toString(true) == "yep"  
+ # calls the toString(x: bool) proc
+```
+### Forward declarations
+```nim
+proc odd(n: int): bool =
+  assert(n >= 0) # makes sure we don't run into negative recursion
+  if n == 0: false
+  else:
+    n == 1 or even(n-1)
+
+proc even(n: int): bool =
+  assert(n >= 0) # makes sure we don't run into negative recursion
+  if n == 1: false
+  else:
+    n == 0 or odd(n-1)
+ ```
+### Iterators
+```nim
+echo "Counting to ten: "
+for i in countup(1, 10):
+  echo i
+
+proc countup(a, b: int): int =
+  var res = a
+  while res <= b:
+    return res
+    inc(res)
+
+iterator countup(a, b: int): int =
+  var res = a
+  while res <= b:
+    yield res
+    inc(res)
+  ```  
+### Type Conversion
+```nim
+var
+  x: int32 = 1.int32   # same as calling int32(1)
+  y: int8  = int8('a') # 'a' == 97'i8
+  z: float = 2.5       # int(2.5) rounds down to 2
+  sum: int = int(x) + int(y) + int(z) # sum == 100
+```  
+### Internal type representation
+```nim
+var
+  myBool = true
+  myCharacter = 'n'
+  myString = "nim"
+  myInteger = 42
+  myFloat = 3.14
+echo myBool, ":", repr(myBool)
+# --> true:true
+echo myCharacter, ":", repr(myCharacter)
+# --> n:'n'
+echo myString, ":", repr(myString)
+# --> nim:0x10fa8c050"nim"
+echo myInteger, ":", repr(myInteger)
+# --> 42:42
+echo myFloat, ":", repr(myFloat)
+# --> 3.14:3.14
+```
+### Enumerations
+```nim
+type
+  Direction = enum
+    north, east, south, west
+
+var x = south  
+# `x` is of type `Direction`; its value is `south`
+#prints "south"
+echo x  
+```
+### Ordinal types
+
+| Operation |     Comment |  
+ |:-----------|:------------:|
+| ord(x)  |	returns the integer value that is used to represent x's value |
+inc(x)	|increments x by one 
+inc(x, n)|	increments x by n; n is an integer
+dec(x)	|decrements x by one
+dec(x, n)|decrements x by n; n is an integer
+succ(x)|	returns the successor of x
+succ(x, n)|	returns the n'th successor of x
+pred(x)	|returns the predecessor of x
+pred(x, n)|	returns the n'th predecessor of x                         
+### Subranges
+```nim
+type
+  MySubrange = range[0..5]
+ ``` 
+### Sets
+```nim
+  var s: set[int64]
+  # Error: set is too large; use `std/sets` for ordinal types
+  # with more than 2^16 elements
+ type
+  CharSet = set[char]
+var
+  x: CharSet
+x = {'a'..'z', '0'..'9'}
+ # This constructs a set that contains the
+ # letters from 'a' to 'z' and the digits
+ # from '0' to '9'
+ ```
+ ### Bit fields
+ ```nim
+ type
+  MyFlag* {.size: sizeof(cint).} = enum
+    A
+    B
+    C
+    D
+  MyFlags = set[MyFlag]
+
+proc toNum(f: MyFlags): int = cast[cint](f)
+proc toFlags(v: int): MyFlags = cast[MyFlags](v)
+
+assert toNum({}) == 0
+assert toNum({A}) == 1
+assert toNum({D}) == 8
+assert toNum({A, C}) == 5
+assert toFlags(0) == {}
+assert toFlags(7) == {A, B, C}
+```
+### Arrays
+```nim
+type
+  IntArray = array[0..5, int] # an array that is indexed with 0..5
+var
+  x: IntArray
+x = [1, 2, 3, 4, 5, 6]
+for i in low(x) .. high(x):
+  echo x[i]
+  ```
+### Sequences
+```nim
+  var
+  x: seq[int] # a reference to a sequence of integers
+x = @[1, 2, 3, 4, 5, 6] # the @ turns the array into a sequence allocated on the heap
+for value in @[3, 4, 5]:
+  echo value
+# --> 3
+# --> 4
+# --> 5
+
+for i, value in @[3, 4, 5]:
+  echo "index: ", $i, ", value:", $value
+# --> index: 0, value:3
+# --> index: 1, value:4
+# --> index: 2, value:5
+```
+### Open arrays
+```nim
+var
+  fruits:   seq[string]   
+ # reference to a sequence of strings that is initialized with '@[]'
+  capitals: array[3, string]
+  
+ # array of strings with a fixed size
+
+capitals = ["New York", "London", "Berlin"]  
+ # array 'capitals' allows assignment of only three elements
+fruits.add("Banana")  
+ # sequence 'fruits' is dynamically expandable during runtime
+fruits.add("Mango")
+
+proc openArraySize(oa: openArray[string]): int =
+  oa.len
+
+assert openArraySize(fruits) == 2   
+  # procedure accepts a sequence as parameter
+assert openArraySize(capitals) == 3 
+  # but also an array type
+```
+### Varargs
+```nim
+proc myWriteln(f: File, a: varargs[string]) =
+  for s in items(a):
+    write(f, s)
+  write(f, "\n")
+
+myWriteln(stdout, "abc", "def", "xyz")
+# is transformed by the compiler to:
+myWriteln(stdout, ["abc", "def", "xyz"])
+```
+### Slices
+```nim
+var
+  a = "Nim is a programming language"
+  b = "Slices are useless."
+
+echo a[7 .. 12] # --> 'a prog'
+b[11 .. ^2] = "useful"
+echo b # --> 'Slices are useful.'
+```
+### Objects
+```nim
+type
+  Person = object
+    name: string
+    age: int
+
+var person1 = Person(name: "Peter", age: 30)
+
+echo person1.name # "Peter"
+echo person1.age  # 30
+
+var person2 = person1 # copy of person 1
+
+person2.age += 14
+
+echo person1.age # 30
+echo person2.age # 44
+
+
+# the order may be changed
+let person3 = Person(age: 12, name: "Quentin")
+
+# not every member needs to be specified
+let person4 = Person(age: 3)
+# unspecified members will be initialized with their default
+# values. In this case it is the empty string.
+doAssert person4.name == ""
+```
+### Tuples
+```nim
+type
+  Person = tuple
+    name: string
+    age: int
+  
+  PersonX = tuple[name: string, age: int]
+  
+  PersonY = (string, int)
+
+var
+  person: Person
+  personX: PersonX
+  personY: PersonY
+
+person = (name: "Peter", age: 30)
+# Person and PersonX are equivalent
+personX = person
+
+# Create a tuple with anonymous fields:
+personY = ("Peter", 30)
+
+person = personY
+personY = person
+
+person = ("Peter", 30)
+
+echo person.name # "Peter"
+echo person.age  # 30
+
+echo person[0] # "Peter"
+echo person[1] # 30
+
+var building: tuple[street: string, number: int]
+building = ("Rue del Percebe", 13)
+echo building.street
+
+```
+### Reference and pointer types
+```nim
+type
+  Node = ref object
+    le, ri: Node
+    data: int
+
+var n = Node(data: 9)
+echo n.data
+# no need to write n[].data; in fact n[].data is highly discouraged!
+```
+### Procedural type
+```nim
+proc greet(name: string): string =
+  "Hello, " & name & "!"
+
+proc bye(name: string): string =
+  "Goodbye, " & name & "."
+
+proc communicate(greeting: proc (x: string): string, name: string) =
+  echo greeting(name)
+
+communicate(greet, "John")
+communicate(bye, "Mary")
+```
+### Modules
+```nim
+# Module A
+var
+  x*, y: int
+
+proc `*` *(a, b: seq[int]): seq[int] =
+  # allocate a new sequence:
+  newSeq(result, len(a))
+  # multiply two int sequences:
+  for i in 0 ..< len(a): result[i] = a[i] * b[i]
+
+when isMainModule:
+  # test the new `*` operator for sequences:
+  assert(@[1, 2, 3] * @[1, 2, 3] == @[1, 4, 9])
+
+
+ ``` 
+### Excluding symbols
+```nim
+import mymodule except y
+
+# From statement
+from mymodule import x, y, z
+from mymodule import x, y, z
+
+x()  
+  # use x without any qualification
+
+#Include statement
+include fileA, fileB, fileC
+
+```
+### Inheritance
+```nim
+type
+  Person = ref object of RootObj
+    name*: string  # the * means that `name` is accessible from other modules
+    age: int       # no * means that the field is hidden from other modules
+  
+  Student = ref object of Person # Student inherits from Person
+    id: int                      # with an id field
+
+var
+  student: Student
+  person: Person
+assert(student of Student) # is true
+# object construction:
+student = Student(name: "Anton", age: 5, id: 2)
+echo student[]
+```
+### Mutually recursive types
+```nim
+type
+  Node = ref object 
+ # a reference to an object with the following field:
+    le, ri: Node 
+   # left and right subtrees
+    sym: ref Sym  
+  # leaves contain a reference to a Sym
+  
+  Sym = object     
+    # a symbol
+    name: string    
+     # the symbol's name
+    line: int   
+   # the line the symbol was declared in
+    code: Node 
+    # the symbol's abstract syntax tree
+  ```
+### Object variants
+```nim
+# This is an example how an abstract syntax tree could be modelled in Nim
+type
+  NodeKind = enum  # the different node types
+    nkInt,          # a leaf with an integer value
+    nkFloat,        # a leaf with a float value
+    nkString,       # a leaf with a string value
+    nkAdd,          # an addition
+    nkSub,          # a subtraction
+    nkIf            # an if statement
+  Node = ref object
+    case kind: NodeKind  # the `kind` field is the discriminator
+    of nkInt: intVal: int
+    of nkFloat: floatVal: float
+    of nkString: strVal: string
+    of nkAdd, nkSub:
+      leftOp, rightOp: Node
+    of nkIf:
+      condition, thenPart, elsePart: Node
+
+var n = Node(kind: nkFloat, floatVal: 1.0)
+# the following statement raises an `FieldDefect` exception, because
+# n.kind's value does not fit:
+n.strVal = ""
+```
+### Method call syntax
+```nim
+import std/strutils
+
+echo "abc".len # is the same as echo len("abc")
+echo "abc".toUpperAscii()
+echo({'a', 'b', 'c'}.card)
+stdout.writeLine("Hallo") # the same as writeLine(stdout, "Hallo")
+##############################
+import std/[strutils, sequtils]
+
+stdout.writeLine("Give a list of numbers (separated by spaces): ")
+stdout.write(stdin.readLine.splitWhitespace.map(parseInt).max.`$`)
+stdout.writeLine(" is the maximum!")
+```
+### Properties
+```nim
+type
+  Socket* = ref object of RootObj
+    h: int # cannot be accessed from the outside of the module due to missing star
+
+proc `host=`*(s: var Socket, value: int) {.inline.} =
+  ## setter of host address
+  s.h = value
+
+proc host*(s: Socket): int {.inline.} =
+  ## getter of host address
+  s.h
+
+var s: Socket
+new s
+s.host = 34  # same as `host=`(s, 34)
+
+type
+  Vector* = object
+    x, y, z: float
+
+proc `[]=`* (v: var Vector, i: int, value: float) =
+  # setter
+  case i
+  of 0: v.x = value
+  of 1: v.y = value
+  of 2: v.z = value
+  else: assert(false)
+
+proc `[]`* (v: Vector, i: int): float =
+  # getter
+  case i
+  of 0: result = v.x
+  of 1: result = v.y
+  of 2: result = v.z
+  else: assert(false)
+```
+### Dynamic dispatch
+```nim
+type
+  Expression = ref object of RootObj ## abstract base class for an expression
+  Literal = ref object of Expression
+    x: int
+  PlusExpr = ref object of Expression
+    a, b: Expression
+
+# watch out: 'eval' relies on dynamic binding
+method eval(e: Expression): int {.base.} =
+  # override this base method
+  quit "to override!"
+
+method eval(e: Literal): int = e.x
+method eval(e: PlusExpr): int = eval(e.a) + eval(e.b)
+
+proc newLit(x: int): Literal = Literal(x: x)
+proc newPlus(a, b: Expression): PlusExpr = PlusExpr(a: a, b: b)
+
+echo eval(newPlus(newPlus(newLit(1), newLit(2)), newLit(4)))
+```
+### Raise statement
+```nim
+var
+  e: ref OSError
+new(e)
+e.msg = "the request to the OS failed"
+raise e
+
+raise newException(OSError, "the request to the OS failed")
+```
+### Try statement
+```nim
+from std/strutils import parseInt
+
+# read the first two lines of a text file that should contain numbers
+# and tries to add them
+var
+  f: File
+if open(f, "numbers.txt"):
+  try:
+    let a = readLine(f)
+    let b = readLine(f)
+    echo "sum: ", parseInt(a) + parseInt(b)
+  except OverflowDefect:
+    echo "overflow!"
+  except ValueError:
+    echo "could not convert string to integer"
+  except IOError:
+    echo "IO error!"
+  except CatchableError:
+    echo "Unknown exception!"
+    # reraise the unknown exception:
+    raise
+  finally:
+    close(f)
+```    
+### Annotating procs with raised exceptions
+```nim
+proc complexProc() {.raises: [IOError, ArithmeticDefect].} =
+  
+
+proc simpleProc() {.raises: [].} =
+  ...
+```
+###  Generics
+```nim
+ type
+  BinaryTree*[T] = ref object # BinaryTree is a generic type with
+                              # generic param `T`
+    le, ri: BinaryTree[T]     # left and right subtrees; may be nil
+    data: T                   # the data stored in a node
+
+proc newNode*[T](data: T): BinaryTree[T] =
+  # constructor for a node
+  new(result)
+  result.data = data
+
+proc add*[T](root: var BinaryTree[T], n: BinaryTree[T]) =
+  # insert a node into the tree
+  if root == nil:
+    root = n
+  else:
+    var it = root
+    while it != nil:
+      # compare the data items; uses the generic `cmp` proc
+      # that works for any type that has a `==` and `<` operator
+      var c = cmp(it.data, n.data)
+      if c < 0:
+        if it.le == nil:
+          it.le = n
+          return
+        it = it.le
+      else:
+        if it.ri == nil:
+          it.ri = n
+          return
+        it = it.ri
+
+proc add*[T](root: var BinaryTree[T], data: T) =
+  # convenience proc:
+  add(root, newNode(data))
+
+iterator preorder*[T](root: BinaryTree[T]): T =
+  # Preorder traversal of a binary tree.
+  # This uses an explicit stack (which is more efficient than
+  # a recursive iterator factory).
+  var stack: seq[BinaryTree[T]] = @[root]
+  while stack.len > 0:
+    var n = stack.pop()
+    while n != nil:
+      yield n.data
+      add(stack, n.ri)  # push right subtree onto the stack
+      n = n.le          # and follow the left pointer
+
+var
+  root: BinaryTree[string] # instantiate a BinaryTree with `string`
+add(root, newNode("hello")) # instantiates `newNode` and `add`
+add(root, "world")          # instantiates the second `add` proc
+for str in preorder(root):
+  stdout.writeLine(str)
+```  
+### Templates
+```nim
+template `!=` (a, b: untyped): untyped =
+  # this definition exists in the System module
+  not (a == b)
+
+assert(5 != 6) # the compiler rewrites that to: assert(not (5 == 6))
+#############################################
+const
+  debug = true
+
+proc log(msg: string) {.inline.} =
+  if debug: stdout.writeLine(msg)
+
+var
+  x = 4
+log("x has the value: " & $x)
+####################################
+template withFile(f: untyped, filename: string, mode: FileMode,
+                  body: untyped) =
+  let fn = filename
+  var f: File
+  if open(f, fn, mode):
+    try:
+      body
+    finally:
+      close(f)
+  else:
+    quit("cannot open: " & fn)
+
+withFile(txt, "ttempl3.txt", fmWrite):
+  txt.writeLine("line 1")
+  txt.writeLine("line 2")
+
+```
+### Static Arguments
+```nim
+import std/macros
+
+macro myMacro(arg: static[int]): untyped =
+  echo arg # just an int (7), not `NimNode`
+
+myMacro(1 + 2 * 3)
+```
+### Code Blocks as Arguments
+```nim
+echo "Hello ":
+  let a = "Wor"
+  let b = "ld!"
+  a & b
+  ```
+### The Syntax Tree
+```nim
+dumpTree:
+  var mt: MyType = MyType(a:123.456, b:"abcdef")
+
+# output:
+#   StmtList
+#     VarSection
+#       IdentDefs
+#         Ident "mt"
+#         Ident "MyType"
+#         ObjConstr
+#           Ident "MyType"
+#           ExprColonExpr
+#             Ident "a"
+#             FloatLit 123.456
+#           ExprColonExpr
+#             Ident "b"
+#             StrLit "abcdef"
+```
+### Custom Semantic Checking
+```nim
+macro myAssert(arg: untyped): untyped =
+  arg.expectKind nnkInfix
+  ```
+  ### Generating Code
+  ```nim
+import std/macros
+
+type
+  MyType = object
+    a: float
+    b: string
+
+macro myMacro(arg: untyped): untyped =
+  var mt: MyType = MyType(a:123.456, b:"abcdef")
+  
+  # 
+  
+  let mtLit = newLit(mt)
+  
+  result = quote do:
+    echo `arg`
+    echo `mtLit`
+
+myMacro("Hallo")
+```
+### Building Your First Macro
+```nim
+import std/macros
+
+macro myAssert(arg: untyped): untyped =
+  # all node kind identifiers are prefixed with "nnk"
+  arg.expectKind nnkInfix
+  arg.expectLen 3
+  # operator as string literal
+  let op  = newLit(" " & arg[0].repr & " ")
+  let lhs = arg[1]
+  let rhs = arg[2]
+  
+  result = quote do:
+    if not `arg`:
+      raise newException(AssertionDefect,$`lhs` & `op` & $`rhs`)
+
+let a = 1
+let b = 2
+
+myAssert(a != b)
+myAssert(a == b)
+
 ```
