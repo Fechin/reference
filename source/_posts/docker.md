@@ -334,15 +334,11 @@ $ docker push eon01/nginx localhost:5000/myadmin/nginx
 
 
 ### Batch clean
-|  Example                                     | Description                                            |
-|-------------|---------------------------------------------|
-`docker stop -f $(docker ps -a -q)` | Stopping all containers 
-`docker rm -f $(docker ps -a -q)` |  Removing all containers
-`docker rmi -f $(docker images -q)` | Removing all images
-
-
-
-
+| Example                             | Description             |
+|-------------------------------------|-------------------------|
+| `docker stop $(docker ps -a -q)`    | Stopping all containers |
+| `docker rm -f $(docker ps -a -q)`   | Removing all containers |
+| `docker rmi -f $(docker images -q)` | Removing all images     |
 
 ### Volumes
 
