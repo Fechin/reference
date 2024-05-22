@@ -3,25 +3,21 @@ title: React.js
 date: 2023-11-17 10:12:25
 background: bg-[#1289D8]
 tags:
-    - react
-    - web
+  - react
+  - web
 categories:
   - Programming
 intro: |
-    A React.js cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  A React.js cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-
-
-Getting Started
-------------
+## Getting Started
 
 ### JSX
 
-JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. 
+JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file.
 
 ```javascript
 let element = <h1>Hello, world!</h1>;
@@ -29,19 +25,17 @@ let element = <h1>Hello, world!</h1>;
 let emptyHeading = <h1 />;
 ```
 
-
 ### JSX Expressions
 
 ```javascript
-let name = 'Josh Perez';
+let name = "Josh Perez";
 let element = <h1>Hello, {name}</h1>;
 
 function fullName(firstName, lastName) {
-  return firstName + ' ' + lastName;
+  return firstName + " " + lastName;
 }
-let element = <h1>Hello, {fullName('Julie', 'Johnson')}</h1>
+let element = <h1>Hello, {fullName("Julie", "Johnson")}</h1>;
 ```
-
 
 ### JSX Attributes
 
@@ -49,8 +43,6 @@ let element = <h1>Hello, {fullName('Julie', 'Johnson')}</h1>
 const element = <img src={user.avatarUrl} />;
 const element = <button className="btn">Click me</button>;
 ```
-
-
 
 ### JSX Functions
 
@@ -66,8 +58,7 @@ return (
 )
 ```
 
-
-### JSX Conditional Rendering
+### JSX Conditional Rendering {.col-span-2}
 
 ```javascript
 import React from "react";
@@ -87,64 +78,62 @@ export default function Weather(props) {
   }
 }
 ```
+
 Note: A component must always return something.
 
-
-Components
-------------
-
+## Components
 
 ### Functional Component
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 export default function UserProfile() {
   return (
-      <div className="UserProfile">
-        <div>Hello</div>  
-        <div>World</div>
-      </div>
+    <div className="UserProfile">
+      <div>Hello</div>
+      <div>World</div>
+    </div>
   );
 }
 ```
-Note: Every component needs one root element
 
+Note: Every component needs one root element
 
 ### Embed an internal Component
 
 ```javascript
-import React from 'react';
+import React from "react";
 import UserAvatar from "./UserAvatar";
 
 export default function UserProfile() {
   return (
-      <div className="UserProfile">
-        <UserAvatar />
-        <UserAvatar />
-      </div>
+    <div className="UserProfile">
+      <UserAvatar />
+      <UserAvatar />
+    </div>
   );
 }
 ```
-Note: Assuming UserAvatar is declared in UserAvatar.js
 
+Note: Assuming UserAvatar is declared in UserAvatar.js
 
 ### Embed an external Component
 
 ```javascript
-import React from 'react';
-import ComponentName from 'component-name';
+import React from "react";
+import ComponentName from "component-name";
 
 export default function UserProfile() {
   return (
-      <div className="UserProfile">
-        <ComponentName />
-      </div>
+    <div className="UserProfile">
+      <ComponentName />
+    </div>
   );
 }
 ```
-Note: External components are found on npmjs.com and need to be imported first.
 
+Note: External components are found on npmjs.com and need to be imported first.
 
 ### Advanced Functional Components
 
@@ -155,29 +144,24 @@ export default function Hello(props) {
   function fullName() {
     return `${props.firstName} ${props.lastName}`;
   }
-  return (
-    <p>
-      {fullName()}
-    </p>
-  );
+  return <p>{fullName()}</p>;
 }
 
-
-<Hello firstName="Matt" lastName="Delac" />
+<Hello firstName="Matt" lastName="Delac" />;
 ```
 
-
-Properties
-------------
+## Properties {.cols-2}
 
 ### Passing Properties to a Component
 
+<!-- prettier-ignore -->
 ```javascript
-<Student 
-firstName="Julie" 
-lastName="Johnson" 
-age={23} 
-pro={true} />
+<Student
+  firstName="Julie"
+  lastName="Johnson"
+  age={23}
+  pro={true}
+/>
 ```
 
 ### Assigning the Properties from a Component
@@ -190,13 +174,11 @@ export default function Student(props) {
     <h1>
       {props.firstName} {props.lastName} is {props.age}.
     </h1>
-  )
+  );
 }
 ```
 
-
-States
-------------
+## States {.cols-1}
 
 ### React State
 
@@ -212,20 +194,14 @@ export default function Hello(props) {
 
   return (
     <div>
-      <h1>
-        {name}
-      </h1>
-      <button onClick={updateName}>
-        Update name
-      </button>
+      <h1>{name}</h1>
+      <button onClick={updateName}>Update name</button>
     </div>
   );
 }
 ```
 
-
-Events
-------------
+## Events {.cols-1}
 
 ### Event Listener
 
@@ -245,27 +221,26 @@ export default function Hello() {
   );
 }
 ```
+
 Note: The most common event listeners are onClick for links/buttons and onSubmit for forms.
 
-
-Loops
-------------
+## Loops {.cols-2}
 
 ### Looping through an Array
 
 ```javascript
-let elements = ['one', 'two', 'three'];
+let elements = ["one", "two", "three"];
 
 return (
   <ul>
-    {elements.map(function(value, index) {
-      return <li key={index}>{value}</li>
+    {elements.map(function (value, index) {
+      return <li key={index}>{value}</li>;
     })}
   </ul>
 );
 ```
-Note: Each list item inside a map loop needs a key attribute with a unique value which is generally the index.
 
+Note: Each list item inside a map loop needs a key attribute with a unique value which is generally the index.
 
 ### Looping through an Array of Objects
 
@@ -296,11 +271,10 @@ return (
   </ul>
 );
 ```
+
 Note: Each list item inside a map loop needs a key attribute with a unique value which is generally the index.
 
-
-Forms
-------------
+## Forms {.cols-1}
 
 ### React Forms
 
@@ -334,9 +308,7 @@ export default function LoginForm() {
 }
 ```
 
-
-CSS
-------------
+## CSS {.cols-1}
 
 ### CSS in a React Component
 
@@ -345,18 +317,13 @@ import React from "react";
 import "./Student.css";
 
 export default function Student() {
-  return (
-    <div className="Student">
-      Julie Johnson
-    </div>
-  )
+  return <div className="Student">Julie Johnson</div>;
 }
 ```
+
 Note: You'll then have to crate a css file called Student.css
 
-
-AJAX
-------------
+## AJAX {.cols-1}
 
 ### AJAX Request with Axios
 
@@ -368,13 +335,9 @@ export default function Weather(props) {
   function handleResponse(response) {
     console.log(response);
   }
-  
+
   if (notifications) {
-    return (
-      <p>
-        notifications
-      </p>
-    );
+    return <p>notifications</p>;
   } else {
     let url = `https://notifications.com`;
     axios.get(url).then(handleResponse);
@@ -382,11 +345,10 @@ export default function Weather(props) {
   }
 }
 ```
+
 Note: Make sure to import Axios first to your project.
 
-
-HOOKS
-------------
+## Hooks {.cols-2}
 
 ### useState Hook
 
@@ -406,9 +368,9 @@ function Counter() {
 
 export default Counter;
 ```
-Note: The useState Hook is a built-in React Hook that allows functional components to manage local state. It provides a way to declare state variables and update them within a functional component.
-Example code illustrating how to use it
 
+Note: The useState Hook is a built-in React Hook that allows functional components to manage local state. It provides a
+way to declare state variables and update them within a functional component. Example code illustrating how to use it
 
 ### Multiple State Variable Declaration
 
@@ -449,7 +411,9 @@ function Counter() {
 
 export default Counter;
 ```
-Note: You can declare multiple state variables using the useState Hook by calling it multiple times in a functional component. Each call to useState manages a separate piece of state.
+
+Note: You can declare multiple state variables using the useState Hook by calling it multiple times in a functional
+component. Each call to useState manages a separate piece of state.
 
 ### Input State Management
 
@@ -457,7 +421,7 @@ Note: You can declare multiple state variables using the useState Hook by callin
 import { useState } from "react";
 
 function FormExample() {
-  const [formData, setFormData] = useState({name: "",email: "",message: ""});
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -466,20 +430,19 @@ function FormExample() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
-    );
-};
+    alert(`Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
-      <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
+      <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
 
       <label htmlFor="email">Email:</label>
-      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
+      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
 
       <label htmlFor="message">Message:</label>
-      <textarea id="message" name="message" value={formData.message} onChange={handleChange}/>
+      <textarea id="message" name="message" value={formData.message} onChange={handleChange} />
 
       <button type="submit">Submit</button>
     </form>
@@ -510,7 +473,9 @@ function Timer() {
 
 export default Timer;
 ```
-Note: The useEffect Hook in React is used for performing side effects in functional components. It allows you to execute code based on component lifecycle events like mounting, updating, and unmounting.
+
+Note: The useEffect Hook in React is used for performing side effects in functional components. It allows you to execute
+code based on component lifecycle events like mounting, updating, and unmounting.
 
 ### Fetch API using useEffect
 
@@ -522,11 +487,12 @@ function UserList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users")
-      .then(response => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((response) => {
         setUsers(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error fetching users:", error);
       });
   }, []);
@@ -535,7 +501,7 @@ function UserList() {
     <div>
       <h2>User List</h2>
       <ul>
-        {users.map(user => (
+        {users.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
@@ -545,9 +511,10 @@ function UserList() {
 
 export default UserList;
 ```
+
 Note: Make sure to import Axios first to your project.
 
-###  Custom Hook creation useLocalStorage
+### Custom Hook creation useLocalStorage
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -567,4 +534,6 @@ function useLocalStorage(key, initialValue) {
 
 export default useLocalStorage;
 ```
-Note: Custom Hooks are reusable functions in React that contain logic shared across multiple components. They allow you to extract stateful logic from components into standalone functions.
+
+Note: Custom Hooks are reusable functions in React that contain logic shared across multiple components. They allow you
+to extract stateful logic from components into standalone functions.
