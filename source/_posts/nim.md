@@ -1,7 +1,7 @@
 ---
 title: Nim
 date: 2024-05-15 8:03:44
-background: bg-black
+background: bg-[#eed547]
 tags:
 categories:
   - Programming
@@ -1309,3 +1309,7 @@ myAssert(a != b)
 myAssert(a == b)
 
 ```
+
+## Also see
+
+- [Nim Cheat sheet](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_

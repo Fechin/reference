@@ -1,7 +1,7 @@
 ---
 title: Terraform
 date: 2024-4-18
-background: bg-[#7f48be]
+background: bg-[#7345b6]
 tags:
     - container
     - virtual
