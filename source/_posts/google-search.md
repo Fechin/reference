@@ -5,17 +5,16 @@ background: bg-[#d3594a]
 tags:
 categories:
   - Other
-intro:  |
-    This quick reference cheat sheet lists of Google advanced search operators.
+intro: |
+  This quick reference cheat sheet lists of Google advanced search operators.
 ---
 
-Getting Started {.cols-2}
-----
-
+## Getting Started {.cols-2}
 
 ### Google Advanced Search Operators
+
 | Operator    | Description                                                                                                                                                                                   | Category   |
-|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | `""`        | Allows searching for a specific phrase - exact match search. Individual word prevents synonyms                                                                                                | Basic,Mail |
 | `OR`/`AND`  | Boolean search function for OR searches as Google defaults to AND between words - must be all caps                                                                                            | Basic,Mail |
 | `\`         | Implements OR                                                                                                                                                                                 | Basic      |
@@ -31,30 +30,30 @@ Getting Started {.cols-2}
 | `AROUND(X)` | This is sandwiched between two words and the X declares how many words they must be mentioned between. I.e. if it’s (4) then the two keywords must be mentioned within 4 words of each other. | Advanced   |
 | `_`         | Acts as wildcard for autocomplete                                                                                                                                                             | Advanced   |
 
-
 ### Search with url
+
 | Operator    | Description                                                                                                                                | Category |
-|-------------|--------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | `inurl:`    | Only returns results where the queried keyword(s) is present in the URL                                                                    | Advanced |
 | `allinurl:` | As above but only containing all of the specified words in the URL                                                                         | Advanced |
 | `blogurl:`  | Find blog URLs under a specific domain. This was used in Google blog search, but I’ve found it does return some results in regular search. | Advanced |
 | `site:`     | Limit results to those from one site                                                                                                       | Advanced |
 | `related:`  | Find similar domains to the queried domain                                                                                                 | Advanced |
 
-
 ### Search with dates
+
 | Operator     | Description                                                                                          | Category   |
-|--------------|------------------------------------------------------------------------------------------------------|------------|
+| ------------ | ---------------------------------------------------------------------------------------------------- | ---------- |
 | `daterange:` | Return results in a specified range (requires julian dates)                                          | Advanced   |
 | `after:`     | Allows you to search drive or mail for files modified or mail sent/received anytime after a set date | Drive,Mail |
 | `before:`    | Allows you to search drive or mail for files modified or mail sent/received before a certain date    | Drive,Mail |
 | `older:`     | Search for messages older than a certain date                                                        | Mail       |
 | `newer:`     | Search for messages newer than a certain date                                                        | Mail       |
 
-
 ### Search files
+
 | Operator        | Description                                                                                          | Category   |
-|-----------------|------------------------------------------------------------------------------------------------------|------------|
+| --------------- | ---------------------------------------------------------------------------------------------------- | ---------- |
 | `filename:`     | Search for messages with a particular type of file attached, or the exact name of a file             | Mail       |
 | `type:`         | Allows you to search drive by file type                                                              | Drive      |
 | `owner:`        | Allows you to search drive by owner of file or folder                                                | Drive      |
@@ -67,10 +66,10 @@ Getting Started {.cols-2}
 | `before:`       | Allows you to search drive or mail for files modified or mail sent/received before a certain date    | Drive,Mail |
 | `is:trashed`    | Searches for the item in the Drive bin                                                               | Drive      |
 
-
 ### Search with page content
+
 | Operator       | Description                                                                                                         | Category |
-|----------------|---------------------------------------------------------------------------------------------------------------------|----------|
+| -------------- | ------------------------------------------------------------------------------------------------------------------- | -------- |
 | `link:`        | Find pages that link to the target domain                                                                           | Advanced |
 | `inanchor:`    | Find pages linked to with the specified anchor text/ phrase. Data is heavily sampled.                               | Advanced |
 | `allinanchor:` | Find pages with all individual terms after "inanchor:" in the inbound anchor text.                                  | Advanced |
@@ -80,19 +79,19 @@ Getting Started {.cols-2}
 | `intext:`      | Finds pages where the keyword(s) are mentioned within the page content.                                             | Advanced |
 | `allintext:`   | Similar to “intext,” but only results containing all of the specified words somewhere on the page will be returned. | Advanced |
 
-
 ### Keywords
+
 | Operator          | Description                                                                                      | Category |
-|-------------------|--------------------------------------------------------------------------------------------------|----------|
+| ----------------- | ------------------------------------------------------------------------------------------------ | -------- |
 | `Business`        | type E.g. cafe, restaurant, bar etc will return a selection of appropriate businesses in the are | Maps     |
 | `Petrol/Charging` | Station EV near me or perol station near me returns                                              | Maps     |
 | `Search`          | for a message with a google sheet attached                                                       | Mail     |
 | `Search`          | for a message with a google presentation attached                                                | Mail     |
 
-
 ### Search on emails
+
 | Operator          | Description                                                                                           | Category   |
-|-------------------|-------------------------------------------------------------------------------------------------------|------------|
+| ----------------- | ----------------------------------------------------------------------------------------------------- | ---------- |
 | `+`               | Prefix - Force exact match on single phrase                                                           | Basic,Mail |
 | `()`              | Allows grouping of operators and helps dictate order                                                  | Basic,Mail |
 | `-`               | Excludes a word from results                                                                          | Basic,Mail |
@@ -135,25 +134,23 @@ Getting Started {.cols-2}
 | `has:userlabels`  | Search for messages that have custom user labels                                                      | Mail       |
 | ` `               | Search for messages that have no custom user labels                                                   | Mail       |
 
-
 ### Some other useful search operators
-| Operator          | Description                                                                                                                                                            | Category   |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| `define:`         | Pulls a card response from Google displaying the dictionary definition of the word or phrase                                                                           | Advanced   |
-| `cache:`          | Returns the most up to date cache of an indexed web page                                                                                                               | Advanced   |
-| `weather:`        | Brings up the featured snipped for weather for that location                                                                                                           | Advanced   |
-| `stocks:`         | Returns stock information for the specified ticker                                                                                                                     | Advanced   |
-| `map:`            | Force google map results for a particular query                                                                                                                        | Advanced   |
-| `movie:`          | Find information for the specified movie (particularly useful when that movie has an ambiguous name). If the movie is still in theatres it’ll also return screen times | Advanced   |
-| `source:`         | Use in google news, returns results from the specified source                                                                                                          | Advanced   |
-| `loc:`            | Returns results for a specific location                                                                                                                                | Advanced   |
-| `location:`       | As above but with Google news                                                                                                                                          | Advanced   |
-| `info:`           | Returns information related to a domain (pages with domain text, similar on-site pages, cache etc)                                                                     | Advanced   |
-| `near`            | Part of the google maps lazy searches e.g. book shops near work                                                                                                        | Maps       |
 
+| Operator    | Description                                                                                                                                                            | Category |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `define:`   | Pulls a card response from Google displaying the dictionary definition of the word or phrase                                                                           | Advanced |
+| `cache:`    | Returns the most up to date cache of an indexed web page                                                                                                               | Advanced |
+| `weather:`  | Brings up the featured snipped for weather for that location                                                                                                           | Advanced |
+| `stocks:`   | Returns stock information for the specified ticker                                                                                                                     | Advanced |
+| `map:`      | Force google map results for a particular query                                                                                                                        | Advanced |
+| `movie:`    | Find information for the specified movie (particularly useful when that movie has an ambiguous name). If the movie is still in theatres it’ll also return screen times | Advanced |
+| `source:`   | Use in google news, returns results from the specified source                                                                                                          | Advanced |
+| `loc:`      | Returns results for a specific location                                                                                                                                | Advanced |
+| `location:` | As above but with Google news                                                                                                                                          | Advanced |
+| `info:`     | Returns information related to a domain (pages with domain text, similar on-site pages, cache etc)                                                                     | Advanced |
+| `near`      | Part of the google maps lazy searches e.g. book shops near work                                                                                                        | Maps     |
 
+## Also see
 
-Also see
---------
-
-- [Google Search Operators Cheat Sheet](https://static.semrush.com/blog/uploads/files/39/12/39121580a18160d3587274faed6323e2.pdf) _(static.semrush.com)_
+- [Google Search Operators Cheat Sheet](https://static.semrush.com/blog/uploads/files/39/12/39121580a18160d3587274faed6323e2.pdf)
+  _(static.semrush.com)_
