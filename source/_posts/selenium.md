@@ -1,7 +1,7 @@
 ---
 title: Selenium
 date: 2024-05-04 19:50:01
-background: bg-[#d33731]
+background: bg-[#62ae41]
 tags:
   - automation
   - testing

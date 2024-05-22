@@ -2,7 +2,7 @@
 title: Hook
 date: 2024-03-13 18:20:00
 icon: icon-style
-background: bg-[#58aee9]
+background: bg-[#1131e2]
 tags:
     - script
     - interpret
