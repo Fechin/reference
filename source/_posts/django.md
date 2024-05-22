@@ -9,7 +9,7 @@ tags:
 categories:
   - Programming
 intro: |
-   A Django cheat sheet. 
+  A Django cheat sheet.
 plugins:
   - copyCode
 ---
@@ -46,7 +46,7 @@ plugins:
 
 ### Migration:
 
-<small>Django create a database table for each models present in your app using thoses commands:</small>
+<small>Django create a database table for each models present in your app using those commands:</small>
 
 Makemigrations: Create a file under app_name/migrations with the database structure to create
 
@@ -75,7 +75,7 @@ Migrate: Will read the migrations files and create the actual database and table
 ### Requirements
 
 ```python
-# Create a requirements file that contain all your projet dependencies
+# Create a requirements file that contain all your project dependencies
 ~$  pip freeze > requirements.txt
 
 # Install your project requirements (if a requirements file exist)
@@ -85,7 +85,7 @@ Migrate: Will read the migrations files and create the actual database and table
 ### Other commands
 
 ```python
-# Django shell (Run projet code direclty)
+# Django shell (Run project code directly)
 ~$ python manage.py shell
 
 # example of code to run in the shell:
@@ -205,7 +205,7 @@ CSRF_COOKIE_SECURE = True
 
 ```python
 # models.py
-# The id fields is automaticly created by Django
+# The id fields is automatically created by Django
 # for each model that why it's not show below
 from django.db import models
 
@@ -554,7 +554,7 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
 # Access to the variable in the template
 {{ var_name }}
 
-# Template variables formating
+# Template variables formatting
 {{ title | lower }}
 {{ blog.post | truncatwords:50 }}
 {{ order.date | date:"D M Y" }}
@@ -1381,7 +1381,7 @@ from django.core.email import send_mail
 
 send_mail(
     subject = "A new post has been created",
-    messsage = "Go to the web site to see the detail",
+    message = "Go to the web site to see the detail",
     from_email = "test@test.com",
     recipient_list = ["test2@text.com"]
 )
@@ -1397,7 +1397,7 @@ def post_user_created_signal(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
 
-# Launch the post_user_create_singal method if User model is save
+# Launch the post_user_created_signal method if User model is save
 post_save.connect(post_user_created_signal, sender=User)
 ```
 
