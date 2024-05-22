@@ -3,18 +3,17 @@ title: Ruby
 date: 2024-04-25 09:50:25
 background: bg-red-500
 tags:
-    - script
-    - interpret
+  - script
+  - interpret
 categories:
   - Programming
 intro: |
-    The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.
+  The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Getting Started
----------------
+## Getting Started
 
 ### Install
 
@@ -22,14 +21,15 @@ Getting Started
 # Debian, Ubuntu
 $ sudo apt-get install ruby-full
 # Windows
-$ winget install RubyInstallerTeam.Ruby 
+$ winget install RubyInstallerTeam.Ruby
 $ brew install ruby # macOS
 $ docker run -it --rm ruby:latest # Docker
 ```
 
 ### What is Gemfile and Gemfile.lock {.row-span-2}
 
-- [Gemfile](https://bundler.io/v2.3/man/gemfile.5.html) Is the Bundler (also gem) configuration file that contains the project's gem list (dependencies)
+- [Gemfile](https://bundler.io/v2.3/man/gemfile.5.html) Is the Bundler (also gem) configuration file that contains the
+  project's gem list (dependencies)
 
 ```ruby
 # Specify gem in the Gemfile in the project root directory
@@ -82,51 +82,48 @@ puts "Hello world!"  # Inline comments for code
 
 ### reserved words {.col-span-1}
 
-
-Reserved words | Description
-:-|-
-| `__ENCODING__` | The script encoding of the current file
-| `__LINE__`     | The line number of this keyword in the current file
-| `__FILE__`     | The path of the current file
-| `BEGIN`        | Code enclosed in { } is run before the program is run
-| `END`          | Code enclosed in { } is run at the end of the program
-| `alias`        | Create an alias for an existing method, operator, or global variable
-| `and`          | Logical AND operator
-| `begin`        | Begin a block of code
-| `break`        | Terminate a loop
-| `case`         | Compare an expression with matching `when` clauses, terminated with <br/> `end`
-| `class`        | Define a class
-| `def`          | define a function/method
-| `defined?`     | Check if a variable or function exist
-| `do`           | Start a block of code, terminated with the <br/> `end` keyword
-| `else`         | Execute the following code if previous conditions are not met
-| `elsif`        | Alternative condition for if expressions
-| `end`          | End blocks of code starting with keywords like `begin`, `class`,`def`,`do`,`if`, etc.
-| `ensure`       | Always execute at the end of a block
-| `false`        | Logical boolean value false
-| `for`          | Start a `for` loop
-| `if`           | Execute the code block `if` the condition is `true`
-| `in`           | Used with `for` loop
-| `module`       | Define a module
-| `next`         | jump to the point before the evaluation of the loop condition
-| `nil`          | Stand for null, invalid, or always false
-| `not`          | Logical NOT opearator
-| `or`           | Logical OR opearator
-| `redo`         | Jump back to the loop condition evaluation
-| `rescue`       | Evaluate expressions after an exception is raised
-| `retry`        | Repeat method calls when called outside `rescue`, jump to the top of the block when called inside `rescue`
-| `return`       | Return a value from a method or block
-| `self`         | Refer to the current object
-| `super`        | Call the same-named method in the superclass
-| `then`         | Used as a separator with`if`,`unless`,`when`,`case`,`rescue`
-| `true`         | Logical boolean value true
-| `undef`        | Undefine methods/functions within the current class
-| `until`        | Execute the code block until the condition is false
-| `when`         | Begin a clause under a `case` statement
-| `while`        | Execute the code block while the condition is true
-| `yield`        | Execute the code block passed to a method
-
-
+| Reserved words | Description                                                                                                |
+| :------------- | :--------------------------------------------------------------------------------------------------------- |
+| `__ENCODING__` | The script encoding of the current file                                                                    |
+| `__LINE__`     | The line number of this keyword in the current file                                                        |
+| `__FILE__`     | The path of the current file                                                                               |
+| `BEGIN`        | Code enclosed in { } is run before the program is run                                                      |
+| `END`          | Code enclosed in { } is run at the end of the program                                                      |
+| `alias`        | Create an alias for an existing method, operator, or global variable                                       |
+| `and`          | Logical AND operator                                                                                       |
+| `begin`        | Begin a block of code                                                                                      |
+| `break`        | Terminate a loop                                                                                           |
+| `case`         | Compare an expression with matching `when` clauses, terminated with <br/> `end`                            |
+| `class`        | Define a class                                                                                             |
+| `def`          | define a function/method                                                                                   |
+| `defined?`     | Check if a variable or function exist                                                                      |
+| `do`           | Start a block of code, terminated with the <br/> `end` keyword                                             |
+| `else`         | Execute the following code if previous conditions are not met                                              |
+| `elsif`        | Alternative condition for if expressions                                                                   |
+| `end`          | End blocks of code starting with keywords like `begin`, `class`,`def`,`do`,`if`, etc.                      |
+| `ensure`       | Always execute at the end of a block                                                                       |
+| `false`        | Logical boolean value false                                                                                |
+| `for`          | Start a `for` loop                                                                                         |
+| `if`           | Execute the code block `if` the condition is `true`                                                        |
+| `in`           | Used with `for` loop                                                                                       |
+| `module`       | Define a module                                                                                            |
+| `next`         | jump to the point before the evaluation of the loop condition                                              |
+| `nil`          | Stand for null, invalid, or always false                                                                   |
+| `not`          | Logical NOT operator                                                                                       |
+| `or`           | Logical OR operator                                                                                        |
+| `redo`         | Jump back to the loop condition evaluation                                                                 |
+| `rescue`       | Evaluate expressions after an exception is raised                                                          |
+| `retry`        | Repeat method calls when called outside `rescue`, jump to the top of the block when called inside `rescue` |
+| `return`       | Return a value from a method or block                                                                      |
+| `self`         | Refer to the current object                                                                                |
+| `super`        | Call the same-named method in the superclass                                                               |
+| `then`         | Used as a separator with`if`,`unless`,`when`,`case`,`rescue`                                               |
+| `true`         | Logical boolean value true                                                                                 |
+| `undef`        | Undefine methods/functions within the current class                                                        |
+| `until`        | Execute the code block until the condition is false                                                        |
+| `when`         | Begin a clause under a `case` statement                                                                    |
+| `while`        | Execute the code block while the condition is true                                                         |
+| `yield`        | Execute the code block passed to a method                                                                  |
 
 ### Operator {.row-span-7}
 
@@ -258,17 +255,18 @@ a == 10 ? puts 'Right' : puts 'Wrong'
 
 ### Operator precedence table
 
-From highest to lowest, this is the precedence table for ruby. High precedence operations happen before low precedence operations.
+From highest to lowest, this is the precedence table for ruby. High precedence operations happen before low precedence
+operations.
 
 - !, ~, unary +
-- **
+- \*\*
 - unary -
-- *, /, %
+- \*, /, %
 - +, -
 - <<, >>
 - &
 - |, ^
-- >, >=, <, <=
+- > , >=, <, <=
 - <=>, ==, ===, !=, =~, !~
 - &&
 - ||
@@ -284,21 +282,18 @@ From highest to lowest, this is the precedence table for ruby. High precedence o
 
 ### Variables and scope {.col-span-2}
 
-| -    | -     | -       |  -          |
-|------|-------|---------|-------------|
-| Name | Scope | Example | Explanation |
-| `[a-z]` or `_` | Local | `count = 10` or `_count = 10` | Local variables must be initialized |
-| `@` | Instance variable | `@id = []` | Instance variables have a "nil" value before initialization |
-| `@@` | Class variable | `@@name = []` | Class variables must be initialized |
-| `$` | Global variable | `$version = "0.8.9"` | Global variables have a "nil" value before initialization |
-| `[A-Z]` | Constant | `PI = 3.14` | Constant variables must be initialized, you can change constants, but you will receive a warning |
+| -              | -                 | -                             | -                                                                                                |
+| -------------- | ----------------- | ----------------------------- | :----------------------------------------------------------------------------------------------- |
+| Name           | Scope             | Example                       | Explanation                                                                                      |
+| `[a-z]` or `_` | Local             | `count = 10` or `_count = 10` | Local variables must be initialized                                                              |
+| `@`            | Instance variable | `@id = []`                    | Instance variables have a "nil" value before initialization                                      |
+| `@@`           | Class variable    | `@@name = []`                 | Class variables must be initialized                                                              |
+| `$`            | Global variable   | `$version = "0.8.9"`          | Global variables have a "nil" value before initialization                                        |
+| `[A-Z]`        | Constant          | `PI = 3.14`                   | Constant variables must be initialized, you can change constants, but you will receive a warning |
 
-
-There are five different types of variables. The first character determines the range
-To read in deap about variables check 
-[User Guide](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/) cap 19,20,21,22,23
+There are five different types of variables. The first character determines the range To read in deap about variables
+check [User Guide](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/) cap 19,20,21,22,23
 [Pre-Defined Variables and Constants](https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html)
-
 
 ### Check the scope of a variable
 
@@ -317,18 +312,18 @@ defined? PI
 
 ### Data Types {.col-span-2}
 
-| -    | -                      | -                                     | - |
-|:--------|:-----------------------------|:------------------------------------------|:--------------|
-| Type    | Example                      | Class                                     | Documentation |
-| `Integer` | a = 17                     | a.class > Integer <br>a.class.superclass > Numeric | [#]((https://ruby-doc.org/3.3.1/Integer.html)) |
-| `Float`   | a = 87.23                  | a.class > Float <br>a.class.superclass > Numeric   | [#](https://ruby-doc.org/3.3.1/Float.html) |
-| `String`  | a = "Hello universe"       | a.class > String                                   | [#](https://ruby-doc.org/3.3.1/String.html) |
-| `Array`   | a = [12, 34]               | a.class > Array                                    | [#](https://ruby-doc.org/3.3.1/Array.html) |
-| `Hash`    | a = {type: "tea", count: 10} | a.class > Hash                                   | [#](https://ruby-doc.org/3.3.1/Hash.html) |
-| `Boolean` | a = false<br>a = true      | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass](https://ruby-doc.org/3.3.1/TrueClass.html) [FalseClass](https://ruby-doc.org/3.3.1/FalseClass.html) |
-| `Symbol`  | a = :status                | a.class > Symbol                                   | [#](https://ruby-doc.org/3.3.1/Symbol.html) |
-| `Range`   | a = 1..3                   | a.class > Range                                    | [#](https://ruby-doc.org/3.3.1/Range.html) |
-| `Nil`     | a = nil                    | a.class > NilClass                                 | [#](https://ruby-doc.org/3.3.1/NilClass.html) |
+| -         | -                            | -                                                  | -                                                                                                               |
+| :-------- | :--------------------------- | :------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| Type      | Example                      | Class                                              | Documentation                                                                                                   |
+| `Integer` | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [#](<(https://ruby-doc.org/3.3.1/Integer.html)>)                                                                |
+| `Float`   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [#](https://ruby-doc.org/3.3.1/Float.html)                                                                      |
+| `String`  | a = "Hello universe"         | a.class > String                                   | [#](https://ruby-doc.org/3.3.1/String.html)                                                                     |
+| `Array`   | a = [12, 34]                 | a.class > Array                                    | [#](https://ruby-doc.org/3.3.1/Array.html)                                                                      |
+| `Hash`    | a = {type: "tea", count: 10} | a.class > Hash                                     | [#](https://ruby-doc.org/3.3.1/Hash.html)                                                                       |
+| `Boolean` | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass](https://ruby-doc.org/3.3.1/TrueClass.html) [FalseClass](https://ruby-doc.org/3.3.1/FalseClass.html) |
+| `Symbol`  | a = :status                  | a.class > Symbol                                   | [#](https://ruby-doc.org/3.3.1/Symbol.html)                                                                     |
+| `Range`   | a = 1..3                     | a.class > Range                                    | [#](https://ruby-doc.org/3.3.1/Range.html)                                                                      |
+| `Nil`     | a = nil                      | a.class > NilClass                                 | [#](https://ruby-doc.org/3.3.1/NilClass.html)                                                                   |
 
 [further reading](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
@@ -375,15 +370,16 @@ range = 1...10
 range.to_a
 # output => [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
+
 some useful methods
 
-Method name | Output
-:----------- | -----
-`cover?`      | `(1..5).cover?(5)` => `true`
-`end`         | `('a'..'z').end` => `"z"`
-`first`       | `(1..5).first` => `1`
-`first(3)`    | `('A'..'Z').first(2)` => `["A", "B"]`
-`eql?`        | `((0..2).eql?(0..5)` => `false`
+| Method name | Output                                |
+| :---------- | :------------------------------------ |
+| `cover?`    | `(1..5).cover?(5)` => `true`          |
+| `end`       | `('a'..'z').end` => `"z"`             |
+| `first`     | `(1..5).first` => `1`                 |
+| `first(3)`  | `('A'..'Z').first(2)` => `["A", "B"]` |
+| `eql?`      | `((0..2).eql?(0..5)` => `false`       |
 
 ### Using `step` in Range
 
@@ -402,14 +398,13 @@ Method name | Output
 # 19
 ```
 
-Ruby Flow control
----
+## Ruby Flow control
 
 ### if
 
 ```ruby
 num = 2
-puts 'two' if num == 2 
+puts 'two' if num == 2
 ```
 
 If the condition is true, execute the code
@@ -499,8 +494,7 @@ puts result
 # High Distinction
 ```
 
-String
----
+## String
 
 ### String interpolation
 
@@ -529,7 +523,8 @@ puts string
 # "123"
 ```
 
-A substring is a small part of a string, which is useful if you only want that specific part, like the beginning, middle, or end
+A substring is a small part of a string, which is useful if you only want that specific part, like the beginning,
+middle, or end
 
 ### Convert a string to lowercase or uppercase
 
@@ -542,38 +537,36 @@ A substring is a small part of a string, which is useful if you only want that s
 
 ### useful methods {.col-span-3}
 
-| Function Name | Output | Note |
-|:--------------|:-------|:-----|
-| length or size     | `"HELLO World".length` => `11` <br> `"HELLO World".size` => `11` | Returns the length of the string |
-| reverse            | `"hello worlD".reverse` => `"Dlrow olleh"` | Returns the reversed string |
-| include? other_str | `"hEllo wOrlD".include? "w"` => `true` | Returns true if the string or character exists, otherwise returns false |
-| gsub(pattern, replacement) | `"hEllo wOrlD".gsub(" ", "_")` => `"hEllo_wOrlD"` | gsub or global substitute replaces one or more strings with the provided string |
-| gsub(pattern, hash) | `"organization".gsub("z", 'z' => 's')` => `"organisation"` | gsub or global substitute replaces one or more strings with the provided hash |
-| gsub(pattern) { |match| block} | `"Price of the phone is 1000 AUD".gsub(/\d+/) { |s| '$'+s }` <br> `"Price of the phone is $1000 AUD"` | gsub or global substitute replaces one or more strings with the provided block |
-| strip | `" hEllo WOrlD ".strip` <br> `"hEllo WOrlD"` | It will remove (trim) any leading and trailing characters: null (“\x00”), horizontal tab (“\t”), newline (\n), vertical tab (“\v”), form feed (f), carriage return(\r), space (" ") |
-| prepend | `a = "world" <br> a.prepend("hello ")` <br> `"hello world"` | Adds the string before another string |
-| insert | `a = "hello" <br> a.insert(a.length, " world")` <br> `"hello world"` | Inserts the string at a specific position |
-| start_with? | `string = "ruby programming"` <br> `string.start_with? "ruby"` <br> `true` | Checks if the string starts with a specific prefix |
-| end_with? | `string = "ruby programming"` <br> `string.end_with? "ruby"` <br> `false` | Checks if the string ends with a specific prefix |
-| delete_suffix | `string = "sausage is expensive"` <br> `string.delete_suffix(" is expensive")` <br> `"sausage"` | Deletes the suffix from the string |
-| delete_prefix | `string = "sausage is expensive"` <br> `string.delete_prefix("sausage")` <br> `" is expensive"` | Deletes the prefix from the string |
-| split | `string = "a b c d" <br> string.split` <br> `["a", "b", "c", "d"]` | Converts the string into an array of characters |
-| join | `arr = ['a', 'b', 'c'] <br> arr.join`  => `"abc"` | Converts an array into a string |
-| to_i | `a = "49" <br> a.to_i` => `49` | Converts the string into an integer |
-| chop | `"abcd?".chop("?")` => `"abcd"` | Deletes the last character from the string |
-| count | `str = "aaab" <br> str.count("a")` <br> `3` | Counts the characters in the string |
-| to_f | `a = "49"` <br> `a.to_f` <br> `49.0` | Converts the string into a floating point number |
-| to_sym | `a = "key"` <br> `a.to_sym` <br> `:key` | Converts the string into a symbol |
-| match | `"abcd?".match(/ab/)` => `#<MatchData "ab">` | Converts the pattern into a regular expression and calls its match method on the string |
-| empty? | `"hello".empty?` => `false` | Returns true if the length of the string is zero |
-| squeeze | `"Booook".squeeze` => `"Bok"` | Returns a copy of the string where runs of the same character are replaced by a single character |
-| * | `puts "Ruby " * 4` => `Ruby Ruby Ruby Ruby` | Returns the concatenation of multiple copies of self |
-| + | `"sammy " + "shark"` => `"sammyshark"` | Returns the concatenation of self and the given other string |
-| eql? | `s = 'foo'` => `true` <br> `s.eql?('foo')` => `true` | Returns true if the objects have the same length and content; false otherwise |
+| Function Name                  | Output                                                                                                | Note                                                                                                                                                                                |
+| :----------------------------- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| length or size                 | `"HELLO World".length` => `11` <br> `"HELLO World".size` => `11`                                      | Returns the length of the string                                                                                                                                                    |
+| reverse                        | `"hello worlD".reverse` => `"Dlrow olleh"`                                                            | Returns the reversed string                                                                                                                                                         |
+| include? other_str             | `"hEllo wOrlD".include? "w"` => `true`                                                                | Returns true if the string or character exists, otherwise returns false                                                                                                             |
+| gsub(pattern, replacement)     | `"hEllo wOrlD".gsub(" ", "_")` => `"hEllo_wOrlD"`                                                     | gsub or global substitute replaces one or more strings with the provided string                                                                                                     |
+| gsub(pattern, hash)            | `"organization".gsub("z", 'z' => 's')` => `"organisation"`                                            | gsub or global substitute replaces one or more strings with the provided hash                                                                                                       |
+| gsub(pattern) {\|match\|block} | `"Price of the phone is 1000 AUD".gsub(/\d+/) {\| s\| '$'+s }`<br>`"Price of the phone is $1000 AUD"` | gsub or global substitute replaces one or more strings with the provided block                                                                                                      |
+| strip                          | `" hEllo WOrlD ".strip` <br> `"hEllo WOrlD"`                                                          | It will remove (trim) any leading and trailing characters: null (“\x00”), horizontal tab (“\t”), newline (\n), vertical tab (“\v”), form feed (f), carriage return(\r), space (" ") |
+| prepend                        | `a = "world" <br> a.prepend("hello ")` <br> `"hello world"`                                           | Adds the string before another string                                                                                                                                               |
+| insert                         | `a = "hello" <br> a.insert(a.length, " world")` <br> `"hello world"`                                  | Inserts the string at a specific position                                                                                                                                           |
+| start_with?                    | `string = "ruby programming"` <br> `string.start_with? "ruby"` <br> `true`                            | Checks if the string starts with a specific prefix                                                                                                                                  |
+| end_with?                      | `string = "ruby programming"` <br> `string.end_with? "ruby"` <br> `false`                             | Checks if the string ends with a specific prefix                                                                                                                                    |
+| delete_suffix                  | `string = "sausage is expensive"` <br> `string.delete_suffix(" is expensive")` <br> `"sausage"`       | Deletes the suffix from the string                                                                                                                                                  |
+| delete_prefix                  | `string = "sausage is expensive"` <br> `string.delete_prefix("sausage")` <br> `" is expensive"`       | Deletes the prefix from the string                                                                                                                                                  |
+| split                          | `string = "a b c d" <br> string.split` <br> `["a", "b", "c", "d"]`                                    | Converts the string into an array of characters                                                                                                                                     |
+| join                           | `arr = ['a', 'b', 'c'] <br> arr.join` => `"abc"`                                                      | Converts an array into a string                                                                                                                                                     |
+| to_i                           | `a = "49" <br> a.to_i` => `49`                                                                        | Converts the string into an integer                                                                                                                                                 |
+| chop                           | `"abcd?".chop("?")` => `"abcd"`                                                                       | Deletes the last character from the string                                                                                                                                          |
+| count                          | `str = "aaab" <br> str.count("a")` <br> `3`                                                           | Counts the characters in the string                                                                                                                                                 |
+| to_f                           | `a = "49"` <br> `a.to_f` <br> `49.0`                                                                  | Converts the string into a floating point number                                                                                                                                    |
+| to_sym                         | `a = "key"` <br> `a.to_sym` <br> `:key`                                                               | Converts the string into a symbol                                                                                                                                                   |
+| match                          | `"abcd?".match(/ab/)` => `#<MatchData "ab">`                                                          | Converts the pattern into a regular expression and calls its match method on the string                                                                                             |
+| empty?                         | `"hello".empty?` => `false`                                                                           | Returns true if the length of the string is zero                                                                                                                                    |
+| squeeze                        | `"Booook".squeeze` => `"Bok"`                                                                         | Returns a copy of the string where runs of the same character are replaced by a single character                                                                                    |
+| \*                             | `puts "Ruby " * 4` => `Ruby Ruby Ruby Ruby`                                                           | Returns the concatenation of multiple copies of self                                                                                                                                |
+| +                              | `"sammy " + "shark"` => `"sammyshark"`                                                                | Returns the concatenation of self and the given other string                                                                                                                        |
+| eql?                           | `s = 'foo'` => `true` <br> `s.eql?('foo')` => `true`                                                  | Returns true if the objects have the same length and content; false otherwise                                                                                                       |
 
-
-Methods
----
+## Methods
 
 ### Declare a method {.row-span-3}
 
@@ -583,6 +576,7 @@ def method_name(parameter1, parameter2)
     parameter1 + parameter2
 end
 ```
+
 ---
 
 ```ruby
@@ -616,6 +610,7 @@ end
 
 Mobile.ring
 ```
+
 ---
 
 ```ruby
@@ -626,6 +621,7 @@ class Mobile
 end
 Mobile.ring
 ```
+
 ---
 
 ```ruby
@@ -639,7 +635,8 @@ end
 Mobile.ring
 ```
 
-Class methods are instance methods of class objects. When a new class is created, an object of type "Class" is initialized and assigned to a global constant (in this case Mobile)
+Class methods are instance methods of class objects. When a new class is created, an object of type "Class" is
+initialized and assigned to a global constant (in this case Mobile)
 
 ```ruby
 Mobile = Class.new do
@@ -749,8 +746,7 @@ is_vowel? 'b'
 # false
 ```
 
-Blocks
----
+## Blocks
 
 ### Block example
 
@@ -764,7 +760,8 @@ give_me_data { "Big data" }
 # output => data = Big data
 ```
 
-The code between `do` and `end` (for multiple lines) or curly braces `{` and `}` (for a single line) is called a block, and they can define multiple parameters between two pipes `( |arg1, arg2|)`
+The code between `do` and `end` (for multiple lines) or curly braces `{` and `}` (for a single line) is called a block,
+and they can define multiple parameters between two pipes `( |arg1, arg2|)`
 
 ### Single line block
 
@@ -772,7 +769,7 @@ The code between `do` and `end` (for multiple lines) or curly braces `{` and `}`
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
 # puts s = block body
-# |s| = block arugments
+# |s| = block arguments
 ```
 
 ### Multi-line block
@@ -925,8 +922,7 @@ give_me_data
 # Big data
 ```
 
-Procs
----
+## Procs
 
 ### Procs
 
@@ -987,8 +983,7 @@ puts return_value
 # 10
 ```
 
-Lambdas
-----
+## Lambdas
 
 ### Declare a lambda{.row-span-2}
 
@@ -1048,8 +1043,7 @@ l.call
 # output => 10
 ```
 
-Array
----
+## Array
 
 ### Initialize an empty array
 
@@ -1062,18 +1056,18 @@ array = []
 ### Array containing objects of different types
 
 ```ruby
-array = [1, "two", 3.0] 
+array = [1, "two", 3.0]
 #=> [1, "two", 3.0]
 ```
 
 ### Fill array with initial size and default objects {.row-span-2}
 
 ```ruby
-numbers = Array.new(3)       
+numbers = Array.new(3)
 #=> [nil, nil, nil]
-numbers = Array.new(3, 7)    
+numbers = Array.new(3, 7)
 #=> [7, 7, 7]
-numbers = Array.new(3, true) 
+numbers = Array.new(3, true)
 #=> [true, true, true]
 numbers = []
 numbers.fill(7, 0..2)   #=> [7, 7, 7]
@@ -1173,9 +1167,9 @@ arr.drop(3)   #=> [4, 5, 6]
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.push(11)          
+numbers.push(11)
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-numbers.push(12, 13, 14)  
+numbers.push(12, 13, 14)
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
@@ -1188,14 +1182,13 @@ num_array
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-
 ### Add value to beginning of array unshift
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.unshift(0)          
+numbers.unshift(0)
 #=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.unshift(-3, -2, -1) 
+numbers.unshift(-3, -2, -1)
 #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
@@ -1213,7 +1206,7 @@ numbers
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.delete_at(2) #=> 4
-numbers             
+numbers
 #=> [2, 3, 5, 6, 7, 8, 9, 10]
 ```
 
@@ -1229,21 +1222,21 @@ numbers           #=> [3, 5, 6, 7, 8, 9, 10]
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.insert(0, 0)           
+numbers.insert(0, 0)
 #=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.insert(0, -3, -2, -1)  
+numbers.insert(0, -3, -2, -1)
 #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-numbers.insert(-1, 12, 13, 14) 
+numbers.insert(-1, 12, 13, 14)
 #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14]
-numbers.insert(-4, 11)         
+numbers.insert(-4, 11)
 #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
 ### A block to fill the array with values
 
 ```ruby
-numbers = Array.new(10) { |n| n = n * 2 } 
+numbers = Array.new(10) { |n| n = n * 2 }
 #=> [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
 
@@ -1254,7 +1247,7 @@ numbers = Array(100..110)
 #=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
 
 # Or we can convert the range to an array
-(100..110).to_a 
+(100..110).to_a
 #=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
 ```
 
@@ -1297,6 +1290,7 @@ planets.size
 planets.length
 # output => 8
 ```
+
 You can use size or length, both are synonyms
 
 ### clear array
@@ -1345,7 +1339,9 @@ sorted_primes = primes.sort
 puts "#{sorted_primes}"
 # output => [2, 3, 5, 7]
 ```
+
 or in-place sort
+
 ```ruby
 primes = [7, 2, 3, 5]
 primes.sort!
@@ -1574,6 +1570,7 @@ while index < planets.size
     index += 1
 end
 ```
+
 ---
 
 ```ruby
@@ -1658,7 +1655,6 @@ data_sample = [2, 3, 5, 7]
 # 7
 # 5
 ```
-
 
 ### step {.row-span-2}
 
@@ -1745,7 +1741,6 @@ salary.detect { |s| s > 1000 }
 # nil
 ```
 
-
 ### find
 
 ```ruby
@@ -1754,7 +1749,6 @@ planets.find { |name| name.start_with?("E") and name.end_with?("h") }
 # output
 # Earth
 ```
-
 
 ### select
 
@@ -1769,7 +1763,6 @@ numbers.select { |n| n % 2 == 0 }
 # []
 ```
 
-
 ### reject
 
 ```ruby
@@ -1778,7 +1771,6 @@ numbers.reject { |n| n % 2 == 0 }
 # Reject if the number is even, so now we have an odd array
 # [1, 3, 5, 7, 9]
 ```
-
 
 ### keep_if
 
@@ -1789,7 +1781,6 @@ numbers.keep_if { |n| n % 2 == 0 }
 # [2, 4, 6, 8, 10]
 ```
 
-
 ### delete_if
 
 ```ruby
@@ -1798,7 +1789,6 @@ numbers.delete_if { |n| n % 2 == 0 }
 # numbers Array contains only odd numbers
 # [1, 3, 5, 7, 9]
 ```
-
 
 ### drop_while
 
@@ -1809,7 +1799,6 @@ numbers.drop_while { |n| n < 3 }
 # [3, 1, 2, 3, 0]
 ```
 
-
 ### reverse_each
 
 ```ruby
@@ -1819,21 +1808,18 @@ words.reverse_each {|word| str += "#{word} "}
 p str #=> "sixth fifth fourth third second first "
 ```
 
-
-boolean enumerable method
----
+## boolean enumerable method
 
 ### boolean enumerable method {.row-span-2}
 
-| Name     | When to use                                         |
-|:---------|-----------------------------------------------------|
-| `all?`   | When you want to check if all elements meet your condition |
-| `any?`   | When you want to check if at least one item meets your condition |
-| `one?`   | When you want to check if one element meets your requirement |
-| `none?`  | When you want to check if no item meets your condition, the opposite of? |
-| `empty?` | When you want to check if an object is empty |
-| `include?` | When you want to check if an element exists in the object |
-
+| Name       | When to use                                                              |
+| :--------- | :----------------------------------------------------------------------- |
+| `all?`     | When you want to check if all elements meet your condition               |
+| `any?`     | When you want to check if at least one item meets your condition         |
+| `one?`     | When you want to check if one element meets your requirement             |
+| `none?`    | When you want to check if no item meets your condition, the opposite of? |
+| `empty?`   | When you want to check if an object is empty                             |
+| `include?` | When you want to check if an element exists in the object                |
 
 ### all?
 
@@ -1880,18 +1866,19 @@ boolean enumerable method
 # false
 ```
 
-Combination method
----
+## Combination method
 
 ### Combination method {.row-span-2}
 
-- `&`            Returns a new array containing each element found in array and array other_array; duplicates are omitted; use eql? to compare items
-- `intersection` Returns a new array containing each element found in self and all given arrays other_arrays; duplicates are omitted; use eql? to compare items
-- `+`            Returns an array containing all elements of self followed by all elements of the given array
-- `-`            Returns an array containing all elements of self not found in the given array
-- `union`        Returns an array containing all elements of self and all elements of the given array, with duplicates removed
-- `difference`   Returns an array containing all elements of self not found in any given array
-- `product`      self Returns or produces all combinations of elements from self and the given array
+- `&` Returns a new array containing each element found in array and array other_array; duplicates are omitted; use eql?
+  to compare items
+- `intersection` Returns a new array containing each element found in self and all given arrays other_arrays; duplicates
+  are omitted; use eql? to compare items
+- `+` Returns an array containing all elements of self followed by all elements of the given array
+- `-` Returns an array containing all elements of self not found in the given array
+- `union` Returns an array containing all elements of self and all elements of the given array, with duplicates removed
+- `difference` Returns an array containing all elements of self not found in any given array
+- `product` self Returns or produces all combinations of elements from self and the given array
 
 ### &
 
@@ -1919,22 +1906,22 @@ a # => [0, 1, 2, 3]
 ### -
 
 ```ruby
-[0, 1, 1, 2, 1, 1, 3, 1, 1] - [1] 
+[0, 1, 1, 2, 1, 1, 3, 1, 1] - [1]
 # => [0, 2, 3]
-[0, 1, 2, 3] - [3, 0] 
+[0, 1, 2, 3] - [3, 0]
 # => [1, 2]
-[0, 1, 2] - [4] 
+[0, 1, 2] - [4]
 # => [0, 1, 2]
 ```
 
 ### union
 
 ```ruby
-[0, 1, 2, 3].union([4, 5], [6, 7]) 
+[0, 1, 2, 3].union([4, 5], [6, 7])
 # => [0, 1, 2, 3, 4, 5, 6, 7]
-[0, 1, 1].union([2, 1], [3, 1]) 
+[0, 1, 1].union([2, 1], [3, 1])
 # => [0, 1, 2, 3]
-[0, 1, 2, 3].union([3, 2], [1, 0]) 
+[0, 1, 2, 3].union([3, 2], [1, 0])
 # => [0, 1, 2, 3]
 ```
 
@@ -1959,9 +1946,7 @@ p.size # => 6 # a.size * a1.size
 p # => [[0, 3], [0, 4], [1, 3], [1, 4], [2, 3], [2, 4]]
 ```
 
-
-Loops
----
+## Loops
 
 ### while loop
 
@@ -2128,8 +2113,7 @@ rescue
 end
 ```
 
-Classes
----
+## Classes
 
 ### Classes Example {.row-span-2}
 
@@ -2247,8 +2231,7 @@ String.respond_to?(:append)
 false
 ```
 
-See Also
----
+## See Also
 
 - [Ruby](https://www.ruby-lang.org/en/) _(ruby-lang.org)_
 - [Ruby Cheatsheet](https://github.com/lifeparticle/Ruby-Cheatsheet) _(github.com)_
