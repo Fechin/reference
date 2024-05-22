@@ -28,6 +28,28 @@ html.scrollbar {
     scroll-padding-top: 20px;
 }
 
+/***Scrollbars***/
+:root.dark {
+    color-scheme: dark;
+}
+
+/* Restrict changes to mouse users */
+@media (pointer: fine) {
+    ::-webkit-scrollbar {
+        @apply bg-slate-200 w-2 h-2 rounded-lg
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-slate-300 rounded-lg
+    }
+
+    :root.dark ::-webkit-scrollbar {
+        @apply bg-slate-700
+    }
+    :root.dark ::-webkit-scrollbar-thumb {
+        @apply bg-slate-500
+    }
+}
+
 .max-container {
     max-width: 1320px;
     @apply mx-auto p-3;
