@@ -3,22 +3,20 @@ title: MySQL
 date: 2020-12-16 18:28:43
 background: bg-[#2a6387]
 tags:
-    - RDBMS
-    - DB
+  - RDBMS
+  - DB
 categories:
-    - Database
-intro: The SQL cheat sheet provides you with the most commonly used SQL statements for your reference. 
+  - Database
+intro: The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.
 plugins:
-    - tooltip
-    - copyCode
+  - tooltip
+  - copyCode
 ---
 
-
-Getting Started {.cols-2}
----------------
-
+## Getting Started {.cols-2}
 
 ### Connect MySQL
+
 ```
 mysql -u <user> -p
 
@@ -29,14 +27,12 @@ mysql -h <host> -P <port> -u <user> -p [db_name]
 mysql -h <host> -u <user> -p [db_name]
 ```
 
-
-
-### Commons {.row-span-2} 
+### Commons {.row-span-2}
 
 #### Database
 
 | -                        | -               |
-|--------------------------|-----------------|
+| ------------------------ | --------------- |
 | `CREATE DATABASE` db `;` | Create database |
 | `SHOW DATABASES;`        | List databases  |
 | `USE` db`;`              | Switch to db    |
@@ -46,7 +42,7 @@ mysql -h <host> -u <user> -p [db_name]
 #### Table
 
 | -                        | -                          |
-|--------------------------|----------------------------|
+| ------------------------ | -------------------------- |
 | `SHOW TABLES;`           | List tables for current db |
 | `SHOW FIELDS FROM` t`;`  | List fields for a table    |
 | `DESC` t`;`              | Show table structure       |
@@ -57,40 +53,40 @@ mysql -h <host> -u <user> -p [db_name]
 #### Process
 
 | -                   | -              |
-|---------------------|----------------|
+| ------------------- | -------------- |
 | `show processlist;` | List processes |
 | `kill` pid`;`       | kill process   |
+
 #### Other
 
 | -              | -                  |
-|----------------|--------------------|
+| -------------- | ------------------ |
 | `exit` or `\q` | Exit MySQL session |
 
 ### Backups
 
 Create a backup
+
 ```sql
 mysqldump -u user -p db_name > db.sql
 ```
 
-Export db without schema	
-``` {.wrap}
+Export db without schema
+
+```{.wrap}
 mysqldump -u user -p db_name --no-data=true --add-drop-table=false > db.sql
 ```
 
 Restore a backup
+
 ```
 mysql -u user -p db_name < db.sql
 ```
 
-
-
-
-MySQL Examples
---------------
-
+## MySQL Examples
 
 ### Managing tables
+
 Create a new table with three columns
 
 ```sql
@@ -103,61 +99,66 @@ CREATE TABLE t (
 ```
 
 Delete the table from the database
+
 ```sql
 DROP TABLE t ;
 ```
 
 Add a new column to the table
+
 ```sql
 ALTER TABLE t ADD column;
 ```
 
 Drop column c from the table
+
 ```sql
 ALTER TABLE t DROP COLUMN c ;
 ```
 
 Add a constraint
+
 ```sql
 ALTER TABLE t ADD constraint;
 ```
 
 Drop a constraint
+
 ```sql
 ALTER TABLE t DROP constraint;
 ```
 
 Rename a table from t1 to t2
+
 ```sql
 ALTER TABLE t1 RENAME TO t2;
 ```
 
 Rename column c1 to c2
+
 ```sql
 ALTER TABLE t1 RENAME c1 TO c2 ;
 ```
 
 Remove all data in a table
+
 ```sql
 TRUNCATE TABLE t;
 ```
 
-
-
 ### Querying data from a table
+
 Query data in columns c1, c2 from a table
 
 ```sql
 SELECT c1, c2 FROM t
 ```
 
-
 Query all rows and columns from a table
 
 ```sql
 SELECT * FROM t
 ```
-
 
 Query data and filter rows with a condition
 
@@ -166,14 +167,12 @@ SELECT c1, c2 FROM t
 WHERE condition
 ```
 
-
 Query distinct rows from a table
 
 ```sql
 SELECT DISTINCT c1 FROM t
 WHERE condition
 ```
-
 
 Sort the result set in ascending or descending order
 
@@ -182,15 +181,13 @@ SELECT c1, c2 FROM t
 ORDER BY c1 ASC [DESC]
 ```
 
-
 Skip offset of rows and return the next n rows
 
 ```sql
 SELECT c1, c2 FROM t
-ORDER BY c1 
+ORDER BY c1
 LIMIT n OFFSET offset
 ```
-
 
 Group rows using an aggregate function
 
@@ -199,7 +196,6 @@ SELECT c1, aggregate(c2)
 FROM t
 GROUP BY c1
 ```
-
 
 Filter groups using HAVING clause
 
@@ -210,60 +206,54 @@ GROUP BY c1
 HAVING condition
 ```
 
-
 ### Querying from multiple tables {.row-span-2}
+
 Inner join t1 and t2
 
 ```sql
-SELECT c1, c2 
+SELECT c1, c2
 FROM t1
 INNER JOIN t2 ON condition
 ```
 
-
 Left join t1 and t1
 
 ```sql
-SELECT c1, c2 
+SELECT c1, c2
 FROM t1
 LEFT JOIN t2 ON condition
 ```
 
-
 Right join t1 and t2
 
 ```sql
-SELECT c1, c2 
+SELECT c1, c2
 FROM t1
 RIGHT JOIN t2 ON condition
 ```
 
-
 Perform full outer join
 
 ```sql
-SELECT c1, c2 
+SELECT c1, c2
 FROM t1
 FULL OUTER JOIN t2 ON condition
 ```
 
-
 Produce a Cartesian product of rows in tables
 
 ```sql
-SELECT c1, c2 
+SELECT c1, c2
 FROM t1
 CROSS JOIN t2
 ```
 
-
 Another way to perform cross join
 
 ```sql
-SELECT c1, c2 
+SELECT c1, c2
 FROM t1, t2
 ```
-
 
 Join t1 to itself using INNER JOIN clause
 
@@ -273,16 +263,13 @@ FROM t1 A
 INNER JOIN t1 B ON condition
 ```
 
-
-Using SQL Operators
-Combine rows from two queries
+Using SQL Operators Combine rows from two queries
 
 ```sql
 SELECT c1, c2 FROM t1
 UNION [ALL]
 SELECT c1, c2 FROM t2
 ```
-
 
 Return the intersection of two queries
 
@@ -292,7 +279,6 @@ INTERSECT
 SELECT c1, c2 FROM t2
 ```
 
-
 Subtract a result set from another result set
 
 ```sql
@@ -301,14 +287,12 @@ MINUS
 SELECT c1, c2 FROM t2
 ```
 
-
-Query rows using pattern matching %, _
+Query rows using pattern matching %, \_
 
 ```sql
 SELECT c1, c2 FROM t1
 WHERE c1 [NOT] LIKE pattern
 ```
-
 
 Query rows in a list
 
@@ -317,14 +301,12 @@ SELECT c1, c2 FROM t
 WHERE c1 [NOT] IN value_list
 ```
 
-
 Query rows between two values
 
 ```sql
 SELECT c1, c2 FROM t
 WHERE  c1 BETWEEN low AND high
 ```
-
 
 Check if values in a table is NULL or not
 
@@ -333,9 +315,7 @@ SELECT c1, c2 FROM t
 WHERE  c1 IS [NOT] NULL
 ```
 
-
 ### Using SQL constraints
-
 
 Set c1 and c2 as a primary key
 
@@ -346,17 +326,15 @@ CREATE TABLE t(
 );
 ```
 
-
 Set c2 column as a foreign key
 
 ```sql
 CREATE TABLE t1(
-    c1 INT PRIMARY KEY,  
+    c1 INT PRIMARY KEY,
     c2 INT,
     FOREIGN KEY (c2) REFERENCES t2(c2)
 );
 ```
-
 
 Make the values in c1 and c2 unique
 
@@ -366,7 +344,6 @@ CREATE TABLE t(
     UNIQUE(c2,c3)
 );
 ```
-
 
 Ensure c1 > 0 and values in c1 >= c2
 
@@ -386,9 +363,7 @@ CREATE TABLE t(
 );
 ```
 
-
 ### Modifying Data
-
 
 Insert one row into a table
 
@@ -397,15 +372,13 @@ INSERT INTO t(column_list)
 VALUES(value_list);
 ```
 
-
 Insert multiple rows into a table
 
 ```sql
 INSERT INTO t(column_list)
-VALUES (value_list), 
+VALUES (value_list),
        (value_list), …;
 ```
-
 
 Insert rows from t2 into t1
 
@@ -415,7 +388,6 @@ SELECT column_list
 FROM t2;
 ```
 
-
 Update new value in the column c1 for all rows
 
 ```sql
@@ -423,23 +395,20 @@ UPDATE t
 SET c1 = new_value;
 ```
 
-
 Update values in the column c1, c2 that match the condition
 
 ```sql
 UPDATE t
-SET c1 = new_value, 
+SET c1 = new_value,
         c2 = new_value
 WHERE condition;
 ```
-
 
 Delete all data in a table
 
 ```sql
 DELETE FROM t;
 ```
-
 
 Delete subset of rows in a table
 
@@ -448,51 +417,45 @@ DELETE FROM t
 WHERE condition;
 ```
 
-
 ### Managing Views
 
-
-Create a new view that consists  of c1 and c2
+Create a new view that consists of c1 and c2
 
 ```sql
-CREATE VIEW v(c1,c2) 
+CREATE VIEW v(c1,c2)
 AS
 SELECT c1, c2
 FROM t;
 ```
 
-
 Create a new view with check option
 
 ```sql
-CREATE VIEW v(c1,c2) 
+CREATE VIEW v(c1,c2)
 AS
 SELECT c1, c2
 FROM t;
 WITH [CASCADED | LOCAL] CHECK OPTION;
 ```
 
-
 Create a recursive view
 
 ```sql
-CREATE RECURSIVE VIEW v 
+CREATE RECURSIVE VIEW v
 AS
 select-statement -- anchor part
 UNION [ALL]
 select-statement; -- recursive part
 ```
 
-
 Create a temporary view
 
 ```sql
-CREATE TEMPORARY VIEW v 
+CREATE TEMPORARY VIEW v
 AS
 SELECT c1, c2
 FROM t;
 ```
-
 
 Delete a view
 
@@ -500,9 +463,7 @@ Delete a view
 DROP VIEW view_name;
 ```
 
-
 ### Managing triggers
-
 
 Create or modify a trigger
 
@@ -512,40 +473,37 @@ WHEN EVENT
 ON table_name TRIGGER_TYPE
 EXECUTE stored_procedure;
 ```
+
 #### WHEN
 
 | -        | -                              |
-|----------|--------------------------------|
+| -------- | ------------------------------ |
 | `BEFORE` | invoke before the event occurs |
 | `AFTER`  | invoke after the event occurs  |
 
 #### EVENT
 
 | -        | -                 |
-|----------|-------------------|
+| -------- | ----------------- |
 | `INSERT` | invoke for INSERT |
 | `UPDATE` | invoke for UPDATE |
 | `DELETE` | invoke for DELETE |
 
 #### TRIGGER_TYPE
 
-| -                    | - |
-|----------------------|---|
-| `FOR EACH ROW`       |   |
-| `FOR EACH STATEMENT` |   |
-
-
-
+| -                    | -   |
+| -------------------- | --- |
+| `FOR EACH ROW`       |     |
+| `FOR EACH STATEMENT` |     |
 
 ### Managing indexes
 
 Create an index on c1 and c2 of the t table
 
 ```sql
-CREATE INDEX idx_name 
+CREATE INDEX idx_name
 ON t(c1,c2);
 ```
-
 
 Create a unique index on c3, c4 of the t table
 
@@ -554,22 +512,18 @@ CREATE UNIQUE INDEX idx_name
 ON t(c3,c4)
 ```
 
-
 Drop an index
 
 ```sql
 DROP INDEX idx_name ON t;
 ```
 
-
-MySQL Data Types
----------
-
+## MySQL Data Types
 
 ### Strings
 
 | -            | -                           |
-|--------------|-----------------------------|
+| ------------ | --------------------------- |
 | `CHAR`       | String (0 - 255)            |
 | `VARCHAR`    | String (0 - 255)            |
 | `TINYTEXT`   | String (0 - 255)            |
@@ -582,21 +536,20 @@ MySQL Data Types
 | `ENUM`       | One of preset options       |
 | `SET`        | Selection of preset options |
 
-
 ### Date & time
+
 | Data Type   | Format              |
-|-------------|---------------------|
+| ----------- | ------------------- |
 | `DATE     ` | yyyy-MM-dd          |
 | `TIME     ` | hh:mm:ss            |
 | `DATETIME ` | yyyy-MM-dd hh:mm:ss |
 | `TIMESTAMP` | yyyy-MM-dd hh:mm:ss |
 | `YEAR     ` | yyyy                |
 
-
 ### Numeric
 
 | -             | -                                                             |
-|---------------|---------------------------------------------------------------|
+| ------------- | ------------------------------------------------------------- |
 | `TINYINT x`   | Integer (-128 to 127)                                         |
 | `SMALLINT x`  | Integer (-32768 to 32767)                                     |
 | `MEDIUMINT x` | Integer (-8388608 to 8388607)                                 |
@@ -606,14 +559,11 @@ MySQL Data Types
 | `DOUBLE`      | Decimal (24 to 53 digits)                                     |
 | `DECIMAL`     | "­DOU­BLE­" stored as string                                  |
 
-
-
-
-MySQL Functions & Operators
----------
-
+## MySQL Functions & Operators
 
 ### Strings {.row-span-2}
+
+<!-- prettier-ignore -->
 - [ASCII()](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_ascii){data-tooltip="Return numeric value of left-most character"}
 - [BIN()](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_bin){data-tooltip="Return a string containing binary representation of a number"}
 - [BIT_LENGTH()](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_bit-length){data-tooltip="Return length of argument in bits"}
@@ -675,11 +625,12 @@ MySQL Functions & Operators
 - [UNHEX()](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_unhex){data-tooltip="Return a string containing hex representation of a number"}
 - [UPPER()](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_upper){data-tooltip="Convert to uppercase"}
 - [WEIGHT_STRING()](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_weight-string){data-tooltip="Return the weight string for a string"}
-{.cols-2}
 
+{.cols-2 .marker-none}
 
+### Date and Time {.row-span-2}
 
-### Date and Time  {.row-span-2}
+<!-- prettier-ignore -->
 - [ADDDATE()](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_adddate){data-tooltip="Add time values (intervals) to a date value"}
 - [ADDTIME()](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_addtime){data-tooltip="Add time"}
 - [CONVERT_TZ()](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_convert-tz){data-tooltip="Convert from one time zone to another"}
@@ -741,12 +692,12 @@ MySQL Functions & Operators
 - [YEAR()](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_year){data-tooltip="Return the year"}
 - [YEARWEEK()](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_yearweek){data-tooltip="Return the year and week"}
 - [GET_FORMAT()](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format){data-tooltip="'%m.%d.%Y'"}
-{.cols-2}
 
-
-
+{.cols-2 .marker-none}
 
 ### Numeric
+
+<!-- prettier-ignore -->
 - [%, MOD](https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_mod){data-tooltip="Modulo operator"}
 - [*](https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_times){data-tooltip="Multiplication operator"}
 - [+](https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_plus){data-tooltip="Addition operator"}
@@ -784,11 +735,12 @@ MySQL Functions & Operators
 - [SQRT()](https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_sqrt){data-tooltip="Return the square root of the argument"}
 - [TAN()](https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_tan){data-tooltip="Return the tangent of the argument"}
 - [TRUNCATE()](https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_truncate){data-tooltip="Truncate to specified number of decimal places"}
-{.cols-2}
 
-
+{.cols-2 .marker-none}
 
 ### Aggregate
+
+<!-- prettier-ignore -->
 - [AVG()](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_avg){data-tooltip="Return the average value of the argument"}
 - [BIT_AND()](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_bit-and){data-tooltip="Return bitwise AND"}
 - [BIT_OR()](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_bit-or){data-tooltip="Return bitwise OR"}
@@ -808,12 +760,12 @@ MySQL Functions & Operators
 - [VAR_POP()](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_var-pop){data-tooltip="Return the population standard variance"}
 - [VAR_SAMP()](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_var-samp){data-tooltip="Return the sample variance"}
 - [VARIANCE()](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_variance){data-tooltip="Return the population standard variance"}
-{.cols-2}
 
-
-
+{.cols-2 .marker-none}
 
 ### JSON {.row-span-4}
+
+<!-- prettier-ignore -->
 - [->](https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-column-path){data-tooltip="Return value from JSON column after evaluating path; equivalent to JSON_EXTRACT()."}
 - [->>](https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-inline-path){data-tooltip="Return value from JSON column after evaluating path and unquoting the result; equivalent to JSON_UNQUOTE(JSON_EXTRACT())."}
 - [JSON_ARRAY()](https://dev.mysql.com/doc/refman/8.0/en/json-creation-functions.html#function_json-array){data-tooltip="Create JSON array"}
@@ -847,25 +799,31 @@ MySQL Functions & Operators
 - [JSON_VALID()](https://dev.mysql.com/doc/refman/8.0/en/json-attribute-functions.html#function_json-valid){data-tooltip="Whether JSON value is valid"}
 - [JSON_VALUE() (introduced 8.0.21)](https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-value){data-tooltip="Extract value from JSON document at location pointed to by path provided; return this value as VARCHAR(512) or specified type"}
 - [MEMBER OF() (introduced 8.0.17)](https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_member-of){data-tooltip="Returns true (1) if first operand matches any element of JSON array passed as second operand, otherwise returns false (0)"}
-{.cols-1}
 
+{.cols-1 .marker-none}
 
 ### Cast
+
+<!-- prettier-ignore -->
 - [BINARY](https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#operator_binary){data-tooltip="Cast a string to a binary string"}
 - [CAST()](https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#function_cast){data-tooltip="Cast a value as a certain type"}
 - [CONVERT()](https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#function_convert){data-tooltip="Cast a value as a certain type"}
-{.cols-2}
 
+{.cols-2 .marker-none}
 
 ### Flow Control
+
+<!-- prettier-ignore -->
 - [CASE](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#operator_case){data-tooltip="Case operator"}
 - [IF()](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_if){data-tooltip="If/else construct"}
 - [IFNULL()](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_ifnull){data-tooltip="Null if/else construct"}
 - [NULLIF()](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_nullif){data-tooltip="Return NULL if expr1 = expr2"}
-{.cols-2}
 
+{.cols-2 .marker-none}
 
 ### Information
+
+<!-- prettier-ignore -->
 - [BENCHMARK()](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_benchmark){data-tooltip="Repeatedly execute an expression"}
 - [CHARSET()](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_charset){data-tooltip="Return the character set of the argument"}
 - [COERCIBILITY()](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_coercibility){data-tooltip="Return the collation coercibility value of the string argument"}
@@ -884,10 +842,12 @@ MySQL Functions & Operators
 - [SYSTEM_USER()](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_system-user){data-tooltip="Synonym for USER()"}
 - [USER()](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_user){data-tooltip="The user name and host name provided by the client"}
 - [VERSION()](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_version){data-tooltip="Return a string that indicates the MySQL server version"}
-{.cols-2}
 
+{.cols-2 .marker-none}
 
 ### Encryption and Compression
+
+<!-- prettier-ignore -->
 - [AES_DECRYPT()](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-decrypt){data-tooltip="Decrypt using AES"}
 - [AES_ENCRYPT()](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt){data-tooltip="Encrypt using AES"}
 - [COMPRESS()](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress){data-tooltip="Return result as a binary string"}
@@ -900,21 +860,23 @@ MySQL Functions & Operators
 - [UNCOMPRESS()](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_uncompress){data-tooltip="Uncompress a string compressed"}
 - [UNCOMPRESSED_LENGTH()](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_uncompressed-length){data-tooltip="Return the length of a string before compression"}
 - [VALIDATE_PASSWORD_STRENGTH()](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_validate-password-strength){data-tooltip="Determine strength of password"}
-{.cols-1}
 
-
+{.cols-1 .marker-none}
 
 ### Locking
+
+<!-- prettier-ignore -->
 - [GET_LOCK()](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_get-lock){data-tooltip="Get a named lock"}
 - [IS_FREE_LOCK()](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_is-free-lock){data-tooltip="Whether the named lock is free"}
 - [IS_USED_LOCK()](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_is-used-lock){data-tooltip="Whether the named lock is in use; return connection identifier if true"}
 - [RELEASE_ALL_LOCKS()](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_release-all-locks){data-tooltip="Release all current named locks"}
 - [RELEASE_LOCK()](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_release-lock){data-tooltip="Release the named lock"}
-{.cols-1}
 
-
+{.cols-1 .marker-none}
 
 ### Bit
+
+<!-- prettier-ignore -->
 - [&](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-and){data-tooltip="Bitwise AND"}
 - [>>](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_right-shift){data-tooltip="Right shift"}
 - [<<](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_left-shift){data-tooltip="Left shift"}
@@ -922,11 +884,12 @@ MySQL Functions & Operators
 - [BIT_COUNT()](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#function_bit-count){data-tooltip="Return the number of bits that are set"}
 - [|](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-or){data-tooltip="Bitwise OR"}
 - [~](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-invert){data-tooltip="Bitwise inversion"}
-{.cols-2}
 
-
+{.cols-2 .marker-none}
 
 ### Miscellaneous
+
+<!-- prettier-ignore -->
 - [ANY_VALUE()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_any-value){data-tooltip="Suppress ONLY_FULL_GROUP_BY value rejection"}
 - [BIN_TO_UUID()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_bin-to-uuid){data-tooltip="Convert binary UUID to string"}
 - [DEFAULT()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_default){data-tooltip="Return the default value for a table column"}
@@ -947,9 +910,9 @@ MySQL Functions & Operators
 - [UUID_SHORT()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_uuid-short){data-tooltip="Return an integer-valued universal identifier"}
 - [UUID_TO_BIN()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_uuid-to-bin){data-tooltip="Convert string UUID to binary"}
 - [VALUES()](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_values){data-tooltip="Define the values to be used during an INSERT"}
-{.cols-2}
 
+{.cols-2 .marker-none}
 
-Also see {.cols-1}
---------
+## Also see {.cols-1}
+
 - [Regex in MySQL](/regex#regex-in-mysql) _(cheatsheets.zip)_
