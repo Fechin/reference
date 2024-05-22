@@ -232,19 +232,19 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
 ### Backslash escapes
 
-| Characters | Escape | Description           |
-| ---------- | ------ | :-------------------- |
-| \\         | \\\\   | backslash             |
-| \`         | \\\`   | backtick              |
-| \*         | \\\*   | asterisk              |
-| \_         | \\\_   | underscore            |
-| \{\}       | \\\{\} | curly braces          |
-| \[\]       | \\\[\] | square brackets       |
-| \(\)       | \\\(\) | parentheses           |
-| \#         | \\\#   | hash mark             |
-| \+         | \\\+   | plus sign             |
-| \-         | \\\-   | minus sign \(hyphen\) |
-| \.         | \\\.   | dot                   |
-| \!         | \\\!   | exclamation mark      |
+| Characters        | Escape                | Description           |
+| ----------------- | --------------------- | :-------------------- |
+| <code>\\</code>   | <code>\\\\</code>     | Backslash             |
+| <code>\`</code>   | <code>\\\`</code>     | Backtick              |
+| <code>\*</code>   | <code>\\\*</code>     | Asterisk              |
+| <code>\_</code>   | <code>\\\_</code>     | Underscore            |
+| <code>\{\}</code> | <code>\\\{\\\}</code> | Curly braces          |
+| <code>\[\]</code> | <code>\\\[\\\]</code> | Square brackets       |
+| <code>\(\)</code> | <code>\\\(\\\)</code> | Parentheses           |
+| <code>\#</code>   | <code>\\\#</code>     | Hash mark             |
+| <code>\+</code>   | <code>\\\+</code>     | Plus sign             |
+| <code>\-</code>   | <code>\\\-</code>     | Minus sign \(hyphen\) |
+| <code>\.</code>   | <code>\\\.</code>     | Dot                   |
+| <code>\!</code>   | <code>\\\!</code>     | Exclamation mark      |
 
 {.show-header}
