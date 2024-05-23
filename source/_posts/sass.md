@@ -4,28 +4,26 @@ date: 2020-12-20 22:15:43
 background: bg-[#ba6993]
 label: CSS
 tags:
-    - css
+  - css
 categories:
-    - Programming
+  - Programming
 intro: |
-      This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
+  This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Sass Basics
---------
+## Sass Basics
 
 ### Introduction
 
 - [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_
 
-
 ### Variables
 
 ```scss
-$defaultLinkColor: #46EAC2;
+$defaultLinkColor: #46eac2;
 
 a {
   color: $defaultLinkColor;
@@ -42,8 +40,6 @@ $wk: -webkit-;
 }
 ```
 
-
-
 ### Comments
 
 ```scss
@@ -56,47 +52,43 @@ $wk: -webkit-;
 // Line comments
 ```
 
-
-
-
 ### Mixins
 
 ```scss
 @mixin heading-font {
-    font-family: sans-serif;
-    font-weight: bold;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 h1 {
-    @include heading-font;
+  @include heading-font;
 }
 ```
+
 See: [Mixins](#sass-mixins)
-
-
 
 ### Nesting {.row-span-2}
 
 ```scss
 .markdown-body {
-    a {
-      color: blue;
-      &:hover {
-        color: red;
-      }
+  a {
+    color: blue;
+    &:hover {
+      color: red;
     }
+  }
 }
 ```
 
 #### to properties
+
 ```scss
 text: {
-    // like text-align: center
-    align: center;          
-    // like text-transform: uppercase
-    transform: uppercase; 
+  // like text-align: center
+  align: center;
+  // like text-transform: uppercase
+  transform: uppercase;
 }
 ```
-
 
 ### Extend
 
@@ -108,15 +100,15 @@ text: {
 
 ```scss
 .push-button {
-    @extend .button;
+  @extend .button;
 }
 ```
 
 ### @import
 
 ```scss
-@import './other_sass_file';
-@import '/code', 'lists';
+@import "./other_sass_file";
+@import "/code", "lists";
 
 // Plain CSS @imports
 @import "theme.css";
@@ -125,22 +117,19 @@ text: {
 
 The `.sass` or `.sass` extension is optional.
 
-
-Sass Mixins
-------
-
+## Sass Mixins
 
 ### Parameters
 
 ```scss
 @mixin font-size($n) {
-    font-size: $n * 1.2em;
+  font-size: $n * 1.2em;
 }
 ```
 
 ```scss
 body {
-    @include font-size(2);
+  @include font-size(2);
 }
 ```
 
@@ -148,13 +137,13 @@ body {
 
 ```scss
 @mixin pad($n: 10px) {
-    padding: $n;
+  padding: $n;
 }
 ```
 
 ```scss
 body {
-    @include pad(15px);
+  @include pad(15px);
 }
 ```
 
@@ -164,17 +153,15 @@ body {
 $default-padding: 10px;
 
 @mixin pad($n: $default-padding) {
-    padding: $n;
+  padding: $n;
 }
 
 body {
-    @include pad(15px);
+  @include pad(15px);
 }
 ```
 
-
-Sass Color functions {.cols-2}
---------
+## Sass Color functions {.cols-2}
 
 ### rgba
 
@@ -234,7 +221,8 @@ green($color)
 blue($color)
 ```
 
-See: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method), [red()](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)
+See: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method),
+[red()](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)
 
 ### Adjustments
 
@@ -259,8 +247,7 @@ change-color($color, $blue: 250)
 
 Supported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
 
-Sass Other functions {.cols-2}
---------
+## Sass Other functions {.cols-2}
 
 ### Strings
 
@@ -327,8 +314,7 @@ selector-replace(...)
 selector-unify(...)
 ```
 
-Sass Feature checks {.cols-2}
---------
+## Sass Feature checks {.cols-2}
 
 ### Feature check
 
@@ -338,19 +324,20 @@ feature-exists(global-variable-shadowing)
 
 ### Features
 
-* global-variable-shadowing
-* extend-selector-pseudoclass
-* units-level-3
-* at-error
+- global-variable-shadowing
+- extend-selector-pseudoclass
+- units-level-3
+- at-error
 
-Sass Loops
---------
+## Sass Loops
 
 ### For loops
 
 ```scss
 @for $i from 1 through 4 {
-    .item-#{$i} { left: 20px * $i; }
+  .item-#{$i} {
+    left: 20px * $i;
+  }
 }
 ```
 
@@ -360,21 +347,21 @@ Sass Loops
 $menu-items: home about contact;
 
 @each $item in $menu-items {
-    .photo-#{$item} {
-      background: url('#{$item}.jpg');
-    }
+  .photo-#{$item} {
+    background: url("#{$item}.jpg");
+  }
 }
 ```
 
 ### Each loops (nested)
+
 ```scss
-$backgrounds: (home, 'home.jpg'),
-              (about, 'about.jpg');
+$backgrounds: (home, "home.jpg"), (about, "about.jpg");
 
 @each $id, $image in $backgrounds {
-    .photo-#{$id} {
-      background: url($image);
-    }
+  .photo-#{$id} {
+    background: url($image);
+  }
 }
 ```
 
@@ -383,27 +370,26 @@ $backgrounds: (home, 'home.jpg'),
 ```scss
 $i: 6;
 @while $i > 0 {
-    .item-#{$i} { width: 2em * $i; }
-    $i: $i - 2;
+  .item-#{$i} {
+    width: 2em * $i;
+  }
+  $i: $i - 2;
 }
 ```
 
-Sass Other features
---------
+## Sass Other features
 
 ### Conditionals {.row-span-2}
 
 ```scss
-@if $position == 'left' {
-     position: absolute;
-     left: 0;
-}
-@else if $position == 'right' {
-     position: absolute;
-     right: 0;
-}
-@else {
-     position: static;
+@if $position == "left" {
+  position: absolute;
+  left: 0;
+} @else if $position == "right" {
+  position: absolute;
+  right: 0;
+} @else {
+  position: static;
 }
 ```
 
@@ -436,5 +422,3 @@ $map: (key1: value1, key2: value2, key3: value3);
 
 map-get($map, key1)
 ```
-
-

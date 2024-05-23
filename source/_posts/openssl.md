@@ -5,11 +5,11 @@ icon: icon-style
 background: bg-emerald-600
 tags:
 categories:
-- Linux Command
+  - Linux Command
 intro: |
-    This is a reference of commands to use to interact with electronic certificates
+  This is a reference of commands to use to interact with electronic certificates
 plugins:
-- copyCode
+  - copyCode
 ---
 
 ## Private Key {.cols-2}
@@ -71,7 +71,7 @@ openssl x509 -noout -fingerprint -sha256 -in certificate.crt
 openssl x509 -in certificate.crt -noout -text|more
 ```
 
-### Print out specific fields of the certificates 
+### Print out specific fields of the certificates
 
 ```bash
 openssl x509 -noout -subject certificate.crt
@@ -96,18 +96,23 @@ imap.arcor.de:993 2>/dev/null | openssl x509 -noout -text|more
 openssl verify -verbose -x509_strict -CAfile \
 issuer.crt Test\ Haeschen\ 1.crt
 ```
+
 Result:
+
 ```bash
 Test Haeschen 1.crt: OK
 ```
 
-**Corrupted** ([for example](https://security.stackexchange.com/questions/60804/creating-an-x-509-certificate-with-an-invalid-signature))
+**Corrupted**
+([for example](https://security.stackexchange.com/questions/60804/creating-an-x-509-certificate-with-an-invalid-signature))
 
 ```bash
 openssl verify -verbose -x509_strict -CAfile \
 issuer.crt Test\ Haeschen\ 1_corrupted.crt
 ```
+
 Result:
+
 ```bash
 C = DE, ST = Thueringen, L = Rudolstadt, O = Damaschkestr. 11, OU = Arbeitszimmer, CN = Test Haeschen 1
 error 7 at 0 depth lookup: certificate signature failure
@@ -127,13 +132,11 @@ openssl smime -sign -in msg.txt -text -out msg.p7s \
 -signer certificate.crt -inkey privateKey.key
 ```
 
-
 ### Verify signature
 
 ```bash
 openssl smime -verify -in msg.p7s -CAfile chain.pem
 ```
-
 
 ## CRL {.cols-2}
 
@@ -152,7 +155,7 @@ openssl crl -inform PEM -noout -text  -in crl/cacrl.pem
 openssl pkcs12 -info -in  digitalIdentity.p12
 ```
 
-### Create from certificate and private key 
+### Create from certificate and private key
 
 ```bash
 openssl pkcs12 -export -in certificate.cert \
@@ -168,7 +171,7 @@ openssl pkcs12 -in digitalIdentity.p12 -out privateKey.key
 ### Convert to PEM
 
 ```bash
-openssl pkcs12 -in digitalIdentity.p12 -out digitalIdentity.pem 
+openssl pkcs12 -in digitalIdentity.p12 -out digitalIdentity.pem
 ```
 
 ## TSA {.cols-2}
@@ -233,6 +236,7 @@ openssl req -in my.csr -noout -text
 ## HTTPS {.cols-2}
 
 ### Dump Certificates PEM encoded
+
 ```bash
 openssl s_client -showcerts -connect www.example.com:443
 ```
@@ -240,6 +244,7 @@ openssl s_client -showcerts -connect www.example.com:443
 ## STARTTLS {.cols-2}
 
 ### Dump Certificates PEM encoded
+
 ```bash
 openssl s_client -showcerts -starttls imap \
 -connect mail.domain.com:139
@@ -315,14 +320,14 @@ openssl asn1parse -dump -strictpem -in mysterious_file.pem
 
 ## Some resources with useful OpenSSL commands
 
-* [OpenSSL command cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
-* [21 OpenSSL Examples to Help You in Real-World](https://geekflare.com/openssl-commands-certificates/)
-* [The Most Common OpenSSL Commands](https://www.sslshopper.com/article-most-common-openssl-commands.html)
-* [OpenSSL Quick Reference Guide](https://www.digicert.com/ssl-support/openssl-quick-reference-guide.htm)
-* [openssl_commands.md](https://gist.github.com/webtobesocial/5313b0d7abc25e06c2d78f8b767d4bc3)
-* [OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
-* [OpenSSL tips and tricks](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art030)
-* [Checking A Remote Certificate Chain With OpenSSL ](https://langui.sh/2009/03/14/checking-a-remote-certificate-chain-with-openssl/)
-* [OpenSSL: how to extract certificates and token status from RFC3161 timestamping reply?](https://stackoverflow.com/questions/66044640/openssl-how-to-extract-certificates-and-token-status-from-rfc3161-timestamping)
-* [Steps to generate CSR for SAN certificate with openssl](https://www.golinuxcloud.com/openssl-subject-alternative-name/)
-* [Howto add a Subject Alternative Name extension into a Certificate Signing Request](https://support.microfocus.com/kb/doc.php?id=3522065)
+- [OpenSSL command cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
+- [21 OpenSSL Examples to Help You in Real-World](https://geekflare.com/openssl-commands-certificates/)
+- [The Most Common OpenSSL Commands](https://www.sslshopper.com/article-most-common-openssl-commands.html)
+- [OpenSSL Quick Reference Guide](https://www.digicert.com/ssl-support/openssl-quick-reference-guide.htm)
+- [openssl_commands.md](https://gist.github.com/webtobesocial/5313b0d7abc25e06c2d78f8b767d4bc3)
+- [OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
+- [OpenSSL tips and tricks](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art030)
+- [Checking A Remote Certificate Chain With OpenSSL ](https://langui.sh/2009/03/14/checking-a-remote-certificate-chain-with-openssl/)
+- [OpenSSL: how to extract certificates and token status from RFC3161 timestamping reply?](https://stackoverflow.com/questions/66044640/openssl-how-to-extract-certificates-and-token-status-from-rfc3161-timestamping)
+- [Steps to generate CSR for SAN certificate with openssl](https://www.golinuxcloud.com/openssl-subject-alternative-name/)
+- [Howto add a Subject Alternative Name extension into a Certificate Signing Request](https://support.microfocus.com/kb/doc.php?id=3522065)

@@ -3,22 +3,19 @@ title: Go
 date: 2020-12-17 21:51:44
 background: bg-[#4ba4cc]
 tags:
-    - Go
+  - Go
 categories:
-    - Programming
+  - Programming
 intro: |
-    This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/). 
+  This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-Getting Started
---------
-
-
+## Getting Started
 
 ### hello.go
+
 ```go
 package main
 
@@ -28,16 +25,18 @@ func main() {
     fmt.Println("Hello, world!")
 }
 ```
+
 Run directly
+
 ```shell script
 $ go run hello.go
 Hello, world!
 ```
+
 Or try it out in the [Go repl](https://repl.it/languages/go)
 
-
-
 ### Variables
+
 ```go
 var s1 string
 s1 = "Learn Go!"
@@ -46,7 +45,9 @@ s1 = "Learn Go!"
 var b, c int = 1, 2
 var d = true
 ```
+
 Short declaration
+
 ```go
 s1 := "Learn Go!"        // string
 b, c := 1, 2             // int
@@ -55,9 +56,8 @@ d := true                // bool
 
 See: [Basic types](#go-basic-types)
 
-
-
 ### Functions
+
 ```go
 package main
 
@@ -73,11 +73,11 @@ func say(message string) {
     fmt.Println("You said: ", message)
 }
 ```
+
 See: [Functions](#go-functions)
 
-
-
 ### Comments
+
 ```go
 // Single line comment
 
@@ -85,20 +85,17 @@ See: [Functions](#go-functions)
  line comment */
 ```
 
-
-
 ### If statement
+
 ```go
 if true {
     fmt.Println("Yes!")
 }
 ```
+
 See: [Flow control](#go-flow-control)
 
-
-
-Go Basic types
---------
+## Go Basic types
 
 ### Strings
 
@@ -114,10 +111,10 @@ fmt.Println(len(s1))
 // Outputs: Hello
 fmt.Println(string(s1[0:5]))
 ```
+
 Strings are of type `string`.
 
-
-### Numbers 
+### Numbers
 
 ```go
 num := 3         // int
@@ -128,17 +125,17 @@ num := byte('a') // byte (alias: uint8)
 var u uint = 7        // uint (unsigned)
 var p float32 = 22.7  // 32-bit float
 ```
+
 #### Operators
+
 ```go
 x := 5
 x++
 fmt.Println("x + 4 =", x + 4)
-fmt.Println("x * 4 =", x * 4) 
+fmt.Println("x * 4 =", x * 4)
 ```
+
 See: [More Operators](#go-operators-and-punctuation)
-
-
-
 
 ### Booleans
 
@@ -147,20 +144,20 @@ isTrue   := true
 isFalse  := false
 ```
 
-#### Operators 
+#### Operators
+
 ```go
-fmt.Println(true && true)   // true 
+fmt.Println(true && true)   // true
 fmt.Println(true && false)  // false
 fmt.Println(true || true)   // true
 fmt.Println(true || false)  // true
 fmt.Println(!true)          // false
 ```
+
 See: [More Operators](#go-operators-and-punctuation)
 
-
-
-
 ### Arrays {.row-span-2}
+
 ```go
 ┌────┬────┬────┬────┬─────┬─────┐
 | 2  | 3  | 5  | 7  | 11  | 13  |
@@ -180,7 +177,9 @@ fmt.Println(primes)
 // Same as [:3], Outputs: [2 3 5]
 fmt.Println(primes[0:3])
 ```
+
 ---
+
 ```go
 var a [2]string
 a[0] = "Hello"
@@ -189,7 +188,9 @@ a[1] = "World"
 fmt.Println(a[0], a[1]) //=> Hello World
 fmt.Println(a)   // => [Hello World]
 ```
+
 #### 2d array
+
 ```go
 var twoDimension [2][3]int
 for i := 0; i < 2; i++ {
@@ -201,8 +202,6 @@ for i := 0; i < 2; i++ {
 fmt.Println("2d: ", twoDimension)
 ```
 
-
-
 ### Pointers
 
 ```go
@@ -212,7 +211,6 @@ func main () {
 }
 ```
 
-
 ```go
 func getPointer () (myPointer *int) {
   a := 234
@@ -220,14 +218,12 @@ func getPointer () (myPointer *int) {
 }
 ```
 
-
 ```go
 a := new(int)
 *a = 234
 ```
 
 See: [Pointers](https://tour.go.dev/moretypes/1)
-
 
 ### Slices
 
@@ -248,12 +244,8 @@ slice := []int{2, 3, 4}
 
 See also: [Slices example](https://gobyexample.com/slices)
 
-
-
-
-
-
 ### Constants
+
 ```go
 const s string = "constant"
 const Phi = 1.618
@@ -261,9 +253,6 @@ const n = 500000000
 const d = 3e20 / n
 fmt.Println(d)
 ```
-
-
-
 
 ### Type conversions
 
@@ -286,13 +275,10 @@ s := strconv.Itoa(i)
 fmt.Println(s) // Outputs: 90
 ```
 
-
-
-
-Go Strings
---------
+## Go Strings
 
 ### Strings function
+
 ```go
 package main
 
@@ -315,9 +301,8 @@ func main() {
 }
 ```
 
-
-
 ### fmt.Printf {.row-span-2 .col-span-2}
+
 ```go
 package main
 
@@ -361,14 +346,13 @@ func main() {
 }
 
 ```
+
 See also: [fmt](https://go.dev/pkg/fmt/)
 
-
-
-
 ### Function examples
+
 | Example                       | Result      |
-|-------------------------------|-------------|
+| ----------------------------- | ----------- |
 | Contains("test", "es")        | true        |
 | Count("test", "t")            | 2           |
 | HasPrefix("test", "te")       | true        |
@@ -382,10 +366,7 @@ See also: [fmt](https://go.dev/pkg/fmt/)
 | ToLower("TEST")               | test        |
 | ToUpper("test")               | TEST        |
 
-
-
-Go Flow control
---------
+## Go Flow control
 
 ### Conditional
 
@@ -412,7 +393,9 @@ if count := len(x); count > 0 {
 }
 
 ```
+
 ---
+
 ```go
 
 if _, err := doThing(); err != nil {
@@ -421,6 +404,7 @@ if _, err := doThing(); err != nil {
 ```
 
 ### Switch
+
 ```go {.wrap}
 x := 42.0
 switch x {
@@ -468,6 +452,7 @@ for i <= 3 {
 ```
 
 ### Continue keyword
+
 ```go
 for i := 0; i <= 5; i++ {
     if i % 2 == 0 {
@@ -476,7 +461,9 @@ for i := 0; i <= 5; i++ {
     fmt.Println(i)
 }
 ```
+
 ### Break keyword
+
 ```go
 for {
     fmt.Println("loop")
@@ -484,10 +471,7 @@ for {
 }
 ```
 
-
-
-Go Structs & Maps
---------
+## Go Structs & Maps
 
 ### Defining {.row-span-2}
 
@@ -524,8 +508,8 @@ v := Vertex{X: 1}
 
 You can also put field names.
 
-
 ### Maps {.row-span-2}
+
 ```go
 m := make(map[string]int)
 m["k1"] = 7
@@ -546,7 +530,6 @@ n := map[string]int{"foo": 1, "bar": 2}
 fmt.Println(n) // => map[bar:2 foo:1]
 ```
 
-
 ### Pointers to structs
 
 ```go
@@ -556,15 +539,10 @@ v.X = 2
 
 Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
-
-
-
-
-Go Functions
---------
-
+## Go Functions
 
 ### Multiple arguments
+
 ```go
 func plus(a int, b int) int {
     return a + b
@@ -617,6 +595,7 @@ fmt.Println(y)   // => 10
 Note that using naked returns hurts readability.
 
 ### Variadic functions
+
 ```go
 func sum(nums ...int) {
     fmt.Print(nums, " ")
@@ -633,12 +612,14 @@ nums := []int{1, 2, 3, 4}
 sum(nums...)  // => [1 2 3 4] 10
 ```
 
-
 ### init function
+
 ```go
 import --> const --> var --> init()
 ```
+
 ---
+
 ```go
 var num = setNumber()
 
@@ -653,8 +634,8 @@ func main() {
 }
 ```
 
-
 ### Functions as values
+
 ```go
 func main() {
     // assign a function to a name
@@ -667,6 +648,7 @@ func main() {
 ```
 
 ### Closures 1
+
 ```go
 func scope() func() int{
     outer_var := 2
@@ -679,6 +661,7 @@ fmt.Println(scope()())
 ```
 
 ### Closures 2
+
 ```go
 func outer() (func() int, int) {
     outer_var := 2
@@ -694,10 +677,7 @@ fmt.Println(inner()) // => 200
 fmt.Println(val)     // => 101
 ```
 
-
-Go Packages
---------
-
+## Go Packages
 
 ### Importing {.row-span-2}
 
@@ -705,7 +685,9 @@ Go Packages
 import "fmt"
 import "math/rand"
 ```
+
 #### Same as
+
 ```go
 import (
   "fmt"        // gives fmt.Println
@@ -715,26 +697,26 @@ import (
 
 See: [Importing](https://tour.go.dev/basics/1)
 
-
-
-
 ### Aliases {.row-span-2}
 
 ```go
 import r "math/rand"
 ```
+
 ---
+
 ```go
 import (
     "fmt"
     r "math/rand"
 )
 ```
+
 ---
+
 ```go
 r.Intn()
 ```
-
 
 ### Packages
 
@@ -759,10 +741,7 @@ func Hello () {
 
 See: [Exported names](https://tour.go.dev/basics/3)
 
-
-
-Go Concurrency
---------
+## Go Concurrency
 
 ### Goroutines {.row-span-2}
 
@@ -793,13 +772,9 @@ func main() {
 }
 ```
 
-
 See: [Goroutines](https://tour.go.dev/concurrency/1), [Channels](https://tour.go.dev/concurrency/2)
 
-
-
-
-### WaitGroup  {.row-span-2}
+### WaitGroup {.row-span-2}
 
 ```go
 package main
@@ -827,10 +802,8 @@ func main() {
 	wg.Wait()
 }
 ```
+
 See: [WaitGroup](https://go.dev/pkg/sync/#WaitGroup)
-
-
-
 
 ### Closing channels
 
@@ -840,22 +813,24 @@ ch <- 2
 ch <- 3
 close(ch) // Closes a channel
 ```
+
 ---
+
 ```go
 // Iterate the channel until closed
 for i := range ch {
   ···
 }
 ```
+
 ---
+
 ```go
 // Closed if `ok == false`
 v, ok := <- ch
 ```
 
 See: [Range and close](https://tour.go.dev/concurrency/4)
-
-
 
 ### Buffered channels
 
@@ -870,14 +845,9 @@ ch <- 3
 
 See: [Buffered channels](https://tour.go.dev/concurrency/3)
 
+## Go Error control
 
-
-
-
-Go Error control
---------
-
-### Deferring functions 
+### Deferring functions
 
 ```go
 func main() {
@@ -887,7 +857,6 @@ func main() {
   fmt.Println("Working...")
 }
 ```
-
 
 ### Lambda defer
 
@@ -904,9 +873,6 @@ func main() {
 
 The defer func uses current value of d, unless we use a pointer to get final value at end of main.
 
-
-
-
 ### Defer
 
 ```go
@@ -918,10 +884,7 @@ func main() {
 
 See: [Defer, panic and recover](https://blog.go.dev/defer-panic-and-recover)
 
-
-
-Go Methods  {.cols-2}
---------
+## Go Methods {.cols-2}
 
 ### Receivers
 
@@ -936,7 +899,6 @@ func (v Vertex) Abs() float64 {
   return math.Sqrt(v.X * v.X + v.Y * v.Y)
 }
 ```
-
 
 ```go
 v := Vertex{1, 2}
@@ -954,7 +916,6 @@ func (v *Vertex) Scale(f float64) {
 }
 ```
 
-
 ```go
 v := Vertex{6, 12}
 v.Scale(0.5)
@@ -963,8 +924,7 @@ v.Scale(0.5)
 
 See: [Pointer receivers](https://tour.go.dev/methods/4)
 
-Go Interfaces {.cols-2}
---------
+## Go Interfaces {.cols-2}
 
 ### A basic interface
 
@@ -1008,11 +968,11 @@ func main() {
 }
 
 ```
-Go generics  {.cols-2}
--------------
 
+## Go generics {.cols-2}
 
 ### example 1
+
 ```go
 // comparable represents types that can be compared.
 type comparable interface {
@@ -1030,20 +990,21 @@ func Max[T comparable](a, b T) T {
 func main() {
 	// Find the maximum of two integers.
 	maxInt := Max(10, 20)
-	fmt.Println("Max integer:", maxInt) 
+	fmt.Println("Max integer:", maxInt)
 
 	// Find the maximum of two floats.
 	maxFloat := Max(3.14, 2.71)
-	fmt.Println("Max float:", maxFloat) 
+	fmt.Println("Max float:", maxFloat)
 
 	// Find the maximum of two strings.
 	maxString := Max("apple", "banana")
-	fmt.Println("Max string:", maxString) 
+	fmt.Println("Max string:", maxString)
 }
 
 ```
 
 ### example 2
+
 ```go
 
 // Pair[T, U] represents a generic pair of values.
@@ -1055,62 +1016,62 @@ type Pair[T, U any] struct {
 func main() {
 	pair := Pair[int, string]{First: 42, Second: "hello"}
 
-	fmt.Println("First:", pair.First)   
+	fmt.Println("First:", pair.First)
 	fmt.Println("Second:", pair.Second)
 
 	// Print the types of the values in the pair.
-	fmt.Println("Type of First:", reflect.TypeOf(pair.First))  
+	fmt.Println("Type of First:", reflect.TypeOf(pair.First))
 	fmt.Println("Type of Second:", reflect.TypeOf(pair.Second))
 }
 
 ```
-Miscellaneous
--------------
+
+## Miscellaneous
 
 ### Keywords
-- break
-- default
-- func
-- interface
-- select
-- case
-- defer
-- go
-- map
-- struct
-- chan
-- else
-- goto
-- package
-- switch
-- const
-- fallthrough
-- if
-- range
-- type
-- continue
-- for
-- import
-- return
-- var
-- iota
+
+- `break`
+- `default`
+- `func`
+- `interface`
+- `select`
+- `case`
+- `defer`
+- `go`
+- `map`
+- `struct`
+- `chan`
+- `else`
+- `goto`
+- `package`
+- `switch`
+- `const`
+- `fallthrough`
+- `if`
+- `range`
+- `type`
+- `continue`
+- `for`
+- `import`
+- `return`
+- `var`
+- `iota`
 
 {.cols-3 .marker-none}
 
 ### Operators and punctuation
-|   |    |     |     |      |    |     |   |   |
-|---|----|-----|-----|------|----|-----|---|---|
-| + | &  | +=  | &=  | &&   | == | !=  | ( | ) |
-| - | \| | -=  | \|= | \|\| | <  | <=  | [ | ] |
-| * | ^  | *=  | ^=  | <-   | >  | >=  | { | } |
-| / | << | /=  | <<= | ++   | =  | :=  | , | ; |
-| % | >> | %=  | >>= | --   | !  | ... | . | : |
-|   | &^ | &^= |     |      |    |     |   |   |
 
+|                 |                 |                  |                  |                   |      |       |     |     |
+| --------------- | --------------- | ---------------- | ---------------- | ----------------- | ---- | ----- | --- | --- |
+| `+`             | `&`             | `+=`             | `&=`             | `&&`              | `==` | `!=`  | `(` | `)` |
+| `-`             | <code>\|</code> | `-=`             | <code>\|=</code> | <code>\|\|</code> | `<`  | `<=`  | `[` | `]` |
+| <code>\*</code> | `^`             | <code>\*=</code> | `^=`             | `<-`              | `>`  | `>=`  | `{` | `}` |
+| `/`             | `<<`            | `/=`             | `<<=`            | `++`              | `=`  | `:=`  | `,` | `;` |
+| `%`             | `>>`            | `%=`             | `>>=`            | `--`              | `!`  | `...` | `.` | `:` |
+|                 | `&^`            | `&^=`            |                  |                   |      |       |     |     |
 
+## Also see {.cols-1}
 
-Also see {.cols-1}
---------
 - [Devhints](https://devhints.io/go) _(devhints.io)_
 - [A tour of Go](https://tour.go.dev/welcome/1) _(tour.go.dev)_
 - [Go wiki](https://github.com/golang/go/wiki/) _(github.com)_
@@ -1119,7 +1080,3 @@ Also see {.cols-1}
 - [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_
 - [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_
 - [Style Guide](https://github.com/golang/go/wiki/CodeReviewComments) _(github.com)_
-
-
-
-

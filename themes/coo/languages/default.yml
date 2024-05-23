@@ -15,14 +15,14 @@ readmore: READ MORE
 floatmenu: Menu
 
 menu:
-    home: Home
-    archives: Archives
-    category: Categories
-    search: Search
+  home: Home
+  archives: Archives
+  category: Categories
+  search: Search
 current_page: Current page
 page_name:
-    categories: (Categories)
-    tags: (Tags)
-    archives: (Archives)
+  categories: (Categories)
+  tags: (Tags)
+  archives: (Archives)
 go_back_home: Go back home
 no_title: No title

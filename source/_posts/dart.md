@@ -3,31 +3,28 @@ title: Dart
 date: 2021-11-04 10:12:25
 background: bg-[#58aee9]
 tags:
-    - dart
-    - flutter
+  - dart
+  - flutter
 categories:
   - Programming
 intro: |
-    A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-
-
-Getting Started {.cols-2}
-------------
+## Getting Started {.cols-2}
 
 ### hello.dart
+
 ```dart
 // top-level function where app execution starts
 void main(){
     print("Hello World!"); // Print to console
 }
 ```
-Every app has a main() function
 
+Every app has a main() function
 
 ### Variables
 
@@ -45,7 +42,6 @@ final String email = "temid@gmail.com"; // you can't change the value
 
 const qty = 5; // Compile-time constant
 ```
-
 
 ### Datatypes
 
@@ -65,7 +61,6 @@ bool isFavourite = true;
 bool isLoaded = false;
 ```
 
-
 ### String interpolation
 
 ```dart
@@ -84,6 +79,7 @@ print(upperCase); //Print: NICOLA
 ```
 
 ### Comments
+
 ```dart
 // This is a normal, one-line comment.
 
@@ -95,6 +91,7 @@ print(upperCase); //Print: NICOLA
 ```
 
 ### Imports
+
 ```dart
 // Importing core libraries
 import 'dart:math';
@@ -106,11 +103,10 @@ import 'package:test/test.dart';
 import 'path/to/my_other_file.dart';
 ```
 
-
-Operators {.cols-2}
-------------
+## Operators {.cols-2}
 
 ### Arithmatic Operators
+
 ```dart
 print(2 + 3); //Print: 5
 print(2 - 3); //Print: -1
@@ -129,8 +125,8 @@ b = --a; // predecrement - Decrement a before b gets its value.
 b = a--; // postdecrement - Decrement a AFTER b gets its value.
 ```
 
-
 ### Equality and relational operators
+
 ```dart
 print(2 == 2);  //Print: true - Equal
 print(2 != 3); //Print: true - Not  Equal
@@ -140,8 +136,8 @@ print(3 >= 3); //Print: true - Greater than or equal to
 print(2 <= 3); //Print: true - Less than or equal to
 ```
 
-
 ### Logical operators
+
 ```dart
 // !expr inverts the expression (changes false to true, and vice versa)
 // ||	logical OR
@@ -153,14 +149,10 @@ if (!isOutOfStock && (quantity == 2 || quantity == 3)) {
 }
 ```
 
-
-
-
-Control Flows : Conditionals {.cols-2}
-------------
-
+## Control Flows : Conditionals {.cols-2}
 
 ### if and else if
+
 ```dart
 if(age < 18){
     print("Teen");
@@ -171,8 +163,8 @@ if(age < 18){
 }
 ```
 
-
 ### switch case
+
 ```dart
 enum Pet {dog, cat}
 Pet myPet = Pet.dog;
@@ -189,30 +181,30 @@ switch(myPet){
 // Prints: My Pet is Dog.
 ```
 
-
-
-
-Control Flows : Loops
-------------
-
+## Control Flows : Loops
 
 ### while loop
+
 ```dart
 while (!dreamsAchieved) {
   workHard();
 }
 ```
+
 while loop check condition before iteration of the loop
 
 ### do-while loop
+
 ```dart
 do {
   workHard();
 } while (!dreamsAchieved);
 ```
+
 do-while loop verifies the condition after the execution of the statements inside the loop
 
 ### for loop
+
 ```dart
 for(int i=0; i< 10; i++){
     print(i);
@@ -225,10 +217,7 @@ for(var number in numbers){
 }
 ```
 
-
-
-Collections {.cols-2}
-------------
+## Collections {.cols-2}
 
 ### Lists
 
@@ -247,7 +236,6 @@ List<String> cities = <String>["New York", "Mumbai", "Tokyo"];
 const constantCities = const ["New York", "Mumbai", "Tokyo"];
 ```
 
-
 ### Sets
 
 ```dart
@@ -259,7 +247,6 @@ var names = <String>{};
 Set<String> names = {}; // This works, too.
 //var names = {}; // Creates a map, not a set.
 ```
-
 
 ### Maps
 
@@ -282,12 +269,10 @@ var nobleGases = {
 };
 ```
 
-
-
-Functions {.cols-2}
-------------
+## Functions {.cols-2}
 
 ### Functions
+
 ```dart
 // functions in dart are objects and have a type
 int add(int a, int b){
@@ -301,14 +286,15 @@ int sum = add(2,3); // returns: 5
 int totalSum = add(2, add(2,3)); // returns : 7
 ```
 
+### Arrow Syntax (=>)
 
-### Arrow Syntax (=>) 
 ```dart
 // functions that contain just one expression, you can use a shorthand syntax
 bool isFav(Product product) => favProductsList.contains(product);
 ```
 
 ### Anonymous (lambda) functions
+
 ```dart
 // small one line functions that dont have name
 int add(a,b) => a+b;
@@ -320,10 +306,10 @@ list.forEach(
 //Prints: 0: apples 1: bananas 2: oranges
 ```
 
-Classes and Objects
-----------
+## Classes and Objects
 
 ### Class
+
 ```dart
 class Cat {
     String name;
@@ -335,8 +321,8 @@ class Cat {
 }
 ```
 
-
 ### Object
+
 ```dart
 // instance of a class
 // below myCat is Object of class Cat
@@ -348,8 +334,8 @@ void main(){
 }
 ```
 
-
 ### Constructors
+
 ```dart
 class Cat {
     String name;
@@ -361,8 +347,8 @@ void main(){
 }
 ```
 
-
 ### Abstract Classes
+
 ```dart
 // abstract class—a class that can’t be instantiated
 // This class is declared abstract and thus can't be instantiated.
@@ -373,13 +359,13 @@ abstract class AbstractContainer {
 }
 ```
 
-
 ### Getters Setters
+
 ```dart
 // provide read and write access to an object’s properties
 class Cat {
     String name;
-    
+
     // getter
     String get catName {
         return name;
@@ -392,11 +378,10 @@ class Cat {
 }
 ```
 
-
-Implicit interfaces {.cols-2}
-------------
+## Implicit interfaces {.cols-2}
 
 ### A basic interface
+
 ```dart
 // A person. The implicit interface contains greet().
 class Person {
@@ -426,6 +411,7 @@ void main() {
 ```
 
 ### Extending a class
+
 ```dart
 class Phone {
 
@@ -445,10 +431,10 @@ class SmartPhone extends Phone {
 }
 ```
 
-Exceptions
-------------
+## Exceptions
 
 ### Throw
+
 ```dart
 // throws or raises and exception
 throw IntegerDivisionByZeroException();
@@ -457,7 +443,8 @@ throw IntegerDivisionByZeroException();
 throw "Product out of stock!";
 ```
 
-### Catch 
+### Catch
+
 ```dart
 
 try {
@@ -475,7 +462,9 @@ try {
 }
 
 ```
+
 ### Finally
+
 ```dart
 // To ensure that some code runs whether or not an exception is thrown
 try {
@@ -487,10 +476,10 @@ try {
 }
 ```
 
+## Futures
 
-Futures
-------------
 ### Async Await
+
 ```dart
 // functions which are asynchronous: they return after setting up a possibly time-consuming operation
 // The async and await keywords support asynchronous programming
@@ -509,12 +498,12 @@ main() async {
 }
 ```
 
-Extensions {.cols-2}
-----------
+## Extensions {.cols-2}
 
 ### Why use extensions? {.row-span-2}
+
 ```dart
-// Extensions allow you to add methods to existing 
+// Extensions allow you to add methods to existing
 // classes without modifying them.
 
 // Instead of defining a util class.
@@ -528,7 +517,7 @@ class StringUtil {
 print(StringUtil.isValidEmail('someString')); //Print: false
 
 // We can define an extension which will be applied
-// on a certain type. 
+// on a certain type.
 
 extension StringExtensions on String {
   bool get isValidEmail {
@@ -538,10 +527,12 @@ extension StringExtensions on String {
 }
 
 print('test@example.com'.isValidEmail); //Print: true
-print('SomeString'.isValidEmail); //Print: false 
+print('SomeString'.isValidEmail); //Print: false
 
 ```
+
 ### Generic Extensions
+
 ```dart
 // allows you to apply the same logic to a range of types.
 extension NumGenericExtensions<T extends num> on T {
@@ -552,6 +543,7 @@ print(7.addTwo()); // Print: 9
 ```
 
 ### Dart Extensions in Flutter
+
 ```dart
 extension ContextExtension on BuildContext {
   double get screenHeight => MediaQuery.of(this).size.height;
@@ -572,9 +564,7 @@ Widget build(BuildContext context) => MaterialApp(
   );
 ```
 
-
-Miscellaneous {.cols-2}
-------------
+## Miscellaneous {.cols-2}
 
 ### Null and Null aware
 
@@ -592,16 +582,14 @@ print(x); // Print: 6 - result is still 6
 print(null ?? 10); // Prints: 10. Display the value on the left if it's not null else return the value on the right
 ```
 
-
-
 ### Ternary Operator
+
 ```dart
 // condition ? exprIfTrue : exprIfFalse
 bool isAvailable;
 
 isAvailable ? orderproduct() : addToFavourite();
 ```
-
 
 ### Spread Operator (...)
 
@@ -632,6 +620,7 @@ var user = User()
 ```
 
 ### Conditional Property Access
+
 ```dart
 userObject?.userName
 

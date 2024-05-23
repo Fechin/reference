@@ -2,46 +2,49 @@
 title: Redis
 background: bg-[#c13b2c]
 tags:
-    - cache
+  - cache
 categories:
-    - Database
+  - Database
 date: 2020-12-26 19:33:15
 intro: |
-    This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
+  This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-
-Getting Started
----------------
+## Getting Started
 
 ### Getting started
 
 Start Redis
+
 ```shell script
 $ redis-server
 ```
+
 Connect to redis (Redis CLI client)
+
 ```shell script
 $ redis-cli
 ```
+
 Connect to redis (telnet)
+
 ```shell script
 $ telnet 127.0.0.1 6379
 ```
 
-
 ### Hello World
 
 #### Ping
+
 ```shell script
 redis> PING
 PONG
 ```
 
 #### Hello World
+
 ```shell script
 redis> SET mykey "Hello world"
 OK
@@ -49,8 +52,8 @@ redis> GET mykey
 "Hello world"
 ```
 
-
 ### Basic Data types
+
 - [Strings](#redis-string-command)
 - [Lists](#redis-list-command)
 - [Hashes](#redis-hash-command)
@@ -59,19 +62,16 @@ redis> GET mykey
 
 Redis supports 5 basic data types
 
+## Redis String command{.cols-3}
 
+### APPEND
 
-
-Redis String command{.cols-3}
-------------
-
-
-### APPEND 
-
-``` {.wrap}
+```{.wrap}
 APPEND key value
 ```
+
 #### Example
+
 ```shell script
 redis> EXISTS mykey
 (integer) 0
@@ -82,15 +82,17 @@ redis> APPEND mykey " World"
 redis> GET mykey
 "Hello World"
 ```
+
 Append a value to a key
 
+### BITCOUNT
 
-### BITCOUNT 
-
-``` {.wrap}
+```{.wrap}
 BITCOUNT key [start end]
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "foobar"
 "OK"
@@ -101,31 +103,33 @@ redis> BITCOUNT mykey 0 0
 redis> BITCOUNT mykey 1 1
 (integer) 6
 ```
+
 Count set bits in a string
 
+### BITFIELD
 
-
-
-### BITFIELD 
-
-``` {.wrap}
+```{.wrap}
 BITFIELD key [GET type offset] [SET type offset value] [INCRBY type offset increment] [OVERFLOW WRAP|SAT|FAIL]
 ```
+
 #### Example
+
 ```shell script
 redis> BITFIELD mykey INCRBY i5 100 1 GET u4 0
 1) (integer) 1
 2) (integer) 0
 ```
+
 Perform arbitrary bitfield integer operations on strings
 
+### BITOP
 
-### BITOP 
-
-``` {.wrap}
+```{.wrap}
 BITOP operation destkey key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "foobar"
 "OK"
@@ -136,15 +140,17 @@ redis> BITOP AND dest key1 key2
 redis> GET dest
 "`bc`ab"
 ```
+
 Perform bitwise operations between strings
 
+### BITPOS
 
-### BITPOS 
-
-``` {.wrap}
+```{.wrap}
 BITPOS key bit [start] [end]
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "\xff\xf0\x00"
 "OK"
@@ -161,15 +167,17 @@ redis> set mykey "\x00\x00\x00"
 redis> BITPOS mykey 1
 (integer) -1
 ```
+
 Find first bit set or clear in a string
 
+### DECR
 
-### DECR 
-
-``` {.wrap}
+```{.wrap}
 DECR key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "10"
 "OK"
@@ -180,30 +188,34 @@ redis> SET mykey "234293482390480948029348230948"
 redis> DECR mykey
 ERR ERR value is not an integer or out of range
 ```
+
 Decrement the integer value of a key by one
 
+### DECRBY
 
-### DECRBY 
-
-``` {.wrap}
+```{.wrap}
 DECRBY key decrement
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "10"
 "OK"
 redis> DECRBY mykey 3
 (integer) 7
 ```
+
 Decrement the integer value of a key by the given number
 
+### GET
 
-### GET 
-
-``` {.wrap}
+```{.wrap}
 GET key
 ```
+
 #### Example
+
 ```shell script
 redis> GET nonexisting
 (nil)
@@ -212,15 +224,17 @@ redis> SET mykey "Hello"
 redis> GET mykey
 "Hello"
 ```
+
 Get the value of a key
 
+### GETBIT
 
-### GETBIT 
-
-``` {.wrap}
+```{.wrap}
 GETBIT key offset
 ```
+
 #### Example
+
 ```shell script
 redis> SETBIT mykey 7 1
 (integer) 0
@@ -231,15 +245,17 @@ redis> GETBIT mykey 7
 redis> GETBIT mykey 100
 (integer) 0
 ```
+
 Returns the bit value at offset in the string value stored at key
 
+### GETRANGE
 
-### GETRANGE 
-
-``` {.wrap}
+```{.wrap}
 GETRANGE key start end
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "This is a string"
 "OK"
@@ -252,15 +268,17 @@ redis> GETRANGE mykey 0 -1
 redis> GETRANGE mykey 10 100
 "string"
 ```
+
 Get a substring of the string stored at a key
 
+### GETSET
 
-### GETSET 
-
-``` {.wrap}
+```{.wrap}
 GETSET key value
 ```
+
 #### Example
+
 ```shell script
 redis> INCR mycounter
 (integer) 1
@@ -269,15 +287,17 @@ redis> GETSET mycounter "0"
 redis> GET mycounter
 "0"
 ```
+
 Set the string value of a key and return its old value
 
+### INCR
 
-### INCR 
-
-``` {.wrap}
+```{.wrap}
 INCR key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "10"
 "OK"
@@ -286,14 +306,17 @@ redis> INCR mykey
 redis> GET mykey
 "11"
 ```
+
 Increment the integer value of a key by one
 
-### MSETNX 
+### MSETNX
 
-``` {.wrap}
+```{.wrap}
 MSETNX key value [key value ...]
 ```
+
 #### Example
+
 ```shell script
 redis> MSETNX key1 "Hello" key2 "there"
 (integer) 1
@@ -304,17 +327,17 @@ redis> MGET key1 key2 key3
 2) "there"
 3) (nil)
 ```
+
 Set multiple keys to multiple values, only if none of the keys exist
 
+### INCRBYFLOAT
 
-
-
-### INCRBYFLOAT 
-
-``` {.wrap}
+```{.wrap}
 INCRBYFLOAT key increment
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey 10.50
 "OK"
@@ -327,15 +350,17 @@ redis> SET mykey 5.0e3
 redis> INCRBYFLOAT mykey 2.0e2
 "5200"
 ```
+
 Increment the float value of a key by the given amount
 
+### MGET
 
-### MGET 
-
-``` {.wrap}
+```{.wrap}
 MGET key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "Hello"
 "OK"
@@ -346,15 +371,17 @@ redis> MGET key1 key2 nonexisting
 2) "World"
 3) (nil)
 ```
+
 Get the values of all the given keys
 
+### MSET
 
-### MSET 
-
-``` {.wrap}
+```{.wrap}
 MSET key value [key value ...]
 ```
+
 #### Example
+
 ```shell script
 redis> MSET key1 "Hello" key2 "World"
 "OK"
@@ -363,32 +390,34 @@ redis> GET key1
 redis> GET key2
 "World"
 ```
+
 Set multiple keys to multiple values
 
+### INCRBY
 
-
-### INCRBY 
-
-``` {.wrap}
+```{.wrap}
 INCRBY key increment
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "10"
 "OK"
 redis> INCRBY mykey 5
 (integer) 15
 ```
+
 Increment the integer value of a key by the given amount
 
+### PSETEX
 
-
-### PSETEX 
-
-``` {.wrap}
+```{.wrap}
 PSETEX key milliseconds value
 ```
+
 #### Example
+
 ```shell script
 redis> PSETEX mykey 1000 "Hello"
 "OK"
@@ -397,15 +426,17 @@ redis> PTTL mykey
 redis> GET mykey
 "Hello"
 ```
+
 Set the value and expiration in milliseconds of a key
 
+### SET
 
-### SET 
-
-``` {.wrap}
+```{.wrap}
 SET key value [EX seconds|PX milliseconds|KEEPTTL] [NX|XX] [GET]
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -414,15 +445,17 @@ redis> GET mykey
 redis> SET anotherkey "will expire in a minute" EX 60
 "OK"
 ```
+
 Set the string value of a key
 
+### SETBIT
 
-### SETBIT 
-
-``` {.wrap}
+```{.wrap}
 SETBIT key offset value
 ```
+
 #### Example
+
 ```shell script
 redis> SETBIT mykey 7 1
 (integer) 0
@@ -431,15 +464,17 @@ redis> SETBIT mykey 7 0
 redis> GET mykey
 "\u0000"
 ```
+
 Sets or clears the bit at offset in the string value stored at key
 
+### SETEX
 
-### SETEX 
-
-``` {.wrap}
+```{.wrap}
 SETEX key seconds value
 ```
+
 #### Example
+
 ```shell script
 redis> SETEX mykey 10 "Hello"
 "OK"
@@ -448,15 +483,17 @@ redis> TTL mykey
 redis> GET mykey
 "Hello"
 ```
+
 Set the value and expiration of a key
 
+### SETNX
 
-### SETNX 
-
-``` {.wrap}
+```{.wrap}
 SETNX key value
 ```
+
 #### Example
+
 ```shell script
 redis> SETNX mykey "Hello"
 (integer) 1
@@ -465,15 +502,17 @@ redis> SETNX mykey "World"
 redis> GET mykey
 "Hello"
 ```
+
 Set the value of a key, only if the key does not exist
 
+### SETRANGE
 
-### SETRANGE 
-
-``` {.wrap}
+```{.wrap}
 SETRANGE key offset value
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "Hello World"
 "OK"
@@ -482,15 +521,17 @@ redis> SETRANGE key1 6 "Redis"
 redis> GET key1
 "Hello Redis"
 ```
+
 Overwrite part of a string at key starting at the specified offset
 
+### STRLEN
 
-### STRLEN 
-
-``` {.wrap}
+```{.wrap}
 STRLEN key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello world"
 "OK"
@@ -499,16 +540,17 @@ redis> STRLEN mykey
 redis> STRLEN nonexisting
 (integer) 0
 ```
+
 Get the length of the value stored in a key
 
+### STRALGO
 
-
-### STRALGO 
-
-``` {.wrap}
+```{.wrap}
 STRALGO LCS algo-specific-argument [algo-specific-argument ...]
 ```
+
 #### Example
+
 ```shell script
 redis> STRALGO LCS KEYS key1 key2 IDX
 1) "matches"
@@ -523,21 +565,19 @@ redis> STRALGO LCS KEYS key1 key2 IDX
 3) "len"
 4) (integer) 6
 ```
+
 Run algorithms (currently LCS) against strings
 
+## Redis Set command
 
+### SADD
 
-Redis Set command
-------------
-
-
-
-### SADD 
-
-``` {.wrap}
+```{.wrap}
 SADD key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "Hello"
 (integer) 1
@@ -549,15 +589,17 @@ redis> SMEMBERS myset
 1) "Hello"
 2) "World"
 ```
+
 Add one or more members to a set
 
+### SCARD
 
-### SCARD 
-
-``` {.wrap}
+```{.wrap}
 SCARD key
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "Hello"
 (integer) 1
@@ -566,15 +608,17 @@ redis> SADD myset "World"
 redis> SCARD myset
 (integer) 2
 ```
+
 Get the number of members in a set
 
+### SDIFF
 
-### SDIFF 
-
-``` {.wrap}
+```{.wrap}
 SDIFF key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD key1 "a"
 (integer) 1
@@ -592,15 +636,17 @@ redis> SDIFF key1 key2
 1) "a"
 2) "b"
 ```
+
 Subtract multiple sets
 
+### SDIFFSTORE
 
-### SDIFFSTORE 
-
-``` {.wrap}
+```{.wrap}
 SDIFFSTORE destination key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD key1 "a"
 (integer) 1
@@ -620,15 +666,17 @@ redis> SMEMBERS key
 1) "a"
 2) "b"
 ```
+
 Subtract multiple sets and store the resulting set in a key
 
+### SINTER
 
-### SINTER 
-
-``` {.wrap}
+```{.wrap}
 SINTER key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD key1 "a"
 (integer) 1
@@ -645,15 +693,17 @@ redis> SADD key2 "e"
 redis> SINTER key1 key2
 1) "c"
 ```
+
 Intersect multiple sets
 
+### SINTERSTORE
 
-### SINTERSTORE 
-
-``` {.wrap}
+```{.wrap}
 SINTERSTORE destination key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD key1 "a"
 (integer) 1
@@ -672,15 +722,17 @@ redis> SINTERSTORE key key1 key2
 redis> SMEMBERS key
 1) "c"
 ```
+
 Intersect multiple sets and store the resulting set in a key
 
+### SISMEMBER
 
-### SISMEMBER 
-
-``` {.wrap}
+```{.wrap}
 SISMEMBER key member
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "one"
 (integer) 1
@@ -689,15 +741,17 @@ redis> SISMEMBER myset "one"
 redis> SISMEMBER myset "two"
 (integer) 0
 ```
+
 Determine if a given value is a member of a set
 
+### SMISMEMBER
 
-### SMISMEMBER 
-
-``` {.wrap}
+```{.wrap}
 SMISMEMBER key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "one"
 (integer) 1
@@ -707,15 +761,17 @@ redis> SMISMEMBER myset "one" "notamember"
 1) (integer) 1
 2) (integer) 0
 ```
+
 Returns the membership associated with the given elements for a set
 
+### SMEMBERS
 
-### SMEMBERS 
-
-``` {.wrap}
+```{.wrap}
 SMEMBERS key
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "Hello"
 (integer) 1
@@ -725,15 +781,17 @@ redis> SMEMBERS myset
 1) "Hello"
 2) "World"
 ```
+
 Get all the members in a set
 
+### SMOVE
 
-### SMOVE 
-
-``` {.wrap}
+```{.wrap}
 SMOVE source destination member
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "one"
 (integer) 1
@@ -749,15 +807,17 @@ redis> SMEMBERS myotherset
 1) "two"
 2) "three"
 ```
+
 Move a member from one set to another
 
+### SPOP
 
-### SPOP 
-
-``` {.wrap}
+```{.wrap}
 SPOP key [count]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "one"
 (integer) 1
@@ -781,15 +841,17 @@ redis> SPOP myset 3
 redis> SMEMBERS myset
 1) "one"
 ```
+
 Remove and return one or multiple random members from a set
 
+### SRANDMEMBER
 
-### SRANDMEMBER 
-
-``` {.wrap}
+```{.wrap}
 SRANDMEMBER key [count]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset one two three
 (integer) 3
@@ -805,15 +867,17 @@ redis> SRANDMEMBER myset -5
 4) "three"
 5) "one"
 ```
+
 Get one or multiple random members from a set
 
+### SREM
 
-### SREM 
-
-``` {.wrap}
+```{.wrap}
 SREM key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD myset "one"
 (integer) 1
@@ -829,15 +893,17 @@ redis> SMEMBERS myset
 1) "two"
 2) "three"
 ```
+
 Remove one or more members from a set
 
+### SUNION
 
-### SUNION 
-
-``` {.wrap}
+```{.wrap}
 SUNION key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD key1 "a"
 (integer) 1
@@ -858,15 +924,17 @@ redis> SUNION key1 key2
 4) "b"
 5) "d"
 ```
+
 Add multiple sets
 
+### SUNIONSTORE
 
-### SUNIONSTORE 
-
-``` {.wrap}
+```{.wrap}
 SUNIONSTORE destination key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SADD key1 "a"
 (integer) 1
@@ -889,27 +957,26 @@ redis> SMEMBERS key
 4) "b"
 5) "d"
 ```
+
 Add multiple sets and store the resulting set in a key
 
-
-
-Redis List command
-------------
+## Redis List command
 
 ### Misc
 
 | -                                                   | -                                                                                                  |
-|-----------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | [BRPOPLPUSH ](https://redis.io/commands/brpoplpush) | Pop an element from a list, push it to another list and return it; or block until one is available |
 | [BLMOVE ](https://redis.io/commands/blmove)         | Pop an element from a list, push it to another list and return it; or block until one is available |
 
-
-
 ### BLPOP
-``` {.wrap}
+
+```{.wrap}
 BLPOP key [key ...] timeout
 ```
+
 #### Example
+
 ```shell script
 redis> DEL list1 list2
 (integer) 0
@@ -919,15 +986,17 @@ redis> BLPOP list1 list2 0
 1) "list1"
 2) "a"
 ```
+
 Remove and get the first element in a list, or block until one is available |
 
-
-
 ### BRPOP
-``` {.wrap}
+
+```{.wrap}
 BRPOP key [key ...] timeout
 ```
+
 #### Example
+
 ```shell script
 redis> DEL list1 list2
 (integer) 0
@@ -937,15 +1006,17 @@ redis> BRPOP list1 list2 0
 1) "list1"
 2) "c"
 ```
+
 Remove and get the last element in a list, or block until one is available |
 
+### LINDEX
 
-### LINDEX 
-
-``` {.wrap}
+```{.wrap}
 LINDEX key index
 ```
+
 #### Example
+
 ```shell script
 redis> LPUSH mylist "World"
 (integer) 1
@@ -958,15 +1029,17 @@ redis> LINDEX mylist -1
 redis> LINDEX mylist 3
 (nil)
 ```
+
 Get an element from a list by its index
 
+### LINSERT
 
-### LINSERT 
-
-``` {.wrap}
+```{.wrap}
 LINSERT key BEFORE|AFTER pivot element
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "Hello"
 (integer) 1
@@ -979,15 +1052,17 @@ redis> LRANGE mylist 0 -1
 2) "There"
 3) "World"
 ```
+
 Insert an element before or after another element in a list
 
+### LLEN
 
-### LLEN 
-
-``` {.wrap}
+```{.wrap}
 LLEN key
 ```
+
 #### Example
+
 ```shell script
 redis> LPUSH mylist "World"
 (integer) 1
@@ -996,15 +1071,17 @@ redis> LPUSH mylist "Hello"
 redis> LLEN mylist
 (integer) 2
 ```
+
 Get the length of a list
 
+### LPOP
 
-### LPOP 
-
-``` {.wrap}
+```{.wrap}
 LPOP key [count]
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1018,15 +1095,17 @@ redis> LRANGE mylist 0 -1
 1) "two"
 2) "three"
 ```
+
 Remove and get the first elements in a list
 
+### LPOS
 
-### LPOS 
-
-``` {.wrap}
+```{.wrap}
 LPOS key element [RANK rank] [COUNT num-matches] [MAXLEN len]
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist a b c d 1 2 3 4 3 3 3
 (integer) 11
@@ -1037,15 +1116,17 @@ redis> LPOS mylist 3 COUNT 0 RANK 2
 2) (integer) 9
 3) (integer) 10
 ```
+
 Return the index of matching elements on a list
 
+### LPUSH
 
-### LPUSH 
-
-``` {.wrap}
+```{.wrap}
 LPUSH key element [element ...]
 ```
+
 #### Example
+
 ```shell script
 redis> LPUSH mylist "world"
 (integer) 1
@@ -1055,15 +1136,17 @@ redis> LRANGE mylist 0 -1
 1) "hello"
 2) "world"
 ```
+
 Prepend one or multiple elements to a list
 
+### LPUSHX
 
-### LPUSHX 
-
-``` {.wrap}
+```{.wrap}
 LPUSHX key element [element ...]
 ```
+
 #### Example
+
 ```shell script
 redis> LPUSH mylist "World"
 (integer) 1
@@ -1077,15 +1160,17 @@ redis> LRANGE mylist 0 -1
 redis> LRANGE myotherlist 0 -1
 (empty list or set)
 ```
+
 Prepend an element to a list, only if the list exists
 
+### LRANGE
 
-### LRANGE 
-
-``` {.wrap}
+```{.wrap}
 LRANGE key start stop
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1106,15 +1191,17 @@ redis> LRANGE mylist -100 100
 redis> LRANGE mylist 5 10
 (empty list or set)
 ```
+
 Get a range of elements from a list
 
+### LREM
 
-### LREM 
-
-``` {.wrap}
+```{.wrap}
 LREM key count element
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "hello"
 (integer) 1
@@ -1130,15 +1217,17 @@ redis> LRANGE mylist 0 -1
 1) "hello"
 2) "foo"
 ```
+
 Remove elements from a list
 
+### LSET
 
-### LSET 
-
-``` {.wrap}
+```{.wrap}
 LSET key index element
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1155,15 +1244,17 @@ redis> LRANGE mylist 0 -1
 2) "five"
 3) "three"
 ```
+
 Set the value of an element in a list by its index
 
+### LTRIM
 
-### LTRIM 
-
-``` {.wrap}
+```{.wrap}
 LTRIM key start stop
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1177,15 +1268,17 @@ redis> LRANGE mylist 0 -1
 1) "two"
 2) "three"
 ```
+
 Trim a list to the specified range
 
+### RPOP
 
-### RPOP 
-
-``` {.wrap}
+```{.wrap}
 RPOP key [count]
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1199,15 +1292,17 @@ redis> LRANGE mylist 0 -1
 1) "one"
 2) "two"
 ```
+
 Remove and get the last elements in a list
 
+### RPOPLPUSH
 
-### RPOPLPUSH 
-
-``` {.wrap}
+```{.wrap}
 RPOPLPUSH source destination
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1223,15 +1318,17 @@ redis> LRANGE mylist 0 -1
 redis> LRANGE myotherlist 0 -1
 1) "three"
 ```
+
 Remove the last element in a list, prepend it to another list and return it
 
+### LMOVE
 
-### LMOVE 
-
-``` {.wrap}
+```{.wrap}
 LMOVE source destination LEFT|RIGHT LEFT|RIGHT
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "one"
 (integer) 1
@@ -1249,15 +1346,17 @@ redis> LRANGE myotherlist 0 -1
 1) "three"
 2) "one"
 ```
+
 Pop an element from a list, push it to another list and return it
 
+### RPUSH
 
-### RPUSH 
-
-``` {.wrap}
+```{.wrap}
 RPUSH key element [element ...]
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "hello"
 (integer) 1
@@ -1267,15 +1366,17 @@ redis> LRANGE mylist 0 -1
 1) "hello"
 2) "world"
 ```
+
 Append one or multiple elements to a list
 
+### RPUSHX
 
-### RPUSHX 
-
-``` {.wrap}
+```{.wrap}
 RPUSHX key element [element ...]
 ```
+
 #### Example
+
 ```shell script
 redis> RPUSH mylist "Hello"
 (integer) 1
@@ -1289,22 +1390,19 @@ redis> LRANGE mylist 0 -1
 redis> LRANGE myotherlist 0 -1
 (empty list or set)
 ```
+
 Append an element to a list, only if the list exists
 
+## Redis Hash command
 
+### HDEL
 
-
-Redis Hash command
-------------
-
-
-
-### HDEL 
-
-``` {.wrap}
+```{.wrap}
 HDEL key field [field ...]
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "foo"
 (integer) 1
@@ -1313,15 +1411,17 @@ redis> HDEL myhash field1
 redis> HDEL myhash field2
 (integer) 0
 ```
+
 Delete one or more hash fields
 
+### HEXISTS
 
-### HEXISTS 
-
-``` {.wrap}
+```{.wrap}
 HEXISTS key field
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "foo"
 (integer) 1
@@ -1330,15 +1430,17 @@ redis> HEXISTS myhash field1
 redis> HEXISTS myhash field2
 (integer) 0
 ```
+
 Determine if a hash field exists
 
+### HGET
 
-### HGET 
-
-``` {.wrap}
+```{.wrap}
 HGET key field
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "foo"
 (integer) 1
@@ -1347,15 +1449,17 @@ redis> HGET myhash field1
 redis> HGET myhash field2
 (nil)
 ```
+
 Get the value of a hash field
 
+### HGETALL
 
-### HGETALL 
-
-``` {.wrap}
+```{.wrap}
 HGETALL key
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "Hello"
 (integer) 1
@@ -1367,15 +1471,17 @@ redis> HGETALL myhash
 3) "field2"
 4) "World"
 ```
+
 Get all the fields and values in a hash
 
+### HINCRBY
 
-### HINCRBY 
-
-``` {.wrap}
+```{.wrap}
 HINCRBY key field increment
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field 5
 (integer) 1
@@ -1386,15 +1492,17 @@ redis> HINCRBY myhash field -1
 redis> HINCRBY myhash field -10
 (integer) -5
 ```
+
 Increment the integer value of a hash field by the given number
 
+### HINCRBYFLOAT
 
-### HINCRBYFLOAT 
-
-``` {.wrap}
+```{.wrap}
 HINCRBYFLOAT key field increment
 ```
+
 #### Example
+
 ```shell script
 redis> HSET mykey field 10.50
 (integer) 1
@@ -1407,15 +1515,17 @@ redis> HSET mykey field 5.0e3
 redis> HINCRBYFLOAT mykey field 2.0e2
 "5200"
 ```
+
 Increment the float value of a hash field by the given amount
 
+### HKEYS
 
-### HKEYS 
-
-``` {.wrap}
+```{.wrap}
 HKEYS key
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "Hello"
 (integer) 1
@@ -1425,15 +1535,17 @@ redis> HKEYS myhash
 1) "field1"
 2) "field2"
 ```
+
 Get all the fields in a hash
 
+### HLEN
 
-### HLEN 
-
-``` {.wrap}
+```{.wrap}
 HLEN key
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "Hello"
 (integer) 1
@@ -1442,15 +1554,17 @@ redis> HSET myhash field2 "World"
 redis> HLEN myhash
 (integer) 2
 ```
+
 Get the number of fields in a hash
 
+### HMGET
 
-### HMGET 
-
-``` {.wrap}
+```{.wrap}
 HMGET key field [field ...]
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "Hello"
 (integer) 1
@@ -1461,15 +1575,17 @@ redis> HMGET myhash field1 field2 nofield
 2) "World"
 3) (nil)
 ```
+
 Get the values of all the given hash fields
 
+### HMSET
 
-### HMSET 
-
-``` {.wrap}
+```{.wrap}
 HMSET key field value [field value ...]
 ```
+
 #### Example
+
 ```shell script
 redis> HMSET myhash field1 "Hello" field2 "World"
 "OK"
@@ -1478,30 +1594,34 @@ redis> HGET myhash field1
 redis> HGET myhash field2
 "World"
 ```
+
 Set multiple hash fields to multiple values
 
+### HSET
 
-### HSET 
-
-``` {.wrap}
+```{.wrap}
 HSET key field value [field value ...]
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "Hello"
 (integer) 1
 redis> HGET myhash field1
 "Hello"
 ```
+
 Set the string value of a hash field
 
+### HSETNX
 
-### HSETNX 
-
-``` {.wrap}
+```{.wrap}
 HSETNX key field value
 ```
+
 #### Example
+
 ```shell script
 redis> HSETNX myhash field "Hello"
 (integer) 1
@@ -1510,15 +1630,17 @@ redis> HSETNX myhash field "World"
 redis> HGET myhash field
 "Hello"
 ```
+
 Set the value of a hash field, only if the field does not exist
 
+### HSTRLEN
 
-### HSTRLEN 
-
-``` {.wrap}
+```{.wrap}
 HSTRLEN key field
 ```
+
 #### Example
+
 ```shell script
 redis> HMSET myhash f1 HelloWorld f2 99 f3 -256
 "OK"
@@ -1529,15 +1651,17 @@ redis> HSTRLEN myhash f2
 redis> HSTRLEN myhash f3
 (integer) 4
 ```
+
 Get the length of the value of a hash field
 
+### HVALS
 
-### HVALS 
-
-``` {.wrap}
+```{.wrap}
 HVALS key
 ```
+
 #### Example
+
 ```shell script
 redis> HSET myhash field1 "Hello"
 (integer) 1
@@ -1547,21 +1671,19 @@ redis> HVALS myhash
 1) "Hello"
 2) "World"
 ```
+
 Get all the values in a hash
 
-
-
-
-
-Redis Sorted set command
-------------
+## Redis Sorted set command
 
 ### BZPOPMIN
 
-``` {.wrap}
+```{.wrap}
 BZPOPMIN key [key ...] timeout
 ```
+
 #### Example
+
 ```shell script
 redis> DEL zset1 zset2
 (integer) 0
@@ -1572,15 +1694,17 @@ redis> BZPOPMIN zset1 zset2 0
 2) "a"
 3) "0"
 ```
-Remove and return the member with the lowest score from one or more sorted sets, or block until one is available
 
+Remove and return the member with the lowest score from one or more sorted sets, or block until one is available
 
 ### BZPOPMAX
 
-``` {.wrap}
+```{.wrap}
 BZPOPMAX key [key ...] timeout
 ```
+
 #### Example
+
 ```shell script
 redis> DEL zset1 zset2
 (integer) 0
@@ -1591,16 +1715,17 @@ redis> BZPOPMAX zset1 zset2 0
 2) "c"
 3) "2"
 ```
+
 Remove and return the member with the highest score from one or more sorted sets, or block until one is available
 
+### ZADD {.row-span-2}
 
-
-### ZADD  {.row-span-2}
-
-``` {.wrap}
+```{.wrap}
 ZADD key [NX|XX] [GT|LT] [CH] [INCR] score member [score member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1618,15 +1743,17 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 7) "three"
 8) "3"
 ```
+
 Add one or more members to a sorted set, or update its score if it already exists
 
+### ZCARD
 
-### ZCARD 
-
-``` {.wrap}
+```{.wrap}
 ZCARD key
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1635,32 +1762,34 @@ redis> ZADD myzset 2 "two"
 redis> ZCARD myzset
 (integer) 2
 ```
+
 Get the number of members in a sorted set
 
+### ZSCORE
 
-
-### ZSCORE 
-
-``` {.wrap}
+```{.wrap}
 ZSCORE key member
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
 redis> ZSCORE myzset "one"
 "1"
 ```
+
 Get the score associated with the given member in a sorted set
 
+### ZCOUNT
 
-
-### ZCOUNT 
-
-``` {.wrap}
+```{.wrap}
 ZCOUNT key min max
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1673,15 +1802,17 @@ redis> ZCOUNT myzset -inf +inf
 redis> ZCOUNT myzset (1 3
 (integer) 2
 ```
+
 Count the members in a sorted set with scores within the given values
 
+### ZDIFF
 
-### ZDIFF 
-
-``` {.wrap}
+```{.wrap}
 ZDIFF numkeys key [key ...] [WITHSCORES]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD zset1 1 "one"
 (integer) 1
@@ -1699,15 +1830,17 @@ redis> ZDIFF 2 zset1 zset2 WITHSCORES
 1) "three"
 2) "3"
 ```
+
 Subtract multiple sorted sets
 
+### ZDIFFSTORE
 
-### ZDIFFSTORE 
-
-``` {.wrap}
+```{.wrap}
 ZDIFFSTORE destination numkeys key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD zset1 1 "one"
 (integer) 1
@@ -1725,15 +1858,17 @@ redis> ZRANGE out 0 -1 WITHSCORES
 1) "three"
 2) "3"
 ```
+
 Subtract multiple sorted sets and store the resulting sorted set in a new key
 
+### ZINCRBY
 
-### ZINCRBY 
-
-``` {.wrap}
+```{.wrap}
 ZINCRBY key increment member
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1747,15 +1882,17 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 3) "one"
 4) "3"
 ```
+
 Increment the score of a member in a sorted set
 
+### ZINTER
 
-### ZINTER 
-
-``` {.wrap}
+```{.wrap}
 ZINTER numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD zset1 1 "one"
 (integer) 1
@@ -1776,15 +1913,17 @@ redis> ZINTER 2 zset1 zset2 WITHSCORES
 3) "two"
 4) "4"
 ```
+
 Intersect multiple sorted sets
 
+### ZINTERSTORE
 
-### ZINTERSTORE 
-
-``` {.wrap}
+```{.wrap}
 ZINTERSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD zset1 1 "one"
 (integer) 1
@@ -1804,15 +1943,17 @@ redis> ZRANGE out 0 -1 WITHSCORES
 3) "two"
 4) "10"
 ```
+
 Intersect multiple sorted sets and store the resulting sorted set in a new key
 
+### ZLEXCOUNT
 
-### ZLEXCOUNT 
-
-``` {.wrap}
+```{.wrap}
 ZLEXCOUNT key min max
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 0 a 0 b 0 c 0 d 0 e
 (integer) 5
@@ -1823,15 +1964,17 @@ redis> ZLEXCOUNT myzset - +
 redis> ZLEXCOUNT myzset [b [f
 (integer) 5
 ```
+
 Count the number of members in a sorted set between a given lexicographical range
 
+### ZPOPMAX
 
-### ZPOPMAX 
-
-``` {.wrap}
+```{.wrap}
 ZPOPMAX key [count]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1843,15 +1986,17 @@ redis> ZPOPMAX myzset
 1) "three"
 2) "3"
 ```
+
 Remove and return members with the highest scores in a sorted set
 
+### ZPOPMIN
 
-### ZPOPMIN 
-
-``` {.wrap}
+```{.wrap}
 ZPOPMIN key [count]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1863,15 +2008,17 @@ redis> ZPOPMIN myzset
 1) "one"
 2) "1"
 ```
+
 Remove and return members with the lowest scores in a sorted set
 
+### ZRANGE
 
-### ZRANGE 
-
-``` {.wrap}
+```{.wrap}
 ZRANGE key start stop [WITHSCORES]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1889,15 +2036,17 @@ redis> ZRANGE myzset -2 -1
 1) "two"
 2) "three"
 ```
+
 Return a range of members in a sorted set, by index
 
+### ZRANGEBYLEX
 
-### ZRANGEBYLEX 
-
-``` {.wrap}
+```{.wrap}
 ZRANGEBYLEX key min max [LIMIT offset count]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 0 a 0 b 0 c 0 d 0 e 0 f 0 g
 (integer) 7
@@ -1915,15 +2064,17 @@ redis> ZRANGEBYLEX myzset [aaa (g
 4) "e"
 5) "f"
 ```
+
 Return a range of members in a sorted set, by lexicographical range
 
+### ZREVRANGEBYLEX
 
-### ZREVRANGEBYLEX 
-
-``` {.wrap}
+```{.wrap}
 ZREVRANGEBYLEX key max min [LIMIT offset count]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 0 a 0 b 0 c 0 d 0 e 0 f 0 g
 (integer) 7
@@ -1941,15 +2092,17 @@ redis> ZREVRANGEBYLEX myzset (g [aaa
 4) "c"
 5) "b"
 ```
+
 Return a range of members in a sorted set, by lexicographical range, ordered from higher to lower strings.
 
+### ZRANGEBYSCORE
 
-### ZRANGEBYSCORE 
-
-``` {.wrap}
+```{.wrap}
 ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1969,15 +2122,17 @@ redis> ZRANGEBYSCORE myzset (1 2
 redis> ZRANGEBYSCORE myzset (1 (2
 (empty list or set)
 ```
+
 Return a range of members in a sorted set, by score
 
+### ZRANK
 
-### ZRANK 
-
-``` {.wrap}
+```{.wrap}
 ZRANK key member
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -1990,15 +2145,17 @@ redis> ZRANK myzset "three"
 redis> ZRANK myzset "four"
 (nil)
 ```
+
 Determine the index of a member in a sorted set
 
+### ZREM
 
-### ZREM 
-
-``` {.wrap}
+```{.wrap}
 ZREM key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2014,15 +2171,17 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 3) "three"
 4) "3"
 ```
+
 Remove one or more members from a sorted set
 
+### ZREMRANGEBYLEX
 
-### ZREMRANGEBYLEX 
-
-``` {.wrap}
+```{.wrap}
 ZREMRANGEBYLEX key min max
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 0 aaaa 0 b 0 c 0 d 0 e
 (integer) 5
@@ -2047,15 +2206,17 @@ redis> ZRANGE myzset 0 -1
 3) "zap"
 4) "zip"
 ```
+
 Remove all members in a sorted set between the given lexicographical range
 
+### ZREMRANGEBYRANK
 
-### ZREMRANGEBYRANK 
-
-``` {.wrap}
+```{.wrap}
 ZREMRANGEBYRANK key start stop
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2069,15 +2230,17 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 1) "three"
 2) "3"
 ```
+
 Remove all members in a sorted set within the given indexes
 
+### ZREMRANGEBYSCORE
 
-### ZREMRANGEBYSCORE 
-
-``` {.wrap}
+```{.wrap}
 ZREMRANGEBYSCORE key min max
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2093,15 +2256,17 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 3) "three"
 4) "3"
 ```
+
 Remove all members in a sorted set within the given scores
 
+### ZREVRANGE
 
-### ZREVRANGE 
-
-``` {.wrap}
+```{.wrap}
 ZREVRANGE key start stop [WITHSCORES]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2119,15 +2284,17 @@ redis> ZREVRANGE myzset -2 -1
 1) "two"
 2) "one"
 ```
+
 Return a range of members in a sorted set, by index, with scores ordered from high to low
 
+### ZREVRANGEBYSCORE
 
-### ZREVRANGEBYSCORE 
-
-``` {.wrap}
+```{.wrap}
 ZREVRANGEBYSCORE key max min [WITHSCORES] [LIMIT offset count]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2147,15 +2314,17 @@ redis> ZREVRANGEBYSCORE myzset 2 (1
 redis> ZREVRANGEBYSCORE myzset (2 (1
 (empty list or set)
 ```
+
 Return a range of members in a sorted set, by score, with scores ordered from high to low
 
+### ZREVRANK
 
-### ZREVRANK 
-
-``` {.wrap}
+```{.wrap}
 ZREVRANK key member
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2168,17 +2337,17 @@ redis> ZREVRANK myzset "one"
 redis> ZREVRANK myzset "four"
 (nil)
 ```
+
 Determine the index of a member in a sorted set, with scores ordered from high to low
 
+### ZUNION
 
-
-
-### ZUNION 
-
-``` {.wrap}
+```{.wrap}
 ZUNION numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD zset1 1 "one"
 (integer) 1
@@ -2202,15 +2371,17 @@ redis> ZUNION 2 zset1 zset2 WITHSCORES
 5) "two"
 6) "4"
 ```
+
 Add multiple sorted sets
 
+### ZMSCORE
 
-### ZMSCORE 
-
-``` {.wrap}
+```{.wrap}
 ZMSCORE key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD myzset 1 "one"
 (integer) 1
@@ -2221,15 +2392,17 @@ redis> ZMSCORE myzset "one" "two" "nofield"
 2) "2"
 3) (nil)
 ```
+
 Get the score associated with the given members in a sorted set
 
+### ZUNIONSTORE
 
-### ZUNIONSTORE 
-
-``` {.wrap}
+```{.wrap}
 ZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
 ```
+
 #### Example
+
 ```shell script
 redis> ZADD zset1 1 "one"
 (integer) 1
@@ -2251,23 +2424,19 @@ redis> ZRANGE out 0 -1 WITHSCORES
 5) "two"
 6) "10"
 ```
+
 Add multiple sorted sets and store the resulting sorted set in a new key
 
+## Redis Geo command{.cols-2}
 
+### GEOADD
 
-
-
-Redis Geo command{.cols-2}
-------------
-
-
-
-### GEOADD 
-
-``` {.wrap}
+```{.wrap}
 GEOADD key longitude latitude member [longitude latitude member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
 (integer) 2
@@ -2279,15 +2448,17 @@ redis> GEORADIUS Sicily 15 37 200 km
 1) "Palermo"
 2) "Catania"
 ```
+
 Add one or more geospatial items in the geospatial index represented using a sorted set
 
+### GEOHASH
 
-### GEOHASH 
-
-``` {.wrap}
+```{.wrap}
 GEOHASH key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
 (integer) 2
@@ -2295,15 +2466,17 @@ redis> GEOHASH Sicily Palermo Catania
 1) "sqc8b49rny0"
 2) "sqdtr74hyu0"
 ```
+
 Returns members of a geospatial index as standard geohash strings
 
+### GEOPOS
 
-### GEOPOS 
-
-``` {.wrap}
+```{.wrap}
 GEOPOS key member [member ...]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
 (integer) 2
@@ -2314,15 +2487,17 @@ redis> GEOPOS Sicily Palermo Catania NonExisting
    2) "37.50266842333162032"
 3) (nil)
 ```
+
 Returns longitude and latitude of members of a geospatial index
 
+### GEODIST
 
-### GEODIST 
-
-``` {.wrap}
+```{.wrap}
 GEODIST key member1 member2 [m|km|ft|mi]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
 (integer) 2
@@ -2335,15 +2510,17 @@ redis> GEODIST Sicily Palermo Catania mi
 redis> GEODIST Sicily Foo Bar
 (nil)
 ```
+
 Returns the distance between two members of a geospatial index
 
+### GEORADIUS
 
-### GEORADIUS 
-
-``` {.wrap}
+```{.wrap}
 GEORADIUS key longitude latitude radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
 (integer) 2
@@ -2369,15 +2546,17 @@ redis> GEORADIUS Sicily 15 37 200 km WITHDIST WITHCOORD
    3) 1) "15.08726745843887329"
       2) "37.50266842333162032"
 ```
+
 Query a sorted set representing a geospatial index to fetch members matching a given maximum distance from a point
 
+### GEORADIUSBYMEMBER
 
-### GEORADIUSBYMEMBER 
-
-``` {.wrap}
+```{.wrap}
 GEORADIUSBYMEMBER key member radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.583333 37.316667 "Agrigento"
 (integer) 1
@@ -2387,15 +2566,17 @@ redis> GEORADIUSBYMEMBER Sicily Agrigento 100 km
 1) "Agrigento"
 2) "Palermo"
 ```
+
 Query a sorted set representing a geospatial index to fetch members matching a given maximum distance from a member
 
+### GEOSEARCH
 
-### GEOSEARCH 
-
-``` {.wrap}
+```{.wrap}
 GEOSEARCH key [FROMMEMBER member] [FROMLONLAT longitude latitude] [BYRADIUS radius m|km|ft|mi] [BYBOX width height m|km|ft|mi] [ASC|DESC] [COUNT count] [WITHCOORD] [WITHDIST] [WITHHASH]
 ```
+
 #### Example
+
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
 (integer) 2
@@ -2410,42 +2591,42 @@ redis> GEOSEARCH Sicily FROMLONLAT 15 37 BYBOX 400 400 km ASC
 3) "edge2"
 4) "edge1"
 ```
+
 Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle.
 
 ### Misc
+
 | -                                                           | -                                                                                                                                             |
-|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | [GEOSEARCHSTORE ](https://redis.io/commands/geosearchstore) | Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle, and store the result in another key. |
 
+## Redis Hyperloglog command{.cols-3}
 
+### PFADD
 
-
-Redis Hyperloglog command{.cols-3}
-------------
-
-
-
-### PFADD 
-
-``` {.wrap}
+```{.wrap}
 PFADD key element [element ...]
 ```
+
 #### Example
+
 ```shell script
 redis> PFADD hll a b c d e f g
 (integer) 1
 redis> PFCOUNT hll
 (integer) 7
 ```
+
 Adds the specified elements to the specified HyperLogLog.
 
+### PFCOUNT
 
-### PFCOUNT 
-
-``` {.wrap}
+```{.wrap}
 PFCOUNT key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> PFADD hll foo bar zap
 (integer) 1
@@ -2460,15 +2641,17 @@ redis> PFADD some-other-hll 1 2 3
 redis> PFCOUNT hll some-other-hll
 (integer) 6
 ```
+
 Return the approximated cardinality of the set(s) observed by the HyperLogLog at key(s).
 
+### PFMERGE
 
-### PFMERGE 
-
-``` {.wrap}
+```{.wrap}
 PFMERGE destkey sourcekey [sourcekey ...]
 ```
+
 #### Example
+
 ```shell script
 redis> PFADD hll1 foo bar zap a
 (integer) 1
@@ -2479,19 +2662,19 @@ redis> PFMERGE hll3 hll1 hll2
 redis> PFCOUNT hll3
 (integer) 6
 ```
+
 Merge N different HyperLogLogs into a single one.
 
-
-
-Redis Server command{.cols-3}
-------------
+## Redis Server command{.cols-3}
 
 ### COMMAND
 
-``` {.wrap}
+```{.wrap}
 COMMAND
 ```
+
 #### Example
+
 ```shell script
 redis> COMMAND
 1) 1) "georadius_ro"
@@ -2510,13 +2693,13 @@ redis> COMMAND
         2) "fast"
   ........
 ```
-Get array of Redis command details
 
+Get array of Redis command details
 
 ### Misc {.col-span-2 .row-span-4}
 
 | -                                                                    | -                                                                                                                                |
-|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [ACL LOAD](https://redis.io/commands/acl-load)                       | Reload the ACLs from the configured ACL file                                                                                     |
 | [ACL SAVE](https://redis.io/commands/acl-save)                       | Save the current ACL rules in the configured ACL file                                                                            |
 | [ACL LIST](https://redis.io/commands/acl-list)                       | List the current ACL rules in ACL config file format                                                                             |
@@ -2567,28 +2750,29 @@ Get array of Redis command details
 | [LATENCY RESET ](https://redis.io/commands/latency-reset)            | Reset latency data for one or more events.                                                                                       |
 | [LATENCY HELP](https://redis.io/commands/latency-help)               | Show helpful text about the different subcommands.                                                                               |
 
-
-
-
 ### COMMAND COUNT
 
-``` {.wrap}
+```{.wrap}
 COMMAND COUNT
 ```
+
 #### Example
+
 ```shell script
 redis> COMMAND COUNT
 (integer) 217
 ```
-Get total number of Redis commands
 
+Get total number of Redis commands
 
 ### COMMAND GETKEYS
 
-``` {.wrap}
+```{.wrap}
 COMMAND GETKEYS
 ```
+
 #### Example
+
 ```shell script
 redis> COMMAND GETKEYS MSET a b c d e f
 1) "a"
@@ -2602,15 +2786,17 @@ redis> COMMAND GETKEYS SORT mylist ALPHA STORE outlist
 1) "mylist"
 2) "outlist"
 ```
+
 Extract keys given a full Redis command
 
+### COMMAND INFO
 
-### COMMAND INFO 
-
-``` {.wrap}
+```{.wrap}
 COMMAND INFO command-name [command-name ...]
 ```
+
 #### Example
+
 ```shell script
 redis> COMMAND INFO get set eval
 1) 1) "get"
@@ -2643,16 +2829,17 @@ redis> COMMAND INFO get set eval
    7) 1) "@slow"
       2) "@scripting"
 ```
+
 Get array of specific Redis command details
 
+### INFO
 
-
-### INFO 
-
-``` {.wrap}
+```{.wrap}
 INFO [section]
 ```
+
 #### Example
+
 ```shell script
 redis> INFO
 # Server
@@ -2664,32 +2851,34 @@ redis_mode:standalone
 os:Linux 5.4.0-1017-aws x86_64
 ......
 ```
+
 Get information and statistics about the server
-
-
 
 ### ROLE
 
-``` {.wrap}
+```{.wrap}
 ROLE
 ```
+
 #### Example
+
 ```shell script
 redis> ROLE
 1) "master"
 2) (integer) 0
 3) (empty list or set)
 ```
+
 Return the role of the instance in the context of replication
-
-
 
 ### TIME
 
-``` {.wrap}
+```{.wrap}
 TIME
 ```
+
 #### Example
+
 ```shell script
 redis> TIME
 1) "1609040690"
@@ -2698,16 +2887,15 @@ redis> TIME
 1) "1609040690"
 2) "559206"
 ```
+
 Return the current server time
 
-
-Redis Generic command{.cols-3}
-------------
+## Redis Generic command{.cols-3}
 
 ### Misc
 
 | -                                             | -                                                                                                            |
-|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | [COPY ](https://redis.io/commands/copy)       | Copy a key                                                                                                   |
 | [MIGRATE ](https://redis.io/commands/migrate) | Atomically transfer a key from a Redis instance to another one.                                              |
 | [MOVE ](https://redis.io/commands/move)       | Move a key to another database                                                                               |
@@ -2717,14 +2905,14 @@ Redis Generic command{.cols-3}
 | [WAIT ](https://redis.io/commands/wait)       | Wait for the synchronous replication of all the write commands sent in the context of the current connection |
 | [SCAN ](https://redis.io/commands/scan)       | Incrementally iterate the keys space                                                                         |
 
+### DEL
 
-
-### DEL 
-
-``` {.wrap}
+```{.wrap}
 DEL key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "Hello"
 "OK"
@@ -2733,30 +2921,34 @@ redis> SET key2 "World"
 redis> DEL key1 key2 key3
 (integer) 2
 ```
+
 Delete a key
 
+### DUMP
 
-### DUMP 
-
-``` {.wrap}
+```{.wrap}
 DUMP key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey 10
 "OK"
 redis> DUMP mykey
 "\u0000\xC0\n\t\u0000\xBEm\u0006\x89Z(\u0000\n"
 ```
+
 Return a serialized version of the value stored at the specified key.
 
+### EXISTS
 
-### EXISTS 
-
-``` {.wrap}
+```{.wrap}
 EXISTS key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "Hello"
 "OK"
@@ -2769,15 +2961,17 @@ redis> SET key2 "World"
 redis> EXISTS key1 key2 nosuchkey
 (integer) 2
 ```
+
 Determine if a key exists
 
+### EXPIRE
 
-### EXPIRE 
-
-``` {.wrap}
+```{.wrap}
 EXPIRE key seconds
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2790,15 +2984,17 @@ redis> SET mykey "Hello World"
 redis> TTL mykey
 (integer) -1
 ```
+
 Set a key's time to live in seconds
 
+### EXPIREAT
 
-### EXPIREAT 
-
-``` {.wrap}
+```{.wrap}
 EXPIREAT key timestamp
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2809,15 +3005,17 @@ redis> EXPIREAT mykey 1293840000
 redis> EXISTS mykey
 (integer) 0
 ```
+
 Set the expiration for a key as a UNIX timestamp
 
+### KEYS
 
-### KEYS 
-
-``` {.wrap}
+```{.wrap}
 KEYS pattern
 ```
+
 #### Example
+
 ```shell script
 redis> MSET firstname Jack lastname Stuntman age 35
 "OK"
@@ -2831,15 +3029,17 @@ redis> KEYS *
 2) "age"
 3) "lastname"
 ```
+
 Find all keys matching the given pattern
 
+### PERSIST
 
-### PERSIST 
-
-``` {.wrap}
+```{.wrap}
 PERSIST key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2852,15 +3052,17 @@ redis> PERSIST mykey
 redis> TTL mykey
 (integer) -1
 ```
+
 Remove the expiration from a key
 
+### PEXPIRE
 
-### PEXPIRE 
-
-``` {.wrap}
+```{.wrap}
 PEXPIRE key milliseconds
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2871,15 +3073,17 @@ redis> TTL mykey
 redis> PTTL mykey
 (integer) 1499
 ```
+
 Set a key's time to live in milliseconds
 
+### PEXPIREAT
 
-### PEXPIREAT 
-
-``` {.wrap}
+```{.wrap}
 PEXPIREAT key milliseconds-timestamp
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2890,15 +3094,17 @@ redis> TTL mykey
 redis> PTTL mykey
 (integer) -2
 ```
+
 Set the expiration for a key as a UNIX timestamp specified in milliseconds
 
+### PTTL
 
-### PTTL 
-
-``` {.wrap}
+```{.wrap}
 PTTL key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2907,16 +3113,17 @@ redis> EXPIRE mykey 1
 redis> PTTL mykey
 (integer) 1000
 ```
+
 Get the time to live for a key in milliseconds
 
+### RENAME
 
-
-### RENAME 
-
-``` {.wrap}
+```{.wrap}
 RENAME key newkey
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2925,15 +3132,17 @@ redis> RENAME mykey myotherkey
 redis> GET myotherkey
 "Hello"
 ```
+
 Rename a key
 
+### RENAMENX
 
-### RENAMENX 
-
-``` {.wrap}
+```{.wrap}
 RENAMENX key newkey
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2944,16 +3153,17 @@ redis> RENAMENX mykey myotherkey
 redis> GET myotherkey
 "World"
 ```
+
 Rename a key, only if the new key does not exist
 
+### TOUCH
 
-
-### TOUCH 
-
-``` {.wrap}
+```{.wrap}
 TOUCH key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "Hello"
 "OK"
@@ -2962,15 +3172,17 @@ redis> SET key2 "World"
 redis> TOUCH key1 key2
 (integer) 2
 ```
+
 Alters the last access time of a key(s). Returns the number of existing keys specified.
 
+### TTL
 
-### TTL 
-
-``` {.wrap}
+```{.wrap}
 TTL key
 ```
+
 #### Example
+
 ```shell script
 redis> SET mykey "Hello"
 "OK"
@@ -2979,15 +3191,17 @@ redis> EXPIRE mykey 10
 redis> TTL mykey
 (integer) 10
 ```
+
 Get the time to live for a key
 
+### TYPE
 
-### TYPE 
-
-``` {.wrap}
+```{.wrap}
 TYPE key
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "value"
 "OK"
@@ -3002,15 +3216,17 @@ redis> TYPE key2
 redis> TYPE key3
 "set"
 ```
+
 Determine the type stored at key
 
+### UNLINK
 
-### UNLINK 
-
-``` {.wrap}
+```{.wrap}
 UNLINK key [key ...]
 ```
+
 #### Example
+
 ```shell script
 redis> SET key1 "Hello"
 "OK"
@@ -3019,17 +3235,15 @@ redis> SET key2 "World"
 redis> UNLINK key1 key2 key3
 (integer) 2
 ```
+
 Delete a key asynchronously in another thread. Otherwise it is just as DEL, but non blocking.
 
-
-
-Redis Connection command{.cols-3}
-------------
+## Redis Connection command{.cols-3}
 
 ### Misc
 
 | -                                                             | -                                                                          |
-|---------------------------------------------------------------|----------------------------------------------------------------------------|
+| ------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | [AUTH ](https://redis.io/commands/auth)                       | Authenticate to the server                                                 |
 | [CLIENT CACHING ](https://redis.io/commands/client-caching)   | Instruct the server about tracking or not keys in the next request         |
 | [CLIENT KILL ](https://redis.io/commands/client-kill)         | Kill the connection of a client                                            |
@@ -3046,75 +3260,74 @@ Redis Connection command{.cols-3}
 | [RESET](https://redis.io/commands/reset)                      | Reset the connection                                                       |
 | [SELECT ](https://redis.io/commands/select)                   | Change the selected database for the current connection                    |
 
-
-
 ### CLIENT ID
 
-``` {.wrap}
+```{.wrap}
 CLIENT ID
 ```
+
 #### Example
+
 ```shell script
 redis> CLIENT ID
 ERR Unknown or disabled command 'CLIENT'
 ```
-Returns the client ID for the current connection
 
+Returns the client ID for the current connection
 
 ### CLIENT INFO
 
-``` {.wrap}
+```{.wrap}
 CLIENT INFO
 ```
+
 #### Example
+
 ```shell script
 redis> CLIENT INFO
 "id=55542 addr=127.0.0.1:58710 laddr=127.0.0.1:6379 fd=8 name= age=114920 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=40928 argv-mem=10 obl=0 oll=0 omem=0 tot-mem=61466 events=r cmd=client user=default redir=-1\n"
 ```
+
 Returns information about the current client connection.
 
+### ECHO
 
-
-### ECHO 
-
-``` {.wrap}
+```{.wrap}
 ECHO message
 ```
+
 #### Example
+
 ```shell script
 redis> ECHO "Hello World!"
 "Hello World!"
 ```
+
 Echo the given string
 
+### PING
 
-
-### PING 
-
-``` {.wrap}
+```{.wrap}
 PING [message]
 ```
+
 #### Example
+
 ```shell script
 redis> PING
 "PONG"
 redis> PING "hello world"
 "hello world"
 ```
+
 Ping the server
 
-
-
-
-
-
-Redis Stream command{.cols-2}
-------------
+## Redis Stream command{.cols-2}
 
 ### Misc
 
 | -                                                   | -                                                                                                                                                                                  |
-|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [XINFO ](https://redis.io/commands/xinfo)           | Get information on streams and consumer groups                                                                                                                                     |
 | [XDEL ](https://redis.io/commands/xdel)             | Removes the specified entries from the stream. Returns the number of items actually deleted, that may be different from the number of IDs passed in case certain IDs do not exist. |
 | [XREAD ](https://redis.io/commands/xread)           | Return never seen elements in multiple streams, with IDs greater than the ones reported by the caller for each stream. Can block.                                                  |
@@ -3123,16 +3336,14 @@ Redis Stream command{.cols-2}
 | [XCLAIM ](https://redis.io/commands/xclaim)         | Changes (or acquires) ownership of a message in a consumer group, as if the message was delivered to the specified consumer.                                                       |
 | [XPENDING ](https://redis.io/commands/xpending)     | Return information and entries from a stream consumer group pending entries list, that are messages fetched but never acknowledged.                                                |
 
+### XADD
 
-
-
-
-### XADD 
-
-``` {.wrap}
+```{.wrap}
 XADD key [MAXLEN [=|~] length] [NOMKSTREAM] *|ID field value [field value ...]
 ```
+
 #### Example
+
 ```shell script
 redis> XADD mystream * name Sara surname OConnor
 "1609040574632-0"
@@ -3154,15 +3365,17 @@ redis> XRANGE mystream - +
       5) "field3"
       6) "value3"
 ```
+
 Appends a new entry to a stream
 
+### XTRIM
 
-### XTRIM 
-
-``` {.wrap}
+```{.wrap}
 XTRIM key MAXLEN [=|~] length
 ```
+
 #### Example
+
 ```shell script
 redis> XADD mystream * field1 A field2 B field3 C field4 D
 "1609040575750-0"
@@ -3179,16 +3392,17 @@ redis> XRANGE mystream - +
       7) "field4"
       8) "D"
 ```
+
 Trims the stream to (approximately if '~' is passed) a certain size
 
+### XRANGE
 
-
-### XRANGE 
-
-``` {.wrap}
+```{.wrap}
 XRANGE key start end [COUNT count]
 ```
+
 #### Example
+
 ```shell script
 redis> XADD writers * name Virginia surname Woolf
 "1609040578002-0"
@@ -3214,15 +3428,17 @@ redis> XRANGE writers - + COUNT 2
       3) "surname"
       4) "Austen"
 ```
+
 Return a range of elements in a stream, with IDs matching the specified IDs interval
 
+### XREVRANGE
 
-### XREVRANGE 
-
-``` {.wrap}
+```{.wrap}
 XREVRANGE key end start [COUNT count]
 ```
+
 #### Example
+
 ```shell script
 redis> XADD writers * name Virginia surname Woolf
 "1609040579130-0"
@@ -3243,15 +3459,18 @@ redis> XREVRANGE writers + - COUNT 1
       3) "surname"
       4) "Adichie"
 ```
-Return a range of elements in a stream, with IDs matching the specified IDs interval, in reverse order (from greater to smaller IDs) compared to XRANGE
 
+Return a range of elements in a stream, with IDs matching the specified IDs interval, in reverse order (from greater to
+smaller IDs) compared to XRANGE
 
-### XLEN 
+### XLEN
 
-``` {.wrap}
+```{.wrap}
 XLEN key
 ```
+
 #### Example
+
 ```shell script
 redis> XADD mystream * item 1
 "1609040580250-0"
@@ -3262,34 +3481,32 @@ redis> XADD mystream * item 3
 redis> XLEN mystream
 (integer) 3
 ```
+
 Return the number of entries in a stream
 
+### XACK
 
-
-### XACK 
-
-``` {.wrap}
+```{.wrap}
 XACK key group ID [ID ...]
 ```
+
 #### Example
+
 ```shell script
 redis> XACK mystream mygroup 1526569495631-0
 ERR Unknown or disabled command 'XACK'
 ```
-Marks a pending message as correctly processed, effectively removing it from the pending entries list of the consumer group. Return value of the command is the number of messages successfully acknowledged, that is, the IDs we were actually able to resolve in the PEL.
 
+Marks a pending message as correctly processed, effectively removing it from the pending entries list of the consumer
+group. Return value of the command is the number of messages successfully acknowledged, that is, the IDs we were
+actually able to resolve in the PEL.
 
-
-
-
-Miscellaneous {.cols-2}
-------------
-
+## Miscellaneous {.cols-2}
 
 ### Cluster
 
 | -                                                                                         | -                                                                |
-|-------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | [CLUSTER ADDSLOTS ](https://redis.io/commands/cluster-addslots)                           | Assign new hash slots to receiving node                          |
 | [CLUSTER BUMPEPOCH](https://redis.io/commands/cluster-bumpepoch)                          | Advance the cluster config epoch                                 |
 | [CLUSTER COUNT-FAILURE-REPORTS ](https://redis.io/commands/cluster-count-failure-reports) | Return the number of failure reports active for a given node     |
@@ -3315,26 +3532,20 @@ Miscellaneous {.cols-2}
 | [READONLY](https://redis.io/commands/readonly)                                            | Enables read queries for a connection to a cluster replica node  |
 | [READWRITE](https://redis.io/commands/readwrite)                                          | Disables read queries for a connection to a cluster replica node |
 
-
-
-
 ### Transactions
 
 | -                                            | -                                                                   |
-|----------------------------------------------|---------------------------------------------------------------------|
+| -------------------------------------------- | ------------------------------------------------------------------- |
 | [DISCARD](https://redis.io/commands/discard) | Discard all commands issued after MULTI                             |
 | [EXEC](https://redis.io/commands/exec)       | Execute all commands issued after MULTI                             |
 | [MULTI](https://redis.io/commands/multi)     | Mark the start of a transaction block                               |
 | [UNWATCH](https://redis.io/commands/unwatch) | Forget about all watched keys                                       |
 | [WATCH ](https://redis.io/commands/watch)    | Watch the given keys to determine execution of the MULTI/EXEC block |
 
-
-
-
-### Scripting 
+### Scripting
 
 | -                                                         | -                                                    |
-|-----------------------------------------------------------|------------------------------------------------------|
+| --------------------------------------------------------- | ---------------------------------------------------- |
 | [EVAL ](https://redis.io/commands/eval)                   | Execute a Lua script server side                     |
 | [EVALSHA ](https://redis.io/commands/evalsha)             | Execute a Lua script server side                     |
 | [SCRIPT DEBUG ](https://redis.io/commands/script-debug)   | Set the debug mode for executed scripts.             |
@@ -3343,16 +3554,13 @@ Miscellaneous {.cols-2}
 | [SCRIPT KILL](https://redis.io/commands/script-kill)      | Kill the script currently in execution.              |
 | [SCRIPT LOAD ](https://redis.io/commands/script-load)     | Load the specified Lua script into the script cache. |
 
-
-
-### Pubsub 
+### Pubsub
 
 | -                                                       | -                                                                          |
-|---------------------------------------------------------|----------------------------------------------------------------------------|
+| ------------------------------------------------------- | -------------------------------------------------------------------------- |
 | [PSUBSCRIBE ](https://redis.io/commands/psubscribe)     | Listen for messages published to channels matching the given patterns      |
 | [PUBSUB ](https://redis.io/commands/pubsub)             | Inspect the state of the Pub/Sub subsystem                                 |
 | [PUBLISH ](https://redis.io/commands/publish)           | Post a message to a channel                                                |
 | [PUNSUBSCRIBE ](https://redis.io/commands/punsubscribe) | Stop listening for messages posted to channels matching the given patterns |
 | [SUBSCRIBE ](https://redis.io/commands/subscribe)       | Listen for messages published to the given channels                        |
 | [UNSUBSCRIBE ](https://redis.io/commands/unsubscribe)   | Stop listening for messages posted to the given channels                   |
-

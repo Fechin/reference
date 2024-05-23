@@ -9,38 +9,16 @@ tags:
 categories:
   - Programming
 intro: |
-   A Django cheat sheet. 
+  A Django cheat sheet.
 plugins:
   - copyCode
 ---
 
-### Contents
+## Getting Started
 
-- [Start New Django Project](#start-a-new-django-project)
-- [Project Config](#project-config)
-- [Create Data Model](#create-data-model)
-- [Field Lookups](#field-lookups)
-- [Admin Panel](#admin-panel)
-- [Routing](#routing)
-- [Static Route & Customize Admin Panel](#static-route-and-customize-admin-panel)
-- [Function Based Views](#function-based-views)
-- [Class Based Views](#class-based-views)
-- [Django Template](#django-template)
-- [Create custom template tags and filters](#create-custom-template-tags-and-filters)
-- [Creating custom Context Processor](#creating-custom-context-processor)
-- [Model Managers and Querysets](#model-managers-and-querysets)
-- [Form (forms.py)](#form)
-- [Flash Mssages](#flash-messages)
-- [User Model (pre-created)](#user-model)
-- [Authentication Configure](#authentication-configure)
-- [Create Custom Accounts Model](#create-custom-accounts-model)
-- [Send Email](#send-email)
-- [Signals](#signals)
-- [Seed](#seed)
-- [Environment Variables](#environment-variables)
-- [Asynchronous Task with Django Celery Redis](#asynchronous-task-with-django-celery-redis)
+### Start a new Django Project
 
-#### Start a New Django Project
+{.row-span-2}
 
 ```python
 # Create et access project folder
@@ -66,48 +44,48 @@ plugins:
 ~$  python manage.py startapp app_name
 ```
 
-#### Migration:
+### Migration:
 
-<small>Django create a database table for each models present in your app using thoses commands:</small>
+<small>Django create a database table for each models present in your app using those commands:</small>
 
-- Makemigrations: Create a file under app_name/migrations with the database structure to create
+Makemigrations: Create a file under app_name/migrations with the database structure to create
 
 ```python
 ~$  python manage.py makemigrations
 ```
 
-- Migrate: Will read the migrations files and create the actual database and tables
+Migrate: Will read the migrations files and create the actual database and tables
 
 ```python
 ~$  python manage.py migrate
 ```
 
-#### Create superuser for authenficiation/admin panel
+### Create superuser for authenficiation/admin panel
 
 ```python
 ~$  python manage.py createsuperuser
 ```
 
-#### Start server
+### Start server
 
 ```python
 ~$  python manage.py runserver  => ex.  http://127.0.0.1:8000
 ```
 
-#### Requirements
+### Requirements
 
 ```python
-# Create a requirements file that contain all your projet dependencies
+# Create a requirements file that contain all your project dependencies
 ~$  pip freeze > requirements.txt
 
 # Install your project requirements (if a requirements file exist)
 ~$  pip install -r requirements.txt
 ```
 
-#### Other commands
+### Other commands
 
 ```python
-# Django shell (Run projet code direclty)
+# Django shell (Run project code directly)
 ~$ python manage.py shell
 
 # example of code to run in the shell:
@@ -129,7 +107,11 @@ plugins:
 ~$ django-admin compilemessages
 ```
 
-## Project config
+## Project config {.cols-1}
+
+### Configuration settings
+
+<!-- TODO: split this section up (I am not a Django dev) -->
 
 ```python
 # Add app to settings.py
@@ -215,13 +197,15 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 ```
 
-## Create Data Model:
+## Data Models
+
+### Create Data Model {.col-span-2}
 
 <small>Theses models can be created as database tables with the migrations commands</small>
 
 ```python
 # models.py
-# The id fields is automaticly created by Django
+# The id fields is automatically created by Django
 # for each model that why it's not show below
 from django.db import models
 
@@ -255,7 +239,7 @@ class Customer(models.Model)
         return reverse("customer_detail", kwargs={"pk": self.pk})
 ```
 
-#### Relationship between models
+### Relationship between models
 
 ```python
 # One-to-Many: (use double quotes if the entity is not yet declare) ex. "Supplier"
@@ -277,13 +261,17 @@ def save(self, (*args, **kwargs):
     super().save(*args, **kwargs)
 ```
 
-## Field Lookups
+## Lookup
 
-<small>In Django, the `field__lookuptype` syntax is used to perform lookups on fields in queries. The `field` represents the name of the field you want to perform the lookup on, and `lookuptype` represents the type of lookup you want to perform.
+### Field Lookups {.col-span-2}
 
-For example, let's say you have a model called `Book` with a field called `title` . You can use the `field__lookuptype` syntax to perform different types of lookups on the `title` field.
+In Django, the `field__lookuptype` syntax is used to perform lookups on fields in queries. The `field` represents the
+name of the field you want to perform the lookup on, and `lookuptype` represents the type of lookup you want to perform.
 
-Here are a few examples:</small>
+For example, let's say you have a model called `Book` with a field called `title` . You can use the `field__lookuptype`
+syntax to perform different types of lookups on the `title` field.
+
+Here are a few examples:
 
 ```python
 
@@ -301,46 +289,44 @@ Book.objects.filter(title__endswith='Tricks')
 
 ### Field Lookups Reference
 
-<small>A list of all field look up keywords:</small>
+| Keyword        | Description                                      |
+| -------------- | :----------------------------------------------- |
+| `contains`     | Contains the phrase                              |
+| `icontains`    | Same as contains, but case-insensitive           |
+| `date`         | Matches a date                                   |
+| `day`          | Matches a date (day of month, 1-31) (for dates)  |
+| `endswith`     | Ends with                                        |
+| `iendswith`    | Same as endswidth, but case-insensitive          |
+| `exact`        | An exact match                                   |
+| `iexact`       | Same as exact, but case-insensitive              |
+| `in`           | Matches one of the values                        |
+| `isnull`       | Matches NULL values                              |
+| `gt`           | Greater than                                     |
+| `gte`          | Greater than, or equal to                        |
+| `hour`         | Matches an hour (for datetimes)                  |
+| `lt`           | Less than                                        |
+| `lte`          | Less than, or equal to                           |
+| `minute`       | Matches a minute (for datetimes)                 |
+| `month`        | Matches a month (for dates)                      |
+| `quarter`      | Matches a quarter of the year (1-4) (for dates)  |
+| `range`        | Match between                                    |
+| `regex`        | Matches a regular expression                     |
+| `iregex`       | Same as regex, but case-insensitive              |
+| `second`       | Matches a second (for datetimes)                 |
+| `startswith`   | Starts with                                      |
+| `istartswith`  | Same as startswith, but case-insensitive         |
+| `time`         | Matches a time (for datetimes)                   |
+| `week`         | Matches a week number (1-53) (for dates)         |
+| `week_day`     | Matches a day of week (1-7) 1 is Sunday          |
+| `iso_week_day` | Matches a ISO 8601 day of week (1-7) 1 is Monday |
+| `year`         | Matches a year (for dates)                       |
+| `iso_year`     | Matches an ISO 8601 year (for dates)             |
 
-| **Keyword**  | **Description**                                  |
-| ------------ | ------------------------------------------------ |
-| contains     | Contains the phrase                              |
-| icontains    | Same as contains, but case-insensitive           |
-| date         | Matches a date                                   |
-| day          | Matches a date (day of month, 1-31) (for dates)  |
-| endswith     | Ends with                                        |
-| iendswith    | Same as endswidth, but case-insensitive          |
-| exact        | An exact match                                   |
-| iexact       | Same as exact, but case-insensitive              |
-| in           | Matches one of the values                        |
-| isnull       | Matches NULL values                              |
-| gt           | Greater than                                     |
-| gte          | Greater than, or equal to                        |
-| hour         | Matches an hour (for datetimes)                  |
-| lt           | Less than                                        |
-| lte          | Less than, or equal to                           |
-| minute       | Matches a minute (for datetimes)                 |
-| month        | Matches a month (for dates)                      |
-| quarter      | Matches a quarter of the year (1-4) (for dates)  |
-| range        | Match between                                    |
-| regex        | Matches a regular expression                     |
-| iregex       | Same as regex, but case-insensitive              |
-| second       | Matches a second (for datetimes)                 |
-| startswith   | Starts with                                      |
-| istartswith  | Same as startswith, but case-insensitive         |
-| time         | Matches a time (for datetimes)                   |
-| week         | Matches a week number (1-53) (for dates)         |
-| week_day     | Matches a day of week (1-7) 1 is Sunday          |
-| iso_week_day | Matches a ISO 8601 day of week (1-7) 1 is Monday |
-| year         | Matches a year (for dates)                       |
-| iso_year     | Matches an ISO 8601 year (for dates)             |
+### Admin Panel {.col-span-2}
 
-## Admin Panel:
-
-<small>Every Django projects come with an Admin Panel that can be open at /admin url (ex: localhost:8000/admin)<br>
-To display the model in the Admin panel register the model in the app_name/admin.py file<br>
-For each models you can specify the fields you want to use</small>
+Every Django projects come with an Admin Panel that can be open at /admin url (ex: localhost:8000/admin)<br> To display
+the model in the Admin panel register the model in the app_name/admin.py file<br> For each models you can specify the
+fields you want to use</small>
 
 ```python
 from django.contrib import admin
@@ -357,9 +343,9 @@ class BlogAdmin(admin.ModelAdmin)
     list_filter =("title",) # define list filters that appear in the right sidebar
 ```
 
-## Routing:
+### Routing
 
-<small>Django routing info is store in project_folder/urls.py file</small>
+Django routing info is store in project_folder/urls.py file
 
 ```python
 from django.contrib import admin
@@ -371,8 +357,7 @@ urlpatterns = [
 ]
 ```
 
-<small>the 'include()' method allow to link another urls.py file created in your app folder (app_name/urls.py)
-</small>
+The 'include()' method allow to link another urls.py file created in your app folder (app_name/urls.py)
 
 ```python
 from django.urls import path
@@ -388,9 +373,11 @@ urlpatterns = [
 ]
 ```
 
-## Static Route and Customize Admin Panel
+## Static Route and Customize Admin Panel {.cols-1}
 
-<small>Header and Title admin panel & Custom 404,500,503 Template</small>
+### Customizing Admin Panel
+
+Header and Title admin panel & Custom `404`, `500`, and `503` Template
 
 ```python
 # add in project/urls.py
@@ -415,7 +402,9 @@ handler500 = 'app_name.views.handler500'
 handler503 = 'app_name.views.handler503'
 ```
 
-## Function Based Views
+## Views {.cols-1}
+
+### Function Based Views
 
 ```python
 # views.py
@@ -464,7 +453,7 @@ def status(request, id, state):
     return redirect('appfolder/status.html', {'post': post})
 ```
 
-## Class Based Views
+### Class Based Views
 
 ```python
 from django.views.generic import TemplateView, ListView, DetailView,
@@ -531,9 +520,13 @@ class PostsDeleteView(DeleteView):
 path('<int:pk>/update/', PostsUpdateView.as_view(), name='post-update')
 ```
 
-## Django Template
+## Templates
 
-<small>Templates are store in project_folder/templates or in your app_folder/templates/app_name/\*.html</small>
+### Basic Template
+
+Templates are store in `project_folder/templates` or in your <code>app_folder/templates/app_name/\*.html</code>
+
+<!-- TODO: Fix this, as it is not correctly escaped -->
 
 ```python
 {% extends 'base.html' %}
@@ -561,7 +554,7 @@ path('<int:pk>/update/', PostsUpdateView.as_view(), name='post-update')
 # Access to the variable in the template
 {{ var_name }}
 
-# Template variables formating
+# Template variables formatting
 {{ title | lower }}
 {{ blog.post | truncatwords:50 }}
 {{ order.date | date:"D M Y" }}
@@ -586,9 +579,9 @@ path('<int:pk>/update/', PostsUpdateView.as_view(), name='post-update')
 {% endwith %}
 ```
 
-## Create custom template tags and filters
+### Custom Template Tags and Filters
 
-<small>For example, if your custom tags/filters are in a file called `basetags.py`, your app layout might look like this:</small>
+For example, if your custom tags/filters are in a file called `basetags.py`, your app layout might look like this:
 
 ```
 app_name/
@@ -605,19 +598,17 @@ app_name/
 {% load basetags %}
 ```
 
-- the module must contain a module-level variable named register that is a template.Library instance, in which all the tags and filters are registered. So, near the top of your module, put the following:
+- the module must contain a module-level variable named register that is a template.Library instance, in which all the
+  tags and filters are registered. So, near the top of your module, put the following:
 
-#### Writing custom template filters
+### Writing custom template filters
 
-Custom filters are Python functions that take one or two arguments:
-The value of the variable (input) – not necessarily a string.
-The value of the argument – this can have a default value, or be left out altogether.
-For example, in the filter `{{ var|foo:"bar" }}`, the filter foo would be passed the variable var and the argument "bar".
+Custom filters are Python functions that take one or two arguments: The value of the variable (input) – not necessarily
+a string. The value of the argument – this can have a default value, or be left out altogether. For example, in the
+filter `{{ var|foo:"bar" }}`, the filter foo would be passed the variable var and the argument "bar".
 
-The Library.filter() method takes two arguments:
-The name of the filter – a string.
-The compilation function – a Python function (not the name of the function as a string).
-You can use register.filter() as a decorator instead:
+The Library.filter() method takes two arguments: The name of the filter – a string. The compilation function – a Python
+function (not the name of the function as a string). You can use register.filter() as a decorator instead:
 
 ```python
 # basetags.py
@@ -650,9 +641,11 @@ def to_class_name(object):
 <p>Model Class Name: {{ objectmodel }}</p>
 ```
 
-## Creating custom Context Processor
+## Context Processor {.cols-1}
 
-<small>1. Anywhere, create a context_processors.py file</small>
+### Creating custom Context Processor
+
+Anywhere, create a `context_processors.py` file
 
 ```
 project_name
@@ -661,8 +654,10 @@ project_name
     └───context_processors.pyy
 ```
 
-<small>2. Create a function in context_processors.py that accepts a HttpRequest object as an argument and returns a dictionary<br>
-A context processor is just a function that accepts an HttpRequest object as an argument and returns a dictionary. Like this:</small>
+Create a function in context_processors.py that accepts a HttpRequest object as an argument and returns a dictionary
+
+A context processor is just a function that accepts an HttpRequest object as an argument and returns a dictionary. Like
+this:
 
 ```python
 # app_name/context_processors.py
@@ -688,7 +683,9 @@ def site_email(request):
 
 ## Model Managers and Querysets
 
-<small>Model manager allow model database reads and writes</small>
+### Model Manager
+
+Model manager allow model database reads and writes
 
 ```python
 # One line create and save
@@ -769,7 +766,10 @@ tag1.articles_set.all()
 
 ## Form
 
-<small>In HTML, a form is a collection of elements inside `<form>...</form>` that allow a visitor to do things like enter text, select options, manipulate objects or controls, and so on, and then send that information back to the server.</small>
+### Form creation {.col-span-2}
+
+In HTML, a form is a collection of elements inside `<form>...</form>` that allow a visitor to do things like enter text,
+select options, manipulate objects or controls, and so on, and then send that information back to the server.
 
 ```python
 # app_name/forms.py
@@ -824,7 +824,7 @@ CRISPY_TEMPLATE_PACK = 'tailwind'
 {{ form|crispy}}
 ```
 
-#### Form validation
+### Form Validation
 
 ```python
 # forms.py
@@ -845,7 +845,11 @@ def clean(self):
         raise ValidationError('Your name must not be Mike Taylor')
 ```
 
-## Flash messages
+## Flash messages {.cols-1}
+
+### Displaying messages
+
+<!-- TODO: Fix this, as it is not correctly escaped -->
 
 ```python
 messages.success(request, 'Login successful')
@@ -863,7 +867,9 @@ messages.error(request, 'Login error')
 
 ## User Model
 
-<small>User Model (pre-created)</small>
+### Pre-created
+
+User Model (pre-created)
 
 ```python
 # Get a reference to Django pre-created User model
@@ -880,9 +886,9 @@ class User(AbstractUser):
 # To make Django use that model go to settings.py and add: AUTH_USER_MODEL = 'app_name.User'
 ```
 
-## Authentication Configure
+## Authentication
 
-#### Authentication : LoginView
+### Authentication : LoginView
 
 ```python
 # LoginView is already pre-created by Django
@@ -1375,7 +1381,7 @@ from django.core.email import send_mail
 
 send_mail(
     subject = "A new post has been created",
-    messsage = "Go to the web site to see the detail",
+    message = "Go to the web site to see the detail",
     from_email = "test@test.com",
     recipient_list = ["test2@text.com"]
 )
@@ -1391,7 +1397,7 @@ def post_user_created_signal(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
 
-# Launch the post_user_create_singal method if User model is save
+# Launch the post_user_created_signal method if User model is save
 post_save.connect(post_user_created_signal, sender=User)
 ```
 
@@ -1430,20 +1436,20 @@ def seed(request):
 
 ## Environment Variables
 
-#### .env key/value file
+### .env key/value file
 
 ```python
 $ pip install python-decouple
 ```
 
-##### Create a file name '.env' in the root folder of your project
+Create a file name '.env' in the root folder of your project
 
 ```python
 SECRET_KEY = 'your secret key'
 ALLOWED_HOST = 127.0.0.1
 ```
 
-##### In settings.py change security related settings to point to the .env file
+In settings.py change security related settings to point to the .env file
 
 ```python
 from decouple import config
@@ -1452,17 +1458,19 @@ SECRET_KEY = config('SECRET_KEY')
 ALLOWED_HOST = config('ALLOWED_HOST')
 ```
 
-## Asynchronous Task with Django Celery Redis
+## Asynchronous Tasks
 
-<small>Celery is a distributed task queue that can collect, record, schedule, and perform tasks outside of your main program.</small>
+### Django Celery Redis
 
-##### Step 1: Install Celery Using pip
+Celery is a distributed task queue that can collect, record, schedule, and perform tasks outside of your main program.
+
+#### Step 1: Install Celery Using pip
 
 ```python
 ~$ pip install celery       # pip install celery[redis]
 ```
 
-##### Step 2. Add celery.py File in Your Project Module
+#### Step 2. Add celery.py File in Your Project Module
 
 ```python
 # your_project/celery.py
@@ -1479,9 +1487,10 @@ def debug_task(self):
     print(f'Request: {self.request!r}')
 ```
 
-##### Step 3: Import the Celery App to Django
+#### Step 3: Import the Celery App to Django
 
-<small>To ensure that the Celery app is loaded when Django starts, add the following code into the `__init__.py` file that sits on the project module beside on settings.py file.</small>
+<small>To ensure that the Celery app is loaded when Django starts, add the following code into the `__init__.py` file
+that sits on the project module beside on settings.py file.</small>
 
 ```python
 # your_project/__init__.py
@@ -1490,7 +1499,7 @@ from .celery import app as celery_app
 __all__ = ('celery_app',)
 ```
 
-##### Step 4: Download and Run Redis as a Celery ‘broker’
+#### Step 4: Download and Run Redis as a Celery ‘broker’
 
 ```python
 ~$ redis-server
@@ -1502,24 +1511,25 @@ __all__ = ('celery_app',)
 ~$ redis-cli ping
 ```
 
-> <small>Redis should reply with PONG - try it!</small>
+Redis should reply with PONG - try it!
 
-##### Step 5: Add Redis as a Dependency in the Django Project:
+#### Step 5: Add Redis as a Dependency in the Django Project:
 
 ```python
 ~$ pip install redis
 ```
 
-##### step 6: Celery Stuff Configure to the Django Settings File
+#### Step 6: Celery Stuff Configure to the Django Settings File
 
-<small>Once Redis is up, add the following code to your settings.py file and use celery-result</small>
+Once Redis is up, add the following code to your settings.py file and use celery-result
 
 ```python
 ~$ pip install django-celery-results
 ```
 
-> This extension enables you to store Celery task results using the Django ORM.<br>
-> It defines a single model (`django_celery_results.models.TaskResult`) used to store task results, and you can query this database table like any other Django model.
+This extension enables you to store Celery task results using the Django ORM.<br> It defines a single model
+(`django_celery_results.models.TaskResult`) used to store task results, and you can query this database table like any
+other Django model.
 
 ```python
 INSTALLED_APPS = [
@@ -1547,15 +1557,16 @@ CACHES = {
 }
 ```
 
-##### That’s it! You should now be able to use Celery with Django
+#### That’s it! You should now be able to use Celery with Django
 
-<small>Test that the Celery worker is ready to receive tasks:</small>
+Test that the Celery worker is ready to receive tasks:
 
 ```python
 ~$ celery -A your_project_name worker -l info
 ```
 
-> The most important task is: Always run a worker is needed to execute the celery task<br>if any error throws from Redis like this:
+The most important task is: Always run a worker is needed to execute the celery task if any error throws from Redis like
+this:
 
 ```python
 AttributeError: 'str' object has no attribute 'items'
@@ -1563,9 +1574,9 @@ AttributeError: 'str' object has no attribute 'items'
 
 - the solution is: you have to use Redis old version
 
-#### Add a New Task to the Celery Step by Step:
+### Add a New Task
 
-##### Step 1: Add tasks.py File to Your Django App.
+#### Step 1: Add tasks.py File to Your Django App.
 
 ```python
 # app_name/tasks.py
@@ -1592,9 +1603,10 @@ def adding(x, y):
     return result
 ```
 
-##### Step 2: Assign Task to the Celery.
+#### Step 2: Assign Task to the Celery.
 
-<small>You need to assign a task to the celery. To assign this task you need to call this function with something different. celery gives us two methods `delay()` and `apply_async()` to call task.</small>
+You need to assign a task to the celery. To assign this task you need to call this function with something different.
+celery gives us two methods `delay()` and `apply_async()` to call task.
 
 ```bash
 # Normal function call in python
@@ -1604,14 +1616,15 @@ def adding(x, y):
 ~$ my_first_task.delay()
 ```
 
-> you can send argument to the function using the delay method.
-> <small>To check celery on the action open a separate tab of the terminal then go to the project directory (activate environment if you are using one) and run this command again</small>
+You can send argument to the function using the delay method. <small>To check celery on the action open a separate tab
+of the terminal then go to the project directory (activate environment if you are using one) and run this command
+again</small>
 
 ```bash
 ~$ celery -A your_project_name worker -l info
 ```
 
-##### Create a View in your App
+### Create a View in your App
 
 ```python
 # app_name/views.py
@@ -1628,7 +1641,7 @@ def test(request):
     return HttpResponse("Done")
 ```
 
-##### Then call the view from your app URL
+#### Then call the view from your app URL
 
 ```python
 # app_name/urls.py
@@ -1640,7 +1653,7 @@ urlpatterns = [
 ]
 ```
 
-### Celery In Production Using Supervisor on Linux Server Step by Step:
+### Celery In Production Using Supervisor
 
 #### Step 1: Install Supervisor on Ubuntu Server
 
@@ -1654,7 +1667,7 @@ urlpatterns = [
 ~$ sudo nano /etc/supervisor/conf.d/app_name.conf
 ```
 
-> app_name can be anything you like, it should be similar to your project name.
+`app_name` can be anything you like, it should be similar to your project name.
 
 #### Step 3: Add some Configure in app_name.conf
 
@@ -1669,7 +1682,7 @@ stdout_logfile=/path/to/workflow/your_project_name/logs/celeryd.log
 redirect_stderr=true
 ```
 
-> let's describe the configure file:
+Describe the configure file:
 
 ```bash
 [program:your_app_name]
@@ -1699,7 +1712,8 @@ redirect_stderr=true
 
 #### Step 4: Inform Configuration to the Server
 
-<small>After adding a new program, we should run the following two commands, to inform the server to reread the configuration files and to apply any changes.</small>
+After adding a new program, we should run the following two commands, to inform the server to reread the configuration
+files and to apply any changes.
 
 ```python
 ~$ sudo supervisorctl reread
@@ -1712,14 +1726,15 @@ redirect_stderr=true
 ~$ sudo supervisorctl
 ```
 
-<small>You will be greeted with a list of the registered processes. You will see a process called `your_app_name` with a `RUNNING` status.</small>
+You will be greeted with a list of the registered processes. You will see a process called `your_app_name` with a
+`RUNNING` status.
 
 ```bash
 your_app_name                 RUNNING   pid 6853, uptime 0:22:30
 supervisor>
 ```
 
-<small>Type `help` for a list of available commands.</small>
+Type `help` for a list of available commands.
 
 ```bash
 supervisor> help
@@ -1730,9 +1745,8 @@ avail  fg        pid   remove  shutdown  status  update
 clear  maintail  quit  reread  signal    stop    version
 ```
 
-<small>In a nutshell, we can `start`, `stop` and `restart` programs bypassing the program name as an argument to the respective command.
-We can also take a look at the program output with the `tail` command.
-Once you are finished, you can `quit`.</small>
+In a nutshell, we can `start`, `stop` and `restart` programs bypassing the program name as an argument to the respective
+command. We can also take a look at the program output with the `tail` command. Once you are finished, you can `quit`.
 
 ```bash
 ~$ supervisor> quit

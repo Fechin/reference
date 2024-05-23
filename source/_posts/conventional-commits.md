@@ -11,15 +11,12 @@ intro: |
 plugins:
 ---
 
-
-
-Getting Started {.cols-3}
-----
+## Getting Started {.cols-3}
 
 ### Quick Guide
 
-
 #### Why Conventional Commits
+
 - Easy-to-follow structure for commit messages.
 - Clearly states the nature of changes.
 - Ensures uniformity in commit messages across teams.
@@ -31,20 +28,17 @@ Getting Started {.cols-3}
 - Makes the review process efficient.
 - Helps in future troubleshooting with descriptive commit messages.
 
-
 #### Structure
 
 ```javascript
 <type>[optional scope]: <description>
-  
+
 [optional body]
-  
+
 [optional footer(s)]
 ```
 
 [Official Website](https://www.conventionalcommits.org/en) {.link-arrow}
-
-
 
 ### Examples
 
@@ -65,11 +59,10 @@ Getting Started {.cols-3}
 - ci: add job for integration tests
 - revert: revert commit a1b2c3d4e5f
 
-
-
 ### Types
+
 | Type     | Description                                                                                                      |
-|----------|------------------------------------------------------------------------------------------------------------------|
+| -------- | ---------------------------------------------------------------------------------------------------------------- |
 | `feat`   | Introduces a new feature                                                                                         |
 | `fix`    | Fixes a bug                                                                                                      |
 | `docs`   | Changes in documentation only                                                                                    |
@@ -81,11 +74,10 @@ Getting Started {.cols-3}
 | build    | Changes affecting the build system or external dependencies (e.g., changes in webpack, npm packages)             |
 | ci       | Changes to Continuous Integration configuration files and scripts (e.g., Travis, CircleCI, Jenkins)              |
 | revert   | Reverts a previously made commit                                                                                 |
+
 {.bold-first}
 
-
-Specification {.cols-1}
-----
+## Specification {.cols-1}
 
 ### Specification
 
@@ -101,8 +93,8 @@ Specification {.cols-1}
   the code changes. The body MUST begin one blank line after the description.
 - A commit body is free-form and MAY consist of any number of newline separated paragraphs.
 - One or more footers MAY be provided one blank line after the body. Each footer MUST consist of a word token, followed
-  by either a :<space> or <space># separator, followed by a string value (this is inspired by
-  the [git trailer convention](https://git-scm.com/docs/git-interpret-trailers)).
+  by either a :<space> or <space># separator, followed by a string value (this is inspired by the
+  [git trailer convention](https://git-scm.com/docs/git-interpret-trailers)).
 - A footer’s token MUST use - in place of whitespace characters, e.g., Acked-by (this helps differentiate the footer
   section from a multi-paragraph body). An exception is made for BREAKING CHANGE, which MAY also be used as a token.
 - A footer’s value MAY contain spaces and newlines, and parsing MUST terminate when the next valid footer
@@ -118,7 +110,6 @@ Specification {.cols-1}
   the exception of BREAKING CHANGE which MUST be uppercase.
 - BREAKING-CHANGE MUST be synonymous with BREAKING CHANGE, when used as a token in a footer.
 
-Also see
---------
+## Also see
 
 - [Conventional Commits](https://conventionalcommits.org/) _(conventionalcommits.org)_

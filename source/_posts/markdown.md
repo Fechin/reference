@@ -3,22 +3,22 @@ title: Markdown
 date: 2020-12-14 18:28:43
 background: bg-[#6319bf]
 tags:
-    - md
-    - Markup
-    - text
-    - format
+  - md
+  - Markup
+  - text
+  - format
 categories:
-    - Programming
+  - Programming
 intro: This is a quick reference cheat sheet to the Markdown syntax.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Markdown Quick Reference
----------------
+## Markdown Quick Reference
 
 ### Headers (atx style)
 
+<!-- prettier-ignore -->
 ```markdown
 # h1
 ## h2
@@ -30,38 +30,37 @@ Markdown Quick Reference
 
 ### Headers (setext style)
 
+<!-- prettier-ignore -->
 ```markdown
 Header 1
 ========
-```
 
-```markdown
 Header 2
 --------
 ```
 
-
 ### Blockquotes
 
 ```markdown
-> This is
+> This is  
 > a blockquote
 >
-> > Nested
+> > Nested  
 > > Blockquote
 ```
 
-
 ### Unordered List {.row-span-2}
 
+<!-- prettier-ignore -->
 ```markdown
 * Item 1
 * Item 2
-    * item 3a
-    * item 3b
+  * item 3a
+  * item 3b
 ```
 
 or
+
 ```markdown
 - Item 1
 - Item 2
@@ -69,10 +68,12 @@ or
 
 or
 
+<!-- prettier-ignore -->
 ```markdown
-+ Item 1
+_ Item 1
 + Item 2
 ```
+
 or
 
 ```markdown
@@ -84,119 +85,126 @@ or
 
 ```markdown
 1. Item 1
-2. Item 2
-    a. item 3a
-    b. item 3b
+2. Item 2  
+   a. Item 3a  
+   b. Item 3b
 ```
-
-
 
 ### Links
 
 ```markdown
 [link](http://google.com)
-```
 
-```markdown
-[link][google]
+[link][google]  
 [google]: http://google.com
-```
 
-```markdown
 <http://google.com>
 ```
 
-
-
-
-
-
 ### Emphasis
 
+<!-- prettier-ignore -->
 ```markdown
-*italic*
+*italic*  
 _italic_
-```
 
-```markdown
-**bold**
+**bold**  
 __bold__
-```
 
-```markdown
-`inline code`
+`inline code`  
 ~~struck out~~
 ```
-
-
-
 
 ### Horizontal line
 
 Hyphens
+
+<!-- prettier-ignore -->
 ```markdown
 ---
 ```
 
 Asterisks
+
+<!-- prettier-ignore -->
 ```markdown
 ***
 ```
 
 Underscores
+
+<!-- prettier-ignore -->
 ```markdown
 ___
 ```
 
-
-
-
-
 ### Code
-~~~markdown
-```javascript
-console.log("This is a block code")
-```
-~~~
 
+````markdown
+```javascript
+console.log("This is a block code");
+```
+````
+
+<!-- prettier-ignore -->
 ```markdown
 ~~~css
-.button { border: none; }
+.button {
+  border: none;
+}
 ~~~
 ```
-
 
 ```markdown
     4 space indent makes a code block
 ```
 
+### Escaped code
 
-#### inline code
+Escaped code blocks can be done with more back ticks on the outside or a different symbol.
+
+<!-- prettier-ignore -->
+`````markdown
+````markdown
+```bash
+echo hi
+```
+````
+
+~~~markdown
+```bash
+echo hi
+```
+~~~
+
+`````
+
+#### Inline code
+
 ```markdown
 `Inline code` has back-ticks around it
 ```
 
-
-
-### Tables {.col-span-2}
+### Tables
 
 ```markdown
 | Left column | Center column | Right column |
-|:------------|:-------------:|-------------:|
+| :---------- | :-----------: | -----------: |
 | Cell 1      |   Centered    |        $1600 |
 | Cell 2      |    Cell 3     |          $12 |
 ```
 
 Simple style
+
+<!-- prettier-ignore -->
 ```markdown
 Left column | Center column | Right column
 :----------:|:-------------:|:-----------:
    Cell 1   |   Centered    |    $1600
    Cell 2   |    Cell 3     |     $12
 ```
+
 A markdown table generator: [tableconvert.com](https://tableconvert.com/)
-
-
 
 ### Images {.col-span-2}
 
@@ -207,6 +215,7 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 ```
 
 #### Image with link
+
 ```markdown
 [![GitHub Logo](/images/logo.png)](https://github.com/)
 
@@ -214,27 +223,28 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 ```
 
 #### Reference style
+
 ```markdown
 ![alt text][logo]
 
 [logo]: /images/logo.png "Logo Title"
 ```
 
-
 ### Backslash escapes
 
-| Characters | Escape | Description |
-|------------|--------|-------------|
-| \\         | \\\\   | backslash   |
-| \`         | \\\`   | backtick              |
-| \*         | \\\*   | asterisk              |
-| \_         | \\\_   | underscore            |
-| \{\}       | \\\{\} | curly braces          |
-| \[\]       | \\\[\] | square brackets       |
-| \(\)       | \\\(\) | parentheses           |
-| \#         | \\\#   | hash mark             |
-| \+         | \\\+   | plus sign             |
-| \-         | \\\-   | minus sign \(hyphen\) |
-| \.         | \\\.   | dot                   |
-| \!         | \\\!   | exclamation mark      |
+| Characters        | Escape                | Description           |
+| ----------------- | --------------------- | :-------------------- |
+| <code>\\</code>   | <code>\\\\</code>     | Backslash             |
+| <code>\`</code>   | <code>\\\`</code>     | Backtick              |
+| <code>\*</code>   | <code>\\\*</code>     | Asterisk              |
+| <code>\_</code>   | <code>\\\_</code>     | Underscore            |
+| <code>\{\}</code> | <code>\\\{\\\}</code> | Curly braces          |
+| <code>\[\]</code> | <code>\\\[\\\]</code> | Square brackets       |
+| <code>\(\)</code> | <code>\\\(\\\)</code> | Parentheses           |
+| <code>\#</code>   | <code>\\\#</code>     | Hash mark             |
+| <code>\+</code>   | <code>\\\+</code>     | Plus sign             |
+| <code>\-</code>   | <code>\\\-</code>     | Minus sign \(hyphen\) |
+| <code>\.</code>   | <code>\\\.</code>     | Dot                   |
+| <code>\!</code>   | <code>\\\!</code>     | Exclamation mark      |
+
 {.show-header}

@@ -3,48 +3,52 @@ title: Powershell
 date: 2020-11-25 18:28:43
 background: bg-[#397fe4]
 tags:
-    - script
-    - windows
+  - script
+  - windows
 categories:
-    - Programming
-    - Operating System
+  - Programming
+  - Operating System
 intro: This is a quick reference cheat sheet to getting started with Powershell scripting.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Basic Commands
----------------
+## Basic Commands
 
 ### Helper Commands
 
-***Powershell follows Verb-Noun format for their commands.***
+**_Powershell follows Verb-Noun format for their commands._**
 
 Some common Verbs:
-| Verb     | Description                                      |
-|----------|--------------------------------------------------|
-| Get      | Used to retrieve information.                   |
-| Set      | Used to configure or change settings.           |
-| New      | Used to create new instances of objects.        |
-| Remove   | Used to delete or remove items.                 |
-| Invoke   | Used to execute a specific action or operation. |
-| Start    | Used to initiate a process or operation.        |
-| Stop     | Used to halt or terminate a process or operation.|
-| Enable   | Used to activate or enable a feature.           |
-| Disable  | Used to deactivate or disable a feature.        |
-| Test     | Used to perform tests or checks.                |
-| Update   | Used to update or refresh data or configurations.|
 
+| Verb    | Description                                       |
+| ------- | ------------------------------------------------- |
+| Get     | Used to retrieve information.                     |
+| Set     | Used to configure or change settings.             |
+| New     | Used to create new instances of objects.          |
+| Remove  | Used to delete or remove items.                   |
+| Invoke  | Used to execute a specific action or operation.   |
+| Start   | Used to initiate a process or operation.          |
+| Stop    | Used to halt or terminate a process or operation. |
+| Enable  | Used to activate or enable a feature.             |
+| Disable | Used to deactivate or disable a feature.          |
+| Test    | Used to perform tests or checks.                  |
+| Update  | Used to update or refresh data or configurations. |
 
 Lists available modules
+
 ```powershell
 Get-Module --ListAvailable
 ```
+
 Lists available cmdlets and functions.
+
 ```powershell
 Get-Command -Module ActiveDirectory
 ```
+
 Retrieves help
+
 ```powershell
 Get-Help <cmd>
 Get-Help <cmd> -Examples
@@ -52,11 +56,13 @@ Get-Help -Name Get-Process -Parameter Id
 ```
 
 Lists aliases and their corresponding cmdlet names.
+
 ```powershell
 Get-Alias | Select-Object Name, Definition
 ```
 
 **Get-Member:** Displays the properties and methods of objects.
+
 ```powershell
 Get-Process | Get-Member
 ```
@@ -64,11 +70,13 @@ Get-Process | Get-Member
 ### Object Manipulation {.col-span-2}
 
 **Select-Object:** Selects specific properties from objects or customizes their display.
+
 ```powershell
 Get-Process | Select-Object Name, CPU
 ```
 
 **Where-Object:** Filters objects based on specified conditions.
+
 ```powershell
 Get-Service | Where-Object { $PSItem.Status -eq 'Running' }
 #OR
@@ -76,26 +84,32 @@ Get-Service | ? { $_.Status -eq 'Running' }
 ```
 
 **Measure-Object:** Calculates statistics, like sum, average, and count, for object properties.
+
 ```powershell
 Get-Process | Measure-Object -Property WorkingSet -Sum
 ```
 
-**ForEach-Object:** Performs an operation on each object in a collection. (BEAWARE: Below command will prefix of files/folder in the current dir)
+**ForEach-Object:** Performs an operation on each object in a collection. (BEAWARE: Below command will prefix of
+files/folder in the current dir)
+
 ```powershell
 Get-ChildItem | ForEach-Object { Rename-Item $_ -NewName "Prefix_$_" }
 ```
 
 **Sort-Object:** Sorts objects by specified properties.
+
 ```powershell
 Get-ChildItem | Sort-Object Length -Descending
 ```
 
 **Format-Table:** Formats output as a table with specified columns.
+
 ```powershell
 Get-Service | Format-Table -AutoSize  # ft alias
 ```
 
 **Format-List:** Formats output as a list of properties and values.
+
 ```powershell
 Get-Process | Format-List -Property Name, CPU  # fl alias
 ```
@@ -104,7 +118,7 @@ Get-Process | Format-List -Property Name, CPU  # fl alias
 
 ```powershell
 New-Item -path file.txt -type 'file' -value 'contents'
-New-Item -path file.txt -type 'dir' 
+New-Item -path file.txt -type 'dir'
 Copy-Item <src> -destination <dest>
 Move-Item -path  <src> -destination <dest>
 Remove-Item <file>
@@ -112,8 +126,8 @@ Test-Path <path>
 Rename-Item -path <path> -newname <newname>
 
 # using .NET Base Class Library
-[System.IO.File]::WriteAllText('test.txt', '')   
-[System.IO.File]::Delete('test.txt')            
+[System.IO.File]::WriteAllText('test.txt', '')
+[System.IO.File]::Delete('test.txt')
 
 Get-Content -Path "test.txt"
 Get-Process | Out-File -FilePath "processes.txt"# Output to file
@@ -121,28 +135,28 @@ Get-Process | Export-Csv -Path "processes.csv"  # Output to csv
 $data = Import-Csv -Path "data.csv"             # Import from csv
 ```
 
-System Management
----------------
+## System Management
 
 ### Windows Management Instrumentation {.col-span-2}
+
 ```powershell
 # Retrieve BIOS information
-Get-CimInstance -ClassName Win32_BIOS                       
+Get-CimInstance -ClassName Win32_BIOS
 # Retrieve information about locally connected physical disk devices
-Get-CimInstance -ClassName Win32_DiskDrive                  
+Get-CimInstance -ClassName Win32_DiskDrive
 # Retrieve information about install physical memory (RAM)
-Get-CimInstance -ClassName Win32_PhysicalMemory             
+Get-CimInstance -ClassName Win32_PhysicalMemory
 # Retrieve information about installed network adapters (physical + virtual)
-Get-CimInstance -ClassName Win32_NetworkAdapter             
+Get-CimInstance -ClassName Win32_NetworkAdapter
 # Retrieve information about installed graphics / video card (GPU)
-Get-CimInstance -ClassName Win32_VideoController       
+Get-CimInstance -ClassName Win32_VideoController
 
 # List all the classNames
 Get-CimClass | Select-Object -ExpandProperty CimClassName
 # Explore the various WMI classes available in the root\cimv2 namespace
-Get-CimClass -Namespace root\cimv2                          
+Get-CimClass -Namespace root\cimv2
 # Explore the child WMI namespaces underneath the root\cimv2 namespace
-Get-CimInstance -Namespace root -ClassName __NAMESPACE      
+Get-CimInstance -Namespace root -ClassName __NAMESPACE
 
 
 ```
@@ -168,6 +182,7 @@ Test-NetConnection google.com -Port 80
 ```
 
 ### User & Group Management {.col-span-2}
+
 ```powershell
 # Retrieve local user account information
 Get-LocalUser
@@ -186,6 +201,7 @@ Add-LocalGroupMember -Group Administrators -Member UserToAdd
 ```
 
 ### Security & Permissions
+
 ```powershell
 # Retrieve access control lists for file/dir
 Get-Acl C:\Path\To\File.txt
@@ -195,6 +211,7 @@ Set-Acl -Path C:\Path\To\File.txt -AclObject $aclObject
 ```
 
 ### Registry Management {.col-span-2}
+
 ```powershell
 # Retrieve registry key values
 Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*" | Select DisplayName, DisplayVersion
@@ -211,13 +228,15 @@ Remove-ItemProperty -Path "HKCU:\Software\MyApp" -Name "SettingToRemove"
 # Check if a registry key exists
 Test-Path "HKLM:\Software\MyApp"
 ```
-Scripting
----------------
+
+## Scripting
 
 ### Variables {.col-span-2}
+
 Initializing a variable with/without a specified type:
+
 ```powershell
-$var = 0                                                    
+$var = 0
 [int] $var = 'Trevor'         # (throws an exception)
 [string] $var = 'Trevor'      # (doesn't throw an exception)
 $var.GetType()
@@ -231,26 +250,28 @@ $arrayvar = @('va1','va2')
 # Create dict
 $dict = @{k1 = 'test'; k2 = 'best'}
 ```
+
 Variable Commands
+
 ```Powershell
 New-Variable -Name FirstName -Value Trevor
-New-Variable FirstName -Value Trevor -Option <ReadOnly/Constant>     
+New-Variable FirstName -Value Trevor -Option <ReadOnly/Constant>
 
-Get-Variable                                              
-Get-Variable | ? { $PSItem.Options -contains 'constant' } 
+Get-Variable
+Get-Variable | ? { $PSItem.Options -contains 'constant' }
 Get-Variable | ? { $PSItem.Options -contains 'readonly' }
 
-Remove-Variable -Name firstname                          
-# Removes ReadOnly var 
+Remove-Variable -Name firstname
+# Removes ReadOnly var
 Remove-Variable -Name firstname -Force
 ```
-Variable types
-int32, int64, string, bool
+
+Variable types int32, int64, string, bool
+
 ### Operators
 
-
 ```powershell
-# operators 
+# operators
 # (a <op> b)
 
 = , += / -= , ++ / --
@@ -264,7 +285,7 @@ $true; $false #bool true/false
 $FoodToEat = $BaconIsYummy ? 'bacon' : 'beets'
 
 # -notin or -in
-'Celery' -in @('Bacon', 'Sausage', 'Steak') 
+'Celery' -in @('Bacon', 'Sausage', 'Steak')
 
 # output: True
 5 -is [int32]
@@ -277,12 +298,15 @@ $regex = [regex]'(\w*)'
 $regex.Matches('this is test').Value
 
 ```
+
 ### Structure
+
 #### I/O operation
-```powershell 
+
+```powershell
 "This displays a string"
 
-Write-Host "color" -ForegroundColor Red 
+Write-Host "color" -ForegroundColor Red
 
 $age = Read-host "Enter age"
 
@@ -290,7 +314,9 @@ $pwd = Read-host "password" -asSecureString
 
 Clear-Host
 ```
+
 #### Flow Controls
+
 ```powershell
 IF(<#Condition#>){
 <#Commands#>}ELSEIF(){}ELSE{}
@@ -309,13 +335,15 @@ while($var -ne 0){}
 Do{}While()
 
 ```
+
 ### Function / Modules {.row-span-2}
 
 #### Example 1
+
 ```powershell
 function funcname{
-    
-    [CmdletBinding()]   
+
+    [CmdletBinding()]
 	param(
 		[Parameter(Mandatory)]
 		[String]$user
@@ -325,7 +353,9 @@ function funcname{
 }
 $var = funcname -user pcb
 ```
+
 #### Example 2
+
 ```powershell
 function Get-EvenNumbers {
     [CmdletBinding()]
@@ -333,18 +363,20 @@ function Get-EvenNumbers {
         [Parameter(ValueFromPipeline = $true)]
         [int] $Number
     )
-    begin {<#command#>} 
+    begin {<#command#>}
     process {
         if ($Number % 2 -eq 0) {
             Write-Output $Number
         }
     }
-    end {<#command#>}   
+    end {<#command#>}
 }
 1..10 | Get-EvenNumbers
 
 ```
+
 #### Modules
+
 ```powershell
 # powershell looks module in the path
 $env:PSModulePath
@@ -352,7 +384,7 @@ $env:PSModulePath
 # lists all modules installed on system
 Get-Module -ListAvailable
 # modules imported into current session
-Get-Module      
+Get-Module
 
 Import-Module <moduleName>
 Remove-Module <moduleName>
@@ -370,9 +402,12 @@ New-Module -Name trevor -ScriptBlock {
 ### Tips
 
 - In most of the languages, escape character is backslash **\\** whereas in powershell it is backtick **`**
+
 ```powershell
 
 ```
 
 ## Also see {.cols-1}
-* [Microsoft Powershell](https://learn.microsoft.com/en-us/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.3) _(learn.microsoft.com)_
+
+- [Microsoft Powershell](https://learn.microsoft.com/en-us/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.3)
+  _(learn.microsoft.com)_

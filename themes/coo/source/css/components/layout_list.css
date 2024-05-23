@@ -1,134 +1,125 @@
 .mdLayout .h3-wrap > .section ul > li {
-    padding: 9px;
-    padding-left: 26px;
-    position: relative;
-    border-bottom: solid 1px #ececec94;
-    @apply dark:border-slate-700/50;
+  padding: 9px;
+  padding-left: 26px;
+  position: relative;
+  border-bottom: solid 1px #ececec94;
+  @apply dark:border-slate-700/50;
 }
 
 .mdLayout .h3-wrap > .section ul > li > p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.mdLayout .h3-wrap > .section ul:not(.marker-none):not(.collapsible) > li::before {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    background: #556677;
-    border-radius: 50%;
-    left: 14px;
-    top: 18px;
+.mdLayout .h3-wrap > .section ul:not(.marker-none, .collapsible, .marker-timeline) > li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #556677;
+  border-radius: 50%;
+  left: 14px;
+  top: 18px;
 }
 
 .mdLayout .h3-wrap > .section ul.marker-round > li {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
-.mdLayout .h3-wrap > .section ul.marker-round > li::before{
-    content: "";
-    top: 16px;
-    @apply inline-block w-2 h-2 bg-white border border-2 border-emerald-600 rounded-full;
+.mdLayout .h3-wrap > .section ul.marker-round > li::before {
+  content: "";
+  top: 16px;
+  @apply inline-block h-2 w-2 rounded-full border border-2 border-emerald-600 bg-white;
 }
-
 
 .mdLayout .h3-wrap > .section > ul.collapsible > li > pre {
-    display: none;
+  display: none;
 }
 
-.mdLayout .h3-wrap > .section > ul.collapsible > li.active  > pre {
-    display: block;
+.mdLayout .h3-wrap > .section > ul.collapsible > li.active > pre {
+  display: block;
 }
 
-.mdLayout .h3-wrap > .section > ul.collapsible > li > strong:hover{
-    cursor: pointer;
+.mdLayout .h3-wrap > .section > ul.collapsible > li > strong:hover {
+  cursor: pointer;
 }
 
 .mdLayout .h3-wrap > .section > ul.collapsible > li > strong.arrow-down:before {
-    content: "▼"; /*▼*/
+  content: "▼"; /*▼*/
 }
 
 .mdLayout .h3-wrap > .section > ul.collapsible > li > strong:before {
-    content: "▶"; /*▼*/
-    position: absolute;
-    left: 10px;
-    font-size: 0.825em;
-    @apply text-emerald-500;
+  content: "▶"; /*▼*/
+  position: absolute;
+  left: 10px;
+  font-size: 0.825em;
+  @apply text-emerald-500;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline {
-    counter-reset: stepCount;
-    margin-top:1rem;
+  counter-reset: stepCount;
+  margin-top: 1rem;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li {
-    padding-top: 2px;
-    padding-bottom: 1.25rem;
-    border-left: 2px solid #48c78e;
-    position: relative;
-    padding-left: 22px;
-    margin-left: 30px;
-    border-bottom: 0;
-    @apply text-slate-900 dark:text-slate-50 dark:border-slate-600;
+  padding-top: 2px;
+  padding-bottom: 1.25rem;
+  border-left: 2px solid #48c78e;
+  position: relative;
+  padding-left: 22px;
+  margin-left: 30px;
+  border-bottom: 0;
+  @apply text-slate-900 dark:border-slate-600 dark:text-slate-50;
 }
-
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child {
-    padding-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
-
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li > pre {
-    padding: 0;
-    margin-top: 1rem;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li::before {
-    counter-increment: stepCount;
-    content: counter(stepCount);
-    left: -14px;
-    border: 2px solid #48c78e;
-    @apply absolute rounded-full w-6 h-6 top-0 text-center bg-white text-sm;
-    @apply dark:border-slate-600 dark:bg-slate-800;
+  counter-increment: stepCount;
+  content: counter(stepCount);
+  left: -14px;
+  border: 2px solid #48c78e;
+  @apply absolute top-0 h-6 w-6 rounded-full bg-white text-center text-sm;
+  @apply dark:border-slate-600 dark:bg-slate-800;
 }
-
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li:first-child::before {
-    background: #48c78e;
-    color:white;
+  background: #48c78e;
+  color: white;
 }
 
-
-.mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child{
-    border-image: linear-gradient(to bottom, #48c78e, rgba(0, 0, 0, 0)) 1 100%;
+.mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child {
+  border-image: linear-gradient(to bottom, #48c78e, rgba(0, 0, 0, 0)) 1 100%;
 }
-
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li > h4 {
-    color: #2a2839;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    @apply dark:text-slate-300;
+  color: #2a2839;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  @apply dark:text-slate-300;
 }
 
-
 .mdLayout .h3-wrap > .section > ul.icon-list {
-    @apply list-none list-inside;
+  @apply list-inside list-none;
 }
 
 .mdLayout .h3-wrap > .section > ul.icon-list > li {
-    padding: 9px;
+  padding: 9px;
 }
 
 .mdLayout .h3-wrap > .section > ul.icon-list > li a {
-    @apply flex items-center hover:bg-gray-200 rounded-lg p-3 text-slate-800;
-    @apply fadeIn no-underline;
+  @apply flex items-center rounded-lg p-3 text-slate-800 hover:bg-gray-200;
+  @apply fadeIn no-underline;
 }
 
 .mdLayout .h3-wrap > .section > ul.icon-list > li a img {
-    @apply h-6 mr-4;
+  @apply mr-4 h-6;
 }
-
-

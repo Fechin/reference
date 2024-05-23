@@ -3,24 +3,18 @@ title: Swift
 date: 2023-02-28 14:50:01
 background: bg-[#eb4e38]
 tags:
-    - Apple
-    - iOS
-    - iPadOS
+  - Apple
+  - iOS
+  - iPadOS
 categories:
-    - Programming
+  - Programming
 intro: |
-    This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.
+  This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-
-
-Getting Started
----
-
-
+## Getting Started
 
 ### Variable {.row-span-2}
 
@@ -39,8 +33,6 @@ print(numberOfToys)
 // prints "9"
 ```
 
-
-
 ### Type annotations
 
 ```swift
@@ -50,8 +42,6 @@ var isMorning: Bool = true
 var price: Double = 8.99
 ```
 
-
-
 ### Arithmetic operators {.row-span-3}
 
 - `+` Add
@@ -59,9 +49,10 @@ var price: Double = 8.99
 - `*` Multiplication
 - `/` Division
 - `%` Remainder
+
 {.cols-2 .marker-none}
 
-----
+---
 
 ```swift
 var x = 0
@@ -72,16 +63,15 @@ x = 4 / 2 // x is now 2
 x = 4 % 2 // x is now 0
 ```
 
-----
+---
 
 - `+=` Adds and assigns sums
 - `-=` subtract and assign the difference
 - `*=` Multiplication and assignment
 - `/=` Divide and assign quotient
 - `%=` Divide and assign remainder
+
 {.marker-none}
-
-
 
 #### Compound Assignment Operators
 
@@ -93,7 +83,6 @@ print("There are \(numberOfDogs) Dalmatians!")
 // print: There are 101 Dalmatians!
 ```
 
-
 ### String interpolation
 
 ```swift
@@ -102,8 +91,6 @@ print("I have \(apples) apples!")
 
 // print: I have 6 apples!
 ```
-
-
 
 ### Multi-line string
 
@@ -114,8 +101,6 @@ This is my favorite language!
 Yeah!
 """
 ```
-
-
 
 ### Code Comments
 
@@ -128,8 +113,6 @@ None will run!
 */
 ```
 
-
-
 ### Form a tuple {.col-span-2}
 
 ```swift
@@ -138,8 +121,6 @@ let player = ("Maya", 5, 150)
 print(player) // ("Maya", 5, 150)
 print("\(player.0): level \(player.1), \(player.2) pts") // Maya: level 5, 150 pts
 ```
-
-
 
 ### Decompose tuple
 
@@ -150,16 +131,13 @@ print("\(currentName): level \(curLevel)")
 // print: Maya: level 5
 ```
 
-
-
 ### Special comment syntax (MARK)
 
 ```swift
 // MARK: -view settings
 ```
+
 `MARK` can be used to display comments in the column
-
-
 
 ### Special comment syntax (TODO)
 
@@ -169,8 +147,6 @@ print("\(currentName): level \(curLevel)")
 
 `TODO` is used to display reminders of things that need to be done
 
-
-
 ### Special Comment Syntax (FIXME)
 
 ```swift
@@ -179,13 +155,7 @@ print("\(currentName): level \(curLevel)")
 
 `FIXME` is used to display reminders about things that need to be fixed
 
-
-
-
-Variable
-----
-
-
+## Variable
 
 ### Variable declaration
 
@@ -215,8 +185,6 @@ print(numberOfToys)
 // print "9"
 ```
 
-
-
 ### Constants
 
 Constants are declared with `let`:
@@ -242,8 +210,6 @@ let numberOfToys: Int = 8
 numberOfToys += 1
 // Error: numberOfToys is immutable
 ```
-
-
 
 ### Computed variables (get and set) {.row-span-3}
 
@@ -274,7 +240,8 @@ birth = birth2
 print(age) // 20
 ```
 
-In the example below, distanceInFeet has a `getter` and a `setter`. Because of the `setter`, the `getter` requires the keyword `get`:
+In the example below, distanceInFeet has a `getter` and a `setter`. Because of the `setter`, the `getter` requires the
+keyword `get`:
 
 ```swift
 var distanceInMeters: Float = 100
@@ -299,8 +266,6 @@ distanceInMeters = 800
 print(distanceInMeters) // 800.0
 print(distanceInFeet)   // 2624.0
 ```
-
-
 
 ### willSet {.row-span-2}
 
@@ -328,8 +293,6 @@ distance = 10 // print: distance will be set to 10
 
 `willSet` can be used to execute some code before setting the variable value
 
-
-
 ### didSet
 
 ```swift
@@ -342,8 +305,6 @@ var distance = 5 {
 distance = 10 // print: distance will be set to 10
               // print: its old value is: 5
 ```
-
-
 
 ### willSet and didSet
 
@@ -360,10 +321,7 @@ var distance = 5 {
 distance = 10
 ```
 
-Conditions
----
-
-
+## Conditions
 
 ### if statement
 
@@ -381,8 +339,6 @@ if 5 > 3 {
 // output: "5 is greater than 3"
 ```
 
-
-
 ### else statement
 
 ```swift
@@ -395,8 +351,6 @@ if turbulence {
 }
 // print: You are free to move around.
 ```
-
-
 
 ### else if statement
 
@@ -414,8 +368,6 @@ if weather == "sunny" {
 // print: take an umbrella
 ```
 
-
-
 ### Comparison Operators
 
 ```swift
@@ -427,14 +379,8 @@ if weather == "sunny" {
 "B" != "b" // true
 ```
 
--`<`  less than <br>
--`>`  greater than <br>
--`<=` less than or equal to <br>
--`>=` greater than or equal to <br>
--`==` is equal to <br>
--`!=` is not equal to 
-
-
+-`<` less than <br> -`>` greater than <br> -`<=` less than or equal to <br> -`>=` greater than or equal to <br> -`==` is
+equal to <br> -`!=` is not equal to
 
 ### Range Operators
 
@@ -444,10 +390,7 @@ a..<b      // numbers between a and b (including a but excluding b)
 ...b      // numbers till b (including b)
 ```
 
--`a...b`  Closed Range <br>
--`a..<b`  Half-Open Range <br>
--`...b` One-Sided Range
-
+-`a...b` Closed Range <br> -`a..<b` Half-Open Range <br> -`...b` One-Sided Range
 
 ### Ternary conditional operator
 
@@ -458,8 +401,6 @@ driverLicense
     ? print("driver seat") : print("passenger seat")
 // print: driver's seat
 ```
-
-
 
 ### switch statement
 
@@ -477,8 +418,6 @@ switch secondaryColor {
 // print: mix of blue and yellow
 ```
 
-
-
 ### switch statement: interval matching
 
 ```swift
@@ -495,8 +434,6 @@ switch year {
 }
 // print: post-impressionism
 ```
-
-
 
 ### switch statement: composite case
 
@@ -516,8 +453,6 @@ case "Uber", "Lyft":
 // print: restaurant takeaway
 ```
 
-
-
 ### switch statement: where clause
 
 ```swift
@@ -535,14 +470,13 @@ switch num {
 // print: 7 odd
 ```
 
-
-
 ### Logical Operators
 
 ```swift
 !true  // false
 !false //true
 ```
+
 ### Logical Operators &&
 
 ```swift
@@ -551,8 +485,6 @@ true && false  // false
 false && true  // false
 false && false // false
 ```
-
-
 
 ### Logical operators ||
 
@@ -563,22 +495,21 @@ false || true  // true
 false || false // false
 ```
 
-
-
 ### Combined Logical Operators
 
 ```swift
 !false && true || false // true
 ```
 
-`!false && true` first evaluates and returns `true` Then, the expression, `true` || `false` evaluates and returns the final result `true`
+`!false && true` first evaluates and returns `true` Then, the expression, `true` || `false` evaluates and returns the
+final result `true`
 
 ```swift
 false || true && false // false
 ```
-`true && false` first evaluates to return `false` Then, the expression, `false` || `false` evaluates and returns the final result `false`
 
-
+`true && false` first evaluates to return `false` Then, the expression, `false` || `false` evaluates and returns the
+final result `false`
 
 ### Control the order of execution
 
@@ -594,8 +525,6 @@ true || true && false || false
 
 ```
 
-
-
 ### Simple guards
 
 ```swift
@@ -610,10 +539,7 @@ greet(name: "Asma") // output: Hello Asma!
 greet(name: nil)    // output: Hello guest!
 ```
 
-cycle
-----
-
-
+## cycle
 
 ### scope
 
@@ -621,8 +547,6 @@ cycle
 let zeroToThree = 0...3
 //zeroToThree: 0, 1, 2, 3
 ```
-
-
 
 ### stride() function
 
@@ -633,8 +557,6 @@ for oddNum in stride(from: 1, to: 5, by: 2) {
 // print: 1
 // print: 3
 ```
-
-
 
 ### for-in loop
 
@@ -647,8 +569,6 @@ for char in "hehe" {
 // print: h
 // print: e
 ```
-
-
 
 ### continue keyword
 
@@ -666,8 +586,6 @@ for num in 0...5 {
 
 The `continue` keyword will force the loop to continue for the next iteration
 
-
-
 ### break keyword
 
 ```swift
@@ -684,8 +602,6 @@ if char == "c" {
 // print: r
 ```
 
-
-
 ### Use underscores
 
 ```swift
@@ -696,8 +612,6 @@ for _ in 1...3 {
 // print: Ole
 // print: Ole
 ```
-
-
 
 ### while loop
 
@@ -712,12 +626,10 @@ while counter < stopNum {
 // loop to print until the stop condition is met
 ```
 
-A `while` loop accepts a condition and keeps executing its body code while the provided condition is `true`. If the condition is never false, the loop will keep running and the program will get stuck in an `infinite loop`
+A `while` loop accepts a condition and keeps executing its body code while the provided condition is `true`. If the
+condition is never false, the loop will keep running and the program will get stuck in an `infinite loop`
 
-Arrays and collections
-----
-
-
+## Arrays and collections
 
 ### Array
 
@@ -725,8 +637,6 @@ Arrays and collections
 var scores = [Int]()
 // array is empty: []
 ```
-
-
 
 ### .count property
 
@@ -736,11 +646,10 @@ print(grocery.count)
 // print: 5
 ```
 
-
-
 ### index {.row-span-2}
 
-The index refers to the item's position in the ordered list, and a single element is retrieved from the array using the subscript syntax `array[index]`.
+The index refers to the item's position in the ordered list, and a single element is retrieved from the array using the
+subscript syntax `array[index]`.
 
 ```swift
 var vowels = ["a", "e", "i", "o", "u"]
@@ -753,8 +662,6 @@ print(vowels[4]) // prints: u
 ```
 
 Note: Swift arrays are zero-indexed, meaning the first element has index 0.
-
-
 
 ### Initialize with array literal
 
@@ -775,7 +682,6 @@ var sizes = Array<Int>(repeating: 0, count: 3)
 print(sizes) // prints: [0, 0, 0]
 ```
 
-
 ### .append() method and += operator
 
 ```swift
@@ -785,8 +691,6 @@ gymBadges += ["Rainbow", "Soul"]
 // ["Boulder", "Cascade", "Thunder",
 // "Rainbow", "Soul"]
 ```
-
-
 
 ### .insert() and .remove() methods
 
@@ -798,8 +702,6 @@ moon.insert("🌕", at: 0)
 moon.remove(at: 4)
 // ["🌕", "🌖", "🌗", "🌘"]
 ```
-
-
 
 ### Iterate over an array
 
@@ -813,8 +715,6 @@ for person in employees {
 // print: Jam
 ```
 
-
-
 ### Collection (Set)
 
 ```swift
@@ -827,18 +727,14 @@ var paintingsInMOMA: Set = [
 
 We can use a collection (`Set`) to store `unique` elements of the same data type
 
-
-
 ### Empty collection (Set)
 
 ```swift
 var team = Set<String>()
 
 print(team)
-// print: [] 
+// print: []
 ```
-
-
 
 ### Populate the collection
 
@@ -847,8 +743,6 @@ var vowels: Set = ["a", "e", "i", "o","u"]
 ```
 
 To create a set filled with values, use the `Set` keyword before the assignment operator.
-
-
 
 ### .insert()
 
@@ -860,8 +754,6 @@ var cookieJar: Set = [
 // add a new element
 cookieJar.insert("Peanut Butter Chip")
 ```
-
-
 
 ### .remove() and .removeAll() methods
 
@@ -908,8 +800,6 @@ for ingredient in recipe {
 }
 ```
 
-
-
 ### .isEmpty property
 
 ```swift
@@ -929,8 +819,6 @@ print("The band has \(band.count) players.")
 // print: Band has 4 players.
 ```
 
-
-
 ### .intersection() Intersection
 
 ```swift
@@ -941,7 +829,6 @@ var setC = setA.intersection(setB)
 print(setC) // print: ["D", "C"]
 ```
 
-
 ### .union()
 
 ```swift
@@ -949,9 +836,10 @@ var setA: Set = ["A", "B", "C", "D"]
 var setB: Set = ["C", "D", "E", "F"]
 
 var setC = setA.union(setB)
-print(setC) 
+print(setC)
 // print: ["B", "A", "D", "F", "C", "E"]
 ```
+
 ### .symmetricDifference() Symmetric difference
 
 ```swift
@@ -963,21 +851,18 @@ print(setC)
 // print: ["B", "E", "F", "A"]
 ```
 
-
-
 ### .subtracting() Subtraction
+
 ```swift
 var setA: Set = ["A", "B", "C", "D"]
 var setB: Set = ["C", "D"]
 
 var setC = setA.subtracting(setB)
-print(setC) 
+print(setC)
 // print: ["B", "A"]
 ```
-dictionary
----
 
-
+## dictionary
 
 ### Base Dictionary
 
@@ -991,8 +876,6 @@ var dictionaryName = [
 
 An `unordered` collection of pairs of data or key-value pairs
 
-
-
 ### Keys
 
 ```swift
@@ -1004,8 +887,6 @@ var fruitStand = [
 ```
 
 Each `key` is `unique` even if they all contain the same `value`
-
-
 
 ### Type Consistency
 
@@ -1019,8 +900,6 @@ var numberOfSides = [
 
 Contains only `String` keys and `Int` values
 
-
-
 ### Initialize and populate the dictionary
 
 ```swift
@@ -1030,6 +909,7 @@ var employeeID = [
   "Ophelia": 9318
 ]
 ```
+
 ### Initialize an empty dictionary
 
 ```swift
@@ -1039,8 +919,6 @@ var yearlyFishPopulation = [Int: Int]()
 // Empty dictionary literal syntax:
 var yearlyBirdPopulation: [Int: Int] = [:]
 ```
-
-
 
 ### add to dictionary
 
@@ -1052,8 +930,6 @@ var pronunciation = [
 // new key: "programming", new value: "prow gra"
 pronunciation["programming"] = "prow·gra"
 ```
-
-
 
 ### Delete key-value pair {.row-span-2}
 
@@ -1090,9 +966,9 @@ change["Quarter"] = .25
 change.updateValue(.10, forKey: "Dime")
 ```
 
-To change the value of a key-value pair, use the `.updateValue()` method or the subscript syntax by appending brackets `[ ]` with the existing keys within to the name of the dictionary, then adding the assignment operator _(`= `)_ followed by the modified value
-
-
+To change the value of a key-value pair, use the `.updateValue()` method or the subscript syntax by appending brackets
+`[ ]` with the existing keys within to the name of the dictionary, then adding the assignment operator _(`= `)_ followed
+by the modified value
 
 ### .isEmpty property
 
@@ -1105,6 +981,7 @@ bakery["Cupcakes"] = 12
 // check if the dictionary is empty
 print(bakery.isEmpty) // print false
 ```
+
 ### .count property
 
 ```swift
@@ -1114,8 +991,6 @@ var fruitStand = [
 ]
 print(fruitStand.count) // print: 2
 ```
-
-
 
 ### Assigning values to variables
 
@@ -1135,9 +1010,8 @@ if let redHex = hex["red"] {
 // print: red hex code #ff0000
 ```
 
-Assigning the value of a key-value pair to a variable will return an optional value. To extract values, use the optional expansion
-
-
+Assigning the value of a key-value pair to a variable will return an optional value. To extract values, use the optional
+expansion
 
 ### Traversing the dictionary
 
@@ -1161,12 +1035,7 @@ for meaning in emojiMeaning.values {
 }
 ```
 
-
-
-function
----
-
-
+## function
 
 ### Basic functions
 
@@ -1179,8 +1048,6 @@ func washCar() -> Void {
 }
 ```
 
-
-
 ### Call functions
 
 ```swift
@@ -1191,8 +1058,6 @@ func greetLearner() {
 greetLearner()
 // print: Welcome to CheatSheets.zip!
 ```
-
-
 
 ### return value
 
@@ -1207,8 +1072,6 @@ func findAge() -> Int {
 print(findAge()) // prints: 26
 ```
 
-
-
 ### Multiple parameters {.col-span-2}
 
 ```swift
@@ -1220,8 +1083,6 @@ let decimal = convertFracToDec(numerator: 1.0, denominator: 2.0)
 print(decimal) // prints: 0.5
 ```
 
-
-
 ### Omit parameter labels
 
 ```swift
@@ -1231,8 +1092,6 @@ func findDiff(_ a: Int, b: Int) -> Int {
 
 print(findDiff(6, b: 4)) // prints: 2
 ```
-
-
 
 ### return multiple values {.col-span-2}
 
@@ -1246,8 +1105,6 @@ print(phone.name)         // print: iPhone
 print(phone.version)      // print: 8 Plus
 print(phone.yearReleased) // print: 2017
 ```
-
-
 
 ### Parameters & Arguments
 
@@ -1263,9 +1120,8 @@ print(perimeter) // print: 20
 // Argument: 5
 ```
 
-
-
 ### Implicit return
+
 ```swift
 func nextTotalSolarEclipse() -> String {
   "April 8th, 2024 🌎"
@@ -1274,7 +1130,6 @@ func nextTotalSolarEclipse() -> String {
 print(nextTotalSolarEclipse())
 // print: April 8th, 2024 🌎
 ```
-
 
 ### Default parameters
 
@@ -1285,8 +1140,6 @@ func greet(person: String = "guest") {
 greet() // Hello guest
 greet(person: "Aliya") // Hello Aliya
 ```
-
-
 
 ### Input and output parameters {.row-span-2}
 
@@ -1312,8 +1165,6 @@ season(month: 4, name: &currentSeason)
 print(currentSeason) // Spring 🌱
 ```
 
-
-
 ### variable parameter
 
 ```swift
@@ -1326,8 +1177,6 @@ print(totalStudent(data: "Denial", "Peter"))
 // print: 2
 ```
 
-
-
 ### Optional parameters
 
 ```swift
@@ -1336,12 +1185,10 @@ func getFirstInitial(from name: String?) -> String? {
 }
 ```
 
-Functions can accept optional types and return optional types. When a function cannot return a reasonable instance of the requested type, it should return `nil`
+Functions can accept optional types and return optional types. When a function cannot return a reasonable instance of
+the requested type, it should return `nil`
 
-structure
-----
-
-
+## structure
 
 ### Structure Creation
 
@@ -1356,9 +1203,8 @@ struct Building {
 }
 ```
 
-Structs or structs are used to programmatically represent real-life objects in code. A structure is created using the `struct` keyword, followed by its name, followed by a body containing its properties and methods
-
-
+Structs or structs are used to programmatically represent real-life objects in code. A structure is created using the
+`struct` keyword, followed by its name, followed by a body containing its properties and methods
 
 ### Default property values
 
@@ -1373,8 +1219,6 @@ var reliantRobin = Car(numOfWheels: 3)
 print(reliantRobin.numOfWheels) // prints: 3
 print(reliantRobin.topSpeed)    // print: 80
 ```
-
-
 
 ### Structural instance creation
 
@@ -1399,7 +1243,7 @@ var morty = Person(name: "Peter", age: 14)
 struct TV {
   var size: Int
   var type: String
-  
+
   init(size: Int, type: String) {
     self.size = size
     self.type = type
@@ -1413,16 +1257,12 @@ Using the `TV` class
 var newTV = TV(size: 65, type: "LED")
 ```
 
-
-
 ### Check type
 
 ```swift
 print(type(of: "abc")) // print: String
 print(type(of: 123))   // print: 123
 ```
-
-
 
 ### Mutation method (mutating) {.row-span-2}
 
@@ -1444,8 +1284,6 @@ print(dinerMenu.menuItems)
 // prints: ["Fries", "Burgers", "Toast"]
 ```
 
-
-
 ### Structural methods
 
 ```swift
@@ -1458,10 +1296,7 @@ let fido = Dog()
 fido.bark() // prints: Woof
 ```
 
-class
-----
-
-
+## class
 
 ### reference type (class) {.row-span-2}
 
@@ -1482,8 +1317,6 @@ print(player1.name) // Isabella
 print(player2.name) // Isabella
 ```
 
-
-
 ### instance of the class
 
 ```swift
@@ -1495,8 +1328,6 @@ class Person {
 var sonny = Person()
 // sonny is now an instance of Person
 ```
-
-
 
 ### init() method {.row-span-2}
 
@@ -1516,9 +1347,9 @@ Using the Fruit class
 ```swift
 let apple = Fruit(color: "red")
 ```
-A class can be initialized using the `init()` method and the corresponding initialization properties. In the `init()` method, the `self` keyword is used to refer to the actual instance of the class assigning property values
 
-
+A class can be initialized using the `init()` method and the corresponding initialization properties. In the `init()`
+method, the `self` keyword is used to refer to the actual instance of the class assigning property values
 
 ### Class Attributes
 
@@ -1530,8 +1361,6 @@ ferris.year = 12
 ferris.gpa = 3.81
 ferris.honors = false
 ```
-
-
 
 ### Inherit {.row-span-2}
 
@@ -1562,9 +1391,8 @@ class SavingsAccount: BankAccount {
 }
 ```
 
-The new `SavingsAccount` class (subclass) automatically gets all the characteristics of the `BankAccount` class (superclass). Additionally, the `SavingsAccount` class defines an `.interest` property and an `.addInterest()` method.
-
-
+The new `SavingsAccount` class (subclass) automatically gets all the characteristics of the `BankAccount` class
+(superclass). Additionally, the `SavingsAccount` class defines an `.interest` property and an `.addInterest()` method.
 
 ### Example
 
@@ -1588,6 +1416,7 @@ class Student {
   var honors = false
 }
 ```
+
 ### This is an example of a struct definition and a class definition
 
 ```swift
@@ -1603,18 +1432,15 @@ class VideoMode {
 }
 ```
 
-The `Resolution` structure definition and the `VideoMode` class definition only describe the appearance of `Resolution` or `VideoMode`, create an instance of the structure or class:
+The `Resolution` structure definition and the `VideoMode` class definition only describe the appearance of `Resolution`
+or `VideoMode`, create an instance of the structure or class:
 
 ```swift
 let resolution = Resolution(width: 1920)
 let someVideoMode = VideoMode()
 ```
 
-
-Enumerate
-----
-
-
+## Enumerate
 
 ### Define the enumeration
 
@@ -1631,8 +1457,6 @@ enum Day {
 
 let casualWorkday: Day = .friday
 ```
-
-
 
 ### Switch statement
 
@@ -1653,8 +1477,6 @@ switch customerOrder {
 // prints: "You ordered a red velvet cake"
 ```
 
-
-
 ### CaseIterable
 
 ```swift
@@ -1670,9 +1492,8 @@ for season in Season.allCases {
 }
 ```
 
-Add conformance to the `CaseIterable` protocol to access the `allCases` property, which returns an array of all cases of the enumeration
-
-
+Add conformance to the `CaseIterable` protocol to access the `allCases` property, which returns an array of all cases of
+the enumeration
 
 ### Original value
 
@@ -1685,8 +1506,6 @@ print("The Beatles are \(Beatle.john.rawValue).")
 // print: The Beatles are john.
 ```
 
-
-
 ### Related values
 
 ```swift
@@ -1698,8 +1517,6 @@ enum Dessert {
 
 let order: Dessert = .cake(flavor: "Red Velvet")
 ```
-
-
 
 ### instance method {.row-span-2}
 
@@ -1719,9 +1536,8 @@ currentTraffic.reportAccident()
 // currentTraffic is now .heavy
 ```
 
-Just like classes and structs, enumerations can have instance methods. If an instance method mutates the value of the enum, it needs to be marked `mutating`
-
-
+Just like classes and structs, enumerations can have instance methods. If an instance method mutates the value of the
+enum, it needs to be marked `mutating`
 
 ### Initialize from primitive value
 
@@ -1737,8 +1553,6 @@ print(hello1) // Optional(Hello.japanese)
 print(hello2) // nil
 ```
 
-
-
 ### Computed properties
 
 ```swift
@@ -1753,8 +1567,7 @@ enum ShirtSize: String {
 }
 ```
 
-Also See
-----
+## Also See
 
 - [Swift Documentation (Official)](https://www.swift.org/documentation/) _(swift.or)_
 - [Swift Programming Language (Official)](https://docs.swift.org/swift-book/) _(swift.or)_

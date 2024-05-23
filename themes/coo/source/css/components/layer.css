@@ -1,38 +1,37 @@
 @layer components {
-    .openAnimation {
-        animation: 200ms cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both running openAnimation;
-    }
+  .openAnimation {
+    animation: 200ms cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both running openAnimation;
+  }
 
-    .closeAnimation {
-        animation: 200ms cubic-bezier(0.4, 0, 1, 1) 0s 1 normal both running closeAnimation;
-    }
+  .closeAnimation {
+    animation: 200ms cubic-bezier(0.4, 0, 1, 1) 0s 1 normal both running closeAnimation;
+  }
 
-    .fadeIn {
-        @apply animate-in fade-in duration-100;
-    }
+  .fadeIn {
+    @apply duration-100 animate-in fade-in;
+  }
 }
 
-
 @keyframes openAnimation {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
 
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes closeAnimation {
-    from {
-        transform: scale(1);
-        opacity: 1;
-    }
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
 
-    to {
-        transform: scale(0.8);
-        opacity: 0;
-    }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
 }
