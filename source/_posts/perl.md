@@ -1,7 +1,7 @@
 ---
 title: Perl
 date: 2024-05-22 9:03:44
-background: bg-black
+background: bg-[#31719d]
 tags:
 categories:
   - Programming

@@ -2,13 +2,10 @@
 title: Sponsor
 date: 2021-12-11 14:37:13
 intro: |
-    We appreciate your help in order to pay for the hosting fees and ensuring I can spend enough time to create and optimize the cheatsheet webpage.
+  We appreciate your help in order to pay for the hosting fees and ensuring I can spend enough time to create and optimize the cheatsheet webpage.
 ---
 
-Sponsor
----------------
-
-
+## Sponsor
 
 ### Become a sponsor
 
@@ -24,9 +21,6 @@ Sponsor
         <span class="ml-3 text-white text-xl font-semibold leading-none">Buy me a coffee</span>
     </a>
 </div>
-
-
-
 
 ### Support with Crypto {.col-span-2}
 
@@ -47,19 +41,16 @@ Sponsor
 
 ### Sponsors {.col-span-3}
 
-
-| Name            | Amount  | Message                                                                           |
-|-----------------|---------|-----------------------------------------------------------------------------------|
-| Benjamin Schröer| $ 9.34  | Thanks for cheatsheets.zip!                                                           |
-| Fabian Barajas  | $ 10.00 |                                                                                   |
-| [Anonymous]     | $ 5.00  |                                                                                   |
-| [Anonymous]     | $ 20.00 | Your page is the best reference I've ever come across and I'm sharing it with everyone I know. Thanks so much for creating it! |
-| Tony Qu         | $ 20.00 | Thanks Man ! This looks nice. :-)                                                 |
-| [Anonymous]     | $ 25.00 | As a newcomer to Python, this looks incredibly useful. Thanks for your hard work! |
-| VimNewbie       | $ 10.00 | Awesome and elegant...  fantastic job!                                            |
-| Dave Hanson     | $ 50.00 | Nice.. great work...                                                              |
-| Alexander       | $ 40.00 | -                                                                                 |
-| Frpsi17         | $ 10.00 | I think I just found the greatest site for cheatsheets,Thanks                     |
-| [Anonymous]     | $ 5.00  | Awesome! Thank you!                                                               |
-
-
+| Name             | Amount  | Message                                                                                                                        |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Benjamin Schröer | $ 9.34  | Thanks for cheatsheets.zip!                                                                                                    |
+| Fabian Barajas   | $ 10.00 |                                                                                                                                |
+| [Anonymous]      | $ 5.00  |                                                                                                                                |
+| [Anonymous]      | $ 20.00 | Your page is the best reference I've ever come across and I'm sharing it with everyone I know. Thanks so much for creating it! |
+| Tony Qu          | $ 20.00 | Thanks Man ! This looks nice. :-)                                                                                              |
+| [Anonymous]      | $ 25.00 | As a newcomer to Python, this looks incredibly useful. Thanks for your hard work!                                              |
+| VimNewbie        | $ 10.00 | Awesome and elegant... fantastic job!                                                                                          |
+| Dave Hanson      | $ 50.00 | Nice.. great work...                                                                                                           |
+| Alexander        | $ 40.00 | -                                                                                                                              |
+| Frpsi17          | $ 10.00 | I think I just found the greatest site for cheatsheets,Thanks                                                                  |
+| [Anonymous]      | $ 5.00  | Awesome! Thank you!                                                                                                            |

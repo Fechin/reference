@@ -1,7 +1,7 @@
 ---
 title: Nim
 date: 2024-05-15 8:03:44
-background: bg-black
+background: bg-[#eed547]
 tags:
 categories:
   - Programming
@@ -520,7 +520,7 @@ p(3, 4) # now valid
 ```nim
 proc createWindow(x, y, width, height: int; title: string;  show: bool): Window = ...
 
-var w = createWindow(show = true, title = "My Aplication", x = 0, y = 0, height = 600, width = 800)
+var w = createWindow(show = true, title = "My Application", x = 0, y = 0, height = 600, width = 800)
 
 var w = createWindow(0, 0, title = "My Application",
                      height = 600, width = 800, true)

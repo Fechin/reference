@@ -3,19 +3,17 @@ title: GraphQL
 date: 2021-07-15 20:51:44
 background: bg-[#cc44a2]
 tags:
-    - query
-    - API
+  - query
+  - API
 categories:
-    - Programming
+  - Programming
 intro: |
-    This quick reference cheat sheet provides a brief overview of GraphQL.
+  This quick reference cheat sheet provides a brief overview of GraphQL.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-
-Getting Started
---------
+## Getting Started
 
 ### Overview
 
@@ -26,37 +24,31 @@ Getting Started
 - GraphQL syntax can express complex entity relations
 - Libraries to implement GraphQL in [different languages](https://graphql.org/code/)
 
-[GraphQL](https://graphql.org/)
-{.link-arrow}
-
+[GraphQL](https://graphql.org/) {.link-arrow}
 
 ### Schema
 
 |                |                                  |
-|----------------|----------------------------------|
+| -------------- | -------------------------------- |
 | `schema`       | GraphQL schema definition        |
 | `query`        | Read and traverse data           |
 | `mutation`     | Modify data or trigger an action |
 | `subscription` | Run a query when an event occurs |
 
-
-
 ### Built-in Scalar Types
 
 |           |                                              |
-|-----------|----------------------------------------------|
+| --------- | -------------------------------------------- |
 | `Int`     | Signed 32‐bit integer                        |
 | `Float`   | Signed double-precision floating-point value |
 | `String`  | UTF‐8 character sequence                     |
 | `Boolean` | true or false                                |
 | `ID`      | A Unique identifier                          |
 
-
-
 ### Type Definitions
 
 |             |                   |
-|-------------|-------------------|
+| ----------- | ----------------- |
 | `scalar`    | Scalar Type       |
 | `type`      | Object Type       |
 | `interface` | Interface Type    |
@@ -64,21 +56,20 @@ Getting Started
 | `enum`      | Enum Type         |
 | `input`     | Input Object Type |
 
-
-
 ### Type Modifiers
 
 |              |                                   |
-|--------------|-----------------------------------|
+| ------------ | --------------------------------- |
 | `String`     | Nullable String                   |
 | `String!`    | Non-null String                   |
 | `[String]`   | List of nullable Strings          |
 | `[String]!`  | Non-null list of nullable Strings |
 | `[String!]!` | Non-null list of non-null Strings |
 
-
 ### Input Arguments {.row-span-2}
+
 #### Basic Input
+
 ```js
 type Query {
     users(limit: Int): [User]
@@ -86,20 +77,20 @@ type Query {
 ```
 
 #### Input with default value
+
 ```js
 type Query {
     users(limit: Int = 10): [User]
 }
 ```
 
-
 #### Input with multiple arguments
+
 ```js
 type Query {
     users(limit: Int, sort: String): [User]
 }
 ```
-
 
 #### Input with multiple arguments and default values
 
@@ -115,9 +106,7 @@ type Query {
 }
 ```
 
-
 ### Input Types
-
 
 ```js
 input ListUsersInput {
@@ -134,7 +123,6 @@ type Mutation {
 
 ### Custom Scalars
 
-
 ```js
 scalar Url
 type User {
@@ -142,7 +130,6 @@ type User {
     homepage: Url
 }
 ```
-
 
 ### Interfaces
 
@@ -163,8 +150,8 @@ type Baz implements Foo, Goo {
     is_baz: Boolean
 }
 ```
-Object implementing one or more Interfaces
 
+Object implementing one or more Interfaces
 
 ### Unions
 
@@ -182,8 +169,8 @@ type Root {
     multiple: MultipleUnion
 }
 ```
-Union of one or more Objects
 
+Union of one or more Objects
 
 ### Enums
 
@@ -200,8 +187,6 @@ type Root {
 }
 ```
 
+## Also see
 
-
-Also see
--------
-* [GraphQL Schema Language Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet) _(github.com)_
+- [GraphQL Schema Language Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet) _(github.com)_

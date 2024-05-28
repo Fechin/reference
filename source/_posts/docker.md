@@ -3,52 +3,53 @@ title: Docker
 date: 2020-12-30 10:55:24
 background: bg-[#488fdf]
 tags:
-    - container
-    - virtual
+  - container
+  - virtual
 categories:
-    - Programming
+  - Programming
 intro: |
-    This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
+  This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Getting Started {.cols-2}
----------------
+## Getting Started {.cols-2}
 
-### Getting started 
+### Getting started
+
 Create and run a container in background
 
-```shell script 
+```shell script
 $ docker run -d -p 80:80 docker/getting-started
 ```
 
-----
+---
 
 - `-d` - Run the container in detached mode
-- `-p 80:80` -  Map port 80 to port 80 in the container
+- `-p 80:80` - Map port 80 to port 80 in the container
 - `docker/getting-started` - The image to use
+
 {.marker-none}
 
-
 Create and run a container in foreground
+
 ```shell script
 $ docker run -it -p 8001:8080 --name my-nginx nginx
 ```
 
-----
+---
 
 - `-it` - Interactive bash mode
 - `-p 8001:8080` - Map port 8001 to port 8080 in the container
 - `--name my-nginx` - Specify a name
 - `nginx` - The image to use
+
 {.marker-none}
 
+### General commands
 
-
-### General commands 
 | Example                             | Description                                      |
-|-------------------------------------|--------------------------------------------------|
+| ----------------------------------- | ------------------------------------------------ |
 | `docker ps`                         | List running containers                          |
 | `docker ps -a`                      | List all containers                              |
 | `docker ps -s`                      | List running containers<br>_(with CPU / memory)_ |
@@ -64,16 +65,12 @@ $ docker run -it -p 8001:8080 --name my-nginx nginx
 
 Parameter `<container>` can be container id or name
 
-
-
-
-Docker Containers {.cols-2}
-----------
-
+## Docker Containers {.cols-2}
 
 ### Starting & Stopping
-| Description                   | Example                             |
-|-------------------------------|-------------------------------------|
+
+| Description               | Example                             |
+| ------------------------- | ----------------------------------- |
 | `docker start my-nginx`   | Starting                            |
 | `docker stop my-nginx`    | Stopping                            |
 | `docker restart my-nginx` | Restarting                          |
@@ -83,14 +80,12 @@ Docker Containers {.cols-2}
 | `docker kill my-nginx`    | Sending a SIGKILL                   |
 | `docker attach my-nginx`  | Connecting to an Existing Container |
 
-
-
 ### Information
 
-| Example                       | Description                            |
-|-------------------------------|----------------------------------------|
-| `docker ps`                   | List running containers                |
-| `docker ps -a`                | List all containers                    |
+| Example                   | Description                            |
+| ------------------------- | -------------------------------------- |
+| `docker ps`               | List running containers                |
+| `docker ps -a`            | List all containers                    |
 | `docker logs my-nginx`    | Container Logs                         |
 | `docker inspect my-nginx` | Inspecting Containers                  |
 | `docker events my-nginx`  | Containers Events                      |
@@ -98,7 +93,6 @@ Docker Containers {.cols-2}
 | `docker top my-nginx`     | Running Processes                      |
 | `docker stats my-nginx`   | Container Resource Usage               |
 | `docker diff my-nginx`    | Lists the changes made to a container. |
-
 
 ### Creating
 
@@ -115,35 +109,39 @@ docker create [options] IMAGE
   -v, --volume `pwd`:/app    # mount (absolute paths needed)
   -e, --env NAME=hello       # env vars
 ```
+
 #### Example
+
 ```shell script
 $ docker create --name my_redis --expose 6379 redis:3.0.2
 ```
 
-
 ### Manipulating
+
 Renaming a Container
+
 ```shell script
 docker rename my-nginx my-nginx
 ```
+
 Removing a Container
+
 ```shell script
 docker rm my-nginx
 ```
+
 Updating a Container
+
 ```shell script
 docker update --cpu-shares 512 -m 300M my-nginx
 ```
 
-
-
-
-Docker Images {.cols-2}
-------
+## Docker Images {.cols-2}
 
 ### Manipulating
+
 | `Example`                          | Description                     |
-|------------------------------------|---------------------------------|
+| ---------------------------------- | ------------------------------- |
 | `docker images`                    | Listing images                  |
 | `docker rmi nginx`                 | Removing an image               |
 | `docker load < ubuntu.tar.gz`      | Loading a tarred repository     |
@@ -154,8 +152,8 @@ Docker Images {.cols-2}
 | `docker tag nginx eon01/nginx`     | Tagging an image                |
 | `docker push eon01/nginx`          | Pushing an image                |
 
-
 ### Building Images
+
 ```shell script
 $ docker build .
 $ docker build github.com/creack/docker-firefox
@@ -166,44 +164,48 @@ $ docker build -f myOtherDockerfile .
 $ curl example.com/remote/Dockerfile | docker build -f - .
 ```
 
-
-
-Docker Networking {.cols-2}
-----------
-
-
-
+## Docker Networking {.cols-2}
 
 ### Manipulating
 
 Removing a network
+
 ```shell script
 docker network rm MyOverlayNetwork
 ```
+
 Listing networks
+
 ```shell script
 docker network ls
 ```
+
 Getting information about a network
+
 ```shell script
 docker network inspect MyOverlayNetwork
 ```
+
 Connecting a running container to a network
+
 ```shell script
 docker network connect MyOverlayNetwork nginx
 ```
+
 Connecting a container to a network when it starts
+
 ```shell script
 docker run -it -d --network=MyOverlayNetwork nginx
 ```
+
 Disconnecting a container from a network
+
 ```shell script
 docker network disconnect MyOverlayNetwork nginx
 ```
 
-
-
 ### Creating Networks
+
 ```shell script
 docker network create -d overlay MyOverlayNetwork
 
@@ -222,19 +224,17 @@ docker network create -d overlay \
   MyOverlayNetwork
 ```
 
-
-
-Clean Up {.cols-2}
--------------
-
+## Clean Up {.cols-2}
 
 ### Clean All
+
 Cleans up dangling images, containers, volumes, and networks (ie, not associated with a container)
+
 ```shell
 docker system prune
 ```
 
--------
+---
 
 Additionally, remove any stopped containers and all unused images (not just dangling images)
 
@@ -242,16 +242,16 @@ Additionally, remove any stopped containers and all unused images (not just dang
 docker system prune -a
 ```
 
-
-
 ### Containers
 
 Stop all running containers
+
 ```shell
 docker stop $(docker ps -a -q)
 ```
 
 Delete stopped containers
+
 ```shell
 docker container prune
 ```
@@ -259,40 +259,35 @@ docker container prune
 ### Images
 
 Remove all dangling (not tagged and is not associated with a container) images:
+
 ```shell
 docker image prune
 ```
 
 Remove all images which are not used by existing containers
+
 ```shell
 docker image prune -a
 ```
-
 
 ### Volumes
 
 ```shell
 docker volume prune
 ```
+
 Remove all volumes not used by at least one container
 
-
-
-Miscellaneous {.cols-2}
--------------
-
+## Miscellaneous {.cols-2}
 
 ### Docker Hub
+
 | Docker Syntax               | Description                         |
-|-----------------------------|-------------------------------------|
+| --------------------------- | ----------------------------------- |
 | `docker search search_word` | Search docker hub for images.       |
 | `docker pull user/image   ` | Downloads an image from docker hub. |
 | `docker login             ` | Authenticate to docker hub          |
 | `docker push user/image   ` | Uploads an image to docker hub.     |
-
-
-
-
 
 ### Registry commands {.row-span-3}
 
@@ -331,26 +326,24 @@ $ docker push eon01/nginx
 $ docker push eon01/nginx localhost:5000/myadmin/nginx
 ```
 
-
-
 ### Batch clean
-|  Example                                     | Description                                            |
-|-------------|---------------------------------------------|
-`docker stop -f $(docker ps -a -q)` | Stopping all containers 
-`docker rm -f $(docker ps -a -q)` |  Removing all containers
-`docker rmi -f $(docker images -q)` | Removing all images
 
-
-
-
+| Example                             | Description             |
+| ----------------------------------- | ----------------------- |
+| `docker stop -f $(docker ps -a -q)` | Stopping all containers |
+| `docker rm -f $(docker ps -a -q)`   | Removing all containers |
+| `docker rmi -f $(docker images -q)` | Removing all images     |
 
 ### Volumes
 
 Check volumes
+
 ```shell script
 $ docker volume ls
 ```
+
 Cleanup unused volumes
+
 ```shell script
 $ docker volume prune
 ```

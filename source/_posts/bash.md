@@ -3,21 +3,20 @@ title: Bash
 date: 2020-11-25 18:28:43
 background: bg-[#3e4548]
 tags:
-    - shell
-    - sh
-    - echo
-    - script
-    - linux
+  - shell
+  - sh
+  - echo
+  - script
+  - linux
 categories:
-    - Programming
-    - Operating System
+  - Programming
+  - Operating System
 intro: This is a quick reference cheat sheet to getting started with linux bash shell scripting.
 plugins:
-    - copyCode
+  - copyCode
 ---
 
-Getting Started
----------------
+## Getting Started
 
 ### hello.sh
 
@@ -27,11 +26,12 @@ Getting Started
 VAR="world"
 echo "Hello $VAR!" # => Hello world!
 ```
+
 Execute the script
+
 ```shell script
 $ bash hello.sh
 ```
-
 
 ### Variables
 
@@ -47,8 +47,6 @@ echo "${NAME}!" # => John! (Variables)
 NAME = "John"   # => Error (about space)
 ```
 
-
-
 ### Comments
 
 ```bash
@@ -62,15 +60,13 @@ very neat comment
 in bash
 '
 ```
+
 Multi-line comments use `:'` to open and `'` to close
-
-
-
 
 ### Arguments {.row-span-2}
 
 | Expression  | Description                           |
-|-------------|---------------------------------------|
+| ----------- | ------------------------------------- |
 | `$1` … `$9` | Parameter 1 ... 9                     |
 | `$0`        | Name of the script itself             |
 | `$1`        | First argument                        |
@@ -83,7 +79,6 @@ Multi-line comments use `:'` to open and `'` to close
 | `$_`        | Last argument of the previous command |
 
 See: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables)
-
 
 ### Functions
 
@@ -114,10 +109,11 @@ See: [Conditionals](#bash-conditionals)
 ```bash
 echo {A,B}.js
 ```
+
 ---
 
 | Expression | Description         |
-|------------|---------------------|
+| ---------- | ------------------- |
 | `{A,B}`    | Same as `A B`       |
 | `{A,B}.js` | Same as `A.js B.js` |
 | `{1..5}`   | Same as `1 2 3 4 5` |
@@ -136,17 +132,12 @@ echo "I'm in `pwd`"
 
 See: [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsubst)
 
-
-
-Bash Parameter expansions
---------------------
-
-
+## Bash Parameter expansions
 
 ### Syntax {.row-span-2}
 
 | Code              | Description         |
-|-------------------|---------------------|
+| ----------------- | ------------------- |
 | `${FOO%suffix}`   | Remove suffix       |
 | `${FOO#prefix}`   | Remove prefix       |
 | `${FOO%%suffix}`  | Remove long suffix  |
@@ -155,31 +146,34 @@ Bash Parameter expansions
 | `${FOO//from/to}` | Replace all         |
 | `${FOO/%from/to}` | Replace suffix      |
 | `${FOO/#from/to}` | Replace prefix      |
+
 #### Substrings
+
 | Expression      | Description                    |
-|-----------------|--------------------------------|
+| --------------- | ------------------------------ |
 | `${FOO:0:3}`    | Substring _(position, length)_ |
 | `${FOO:(-3):3}` | Substring from the right       |
+
 #### Length
+
 | Expression | Description      |
-|------------|------------------|
+| ---------- | ---------------- |
 | `${#FOO}`  | Length of `$FOO` |
+
 #### Default values
+
 | Expression        | Description                              |
-|-------------------|------------------------------------------|
+| ----------------- | ---------------------------------------- |
 | `${FOO:-val}`     | `$FOO`, or `val` if unset                |
 | `${FOO:=val}`     | Set `$FOO` to `val` if unset             |
 | `${FOO:+val}`     | `val` if `$FOO` is set                   |
 | `${FOO:?message}` | Show message and exit if `$FOO` is unset |
-
-
 
 ### Substitution
 
 ```bash
 echo ${food:-Cake}  #=> $food or "Cake"
 ```
-
 
 ```bash
 STR="/path/to/foo.cpp"
@@ -196,7 +190,6 @@ echo ${STR##*/}     # foo.cpp
 echo ${STR/foo/bar} # /path/to/bar.cpp
 ```
 
-
 ### Slicing
 
 ```bash
@@ -212,17 +205,17 @@ echo ${name:(-2):2}    # => hn
 length=2
 echo ${name:0:length}  # => Jo
 ```
+
 See: [Parameter expansion](http://wiki.bash-hackers.org/syntax/pe)
 
-
-
 ### basepath & dirpath
+
 ```bash
 SRC="/path/to/foo.cpp"
 ```
 
 ```bash
-BASEPATH=${SRC##*/}   
+BASEPATH=${SRC##*/}
 echo $BASEPATH  # => "foo.cpp"
 
 
@@ -230,12 +223,7 @@ DIRPATH=${SRC%$BASEPATH}
 echo $DIRPATH   # => "/path/to/"
 ```
 
-
-
-
-
-
-### Transform 
+### Transform
 
 ```bash
 STR="HELLO WORLD!"
@@ -251,11 +239,7 @@ echo "${ARR[@],}" # => hello world
 echo "${ARR[@]^}" # => Hello World
 ```
 
-
-
-
-Bash Arrays 
-------
+## Bash Arrays
 
 ### Defining arrays
 
@@ -277,12 +261,10 @@ declare -a Numbers=(1 2 3)
 Numbers+=(4 5) # Append => 1 2 3 4 5
 ```
 
-
-
 ### Indexing
 
 | -                  | -             |
-|--------------------|---------------|
+| ------------------ | ------------- |
 | `${Fruits[0]}`     | First element |
 | `${Fruits[-1]}`    | Last element  |
 | `${Fruits[*]}`     | All elements  |
@@ -293,8 +275,6 @@ Numbers+=(4 5) # Append => 1 2 3 4 5
 | `${Fruits[@]:3:2}` | Range         |
 | `${!Fruits[@]}`    | Keys of all   |
 
-
-
 ### Iteration
 
 ```bash
@@ -304,14 +284,15 @@ for e in "${Fruits[@]}"; do
     echo $e
 done
 ```
+
 #### With index
+
 ```bash
 for i in "${!Fruits[@]}"; do
   printf "%s\t%s\n" "$i" "${Fruits[$i]}"
 done
 
 ```
-
 
 ### Operations {.col-span-2}
 
@@ -326,6 +307,7 @@ lines=(`cat "logfile"`)                  # Read from file
 ```
 
 ### Arrays as arguments
+
 ```bash
 function extract()
 {
@@ -337,12 +319,7 @@ Fruits=('Apple' 'Banana' 'Orange')
 extract Fruits 2     # => Orangle
 ```
 
-
-
-
-
-Bash Dictionaries
-------------
+## Bash Dictionaries
 
 ### Defining
 
@@ -356,7 +333,6 @@ sounds[cow]="moo"
 sounds[bird]="tweet"
 sounds[wolf]="howl"
 ```
-
 
 ### Working with dictionaries
 
@@ -375,24 +351,21 @@ for val in "${sounds[@]}"; do
     echo $val
 done
 ```
+
 ---
+
 ```bash
 for key in "${!sounds[@]}"; do
     echo $key
 done
 ```
 
-
-
-
-
-Bash Conditionals
-------------
+## Bash Conditionals
 
 ### Integer conditions
 
 | Condition           | Description                                 |
-|---------------------|---------------------------------------------|
+| ------------------- | ------------------------------------------- |
 | `[[ NUM -eq NUM ]]` | <yel>Eq</yel>ual                            |
 | `[[ NUM -ne NUM ]]` | <yel>N</yel>ot <yel>e</yel>qual             |
 | `[[ NUM -lt NUM ]]` | <yel>L</yel>ess <yel>t</yel>han             |
@@ -404,11 +377,10 @@ Bash Conditionals
 | `(( NUM > NUM ))`   | Greater than                                |
 | `(( NUM >= NUM ))`  | Greater than or equal                       |
 
-
 ### String conditions
 
 | Condition          | Description                 |
-|--------------------|-----------------------------|
+| ------------------ | --------------------------- |
 | `[[ -z STR ]]`     | Empty string                |
 | `[[ -n STR ]]`     | <yel>N</yel>ot empty string |
 | `[[ STR == STR ]]` | Equal                       |
@@ -418,14 +390,10 @@ Bash Conditionals
 | `[[ STR != STR ]]` | Not Equal                   |
 | `[[ STR =~ STR ]]` | Regexp                      |
 
-
-
-
-
-
 ### Example {.row-span-3}
 
 #### String
+
 ```bash
 if [[ -z "$string" ]]; then
     echo "String is empty"
@@ -437,6 +405,7 @@ fi
 ```
 
 #### Combinations
+
 ```bash
 if [[ X && Y ]]; then
     ...
@@ -444,6 +413,7 @@ fi
 ```
 
 #### Equal
+
 ```bash
 if [[ "$A" == "$B" ]]; then
     ...
@@ -451,6 +421,7 @@ fi
 ```
 
 #### Regex
+
 ```bash
 if [[ '1. abc' =~ ([a-z]+) ]]; then
     echo ${BASH_REMATCH[1]}
@@ -458,6 +429,7 @@ fi
 ```
 
 #### Smaller
+
 ```bash
 if (( $a < $b )); then
    echo "$a is smaller than $b"
@@ -465,20 +437,17 @@ fi
 ```
 
 #### Exists
+
 ```bash
 if [[ -e "file.txt" ]]; then
     echo "file exists"
 fi
 ```
 
-
-
-
-
 ### File conditions {.row-span-2}
 
 | Condition         | Description                            |
-|-------------------|----------------------------------------|
+| ----------------- | -------------------------------------- |
 | `[[ -e FILE ]]`   | <yel>E</yel>xists                      |
 | `[[ -d FILE ]]`   | <yel>D</yel>irectory                   |
 | `[[ -f FILE ]]`   | <yel>F</yel>ile                        |
@@ -491,18 +460,17 @@ fi
 | `[[ f1 -ot f2 ]]` | f2 <yel>o</yel>lder <yel>t</yel>han f1 |
 | `[[ f1 -ef f2 ]]` | Same files                             |
 
-
 ### More conditions
 
 | Condition            | Description          |
-|----------------------|----------------------|
+| -------------------- | -------------------- | ----- | --- |
 | `[[ -o noclobber ]]` | If OPTION is enabled |
 | `[[ ! EXPR ]]`       | Not                  |
 | `[[ X && Y ]]`       | And                  |
-| `[[ X || Y ]]`       | Or                   |
-
+| `[[ X                |                      | Y ]]` | Or  |
 
 ### logical and, or
+
 ```bash
 if [ "$1" = 'y' -a $2 -gt 0 ]; then
     echo "yes"
@@ -513,10 +481,7 @@ if [ "$1" = 'n' -o $2 -lt 0 ]; then
 fi
 ```
 
-
-
-Bash Loops
------
+## Bash Loops
 
 ### Basic for loop
 
@@ -542,7 +507,6 @@ for i in {1..5}; do
 done
 ```
 
-
 #### With step size
 
 ```bash
@@ -550,8 +514,6 @@ for i in {5..50..5}; do
     echo "Welcome $i"
 done
 ```
-
-
 
 ### Auto increment
 
@@ -573,7 +535,6 @@ while [[ $i -gt 0 ]]; do
 done
 ```
 
-
 ### Continue
 
 ```bash {data=3,5}
@@ -584,7 +545,6 @@ for number in $(seq 1 3); do
     echo "$number"
 done
 ```
-
 
 ### Break
 
@@ -600,6 +560,7 @@ done
 ```
 
 ### Until
+
 ```bash
 count=0
 until [ $count -gt 10 ]; do
@@ -608,8 +569,7 @@ until [ $count -gt 10 ]; do
 done
 ```
 
-
-### Forever 
+### Forever
 
 ```bash
 while true; do
@@ -618,12 +578,12 @@ done
 ```
 
 ### Forever (shorthand)
+
 ```bash
 while :; do
     # here is some code.
 done
 ```
-
 
 ### Reading lines
 
@@ -633,12 +593,7 @@ cat file.txt | while read line; do
 done
 ```
 
-
-
-
-
-Bash Functions
----------
+## Bash Functions
 
 ### Defining functions
 
@@ -688,10 +643,7 @@ else
 fi
 ```
 
-
-
-Bash Options  {.cols-2}
--------
+## Bash Options {.cols-2}
 
 ### Options
 
@@ -702,10 +654,10 @@ set -o noclobber
 
 # Used to exit upon error
 # avoiding cascading errors
-set -o errexit   
+set -o errexit
 
 # Unveils hidden failures
-set -o pipefail  
+set -o pipefail
 
 # Exposes unset variables
 set -o nounset
@@ -714,33 +666,31 @@ set -o nounset
 ### Glob options
 
 ```bash
-# Non-matching globs are removed  
+# Non-matching globs are removed
 # ('*.foo' => '')
-shopt -s nullglob   
+shopt -s nullglob
 
 # Non-matching globs throw errors
-shopt -s failglob  
+shopt -s failglob
 
 # Case insensitive globs
-shopt -s nocaseglob 
+shopt -s nocaseglob
 
-# Wildcards match dotfiles 
+# Wildcards match dotfiles
 # ("*.sh" => ".foo.sh")
-shopt -s dotglob    
+shopt -s dotglob
 
-# Allow ** for recursive matches 
+# Allow ** for recursive matches
 # ('lib/**/*.rb' => 'lib/a/b/c.rb')
-shopt -s globstar   
+shopt -s globstar
 ```
 
-
-Bash History {.cols-2}
--------
+## Bash History {.cols-2}
 
 ### Commands
 
 | Command               | Description                               |
-|-----------------------|-------------------------------------------|
+| --------------------- | ----------------------------------------- |
 | `history`             | Show history                              |
 | `sudo !!`             | Run the previous command with sudo        |
 | `shopt -s histverify` | Don't execute expanded result immediately |
@@ -748,7 +698,7 @@ Bash History {.cols-2}
 ### Expansions
 
 | Expression   | Description                                          |
-|--------------|------------------------------------------------------|
+| ------------ | ---------------------------------------------------- |
 | `!$`         | Expand last parameter of most recent command         |
 | `!*`         | Expand all parameters of most recent command         |
 | `!-n`        | Expand `n`th most recent command                     |
@@ -758,7 +708,7 @@ Bash History {.cols-2}
 ### Operations
 
 | Code                 | Description                                                           |
-|----------------------|-----------------------------------------------------------------------|
+| -------------------- | --------------------------------------------------------------------- |
 | `!!`                 | Execute last command again                                            |
 | `!!:s/<FROM>/<TO>/`  | Replace first occurrence of `<FROM>` to `<TO>` in most recent command |
 | `!!:gs/<FROM>/<TO>/` | Replace all occurrences of `<FROM>` to `<TO>` in most recent command  |
@@ -770,7 +720,7 @@ Bash History {.cols-2}
 ### Slices
 
 | Code     | Description                                                                              |
-|----------|------------------------------------------------------------------------------------------|
+| -------- | ---------------------------------------------------------------------------------------- |
 | `!!:n`   | Expand only `n`th token from most recent command (command is `0`; first argument is `1`) |
 | `!^`     | Expand first argument from most recent command                                           |
 | `!$`     | Expand last token from most recent command                                               |
@@ -779,9 +729,7 @@ Bash History {.cols-2}
 
 `!!` can be replaced with any valid expansion i.e. `!cat`, `!-2`, `!42`, etc.
 
-
-Miscellaneous 
--------------
+## Miscellaneous
 
 ### Numeric calculations
 
@@ -800,14 +748,12 @@ $(($RANDOM%200))  # Random number 0..199
 pwd # still in first directory
 ```
 
-
 ### Inspecting commands
 
 ```bash
 command -V cd
 #=> "cd is a function/alias/whatever"
 ```
-
 
 ### Redirection {.row-span-2 .col-span-2}
 
@@ -823,7 +769,6 @@ python hello.py &>/dev/null    # stdout and stderr to (null)
 ```bash
 python hello.py < foo.txt      # feed foo.txt to stdin for python
 ```
-
 
 ### Source relative
 
@@ -851,7 +796,6 @@ case "$1" in
 esac
 ```
 
-
 ### Trap errors {.col-span-2}
 
 ```bash
@@ -868,7 +812,6 @@ traperr() {
 set -o errtrace
 trap traperr ERR
 ```
-
 
 ### printf
 
@@ -901,7 +844,7 @@ esac; shift; done
 if [[ "$1" == '--' ]]; then shift; fi
 ```
 
-### Check for command's result  {.col-span-2}
+### Check for command's result {.col-span-2}
 
 ```bash
 if ping -c 1 google.com; then
@@ -909,11 +852,10 @@ if ping -c 1 google.com; then
 fi
 ```
 
-
-### Special variables  {.row-span-2}
+### Special variables {.row-span-2}
 
 | Expression | Description                  |
-|------------|------------------------------|
+| ---------- | ---------------------------- |
 | `$?`       | Exit status of last task     |
 | `$!`       | PID of last background task  |
 | `$$`       | PID of shell                 |
@@ -921,8 +863,7 @@ fi
 
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
-
-### Grep check  {.col-span-2}
+### Grep check {.col-span-2}
 
 ```bash
 if grep -q 'foo' ~/.bash_history; then
@@ -930,10 +871,9 @@ if grep -q 'foo' ~/.bash_history; then
 fi
 ```
 
-
 ### Backslash escapes {.row-span-2}
 
-- &nbsp; 
+- &nbsp;
 - \!
 - \"
 - \#
@@ -956,13 +896,10 @@ fi
 - \$
 - \*
 - \?
+
 {.cols-4 .marker-none}
 
-
 Escape these special characters with `\`
-
-
-
 
 ### Heredoc
 
@@ -971,7 +908,6 @@ cat <<END
 hello world
 END
 ```
-
 
 ### Go to previous directory
 
@@ -982,7 +918,6 @@ pwd # /home/user/foo/bar
 cd -
 pwd # /home/user/foo
 ```
-
 
 ### Reading input
 
@@ -996,14 +931,12 @@ echo $ans
 read -n 1 ans    # Just one character
 ```
 
-
 ### Conditional execution
 
 ```bash
 git commit && git push
 git commit || echo "Commit failed"
 ```
-
 
 ### Strict mode
 
@@ -1013,7 +946,6 @@ IFS=$'\n\t'
 ```
 
 See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-
 
 ### Optional arguments
 
@@ -1026,13 +958,12 @@ echo "${args[@]}"
 
 Put the arguments into an array and then append
 
-
-
 ## Also see {.cols-1}
-* [Devhints](https://devhints.io/bash) _(devhints.io)_
-* [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_
-* [Shell vars](http://wiki.bash-hackers.org/syntax/shellvars) _(bash-hackers.org)_
-* [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
-* [Bash Guide](http://mywiki.wooledge.org/BashGuide) _(mywiki.wooledge.org)_
-* [ShellCheck](https://www.shellcheck.net/) _(shellcheck.net)_
-* [shell - Standard Shell](https://devmanual.gentoo.org/tools-reference/bash/index.html) _(devmanual.gentoo.org)_
+
+- [Devhints](https://devhints.io/bash) _(devhints.io)_
+- [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_
+- [Shell vars](http://wiki.bash-hackers.org/syntax/shellvars) _(bash-hackers.org)_
+- [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
+- [Bash Guide](http://mywiki.wooledge.org/BashGuide) _(mywiki.wooledge.org)_
+- [ShellCheck](https://www.shellcheck.net/) _(shellcheck.net)_
+- [shell - Standard Shell](https://devmanual.gentoo.org/tools-reference/bash/index.html) _(devmanual.gentoo.org)_

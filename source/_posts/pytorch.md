@@ -58,7 +58,6 @@ onnx.helper.printable_graph(model.graph)               # print a human readable
 
 ### Vision
 
-
 ```
 from torchvision import datasets, models, transforms     # vision datasets,
                                                          # architectures &

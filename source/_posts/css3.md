@@ -1333,22 +1333,9 @@ main {
 ## Also see {.cols-1}
 
 - [frontendmasters.com ](https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-spring-2024-edition/)
-
 - [CSS selectors cheatsheet](https://frontend30.com/css-selectors-cheatsheet/) _(frontend30.com)_
 - [MDN: Using CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)
 - [Ultimate flexbox cheatsheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
 - [GRID: A simple visual cheatsheet](http://grid.malven.co/)
 - [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Browser support](https://caniuse.com/#feat=css-grid)
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```

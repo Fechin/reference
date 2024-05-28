@@ -2,25 +2,24 @@
 title: MIME types
 date: 2020-04-03 17:28:43
 tags:
-    - media type
+  - media type
 categories:
-    - Other
+  - Other
 intro: |
-    This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
+  This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
 ---
 
-
-Getting Started {.cols-2}
----------------
+## Getting Started {.cols-2}
 
 ### Introduction
+
 - The MIME type registry associates particular filename extensions and filename pattern
 - MIME (Multipurpose Internet Mail Extensions) type aka media type
 - MIME types are defined and standardized in IETF's RFC 6838
 - Indicates the nature and format of a document, file, or assortment of bytes.
 - For file formats or format contents on the Internet
-  {.marker-round}
 
+  {.marker-round}
 
 ### Multi-format of MIME types
 
@@ -47,15 +46,15 @@ Getting Started {.cols-2}
 - [BBCode](https://tableconvert.com/html-to-bbcode?data=https://cheatsheets.zip/mime#TableGenerator)
 - [PDF](https://tableconvert.com/html-to-pdf?data=https://cheatsheets.zip/mime#TableGenerator)
 - [JPEG](https://tableconvert.com/html-to-jpeg?data=https://cheatsheets.zip/mime#TableGenerator)
+
 {.cols-4 .marker-none}
 
-
-Lists of MIME types {.cols-1}
--------------------
+## Lists of MIME types {.cols-1}
 
 ### Common MIME (Media) types
+
 | Extension       | Kind of document                                 | MIME Type \(Content Type\)                                                                                                               |
-|-----------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------- | ------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------- |
 | \.aac           | AAC audio                                        | audio/aac                                                                                                                                |
 | \.abw           | AbiWord document                                 | application/x\-abiword                                                                                                                   |
 | \.arc           | Archive document \(multiple files embedded\)     | application/x\-freearc                                                                                                                   |
@@ -127,8 +126,5 @@ Lists of MIME types {.cols-1}
 | \.3g2           | 3GPP2 audio/video container                      | video/3gpp2 audio/3gpp2 if it doesn't contain video                                                                                      |
 | \.7z            | 7\-zip archive                                   | application/x\-7z\-compressed                                                                                                            |
 | \.markdown \.md | Markdown File                                    | text/markdown                                                                                                                            |
- {.show-header}
 
-
-
-
+{.show-header}
