@@ -249,10 +249,7 @@ p:first-child {
 | `div,p`      | All divs and paragraphs     |
 | `#idname *`  | All elements inside #idname |
 
-See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) /
-[Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) /
-[ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) /
-[Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors
+See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) / [Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) / [ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) / [Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors
 
 ### Combinators
 
@@ -265,9 +262,7 @@ See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors
 | `div + p`       | P tags immediately after div          |
 | `div ~ p`       | P tags preceded by div                |
 
-See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) /
-[Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) /
-[Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
+See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) / [Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) / [Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
 
 ### Attribute selectors
 
@@ -354,11 +349,12 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 | `letter-spacing:` | \<size>         |
 | `line-height:`    | \<number>       |
 
-| `font-weight:` | \<number> / bold / normal | | `font-style:` | italic / normal | | `text-decoration:` | underline /
-none |
+| `font-weight:` | \<number> / bold / normal |
+| `font-style:` | italic / normal |
+| `text-decoration:` | underline / none |
 
-| `text-align:` | left / right<br>center / justify | | `text-transform:` | capitalize / uppercase / lowercase |
-
+| `text-align:` | left / right<br>center / justify |
+| `text-transform:` | capitalize / uppercase / lowercase |
 {.left-text}
 
 See also: [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
@@ -457,17 +453,17 @@ color: currentcolor; /* keyword */
 
 ### Properties {.row-span-2}
 
-| Property                 | Description                                |
-| ------------------------ | ------------------------------------------ |
-| `background:`            | _(Shorthand)_                              |
-| `background-color:`      | See: [Colors](#css-colors)                 |
-| `background-image:`      | url(...)                                   |
-| `background-position:`   | left/center/right<br/>top/center/bottom    |
-| `background-size:`       | cover X Y                                  |
-| `background-clip:`       | border-box<br/>padding-box<br/>content-box |
-| `background-repeat:`     | no-repeat<br/>repeat-x<br/>repeat-y        |
-| `background-attachment:` | scroll/fixed/local                         |
+| Property      | Description   |
+| ------------- | ------------- |
+| `background:` | _(Shorthand)_ |
 
+| `background-color:` | See: [Colors](#css-colors) |
+| `background-image:` | url(...) |
+| `background-position:` | left/center/right<br/>top/center/bottom |
+| `background-size:` | cover X Y |
+| `background-clip:` | border-box<br/>padding-box<br/>content-box |
+| `background-repeat:` | no-repeat<br/>repeat-x<br/>repeat-y |
+| `background-attachment:` | scroll/fixed/local |
 {.left-text}
 
 ### Shorthand {.secondary .col-span-2}
@@ -483,12 +479,16 @@ color: currentcolor; /* keyword */
 ```css {.wrap}
 background: url(img_man.jpg) no-repeat center;
 
-background:
-  url(img_flwr.gif) right bottom no-repeat,
-  url(paper.gif) left top repeat;
+background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top
+    repeat;
 
 background: rgb(2, 0, 36);
-background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 232, 230, 1) 35%, rgba(0, 212, 255, 1) 100%);
+background: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(13, 232, 230, 1) 35%,
+  rgba(0, 212, 255, 1) 100%
+);
 ```
 
 ## CSS The Box Model
@@ -502,10 +502,7 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 232, 230, 1) 3
 }
 ```
 
-See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) /
-[min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) /
-[max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) /
-[min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
+See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) / [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) / [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) / [min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
 
 ### Margin / Padding
 
@@ -516,8 +513,7 @@ See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width
 }
 ```
 
-See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) /
-[Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) / [Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 ### Box-sizing
 
@@ -657,12 +653,12 @@ align-items: stretch; /* same height on all (default) */
 ```
 
 ```css
-justify-content: flex-start; /*    [xxx        ] */
-justify-content: center; /*        [    xxx    ] */
-justify-content: flex-end; /*      [        xxx] */
+justify-content: flex-start; /* [xxx        ] */
+justify-content: center; /* [    xxx    ] */
+justify-content: flex-end; /* [        xxx] */
 justify-content: space-between; /* [x    x    x] */
-justify-content: space-around; /*  [ x   x   x ] */
-justify-content: space-evenly; /*  [  x  x  x  ] */
+justify-content: space-around; /* [ x   x   x ] */
+justify-content: space-evenly; /* [  x  x  x  ] */
 ```
 
 }
@@ -772,7 +768,8 @@ A fixed-height top bar and a dynamic-height content area.
 }
 ```
 
-This creates columns that have different widths, but size accordingly according to the circumstances.
+This creates columns that have different widths, but size accordingly according
+to the circumstances.
 
 ### Vertical
 
@@ -1035,8 +1032,307 @@ html {
 
 [Click me](#css-getting-started), the page will scroll smoothly to Getting started
 
+## Modern CSS
+
+### CONTAINER QUERIES (SIZE)
+
+```css
+.element-wrap {
+  container: element / inline-size;
+}
+@container element (min-inline-size: 300px) {
+  .element {
+    display: flex;
+    gap: 1rem;
+  }
+}
+```
+
+### CONTAINER QUERIES (STYLE)
+
+```css
+.container {
+  --variant: 1;
+
+  &.variant2 {
+    --variant: 2;
+  }
+}
+
+@container style(--variant: 1) {
+  button {
+  } /* You can't style .container, but can select inside it */
+  .other-things {
+  }
+}
+
+@container style(--variant: 2) {
+  button {
+  }
+  .whatever {
+  }
+}
+```
+
+### CONTAINER UNITS
+
+- The units are cqw (“container query width”),
+- cqh (“container query height”),
+- cqi (“container query inline”),
+- cqb (“container query block”),
+- cqmin (smaller of cqi and cqb),
+- and cqmax (larger of cqi and cqb)
+
+```css
+.card {
+  padding: 5cqi;
+  font-size: 4cqi;
+  border: 1cqi solid brown;
+  height: 100%;
+}
+
+h2 {
+  font-size: 10cqi;
+  margin-block: 0 3cqi;
+}
+```
+
+### THE :HAS() PSEUDO SELECTOR
+
+```css
+figure:has(figcaption) {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+```
+
+### NESTING
+
+```css
+.cards {
+  .card {
+    & .card-description {
+      color: blue;
+    }
+    & .card-title {
+      color: red;
+    }
+  }
+}
+```
+
+###
+
+### SCOPING @scope
+
+```css
+@scope {
+  :scope {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+  }
+  .card {
+    padding: 1rem;
+    border: 1px solid black;
+    background: lightgray;
+    h2 {
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+```
+
+### CASCADE LAYERS
+
+```css
+/* Specify the order to apply styles in cascade */
+@layer legacyCard, newCard;
+
+/* Imagine you have a lot of styles */
+@layer newCard {
+  .card {
+    background-color: red;
+  }
+}
+@layer legacyCard {
+  .card {
+    background-color: green;
+  }
+}
+```
+
+### LOGICAL PROPERTIES
+
+```css
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  font: inherit;
+  border-radius: 4px;
+  .icon {
+    position: relative;
+    top: 0.125em;
+    fill: white;
+    width: 1em;
+    aspect-ratio: 1;
+    margin-inline-end: 0.25rem;
+  }
+}
+```
+
+### P3 COLORS
+
+```html
+<div class="container">
+  <div class="swatch">
+    <style contenteditable>
+      @scope {
+        :scope {
+          background-color: color(display-p3 1 0.5 0);
+        }
+      }
+    </style>
+  </div>
+  <div class="swatch">
+    <style contenteditable>
+      @scope {
+        :scope {
+          background-color: oklch(61.88% 0.286 342.4);
+        }
+      }
+    </style>
+  </div>
+  <div class="swatch">
+    <style contenteditable>
+      @scope {
+        :scope {
+          background-color: oklab(0.73 0.15 0.16);
+        }
+      }
+    </style>
+  </div>
+
+  <div class="swatch">
+    <style contenteditable>
+      @scope {
+        :scope {
+          background-image: linear-gradient(to right in oklch, red, blue);
+        }
+      }
+    </style>
+  </div>
+
+  <div class="swatch">
+    <style contenteditable>
+      @scope {
+        :scope {
+          background-image: linear-gradient(to right in oklab, red, blue);
+        }
+      }
+    </style>
+  </div>
+
+  <div class="swatch">
+    <style contenteditable>
+      @scope {
+        :scope {
+          background-image: linear-gradient(to right in srgb, red, blue);
+        }
+      }
+    </style>
+  </div>
+</div>
+```
+
+### COLOR MIXING
+
+```css
+.swatch {
+  color: white;
+  width: 100px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  &:nth-child(1) {
+    background-color: var(--bg);
+  }
+  &:nth-child(2) {
+    background-color: color-mix(in oklch, var(--bg), black 30%);
+  }
+  &:nth-child(3) {
+    background-color: color-mix(in oklch, var(--bg), white 30%);
+  }
+}
+```
+
+### MARGIN TRIM
+
+```css
+.container {
+  /* prevent "extra" margin at the end of the element */
+  margin-trim: block-end;
+
+  /* an element like this might be the culprit, but it could be anything */
+  > p {
+    margin-block-end: 1rem;
+  }
+}
+```
+
+### TEXT WRAPPING
+
+```css
+.balance {
+  text-wrap: balance;
+}
+.pretty {
+  text-wrap: pretty;
+}
+
+html {
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  max-inline-size: 60ch;
+  margin-inline: auto;
+}
+```
+
+### SUBGRID
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
+
+.item {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: repeat(3, 80px);
+}
+
+.subitem {
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
+}
+```
+
 ## Also see {.cols-1}
 
+- [frontendmasters.com ](https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-spring-2024-edition/)
 - [CSS selectors cheatsheet](https://frontend30.com/css-selectors-cheatsheet/) _(frontend30.com)_
 - [MDN: Using CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)
 - [Ultimate flexbox cheatsheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
