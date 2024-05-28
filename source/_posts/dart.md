@@ -217,6 +217,28 @@ for(var number in numbers){
 }
 ```
 
+
+### for in loop
+
+```dart
+  // Define a list of numbers
+  var numbers = [1, 2, 3, 4, 5];
+
+  // Use a for-in loop to iterate over the list
+  for (var number in numbers) {
+    print(number);
+  }
+
+  // Define a list of strings
+  var fruits = ['Apple', 'Banana', 'Cherry'];
+
+  // Use a for-in loop to iterate over the list
+  for (var fruit in fruits) {
+    print(fruit);
+  }
+```
+
+
 ## Collections {.cols-2}
 
 ### Lists
