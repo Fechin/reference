@@ -1034,7 +1034,7 @@ html {
 
 ## Modern CSS
 
-### CONTAINER QUERIES (SIZE)
+### container queries(size)
 
 ```css
 .element-wrap {
@@ -1048,7 +1048,7 @@ html {
 }
 ```
 
-### CONTAINER QUERIES (STYLE)
+### container qeries(style)
 
 ```css
 .container {
@@ -1074,7 +1074,7 @@ html {
 }
 ```
 
-### CONTAINER UNITS
+### container units
 
 - The units are cqw (“container query width”),
 - cqh (“container query height”),
@@ -1097,7 +1097,7 @@ h2 {
 }
 ```
 
-### THE :HAS() PSEUDO SELECTOR
+### the :has() pseudo selector
 
 ```css
 figure:has(figcaption) {
@@ -1106,7 +1106,7 @@ figure:has(figcaption) {
 }
 ```
 
-### NESTING
+### nesting
 
 ```css
 .cards {
@@ -1123,7 +1123,7 @@ figure:has(figcaption) {
 
 ###
 
-### SCOPING @scope
+### scoping
 
 ```css
 @scope {
@@ -1145,7 +1145,7 @@ figure:has(figcaption) {
 }
 ```
 
-### CASCADE LAYERS
+### cascade layers
 
 ```css
 /* Specify the order to apply styles in cascade */
@@ -1164,7 +1164,7 @@ figure:has(figcaption) {
 }
 ```
 
-### LOGICAL PROPERTIES
+### logical properties
 
 ```css
 button {
@@ -1186,7 +1186,7 @@ button {
 }
 ```
 
-### P3 COLORS
+### p3 colors
 
 ```html
 <div class="container">
@@ -1250,7 +1250,7 @@ button {
 </div>
 ```
 
-### COLOR MIXING
+### color mixing
 
 ```css
 .swatch {
@@ -1273,7 +1273,7 @@ button {
 }
 ```
 
-### MARGIN TRIM
+### margin trim
 
 ```css
 .container {
@@ -1287,7 +1287,7 @@ button {
 }
 ```
 
-### TEXT WRAPPING
+### text wrapping
 
 ```css
 .balance {
@@ -1307,7 +1307,7 @@ main {
 }
 ```
 
-### SUBGRID
+### subgrid
 
 ```css
 .grid {

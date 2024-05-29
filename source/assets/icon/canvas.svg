@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="1rem" height="1rem" viewBox="0 0 32 32" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg820" version="1.1">
+
+<defs id="defs814">
+
+<linearGradient gradientTransform="matrix(1.25 0 0 1.2 -484.714 468.561)" gradientUnits="userSpaceOnUse" y2="520.79797" x2="401.57144" y1="535.79797" x1="401.57144" id="linearGradient4358" xlink:href="#linearGradient4424"/>
+
+<linearGradient id="linearGradient4424">
+
+<stop style="stop-color:#60a5e7;stop-opacity:0" offset="0" id="stop4426"/>
+
+<stop style="stop-color:#a6f3fb;stop-opacity:.25773194" offset="1" id="stop4428"/>
+
+</linearGradient>
+
+</defs>
+
+<metadata id="metadata817">
+
+<rdf:RDF>
+
+<cc:Work>
+
+<dc:format>image/svg+xml</dc:format>
+
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+
+<dc:title/>
+
+<dc:date>2021</dc:date>
+
+<dc:creator>
+
+<cc:Agent>
+
+<dc:title>Timothée Giet</dc:title>
+
+</cc:Agent>
+
+</dc:creator>
+
+<cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+
+</cc:Work>
+
+<cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+
+<cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+
+<cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+
+<cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+
+<cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+
+<cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+
+<cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+
+</cc:License>
+
+</rdf:RDF>
+
+</metadata>
+
+<g transform="translate(0 -1090.52)" id="layer1">
+
+<path id="rect4122" transform="translate(0 1090.52)" d="M2 2v28h28V2zm2 2h24v24H4zm6 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3zm2 12-7 7h6l4-4zm8 0-7 7h14z" style="fill:#373737;fill-opacity:1;stroke:none;stroke-width:2.33333325"/>
+
+</g>
+
+</svg>
