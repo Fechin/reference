@@ -66,14 +66,10 @@ Overrides all previous styling rules.
 ### Selector
 
 ```css
-h1 {
-}
-#job-title {
-}
-div.hero {
-}
-div > p {
-}
+h1 { }
+#job-title { }
+div.hero { }
+div > p { }
 ```
 
 See: [Selectors](#css-selectors)
