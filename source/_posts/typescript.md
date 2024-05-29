@@ -1,7 +1,7 @@
 ---
 title: TypeScript
 date: 2024-05-28 22:12:25
-background: bg-[#ebd94e]
+background: bg-[#4476c0]
 tags:
   - ts
   - web
