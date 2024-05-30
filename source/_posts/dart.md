@@ -95,7 +95,7 @@ print(upperCase); //Print: NICOLA
 For multiline String we have to use ''' your text'''
 for example
 print('''My long string''');
-//this will show long strings
+//this will show long string
 //this will help for only long strings
 ```
 
