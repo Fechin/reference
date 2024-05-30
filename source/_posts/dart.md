@@ -96,6 +96,7 @@ For multiline String we have to use ''' your text'''
 for example
 print('''My long string''');
 //this will show long strings
+//this will help for only long strings
 ```
 
 
