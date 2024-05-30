@@ -276,7 +276,7 @@ Set<String> names = {}; // This works, too.
 // a map is an object that associates keys and values
 var person = Map<String, String>();
 // To initialize the map, do this:
-person['firstName'] = 'Nicola';
+ 
 person['lastName'] = 'Tesla';
 
 print(person); //Print: {firstName: Nicola, lastName: Tesla}
