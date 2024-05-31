@@ -1,7 +1,7 @@
 # 📖 Reference - Cheat Sheets for Developers
 
 [![love](https://badgen.net/badge/make%20with/love/pink)](#)
-[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
+[![License](https://badgen.net/badge/license/GPL-3.0/blue)](https://github.com/Fechin/reference/blob/main/LICENSE)
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/FechinLi?style=social)](https://twitter.com/FechinLi)
 
 Reference is a collection of cheat sheets contributed by open source angels. It shares a quick reference cheat sheet for
@@ -394,5 +394,5 @@ It's the perfect way to stay in the loop.
 
 ## 📃 License
 
-The project is licensed under the [MIT](https://github.com/Fechin/reference/blob/main/LICENSE) License and is maintained
+The project is licensed under the [GPL-3.0](https://github.com/Fechin/reference/blob/main/LICENSE) License and is maintained
 by [Fechin](https://github.com/Fechin).
