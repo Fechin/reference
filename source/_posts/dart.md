@@ -89,6 +89,16 @@ print(upperCase); //Print: NICOLA
 
 /* Comments like these are also supported. */
 ```
+### multiline String
+
+```dart
+For multiline String we have to use ''' your text'''
+for example
+print('''My long string''');
+//this will show long string
+//this will help for only long strings
+```
+
 
 ### Imports
 
@@ -276,7 +286,7 @@ Set<String> names = {}; // This works, too.
 // a map is an object that associates keys and values
 var person = Map<String, String>();
 // To initialize the map, do this:
-person['firstName'] = 'Nicola';
+ 
 person['lastName'] = 'Tesla';
 
 print(person); //Print: {firstName: Nicola, lastName: Tesla}
