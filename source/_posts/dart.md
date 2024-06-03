@@ -664,3 +664,41 @@ userObject?.userName?.toString()
 
 // The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null
 ```
+### enum in dart
+```dart
+defination: An enum (short for "enumeration") is a special data type that enables a variable to be a set of predefined constants. Enums are used to define variables that can only take one out of a small set of possible values. They help make code more readable and less error-prone by providing meaningful names to these sets of values.
+
+// Define the enum
+enum TrafficLight {
+  red,
+  yellow,
+  green
+}
+
+// A function that prints a message based on the traffic light state
+void printTrafficLightMessage(TrafficLight light) {
+  switch (light) {
+    case TrafficLight.red:
+      print('Stop!');
+      break;
+    case TrafficLight.yellow:
+      print('Get ready...');
+      break;
+    case TrafficLight.green:
+      print('Go!');
+      break;
+  }
+}
+
+void main() {
+  // Example usage of the enum
+  TrafficLight currentLight = TrafficLight.green;
+
+  // Print the message for the current traffic light state
+  printTrafficLightMessage(currentLight);
+}
+
+
+```
+
+
