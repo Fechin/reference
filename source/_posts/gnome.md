@@ -114,5 +114,5 @@ intro: |
 
 ## Also see
 
-- [Gnome Shell Cheatsheet](https://wiki.gnome.org/Projects/GnomeShell/CheatSheet#:~:text=Alt%2BF2%20allows%20entering%20a,double%2Dclick%20the%20window%20title.)
+- [Gnome Shell Cheatsheet](https://wiki.gnome.org/Projects/GnomeShell/CheatSheet)
   _(www.gnome.org)_
