@@ -1,7 +1,7 @@
 ---
-title: Gnome
+title: Gnome Desktop
 date: 2024-06-05 16:23:31.705009
-background: bg-[#4894e2]
+background: bg-[#5885c9]
 label:
 tags:
   -
@@ -110,6 +110,8 @@ intro: |
 | `Alt+Escape`              | Switch windows directly                |
 | `Alt+F6`                  | Switch windows of an app directly      |
 | `Super+`                  | Switch windows of an application       |
+
+{.shortcuts}
 
 
 ## Also see
