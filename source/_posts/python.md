@@ -53,7 +53,7 @@ Python can't declare a variable without assignment.
 | `bool`                             | Boolean  |
 | `bytes`, `bytearray`, `memoryview` | Binary   |
 
-See: [Data Types](#python-data-types)
+See: [Data Types](#python-built-in-data-types)
 
 ### Slicing String
 
