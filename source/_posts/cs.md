@@ -224,7 +224,7 @@ lengthOfString.Contains("How"); // => true
 | Term                          | Definition                                                                                                                                                                                          |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Runtime                       | A collection of services that are required to execute a given compiled unit of code.                                                                                                                |
-| Common Language Runtime (CLR) | Primarily locates, loads, and managed .NET objects. The CLR also handles memory management, application hosting, coordination of threads, performaing security checks, and other low-level details. |
+| Common Language Runtime (CLR) | Primarily locates, loads, and managed .NET objects. The CLR also handles memory management, application hosting, coordination of threads, performing security checks, and other low-level details. |
 | Managed code                  | Code that compiles and runs on .NET runtime. C#/F#/VB are examples.                                                                                                                                 |
 | Unmanaged code                | Code that compiles straight to machine code and cannot be directly hosted by the .NET runtime. Contains no free memory management, garbage collection, etc. DLLs created from C/C++ are examples.   |
 
