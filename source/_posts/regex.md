@@ -64,21 +64,23 @@ This is a quick cheat sheet to getting started with regular expressions.
 | `a*+`    | Possessive quantifier |
 
 ### Common Metacharacters
+| Pattern  | Description                                |
+| -------- | :----------------------------------------- |
+| `^`     | Matches the start of a string.             |
+| `{`     | Starts a quantifier for the number of occurrences. |
+| `+`     | Matches one or more of the preceding element. |
+| `<`     | Not a standard regex meta character (commonly used in HTML). |
+| `[`     | Starts a character class.                  |
+| `*`     | Matches zero or more of the preceding element. |
+| `)`     | Ends a capturing group.                    |
+| `>`     | Not a standard regex meta character (commonly used in HTML). |
+| `.`     | Matches any character except a newline.    |
+| `(`     | Starts a capturing group.                  |
+| `|`     | Acts as a logical OR within a regex pattern. |
+| `$`     | Matches the end of a string.               |
+| `\`     | Escapes a meta character, giving it literal meaning. |
+| `?`     | Matches zero or one of the preceding element. |
 
-- \^
-- \{
-- \+
-- \<
-- \[
-- \*
-- \)
-- \>
-- \.
-- \(
-- \|
-- \$
-- \\
-- \?
 
 {.cols-3 .marker-none}
 
