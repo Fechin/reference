@@ -360,9 +360,9 @@ A `.gitignore` file specifies intentionally untracked files that Git should igno
   $ git push origin -u <new_name>
   ```
 - #### **Delete** remote branch
-      ```shell script
-      $ git push origin --delete <old>
-      ```
+  ```shell script
+  $ git push origin --delete <old>
+  ```
   {.marker-timeline}
 
 ### Log
