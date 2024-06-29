@@ -257,6 +257,7 @@ intro:
 
 ### Legal assistant
 
+- [![Favicon](https://icon.horse/icon/draftdeep.com) DraftDeep](https://draftdeep.com)
 - [![Favicon](https://icon.horse/icon/donotpay.com) Donotpay](https://donotpay.com)
 - [![Favicon](https://icon.horse/icon/darrow.ai) Darrow ai](https://darrow.ai)
 - [![Favicon](https://icon.horse/icon/spellbook.legal) Spellbook](https://spellbook.legal)
