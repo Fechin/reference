@@ -178,6 +178,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/pictory.ai) Pictory](https://pictory.ai)
 - [![Favicon](https://icon.horse/icon/typestudio.co/tool/video-to-text) Type studio](https://typestudio.co/tool/video-to-text)
 - [![Favicon](https://icon.horse/icon/papercup.com) Papercup](https://papercup.com)
+- [![Favicon](https://icon.horse/icon/pixaivideo.com) Pix AI Video](https://pixaivideo.com/)
 
 {.icon-list .marker-none}
 
