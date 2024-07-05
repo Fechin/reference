@@ -2,7 +2,7 @@
 
 title: Pandas
 date: 2024-07-04
-background: bg-[#FFCE54]
+background: bg-[#110750]
 tags:
   - data analysis
   - data manipulation
