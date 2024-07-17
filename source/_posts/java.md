@@ -227,8 +227,8 @@ String s = 3 + 3 + 23;        // Incompatible types
 ### Comparison
 
 ```java
-String s1 = new String("QuickRef");
-String s2 = new String("QuickRef");
+String s1 = new String("cheatsheets.zip");
+String s2 = new String("cheatsheets.zip");
 
 s1 == s2          // false
 s1.equals(s2)     // true

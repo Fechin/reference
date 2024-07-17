@@ -984,8 +984,8 @@ See also: [Nullsafe Operator](https://wiki.php.net/rfc/nullsafe_operator)
 ### Regular expressions
 
 ```php
-$str = "Visit Quickref.me";
-echo preg_match("/qu/i", $str); # => 1
+$str = "Visit cheatsheets.zip";
+echo preg_match("/ch/i", $str); # => 1
 ```
 
 See: [Regex in PHP](/regex#regex-in-php)

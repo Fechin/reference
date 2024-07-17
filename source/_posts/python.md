@@ -155,9 +155,9 @@ message += "Part 2."
 ### f-Strings (Python 3.6+)
 
 ```python
->>> website = 'Quickref.ME'
+>>> website = 'cheatsheets.zip'
 >>> f"Hello, {website}"
-"Hello, Quickref.ME"
+"Hello, cheatsheets.zip"
 
 >>> num = 10
 >>> f'{num} + 10 = {num + 10}'
@@ -509,9 +509,9 @@ True
 ### f-Strings usage
 
 ```python
->>> website = 'Quickref.ME'
+>>> website = 'cheatsheets.zip'
 >>> f"Hello, {website}"
-"Hello, Quickref.ME"
+"Hello, cheatsheets.zip"
 
 >>> num = 10
 >>> f'{num} + 10 = {num + 10}'
