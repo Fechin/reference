@@ -23,6 +23,7 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Programming</summary>
 
+- [Perl](https://cheatsheets.zip/perl): The perl quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
 - [Kubernetes](https://cheatsheets.zip/kubernetes.html): This page contains a list of commonly used kubectl commands and
   flags.
 - [ES6](https://cheatsheets.zip/es6.html): A quick reference cheat sheet of what's new in JavaScript for ES2015, ES2016,
