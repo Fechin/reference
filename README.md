@@ -14,7 +14,7 @@ sheet that could be improved, feel free to submit a [pull request](#-contributin
 
 You can view the cheat sheets live at [https://cheatsheets.zip](https://cheatsheets.zip/)
 
-[![Quick reference](https://cheatsheets.zip/assets/image/preview.png?9nd1)](https://cheatsheets.zip)
+[![Quick reference](https://cheatsheets.zip/assets/image/preview.png?9nd3)](https://cheatsheets.zip)
 
 ## 📚 Cheat Sheets List
 
