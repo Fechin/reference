@@ -52,8 +52,8 @@ double height = 1.85; // floating-point numbers
 
 // You can also declare a variable as a num
 num x = 1;  // x can have both int and double values
-num += 2.5;
-print(num); //Print: 3.5
+x += 2.5;
+print(x); //Print: 3.5
 
 String name = "Nicola";
 
