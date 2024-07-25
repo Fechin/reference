@@ -14,8 +14,6 @@
 @import "components/search.css";
 @import "components/pagination.css";
 @import "components/common.css";
-@import "components/bsa_carbon.css";
-@import "components/bsa_custom.css";
 
 
 html {
