@@ -12,7 +12,7 @@ plugins:
   - copyCode
 ---
 
-## Geting Started
+## Getting Started
 
 ### Basic Setup
 
