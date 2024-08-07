@@ -68,7 +68,7 @@ let untrue = false
 
 
 
-### Varaibles
+### Variables
 ```ml
 (* data is immutable in ocaml *)
 let x = "a string"
