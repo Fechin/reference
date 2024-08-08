@@ -1,12 +1,17 @@
-node_modules/
-test
-*.log
-Dockerfile*
-README.md
-LICENSE
-style.tailwindcss
-
-.idea/
+# Directories
+.git/
 .github/
-.travis.yml
+.idea/
+node_modules/
+
+# Files
+.editorconfig
 .eslintignore
+.gitignore
+.travis.yml
+*.log
+docker-compose*
+Dockerfile*
+LICENSE
+README.md
+style.tailwindcss
