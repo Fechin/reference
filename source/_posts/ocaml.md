@@ -16,13 +16,14 @@ plugins:
 ## Getting Started
 
 ### hello.ml
+
 ```ml
 let () =
     let message = "Hello, World!" in
     Printf.printf "%s\n" message
 ```
 
-Compile and Run 
+Compile and Run
 
 ```bash
 $ ocamlc -o hello.byte hello.ml
@@ -30,12 +31,14 @@ $ ./hello.byte
 ```
 
 Build and Run with Dune
+
 ```bash
 $ dune build hello.exe
 $ _build/default/hello.exe
 ```
 
 ### Comments
+
 ```ml
 (* A single line comment *)
 
@@ -45,6 +48,7 @@ $ _build/default/hello.exe
 ```
 
 ### Expressions and Primitive Types
+
 ```ml
 (* an expression *)
 50 * 50
@@ -66,9 +70,8 @@ let untrue = false
 "a string"
 ```
 
-
-
 ### Variables
+
 ```ml
 (* data is immutable in ocaml *)
 let x = "a string"
@@ -78,10 +81,9 @@ let z = [1;2;3]
 ```
 
 ### Functions
+
 ```ml
 let add_two_ints x y =
   let sum = x + y in
   sum  
 ```
-
-
