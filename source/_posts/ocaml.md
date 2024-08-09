@@ -1,7 +1,7 @@
 ---
 title: Ocaml
 date: 2024-08-06 00:00:00
-background: bg-[#eeeee4]
+background: bg-[#ec670f]
 tags:
   - scientific
   - functional
@@ -18,7 +18,7 @@ plugins:
 ### hello.ml
 
 ```ml
-let () =
+# let () =
     let message = "Hello, World!" in
     Printf.printf "%s\n" message
 ```
@@ -37,53 +37,189 @@ $ dune build hello.exe
 $ _build/default/hello.exe
 ```
 
+### Imports
+
+Global Open
+
+```ml
+# open Hex 
+```
+
+Local Open
+
+```ml
+# Hex.of_string "hex string" 
+
+# let open Hex in 
+   of_string "to hex"
+
+```
+
 ### Comments
 
 ```ml
 (* A single line comment *)
 
 (* A multi-line comment
-* where to explain 
+* where we want to explain 
 * something complex *)
+
 ```
 
-### Expressions and Primitive Types
+Documentation Comments
 
 ```ml
-(* an expression *)
-50 * 50
+val sum : int -> int -> int
+(** [sum x y] returns the sum
+ of two integers [x] and [y] *)
 
-(* int *)
-5 + 5
-
-(* float *)
-3.14 +. 2.72
-
-(* bool *)
-let theTruth = true
-let untrue = false
-
-(* char *)
-'a'
-
-(* string *)
-"a string"
 ```
 
-### Variables
+## Data Types
+
+### Predefined Types
+
+Unit
 
 ```ml
-(* data is immutable in ocaml *)
-let x = "a string"
-let y = 1
-let z = [1;2;3]
-
+# ()
+- : unit = ()
 ```
+
+The unit is eqivalent to void
+
+```ml
+# 5 (* int *)
+
+# 3.14 (* float *)
+
+# true (* bool *)
+# false
+
+# 'a' (* char *)
+
+# "a string" (* string *)
+
+# String.to_bytes "hello" (* bytes *)
+- : bytes = Bytes.of_string "hello"
+```
+
+### Arrays & Lists
+
+#### Arrays
+
+```ml
+# [|0; 1; 2; 3|] 
+
+# [|'u'; 's'; 'c'|].(1) (* array access *)
+- char = 's'
+```
+
+Arrays are mutable
+
+```ml
+# let scores = [|97; 85; 99|]
+# scores.(2) <- 89 (* update an element *)
+- unit = ()
+
+# scores
+- : int array = [|97; 85; 89|]
+```
+
+#### Lists
+
+```ml
+# [1; 2; 3]
+- : int list = [1; 2; 3;]
+
+# ["a"; "str"; "lst"]
+- : string list = ["a"; "str"; "lst"]
+```
+
+Lists are immutable
 
 ### Functions
 
 ```ml
-let add_two_ints x y =
-  let sum = x + y in
-  sum  
+# let sum x y =
+    let result = x + y in
+    result
+    
+# sum 2 3
+-: int = 5
+```
+
+Recursive Functions
+
+```ml
+# let rec factorial n = 
+    if n < 1 then 1 else n * factorial (n - 1)
+```
+
+Pipeline
+
+```ml
+(* find log((x + y)!) *)
+# sum 2 3 
+  |> factorial
+  |> float_of_int
+  |> log
+- : float = 4.787...
+```
+
+### Control Flow and Operators
+
+If Statement
+
+```ml
+# let is_pos x = 
+    if x > 0 then "positive" else "negative"
+```
+
+Pattern Matching
+
+```ml
+let is_pos x = 
+  match x > 0 with 
+  | true  -> "positive"
+  | false -> "negative"
+```
+
+Operators
+
+```ml
+=         (* equal to *)
+<> or !=  (*not eqaul *)
+>         (* greater than *)
+<         (* less than *)
+>=        (* greater than or eq to *)
+<=        (* less than or eq to *)
+```
+
+### List Operations
+
+```ml
+(* an int list*)
+# let lst = [1;2;3]
+
+(* map a function to each elem *)
+# List.map (fun x -> x + x) lst
+- : int list = [2; 4; 6]
+
+# List.mem 4 lst
+- : bool = false
+
+# List.find (fun x -> x = 4) lst
+Exception: Not_found
+
+```
+
+Associaton Lists
+
+```ml
+# let scores = 
+    [("math", 91); ("phil", 89); ("stats", 94)]
+
+# List.assoc "stats" scores;;
+- : int = 94
 ```
