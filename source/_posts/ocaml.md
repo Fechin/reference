@@ -1,5 +1,5 @@
 ---
-title: Ocaml
+title: OCaml
 date: 2024-08-06 00:00:00
 background: bg-[#ec670f]
 tags:
@@ -8,7 +8,7 @@ tags:
 categories:
   - Programming
 intro: |
-  The [Ocaml](https://www.ocaml.org/) cheat sheet is a one-page reference sheet for the Ocaml programming language.
+  The [OCaml](https://www.ocaml.org/) cheat sheet is a one-page reference sheet for the OCaml programming language.
 plugins:
   - copyCode
 ---
@@ -90,18 +90,31 @@ The unit is eqivalent to void
 
 ```ml
 # 5 (* int *)
-
 # 3.14 (* float *)
 
 # true (* bool *)
 # false
 
 # 'a' (* char *)
-
 # "a string" (* string *)
 
 # String.to_bytes "hello" (* bytes *)
 - : bytes = Bytes.of_string "hello"
+
+# (3, 5) (* tuple *)
+
+# ref 0 (* reference *)
+```
+
+Options & Results
+
+```ml
+# Some 42
+- : int option = Some 42
+
+# Ok 42
+
+# Error "404"
 ```
 
 ### Arrays & Lists
@@ -138,6 +151,54 @@ Arrays are mutable
 
 Lists are immutable
 
+```ml
+# let lst = [1; 2; 3]
+
+# let new_lst =  lst :: 4 (* append to a new list *)
+- : int list = [1; 2; 3; 4]
+```
+
+### User-Defined Types
+
+#### Records
+
+Bundle related data
+
+```ml
+# type person = { 
+    name: string;
+    age: int
+  }
+
+# let zeno = {name = "Zeno"; age = 30};;
+val zeno : person = {name = "Zeno"; age = 30}
+```
+
+#### Variants
+
+Several different, but related types
+
+```ml
+type shape = 
+  | Circle of float
+  | Rectangle of float * float
+
+let my_shape = Circle 5.0
+- : shape = Circle 5.
+```
+
+#### Aliases
+
+Provide meaningful name
+to complex or commonly used types
+
+```ml
+# type point = float * float
+
+# let origin: point = (0.0, 0.0)
+val origin : point = (0., 0.)
+```
+
 ### Functions
 
 ```ml
@@ -156,6 +217,12 @@ Recursive Functions
     if n < 1 then 1 else n * factorial (n - 1)
 ```
 
+Application Operator
+
+```ml
+# log @@ float_of_int @@ sum 2 3 
+```
+
 Pipeline
 
 ```ml
@@ -167,13 +234,22 @@ Pipeline
 - : float = 4.787...
 ```
 
-### Control Flow and Operators
+### Control Flow
 
 If Statement
 
 ```ml
 # let is_pos x = 
     if x > 0 then "positive" else "negative"
+```
+
+If else if else
+
+```ml
+# let f x = 
+    if x > 3 then "gt 3"
+    else if x < 3 then "lt 3"
+    else "eq 3"
 ```
 
 Pattern Matching
@@ -185,15 +261,28 @@ let is_pos x =
   | false -> "negative"
 ```
 
-Operators
+### Operators
+
+Comparison Operators
 
 ```ml
 =         (* equal to *)
-<> or !=  (*not eqaul *)
+<> or !=  (* not equal to *)
 >         (* greater than *)
 <         (* less than *)
 >=        (* greater than or eq to *)
 <=        (* less than or eq to *)
+```
+
+Arithmatic Operators
+
+```ml
+(* int operator   float operator *)
++                 +.  (* addition *) 
+-                 -.  (* subtraction *)
+*                 *.  (* multiplication *)
+/                 /.  (* division *)
+
 ```
 
 ### List Operations
