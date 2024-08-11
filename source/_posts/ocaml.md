@@ -79,14 +79,14 @@ val sum : int -> int -> int
 
 ### Predefined Types
 
-Unit
+#### Unit
 
 ```ml
-# ()
+# () (* eqivalent to void *)
 - : unit = ()
 ```
 
-The unit is eqivalent to void
+#### Basic Types
 
 ```ml
 # 5 (* int *)
@@ -106,7 +106,7 @@ The unit is eqivalent to void
 # ref 0 (* reference *)
 ```
 
-Options & Results
+#### Options & Results
 
 ```ml
 # Some 42
@@ -199,6 +199,8 @@ to complex or commonly used types
 val origin : point = (0., 0.)
 ```
 
+## Functions
+
 ### Functions
 
 ```ml
@@ -210,12 +212,14 @@ val origin : point = (0., 0.)
 -: int = 5
 ```
 
-Recursive Functions
+### Recursive Functions
 
 ```ml
 # let rec factorial n = 
     if n < 1 then 1 else n * factorial (n - 1)
 ```
+
+### Chaining
 
 Application Operator
 
@@ -234,7 +238,9 @@ Pipeline
 - : float = 4.787...
 ```
 
-### Control Flow
+## Control Flow
+
+### If Statements
 
 If Statement
 
@@ -243,7 +249,7 @@ If Statement
     if x > 0 then "positive" else "negative"
 ```
 
-If else if else
+If else if
 
 ```ml
 # let f x = 
@@ -259,6 +265,26 @@ let is_pos x =
   match x > 0 with 
   | true  -> "positive"
   | false -> "negative"
+```
+
+### Loops
+
+For loop
+
+```ml
+for i = 1 to 5
+ do print_int i 
+done
+```
+
+While loop
+
+```ml
+let i = ref 0 in 
+  while !i < 5 do
+    print_int !i;
+    i := !i + 1
+done
 ```
 
 ### Operators
@@ -282,10 +308,10 @@ Arithmatic Operators
 -                 -.  (* subtraction *)
 *                 *.  (* multiplication *)
 /                 /.  (* division *)
-
+                  **  (* power *)
 ```
 
-### List Operations
+### List Library
 
 ```ml
 (* an int list*)
@@ -303,7 +329,7 @@ Exception: Not_found
 
 ```
 
-Associaton Lists
+#### Associaton Lists
 
 ```ml
 # let scores = 
