@@ -23,29 +23,37 @@ plugins:
     Printf.printf "%s\n" message
 ```
 
-Compile and Run
+#### Compile and Run
 
 ```bash
 $ ocamlc -o hello.byte hello.ml
 $ ./hello.byte
 ```
 
-Build and Run with Dune
+#### Build and Run with Dune
 
 ```bash
 $ dune build hello.exe
 $ _build/default/hello.exe
 ```
 
+See the [dune](https://dune.build/) documentation for more info.
+
 ### Imports
 
-Global Open
+Install modules with opam
+
+```bash
+$ opam install hex
+```
+
+#### Global Open
 
 ```ml
 # open Hex 
 ```
 
-Local Open
+#### Local Open
 
 ```ml
 # Hex.of_string "hex string" 
@@ -57,6 +65,8 @@ Local Open
 
 ### Comments
 
+#### Line & Block Comments
+
 ```ml
 (* A single line comment *)
 
@@ -64,15 +74,17 @@ Local Open
 * where we want to explain 
 * something complex *)
 
+(* Outer comment
+   (* Nested comment *)
+   End of outer comment *)
 ```
 
-Documentation Comments
+#### Documentation Comments
 
 ```ml
 val sum : int -> int -> int
 (** [sum x y] returns the sum
  of two integers [x] and [y] *)
-
 ```
 
 ## Data Types
@@ -203,31 +215,80 @@ val origin : point = (0., 0.)
 
 ### Functions
 
+#### Single parameter
+
+```ml
+# let add_one x = 
+    let result = x + 1 in
+    result
+
+# add_one 1
+- : int = 2
+```
+
+#### Multiple parameters
+
 ```ml
 # let sum x y =
     let result = x + y in
     result
-    
-# sum 2 3
--: int = 5
+
+# sum 1 2
+- : int = 3
+```
+
+#### Tuple parameter
+
+```ml
+# let str_concat (x, y) =
+    x ^ " " ^ y 
+
+# str_concat ("Hello", "OCaml")
+- : string = "Hello Ocaml"  
 ```
 
 ### Recursive Functions
+
+#### rec
+
+All recusive functions use the rec keyword
 
 ```ml
 # let rec factorial n = 
     if n < 1 then 1 else n * factorial (n - 1)
 ```
 
-### Chaining
+The above is not very efficient and can cause stackoverflow.
 
-Application Operator
+#### Tail Recursion
+
+Makes use of a helper function and the acc argument.
 
 ```ml
-# log @@ float_of_int @@ sum 2 3 
+# let rec factorial_helper n acc = 
+    if n = 0 then acc
+    else factorial_helper (n - 1) (n * acc)
 ```
 
-Pipeline
+Notice the last call is the recursive function.
+
+```ml
+# let factorial n = factorial_helper n 1
+```
+
+### Chaining
+
+#### Application Operator
+
+Read from right to left the first operation is `sum 2 3`
+
+```ml
+(* find log(2 + 3) *)
+# log @@ float_of_int @@ sum 2 3 
+- : float = 1.609...
+```
+
+#### Pipeline
 
 ```ml
 (* find log((x + y)!) *)
@@ -238,18 +299,20 @@ Pipeline
 - : float = 4.787...
 ```
 
+`|>` takes the output of the function and passes it as input to the next function in the pipeline
+
 ## Control Flow
 
 ### If Statements
 
-If Statement
+#### If Statement
 
 ```ml
 # let is_pos x = 
     if x > 0 then "positive" else "negative"
 ```
 
-If else if
+#### If else if
 
 ```ml
 # let f x = 
@@ -258,7 +321,7 @@ If else if
     else "eq 3"
 ```
 
-Pattern Matching
+#### Pattern Matching
 
 ```ml
 let is_pos x = 
@@ -269,7 +332,7 @@ let is_pos x =
 
 ### Loops
 
-For loop
+#### For loop
 
 ```ml
 for i = 1 to 5
@@ -277,7 +340,9 @@ for i = 1 to 5
 done
 ```
 
-While loop
+#### While loop
+
+Notice the ref is needed to update the while condition.
 
 ```ml
 let i = ref 0 in 
@@ -289,7 +354,7 @@ done
 
 ### Operators
 
-Comparison Operators
+#### Comparison Operators
 
 ```ml
 =         (* equal to *)
@@ -300,7 +365,7 @@ Comparison Operators
 <=        (* less than or eq to *)
 ```
 
-Arithmatic Operators
+#### Arithmatic Operators
 
 ```ml
 (* int operator   float operator *)
@@ -311,25 +376,43 @@ Arithmatic Operators
                   **  (* power *)
 ```
 
-### List Library
+## Useful Tools
+
+### List
+
+#### Searching & Filtering
 
 ```ml
-(* an int list*)
 # let lst = [1;2;3]
+
+# List.filter (fun x -> x mod 2 = 0) lst
+
+# List.find (fun x -> x = 4) lst
+Exception: Not_found
+
+# List.sort compare [2; 1; 3]
+- : int list = [1; 2; 3]
+```
+
+#### Applying Transformations
+
+```ml
+(* Loop over list and apply fun f *)
+# List.iter f lst
 
 (* map a function to each elem *)
 # List.map (fun x -> x + x) lst
 - : int list = [2; 4; 6]
 
-# List.mem 4 lst
-- : bool = false
-
-# List.find (fun x -> x = 4) lst
-Exception: Not_found
-
+(* Apply an operator between elements *)
+(* Ex. 1 + 2 + 3 *)
+# let sum = List.fold_left ( + ) 0 
+# sum lst 
 ```
 
-#### Associaton Lists
+### Associaton Lists
+
+#### Definition and Access
 
 ```ml
 # let scores = 
@@ -337,4 +420,45 @@ Exception: Not_found
 
 # List.assoc "stats" scores;;
 - : int = 94
+
+# List.mem_assoc "math" scores
+- : bool = true
+```
+
+#### Split and Combine
+
+```ml
+# List.split scores
+- : string list * int list = (["math"; "phil"; "stats"], [91; 89; 94])
+
+# List.combine [1;2;3] [4; 5; 6]
+- : (int * int) list = [(1, 4); (2, 5); (3, 6)]
+```
+
+Association lists are similar to dictionaries or hashmaps
+
+### Hash Tables
+
+#### Initialize & Add Data
+
+```ml
+
+# let my_htable = Hashtbl.create 3
+val my_htable : ('_weak1, '_weak2) Hashtbl.t = <abstr>
+
+# Hashtbl.add my_htable "A" "John";
+  Hashtbl.add my_htable "A" "Jane";
+  Hashtbl.add my_htable "B" "Max";;
+
+```
+
+#### Find Data
+
+```ml
+# Hashtbl.find my_htable "A"
+- : string = "Jane"
+
+(* find all *)
+# Hashtbl.find_all my_htable "A"
+- : string list = ["Jane"; "John"]
 ```
