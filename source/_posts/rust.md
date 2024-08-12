@@ -17,7 +17,7 @@ plugins:
 
 ```rust
 fn main() {
-  println!("Hello, World!");
+    println!("Hello, World!");
 }
 ```
 
@@ -53,16 +53,25 @@ println!("{}", 1);
 println!("{} {}", 1, 3);
 
 // Positional Arguments
-println!("{0} is {1} {2}, also {0} is a {3} programming language", "Rust", "cool", "language", "safe");
+println!(
+    "{0} is {1} {2}, also {0} is a {3} programming language",
+    "Rust", "cool", "language", "safe"
+);
 
 // Named Arguments
-println!("{country} is a diverse nation with unity.", country = "India");
+println!(
+    "{country} is a diverse nation with unity.",
+    country = "India"
+);
 
 // Placeholder traits :b for binary, :0x is for hex and :o is octal
 println!("Let us print 76 is binary which is {:b} , and hex equivalent is {:0x} and octal equivalent is {:o}", 76, 76, 76);
 
 // Debug Trait
-println!("Print whatever we want to here using debug trait {:?}", (76, 'A', 90));
+println!(
+    "Print whatever we want to here using debug trait {:?}",
+    (76, 'A', 90)
+);
 
 // New Format Strings in 1.58
 let x = "world";
@@ -98,7 +107,7 @@ let mut mutable_variable = "Mutable";
 let (name, age) = ("ElementalX", 20);
 
 // (Global) constant
-const SCREAMING_SNAKE_CASE:i64 = 9;
+const SCREAMING_SNAKE_CASE: i64 = 9;
 ```
 
 ### Comments
@@ -115,12 +124,12 @@ See: [Comment](https://doc.rust-lang.org/reference/comments.html)
 ### Functions
 
 ```rust
-fn test(){
-  println!("This is a function!");
+fn test() {
+    println!("This is a function!");
 }
 
-fn main(){
-  test();
+fn main() {
+    test();
 }
 ```
 
@@ -151,7 +160,7 @@ let just_a_float = 69.69;
 let true_val: bool = true;
 let false_val: bool = false;
 let just_a_bool = true;
-let is_true = 8 < 5;  // => false
+let is_true = 8 < 5; // => false
 ```
 
 ### Character
@@ -160,7 +169,7 @@ let is_true = 8 < 5;  // => false
 let first_letter_of_alphabet = 'a';
 let explicit_char: char = 'F';
 let implicit_char = '8';
-let emoji = "\u{1f600}";   // => 😀
+let emoji = "\u{1f600}"; // => 😀
 ```
 
 ### String Literal
@@ -186,7 +195,7 @@ See: [Strings](#rust-strings)
 ---
 
 ```rust
-let array: [i64; 6] = [92,97,98,99,98,94];
+let array: [i64; 6] = [92, 97, 98, 99, 98, 94];
 ```
 
 ### Multi-Dimensional Array {.row-span-2}
@@ -203,15 +212,16 @@ i1 | 6  | 5  | 4  | 3  | 2  | 1  |
 ---
 
 ```rust
-let array: [[i64; 6] ;2] = [
-            [1,2,3,4,5,6],
-            [6,5,4,3,2,1]];
+let array: [[i64; 6]; 2] = [
+    [1, 2, 3, 4, 5, 6],
+    [6, 5, 4, 3, 2, 1]
+];
 ```
 
 ### Mutable Array
 
 ```rust
-let mut array: [i32 ; 3] = [2,6,10];
+let mut array: [i32; 3] = [2, 6, 10];
 
 array[1] = 4;
 array[2] = 6;
@@ -222,8 +232,8 @@ Use the `mut` keyword to make it mutable.
 ### Slices
 
 ```rust
-let mut array: [ i64; 4] = [1,2,3,4];
-let mut slices: &[i64] = &array[0..3] // Lower range is inclusive and upper range is exclusive
+let mut array: [i64; 4] = [1, 2, 3, 4];
+let mut slices: &[i64] = &array[0..3]; // Lower range is inclusive and upper range is exclusive
 
 println!("The elements of the slices are : {slices:?}");
 ```
@@ -231,7 +241,7 @@ println!("The elements of the slices are : {slices:?}");
 ### Vectors
 
 ```rust
-let some_vector = vec![1,2,3,4,5];
+let some_vector = vec![1, 2, 3, 4, 5];
 ```
 
 A vector is declared using the `vec!` macro.
@@ -239,7 +249,7 @@ A vector is declared using the `vec!` macro.
 ### Tuples
 
 ```rust
-let tuple = (1, 'A' , "Cool", 78, true);
+let tuple = (1, 'A', "Cool", 78, true);
 ```
 
 ## Rust Strings
@@ -247,7 +257,7 @@ let tuple = (1, 'A' , "Cool", 78, true);
 ### String Literal
 
 ```rust
-let cs:&str = "cheat sheet";
+let cs: &str = "cheat sheet";
 
 // => Share cheat sheet for developers
 println!("Share {cs} for developers");
@@ -271,7 +281,7 @@ println!("First language is {lang}");
 
 ```rust
 let rand = String::from("Random String");
-rand.capacity()  // => 13
+rand.capacity() // => 13
 ```
 
 Calculates the capacity of the string in bytes.
@@ -289,7 +299,7 @@ Checks if the substring is contained inside the original string or not.
 
 ```rust
 let mut half_text = String::from("Hal");
-half_text.push('f');    // => Half
+half_text.push('f'); // => Half
 ```
 
 ### Pushing an entire String
@@ -387,7 +397,7 @@ let left_shift = h << 4;  // => 32
 let (c, d) = (true, false);
 
 let and = c && d;  // => false
-let or  = c || d;  // => true
+let or = c || d;   // => true
 let not = !c;      // => false
 ```
 
@@ -428,9 +438,9 @@ let case3 = 8;
 let case4 = 9;
 
 if case3 >= case4 {
-  println!("case3 is better than case4");
+    println!("case3 is better than case4");
 } else {
-  println!("case4 is greater than case3");
+    println!("case4 is greater than case3");
 }
 ```
 
@@ -441,26 +451,26 @@ let foo = 12;
 let bar = 13;
 
 if foo == bar {
-  println!("foo is equal to bar");
+    println!("foo is equal to bar");
 } else if foo < bar {
-  println!("foo less than bar");
+    println!("foo less than bar");
 } else if foo != bar {
-  println!("foo is not equal to bar");
+    println!("foo is not equal to bar");
 } else {
-  println!("Nothing");
+    println!("Nothing");
 }
 ```
 
 ### If...Let Expression {.row-span-3}
 
 ```rust
-let mut arr1:[i64 ; 3] = [1,2,3];
-if let[1,2,_] = arr1{
+let mut arr1: [i64; 3] = [1, 2, 3];
+if let [1, 2, _] = arr1 {
     println!("Works with array");
 }
 
-let mut arr2:[&str; 2] = ["one", "two"];
-if let["Apple", _] = arr2{
+let mut arr2: [&str; 2] = ["one", "two"];
+if let ["Apple", _] = arr2 {
     println!("Works with str array too");
 }
 ```
@@ -469,20 +479,19 @@ if let["Apple", _] = arr2{
 
 ```rust
 let tuple_1 = ("India", 7, 90, 90.432);
-if let(_, 7, 9, 78.99) = tuple_1{
+if let (_, 7, 9, 78.99) = tuple_1 {
     println!("Works with tuples too");
 }
 
-let tuple_2 = ( 9, 7, 89, 12, "Okay");
-if let(9, 7,89, 12, blank) = tuple_2 {
+let tuple_2 = (9, 7, 89, 12, "Okay");
+if let (9, 7, 89, 12, blank) = tuple_2 {
     println!("Everything {blank} mate?");
 }
 
 let tuple_3 = (89, 90, "Yes");
-if let(9, 89, "Yes") = tuple_3{
+if let (9, 89, "Yes") = tuple_3 {
     println!("Pattern did match");
-}
-else {
+} else {
     println!("Pattern did not match");
 }
 ```
@@ -492,30 +501,30 @@ else {
 ```rust
 let day_of_week = 2;
 match day_of_week {
-  1 => {
-    println!("Its Monday my dudes");
-  },
-  2 => {
-    println!("It's Tuesday my dudes");
-  },
-  3 => {
-    println!("It's Wednesday my dudes");
-  },
-  4 => {
-    println!("It's Thursday my dudes");
-  },
-  5 => {
-    println!("It's Friday my dudes");
-  },
-  6 => {
-    println!("It's Saturday my dudes");
-  },
-  7 => {
-    println!("It's Sunday my dudes");
-  },
-  _ => {
-    println!("Default!")
-  }
+    1 => {
+        println!("Its Monday my dudes");
+    }
+    2 => {
+        println!("It's Tuesday my dudes");
+    }
+    3 => {
+        println!("It's Wednesday my dudes");
+    }
+    4 => {
+        println!("It's Thursday my dudes");
+    }
+    5 => {
+        println!("It's Friday my dudes");
+    }
+    6 => {
+        println!("It's Saturday my dudes");
+    }
+    7 => {
+        println!("It's Sunday my dudes");
+    }
+    _ => {
+        println!("Default!")
+    }
 };
 ```
 
@@ -535,23 +544,23 @@ if nested_conditions == 89 {
 
 ```rust
 for mut i in 0..15 {
-  i-=1;
-  println!("The value of i is : {i}");
+    i -= 1;
+    println!("The value of i is : {i}");
 }
 ```
 
 ### While Loop
 
 ```rust
-let mut check =  0;
-while check < 11{
-  println!("Check is : {check}");
-  check+=1;
-  println!("After incrementing: {check}");
+let mut check = 0;
+while check < 11 {
+    println!("Check is : {check}");
+    check += 1;
+    println!("After incrementing: {check}");
 
-  if check == 10{
-    break; // stop while
-  }
+    if check == 10 {
+        break; // stop while
+    }
 }
 ```
 
@@ -559,7 +568,7 @@ while check < 11{
 
 ```rust
 loop {
-  println!("hello world forever!");
+    println!("hello world forever!");
 }
 ```
 
@@ -570,24 +579,24 @@ The infinite loop indicated.
 ```rust
 let mut i = 1;
 loop {
-  println!("i is {i}");
-  if i > 100 {
-    break;
-  }
-  i *= 2;
+    println!("i is {i}");
+    if i > 100 {
+        break;
+    }
+    i *= 2;
 }
 ```
 
 ### Continue Statement
 
 ```rust
-for (v, c) in (0..10+1).enumerate(){
-  println!("The {c} number loop");
-  if v == 9{
-    println!("Here we go continue?");
-    continue;
-  }
-  println!{"The value of v is : {v}"};
+for (v, c) in (0..10 + 1).enumerate() {
+    println!("The {c} number loop");
+    if v == 9 {
+        println!("Here we go continue?");
+        continue;
+    }
+    println! {"The value of v is : {v}"};
 }
 ```
 
@@ -596,104 +605,101 @@ for (v, c) in (0..10+1).enumerate(){
 ### Basic function
 
 ```rust
-
-fn print_message(){
-  println!("Hello, CheatSheets.zip!");
+fn print_message() {
+    println!("Hello, CheatSheets.zip!");
 }
 
-fn main(){
-  //Invoking a function in Rust.
-  print_message();
+fn main() {
+    //Invoking a function in Rust.
+    print_message();
 }
 ```
 
 ### Pass by Value
 
 ```rust
-fn main()
-{
-  let x:u32 = 10;
-  let y:u32 = 20;
+fn main() {
+    let x: u32 = 10;
+    let y: u32 = 20;
 
-  // => 200
-  println!("Calc: {}", cal_rect(x, y));
+    // => 200
+    println!("Calc: {}", cal_rect(x, y));
 }
-fn cal_rect(x:u32, y:u32) -> u32
-{
-  x * y
+
+fn cal_rect(x: u32, y: u32) -> u32 {
+    x * y
 }
 ```
 
 ### Pass by Reference
 
 ```rust
-fn main(){
-  let mut by_ref = 3;      // => 3
-  power_of_three(&mut by_ref);
-  println!("{by_ref}");  // => 9
+fn main() {
+    let mut by_ref = 3; // => 3
+    power_of_three(&mut by_ref);
+    println!("{by_ref}"); // => 9
 }
 
-fn power_of_three(by_ref: &mut i32){
-  // de-referencing is important
-  *by_ref = *by_ref * *by_ref;
-  println!("{by_ref}");  // => 9
+fn power_of_three(by_ref: &mut i32) {
+    // de-referencing is important
+    *by_ref = *by_ref * *by_ref;
+    println!("{by_ref}"); // => 9
 }
 ```
 
 ### Returns
 
 ```rust {.wrap}
-fn main(){
-  let (mut radius, mut pi) = (3.0, 3.14);
-  let(area, _perimeter) = calculate (
-      &mut radius,
-      &mut pi
-  );
-  println!("The area and the perimeter of the circle are: {area} & {_perimeter}");
+fn main() {
+    let (mut radius, mut pi) = (3.0, 3.14);
+    let (area, _perimeter) = calculate(
+        &mut radius,
+        &mut pi
+    );
+    println!("The area and the perimeter of the circle are: {area} & {_perimeter}");
 }
 
-fn calculate(radius : &mut f64, pi: &mut f64) -> (f64, f64){
-  let perimeter = 2.0 * *pi * *radius;
-  let area = *pi * *radius * *radius;
-  return (area, perimeter);
+fn calculate(radius: &mut f64, pi: &mut f64) -> (f64, f64) {
+    let perimeter = 2.0 * *pi * *radius;
+    let area = *pi * *radius * *radius;
+    return (area, perimeter);
 }
 ```
 
 ### Arrays as Arguments
 
 ```rust
-fn main(){
-  let mut array: [i32 ; 5] = [1,2,3,4,6];
-  print_arrays(array);
-  println!("The elements: {array:?}");
+fn main() {
+    let mut array: [i32; 5] = [1, 2, 3, 4, 6];
+    print_arrays(array);
+    println!("The elements: {array:?}");
 }
 
-fn print_arrays(mut array:[i32; 5]) {
-  array[0] = 89;
-  array[1] = 90;
-  array[2] = 91;
-  array[3] = 92;
-  array[4] = 93;
-  println!("The elements: {array:?}");
+fn print_arrays(mut array: [i32; 5]) {
+    array[0] = 89;
+    array[1] = 90;
+    array[2] = 91;
+    array[3] = 92;
+    array[4] = 93;
+    println!("The elements: {array:?}");
 }
 ```
 
 ### Returning Arrays
 
 ```rust
-
-fn main(){
-  let mut arr:[i32; 5] = [2,4,6,8,10];
-  multiply(arr);
-  println!("The array is : {:?}", multiply(arr));
+fn main() {
+    let mut arr: [i32; 5] = [2, 4, 6, 8, 10];
+    multiply(arr);
+    println!("The array is : {:?}", multiply(arr));
 }
 
-fn multiply (mut arr: [i32 ; 5]) -> [i32 ; 5]{
-  arr[2] = 90;
-  for mut i in 0..5 {
-      arr[i] = arr[i] * arr[2];
-  }
-  return arr;
+fn multiply(mut arr: [i32; 5]) -> [i32; 5] {
+    arr[2] = 90;
+    for mut i in 0..5 {
+        arr[i] = arr[i] * arr[2];
+    }
+    return arr;
 }
 ```
 
@@ -750,8 +756,8 @@ De-referencing in rust can be done using the `*` operator
 
 ```rust
 {
-  // The scope limited to this braces
-  let a_number = 1;
+    // The scope limited to this braces
+    let a_number = 1;
 }
 println!("{a_number}");
 ```
