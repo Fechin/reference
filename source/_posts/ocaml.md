@@ -1,6 +1,6 @@
 ---
 title: OCaml
-date: 2024-08-06 00:00:00
+date: 2024-08-14 21:12:00
 background: bg-[#ec670f]
 tags:
   - scientific
@@ -35,7 +35,11 @@ $ ./hello.byte
 ```bash
 $ dune build hello.exe
 $ _build/default/hello.exe
+
+# you can also just run
+$ dune exec ./hello.exe
 ```
+
 
 See the [dune](https://dune.build/) documentation for more info.
 
@@ -60,7 +64,6 @@ $ opam install hex
 
 # let open Hex in 
    of_string "to hex"
-
 ```
 
 ### Comments
@@ -94,7 +97,7 @@ val sum : int -> int -> int
 #### Unit
 
 ```ml
-# () (* eqivalent to void *)
+# () (* equivalent to void in C *)
 - : unit = ()
 ```
 
@@ -110,7 +113,7 @@ val sum : int -> int -> int
 # 'a' (* char *)
 # "a string" (* string *)
 
-# String.to_bytes "hello" (* bytes *)
+# String.to_bytes "hello" ;; (* bytes *)
 - : bytes = Bytes.of_string "hello"
 
 # (3, 5) (* tuple *)
@@ -121,7 +124,7 @@ val sum : int -> int -> int
 #### Options & Results
 
 ```ml
-# Some 42
+# Some 42 ;;
 - : int option = Some 42
 
 # Ok 42
@@ -166,8 +169,11 @@ Lists are immutable
 ```ml
 # let lst = [1; 2; 3]
 
-# let new_lst =  lst :: 4 (* append to a new list *)
-- : int list = [1; 2; 3; 4]
+# let new_lst =  0 :: lst (* prepend to a new list *)
+- : int list = [0; 1; 2; 3]
+
+# new_lst @ [4;5;6];; (* combine two lists *)
+- : int list = [0; 1; 2; 3; 4; 5; 6]
 ```
 
 ### User-Defined Types
@@ -220,9 +226,9 @@ val origin : point = (0., 0.)
 ```ml
 # let add_one x = 
     let result = x + 1 in
-    result
+    result ;;
 
-# add_one 1
+# add_one 1 ;;
 - : int = 2
 ```
 
@@ -231,9 +237,9 @@ val origin : point = (0., 0.)
 ```ml
 # let sum x y =
     let result = x + y in
-    result
+    result ;;
 
-# sum 1 2
+# sum 1 2 ;;
 - : int = 3
 ```
 
@@ -249,7 +255,7 @@ val origin : point = (0., 0.)
 
 ### Recursive Functions
 
-#### rec
+#### rec keyword
 
 All recusive functions use the rec keyword
 
@@ -258,7 +264,7 @@ All recusive functions use the rec keyword
     if n < 1 then 1 else n * factorial (n - 1)
 ```
 
-The above is not very efficient and can cause stackoverflow.
+The above can cause stackoverflow.
 
 #### Tail Recursion
 
@@ -280,7 +286,7 @@ Notice the last call is the recursive function.
 
 #### Application Operator
 
-Read from right to left the first operation is `sum 2 3`
+Read from right to left, the first operation is `sum 2 3`
 
 ```ml
 (* find log(2 + 3) *)
@@ -309,7 +315,7 @@ Read from right to left the first operation is `sum 2 3`
 
 ```ml
 # let is_pos x = 
-    if x > 0 then "positive" else "negative"
+    if x > 0 then "positive" else "negative";;
 ```
 
 #### If else if
@@ -335,21 +341,21 @@ let is_pos x =
 #### For loop
 
 ```ml
-for i = 1 to 5
- do print_int i 
+for i = 1 to 5 do
+  print_int i 
 done
 ```
 
 #### While loop
 
-Notice the ref is needed to update the while condition.
+Notice the `ref` is needed to have the while condition eventually become false.
 
 ```ml
 let i = ref 0 in 
   while !i < 5 do
     print_int !i;
     i := !i + 1
-done
+  done
 ```
 
 ### Operators
@@ -358,7 +364,7 @@ done
 
 ```ml
 =         (* equal to *)
-<> or !=  (* not equal to *)
+<>        (* not equal to *)
 >         (* greater than *)
 <         (* less than *)
 >=        (* greater than or eq to *)
@@ -386,6 +392,7 @@ done
 # let lst = [1;2;3]
 
 # List.filter (fun x -> x mod 2 = 0) lst
+- : int list = [2]
 
 # List.find (fun x -> x = 4) lst
 Exception: Not_found
