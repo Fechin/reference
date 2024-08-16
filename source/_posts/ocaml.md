@@ -15,12 +15,13 @@ plugins:
 
 ## Getting Started
 
+
 ### hello.ml
 
 ```ml
-# let () =
-    let message = "Hello, World!" in
-    Printf.printf "%s\n" message
+let () =
+  let message = "Hello, World!" in
+  Printf.printf "%s\n" message
 ```
 
 #### Compile and Run
@@ -40,7 +41,6 @@ $ _build/default/hello.exe
 $ dune exec ./hello.exe
 ```
 
-
 See the [dune](https://dune.build/) documentation for more info.
 
 ### Imports
@@ -54,16 +54,16 @@ $ opam install hex
 #### Global Open
 
 ```ml
-# open Hex 
+open Hex 
 ```
 
 #### Local Open
 
 ```ml
-# Hex.of_string "hex string" 
+Hex.of_string "hex string"
 
-# let open Hex in 
-   of_string "to hex"
+let open Hex in 
+  of_string "to hex"
 ```
 
 ### Comments
@@ -96,40 +96,55 @@ val sum : int -> int -> int
 
 #### Unit
 
+Note: `#` Indicates execution at the toplevel followed by the output
+
 ```ml
-# () (* equivalent to void in C *)
+# ();; (* equivalent to void in C *)
 - : unit = ()
 ```
 
 #### Basic Types
 
 ```ml
-# 5 (* int *)
-# 3.14 (* float *)
+# 5 ;; (* integer *)
+- : int = 5
 
-# true (* bool *)
-# false
+# 3.14 ;;  (* float *)
+- : float = 3.14
 
-# 'a' (* char *)
-# "a string" (* string *)
+# true ;; (* bool *)
+- : bool = true
+
+# false ;;
+- : bool = false
+
+# 'a' ;; (* char *)
+- : char = 'a'
+
+# "a string" ;; (* string *)
+- : string = "a string"
 
 # String.to_bytes "hello" ;; (* bytes *)
 - : bytes = Bytes.of_string "hello"
 
-# (3, 5) (* tuple *)
+# (3, 5);; (* tuple *)
+- : int * int = (3, 5)
 
-# ref 0 (* reference *)
+# ref 0;; (* reference *)
+- : int ref = {contents = 0}
 ```
 
 #### Options & Results
 
 ```ml
-# Some 42 ;;
+# Some 42;;
 - : int option = Some 42
 
-# Ok 42
+# Ok 42;;
+- : (int, 'a) result = Ok 42
 
-# Error "404"
+# Error "404";;
+- : ('a, int) result = Error 404
 ```
 
 ### Arrays & Lists
@@ -137,39 +152,43 @@ val sum : int -> int -> int
 #### Arrays
 
 ```ml
-# [|0; 1; 2; 3|] 
+# [|0; 1; 2; 3|];; (* create an array *)
+- : int array = [|0; 1; 2; 3|]
 
-# [|'u'; 's'; 'c'|].(1) (* array access *)
+# [|'u'; 's'; 'c'|].(1);; (* array access *)
 - char = 's'
 ```
 
 Arrays are mutable
 
 ```ml
-# let scores = [|97; 85; 99|]
-# scores.(2) <- 89 (* update an element *)
+let scores = [|97; 85; 99|];;
+- : int array = [|97; 85; 99|]
+
+# scores.(2) <- 89;; (* update an element *)
 - unit = ()
 
-# scores
+# scores;;
 - : int array = [|97; 85; 89|]
 ```
 
 #### Lists
 
 ```ml
-# [1; 2; 3]
+# [1; 2; 3];;
 - : int list = [1; 2; 3;]
 
-# ["a"; "str"; "lst"]
+# ["a"; "str"; "lst"];;
 - : string list = ["a"; "str"; "lst"]
 ```
 
 Lists are immutable
 
 ```ml
-# let lst = [1; 2; 3]
+# let lst = [1; 2; 3];;
+- : int list = [1; 2; 3]
 
-# let new_lst =  0 :: lst (* prepend to a new list *)
+# let new_lst =  0 :: lst;; (* prepend to a new list *)
 - : int list = [0; 1; 2; 3]
 
 # new_lst @ [4;5;6];; (* combine two lists *)
@@ -183,10 +202,10 @@ Lists are immutable
 Bundle related data
 
 ```ml
-# type person = { 
-    name: string;
-    age: int
-  }
+type person = { 
+  name: string;
+  age: int
+}
 
 # let zeno = {name = "Zeno"; age = 30};;
 val zeno : person = {name = "Zeno"; age = 30}
@@ -201,7 +220,7 @@ type shape =
   | Circle of float
   | Rectangle of float * float
 
-let my_shape = Circle 5.0
+# let my_shape = Circle 5.0;;
 - : shape = Circle 5.
 ```
 
@@ -211,9 +230,9 @@ Provide meaningful name
 to complex or commonly used types
 
 ```ml
-# type point = float * float
+type point = float * float
 
-# let origin: point = (0.0, 0.0)
+# let origin: point = (0.0, 0.0);;
 val origin : point = (0., 0.)
 ```
 
@@ -224,32 +243,32 @@ val origin : point = (0., 0.)
 #### Single parameter
 
 ```ml
-# let add_one x = 
-    let result = x + 1 in
-    result ;;
+let add_one x = 
+  let result = x + 1 in
+  result
 
-# add_one 1 ;;
+# add_one 1;;
 - : int = 2
 ```
 
 #### Multiple parameters
 
 ```ml
-# let sum x y =
-    let result = x + y in
-    result ;;
+let sum x y =
+  let result = x + y in
+  result
 
-# sum 1 2 ;;
+# sum 1 2;;
 - : int = 3
 ```
 
 #### Tuple parameter
 
 ```ml
-# let str_concat (x, y) =
-    x ^ " " ^ y 
+let str_concat (x, y) =
+  x ^ " " ^ y 
 
-# str_concat ("Hello", "OCaml")
+# str_concat ("Hello", "OCaml") ;;
 - : string = "Hello Ocaml"  
 ```
 
@@ -260,8 +279,8 @@ val origin : point = (0., 0.)
 All recusive functions use the rec keyword
 
 ```ml
-# let rec factorial n = 
-    if n < 1 then 1 else n * factorial (n - 1)
+let rec factorial n = 
+  if n < 1 then 1 else n * factorial (n - 1)
 ```
 
 The above can cause stackoverflow.
@@ -271,15 +290,15 @@ The above can cause stackoverflow.
 Makes use of a helper function and the acc argument.
 
 ```ml
-# let rec factorial_helper n acc = 
-    if n = 0 then acc
-    else factorial_helper (n - 1) (n * acc)
+let rec factorial_helper n acc = 
+  if n = 0 then acc
+  else factorial_helper (n - 1) (n * acc)
 ```
 
 Notice the last call is the recursive function.
 
 ```ml
-# let factorial n = factorial_helper n 1
+let factorial n = factorial_helper n 1
 ```
 
 ### Chaining
@@ -290,7 +309,7 @@ Read from right to left, the first operation is `sum 2 3`
 
 ```ml
 (* find log(2 + 3) *)
-# log @@ float_of_int @@ sum 2 3 
+# log @@ float_of_int @@ sum 2 3 ;;
 - : float = 1.609...
 ```
 
@@ -301,7 +320,7 @@ Read from right to left, the first operation is `sum 2 3`
 # sum 2 3 
   |> factorial
   |> float_of_int
-  |> log
+  |> log ;;
 - : float = 4.787...
 ```
 
@@ -314,17 +333,17 @@ Read from right to left, the first operation is `sum 2 3`
 #### If Statement
 
 ```ml
-# let is_pos x = 
-    if x > 0 then "positive" else "negative";;
+let is_pos x = 
+  if x > 0 then "positive" else "negative"
 ```
 
 #### If else if
 
 ```ml
-# let f x = 
-    if x > 3 then "gt 3"
-    else if x < 3 then "lt 3"
-    else "eq 3"
+let f x = 
+  if x > 3 then "gt 3"
+  else if x < 3 then "lt 3"
+  else "eq 3" 
 ```
 
 #### Pattern Matching
@@ -333,7 +352,7 @@ Read from right to left, the first operation is `sum 2 3`
 let is_pos x = 
   match x > 0 with 
   | true  -> "positive"
-  | false -> "negative"
+  | false -> "negative" 
 ```
 
 ### Loops
@@ -389,15 +408,16 @@ let i = ref 0 in
 #### Searching & Filtering
 
 ```ml
-# let lst = [1;2;3]
+# let lst = [1; 2; 3];;
+val lst : int list = [1; 2; 3]
 
-# List.filter (fun x -> x mod 2 = 0) lst
+# List.filter (fun x -> x mod 2 = 0) lst;;
 - : int list = [2]
 
-# List.find (fun x -> x = 4) lst
+# List.find (fun x -> x = 4) lst;;
 Exception: Not_found
 
-# List.sort compare [2; 1; 3]
+# List.sort compare [2; 1; 3];;
 - : int list = [1; 2; 3]
 ```
 
@@ -405,16 +425,15 @@ Exception: Not_found
 
 ```ml
 (* Loop over list and apply fun f *)
-# List.iter f lst
+List.iter f lst
 
 (* map a function to each elem *)
-# List.map (fun x -> x + x) lst
-- : int list = [2; 4; 6]
+(* Ex. double each element x in lst *)
+List.map (fun x -> x + x) lst
 
 (* Apply an operator between elements *)
 (* Ex. 1 + 2 + 3 *)
-# let sum = List.fold_left ( + ) 0 
-# sum lst 
+List.fold_left (+) 0 lst
 ```
 
 ### Associaton Lists
@@ -422,23 +441,23 @@ Exception: Not_found
 #### Definition and Access
 
 ```ml
-# let scores = 
-    [("math", 91); ("phil", 89); ("stats", 94)]
+let scores = 
+  [("math", 91); ("phil", 89); ("stats", 94)]
 
 # List.assoc "stats" scores;;
 - : int = 94
 
-# List.mem_assoc "math" scores
+# List.mem_assoc "math" scores;;
 - : bool = true
 ```
 
 #### Split and Combine
 
 ```ml
-# List.split scores
+# List.split scores;;
 - : string list * int list = (["math"; "phil"; "stats"], [91; 89; 94])
 
-# List.combine [1;2;3] [4; 5; 6]
+# List.combine [1;2;3] [4; 5; 6];;
 - : (int * int) list = [(1, 4); (2, 5); (3, 6)]
 ```
 
@@ -446,26 +465,87 @@ Association lists are similar to dictionaries or hashmaps
 
 ### Hash Tables
 
+Hash Tables are mutable.
+
 #### Initialize & Add Data
 
 ```ml
 
-# let my_htable = Hashtbl.create 3
+# let my_htable = Hashtbl.create 3;;
 val my_htable : ('_weak1, '_weak2) Hashtbl.t = <abstr>
 
 # Hashtbl.add my_htable "A" "John";
   Hashtbl.add my_htable "A" "Jane";
   Hashtbl.add my_htable "B" "Max";;
-
 ```
 
 #### Find Data
 
 ```ml
-# Hashtbl.find my_htable "A"
+# Hashtbl.find my_htable "A";;
 - : string = "Jane"
 
 (* find all *)
-# Hashtbl.find_all my_htable "A"
+# Hashtbl.find_all my_htable "A";;
 - : string list = ["Jane"; "John"]
+```
+
+### Maps
+
+Maps are immutable key-value association tables.
+
+#### Initialization & Add Data
+
+```ml
+(* the Map.Make functor creates the custom map module *)
+# module StringMap = Map.Make(String);;
+
+let books = 
+  StringMap.empty
+  |> StringMap.add "Dune" ("Herbet", 1965)
+  |> StringMap.add "Neuromancer" ("Gibson", 1984)
+```
+
+#### Finding Entries
+
+```ml
+(* find_opt returns assoc val wrapped in an option else None *)
+# StringMap.find_opt "Dune" books;;
+- : (string * int) option = Some ("Herbet", 1965)
+
+(* find returns the association else Not_Found *)
+# StringMap.find "Dune" books;;
+- : string * int = ("Herbet", 1965)
+```
+
+#### Adding & Removing Entries
+
+Creates a new map since maps are immutable
+
+```ml
+let more_books = books 
+  |> StringMap.add "Foundation" ("Isaac Asimov", 1951)
+
+let less_books = 
+  |> StringMap.remove "Dune"
+```
+
+Filtering
+
+```ml
+let eighties_books = 
+    StringMap.filter
+      (fun _ (_, year) -> year > 1980 & number < 1990) books
+```
+
+#### Printing Data
+
+```ml
+let print_books map =
+  StringMap.iter (fun title (author, year) ->
+    Printf.printf "Title: %s, Author: %s, Year: %d\n" title author year
+  ) map
+
+# let () = print_books eighties_books;;
+Title: Neuromancer, Author: Gibson, Year: 1984
 ```
