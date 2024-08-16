@@ -15,7 +15,6 @@ plugins:
 
 ## Getting Started
 
-
 ### hello.ml
 
 ```ml
