@@ -240,7 +240,7 @@ $ sed = file.txt | sed 'N;s/\n/\t/'
 Number line of a file (number on left, right-aligned)
 
 ```shell script
-$ sed = file.txt | sed 'N; s/^/   /; s/ *\(.\{6,\}\)\n/\1  /'
+$ sed = file.txt | sed 'N; s/^/     /; s/ *\(.\{6\}\)\n/\1  /'
 ```
 
 Number line of file, but only print numbers if line is not blank
