@@ -12,7 +12,9 @@ sheet that could be improved, feel free to submit a [pull request](#-contributin
 
 ## 👀 Live Demonstration
 
-You can view the cheat sheets live at [https://cheatsheets.zip](https://cheatsheets.zip/)
+Note: The original domain for this project was quickref.me, which was acquired by a US-based company. Since then, cheatsheets.zip is the primary and maintained domain (All within the bounds of the agreements).
+
+You can view the most up-to-date cheat sheets live at [https://cheatsheets.zip](https://cheatsheets.zip/). 
 
 [![Quick reference](https://cheatsheets.zip/assets/image/preview.png?9nd3)](https://cheatsheets.zip)
 
@@ -347,12 +349,10 @@ Reference provides cheat sheets for the following:
 
 ## 🤝 Contributing
 
-We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes
-CheatSheets.zip a truly amazing resource. Please feel free to
-[submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
 
-For consistency, we encourage you to refer to the [https://cheatsheets.zip/quickref](https://cheatsheets.zip/quickref)
-when creating or editing cheat sheets. To get started with development, follow these steps:
+We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes this project a truly resource. Please note that the primary domain for accessing the most up-to-date content is [cheatsheets.zip](https://cheatsheets.zip). Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
+
+For consistency, we encourage you to refer to the [https://cheatsheets.zip/quickref](https://cheatsheets.zip/quickref) when creating or editing cheat sheets. To get started with development, follow these steps:
 
 1. Clone Github repo `git clone https://github.com/Fechin/reference.git`
 2. Install `npm` package manager (Read
@@ -383,6 +383,8 @@ Only the `title` and `intro` fields are required, and the other options can be l
 <a href="https://github.com/Fechin/reference/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Fechin/reference" />
 </a>
+
+
 
 ## 🐦 Follow us on Twitter
 
