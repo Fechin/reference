@@ -383,6 +383,7 @@ See `:help text-objects`
 | `<C-w>` `-` _/_ `+`     | Decrease/Increase height    |
 | `<C-w>` `<` _/_ `>`     | Decrease/Increase width     |
 | `<C-w>` <code>\|</code> | Max out the width           |
+| `<C-w>` `_`	  	  | Max out the height          |
 | `<C-w>` `=`             | Equally high and wide       |
 | `<C-w>` `h` _/_ `l`     | Go to the left/right window |
 | `<C-w>` `j` _/_ `k`     | Go to the up/down window    |
