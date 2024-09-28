@@ -1483,6 +1483,23 @@ resp = dict(code=0, message="OK", data=[])
 successed: bool = converter(resp["message"], mapper=is_success, default=False)
 ```
 
+## Python Operators
+
+### Walrus {.col-span-2}
+
+```python
+values = [1, "text", True, "", 2]
+i = 0
+
+# It assigns a value to a variable and compares it in a boolean expression
+while (data := values[i]):
+
+    print(data, end=",")
+    i = i + 1
+
+# Expected result: 1, "text", True
+```
+
 ## Miscellaneous
 
 ### Comments
