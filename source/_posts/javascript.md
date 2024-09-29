@@ -553,7 +553,7 @@ numbers.concat(newFirstNumber);
 
 If you want to avoid mutating your original array, you can use concat.
 
-## JavaScipt Set
+## JavaScript Set
 
 ### Create Set
 
