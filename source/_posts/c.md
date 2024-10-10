@@ -28,7 +28,7 @@ int main(void) {
 Compile `hello.c` file with `gcc`
 
 ```bash
-$ gcc hello.c -o hello
+$ gcc -Wall -g hello.c -o hello
 ```
 
 Run the compiled binary `hello`
