@@ -9,7 +9,7 @@
                     <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
                 </div>
                 <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
-                    <% site.categories.findOne({name: category}).posts.sort('-date').map(function(post){ %>
+                    <% site.categories.findOne({name: category}).posts.sort('date').map(function(post){ %>
                         <%- partial('_partial/index/card', {
                             url: url_for(post.path),
                             title: post.title,
