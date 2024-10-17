@@ -28,7 +28,7 @@ int main(void) {
 Compile `hello.c` file with `gcc`
 
 ```bash
-$ gcc hello.c -o hello
+$ gcc -Wall -g hello.c -o hello
 ```
 
 Run the compiled binary `hello`
@@ -78,7 +78,7 @@ const int BIRTHYEAR = 1980;
 
 ```c
 // this is a comment
-printf("Hello World!"); // Can comment anywhere in file
+printf("Hello World!\n"); // Can comment anywhere in file
 
 /*Multi-line comment, print Hello World!
 to the screen, it's awesome */
@@ -87,12 +87,12 @@ to the screen, it's awesome */
 ### Print text
 
 ```c
-printf("I am learning C.");
+printf("I am learning C.\n");
 int testInteger = 5;
-printf("Number = %d", testInteger);
+printf("Number = %d\n", testInteger);
 
 float f = 5.99; // floating point number
-printf("Value = %f", f);
+printf("Value = %f\n", f);
 
 short a = 0b1010110; // binary number
 int b = 02713; // octal number
@@ -183,7 +183,7 @@ printf("%s", greetings);
 ```
 
 **NOTE**: String literals might be stored in read-only section of memory. Modifying a string literal invokes undefined
-behavior. You can't modify it.!
+behavior. You can't modify it!
 
 `C` **does not** have a String type, use `char` type and create an `array` of characters
 
@@ -192,18 +192,18 @@ behavior. You can't modify it.!
 ```c
 int time = 20;
 if (time < 18) {
-  printf("Goodbye!");
+  printf("Goodbye!\n");
 } else {
-  printf("Good evening!");
+  printf("Good evening!\n");
 }
 // Output -> "Good evening!"
 int time = 22;
 if (time < 10) {
-  printf("Good morning!");
+  printf("Good morning!\n");
 } else if (time < 20) {
-  printf("Goodbye!");
+  printf("Goodbye!\n");
 } else {
-  printf("Good evening!");
+  printf("Good evening!\n");
 }
 // Output -> "Good evening!"
 ```
@@ -212,7 +212,7 @@ if (time < 10) {
 
 ```c
 int age = 20;
-(age > 19) ? printf("Adult") : printf("Teenager");
+(age > 19) ? printf("Adult\n") : printf("Teenager\n");
 ```
 
 ### Switch
@@ -221,10 +221,10 @@ int age = 20;
 int day = 4;
 
 switch (day) {
-  case 3: printf("Wednesday"); break;
-  case 4: printf("Thursday"); break;
+  case 3: printf("Wednesday\n"); break;
+  case 4: printf("Thursday\n"); break;
   default:
-    printf("Weekend!");
+    printf("Weekend!\n");
 }
 // output -> "Thursday" (day 4)
 ```
@@ -403,13 +403,13 @@ switch(day) {
 int myNum;
 
 // Ask the user to enter a number
-printf("Please enter a number: \n");
+printf("Enter a number: ");
 
 // Get and save the number entered by the user
 scanf("%d", &myNum);
 
 // Output the number entered by the user
-printf("The number you entered: %d", myNum);
+printf("The number you entered: %d\n", myNum);
 ```
 
 ### User input string
@@ -418,11 +418,11 @@ printf("The number you entered: %d", myNum);
 // create a string
 char firstName[30];
 // Ask the user to enter some text
-printf("Enter your name: \n");
+printf("Enter your name: ");
 // get and save the text
 scanf("%s", &firstName);
 // output text
-printf("Hello %s.", firstName);
+printf("Hello %s.\n", firstName);
 ```
 
 ### memory address
@@ -442,10 +442,10 @@ To access it, use the reference operator (`&`)
 
 ```c
 int myAge = 43; // an int variable
-printf("%d", myAge); // output the value of myAge(43)
+printf("%d\n", myAge); // output the value of myAge(43)
 
 // Output the memory address of myAge (0x7ffe5367e044)
-printf("%p", &myAge);
+printf("%p\n", &myAge);
 ```
 
 ### pointer variable {.col-span-2}
@@ -716,12 +716,12 @@ printf("%c\n", myLetter);
 ```c
 #include <stdio.h>
 
-int main() {
-  printf("File :%s\n", __FILE__);
-  printf("Date :%s\n", __DATE__);
-  printf("Time :%s\n", __TIME__);
-  printf("Line :%d\n", __LINE__);
-  printf("ANSI :%d\n", __STDC__);
+int main(void) {
+  printf("File: %s\n", __FILE__);
+  printf("Date: %s\n", __DATE__);
+  printf("Time: %s\n", __TIME__);
+  printf("Line: %d\n", __LINE__);
+  printf("ANSI: %d\n", __STDC__);
 }
 ```
 
@@ -764,7 +764,7 @@ When you need to convert a macro parameter to a string constant, use the string 
 ```c
 #include <stdio.h>
 
-#define tokenpaster(n) printf ("token" #n " = %d", token##n)
+#define tokenpaster(n) printf ("Token " #n " = %d\n", token##n)
 
 int main(void) {
   int token34 = 40;
@@ -823,7 +823,7 @@ int main(void) {
 
 ```c
 int main(void) {
-  printf("Hello World!");
+  printf("Hello World!\n");
 
   return 0;
 }
@@ -855,7 +855,7 @@ int main() {
 }
 
 void myFunction() {// Function definition
-  printf("Good evening!");
+  printf("Good evening!\n");
 }
 ```
 
@@ -864,7 +864,7 @@ void myFunction() {// Function definition
 ```c
 // create function
 void myFunction() {
-  printf("Good evening!");
+  printf("Good evening!\n");
 }
 
 int main() {
@@ -918,7 +918,7 @@ int myFunction(int x) {
 }
 
 int main() {
-  printf("Result: %d", myFunction(3));
+  printf("Result: %d\n", myFunction(3));
   return 0;
 }
 // output 8 (5 + 3)
@@ -932,10 +932,10 @@ int myFunction(int x, int y) {
 }
 
 int main() {
-  printf("Result: %d", myFunction(5, 3));
+  printf("Result: %d\n", myFunction(5, 3));
   // store the result in a variable
   int result = myFunction(5, 3);
-  printf("Result = %d", result);
+  printf("Result = %d\n", result);
 
   return 0;
 }
@@ -950,7 +950,7 @@ int sum(int k);
 
 int main() {
   int result = sum(10);
-  printf("%d", result);
+  printf("%d\n", result);
 
   return 0;
 }
@@ -970,10 +970,10 @@ int sum(int k) {
 #include <math.h>
 
 void main(void) {
-  printf("%f", sqrt(16)); // square root
-  printf("%f", ceil(1.4)); // round up (round)
-  printf("%f", floor(1.4)); // round down (round)
-  printf("%f", pow(4, 3)); // x(4) to the power of y(3)
+  printf("%f\n", sqrt(16)); // square root
+  printf("%f\n", ceil(1.4)); // round up (round)
+  printf("%f\n", floor(1.4)); // round down (round)
+  printf("%f\n", pow(4, 3)); // x(4) to the power of y(3)
 }
 ```
 
@@ -1028,13 +1028,13 @@ int main() {
   struct myStructure s1;
   strcpy(s1. myString, "Some text");
   // print value
-  printf("my string: %s", s1.myString);
+  printf("My string: %s\n", s1.myString);
 
   return 0;
 }
 ```
 
-Assigning values ​​to strings using the `strcpy` function
+Assigning values to strings using the `strcpy` function
 
 ### Accessing structure members {.row-span-2}
 
@@ -1100,7 +1100,7 @@ struct myStructure s1 = {
 s1.myNum = 30;
 s1.myLetter = 'C';
 // print value
-printf("%d %c %s",
+printf("%d %c",
     s1.myNum,
     s1.myLetter);
 ```
