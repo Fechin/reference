@@ -110,8 +110,12 @@ Migrate: Will read the migrations files and create the actual database and table
 ## Project config {.cols-1}
 
 ### Configuration settings
-
-<!-- TODO: split this section up (I am not a Django dev) -->
+##### Project base templates directory and Apps templates directory:
+ - create folder project/templates
+ - create folder appfolder/templates/appname
+##### Create Static folder in base root and separate for apps:
+- project_name\static\root
+- app_name\static\app_name
 
 ```python
 # Add app to settings.py
@@ -120,27 +124,18 @@ INSTALLED_APPS = [
          'app_name.apps.App_nameConfig',
  ]
 
-# App templates folder
-create folder appfolder/templates/appname
-
-# Project templates folder:
-create folder projectname/templates
-
-# settings.py template config
+# template directory config
 Project templates settings.py:
     TEMPLATES = [
         { …
            'DIRS': [BASE_DIR / 'templates'],
         … }
 
-# Create Static folder:
-project_name\static\
-
-# Static folder (settings.py):
+# Static folder:
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 STATIC_ROOT = 'static_root'
-# Media folder (settings.py):
+# Media folder:
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     (BASE_DIR / 'static'),
@@ -529,15 +524,20 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
 <!-- TODO: Fix this, as it is not correctly escaped -->
 
 ```python
+# Extend from another template
+# can use the same parts of your HTML for different template
 {% extends 'base.html' %}
-{% block content %}
-{% endblock %}
 
+# A part of the parent template that is defined and is replaced by a part in the child template
+{% block contents %}
+{% endblock contents %}
+
+# include template
 {% include 'partials/header.html' %}
-
 # include template with One or More Parameters
 {% include 'body.html' with key1=value1 key2=value2 %}
 
+# If statement in template
 {% if user.username = 'Mike' %}
     <p>Hello Admin</p>
 {% elif user.username = 'john' %}
@@ -546,15 +546,20 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
     <p>Hello User</p>
 {% endif %}
 
+# for loop in template
 {% for product in products %}
-  <p>product number: {{ forloop.counter0 }}<p>
-  <p>The product name is {{ product }}<p>
+  <p> row:
+      {{ forloop.counter }} # starting index 1
+      {{ forloop.counter0 }} # starting index 0
+  </p>
+  <p>The product name is {{ product.name }}<p>
+  <p>The product name is {{ product.price }}<p>
 {% endfor %}
 
 # Access to the variable in the template
 {{ var_name }}
 
-# Template variables formatting
+# Template variables formating
 {{ title | lower }}
 {{ blog.post | truncatwords:50 }}
 {{ order.date | date:"D M Y" }}
@@ -577,6 +582,53 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
 <div>Hello {{ name }}!</div>
 </html>
 {% endwith %}
+
+# Template translate text
+{% load i18n %}
+<title>{% trans "This is the title." %}</title>
+# Use variable translate in the template
+<title>{% trans object.title %}</title>
+
+# Define the list in the template
+<input type="number"
+{% if product.unit in 'kg,milligram,milliliter' %}
+    step="0.01"
+{% else %}
+    step="1"
+{% endif %}>
+
+# Safely Pass Data to JavaScript in a Django Template:
+#+ Use data attributes for simple values
+<script data-username="{{ username }}">
+    const data = document.currentScript.dataset;
+    const username = data.username;
+</script>
+
+#+ Separate script files: can use document.currentScript for separate script files
+<script src="{% static 'index.js' %}" data-username="{{ username }}"></script>
+
+#+ Case conversion
+<script src="{% static 'index.js' %}" data-full-name="{{ full_name }}"></script>
+# Read it in JavaScript as fullName:
+const data = document.currentScript.dataset;
+const fullName = data.fullName;
+
+#+ Non-string types
+<script src="{% static 'index.js' %}" data-follower-count="{{ follower_count }}"></script>
+# parseInt() to convert this value from a string:
+const data = document.currentScript.dataset;
+const followerCount = parseInt(data.followerCount, 10);
+
+#+ There’s no limit: A <script> can have as many data attributes as you like:
+<script src="{% static 'index.js' %}"
+        defer
+        data-settings-url="{% url 'settings' %}"
+        data-configuration-url="{% url 'configuration' %}"
+        data-options-url="{% url 'options' %}"
+        data-preferences-url="{% url 'preferences' %}"
+        data-setup-url="{% url 'setup' %}"
+        >
+</script>
 ```
 
 ### Custom Template Tags and Filters
@@ -857,12 +909,15 @@ messages.error(request, 'Login error')
 
 # Message tags
 # debug, info, success, warning and error
-
-# Display flash in template
+```
+```django
+# Display flash messages in template
 {% if messages %}
     {% for message in messages %}
         {% message %}
         {% message.tags %}
+    {% endfor %}
+{% endif %}
 ```
 
 ## User Model
