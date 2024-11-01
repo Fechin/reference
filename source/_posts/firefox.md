@@ -89,8 +89,8 @@ intro: |
 | `Ctrl` `Shift` `W`      | Close Window                                 |
 | `Ctrl` `Tab`            | Cycle through Tabs in Recently Used Order    |
 | `Ctrl` `Q`              | Quit                                         |
-| `Ctrl` `Alt` `Left`     | Go one Tab to the Left                       |
-| `Ctrl` `Alt` `Right`    | Go one Tab to the Right                      |
+| `Ctrl` `PgUp`           | Go one Tab to the Left                       |
+| `Ctrl` `PgDown`         | Go one Tab to the Right                      |
 | `Ctrl` `Shift` `PgUp`   | Move Tab Left                                |
 | `Ctrl` `Shift` `PgDown` | Move Tab Right                               |
 | `Ctrl` `Shift` `Home`   | Move Tab in focus to start                   |
