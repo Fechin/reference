@@ -1,14 +1,30 @@
-# Stage 1: build the application
-FROM nginx:alpine AS build
+# Stage 1: Build site
+FROM node:alpine AS build
+
+WORKDIR /app
+
+COPY package.json .
+
+# Install dependencies
+RUN npm install
+
+COPY . .
+
+# Build site
+RUN npm run build
+
+# Stage 2: Create final image
+FROM nginx:alpine
+
 RUN rm -rf /etc/nginx/conf.d/*
+
 COPY nginx.conf /etc/nginx/
-COPY public /usr/share/nginx/html/
+
+# Copy site data to nginx web root
+COPY --from=build /app/public/ /usr/share/nginx/html/
+
 EXPOSE 80
 
-# Stage 2: final image
-FROM alpine:latest
-RUN apk add --no-cache nginx && mkdir -p /run/nginx
-COPY --from=build /usr/share/nginx/html/ /usr/share/nginx/html/
-COPY --from=build /etc/nginx/nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+HEALTHCHECK CMD curl --fail http://localhost || exit 1
+
 CMD ["nginx", "-g", "daemon off;"]

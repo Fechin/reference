@@ -1,0 +1,10 @@
+---
+version: '3'
+
+services:
+  cheatsheets:
+    build: .
+    image: cheatsheets
+    restart: unless-stopped
+    ports:
+      - 8080:80
