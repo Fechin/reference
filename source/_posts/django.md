@@ -523,7 +523,7 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
 
 <!-- TODO: Fix this, as it is not correctly escaped -->
 
-```python
+```django
 # Extend from another template
 # can use the same parts of your HTML for different template
 {% extends 'base.html' %}
@@ -851,7 +851,8 @@ class ArticleForm(ModelForm):
         'name': 'Enter Your First Name',
         }
 
-
+```
+```django
 # Render form in template
 <form method=“post” action=“” novalidate>
     {% csrf_token %}
@@ -863,14 +864,17 @@ class ArticleForm(ModelForm):
 {% load crispy_forms_tags %}
 {{ form|crispy }}
 {{ form.email|as_crispy_field }}
-
+```
+```bash
 # crispy-tailwind
 pip install crispy-tailwind
-
+```
+```python
 # settings.py
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
 CRISPY_TEMPLATE_PACK = 'tailwind'
-
+```
+```django
 # template usage
 {% load tailwind_filters %}
 {{ form|crispy}}
@@ -953,7 +957,8 @@ from django.contrib.auth.views import LoginView
 path('login/', LoginView.as_view(), name='login')
 
 # By default the LoginView will try to open a template name 'registration/login.html' and send a login form with it.
-
+```
+```django
 # Create a template under registration/login.html
 {% extends "base.html" %}
 {% block content %}
@@ -998,8 +1003,8 @@ class SignupView(CreateView):
 
     def get_success_url(self):
         return reverse("login")
-
-
+```
+```django
 # Create template: registration/signup.html
 {% extends "base.html" %}
 {% block content %}
@@ -1009,12 +1014,14 @@ class SignupView(CreateView):
         <button type="submit">Signup</button>
     </form>
 {% endblock content %}
-
+```
+```python
 # Add a url to reach that view
 from posts.views import SignupView
 
 path('signup/', SignupView.as_view(), name='signup')
-
+```
+```python
 # Optional: Customize the UserCreationForm
 # (forms.py)
 from django.contrib.auth import get_user_model
@@ -1038,7 +1045,7 @@ urlpatterns += path('', include('django.contrib.auth.urls'))
 
 #### Template Authentication helpers
 
-```python
+```django
 # Authentication links
 <a href="{% url 'login' %}">Login</a>
 <a href="{% url 'signup' %}">Signup</a>
@@ -1107,7 +1114,8 @@ user.set_password('raw password')
 ```python
 # Add accounts app to settings.py
 INSTALLED_APPS = [ … ,
-         'accounts.apps.AccountsConfi', ]
+         'accounts.apps.AccountsConfig',
+          ]
 .
 .
 .
@@ -1805,4 +1813,309 @@ command. We can also take a look at the program output with the `tail` command. 
 
 ```bash
 ~$ supervisor> quit
+```
+
+## Deployment Django in Server
+
+### Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu server
+
+#### Step 1 — Installing the Packages from the Ubuntu Repositories
+
+```bash
+sudo apt update
+sudo apt install python3-venv python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+```
+
+#### Step 2 — Creating the PostgreSQL Database and User
+
+```bash
+sudo -u postgres psql
+```
+
+- First, create a database for your project:
+
+```bash
+postgres=# CREATE DATABASE myproject;
+```
+
+- Next, create a database user for our project. Make sure to select a secure password:
+
+```bash
+postgres=# CREATE USER myprojectuser WITH PASSWORD 'password';
+```
+
+- Afterwards, you’ll modify a few of the connection parameters for the user that you just created
+
+```bash
+postgres=# ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+postgres=# ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+postgres=# ALTER ROLE myprojectuser SET timezone TO 'UTC';
+```
+
+- Now, you can give the new user access to administer the new database:
+
+```bash
+postgres=# GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+```
+
+- When you are finished, exit out of the PostgreSQL prompt by typing:
+
+```bash
+postgres=# \q
+```
+
+#### Step 3 — Creating a Python Virtual Environment for your Project
+
+- thin the project directory, create a Python virtual environment by typing:
+
+```bash
+mkdir ~/myprojectdir
+cd ~/myprojectdir
+```
+
+- Within the project directory, create a Python virtual environment by typing:
+
+```bash
+python3 -m venv myprojectenv
+```
+
+- Before installing your project’s Python requirements, you will need to activate the virtual environment. You can do that by typing:
+
+```bash
+source myprojectenv/bin/activate
+```
+
+- With your virtual environment active, install Django, Gunicorn, and the psycopg2 PostgreSQL adaptor with the local instance of pip
+
+```bash
+(myprojectenv)$ pip install django gunicorn psycopg2-binary
+```
+
+#### Step 4 — Creating and Configuring a New Django Project
+
+- With your Python components installed, you can now create the actual Django project files.
+
+```bash
+(myprojectenv)$ django-admin startproject myproject ~/myprojectdir
+```
+
+- The first thing you should do with your newly created project files is adjust the settings. Open the settings file in your text editor:
+
+```bash
+(myprojectenv)$ nano ~/myprojectdir/myproject/settings.py
+```
+
+- Start by locating the ALLOWED_HOSTS directive.
+
+```py ~/myprojectdir/myproject/settings.py
+ALLOWED_HOSTS = ['your_server_domain_or_IP', 'second_domain_or_IP', . . ., 'localhost']
+```
+
+- Next, find the section that configures database access. It will start with DATABASES. The configuration in the file is for a SQLite database.
+
+```py
+. . .
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+. . .
+```
+
+- Next, move down to the bottom of the file and add a setting indicating where the static files should be placed.
+
+```py
+. . .
+STATIC_URL = 'static/'
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+```
+
+#### Step 5 — Completing Initial Project Setup
+
+- Now, you can migrate the initial database schema to our PostgreSQL database using the management script:
+
+```bash
+(myprojectenv)$ ~/myprojectdir/manage.py makemigrations
+(myprojectenv)$ ~/myprojectdir/manage.py migrate
+```
+
+- Create an administrative user for the project by typing:
+
+```bash
+(myprojectenv)$ ~/myprojectdir/manage.py createsuperuser
+```
+
+- You can collect all of the static content into the directory location that you configured by typing:
+
+```bash
+(myprojectenv)$ ~/myprojectdir/manage.py collectstatic
+```
+
+#### Step 6 — Testing Gunicorn’s Ability to Serve the Project
+
+```bash
+(myprojectenv)$ cd ~/myprojectdir
+(myprojectenv)$ gunicorn --bind 0.0.0.0:8000 myproject.wsgi
+```
+
+- You’re now finished configuring your Django application. You can back out of our virtual environment by typing:
+
+```bash
+(myprojectenv)$ deactivate
+```
+
+#### Step 7 — Creating systemd Socket and Service Files for Gunicorn You have tested tha
+
+```bash
+sudo nano /etc/systemd/system/gunicorn.socket
+```
+
+- Inside, you will create a `[Unit]` section to describe the socket, a `[Socket]` section to define the socket location, and an `[Install]` section to make sure the socket is created at the right time:
+
+```bash /etc/systemd/system/gunicorn.socket
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+
+[Install]
+WantedBy=sockets.target
+```
+
+- Save and close the file when you are finished.
+- Next, create and open a systemd service file for Gunicorn with sudo privileges in your text editor. The service filename should match the socket filename with the exception of the extension:
+
+```bash
+sudo nano /etc/systemd/system/gunicorn.service
+```
+```bash
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=sammy
+Group=www-data
+WorkingDirectory=/home/sammy/myprojectdir
+ExecStart=/home/sammy/myprojectdir/myprojectenv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          myproject.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+```
+- You can now start and enable the Gunicorn socket. This will create the socket file at /run/gunicorn.sock now and at boot. When a connection is made to that socket, systemd will automatically start the gunicorn.service to handle it
+```bash
+sudo systemctl start gunicorn.socket
+sudo systemctl enable gunicorn.socket
+```
+#### Step 8 — Checking for the Gunicorn Socket File
+- Check the status of the process to find out whether it was able to start:
+
+```bash
+sudo systemctl status gunicorn.socket
+```
+- Next, check for the existence of the gunicorn.sock file within the /run directory:
+```bash
+file /run/gunicorn.sock
+```
+#### Step 9 — Testing Socket Activation
+```bash
+sudo systemctl status gunicorn
+```
+- To test the socket activation mechanism, you can send a connection to the socket through curl by typing:
+```bash
+curl --unix-socket /run/gunicorn.sock localhost
+```
+- You should receive the HTML output from your application in the terminal. This indicates that Gunicorn was started and was able to serve your Django application. You can verify that the Gunicorn service is running by typing:
+```bash
+sudo systemctl status gunicorn
+```
+- Check your /etc/systemd/system/gunicorn.service file for problems. If you make changes to the /etc/systemd/system/gunicorn.service file, reload the daemon to reread the service definition and restart the Gunicorn process by typing
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn
+```
+#### Step 10 — Configure Nginx to Proxy Pass to Gunicorn
+- Start by creating and opening a new server block in Nginx’s sites-available directory:
+```bash
+sudo nano /etc/nginx/sites-available/myproject
+```
+```bash
+server {
+    listen 80;
+    server_name server_domain_or_IP;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        alias /home/sammy/myprojectdir/staticfiles/;
+    }
+
+    location /media {
+        autoindex on;
+        alias /home/sammy/myprojectdir/media/;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+```
+- Save and close the file when you are finished. Now, you can enable the file by linking it to the sites-enabled directory:
+```bash
+sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+```
+- Test your Nginx configuration for syntax errors by typing:
+```bash
+sudo nginx -t
+```
+- If no errors are reported, go ahead and restart Nginx by typing:
+```bash
+sudo systemctl restart nginx
+```
+- you need to open up your firewall to normal traffic on port 80
+```bash
+sudo ufw allow 'Nginx Full'
+```
+You should now be able to go to your server’s domain or IP address to view your application.
+#### Step 11 — Troubleshooting Nginx and Gunicorn
+- Nginx Is Showing the Default Page Instead of the Django Application
+```bash
+sudo tail -F /var/log/nginx/error.log
+```
+- Django Is Displaying: “could not connect to server: Connection refused”
+```bash
+sudo systemctl status postgresql
+```
+- If it is not, you can start it and enable it to start automatically at boot (if it is not already configured to do so) by typing:
+```bash
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+```
+If you change Gunicorn socket or service files, reload the daemon and restart the process by typing:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn.socket gunicorn.service
+```
+If you change the Nginx server block configuration, test the configuration and then Nginx by typing:
+```bash
+sudo nginx -t && sudo systemctl restart nginx
 ```
