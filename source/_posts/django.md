@@ -110,10 +110,14 @@ Migrate: Will read the migrations files and create the actual database and table
 ## Project config {.cols-1}
 
 ### Configuration settings
+
 ##### Project base templates directory and Apps templates directory:
- - create folder project/templates
- - create folder appfolder/templates/appname
+
+- create folder project/templates
+- create folder appfolder/templates/appname
+
 ##### Create Static folder in base root and separate for apps:
+
 - project_name\static\root
 - app_name\static\app_name
 
@@ -521,23 +525,21 @@ path('<int:pk>/update/', PostsUpdateView.as_view(), name='post-update')
 
 Templates are store in `project_folder/templates` or in your <code>app_folder/templates/app_name/\*.html</code>
 
-<!-- TODO: Fix this, as it is not correctly escaped -->
-
-```django
-# Extend from another template
-# can use the same parts of your HTML for different template
+```html
+<!-- Extend from another template -->
+<!-- can use the same parts of your HTML for different template -->
 {% extends 'base.html' %}
 
-# A part of the parent template that is defined and is replaced by a part in the child template
+<!-- A part of the parent template that is defined and is replaced by a part in the child template -->
 {% block contents %}
 {% endblock contents %}
 
-# include template
+<!-- include template-->
 {% include 'partials/header.html' %}
-# include template with One or More Parameters
+<!-- include template with One or More Parameters -->
 {% include 'body.html' with key1=value1 key2=value2 %}
 
-# If statement in template
+<!-- If statement in template -->
 {% if user.username = 'Mike' %}
     <p>Hello Admin</p>
 {% elif user.username = 'john' %}
@@ -546,7 +548,7 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
     <p>Hello User</p>
 {% endif %}
 
-# for loop in template
+<!-- for loop in template -->
 {% for product in products %}
   <p> row:
       {{ forloop.counter }} # starting index 1
@@ -556,40 +558,40 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
   <p>The product name is {{ product.price }}<p>
 {% endfor %}
 
-# Access to the variable in the template
+<!-- Access to the variable in the template -->
 {{ var_name }}
 
-# Template variables formating
+<!-- Template variables formating  -->
 {{ title | lower }}
 {{ blog.post | truncatwords:50 }}
 {{ order.date | date:"D M Y" }}
 {{ list_items | slice:":3" }}
 {{ total | default:"nil" }}
 
-# Current path (ex. posts/1/show)
+<!-- Current path (ex. posts/1/show) -->
 {{ request.path }}
 
-# URL by name with param
+<!-- URL by name with param -->
 {% url 'posts.delete' id=post.id %}
 
-# Use static in template:
+<!-- Use static in template: -->
 {% load static %}
 {% static 'css/main.css' %}
 
-# Define the variable in the template
+<!-- Define the variable in the template -->
 {% with name="World" %}
 <html>
 <div>Hello {{ name }}!</div>
 </html>
 {% endwith %}
 
-# Template translate text
+ <!-- Template translate text -->
 {% load i18n %}
 <title>{% trans "This is the title." %}</title>
-# Use variable translate in the template
+<!-- Use variable translate in the template -->
 <title>{% trans object.title %}</title>
 
-# Define the list in the template
+<!-- Define the list in the template -->
 <input type="number"
 {% if product.unit in 'kg,milligram,milliliter' %}
     step="0.01"
@@ -597,29 +599,34 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
     step="1"
 {% endif %}>
 
-# Safely Pass Data to JavaScript in a Django Template:
-#+ Use data attributes for simple values
+<!-- Safely Pass Data to JavaScript in a Django Template: -->
+<!--+ Use data attributes for simple values -->
 <script data-username="{{ username }}">
     const data = document.currentScript.dataset;
     const username = data.username;
 </script>
 
-#+ Separate script files: can use document.currentScript for separate script files
+<!-- + Separate script files: can use document.currentScript for separate script files -->
 <script src="{% static 'index.js' %}" data-username="{{ username }}"></script>
 
-#+ Case conversion
+<!-- + Case conversion -->
 <script src="{% static 'index.js' %}" data-full-name="{{ full_name }}"></script>
-# Read it in JavaScript as fullName:
-const data = document.currentScript.dataset;
-const fullName = data.fullName;
+<!--  Read it in JavaScript as fullName: -->
+<script>
+    const data = document.currentScript.dataset;
+    const fullName = data.fullName;
+</script>
 
-#+ Non-string types
+<!-- + Non-string types -->
 <script src="{% static 'index.js' %}" data-follower-count="{{ follower_count }}"></script>
-# parseInt() to convert this value from a string:
-const data = document.currentScript.dataset;
-const followerCount = parseInt(data.followerCount, 10);
 
-#+ There’s no limit: A <script> can have as many data attributes as you like:
+<!--  parseInt() to convert this value from a string: -->
+<script>
+    const data = document.currentScript.dataset;
+    const followerCount = parseInt(data.followerCount, 10);
+</script>
+
+<!-- + There’s no limit: A <script> can have as many data attributes as you like: -->
 <script src="{% static 'index.js' %}"
         defer
         data-settings-url="{% url 'settings' %}"
@@ -725,7 +732,8 @@ def site_email(request):
         'OPTIONS': {
           'context_processors': [
             …
-              'app_name.context_processors.site_email', # <- New context processor here
+              'app_name.context_processors.site_email', 
+              # New context processor here
             …
           ],
     … },
@@ -850,34 +858,39 @@ class ArticleForm(ModelForm):
         help_texts = {
         'name': 'Enter Your First Name',
         }
-
 ```
-```django
-# Render form in template
-<form method=“post” action=“” novalidate>
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Submit</button>
+
+```html
+<!-- Render form in template -->
+<form method="“post”" action="“”" novalidate>
+  {% csrf_token %} {{ form }}
+  <button type="submit">Submit</button>
 </form>
 
-# Bootstrap (pip install django-crispy-forms + installed_apps: 'crispy_forms')
-{% load crispy_forms_tags %}
-{{ form|crispy }}
-{{ form.email|as_crispy_field }}
+{% load crispy_forms_tags %} {{ form|crispy }} {{ form.email|as_crispy_field }}
 ```
+
+##### A Tailwind CSS template pack for the wonderful django-crispy-forms.
+
 ```bash
-# crispy-tailwind
 pip install crispy-tailwind
 ```
+
 ```python
 # settings.py
+INSTALLED_APPS = (
+    ...
+    "crispy_forms",
+    "crispy_tailwind",
+    ...
+)
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
 CRISPY_TEMPLATE_PACK = 'tailwind'
 ```
-```django
-# template usage
-{% load tailwind_filters %}
-{{ form|crispy}}
+
+```html
+<!-- template usage -->
+{% load tailwind_filters %} {{ form|crispy }}
 ```
 
 ### Form Validation
@@ -905,21 +918,20 @@ def clean(self):
 
 ### Displaying messages
 
-<!-- TODO: Fix this, as it is not correctly escaped -->
 
 ```python
-messages.success(request, 'Login successful')
-messages.error(request, 'Login error')
-
 # Message tags
 # debug, info, success, warning and error
+
+messages.success(request, 'Login successful')
+messages.error(request, 'Login error')
 ```
-```django
-# Display flash messages in template
+
+```html
+<!-- Display flash messages in template -->
 {% if messages %}
-    {% for message in messages %}
-        {% message %}
-        {% message.tags %}
+    {% for message in messages %} 
+        {% message %} {% message.tags %}
     {% endfor %}
 {% endif %}
 ```
@@ -958,20 +970,19 @@ path('login/', LoginView.as_view(), name='login')
 
 # By default the LoginView will try to open a template name 'registration/login.html' and send a login form with it.
 ```
-```django
-# Create a template under registration/login.html
-{% extends "base.html" %}
-{% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Login</button>
-    </form>
+
+```html
+<!-- Create a template under registration/login.html -->
+{% extends "base.html" %} {% block content %}
+<form method="post">
+  {% csrf_token %} {{ form }}
+  <button type="submit">Login</button>
+</form>
 {% endblock content %}
 
-# When user click the Login button, the LoginView will try to authenticate the user with the form username ans password.
+<!-- When user click the Login button, the LoginView will try to authenticate the user with the form username ans password -->
 
-# If successful il will then login the user and redirect to LOGIN_REDIRECT_URL specified in your settings.py
+<!-- If successful il will then login the user and redirect to LOGIN_REDIRECT_URL specified in your settings.py -->
 ```
 
 #### Authentication : LogoutView
@@ -1004,23 +1015,24 @@ class SignupView(CreateView):
     def get_success_url(self):
         return reverse("login")
 ```
-```django
-# Create template: registration/signup.html
-{% extends "base.html" %}
-{% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Signup</button>
-    </form>
+
+```html
+<!-- Create template: registration/signup.html -->
+{% extends "base.html" %} {% block content %}
+<form method="post">
+  {% csrf_token %} {{ form }}
+  <button type="submit">Signup</button>
+</form>
 {% endblock content %}
 ```
+
 ```python
 # Add a url to reach that view
 from posts.views import SignupView
 
 path('signup/', SignupView.as_view(), name='signup')
 ```
+
 ```python
 # Optional: Customize the UserCreationForm
 # (forms.py)
@@ -1045,16 +1057,14 @@ urlpatterns += path('', include('django.contrib.auth.urls'))
 
 #### Template Authentication helpers
 
-```django
-# Authentication links
+```html
+<!-- Authentication links -->
 <a href="{% url 'login' %}">Login</a>
 <a href="{% url 'signup' %}">Signup</a>
 <a href="{% url 'logout' %}">Logout</a>
 
-# Check if user login
-{% if request.user.is_authenticated %}
-    Logged in as: {{ request.user.username }}
-{% endif %}
+<!-- Check if user login -->
+{% if request.user.is_authenticated %} Logged in as: {{ request.user.username }} {% endif %}
 ```
 
 #### Authorization: LoginRequiredMixin and login_required
@@ -1879,13 +1889,15 @@ cd ~/myprojectdir
 python3 -m venv myprojectenv
 ```
 
-- Before installing your project’s Python requirements, you will need to activate the virtual environment. You can do that by typing:
+- Before installing your project’s Python requirements, you will need to activate the virtual environment. You can do
+  that by typing:
 
 ```bash
 source myprojectenv/bin/activate
 ```
 
-- With your virtual environment active, install Django, Gunicorn, and the psycopg2 PostgreSQL adaptor with the local instance of pip
+- With your virtual environment active, install Django, Gunicorn, and the psycopg2 PostgreSQL adaptor with the local
+  instance of pip
 
 ```bash
 (myprojectenv)$ pip install django gunicorn psycopg2-binary
@@ -1899,7 +1911,8 @@ source myprojectenv/bin/activate
 (myprojectenv)$ django-admin startproject myproject ~/myprojectdir
 ```
 
-- The first thing you should do with your newly created project files is adjust the settings. Open the settings file in your text editor:
+- The first thing you should do with your newly created project files is adjust the settings. Open the settings file in
+  your text editor:
 
 ```bash
 (myprojectenv)$ nano ~/myprojectdir/myproject/settings.py
@@ -1907,13 +1920,15 @@ source myprojectenv/bin/activate
 
 - Start by locating the ALLOWED_HOSTS directive.
 
-```py ~/myprojectdir/myproject/settings.py
+```python
+# ~/myprojectdir/myproject/settings.py
 ALLOWED_HOSTS = ['your_server_domain_or_IP', 'second_domain_or_IP', . . ., 'localhost']
 ```
 
-- Next, find the section that configures database access. It will start with DATABASES. The configuration in the file is for a SQLite database.
+- Next, find the section that configures database access. It will start with DATABASES. The configuration in the file is
+  for a SQLite database.
 
-```py
+```python
 . . .
 DATABASES = {
     'default': {
@@ -1930,7 +1945,7 @@ DATABASES = {
 
 - Next, move down to the bottom of the file and add a setting indicating where the static files should be placed.
 
-```py
+```python
 . . .
 STATIC_URL = 'static/'
 
@@ -1983,7 +1998,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 sudo nano /etc/systemd/system/gunicorn.socket
 ```
 
-- Inside, you will create a `[Unit]` section to describe the socket, a `[Socket]` section to define the socket location, and an `[Install]` section to make sure the socket is created at the right time:
+- Inside, you will create a `[Unit]` section to describe the socket, a `[Socket]` section to define the socket location,
+  and an `[Install]` section to make sure the socket is created at the right time:
 
 ```bash /etc/systemd/system/gunicorn.socket
 [Unit]
@@ -1997,11 +2013,13 @@ WantedBy=sockets.target
 ```
 
 - Save and close the file when you are finished.
-- Next, create and open a systemd service file for Gunicorn with sudo privileges in your text editor. The service filename should match the socket filename with the exception of the extension:
+- Next, create and open a systemd service file for Gunicorn with sudo privileges in your text editor. The service
+  filename should match the socket filename with the exception of the extension:
 
 ```bash
 sudo nano /etc/systemd/system/gunicorn.service
 ```
+
 ```bash
 [Unit]
 Description=gunicorn daemon
@@ -2021,43 +2039,65 @@ ExecStart=/home/sammy/myprojectdir/myprojectenv/bin/gunicorn \
 [Install]
 WantedBy=multi-user.target
 ```
-- You can now start and enable the Gunicorn socket. This will create the socket file at /run/gunicorn.sock now and at boot. When a connection is made to that socket, systemd will automatically start the gunicorn.service to handle it
+
+- You can now start and enable the Gunicorn socket. This will create the socket file at /run/gunicorn.sock now and at
+  boot. When a connection is made to that socket, systemd will automatically start the gunicorn.service to handle it
+
 ```bash
 sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
 ```
+
 #### Step 8 — Checking for the Gunicorn Socket File
+
 - Check the status of the process to find out whether it was able to start:
 
 ```bash
 sudo systemctl status gunicorn.socket
 ```
+
 - Next, check for the existence of the gunicorn.sock file within the /run directory:
+
 ```bash
 file /run/gunicorn.sock
 ```
+
 #### Step 9 — Testing Socket Activation
+
 ```bash
 sudo systemctl status gunicorn
 ```
+
 - To test the socket activation mechanism, you can send a connection to the socket through curl by typing:
+
 ```bash
 curl --unix-socket /run/gunicorn.sock localhost
 ```
-- You should receive the HTML output from your application in the terminal. This indicates that Gunicorn was started and was able to serve your Django application. You can verify that the Gunicorn service is running by typing:
+
+- You should receive the HTML output from your application in the terminal. This indicates that Gunicorn was started and
+  was able to serve your Django application. You can verify that the Gunicorn service is running by typing:
+
 ```bash
 sudo systemctl status gunicorn
 ```
-- Check your /etc/systemd/system/gunicorn.service file for problems. If you make changes to the /etc/systemd/system/gunicorn.service file, reload the daemon to reread the service definition and restart the Gunicorn process by typing
+
+- Check your /etc/systemd/system/gunicorn.service file for problems. If you make changes to the
+  /etc/systemd/system/gunicorn.service file, reload the daemon to reread the service definition and restart the Gunicorn
+  process by typing
+
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 ```
+
 #### Step 10 — Configure Nginx to Proxy Pass to Gunicorn
+
 - Start by creating and opening a new server block in Nginx’s sites-available directory:
+
 ```bash
 sudo nano /etc/nginx/sites-available/myproject
 ```
+
 ```bash
 server {
     listen 80;
@@ -2079,43 +2119,65 @@ server {
     }
 }
 ```
-- Save and close the file when you are finished. Now, you can enable the file by linking it to the sites-enabled directory:
+
+- Save and close the file when you are finished. Now, you can enable the file by linking it to the sites-enabled
+  directory:
+
 ```bash
 sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
 ```
+
 - Test your Nginx configuration for syntax errors by typing:
+
 ```bash
 sudo nginx -t
 ```
+
 - If no errors are reported, go ahead and restart Nginx by typing:
+
 ```bash
 sudo systemctl restart nginx
 ```
+
 - you need to open up your firewall to normal traffic on port 80
+
 ```bash
 sudo ufw allow 'Nginx Full'
 ```
+
 You should now be able to go to your server’s domain or IP address to view your application.
+
 #### Step 11 — Troubleshooting Nginx and Gunicorn
+
 - Nginx Is Showing the Default Page Instead of the Django Application
+
 ```bash
 sudo tail -F /var/log/nginx/error.log
 ```
+
 - Django Is Displaying: “could not connect to server: Connection refused”
+
 ```bash
 sudo systemctl status postgresql
 ```
-- If it is not, you can start it and enable it to start automatically at boot (if it is not already configured to do so) by typing:
+
+- If it is not, you can start it and enable it to start automatically at boot (if it is not already configured to do so)
+  by typing:
+
 ```bash
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 ```
+
 If you change Gunicorn socket or service files, reload the daemon and restart the process by typing:
+
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn.socket gunicorn.service
 ```
+
 If you change the Nginx server block configuration, test the configuration and then Nginx by typing:
+
 ```bash
 sudo nginx -t && sudo systemctl restart nginx
 ```
