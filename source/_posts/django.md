@@ -653,7 +653,7 @@ app_name/
 
 - And in your template you would use the following:
 
-```python
+```html
 {% load basetags %}
 ```
 
