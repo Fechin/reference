@@ -453,6 +453,7 @@ Ctrl + Shift + Alt + Win + L
 | `shell:appsfolder`    | Show App Folder                                                                  |
 | `shutdown /r /t 5`    | Restart the system after 5 seconds                                               |
 | `shutdown /s /t 5`    | System shutdown after 5 seconds                                                  |
+| `shutdown -a`         | This command will cancel the scheduled shutdown for one time                     |
 | `shutdown /r /fw`     | Bios Login from windows                                                          |
 
 # Create God Mode Folder
@@ -460,4 +461,5 @@ Ctrl + Shift + Alt + Win + L
 create a new folder on your desktop with this exact name (copy and paste it):
 `GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}`
 
-- The folder icon will change to a Control Panel-style icon, and you will be able to jump in and change all kinds of settings
+- The folder icon will change to a Control Panel-style icon, and you will be able to jump in and change all kinds of
+  settings
