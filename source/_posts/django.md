@@ -204,7 +204,7 @@ CSRF_COOKIE_SECURE = True
 
 ```python
 # models.py
-# The id fields is automatically created by Django
+# The id fields is automaticly created by Django
 # for each model that why it's not show below
 from django.db import models
 
@@ -220,9 +220,9 @@ class Customer(models.Model)
     img = models.ImageField(upload_to ='uploads/')
     # Select Field (return value, display value)
     TYPE_CHOICES = (
-        ('Customer', 'Customer'),
-        ('Supplier', 'Supplier'),
-        ('Student', 'Student'),
+        ('Customer', _('Customer')),
+        ('Supplier', _('Supplier')),
+        ('Student', _('Student')),
     )
     type = models.CharField(choices=TYPE_CHOICES)
 
@@ -230,7 +230,8 @@ class Customer(models.Model)
         verbose_name = "Customer"
         verbose_name_plural = "Customers"
 
-    def __str__(self):   # Model string representation
+    # Model string representation
+    def __str__(self):
         return self.name
 
     # the URL that points to a resource or page on your website
@@ -238,7 +239,34 @@ class Customer(models.Model)
         return reverse("customer_detail", kwargs={"pk": self.pk})
 ```
 
-### Relationship between models
+#### We can also use this method to define the ChoiceField value.
+
+```python
+  class Customer(models.Model)
+    class TypeList(models.IntegerChoices):
+        customer = 1, _('Customer'))
+        supplier = 2, _('Supplier'))
+        student = 3, _('Student'))
+    .
+    .
+    .
+    type = models.CharField(choices=TypeList.choices, default=1)
+```
+
+#### To access the ChoiceField value in the template, we need to do the following in the template:
+
+- In Django templates you can use the "`get_FOO_display()`" method, that will return the readable alias for the field, where `'FOO'` is the name of the field.
+- If the choices are stored in the variable `CHOICES` and the model field storing the selected choice is `'type'` then you can directly use
+
+```html
+<!-- Here, X is the model instance -->
+{{ X.get_type_display }}
+
+<!-- You can even use this method to display its translation. -->
+{% trans X.get_type_display %}
+```
+
+#### Relationship between models
 
 ```python
 # One-to-Many: (use double quotes if the entity is not yet declare) ex. "Supplier"
@@ -423,7 +451,8 @@ def show(request, id):
     return render(request, 'appfolder/show.html', {'post': post})
 
 def create(request):
-    form = PostForm(request.POST or None)
+    form = PostForm(request.POST or None, request.FILES or None)
+    # When the form contains an image or file field, we should use request.FILES
     if form.is_valid():
         # optionally we can access form data with form.cleaned_data['first_name']
         post = form.save(commit=False)
@@ -435,7 +464,7 @@ def create(request):
 
 def edit(request, id):
     post = Post.objects.get(id=id)
-    form = PostForm(request.POST or None, instance=post)
+    form = PostForm(request.POST or None, request.FILES or None, instance=post)
     if form.is_valid():
         form.save()
         return redirect('/posts')
@@ -531,8 +560,7 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
 {% extends 'base.html' %}
 
 <!-- A part of the parent template that is defined and is replaced by a part in the child template -->
-{% block contents %}
-{% endblock contents %}
+{% block contents %} {% endblock contents %}
 
 <!-- include template-->
 {% include 'partials/header.html' %}
@@ -541,101 +569,92 @@ Templates are store in `project_folder/templates` or in your <code>app_folder/te
 
 <!-- If statement in template -->
 {% if user.username = 'Mike' %}
-    <p>Hello Admin</p>
+<p>Hello Admin</p>
 {% elif user.username = 'john' %}
-    <p>Hello John Doe</p>
+<p>Hello John Doe</p>
 {% else %}
-    <p>Hello User</p>
+<p>Hello User</p>
 {% endif %}
 
 <!-- for loop in template -->
 {% for product in products %}
-  <p> row:
-      {{ forloop.counter }} # starting index 1
-      {{ forloop.counter0 }} # starting index 0
-  </p>
-  <p>The product name is {{ product.name }}<p>
-  <p>The product name is {{ product.price }}<p>
-{% endfor %}
+<p>row: {{ forloop.counter }} # starting index 1 {{ forloop.counter0 }} # starting index 0</p>
+<p>The product name is {{ product.name }}</p>
+<p></p>
+<p>The product name is {{ product.price }}</p>
+<p>
+  {% endfor %}
 
-<!-- Access to the variable in the template -->
-{{ var_name }}
+  <!-- Access to the variable in the template -->
+  {{ var_name }}
 
-<!-- Template variables formating  -->
-{{ title | lower }}
-{{ blog.post | truncatwords:50 }}
-{{ order.date | date:"D M Y" }}
-{{ list_items | slice:":3" }}
-{{ total | default:"nil" }}
+  <!-- Template variables formating  -->
+  {{ title | lower }} {{ blog.post | truncatwords:50 }} {{ order.date | date:"D M Y" }} {{ list_items | slice:":3" }} {{
+  total | default:"nil" }}
 
-<!-- Current path (ex. posts/1/show) -->
-{{ request.path }}
+  <!-- Current path (ex. posts/1/show) -->
+  {{ request.path }}
 
-<!-- URL by name with param -->
-{% url 'posts.delete' id=post.id %}
+  <!-- URL by name with param -->
+  {% url 'posts.delete' id=post.id %}
 
-<!-- Use static in template: -->
-{% load static %}
-{% static 'css/main.css' %}
+  <!-- Use static in template: -->
+  {% load static %} {% static 'css/main.css' %}
 
-<!-- Define the variable in the template -->
-{% with name="World" %}
-<html>
-<div>Hello {{ name }}!</div>
-</html>
-{% endwith %}
+  <!-- Define the variable in the template -->
+  {% with name="World" %}
+  <html>
+    <div>Hello {{ name }}!</div>
+  </html>
+  {% endwith %}
 
- <!-- Template translate text -->
-{% load i18n %}
-<title>{% trans "This is the title." %}</title>
-<!-- Use variable translate in the template -->
-<title>{% trans object.title %}</title>
+  <!-- Template translate text -->
+  {% load i18n %}
+  <title>{% trans "This is the title." %}</title>
+  <!-- Use variable translate in the template -->
+  <title>{% trans object.title %}</title>
 
-<!-- Define the list in the template -->
-<input type="number"
-{% if product.unit in 'kg,milligram,milliliter' %}
-    step="0.01"
-{% else %}
-    step="1"
-{% endif %}>
+  <!-- Define the list in the template -->
+  <input type="number" {% if product.unit in 'kg,milligram,milliliter' %} step="0.01" {% else %} step="1" {% endif %}>
 
-<!-- Safely Pass Data to JavaScript in a Django Template: -->
-<!--+ Use data attributes for simple values -->
-<script data-username="{{ username }}">
+  <!-- Safely Pass Data to JavaScript in a Django Template: -->
+  <!--+ Use data attributes for simple values -->
+  <script data-username="{{ username }}">
     const data = document.currentScript.dataset;
     const username = data.username;
-</script>
+  </script>
 
-<!-- + Separate script files: can use document.currentScript for separate script files -->
-<script src="{% static 'index.js' %}" data-username="{{ username }}"></script>
+  <!-- + Separate script files: can use document.currentScript for separate script files -->
+  <script src="{% static 'index.js' %}" data-username="{{ username }}"></script>
 
-<!-- + Case conversion -->
-<script src="{% static 'index.js' %}" data-full-name="{{ full_name }}"></script>
-<!--  Read it in JavaScript as fullName: -->
-<script>
+  <!-- + Case conversion -->
+  <script src="{% static 'index.js' %}" data-full-name="{{ full_name }}"></script>
+  <!--  Read it in JavaScript as fullName: -->
+  <script>
     const data = document.currentScript.dataset;
     const fullName = data.fullName;
-</script>
+  </script>
 
-<!-- + Non-string types -->
-<script src="{% static 'index.js' %}" data-follower-count="{{ follower_count }}"></script>
+  <!-- + Non-string types -->
+  <script src="{% static 'index.js' %}" data-follower-count="{{ follower_count }}"></script>
 
-<!--  parseInt() to convert this value from a string: -->
-<script>
+  <!--  parseInt() to convert this value from a string: -->
+  <script>
     const data = document.currentScript.dataset;
     const followerCount = parseInt(data.followerCount, 10);
-</script>
+  </script>
 
-<!-- + There’s no limit: A <script> can have as many data attributes as you like: -->
-<script src="{% static 'index.js' %}"
-        defer
-        data-settings-url="{% url 'settings' %}"
-        data-configuration-url="{% url 'configuration' %}"
-        data-options-url="{% url 'options' %}"
-        data-preferences-url="{% url 'preferences' %}"
-        data-setup-url="{% url 'setup' %}"
-        >
-</script>
+  <!-- + There’s no limit: A <script> can have as many data attributes as you like: -->
+  <script
+    src="{% static 'index.js' %}"
+    defer
+    data-settings-url="{% url 'settings' %}"
+    data-configuration-url="{% url 'configuration' %}"
+    data-options-url="{% url 'options' %}"
+    data-preferences-url="{% url 'preferences' %}"
+    data-setup-url="{% url 'setup' %}"
+  ></script>
+</p>
 ```
 
 ### Custom Template Tags and Filters
@@ -732,7 +751,7 @@ def site_email(request):
         'OPTIONS': {
           'context_processors': [
             …
-              'app_name.context_processors.site_email', 
+              'app_name.context_processors.site_email',
               # New context processor here
             …
           ],
@@ -866,8 +885,16 @@ class ArticleForm(ModelForm):
   {% csrf_token %} {{ form }}
   <button type="submit">Submit</button>
 </form>
+```
 
-{% load crispy_forms_tags %} {{ form|crispy }} {{ form.email|as_crispy_field }}
+- NOTE: If the form contains a file field, your form MUST contain `enctype="multipart/form-data"`, eg:
+
+```django
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans 'Submit' %}</button>
+</form>
 ```
 
 ##### A Tailwind CSS template pack for the wonderful django-crispy-forms.
@@ -918,7 +945,6 @@ def clean(self):
 
 ### Displaying messages
 
-
 ```python
 # Message tags
 # debug, info, success, warning and error
@@ -929,11 +955,7 @@ messages.error(request, 'Login error')
 
 ```html
 <!-- Display flash messages in template -->
-{% if messages %}
-    {% for message in messages %} 
-        {% message %} {% message.tags %}
-    {% endfor %}
-{% endif %}
+{% if messages %} {% for message in messages %} {% message %} {% message.tags %} {% endfor %} {% endif %}
 ```
 
 ## User Model
