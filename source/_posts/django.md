@@ -889,7 +889,7 @@ class ArticleForm(ModelForm):
 
 - NOTE: If the form contains a file field, your form MUST contain `enctype="multipart/form-data"`, eg:
 
-```django
+```html
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
