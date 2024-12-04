@@ -11,4 +11,5 @@ RUN apk add --no-cache nginx && mkdir -p /run/nginx
 COPY --from=build /usr/share/nginx/html/ /usr/share/nginx/html/
 COPY --from=build /etc/nginx/nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
+HEALTHCHECK --interval=1s --timeout=3s CMD wget -q -O - http://localhost:80 || exit 1
 CMD ["nginx", "-g", "daemon off;"]
