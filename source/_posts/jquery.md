@@ -39,7 +39,7 @@ $(selector).methodOrFunction();
 #### Example:
 
 ```javascript
-$("#menu").on("click", () => {
+$("#menu").on("click", function () {
   $(this).hide();
 });
 
