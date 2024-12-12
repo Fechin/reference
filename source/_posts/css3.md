@@ -68,7 +68,7 @@ Overrides all previous styling rules.
 ```css
 h1 { }
 #job-title { }
-div.hero { }
+div .hero { }
 div > p { }
 ```
 
