@@ -159,7 +159,7 @@ Replace only the nth occurrence of a string
 $ sed 's/old/new/2' file.txt
 ```
 
-Replace replace a string only on the 5th line
+Replace a string only on the 5th line
 
 ```shell script
 $ sed '5 s/old/new/' file.txt
