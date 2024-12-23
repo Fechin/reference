@@ -1,13 +1,16 @@
 # Stage 1: build the application
-FROM nginx:alpine AS build-nginx
+FROM node:19 as build-app
 WORKDIR /app
-RUN apk add nodejs npm
 COPY . .
 RUN npm i
 RUN npm run build
+
+# Stage 2: Build nginx 
+FROM nginx:alpine AS build-nginx
+WORKDIR /usr/share/nginx/html/
+COPY --from=build-app /app/public /usr/share/nginx/html/
 RUN rm -rf /etc/nginx/conf.d/*
 COPY nginx.conf /etc/nginx/
-COPY public /usr/share/nginx/html/
 EXPOSE 80
 
 # Stage 2: final image
