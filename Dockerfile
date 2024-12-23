@@ -2,6 +2,8 @@
 FROM nginx:alpine AS build
 RUN rm -rf /etc/nginx/conf.d/*
 COPY nginx.conf /etc/nginx/
+RUN npm image
+RUN npm run build
 COPY public /usr/share/nginx/html/
 EXPOSE 80
 
