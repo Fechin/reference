@@ -1,5 +1,6 @@
 # Stage 1: build the application
 FROM nginx:alpine AS build-nginx
+WORKDIR /app
 RUN apk add nodejs npm
 COPY . .
 RUN npm i
