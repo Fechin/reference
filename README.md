@@ -25,61 +25,33 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Programming</summary>
 
-- [Perl](https://cheatsheets.zip/perl): The perl quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
-- [Kubernetes](https://cheatsheets.zip/kubernetes.html): This page contains a list of commonly used kubectl commands and
-  flags.
-- [ES6](https://cheatsheets.zip/es6.html): A quick reference cheat sheet of what's new in JavaScript for ES2015, ES2016,
-  ES2017, ES2018 and beyond
-- [MATLAB](https://cheatsheets.zip/matlab.html): This quick reference cheat sheet provides an example introduction to
-  using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
+- [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with Linux bash shell scripting.
 - [C](https://cheatsheets.zip/c.html): C quick reference cheat sheet that provides basic syntax and methods.
-- [INI](https://cheatsheets.zip/ini.html): This is a quick reference cheat sheet for understanding and writing
-  INI-format configuration files.
-- [LaTeX](https://cheatsheets.zip/latex.html): This cheat sheet summarizes a reference list of
-  [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of
-  [KaTeX](https://katex.org/).
-- [Rust](https://cheatsheets.zip/rust.html): The Rust quick reference cheat sheet that aims at providing help on writing
-  basic syntax and methods.
-- [C#](https://cheatsheets.zip/cs.html): C# quick reference cheat sheet that provides basic syntax and methods.
-- [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and
-  progressive web application framework for PHP. This cheat sheet provides a reference for common commands and features
-  for Laravel 8.
-- [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods,
-  and more. A complete quick reference for beginners.
-- [JSON](https://cheatsheets.zip/json.html): This is a quick reference cheat sheet for understanding and writing JSON
-  format configuration files.
-- [Hook](https://cheatsheets.zip/hook.html): The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page
-  reference sheet for the Hook programming language.
-- [HTML](https://cheatsheets.zip/html.html): This HTML quick reference cheat sheet lists the common HTML and HTML5 tags
-  in readable layout.
-- [GraphQL](https://cheatsheets.zip/graphql.html): This quick reference cheat sheet provides a brief overview of
-  GraphQL.
 - [C++](https://cheatsheets.zip/cpp.html): C++ quick reference cheat sheet that provides basic syntax and methods.
-- [Java](https://cheatsheets.zip/java.html): This cheat sheet is a crash course for Java beginners and help review the
-  basic syntax of the Java language.
-- [PHP](https://cheatsheets.zip/php.html): This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference
-  for quickly looking up the correct syntax for the code you use most frequently.
-- [Docker](https://cheatsheets.zip/docker.html): This is a quick reference cheat sheet for
-  [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
-- [TOML](https://cheatsheets.zip/toml.html): This is a quick reference cheat sheet to the TOML format configuration file
-  syntax.
-- [YAML](https://cheatsheets.zip/yaml.html): This is a quick reference cheat sheet for understanding and writing YAML
-  format configuration files.
-- [CSS 3](https://cheatsheets.zip/css.html): This is a quick reference cheat sheet for CSS goodness, listing selector
-  syntax, properties, units and other useful bits of information.
-- [jQuery](https://cheatsheets.zip/jquery.html): This [jQuery](https://jquery.com/) cheat sheet is a great reference for
-  both beginners and experienced developers.
-- [JavaScript](https://cheatsheets.zip/javascript.html): A JavaScript cheat sheet with the most important concepts,
-  functions, methods, and more. A complete quick reference for beginners.
-- [Python](https://cheatsheets.zip/python.html): The [Python](https://www.python.org/) cheat sheet is a one-page
-  reference sheet for the Python 3 programming language.
-- [Sass](https://cheatsheets.zip/sass.html): This is a quick reference cheat sheet that lists the most useful features
-  of [SASS](https://sass-lang.com).
-- [Go](https://cheatsheets.zip/go.html): This cheat sheet provided basic syntax and methods to help you using
-  [Go](https://go.dev/).
+- [C#](https://cheatsheets.zip/cs.html): C# quick reference cheat sheet that provides basic syntax and methods.
+- [CSS 3](https://cheatsheets.zip/css.html): This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.
+- [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+- [Docker](https://cheatsheets.zip/docker.html): This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
+- [ES6](https://cheatsheets.zip/es6.html): A quick reference cheat sheet of what’s new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond
+- [Go](https://cheatsheets.zip/go.html): This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).
+- [GraphQL](https://cheatsheets.zip/graphql.html): This quick reference cheat sheet provides a brief overview of GraphQL.
+- [Hook](https://cheatsheets.zip/hook.html): The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
+- [HTML](https://cheatsheets.zip/html.html): This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.
+- [INI](https://cheatsheets.zip/ini.html): This is a quick reference cheat sheet for understanding and writing INI-format configuration files.
+- [Java](https://cheatsheets.zip/java.html): This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.
+- [JavaScript](https://cheatsheets.zip/javascript.html): A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+- [jQuery](https://cheatsheets.zip/jquery.html): This [jQuery](https://jquery.com/) cheat sheet is a great reference for both beginners and experienced developers.
+- [Kubernetes](https://cheatsheets.zip/kubernetes.html): This page contains a list of commonly used kubectl commands and flags.
+- [LaTeX](https://cheatsheets.zip/latex.html): This cheat sheet summarizes a reference list of [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of [KaTeX](https://katex.org/).
+- [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. This cheat sheet provides a reference for common commands and features for Laravel 8.
+- [MATLAB](https://cheatsheets.zip/matlab.html): This quick reference cheat sheet provides an example introduction to using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
 - [Markdown](https://cheatsheets.zip/markdown.html): This is a quick reference cheat sheet to the Markdown syntax.
-- [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with Linux bash
-  shell scripting.
+- [PHP](https://cheatsheets.zip/php.html): This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference for quickly looking up the correct syntax for the code you use most frequently.
+- [Python](https://cheatsheets.zip/python.html): The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.
+- [Rust](https://cheatsheets.zip/rust.html): The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
+- [Sass](https://cheatsheets.zip/sass.html): This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
+- [TOML](https://cheatsheets.zip/toml.html): This is a quick reference cheat sheet to the TOML format configuration file syntax.
+- [YAML](https://cheatsheets.zip/yaml.html): This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
 
 </details>
 
@@ -149,14 +121,11 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Database</summary>
 
-- [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how
-  to query the database with Cypher.
-- [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat
-  sheet provides you with the common PostgreSQL commands and statements.
-- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that
-  lists examples of redis commands
-- [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL
-  statements for your reference.
+- [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.
+- [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
+- [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.
+- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
+
 
 </details>
 
@@ -308,28 +277,16 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Other</summary>
 
-- [Google Search](https://cheatsheets.zip/google-search.html): This quick reference cheat sheet lists of Google advanced
-  search operators.
-- [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with
-  their numbers and names.
-- [Aspect Ratio](https://cheatsheets.zip/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their
-  pixel resolutions. Always confirm your final delivery ratio when shooting.
-- [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML
-  entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in
-  HTML.
-- [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that
-  conform to the ISO 639-1 standard, it provide reference for multi-language website.
-- [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS
-  media queries for popular Phones, Tablets, Laptops and Watches
-- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick
-  reference to every HTTP status code.
-- [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a
-  little cheat sheet.
-- [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on
-  CheatSheets.zip, It's a good practice for contributors.
-- [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can
-  look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains
-  all registered MIME types.
+- [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with their numbers and names.
+- [Aspect Ratio](https://cheatsheets.zip/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their pixel resolutions. Always confirm your final delivery ratio when shooting.
+- [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on CheatSheets.zip, It’s a good practice for contributors.
+- [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
+- [Google Search](https://cheatsheets.zip/google-search.html): This quick reference cheat sheet lists of Google advanced search operators.
+- [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.
+- [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that conform to the ISO 639-1 standard, it provide reference for multi-language website.
+- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick reference to every HTTP status code.
+- [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
+- [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
 
 </details>
 
