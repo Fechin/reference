@@ -121,14 +121,11 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Database</summary>
 
-- [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how
-  to query the database with Cypher.
-- [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat
-  sheet provides you with the common PostgreSQL commands and statements.
-- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that
-  lists examples of redis commands
-- [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL
-  statements for your reference.
+- [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.
+- [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
+- [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.
+- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
+
 
 </details>
 
