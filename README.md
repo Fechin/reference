@@ -277,28 +277,16 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Other</summary>
 
-- [Google Search](https://cheatsheets.zip/google-search.html): This quick reference cheat sheet lists of Google advanced
-  search operators.
-- [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with
-  their numbers and names.
-- [Aspect Ratio](https://cheatsheets.zip/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their
-  pixel resolutions. Always confirm your final delivery ratio when shooting.
-- [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML
-  entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in
-  HTML.
-- [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that
-  conform to the ISO 639-1 standard, it provide reference for multi-language website.
-- [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS
-  media queries for popular Phones, Tablets, Laptops and Watches
-- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick
-  reference to every HTTP status code.
-- [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a
-  little cheat sheet.
-- [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on
-  CheatSheets.zip, It's a good practice for contributors.
-- [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can
-  look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains
-  all registered MIME types.
+- [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with their numbers and names.
+- [Aspect Ratio](https://cheatsheets.zip/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their pixel resolutions. Always confirm your final delivery ratio when shooting.
+- [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on CheatSheets.zip, It’s a good practice for contributors.
+- [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
+- [Google Search](https://cheatsheets.zip/google-search.html): This quick reference cheat sheet lists of Google advanced search operators.
+- [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.
+- [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that conform to the ISO 639-1 standard, it provide reference for multi-language website.
+- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick reference to every HTTP status code.
+- [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
+- [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
 
 </details>
 
