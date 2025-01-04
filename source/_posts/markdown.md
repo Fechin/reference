@@ -12,6 +12,7 @@ categories:
 intro: This is a quick reference cheat sheet to the Markdown syntax.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Markdown Quick Reference

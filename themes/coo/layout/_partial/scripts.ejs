@@ -91,27 +91,27 @@
             parent.style = "position: relative;"
             parent.insertBefore(runButton, codeBlock);
 
-            let content = codeBlock.textContent;
-            let language = [...codeBlock.classList].filter(c => c.startsWith("language-"))[0].replace("language-", "");
-            const editorId = ['javascript', 'python'].includes(language) ? 'script' : 'markup';
-            const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
-
-            if (language === 'python') {
-                if (content.includes('>>> ')) {
-                    content = content
-                        .trim()
-                        .split('\n')
-                        .map(line => line.startsWith('>>> ') ? line.replace('>>> ', '') : `# ${line}`)
-                        .join('\n');
-                }
-                if (content.includes('from typing import')) {
-                    language = 'python-wasm';
-                }
-            }
-
             // Add click event listener to run button
             runButton.addEventListener('click', () => {
-                const config = {
+                let content = codeBlock.textContent;
+                let language = [...codeBlock.classList].filter(c => c.startsWith("language-"))[0].replace("language-", "");
+                const editorId = ['javascript', 'python'].includes(language) ? 'script' : 'markup';
+                const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
+
+                if (language === 'python') {
+                    if (content.includes('>>> ')) {
+                        content = content
+                            .trim()
+                            .split('\n')
+                            .map(line => line.startsWith('>>> ') ? line.replace('>>> ', '') : `# ${line}`)
+                            .join('\n');
+                    }
+                    if (content.includes('from typing import')) {
+                        language = 'python-wasm';
+                    }
+                }
+
+                let config = {
                     title,
                     activeEditor: editorId,
                     [editorId]: {
@@ -120,6 +120,23 @@
                     },
                     tools: {
                         status: 'open',
+                    }
+                }
+
+                if (language === 'markdown') {
+                    config = {
+                        ...config,
+                        style: {
+                            language: 'css',
+                            content: '@import "github-markdown-css";\n\nbody {\n  border: 1px solid #e1e4e8;\n  border-radius: 4px;\n  padding: 20px;\n  margin: 20px !important;\n}\n',
+                        },
+                        script: {
+                            language: 'javascript',
+                            content: 'document.body.classList.add("markdown-body");'
+                        },
+                        tools: {
+                            status: 'closed',
+                        }
                     }
                 }
 
