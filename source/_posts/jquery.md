@@ -14,19 +14,20 @@ intro: |
 plugins:
   - tooltip
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
 
 ### Including jQuery
 
-```javascript {.wrap}
+```html {.wrap}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 ```
 
 #### Official CDN
 
-```javascript {.wrap}
+```html {.wrap}
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 ```
 
