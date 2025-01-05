@@ -155,6 +155,19 @@
                     }
                 }
 
+                if (document.querySelector('h1').textContent.includes('jQuery')) {
+                    config = {
+                        ...baseConfig,
+                        markup: {
+                            language: 'html',
+                            content: `<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></scr` + 'ipt>\n',
+                        },
+                        tools: {
+                            status: 'closed',
+                        }
+                    }
+                }
+
                 const plaugroundUrl = livecodes.getPlaygroundUrl({config});
                 window.open(plaugroundUrl, '_blank');
             });
