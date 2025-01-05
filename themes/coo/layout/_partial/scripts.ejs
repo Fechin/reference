@@ -75,6 +75,7 @@
 
 
 <% if (is_post() && page.plugins != undefined && page.plugins.includes("runCode") ){ %>
+    <!-- see https://livecodes.io/docs/ and https://livecodes.io/docs/sdk -->
     <script src="https://cdn.jsdelivr.net/npm/livecodes@0.7.2/livecodes.umd.js"></script>
     <script>
         // Get all pre > code elements
@@ -117,6 +118,7 @@
                                         : 'markup';
                 const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
 
+                // see docs for configuration object: https://livecodes.io/docs/configuration/configuration-object
                 const baseConfig = {
                     title,
                     activeEditor: editorId,
@@ -180,6 +182,7 @@
                     }
                 }
 
+                // see https://livecodes.io/docs/languages/ejs
                 if (language === 'html' && pageHeader.startsWith('EJS')) {
                     config = {
                         ...baseConfig,
@@ -222,6 +225,8 @@
                     }
                 }
 
+                // see https://livecodes.io/docs/languages/jsx
+                // and https://livecodes.io/docs/languages/react
                 if (language === 'javascript' && pageHeader.startsWith('React')) {
                     config = {
                         ...baseConfig,
@@ -237,6 +242,8 @@
                     }
                 }
 
+                // see https://livecodes.io/docs/languages/php-wasm
+                // and https://livecodes.io/docs/languages/php
                 if (language === 'php') {
                     config = {
                         ...baseConfig,
@@ -254,6 +261,8 @@
                     }
                 }
 
+                // see https://livecodes.io/docs/languages/python
+                // and https://livecodes.io/docs/languages/python-wasm
                 if (language === 'python') {
                     if (content.includes('>>> ')) {
                         content = content
@@ -362,7 +371,12 @@
                     }
                 }
 
-                const plaugroundUrl = livecodes.getPlaygroundUrl({config});
+                // see https://livecodes.io/docs/sdk/js-ts#getplaygroundurl
+                const plaugroundUrl = livecodes.getPlaygroundUrl({
+                    // see https://livecodes.io/docs/features/permanent-url/
+                    appUrl: 'https://v39.livecodes.io',
+                    config,
+                });
                 window.open(plaugroundUrl, '_blank');
             });
 
