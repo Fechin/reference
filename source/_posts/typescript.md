@@ -11,6 +11,7 @@ intro: |
   A TypeScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -293,11 +294,7 @@ class Greeter {
 
 ```ts
 function enumerable(value: boolean) {
-  return function (
-    target: any,
-    propertyKey: string,
-    descriptor: PropertyDescriptor
-  ) {
+  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     descriptor.enumerable = value;
   };
 }
