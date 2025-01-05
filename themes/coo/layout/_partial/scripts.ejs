@@ -106,25 +106,12 @@
                     language = 'javascript';
                 }
                 
-                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'perl'].includes(language) 
+                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'go', 'perl'].includes(language) 
                                     ? 'script' 
                                     : ['css', 'scss'].includes(language) 
                                         ? 'style' 
                                         : 'markup';
                 const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
-
-                if (language === 'python') {
-                    if (content.includes('>>> ')) {
-                        content = content
-                            .trim()
-                            .split('\n')
-                            .map(line => line.startsWith('>>> ') ? line.replace('>>> ', '') : `# ${line}`)
-                            .join('\n');
-                    }
-                    if (content.includes('from typing import')) {
-                        language = 'python-wasm';
-                    }
-                }
 
                 const baseConfig = {
                     title,
@@ -246,7 +233,7 @@
                     }
                 }
 
-                if (['php'].includes(language)) {
+                if (language === 'php') {
                     config = {
                         ...baseConfig,
                         style: {
@@ -260,6 +247,51 @@
                         tools: {
                             status: 'closed',
                         }
+                    }
+                }
+
+                if (language === 'python') {
+                    if (content.includes('>>> ')) {
+                        content = content
+                            .trim()
+                            .split('\n')
+                            .map(line => line.startsWith('>>> ') ? line.replace('>>> ', '') : `# ${line}`)
+                            .join('\n');
+                    }
+                    if (content.includes('from typing import')) {
+                        language = 'python-wasm';
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language,
+                            content,
+                        },
+                    }
+                }
+
+                if (language === 'go') {
+                    if (!content.includes('func main() {') && !content.includes('import')) {
+                        if (content.includes('func ')) {
+                            const freeCode = content.split('\n').filter(line => !line.startsWith('func ') && !line.startsWith('  ') && !line.startsWith('}')).join('\n');
+                            content = `${content.replace(freeCode, '')}\nfunc main() {\n${freeCode.trim().split('\n').map(line => `    ${line}`).join('\n')}\n}`;
+                        } else {
+                            content = `func main() {\n${content.trim().split('\n').map(line => `    ${line}`).join('\n')}\n}`;
+                        }
+                    }
+
+                    if (content.includes('fmt.') && !content.includes('import')) {
+                        content = `import "fmt"\n\n${content}`
+                    }
+                    if (!content.includes('package main')) {
+                        content = `package main\n\n${content}`
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language,
+                            content,
+                        },
                     }
                 }
 

@@ -10,6 +10,7 @@ intro: |
   This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
