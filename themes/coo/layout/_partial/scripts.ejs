@@ -102,8 +102,11 @@
                 if (language === 'ts') {
                     language = 'typescript';
                 }
+                if (language === 'js') {
+                    language = 'javascript';
+                }
                 
-                const editorId = ['js', 'javascript', 'typescript', 'python', 'php', 'ruby', 'perl'].includes(language) 
+                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'perl'].includes(language) 
                                     ? 'script' 
                                     : ['css', 'scss'].includes(language) 
                                         ? 'style' 
@@ -204,6 +207,26 @@
                             "template": {
                                 "prerender": false,
                             },
+                        },
+                    }
+                }
+
+                if (language === 'javascript' && pageHeader.startsWith('HTML Canvas')) {
+                    if (!content.includes('const ctx =')) {
+                        content = `const canvas = document.getElementById("myCanvas");\nconst ctx = canvas.getContext("2d");\n\n${content}`;
+                    }
+                    config = {
+                        ...baseConfig,
+                        markup: {
+                            language: 'html',
+                            content: "<canvas id=\"myCanvas\" width=\"500\" height=\"400\" style=\"border:1px solid #000000;\"></canvas>\n",
+                        },
+                        script: {
+                            language,
+                            content,
+                        },
+                        tools: {
+                            status: 'closed',
                         },
                     }
                 }
