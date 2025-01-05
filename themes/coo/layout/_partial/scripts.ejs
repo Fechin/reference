@@ -185,6 +185,28 @@
                     }
                 }
 
+                if (language === 'html' && document.querySelector('h1').textContent.includes('EJS')) {
+                    config = {
+                        ...baseConfig,
+                        markup: {
+                            language: 'ejs',
+                            content,
+                        },
+                        script: {
+                            language: 'javascript',
+                            content: "window.livecodes.templateData = {\n  userLoggedIn: false,\n  user: { username: 'geddy', email: 'geddy@example.com' },\n  users: [\n    { username: 'geddy', email: 'geddy@example.com' },\n    { username: 'neil', email: 'neil@example.com' },\n    { username: 'alex', email: 'alex@example.com' },\n  ],\n};\n",
+                        },
+                        tools: {
+                            status: 'open',
+                        },
+                        customSettings: {
+                            "template": {
+                                "prerender": false,
+                            },
+                        },
+                    }
+                }
+
                 if (['php'].includes(language)) {
                     config = {
                         ...baseConfig,
