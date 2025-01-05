@@ -95,7 +95,11 @@
             runButton.addEventListener('click', () => {
                 let content = codeBlock.textContent;
                 let language = [...codeBlock.classList].filter(c => c.startsWith("language-"))[0].replace("language-", "");
-                const editorId = ['javascript', 'python'].includes(language) ? 'script' : 'markup';
+                const editorId = ['javascript', 'python'].includes(language) 
+                                    ? 'script' 
+                                    : ['scss'].includes(language) 
+                                        ? 'style' 
+                                        : 'markup';
                 const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
 
                 if (language === 'python') {
@@ -111,7 +115,7 @@
                     }
                 }
 
-                let config = {
+                const baseConfig = {
                     title,
                     activeEditor: editorId,
                     [editorId]: {
@@ -122,10 +126,11 @@
                         status: 'open',
                     }
                 }
+                let config = baseConfig;
 
                 if (language === 'markdown') {
                     config = {
-                        ...config,
+                        ...baseConfig,
                         style: {
                             language: 'css',
                             content: '@import "github-markdown-css";\n\nbody {\n  border: 1px solid #e1e4e8;\n  border-radius: 4px;\n  padding: 20px;\n  margin: 20px !important;\n}\n',
@@ -136,6 +141,16 @@
                         },
                         tools: {
                             status: 'closed',
+                        }
+                    }
+                }
+
+                if (language === 'scss') {
+                    config = {
+                        ...baseConfig,
+                        tools: {
+                            status: 'open',
+                            active: 'compiled',
                         }
                     }
                 }
