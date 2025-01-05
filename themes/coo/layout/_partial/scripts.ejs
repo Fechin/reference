@@ -85,7 +85,7 @@
             let content = codeBlock.textContent || '';
             let language = [...codeBlock.classList].filter(c => c.startsWith("language-"))[0].replace("language-", "");
 
-            if (language === 'shell') return;
+            if (['shell', 'bash'].includes(language)) return;
 
             // Create a run button element
             const runButton = document.createElement('button');
@@ -103,7 +103,7 @@
                     language = 'typescript';
                 }
                 
-                const editorId = ['js', 'javascript', 'typescript', 'python', 'php'].includes(language) 
+                const editorId = ['js', 'javascript', 'typescript', 'python', 'php', 'ruby'].includes(language) 
                                     ? 'script' 
                                     : ['css', 'scss'].includes(language) 
                                         ? 'style' 
