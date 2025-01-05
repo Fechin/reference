@@ -11,6 +11,7 @@ intro: |
   A React cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -62,7 +63,7 @@ return (
 
 ```javascript
 import React from "react";
-export default function Weather(props) {
+function Weather(props) {
   if (props.temperature >= 20) {
     return (
       <p>
@@ -77,6 +78,8 @@ export default function Weather(props) {
     );
   }
 }
+
+export default () => <Weather city="New York" temperature={24} />;
 ```
 
 Note: A component must always return something.
@@ -140,14 +143,14 @@ Note: External components are found on npmjs.com and need to be imported first.
 ```javascript
 import React from "react";
 
-export default function Hello(props) {
+function Hello(props) {
   function fullName() {
     return `${props.firstName} ${props.lastName}`;
   }
   return <p>{fullName()}</p>;
 }
 
-<Hello firstName="Matt" lastName="Delac" />;
+export default () => <Hello firstName="Matt" lastName="Delac" />;
 ```
 
 ## Properties {.cols-2}
@@ -539,6 +542,7 @@ Note: Custom Hooks are reusable functions in React that contain logic shared acr
 to extract stateful logic from components into standalone functions.
 
 ### Creating Refs in Class Components
+
 ```javascript
 import React, { Component } from "react";
 
@@ -561,8 +565,8 @@ export default MyComponent;
 ```
 
 ### Using Refs in Functional Components
-```javascript
 
+```javascript
 import React, { useRef, useEffect } from "react";
 
 function MyComponent() {
@@ -579,15 +583,15 @@ export default MyComponent;
 ```
 
 ### Callback Refs
-```javascript
 
+```javascript
 import React, { Component } from "react";
 
 class MyComponent extends Component {
   constructor(props) {
     super(props);
     this.myRef = null;
-    this.setRef = element => {
+    this.setRef = (element) => {
       this.myRef = element;
     };
   }
@@ -605,6 +609,7 @@ export default MyComponent;
 ```
 
 ### Forwarding Refs
+
 ```javascript
 Copy code
 import React from "react";
@@ -621,10 +626,10 @@ const ref = React.createRef();
 ```
 
 ### Accessing DOM Elements with Refs
+
 ### Refs are often used to access and interact with DOM elements directly. Here's an example where we focus an input element using a ref:
 
 ```javascript
-
 import React, { useRef, useEffect } from "react";
 
 function FocusInput() {
@@ -642,10 +647,10 @@ export default FocusInput;
 ```
 
 ### Managing Focus with Refs
+
 ### You can also manage focus between multiple elements using refs:
 
 ```javascript
-
 import React, { useRef } from "react";
 
 function Form() {
