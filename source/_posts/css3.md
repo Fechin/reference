@@ -12,6 +12,7 @@ intro: |
   This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -66,10 +67,14 @@ Overrides all previous styling rules.
 ### Selector
 
 ```css
-h1 { }
-#job-title { }
-div.hero { }
-div > p { }
+h1 {
+}
+#job-title {
+}
+div.hero {
+}
+div > p {
+}
 ```
 
 See: [Selectors](#css-selectors)
@@ -245,7 +250,10 @@ p:first-child {
 | `div,p`      | All divs and paragraphs     |
 | `#idname *`  | All elements inside #idname |
 
-See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) / [Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) / [ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) / [Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors
+See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) /
+[Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) /
+[ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) /
+[Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors
 
 ### Combinators
 
@@ -258,7 +266,9 @@ See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors
 | `div + p`       | P tags immediately after div          |
 | `div ~ p`       | P tags preceded by div                |
 
-See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) / [Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) / [Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
+See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) /
+[Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) /
+[Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
 
 ### Attribute selectors
 
@@ -345,12 +355,10 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 | `letter-spacing:` | \<size>         |
 | `line-height:`    | \<number>       |
 
-| `font-weight:` | \<number> / bold / normal |
-| `font-style:` | italic / normal |
-| `text-decoration:` | underline / none |
+| `font-weight:` | \<number> / bold / normal | | `font-style:` | italic / normal | | `text-decoration:` | underline /
+none |
 
-| `text-align:` | left / right<br>center / justify |
-| `text-transform:` | capitalize / uppercase / lowercase |
+| `text-align:` | left / right<br>center / justify | | `text-transform:` | capitalize / uppercase / lowercase |
 {.left-text}
 
 See also: [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
@@ -453,14 +461,10 @@ color: currentcolor; /* keyword */
 | ------------- | ------------- |
 | `background:` | _(Shorthand)_ |
 
-| `background-color:` | See: [Colors](#css-colors) |
-| `background-image:` | url(...) |
-| `background-position:` | left/center/right<br/>top/center/bottom |
-| `background-size:` | cover X Y |
-| `background-clip:` | border-box<br/>padding-box<br/>content-box |
-| `background-repeat:` | no-repeat<br/>repeat-x<br/>repeat-y |
-| `background-attachment:` | scroll/fixed/local |
-{.left-text}
+| `background-color:` | See: [Colors](#css-colors) | | `background-image:` | url(...) | | `background-position:` |
+left/center/right<br/>top/center/bottom | | `background-size:` | cover X Y | | `background-clip:` |
+border-box<br/>padding-box<br/>content-box | | `background-repeat:` | no-repeat<br/>repeat-x<br/>repeat-y | |
+`background-attachment:` | scroll/fixed/local | {.left-text}
 
 ### Shorthand {.secondary .col-span-2}
 
@@ -475,16 +479,12 @@ color: currentcolor; /* keyword */
 ```css {.wrap}
 background: url(img_man.jpg) no-repeat center;
 
-background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top
-    repeat;
+background:
+  url(img_flwr.gif) right bottom no-repeat,
+  url(paper.gif) left top repeat;
 
 background: rgb(2, 0, 36);
-background: linear-gradient(
-  90deg,
-  rgba(2, 0, 36, 1) 0%,
-  rgba(13, 232, 230, 1) 35%,
-  rgba(0, 212, 255, 1) 100%
-);
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 232, 230, 1) 35%, rgba(0, 212, 255, 1) 100%);
 ```
 
 ## CSS The Box Model
@@ -498,7 +498,10 @@ background: linear-gradient(
 }
 ```
 
-See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) / [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) / [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) / [min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
+See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) /
+[min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) /
+[max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) /
+[min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
 
 ### Margin / Padding
 
@@ -509,7 +512,8 @@ See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width
 }
 ```
 
-See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) / [Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) /
+[Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 ### Box-sizing
 
@@ -764,8 +768,7 @@ A fixed-height top bar and a dynamic-height content area.
 }
 ```
 
-This creates columns that have different widths, but size accordingly according
-to the circumstances.
+This creates columns that have different widths, but size accordingly according to the circumstances.
 
 ### Vertical
 

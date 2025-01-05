@@ -104,7 +104,7 @@
                 
                 const editorId = ['javascript', 'typescript', 'python'].includes(language) 
                                     ? 'script' 
-                                    : ['scss'].includes(language) 
+                                    : ['css', 'scss'].includes(language) 
                                         ? 'style' 
                                         : 'markup';
                 const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
@@ -149,6 +149,15 @@
                         tools: {
                             status: 'open',
                             active: 'compiled',
+                        }
+                    }
+                }
+
+                if (['html', 'css'].includes(language)) {
+                    config = {
+                        ...baseConfig,
+                        tools: {
+                            status: 'closed',
                         }
                     }
                 }
