@@ -83,9 +83,9 @@
         const pageHeader = (document.querySelector('h1')?.textContent || '').trim();
         code_Blocks.forEach(function (codeBlock) {
             let content = codeBlock.textContent || '';
-            let language = [...codeBlock.classList].filter(c => c.startsWith("language-"))[0].replace("language-", "");
+            let language = [...codeBlock.classList].find(c => c.startsWith("language-"))?.replace("language-", "") || '';
 
-            if (['shell', 'bash'].includes(language)) return;
+            if (['', 'shell', 'bash'].includes(language)) return;
 
             // Create a run button element
             const runButton = document.createElement('button');
@@ -106,7 +106,7 @@
                     language = 'javascript';
                 }
                 
-                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'go', 'perl'].includes(language) 
+                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'go', 'perl', 'cpp'].includes(language) 
                                     ? 'script' 
                                     : ['css', 'scss'].includes(language) 
                                         ? 'style' 
@@ -279,7 +279,6 @@
                             content = `func main() {\n${content.trim().split('\n').map(line => `    ${line}`).join('\n')}\n}`;
                         }
                     }
-
                     if (content.includes('fmt.') && !content.includes('import')) {
                         content = `import "fmt"\n\n${content}`
                     }
@@ -290,6 +289,38 @@
                         ...baseConfig,
                         script: {
                             language,
+                            content,
+                        },
+                    }
+                }
+
+                if (language === 'cpp') {
+                    if (!content.includes('int main()')) {
+                        if (content.includes('class ')) {
+                            const freeCode = content.split('\n').filter(line => !line.startsWith('class ') && !line.startsWith('  ') && !line.startsWith('}')).join('\n');
+                            content = `${content.replace(freeCode, '')}\nint main()\n{\n${freeCode.trim().split('\n').map(line => `  ${line}`).join('\n')}\n}`;
+                        } else {                            
+                            content = `int main()\n{\n${content.trim().split('\n').map(line => `  ${line}`).join('\n')}\n\n    return 0;\n}\n`;
+                        }
+                    }
+                    if (content.includes('std::') && !content.includes('#include')) {
+                        content = '\n' + content;
+                        if (content.includes('std::array') && !content.includes('#include <array>')) {
+                            content = `#include <array>\n${content}`;
+                        }
+                        if (content.includes('std::string') && !content.includes('#include <string>')) {
+                            content = `#include <string>\n${content}`;
+                        }
+                        if (content.includes('std::cout') && !content.includes('#include <iostream>')) {
+                            content = `#include <iostream>\n${content}`;
+                        }
+                    } else if (content.includes('cout') && !content.includes('#include <iostream>')) {
+                        content = `#include <iostream>\nusing namespace std;\n\n${content}`;
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language: 'cpp-wasm',
                             content,
                         },
                     }
