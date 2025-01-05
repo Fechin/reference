@@ -9,6 +9,7 @@ intro: |
   The perl quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -36,7 +37,9 @@ $make install
 
 - Download either 32bit or 64bit version of installation.
 
-- Run the downloaded file by double-clicking it in Windows Explorer. This brings up the Perl install wizard, which is really easy to use. Just accept the default settings, wait until the installation is finished, and you're ready to roll!
+- Run the downloaded file by double-clicking it in Windows Explorer. This brings up the Perl install wizard, which is
+  really easy to use. Just accept the default settings, wait until the installation is finished, and you're ready to
+  roll!
 
 ### Macintosh Installation
 
