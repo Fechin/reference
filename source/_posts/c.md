@@ -9,6 +9,7 @@ intro: |
   C quick reference cheat sheet that provides basic syntax and methods.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -58,7 +59,7 @@ int y = 6;
 int sum = x + y; // add variables to sum
 
 // declare multiple variables
-int x = 5, y = 6, z = 50;
+int a = 5, b = 6, c = 50;
 ```
 
 ### Constants

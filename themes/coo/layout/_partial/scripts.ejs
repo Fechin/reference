@@ -86,6 +86,10 @@
             let language = [...codeBlock.classList].find(c => c.startsWith("language-"))?.replace("language-", "") || '';
 
             if (['', 'shell', 'bash'].includes(language)) return;
+            if (language === 'c' && content.includes('FILE ')) {
+                // file operations are not supported in the online playground
+                return;
+            }
 
             // Create a run button element
             const runButton = document.createElement('button');
@@ -106,7 +110,7 @@
                     language = 'javascript';
                 }
                 
-                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'go', 'perl', 'cpp'].includes(language) 
+                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'go', 'perl', 'cpp', 'c'].includes(language) 
                                     ? 'script' 
                                     : ['css', 'scss'].includes(language) 
                                         ? 'style' 
@@ -267,6 +271,9 @@
                             language,
                             content,
                         },
+                        tools: {
+                            status: 'full',
+                        }
                     }
                 }
 
@@ -291,6 +298,9 @@
                             language,
                             content,
                         },
+                        tools: {
+                            status: 'full',
+                        }
                     }
                 }
 
@@ -300,7 +310,7 @@
                             const freeCode = content.split('\n').filter(line => !line.startsWith('class ') && !line.startsWith('  ') && !line.startsWith('}')).join('\n');
                             content = `${content.replace(freeCode, '')}\nint main()\n{\n${freeCode.trim().split('\n').map(line => `  ${line}`).join('\n')}\n}`;
                         } else {                            
-                            content = `int main()\n{\n${content.trim().split('\n').map(line => `  ${line}`).join('\n')}\n\n    return 0;\n}\n`;
+                            content = `int main()\n{\n${content.trim().split('\n').map(line => `  ${line}`).join('\n')}\n\n  return 0;\n}\n`;
                         }
                     }
                     if (content.includes('std::') && !content.includes('#include')) {
@@ -323,6 +333,32 @@
                             language: 'cpp-wasm',
                             content,
                         },
+                        tools: {
+                            status: 'full',
+                        }
+                    }
+                }
+
+                if (language === 'c') {
+                    if (!content.includes('int main(') && !content.includes('void main(')) {
+                        content = `int main(void)\n{\n${content.trim().split('\n').map(line => `  ${line}`).join('\n')}\n\n  return 0;\n}\n`;
+                    }
+                    if ((content.includes('printf') || content.includes('scanf')) && !content.includes('#include <stdio.h>')) {
+                        content = `#include <stdio.h>\n\n${content}`;
+                    }
+                    if (content.includes('strcpy') && !content.includes('#include <string.h>')) {
+                        content = `#include <string.h>\n${content}`;
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language: 'cpp-wasm',
+                            title: 'C (Wasm)',
+                            content,
+                        },
+                        tools: {
+                            status: 'full',
+                        }
                     }
                 }
 
