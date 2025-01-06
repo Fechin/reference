@@ -12,6 +12,7 @@ intro:
   EJS(Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.
 plugins:
   - copyCode
+  - runCode
 ---
 
 <!-- NOTE: EJS does not have Prettier support, so manually format and add a prettier-ignore above broken code blocks -->
@@ -58,10 +59,11 @@ Pass EJS a template string and some data.
 ### Browser Support
 
 ```html
-<script src="ejs.js"></script>
+<script src="https://unpkg.com/ejs"></script>
 <script>
   let people = ["geddy", "neil", "alex"];
   let html = ejs.render('<%= people.join(", "); %>', { people: people });
+  console.log(html);
 </script>
 ```
 

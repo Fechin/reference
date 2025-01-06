@@ -9,6 +9,7 @@ intro: |
   C++ quick reference cheat sheet that provides basic syntax and methods.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -467,6 +468,7 @@ for(int i = 1; i > 0; i++) {
 
 ```cpp
 #include <iostream>
+#include <array>
 
 int main()
 {

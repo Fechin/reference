@@ -10,6 +10,7 @@ intro: |
   This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started

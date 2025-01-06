@@ -75,16 +75,22 @@
 
 
 <% if (is_post() && page.plugins != undefined && page.plugins.includes("runCode") ){ %>
+    <!-- see https://livecodes.io/docs/ and https://livecodes.io/docs/sdk -->
     <script src="https://cdn.jsdelivr.net/npm/livecodes@0.7.2/livecodes.umd.js"></script>
     <script>
         // Get all pre > code elements
         const code_Blocks = document.querySelectorAll('pre > code');
         const runInnerHTML = '<svg height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M16.6582 9.28638C18.098 10.1862 18.8178 10.6361 19.0647 11.2122C19.2803 11.7152 19.2803 12.2847 19.0647 12.7878C18.8178 13.3638 18.098 13.8137 16.6582 14.7136L9.896 18.94C8.29805 19.9387 7.49907 20.4381 6.83973 20.385C6.26501 20.3388 5.73818 20.0469 5.3944 19.584C5 19.053 5 18.1108 5 16.2264V7.77357C5 5.88919 5 4.94701 5.3944 4.41598C5.73818 3.9531 6.26501 3.66111 6.83973 3.6149C7.49907 3.5619 8.29805 4.06126 9.896 5.05998L16.6582 9.28638Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></g></svg>';
+        const pageHeader = (document.querySelector('h1')?.textContent || '').trim();
         code_Blocks.forEach(function (codeBlock) {
-            let content = codeBlock.textContent;
-            let language = [...codeBlock.classList].filter(c => c.startsWith("language-"))[0].replace("language-", "");
+            let content = codeBlock.textContent || '';
+            let language = [...codeBlock.classList].find(c => c.startsWith("language-"))?.replace("language-", "") || '';
 
-            if (language === 'shell') return;
+            if (['', 'shell', 'bash'].includes(language)) return;
+            if (language === 'c' && content.includes('FILE ')) {
+                // file operations are not supported in the online playground
+                return;
+            }
 
             // Create a run button element
             const runButton = document.createElement('button');
@@ -101,27 +107,18 @@
                 if (language === 'ts') {
                     language = 'typescript';
                 }
+                if (language === 'js') {
+                    language = 'javascript';
+                }
                 
-                const editorId = ['javascript', 'typescript', 'python'].includes(language) 
+                const editorId = ['javascript', 'typescript', 'python', 'php', 'ruby', 'go', 'perl', 'cpp', 'c'].includes(language) 
                                     ? 'script' 
-                                    : ['scss'].includes(language) 
+                                    : ['css', 'scss'].includes(language) 
                                         ? 'style' 
                                         : 'markup';
                 const title = codeBlock.closest('.h3-wrap')?.querySelector('h3')?.textContent.replace('#', '') || '';
 
-                if (language === 'python') {
-                    if (content.includes('>>> ')) {
-                        content = content
-                            .trim()
-                            .split('\n')
-                            .map(line => line.startsWith('>>> ') ? line.replace('>>> ', '') : `# ${line}`)
-                            .join('\n');
-                    }
-                    if (content.includes('from typing import')) {
-                        language = 'python-wasm';
-                    }
-                }
-
+                // see docs for configuration object: https://livecodes.io/docs/configuration/configuration-object
                 const baseConfig = {
                     title,
                     activeEditor: editorId,
@@ -153,6 +150,15 @@
                     }
                 }
 
+                if (['html', 'css'].includes(language)) {
+                    config = {
+                        ...baseConfig,
+                        tools: {
+                            status: 'closed',
+                        }
+                    }
+                }
+
                 if (['scss', 'typescript'].includes(language)) {
                     config = {
                         ...baseConfig,
@@ -163,7 +169,7 @@
                     }
                 }
 
-                if (document.querySelector('h1').textContent.includes('jQuery')) {
+                if (pageHeader.startsWith('jQuery')) {
                     config = {
                         ...baseConfig,
                         markup: {
@@ -176,7 +182,201 @@
                     }
                 }
 
-                const plaugroundUrl = livecodes.getPlaygroundUrl({config});
+                // see https://livecodes.io/docs/languages/ejs
+                if (language === 'html' && pageHeader.startsWith('EJS')) {
+                    config = {
+                        ...baseConfig,
+                        markup: {
+                            language: 'ejs',
+                            content,
+                        },
+                        script: {
+                            language: 'javascript',
+                            content: "window.livecodes.templateData = {\n  userLoggedIn: false,\n  user: { username: 'geddy', email: 'geddy@example.com' },\n  users: [\n    { username: 'geddy', email: 'geddy@example.com' },\n    { username: 'neil', email: 'neil@example.com' },\n    { username: 'alex', email: 'alex@example.com' },\n  ],\n};\n",
+                        },
+                        tools: {
+                            status: 'open',
+                        },
+                        customSettings: {
+                            "template": {
+                                "prerender": false,
+                            },
+                        },
+                    }
+                }
+
+                if (language === 'javascript' && pageHeader.startsWith('HTML Canvas')) {
+                    if (!content.includes('const ctx =')) {
+                        content = `const canvas = document.getElementById("myCanvas");\nconst ctx = canvas.getContext("2d");\n\n${content}`;
+                    }
+                    config = {
+                        ...baseConfig,
+                        markup: {
+                            language: 'html',
+                            content: "<canvas id=\"myCanvas\" width=\"500\" height=\"400\" style=\"border:1px solid #000000;\"></canvas>\n",
+                        },
+                        script: {
+                            language,
+                            content,
+                        },
+                        tools: {
+                            status: 'closed',
+                        },
+                    }
+                }
+
+                // see https://livecodes.io/docs/languages/jsx
+                // and https://livecodes.io/docs/languages/react
+                if (language === 'javascript' && pageHeader.startsWith('React')) {
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language: 'jsx',
+                            content,
+                        },
+                        customSettings: {
+                            imports: {
+                                'axios': 'https://cdn.skypack.dev/axios',
+                            },
+                        },
+                    }
+                }
+
+                // see https://livecodes.io/docs/languages/php-wasm
+                // and https://livecodes.io/docs/languages/php
+                if (language === 'php') {
+                    config = {
+                        ...baseConfig,
+                        style: {
+                            language: 'css',
+                            content: 'body { white-space: pre-wrap; }\n',
+                        },
+                        script: {
+                            language: 'php-wasm',
+                            content: !content.trim().startsWith('<?php') ? `<?php\n\n${content.trim()}\n\n?>` : content,
+                        },
+                        tools: {
+                            status: 'closed',
+                        }
+                    }
+                }
+
+                // see https://livecodes.io/docs/languages/python
+                // and https://livecodes.io/docs/languages/python-wasm
+                if (language === 'python') {
+                    if (content.includes('>>> ')) {
+                        content = content
+                            .trim()
+                            .split('\n')
+                            .map(line => line.startsWith('>>> ') ? line.replace('>>> ', '') : `# ${line}`)
+                            .join('\n');
+                    }
+                    if (content.includes('from typing import')) {
+                        language = 'python-wasm';
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language,
+                            content,
+                        },
+                        tools: {
+                            status: 'full',
+                        }
+                    }
+                }
+
+                if (language === 'go') {
+                    if (!content.includes('func main() {') && !content.includes('import')) {
+                        if (content.includes('func ')) {
+                            const freeCode = content.split('\n').filter(line => !line.startsWith('func ') && !line.startsWith('  ') && !line.startsWith('}')).join('\n');
+                            content = `${content.replace(freeCode, '')}\nfunc main() {\n${freeCode.trim().split('\n').map(line => `    ${line}`).join('\n')}\n}`;
+                        } else {
+                            content = `func main() {\n${content.trim().split('\n').map(line => `    ${line}`).join('\n')}\n}`;
+                        }
+                    }
+                    if (content.includes('fmt.') && !content.includes('import')) {
+                        content = `import "fmt"\n\n${content}`
+                    }
+                    if (!content.includes('package main')) {
+                        content = `package main\n\n${content}`
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language,
+                            content,
+                        },
+                        tools: {
+                            status: 'full',
+                        }
+                    }
+                }
+
+                if (language === 'cpp') {
+                    if (!content.includes('int main()')) {
+                        if (content.includes('class ')) {
+                            const freeCode = content.split('\n').filter(line => !line.startsWith('class ') && !line.startsWith('  ') && !line.startsWith('}')).join('\n');
+                            content = `${content.replace(freeCode, '')}\nint main()\n{\n${freeCode.trim().split('\n').map(line => `  ${line}`).join('\n')}\n}`;
+                        } else {                            
+                            content = `int main()\n{\n${content.trim().split('\n').map(line => `  ${line}`).join('\n')}\n\n  return 0;\n}\n`;
+                        }
+                    }
+                    if (content.includes('std::') && !content.includes('#include')) {
+                        content = '\n' + content;
+                        if (content.includes('std::array') && !content.includes('#include <array>')) {
+                            content = `#include <array>\n${content}`;
+                        }
+                        if (content.includes('std::string') && !content.includes('#include <string>')) {
+                            content = `#include <string>\n${content}`;
+                        }
+                        if (content.includes('std::cout') && !content.includes('#include <iostream>')) {
+                            content = `#include <iostream>\n${content}`;
+                        }
+                    } else if (content.includes('cout') && !content.includes('#include <iostream>')) {
+                        content = `#include <iostream>\nusing namespace std;\n\n${content}`;
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language: 'cpp-wasm',
+                            content,
+                        },
+                        tools: {
+                            status: 'full',
+                        }
+                    }
+                }
+
+                if (language === 'c') {
+                    if (!content.includes('int main(') && !content.includes('void main(')) {
+                        content = `int main(void)\n{\n${content.trim().split('\n').map(line => `  ${line}`).join('\n')}\n\n  return 0;\n}\n`;
+                    }
+                    if ((content.includes('printf') || content.includes('scanf')) && !content.includes('#include <stdio.h>')) {
+                        content = `#include <stdio.h>\n\n${content}`;
+                    }
+                    if (content.includes('strcpy') && !content.includes('#include <string.h>')) {
+                        content = `#include <string.h>\n${content}`;
+                    }
+                    config = {
+                        ...baseConfig,
+                        script: {
+                            language: 'cpp-wasm',
+                            title: 'C (Wasm)',
+                            content,
+                        },
+                        tools: {
+                            status: 'full',
+                        }
+                    }
+                }
+
+                // see https://livecodes.io/docs/sdk/js-ts#getplaygroundurl
+                const plaugroundUrl = livecodes.getPlaygroundUrl({
+                    // see https://livecodes.io/docs/features/permanent-url/
+                    appUrl: 'https://v39.livecodes.io',
+                    config,
+                });
                 window.open(plaugroundUrl, '_blank');
             });
 

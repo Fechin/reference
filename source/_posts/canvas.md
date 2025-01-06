@@ -10,6 +10,7 @@ intro: |
   This HTML  Canvas quick reference cheat sheet lists the common HTML5  Canvas design tags in readable layout.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
@@ -23,12 +24,7 @@ plugins:
     <title>Canvas Example</title>
   </head>
   <body>
-    <canvas
-      id="myCanvas"
-      width="500"
-      height="400"
-      style="border:1px solid #000000;"
-    ></canvas>
+    <canvas id="myCanvas" width="500" height="400" style="border:1px solid #000000;"></canvas>
     <script src="script.js"></script>
   </body>
 </html>

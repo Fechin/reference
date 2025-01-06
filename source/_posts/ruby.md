@@ -11,6 +11,7 @@ intro: |
   The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.
 plugins:
   - copyCode
+  - runCode
 ---
 
 ## Getting Started
