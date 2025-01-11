@@ -108,6 +108,7 @@ Reference provides cheat sheets for the following:
   involved in using the command line program grep and assumes you already understand its usage.
 - [Netcat](https://cheatsheets.zip/nc.html): This cheat sheet provides various for using netcat on both Linux and Unix.
 - [Taskset](https://cheatsheets.zip/taskset): This quick reference cheat sheet for tasket command.
+- [GnuPG](https://cheatsheets.zip/gnupg): A cheatsheet for GnuPG, the encryption and signing software.
 </details>
 
 <details>
