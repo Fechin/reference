@@ -1,5 +1,5 @@
 ---
-title: Powershell
+title: PowerShell
 date: 2020-11-25 18:28:43
 background: bg-[#397fe4]
 tags:
@@ -8,7 +8,7 @@ tags:
 categories:
   - Programming
   - Operating System
-intro: This is a quick reference cheat sheet to getting started with Powershell scripting.
+intro: This is a quick reference cheat sheet to getting started with PowerShell scripting.
 plugins:
   - copyCode
 ---
@@ -253,7 +253,7 @@ $dict = @{k1 = 'test'; k2 = 'best'}
 
 Variable Commands
 
-```Powershell
+```powershell
 New-Variable -Name FirstName -Value Trevor
 New-Variable FirstName -Value Trevor -Option <ReadOnly/Constant>
 
@@ -378,7 +378,7 @@ function Get-EvenNumbers {
 #### Modules
 
 ```powershell
-# powershell looks module in the path
+# PowerShell looks module in the path
 $env:PSModulePath
 
 # lists all modules installed on system
@@ -401,7 +401,7 @@ New-Module -Name trevor -ScriptBlock {
 
 ### Tips
 
-- In most of the languages, escape character is backslash **\\** whereas in powershell it is backtick **`**
+- In most of the languages, escape character is backslash **\\** whereas in PowerShell it is backtick **`**
 
 ```powershell
 
@@ -409,5 +409,5 @@ New-Module -Name trevor -ScriptBlock {
 
 ## Also see {.cols-1}
 
-- [Microsoft Powershell](https://learn.microsoft.com/en-us/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.3)
+- [Microsoft PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/samples/sample-scripts-for-administration?view=powershell-7.3)
   _(learn.microsoft.com)_
