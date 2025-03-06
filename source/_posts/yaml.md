@@ -17,7 +17,7 @@ plugins:
 
 ### Introduction
 
-[YAML](https://yaml.org/) is a data serialisation language designed to be directly writable and readable by humans
+[YAML](https://yaml.org/) is a data serialization language designed to be directly writable and readable by humans
 
 - YAML does not allow the use of tabs
 - Must be space between the element parts
