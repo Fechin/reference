@@ -116,6 +116,7 @@ Reference provides cheat sheets for the following:
 
 - [NumPy](https://cheatsheets.zip/numpy.html): [NumPy](https://numpy.org/) is the fundamental package for scientific
   computing with Python. This cheat sheet is a quick reference for NumPy beginners.
+- [Pandas](https://cheatsheets.zip/pandas.html): [Pandas](https://pandas.pydata.org/) is a powerful data analysis and manipulation library for Python. This quick reference cheat sheet provides an overview of essential Pandas functions, methods, and DataFrame operations.
 
 </details>
 
