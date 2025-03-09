@@ -533,7 +533,7 @@ for (int i = 0; i < 5; i++) {
   }
   System.out.print(i);
 }
-// Outputs: 01245
+// Outputs: 0124
 ```
 
 ### Break Statement
