@@ -800,7 +800,7 @@ else:
     print("num is indeed 10.")
 ```
 
-### One line
+### One line (ternary operator)
 
 ```python
 >>> a = 330
