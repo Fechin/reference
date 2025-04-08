@@ -895,6 +895,33 @@ x = \begin{cases}
 \end{CD}
 ```
 
+## Lists
+
+### Unordered List
+
+<!--rehype:style=flex:1;-->
+
+```LaTeX
+\begin{itemize}
+   \item item1
+   \item item2
+   \item item3
+\end{itemize}
+```
+
+
+### Ordered List
+
+<!--rehype:style=flex:1;-->
+
+```LaTeX
+\begin{enumerate}
+   \item item1
+   \item item2
+   \item item3
+\begin{enumerate}
+```
+
 ## Style, Color, Size and Font
 
 ### Color
