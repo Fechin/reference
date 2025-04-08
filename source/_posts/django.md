@@ -244,9 +244,9 @@ class Customer(models.Model)
 ```python
   class Customer(models.Model)
     class TypeList(models.IntegerChoices):
-        customer = 1, _('Customer'))
-        supplier = 2, _('Supplier'))
-        student = 3, _('Student'))
+        customer = (1, _('Customer'))
+        supplier = (2, _('Supplier'))
+        student = (3, _('Student'))
     .
     .
     .
