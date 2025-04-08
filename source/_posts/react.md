@@ -627,8 +627,6 @@ const ref = React.createRef();
 
 ### Accessing DOM Elements with Refs
 
-### Refs are often used to access and interact with DOM elements directly. Here's an example where we focus an input element using a ref:
-
 ```javascript
 import React, { useRef, useEffect } from "react";
 
@@ -645,10 +643,9 @@ function FocusInput() {
 
 export default FocusInput;
 ```
+Note: Refs are often used to access and interact with DOM elements directly. Here's an example where we focus an input element using a ref.
 
 ### Managing Focus with Refs
-
-### You can also manage focus between multiple elements using refs:
 
 ```javascript
 import React, { useRef } from "react";
@@ -673,3 +670,4 @@ function Form() {
 
 export default Form;
 ```
+Note: You can also manage focus between multiple elements using refs.
