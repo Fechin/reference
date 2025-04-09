@@ -1027,6 +1027,188 @@ func main() {
 
 ```
 
+## Go File I/O {.cols-2}
+
+### Reading a File
+Read the contents of a file into memory.
+```go
+data, err := os.ReadFile("file.txt")
+if err != nil {
+    log.Fatal(err)
+}
+```
+
+### Writing to a File
+Write data to a file with specific permissions (e.g., 0644 for read-write).
+```go
+err := os.WriteFile("file.txt", []byte("Hello, Go!"), 0644)
+```
+
+## Go Testing {.cols-2}
+
+### Unit Test
+Unit Test: A basic unit test follows the below naming convention and uses t.Errorf() to report failures.
+```go
+func TestAdd(t *testing.T) {
+    result := add(2, 3)
+    if result != 5 {
+        t.Errorf("Expected 5, got %d", result)
+    }
+}
+```
+
+### Unit Test
+Benchmark: Benchmark tests measure performance, using b.N to control iterations.
+```go
+func BenchmarkAdd(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        add(1, 2)
+    }
+}
+```
+
+## Go JSON Handling {.cols-2}
+
+
+### JSON Encoding 
+Convert a Go struct to JSON.
+```go
+data, _ := json.Marshal(person)
+```
+
+### JSON Decoding
+Parse JSON data into a Go struct.
+```go
+json.Unmarshal(data, &person)
+```
+
+## Go Server {.cols-2}
+
+### net/http (Standard Library)
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprint(w, "Hello from net/http!")
+}
+
+func main() {
+
+    http.HandleFunc("/", handler)
+
+    http.ListenAndServe(":8080", nil)
+}
+
+```
+
+### gorilla/mux
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+    "github.com/gorilla/mux"
+)
+
+func main() {
+
+    r := mux.NewRouter()
+
+    r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprint(w, "Hello from Gorilla Mux!")
+    })
+
+    http.ListenAndServe(":8081", r)
+}
+
+```
+
+### chi
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+    "github.com/go-chi/chi/v5"
+)
+
+func main() {
+
+    r := chi.NewRouter()
+
+    r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprint(w, "Hello from Chi!")
+    })
+
+    http.ListenAndServe(":8082", r)
+}
+```
+
+### gin
+```go
+package main
+
+import (
+    "github.com/gin-gonic/gin"
+)
+
+func main() {
+
+    r := gin.Default()
+
+    r.GET("/", func(c *gin.Context) {
+        c.String(200, "Hello from Gin!")
+    })
+
+    r.Run(":8083")
+}
+```
+
+### fiber
+```go
+package main
+
+import (
+    "github.com/gofiber/fiber/v3"
+)
+
+func main() {
+
+    app := fiber.New()
+
+    app.Get("/", func(c *fiber.Ctx) error {
+        return c.SendString("Hello from Fiber!")
+    })
+
+    app.Listen(":8084")
+}
+```
+### beego
+```go
+package main
+
+import (
+    "github.com/beego/beego/v2/server/web"
+)
+
+func main() {
+
+    web.Get("/", func(ctx *web.Context) {
+        ctx.Output.Body([]byte("Hello from Beego!"))
+    })
+
+    web.Run()
+}
+
+```
+
 ## Miscellaneous
 
 ### Keywords
