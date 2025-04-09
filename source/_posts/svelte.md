@@ -479,7 +479,7 @@ export async function load({ fetch }) {
 ```
 
 ```js
-<!-- +page.svelte -->
+// +page.svelte
 <script>
   export let data;
 </script>
