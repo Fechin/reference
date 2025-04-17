@@ -103,7 +103,7 @@ Basic data types
 ### Integers
 
 ```nim
-et
+let
   a = 11
   b = 4
 
