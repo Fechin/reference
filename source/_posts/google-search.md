@@ -132,7 +132,7 @@ intro: |
 | `larger:`         | Messages larger than a certain size in bytes                                                          | Mail       |
 | `smaller:`        | Messages smaller than a certain size in bytes                                                         | Mail       |
 | `has:userlabels`  | Search for messages that have custom user labels                                                      | Mail       |
-| ` `               | Search for messages that have no custom user labels                                                   | Mail       |
+| `has:nouserlabels`| Search for messages that have no custom user labels                                                   | Mail       |
 
 ### Some other useful search operators
 
