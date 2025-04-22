@@ -208,6 +208,8 @@ plugins:
 - **Summarize long selections of text**
   ```{.wrap}
   Can you please summarize this article for me? [your text]
+  
+  Write concise main points [your text]
   ```
 - **Translate foreign languages**
   ```{.wrap}
