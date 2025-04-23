@@ -23,9 +23,10 @@ plugins:
 - AI Model: a program trained on datasets to recognize patterns and make decisions without human intervention.
 - Large language model (LLM): a transformer-based AI model trained on large text datasets to understand and generate human-like language.
 - Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
+- Jailbreak: exploiting AI model vulnerabilities to bypass ethical guidelines and perform restricted actions.
 
 ### Tips
-Efficiency
+Prompt Efficiency
 - Focus on achieving the desired output efficiently with minimal words in the prompt.
 - Specify general instructions at the start of a conversation or when changing direction to avoid constantly restating them in each new prompt.
 ```{.wrap}
@@ -54,7 +55,7 @@ Example: "please do X".
 Example: “thanks”.
 ```
 
-Clarify
+Prompt Clarity
 - Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and eliminate comma lists and conjunctions (e.g., and).
 - Avoid vague or close ended questions.
 ```{.wrap}
@@ -65,28 +66,37 @@ Example: “Do you think our site is good" -> "Explain flaws in the designs of e
 Example: “explain our sales" -> "explain a breakdown of our sales performance for the last quarter”.
 ```
 
-Refine
+Response Refinement
 - If the AI model misunderstands your request then specify the intended action.
 - Provide sufficient context so the AI model can understand the scenario.
 
-Privacy
+Privacy And Security
 - Never share sensitive information with AI model's as you can't be certain how it's stored, whether it will be shared, of if a data breach may occur.
 
 ## Prompt Engineering
 ### Prompt Frameworks
 Only use prompt components that are relevant for your needs.
 ~~~
-General purpose
+General Purpose
 [role] [task] [tone] [format] [restriction]
 ~~~
 
 ### Role
-Act as [occupation]
+Standard
+- Act as [occupation]
 
-Examples
-- Personal coach
-- Marketing manager
+Common Standard Roles
+- Personal Coach
+- Consultant
+- Entrepreneur
+- Proofreader
 - Therapist
+
+Also See
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
+
+Roleplay
+- Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
 
 ### Task
 [verb] [task] [specifics]
@@ -208,7 +218,7 @@ Game
 - Choose-Your-Own-Adventure
 
 ### Restriction
-but [restriction]
+But [restriction]
 
 Length Constraints
 - Concise
@@ -683,9 +693,8 @@ Scenario:
 -	Lead actor is missing and staff are stressing out how to pull off the performance.
 ```
 
-## Also See
+## Any Suggestions?
 - [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
 
 <style>
 em { font-size: 0.785em; }
