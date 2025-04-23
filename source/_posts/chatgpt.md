@@ -45,16 +45,16 @@ Example: “can you help me x”.
 ```
 - Do not explicitly reference yourself unless clarifying multiple entities:
 ```{.wrap}
-Example: "do x for me".
+Example: "do X for me".
 Example: ”I want to x”.
 ```
 - Do not be polite to the AI:
 ```{.wrap}
-Example: "please do x".
+Example: "please do X".
 Example: “thanks”.
 ```
 
-Clarity
+Clarify
 - Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and eliminate comma lists and conjunctions (e.g., and).
 - Avoid vague or close ended questions.
 ```{.wrap}
@@ -64,6 +64,172 @@ Example: “Do you think our site is good" -> "Explain flaws in the designs of e
 ```{.wrap}
 Example: “explain our sales" -> "explain a breakdown of our sales performance for the last quarter”.
 ```
+
+Refine
+- If the AI model misunderstands your request then specify the intended action.
+- Provide sufficient context so the AI model can understand the scenario.
+
+Privacy
+- Never share sensitive information with AI model's as you can't be certain how it's stored, whether it will be shared, of if a data breach may occur.
+
+## Prompt Engineering
+### Prompt Frameworks
+Only use prompt components that are relevant for your needs.
+~~~
+General purpose
+[role] [task] [tone] [format] [restriction]
+~~~
+
+### Role
+Act as [occupation]
+
+Examples
+- Personal coach
+- Marketing manager
+- Therapist
+
+### Task
+[verb] [task] [specifics]
+
+Create
+- [Write content about X|suggest ideas about X|suggest titles about X]
+- Write content about X in the style of [style]
+- Write better
+- Write email to [entity] about X
+- [Continue|expand]
+- [Explain how to do X|create roadmap for X]
+- [Suggest best practices for X|suggest improvements|what am I doing right?|what am I doing wrong?]
+- Show list of emojis about X
+- [Create|generate|imagine] image about X
+
+Read
+- [Summarise|write concise main points]
+- [Explain|elaborate]
+- Explain what [entity|text] meant by X
+- Identify themes in X
+- Write outline about X
+- Extract keywords
+- Get up-to-date [facts|news|data] on X
+- Is this true?
+- Suggest [media] [about|similar to] X
+- Pick best from [options]
+
+Update
+- For all X do [action]
+- For X do [action] if matching [criteria]
+- Reformat everything as [format]
+
+Delete
+- Delete [quantity] of X matching [criteria]
+- Delete everything except X
+- Delete [item] [number]
+- Delete duplicate items from X
+
+Compare
+- Identify [simlarities|diffirences] between X and Y
+- Identify gaps in X
+- Evaluate pros and cons of X
+- X [comparison operator] Y. It could be abstractly expressed as "are apples bigger than walnuts?"
+
+Filter
+- Filter X by [criteria]
+- Exclude X by [criteria]. Everything is excluded by default.
+
+Select
+- Select [quantity] of X based on [criteria|randomly]
+
+Simplify
+- Explain X like I’m 5
+- Explain in simple terms
+
+Sort
+- Sort X by [key] in [alphabetical|chronological|ascending|descending|lexicographical|custom] order
+
+Translate
+- Translate into [language]. For programming languages it's specifically called transpile
+
+### Tone
+Using [tone] tone
+
+Formality
+- Formal
+- Informal
+
+Directness:
+- Direct
+- Indirect
+
+Positive Tones
+- Optimistic
+- Appreciative
+- Assertive
+- Calm
+- Confident
+- Encouraging
+- Friendly
+- Humorous
+- Inspirational
+
+Negative Tones
+- Pessimistic
+- Accusatory
+- Concerned
+- Critical
+- Regretful
+- Sarcastic
+- Urgent
+
+### Format
+In [format]
+
+Presentation
+- Plain text
+- Bullet point list
+- Numbered list
+- Table
+- Code snippet
+
+Process
+- Step-by-step instructions
+
+Response
+- Question and answer
+- Dialogue
+
+Creative
+- Poetry
+- Music lyrics
+- Script
+- Comic strip dialogue
+
+Game
+- Quiz
+- RPG
+- Choose-Your-Own-Adventure
+
+### Restriction
+but [restriction]
+
+Length Constraints
+- Concise
+- In N words
+- In N sentences
+
+Language Constraints
+-	No jargon or technical terms
+
+Structural Constraints
+- Show N options
+-	No examples
+-	No headers
+-	No pretext titles
+
+Content Constraints
+- Don't change the wording
+- Only minor edits
+- Ensure goals align with SMART criteria
+- Only show content that has changed
+- Avoid discussing sensitive topics (e.g., death, rape, war)
 
 ## Use Cases
 ### General
