@@ -14,7 +14,17 @@ plugins:
   - copyCode
 ---
 
-## Getting Started
+## Overview
+### Terminology
+- Prompt: input text that guides an AI model’s response.
+- Tokens: the smallest units of text processed by an AI model.
+- Token Limit: the max number of tokens an AI model can process in one request.
+- Artificial intelligence (AI): machines that imitate human intelligence.
+- AI Model: a program trained on datasets to recognize patterns and make decisions without human intervention.
+- Large language model (LLM): a transformer-based AI model trained on large text datasets to understand and generate human-like language.
+- Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
+
+## Use Cases
 ### General
 Name a business or idea
 ```{.wrap}
