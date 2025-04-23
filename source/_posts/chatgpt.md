@@ -24,6 +24,47 @@ plugins:
 - Large language model (LLM): a transformer-based AI model trained on large text datasets to understand and generate human-like language.
 - Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
 
+### Tips
+Efficiency
+- Focus on achieving the desired output efficiently with minimal words in the prompt.
+- Specify general instructions at the start of a conversation or when changing direction to avoid constantly restating them in each new prompt.
+```{.wrap}
+Example: specify the role once at the start of a conversation.
+```
+- Restructure text to eliminate filler words that don’t add meaning:
+```{.wrap}
+Example: “provide a breakdown" -> "provide sales breakdown”.
+```
+- Do not explicitly refer to the item being processed unless addressing a specific part of it as what you provide will typically speak for itself:
+```{.wrap}
+Example: “Filter this piece of text" -> "Filter text”
+```
+- Do not explicitly ask the AI for help:
+```{.wrap}
+Example: “can you help me x”.
+```
+- Do not explicitly reference yourself unless clarifying multiple entities:
+```{.wrap}
+Example: "do x for me".
+Example: ”I want to x”.
+```
+- Do not be polite to the AI:
+```{.wrap}
+Example: "please do x".
+Example: “thanks”.
+```
+
+Clarity
+- Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and eliminate comma lists and conjunctions (e.g., and).
+- Avoid vague or close ended questions.
+```{.wrap}
+Example: “Do you think our site is good" -> "Explain flaws in the designs of each webpage”
+```
+- Ensure prompts are specific
+```{.wrap}
+Example: “explain our sales" -> "explain a breakdown of our sales performance for the last quarter”.
+```
+
 ## Use Cases
 ### General
 Name a business or idea
