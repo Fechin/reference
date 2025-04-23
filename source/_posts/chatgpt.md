@@ -18,40 +18,43 @@ plugins:
 
 ### General
 
-- **Name your business or idea**
+- **Name a business or idea**
   ```{.wrap}
-  Can you suggest a creative name for my tech startup?
+  Suggest creative name for tech startup
   ```
   ```{.wrap}
-  Help me come up with a catchy name for my bakery business.
+  Suggest catchy names for bakery business
   ```
-- **Create an outline for a course or training program**
+- **Create outline for a course or training program**
   ```{.wrap}
-  Please create an outline for a course on web development for beginners.
-  ```
-  ```{.wrap}
-  Can you make a training program outline for a customer service workshop?
-  ```
-- **Ask you interview questions for a specific job**
-  ```{.wrap}
-  I'm interviewing for a software engineer position, can you give me some interview questions?
+  Create course outline on web development for beginners
   ```
   ```{.wrap}
-  Please provide me with some common interview questions for a marketing manager role.
+  Create training program outline for customer service workshop
   ```
-- **Give you gift ideas for business partners, customers, or clients**
+- **Ask interview questions for a specific job**
   ```{.wrap}
-  I need gift ideas for my clients, can you help?
+  Suggest common software engineer interview questions
   ```
+- **Gift ideas for people**
   ```{.wrap}
-  What are some unique gifts I can give to my business partners?
-  ```
-- **Choose a random contest winner(s) from a long list of names or emails**
-  ```{.wrap}
-  I want to choose a winner from a list of 100 names, can you help?
+  Suggest gift ideas for clients
   ```
   ```{.wrap}
-  Can you randomly pick 5 email addresses from a list of 1000 for a giveaway contest?
+  Suggest gift ideas for clients who work as flourists
+  ```
+  ```{.wrap}
+  Suggest gift ideas for my wife who loves steampunk art and crafts, mystery sci-fi, journalling
+  ```
+- **Select contest winners**
+  ```{.wrap}
+  Randomly select 1 name from this list
+  ```
+  ```{.wrap}
+  Randomly select 5 email addresses from this list
+  ```
+  ```{.wrap}
+  Select the top 3 records with the shortest lap times from this list
   ```
 
 {.collapsible}
@@ -62,55 +65,44 @@ plugins:
 
 - **Explain why a piece of code isn't working**
   ```{.wrap}
-  Why this code is not working?
-  var x = 5;
-  var y = 0;
-  console.log(x/y);
+  Explain why code not working
   ```
 - **Explain what a piece of code means**
   ```{.wrap}
-  What this code does?
-  function addNumbers(a, b) {
-      return a + b;
-  }
+  Explain what code does
   ```
 - **Rewrite the code using the specified language**
   ```{.wrap}
-  Translate this code into Python:
-  function addNumbers(a, b) {
-      return a + b;
-  }
+  Translate code into python
   ```
 - **Code an entire software program**
   ```{.wrap}
-  Write a program that calculates the factorial of a given number in python?
+  Create program to calculate the factorial of given number in python
   ```
   ```{.wrap}
-  How do I make an HTTP request in JavaScript?
+  Explain how to make a HTTP request in javascript
   ```
 - **Generate regular expressions (regex)**
   ```{.wrap}
-  Create a regex that matches all email addresses?
+  Create regex to match all email addresses in list
   ```
   ```{.wrap}
-  Generate 8-digit password regex
+  Create regex to match all words that start with "ban"
+  ```
+  ```{.wrap}
+  Create regex to match 8-digit password
   ```
 - **Add comments to your codebase**
   ```{.wrap}
-  Add comments to this code:
-  function addNumbers(a, b) {
-      return a + b;
-  }
+  Add code comments
   ```
 - **Change the CSS of a line of code**
   ```{.wrap}
-  Update the CSS for this line to change the font color to blue?
-  <p class="example">Hello, CheatSheets.zip!</p>
+  Update CSS to change font color to blue
   ```
 - **Change the HTML of a line of code**
   ```{.wrap}
-  Add a class of "header" to this header tag?
-  <h1>Hello, CheatSheets.zip!</h1>
+  Add class "header" to header tag
   ```
 
 {.collapsible}
@@ -121,32 +113,29 @@ plugins:
 
 - **Creating email campaigns**
   ```{.wrap}
-  Email inviting Jack to dinner on the weekend
+  Write email inviting Jack to dinner on the weekend
   ```
   ```{.wrap}
-  Create an email sequence for our new customer onboarding process
+  Write email sequence for our new customer onboarding process
   ```
 - **Format and proofread email**
   ```{.wrap}
-  Proofread and format this email I just wrote:
-  Hello, do you have any actual tips or tricks for ChatGPT please?
+  Proofread and format email
   ```
 - **Provides tips for effective email marketing**
   ```{.wrap}
-  Give me some tips on how to increase open and click-through rates for my email campaigns
+  Suggest tips to increase open and click-through rates for my email campaigns
   ```
   ```{.wrap}
-  Suggest ways to make my email content more engaging and relevant to my subscribers.
+  Suggest ways to make my email content more engaging and relevant to my subscribers
   ```
 - **Automate email responses**
   ```{.wrap}
-  Email him, "That's a good suggestion, it's coming soon":
-  Hello, do you have any actual tips or tricks for ChatGPT please?
+  Write email to Bob "That's a good suggestion, it's coming soon"
   ```
 - **Extract email address from text**
   ```{.wrap}
-  Extract all email addresses for me:
-  Sed sit amet sodales tom@gmail.com, at jack@cheatsheets.zip enim. 18261@outlook.com ut eros
+  Extract all email addresses in text
   ```
 
 {.collapsible}
@@ -157,23 +146,23 @@ plugins:
 
 - **Help create a spreadsheet formula**
   ```{.wrap}
-  Can you help me create a formula to calculate the sum of cells A1 to A10?
+  Create excel formula to calculate sum of cells A1 to A10
   ```
 - **Explain a formula to you**
   ```{.wrap}
-  Can you explain the meaning of the formula =SUM(A1:A10) in simple terms?
+  Explain formula =SUM(A1:A10) in simple terms
   ```
-- **Create dummy data for placeholders**
+- **Create dummy data as a placeholder**
   ```{.wrap}
-  Can you generate dummy data for me to use as placeholders in my spreadsheet?
+  Generate spreadsheet dummy data as a placeholder
   ```
 - **Help create a complex macro**
   ```{.wrap}
-  I need to create a macro that calculates the average of cells B1 to B10 and inserts the result in cell C1. Can you help me with that?
+  Create macro to calculate average of cells B1 to B10 and insert result in cell C1
   ```
 - **Provide tips for improving spreadsheet efficiency**
   ```{.wrap}
-  Can you give me some tips on how to improve the efficiency of my spreadsheet?
+  Suggest tips to improve spreadsheet efficiency
   ```
 
 {.collapsible}
@@ -184,19 +173,19 @@ plugins:
 
 - **Give you ideas for memes on any topic**
   ```{.wrap}
-  Can you give me some meme ideas for [dogs]?
+  Suggest meme ideas for dogs
   ```
 - **Give you an idea for a post that can drive engagement on any topic**
   ```{.wrap}
-  I want to create a post about climate change that can engage my followers. Can you help me with some ideas?
+  Suggest climate change post ideas to engage my followers
   ```
 - **Generate hashtags and captions**
   ```{.wrap}
-  I need some hashtags and a caption for a picture of a scenic sunset. Can you generate some for me?
+  Generate hashtags and caption for a picture of scenic sunset
   ```
 - **Offer suggestions reply**
   ```{.wrap}
-  I just received an message asking about the status of a project. Can you suggest a reply for me?
+  Suggest response to message asking about project status
   ```
 
 {.collapsible}
@@ -207,15 +196,18 @@ plugins:
 
 - **Summarize long selections of text**
   ```{.wrap}
-  Can you please summarize this article for me? [your text]
+  Summarize article
+  ```
+  ```{.wrap}
+  Write concise main points
   ```
 - **Translate foreign languages**
   ```{.wrap}
-  Can you translate this sentence into Spanish? [your text]
+  Translate to spanish
   ```
 - **Books that are like another book**
   ```{.wrap}
-  Can you recommend books similar to 'The Hunger Games'?
+  Recommend books similar to the hunger games
   ```
 
 {.collapsible}
@@ -226,19 +218,19 @@ plugins:
 
 - **Create an AI design prompt for you**
   ```{.wrap}
-  Can you help me generate a design prompt for a logo for a new sports brand?
+  Create design prompt of logo for new sports brand
   ```
 - **Suggestions on thumbnails for blogs or videos**
   ```{.wrap}
-  Can you recommend some eye-catching thumbnail designs for my latest YouTube video on healthy eating?
+  Suggest eye-catching thumbnail designs for youtube video on healthy eating
   ```
 - **Font pairings**
   ```{.wrap}
-  Can you suggest a font pairing for a travel blog header design?
+  Suggest font pairing for travel blog header design
   ```
 - **Color pairings**
   ```{.wrap}
-  Can you recommend a color palette for a wedding photography website?
+  Suggest color palette for wedding photography website
   ```
 
 {.collapsible}
@@ -249,15 +241,15 @@ plugins:
 
 - **Pull out numbers from large chunks of text**
   ```{.wrap}
-  Please extract all the numbers from this text: [your text]
+  Extract all numbers from text
   ```
 - **Create tables from the text or data you provide**
   ```{.wrap}
-  Can you create a table from this data?: [your data]
+  Create table from data
   ```
 - **Filter data from large lists**
   ```{.wrap}
-  Please filter this list based on certain criteria: [your list]
+  Filter list based on [criteria]
   ```
 
 {.collapsible}
@@ -268,23 +260,23 @@ plugins:
 
 - **Give you ad creative ideas**
   ```{.wrap}
-  Give me ad creative ideas for a new product launch.
+  Suggest creative ideas for new product launch
   ```
 - **Review the tracking code for errors (tag manager, etc.)**
   ```{.wrap}
-  Review my tag manager code for errors
+  Review tag manager code for errors
   ```
 - **Give you ad copy ideas**
   ```{.wrap}
-  Suggest ad copy for a [travel] company
+  Suggest ad copy for travel company
   ```
 - **Facebook audience suggestions**
   ```{.wrap}
-  Recommend a Facebook audience for a clothing line ad campaign
+  Recommend target facebook audience for clothing line ad campaign
   ```
 - **Create body text, headlines and/or calls to action for your ads**
   ```{.wrap}
-  Create headlines, body text, and calls to action for a new fitness program ad.
+  Create headlines, body text, and calls to action for new fitness program ad
   ```
 
 {.collapsible}
@@ -295,23 +287,23 @@ plugins:
 
 - **Write or rewrite your product descriptions**
   ```{.wrap}
-  Please help me write a new and compelling product description for my latest item.
+  Write compelling product description for latest item
   ```
 - **Write or rewrite appeal letters**
   ```{.wrap}
-  I need help rewriting my appeal letter to make it more persuasive.
+  Rewrite appeal letter to make it more persuasive
   ```
 - **Write or rewrite supplier outreach emails**
   ```{.wrap}
-  Can you please help me write an effective email to reach out to potential suppliers?
+  Write effective email to reach out to potential suppliers
   ```
 - **Help you find items that could be sold as bundles**
   ```{.wrap}
-  Please suggest some items that would make a good bundle for our customers.
+  Suggest items that would make a good bundle for our customers
   ```
 - **Organize product and pricing data**
   ```{.wrap}
-  Can you help me organize my product and pricing information into a neat and manageable spreadsheet?
+  Organize product and pricing information into a neat and manageable spreadsheet
   ```
 
 {.collapsible}
@@ -322,51 +314,50 @@ plugins:
 
 - **Create titles for any of your creative writing projects**
   ```{.wrap}
-  Titles for my short story collection: [your article]
+  Suggest titles for short story
+  ```
+  ```{.wrap}
+  Suggest titles for article 10 options
   ```
 - **Create outlines**
   ```{.wrap}
-  Outline for an essay on exercise
+  Create outline for essay on exercise
   ```
 - **Generate content ideas**
   ```{.wrap}
-  Ideas for a blog on sustainable fashion?
-  ```
-- **Summarize any text you give it**
-  ```{.wrap}
-  Summarize this article on renewable energy? [your article]
+  Suggest ideas for blog on sustainable fashion
   ```
 - **Create entire blog posts**
   ```{.wrap}
-  Blog post on [financial planning]?
+  Create blog post on financial planning
   ```
 - **Expand on a sentence, paragraph, or long text selection**
   ```{.wrap}
-  Expand this sentence on jazz music? [your sentence]
+  Expand jazz music sentence
   ```
 - **Change the tone of your writing**
   ```{.wrap}
-  Change tone of this report to conversational? [your report]
+  Change report tone to conversational
   ```
 - **Proofread or edit your writing**
   ```{.wrap}
-  Proofread this article? [your article]
+  Proofread article
   ```
 - **Format text with headings (great for blog posts)**
   ```{.wrap}
-  Format headings for my blog post? [your post]
+  Format headings for blog post
   ```
 - **Check any text for bias**
   ```{.wrap}
-  Check this article for bias? [your article]
+  Check for bias
   ```
 - **Detect plagiarism in any text**
   ```{.wrap}
-  Detect plagiarism in this paper? [your paper]
+  Check for plagiarism
   ```
 - **Provide you with domain name ideas**
   ```{.wrap}
-  Domain name for my [gardening blog]?
+  Suggest domain name for gardening blog
   ```
 
 {.collapsible}
@@ -377,23 +368,23 @@ plugins:
 
 - **Turn a list of facts or statistics into multiple-choice quizzes**
   ```{.wrap}
-  Can you turn this list of facts about world history into a multiple-choice quiz? [your list]
+  Convert work history fact list into multiple-choice quiz
   ```
 - **Assignment ideas on a specific topic**
   ```{.wrap}
-  I need some ideas for a history assignment on the American Revolution. Can you suggest some?
+  Suggest ideas for history assignment on American Revolution
   ```
 - **Create assigned groups from a list of students**
   ```{.wrap}
-  I have a list of 30 students in my class. Can you divide them into groups of 6 for group projects?
+  Divide list of 30 students into groups of 6
   ```
 - **Create a curve based on test scores**
   ```{.wrap}
-  I need to create a grading curve for my class based on their test scores. Can you help?
+  Create grading curve for class based on their test scores
   ```
 - **Grade an assignment**
   ```{.wrap}
-  Can you grade this history essay and provide feedback on any areas for improvement?
+  Grade history essay and provide feedback on any areas for improvement
   ```
 
 {.collapsible}
@@ -404,31 +395,31 @@ plugins:
 
 - **Create timestamps from a transcript**
   ```{.wrap}
-  Can you create timestamps for this transcript of a podcast episode? [your transcript]
+  Create timestamps for podcast episode transcript
   ```
 - **Convert YouTube videos to blog posts with formatting**
   ```{.wrap}
-  Can you turn this YouTube video about cooking into a blog post with headings and bullet points? [video link]
+  Convert youtube cooking video into blog post with headings and bullet points
   ```
 - **Come up with a video outline or script**
   ```{.wrap}
-  I need an outline for a video about the benefits of meditation. Can you help?
+  Create outline for a video about the benefits of meditation
   ```
 - **Create a response to a comment**
   ```{.wrap}
-  Can you write a thoughtful and polite response to this negative comment on my YouTube video?
+  Create thoughtful and polite response to negative comment on youtube video
   ```
 - **Give you ideas for your thumbnails**
   ```{.wrap}
-  I need some ideas for a thumbnail for my video on 'DIY home decor'. Can you suggest some?
+  Suggest thumbnail ideas for video on "DIY home decor"
   ```
 - **Analyze your script or transcript and tell you the tone of it**
   ```{.wrap}
-  Can you analyze this script for a video about environmental issues and tell me what the tone is? [your script]
+  What is the script tone for environmental issues video
   ```
 - **Video ideas on any topic**
   ```{.wrap}
-  I want to make a series of videos about fashion. Can you suggest some ideas for individual episodes?
+  Suggest fashion video ideas for individual episodes
   ```
 
 {.collapsible}
@@ -442,39 +433,39 @@ plugins:
   Explain quantum computing in simple terms
   ```
   ```{.wrap}
-  Got any creative ideas for a 10 year old’s birthday?
+  Explain rocket science like i'm five
   ```
   ```{.wrap}
-  How do I make an HTTP request in JavaScript?
+  Suggest creative ideas for 10 year old’s birthday
   ```
   ```{.wrap}
-  Can you tell me about the events leading up to the American Civil War?
+  Explain how to make HTTP request in JavaScript
   ```
   ```{.wrap}
-  What can you tell me about the invention of the printing press?
+  Explain events leading up to American Civil War
   ```
   ```{.wrap}
-  Can you research the history of the Olympic Games?
+  Provide key details about printing press invention
   ```
   ```{.wrap}
-  Can you give me information about the French Revolution?
+  Research olympic games history
   ```
   ```{.wrap}
-  I'm interested in the history of the Byzantine Empire. Can you help me learn more?
+  Provide key details about French Revolution
   ```
   ```{.wrap}
-  etc...
+  Explain history of Byzantine Empire
   ```
 
 {.collapsible}
 
 [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
 
-### SEO
+### seo
 
 - **Generate or find keywords**
   ```{.wrap}
-  Generate a list of related keywords for [topic]
+  Generate list of related keywords for [topic]
   ```
   ```{.wrap}
   Identify long-tail keywords for [topic] content optimization
@@ -483,36 +474,36 @@ plugins:
   Find top-performing keywords for [topic]
   ```
   ```{.wrap}
-  Generate a list of LSI keywords for [topic]
+  Generate list of lsi keywords for [topic]
   ```
   ```{.wrap}
-  Find keywords with low competition for [topic]
+  Generate list of keywords with low competition for [topic]
   ```
   ```{.wrap}
-  Create a list of synonyms for [topic] keywords
+  Generate list of synonyms for [topic] keywords
   ```
   ```{.wrap}
-  Find the best keywords for [topic] PPC campaigns
+  Find best keywords for [topic] PPC campaigns
   ```
   ```{.wrap}
-  Find the best keywords for [topic] voice search optimization
+  Find best keywords for [topic] voice search optimization
   ```
   ```{.wrap}
-  List the best keywords for [topic] featured snippets
+  Find best keywords for [topic] featured snippets
   ```
   ```{.wrap}
-  Find the best keywords for [topic] video optimization
+  Find best keywords for [topic] video optimization
   ```
   ```{.wrap}
-  Find the best keywords for [topic]
+  Find best keywords for [topic]
   ```
   ```{.wrap}
-  Find the best keywords for [topic] AMP optimization
+  Find best keywords for [topic] AMP optimization
   ```
   ```{.wrap}
-  Find the best keywords for [topic] social media optimization
+  Find best keywords for [topic] social media optimization
   ```
-- **More ChatGPT prompts about SEO** {.active}
+- **More ChatGPT prompts about seo** {.active}
   ```{.wrap}
   Create meta descriptions and title tags for [topic]
   ```
@@ -529,88 +520,88 @@ plugins:
   Find authoritative websites to acquire backlinks for [topic] content
   ```
   ```{.wrap}
-  Create an XML sitemap example related to [topic]
+  Create XML sitemap example related to [topic]
   ```
   ```{.wrap}
-  Research the best meta tags for [topic]
+  Research best meta tags for [topic]
   ```
   ```{.wrap}
-  Research the best internal linking structure for [topic] content
+  Research best internal linking structure for [topic] content
   ```
   ```{.wrap}
-  Generate a list of questions people ask about [topic]
+  Generate list of questions people ask about [topic]
   ```
   ```{.wrap}
-  Create a list of the best alt tags for images related to [topic]
+  Create list of best alt tags for images related to [topic]
   ```
   ```{.wrap}
-  Create a list of related subtopics for [topic]
+  Create list of related subtopics for [topic]
   ```
   ```{.wrap}
-  Find the best time to publish content related to [topic]
+  Find best time to publish content related to [topic]
   ```
   ```{.wrap}
-  Research the best external linking strategies for [topic]
+  Research best external linking strategies for [topic]
   ```
   ```{.wrap}
-  Find the most popular tools used for [topic] SEO
+  Find most popular tools used for [topic] seo
   ```
   ```{.wrap}
-  Create a list of potential influencers for [topic]
+  Create list of potential influencers for [topic]
   ```
   ```{.wrap}
-  Research the best schema markup for [topic]
+  Research best schema markup for [topic]
   ```
   ```{.wrap}
-  Find the best header tags for [topic] content
+  Find best header tags for [topic] content
   ```
   ```{.wrap}
-  Create a list of potential link-building opportunities for [topic]
+  Create list of potential link-building opportunities for [topic]
   ```
   ```{.wrap}
-  Research the best anchor text for [topic] backlinks
+  Research best anchor text for [topic] backlinks
   ```
   ```{.wrap}
-  Create a list of potential guest blogging opportunities for [topic]
+  Create list of potential guest blogging opportunities for [topic]
   ```
   ```{.wrap}
-  Research the best local SEO strategies for [topic]
+  Research best local seo strategies for [topic]
   ```
   ```{.wrap}
-  Research the best analytics tools for [topic] website performance
+  Research best analytics tools for [topic] website performance
   ```
   ```{.wrap}
-  Create a list of potential partnerships for [topic]
+  Create list of potential partnerships for [topic]
   ```
   ```{.wrap}
-  Research the best tactics for [topic] mobile optimization
+  Research best tactics for [topic] mobile optimization
   ```
   ```{.wrap}
-  Research the best tactics for [topic] e-commerce optimization. Provide keyword clusters.
+  Research best tactics for [topic] e-commerce optimization. Provide keyword clusters.
   ```
   ```{.wrap}
-  Create a list of potential affiliate marketing opportunities for [topic]
+  Create list of potential affiliate marketing opportunities for [topic]
   ```
   ```{.wrap}
-  What are the best affiliate marketing websites for [topic]
+  What are the best affiliate marketing websites for [topic]?
   ```
   ```{.wrap}
-  What are the best tactics for [topic] international SEO
+  What are the best tactics for [topic] international seo?
   ```
   ```{.wrap}
-  Create a list of potential podcast or podcast guest opportunities for [topic]
+  Create list of potential podcast or podcast guest opportunities for [topic]
   ```
   ```{.wrap}
-  Research the best tactics for [topic] Google My Business optimization
+  Research best tactics for [topic] google my business optimization
   ```
   ```{.wrap}
-  Find popular content topics related to [topic]
+  Find popular topics related to [topic]
   ```
   ```{.wrap}
-  Research the best SEO tactics for [topic] and provide actionable steps
+  Research best seo tactics for [topic] and provide actionable steps
   ```
   ```{.wrap}
-  Create a list of potential video series or webinar ideas related to [topic]
+  Create list of potential video series or webinar ideas related to [topic]
   ```
   ```{.wrap}
   Research competitor strategies related to [topic]
@@ -619,7 +610,7 @@ plugins:
   Find canonical tag examples related to [topic]
   ```
   ```{.wrap}
-  Create an example keyword list targeting multiple geographic locations for [topic]
+  Create example keyword list targeting multiple geographic locations for [topic]
   ```
   ```{.wrap}
   Generate keyword ideas targeting different stages of the customer purchase funnel for [topic]
