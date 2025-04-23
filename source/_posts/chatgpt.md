@@ -165,7 +165,7 @@ Formality
 - Formal
 - Informal
 
-Directness:
+Directness
 - Direct
 - Indirect
 
