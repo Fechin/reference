@@ -75,88 +75,141 @@ Privacy And Security
 
 ## Prompt Engineering
 ### Prompt Frameworks
-Only use prompt components that are relevant for your needs.
-~~~
 General Purpose
+~~~
 [role] [task] [tone] [format] [restriction]
 ~~~
+
+- Only use prompt components that are relevant for your needs.
 
 ### Role
 Standard
 - Act as [occupation]
 
-Common Standard Roles
+Common Roles
 - Personal Coach
 - Consultant
 - Entrepreneur
 - Proofreader
 - Therapist
-
-Also See
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
+- [List of roles](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
 
 Roleplay
 - Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
 
-### Task
+### Task (5Ws And H)
+[verb] [task] [specifics]
+
+Who
+- Who is X?
+- Who is [involved | affected | responsible] for X?
+- Who should I contact for help with X?
+
+What
+- [What is | define | explain | describe] X?
+- What does X do?
+- What did [entity | text] mean by [quote]?
+- What events led up to [event]?
+- What [assumptions | risks | constraints] exist for X?
+- What are the critical features of X?
+- [What is done well? what can be improved?]
+- What is the best way to do X?
+- What are the top [quantity] X?
+
+When
+- When [did | will] [entity | event] occur?
+- When is X due?
+- When is the best time to initiate X?
+
+Where
+- Where did [entity | event] happen?
+- [Where to find X? | where to find resources about X? | suggest websites about X]
+
+Why
+- Why did [entity] choose [approach]?
+- Why [did | will] [event] occur?
+- Why is [approach] being implemented?
+- Why might X succeed or fail?
+- Why is [solution] preferable to [alternative]?
+- Why is it important?
+
+How
+- How to do X?
+- How does X work?
+- How does X do Y?
+- How to measure [metric] accurately?
+
+### Task (Conditional Clauses)
+- [Action] [item number]
+- [Action] the [first | last | random] [quantity] of X
+- [Action] the [first | last | random] [quantity] of X where [condition]
+- [Action] X where [condition]
+- [Action] X where not [condition]
+
+### Task (CRUD-Inspired Operations)
 [verb] [task] [specifics]
 
 Create
-- [Write content about X|suggest ideas about X|suggest titles about X]
-- Write content about X in the style of [style]
-- Write better
-- Write email to [entity] about X
-- [Continue|expand]
-- [Explain how to do X|create roadmap for X]
-- [Suggest best practices for X|suggest improvements|what am I doing right?|what am I doing wrong?]
-- Show list of emojis about X
-- [Create|generate|imagine] image about X
+- Content type examples: analysis, article, description, documentation, dummy data, email, essay, guide, outline, program, recipe, SEO keywords, social media post, study plan, title, video script.
+- Write [content type] about [topic]
+- Write [content type] to [entity] about [topic]
+- Create [example | analogy]
+- Reverse engineer X
+- [Write better | improve]
+- [Continue | expand]
+- Create image of X
 
 Read
-- [Summarise|write concise main points]
-- [Explain|elaborate]
-- Explain what [entity|text] meant by X
-- Identify themes in X
-- Write outline about X
-- Extract keywords
-- Get up-to-date [facts|news|data] on X
-- Is this true?
-- Suggest [media] [about|similar to] X
-- Pick best from [options]
+- [Summarise | write key takeaways | write main points]
+- [Explain | elaborate]
+- Extract [themes | keywords | info] about X
+- Proofread for spelling, grammar, punctuation errors
+- Suggest [media type] [about | similar to] X
 
 Update
-- For all X do [action]
-- For X do [action] if matching [criteria]
-- Reformat everything as [format]
+- Reformat as [format]
 
 Delete
-- Delete [quantity] of X matching [criteria]
-- Delete everything except X
-- Delete [item] [number]
-- Delete duplicate items from X
+- Delete duplicate items
+- Delete items with missing or null values
+
+### Task (Other)
+[verb] [task] [specifics]
+
+Choose
+- Choose best from [options]
 
 Compare
-- Identify [simlarities|diffirences] between X and Y
+- Identify [simlarities | diffirences] between X and Y
 - Identify gaps in X
-- Evaluate pros and cons of X
-- X [comparison operator] Y. It could be abstractly expressed as "are apples bigger than walnuts?"
+- Identify pros and cons of X
+- Is X [comparison operator] Y? This can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?
+
+Fact-checking
+- Is this true?
 
 Filter
-- Filter X by [criteria]
-- Exclude X by [criteria]. Everything is excluded by default.
+- Filter X where [condition]
+- Exclude X where [condition]
 
-Select
-- Select [quantity] of X based on [criteria|randomly]
+Real-time Lookup
+- Get up-to-date [facts | news | data] on X
 
 Simplify
-- Explain X like I’m 5
-- Explain in simple terms
+- [Explain X like I’m 5 | explain in simple terms]
 
 Sort
-- Sort X by [key] in [alphabetical|chronological|ascending|descending|lexicographical|custom] order
+- Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom
+- Sort X by [key] in [order]
+- Categorize
+
+Trivia
+- Give questions about X
 
 Translate
-- Translate into [language]. For programming languages it's specifically called transpile
+- Translate [human language A] into [human language B| emojis]
+- Translate [programming language A] into [programming language B]
+- Convert [narrative voice A] to [narrative voice B]
 
 ### Tone
 Using [tone] tone
@@ -189,15 +242,15 @@ Negative Tones
 - Sarcastic
 - Urgent
 
-### Format
+### Format (Text)
 In [format]
 
-Presentation
-- Plain text
+List
 - Bullet point list
 - Numbered list
-- Table
-- Code snippet
+
+Code
+- Code
 
 Process
 - Step-by-step instructions
@@ -207,39 +260,61 @@ Response
 - Dialogue
 
 Creative
-- Poetry
-- Music lyrics
 - Script
 - Comic strip dialogue
+- Poetry
+- Music lyrics
+- Riddle
 
 Game
 - Quiz
 - RPG
 - Choose-Your-Own-Adventure
 
+File Format
+- Plain text
+- Markdown
+- CSV
+- XML
+- JSON
+
+### Format (Visual)
+In [format]
+
+Data Visualization
+- Table
+- Chart types: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin
+- [Chart] chart
+
+Creative
+- Emojis
+- Word cloud
+
+File Format
+- PDF (supports both text and images)
+
 ### Restriction
 But [restriction]
 
 Length Constraints
-- Concise
-- In N words
-- In N sentences
+- Be [extremely detailed | concise]
+- In [quantity] [words | sentences]
 
 Language Constraints
 -	No jargon or technical terms
 
 Structural Constraints
-- Show N options
--	No examples
+-	Show [quantity] [examples | options]
 -	No headers
 -	No pretext titles
 
 Content Constraints
+- Use [first-person | second-person | third-person] narrative voice
 - Don't change the wording
-- Only minor edits
-- Ensure goals align with SMART criteria
-- Only show content that has changed
-- Avoid discussing sensitive topics (e.g., death, rape, war)
+- Permit [minor | major] edits
+- Use pop culture references
+- Ensure goals align with SMART condition
+- Only show [changed | unchanged] content
 
 ## Examples
 ### Job
@@ -330,9 +405,10 @@ Add class "header" to header tag
 Update CSS to change font color to blue
 ```
 
-Transpile
+Translate
+- Specifically called transpile when addressing programming languages.
 ```{.wrap}
-Transpile code to Python
+Translate code to Python
 ```
 
 ### Email
@@ -444,7 +520,7 @@ Extract all numbers from text
 
 Data Filtering
 ```{.wrap}
-Filter list based on [criteria]
+Filter list based on [condition]
 ```
 
 Data Presentation
@@ -693,8 +769,11 @@ Scenario:
 -	Lead actor is missing and staff are stressing out how to pull off the performance.
 ```
 
-## Any Suggestions?
-- [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+## References (Used For Ideas)
+- [General Purpose Framework](https://www.linkedin.com/posts/denis-panjuta_the-ultimate-chatgpt-40-guide-roles-activity-7231208824680976384-bdlY/)
+- [General Info](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b88d101-e659-4adc-a63a-560b2b70179a/_FINAL__The_ChatGPT_Cheat_Sheet__1_.png)
+- [Data Visualization](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a928290-8e99-414e-b847-5b2dff35ec55/ChatGPT_-_Code_Interpreter_In_a_Nutshell___1_.png)
+- [Comprehensive Cheatsheet](https://github.com/bg-write/chatGPT-cheatsheet)
 
 <style>
 em { font-size: 0.785em; }
