@@ -75,59 +75,94 @@ Privacy And Security
 
 ## Prompt Engineering
 ### Prompt Frameworks
-Only use prompt components that are relevant for your needs.
-~~~
 General Purpose
+~~~
 [role] [task] [tone] [format] [restriction]
 ~~~
+- Only use prompt components that are relevant for your needs.
 
 ### Role
 Standard
 - Act as [occupation]
 
-Common Standard Roles
+Common Roles
 - Personal Coach
 - Consultant
 - Entrepreneur
 - Proofreader
 - Therapist
 
-Also See
+List Of Roles
 - [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
 
 Roleplay
 - Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
 
-### Task
+### Task (5Ws & H)
+[verb] [task] [specifics]
+
+Who
+- Who is X?
+- Who is [involved | affected | responsible] for X?
+- Who should I contact for help with X?
+
+What
+- [What is | define | explain | describe] X?
+- What did [entity | text] mean by [quote]?
+- What events led up to [event]?
+- What [assumptions | risks | constraints] exist for X?
+- What are the critical features of X?
+- What is done well?
+- What can be improved?
+- What is the [best | most efficient] way to do X?
+
+When
+- When [did | will] [entity | event] occur?
+- When is X due?
+- When is the best time to initiate X?
+
+Where
+- Where did [entity | event] happen?
+- [Where to find X? | where to find resources about X? | suggest websites about X]
+
+Why
+- Why did [entity] choose [approach]?
+- Why [did | will] [event] occur?
+- Why is [approach] being implemented?
+- Why might X succeed or fail?
+- Why is [solution] preferable to [alternative]?
+- Why is it important?
+
+How
+- How to do [task | process]?
+- How does X work?
+- How does X do Y?
+- How to measure [metric] accurately?
+
+### Task (CRUD Operations)
 [verb] [task] [specifics]
 
 Create
-- [Write content about X|suggest ideas about X|suggest titles about X]
-- Write content about X in the style of [style]
+- Content type examples: title, article, guide, essay, outline, email, social media post, description, SEO keywords, video script, recipe, analysis, program
+- Write [content type] about [topic]
+- Write [content type] to [entity] about [topic]
+- [Continue | expand]
+- Show example
 - Write better
-- Write email to [entity] about X
-- [Continue|expand]
-- [Explain how to do X|create roadmap for X]
-- [Suggest best practices for X|suggest improvements|what am I doing right?|what am I doing wrong?]
-- Show list of emojis about X
-- [Create|generate|imagine] image about X
+- Create image of X
 
 Read
-- [Summarise|write concise main points]
-- [Explain|elaborate]
-- Explain what [entity|text] meant by X
-- Identify themes in X
-- Write outline about X
-- Extract keywords
-- Get up-to-date [facts|news|data] on X
+- [Explain | elaborate]
+- [Summarise | write main points]
+- Identify [themes | keywords] in X
+- Get up-to-date [facts | news | data] on X
 - Is this true?
-- Suggest [media] [about|similar to] X
-- Pick best from [options]
+- Suggest [media type] [about | similar to] X
 
 Update
 - For all X do [action]
 - For X do [action] if matching [criteria]
-- Reformat everything as [format]
+- Reformat as [format]
 
 Delete
 - Delete [quantity] of X matching [criteria]
@@ -135,28 +170,32 @@ Delete
 - Delete [item] [number]
 - Delete duplicate items from X
 
+### Task (Other)
+[verb] [task] [specifics]
+
 Compare
-- Identify [simlarities|diffirences] between X and Y
+- Identify [simlarities | diffirences] between X and Y
 - Identify gaps in X
-- Evaluate pros and cons of X
-- X [comparison operator] Y. It could be abstractly expressed as "are apples bigger than walnuts?"
+- Identify pros and cons of X
+- X [comparison operator] Y
 
 Filter
 - Filter X by [criteria]
-- Exclude X by [criteria]. Everything is excluded by default.
+- Exclude X by [criteria]
 
-Select
-- Select [quantity] of X based on [criteria|randomly]
+Choose
+- Choose [quantity] of X based on [criteria | randomly]
+- Choose best from [options]
 
 Simplify
-- Explain X like I’m 5
-- Explain in simple terms
+- [Explain X like I’m 5 | explain in simple terms]
 
 Sort
-- Sort X by [key] in [alphabetical|chronological|ascending|descending|lexicographical|custom] order
+- Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom
+- Sort X by [key] in [order]
 
 Translate
-- Translate into [language]. For programming languages it's specifically called transpile
+- Translate into [language]
 
 ### Tone
 Using [tone] tone
@@ -189,15 +228,15 @@ Negative Tones
 - Sarcastic
 - Urgent
 
-### Format
+### Format (Text)
 In [format]
 
-Presentation
-- Plain text
+List
 - Bullet point list
 - Numbered list
-- Table
-- Code snippet
+
+Code
+- Code
 
 Process
 - Step-by-step instructions
@@ -207,15 +246,38 @@ Response
 - Dialogue
 
 Creative
-- Poetry
-- Music lyrics
 - Script
 - Comic strip dialogue
+- Poetry
+- Music lyrics
+- Riddle
 
 Game
 - Quiz
 - RPG
 - Choose-Your-Own-Adventure
+
+File Format
+- Plain text
+- Markdown
+- CSV
+- XML
+- JSON
+
+### Format (Visual)
+In [format]
+
+Data Visualization
+- Table
+- Chart types: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin
+- [Chart] chart
+
+Creative
+- Emojis
+- Word cloud
+
+File Format
+- PDF (supports both text and images)
 
 ### Restriction
 But [restriction]
@@ -236,10 +298,10 @@ Structural Constraints
 
 Content Constraints
 - Don't change the wording
-- Only minor edits
+- Permit [minor | major] edits
+- Use pop culture references
 - Ensure goals align with SMART criteria
-- Only show content that has changed
-- Avoid discussing sensitive topics (e.g., death, rape, war)
+- Only show [changed | unchanged] content
 
 ## Examples
 ### Job
@@ -693,8 +755,8 @@ Scenario:
 -	Lead actor is missing and staff are stressing out how to pull off the performance.
 ```
 
-## Any Suggestions?
-- [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)
+# Partial References
+- https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b88d101-e659-4adc-a63a-560b2b70179a/_FINAL__The_ChatGPT_Cheat_Sheet__1_.png
 
 <style>
 em { font-size: 0.785em; }
