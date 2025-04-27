@@ -109,13 +109,14 @@ Who
 
 What
 - [What is | define | explain | describe] X?
+- What does X do?
 - What did [entity | text] mean by [quote]?
 - What events led up to [event]?
 - What [assumptions | risks | constraints] exist for X?
 - What are the critical features of X?
-- What is done well?
-- What can be improved?
+- [What is done well? What can be improved?]
 - What is the [best | most efficient] way to do X?
+- What are the top 5 X for Y?
 
 When
 - When [did | will] [entity | event] occur?
@@ -136,6 +137,7 @@ Why
 
 How
 - How to do [task | process]?
+- How do I X?
 - How does X work?
 - How does X do Y?
 - How to measure [metric] accurately?
@@ -144,19 +146,20 @@ How
 [verb] [task] [specifics]
 
 Create
-- Content type examples: title, article, guide, essay, outline, email, social media post, description, SEO keywords, video script, recipe, analysis, program
-- Reverse engineer X
+- Content type examples: analysis, article, description, documentation, dummy data, email, essay, guide, outline, program, recipe, SEO keywords, social media post, study plan, title, video script.
 - Write [content type] about [topic]
 - Write [content type] to [entity] about [topic]
-- [Continue | expand]
-- Show example
+- Create [example | analogy]
+- Reverse engineer X
 - Write better
+- [Continue | expand]
 - Create image of X
 
 Read
+- [Summarise | key takeaways | write main points]
 - [Explain | elaborate]
-- [Summarise | write main points]
-- Identify [themes | keywords] in X
+- Extract [themes | keywords | info about X] in Y
+- Proofread for [spelling | grammar | punctuation ] errors
 - Get up-to-date [facts | news | data] on X
 - Is this true?
 - Suggest [media type] [about | similar to] X
@@ -165,6 +168,7 @@ Update
 - For all X do [action]
 - For X do [action] if matching [criteria]
 - Reformat as [format]
+- Categorise
 
 Delete
 - Delete [quantity] of X matching [criteria]
@@ -197,7 +201,12 @@ Sort
 - Sort X by [key] in [order]
 
 Translate
-- Translate into [language]
+- Translate [human language A] into [human language B| emojis]
+- Translate [programming language A] into [programming language B]
+- Convert [narrative voice A] to [narrative voice B]
+
+Trivia
+- Give questions about X
 
 ### Tone
 Using [tone] tone
@@ -298,6 +307,7 @@ Structural Constraints
 -	No pretext titles
 
 Content Constraints
+- Use [first-person | second-person | third-person] narrative voice
 - Don't change the wording
 - Permit [minor | major] edits
 - Use pop culture references
@@ -393,9 +403,10 @@ Add class "header" to header tag
 Update CSS to change font color to blue
 ```
 
-Transpile
+Translate
+- Specifically called transpile when addressing programming languages.
 ```{.wrap}
-Transpile code to Python
+Translate code to Python
 ```
 
 ### Email
@@ -756,10 +767,11 @@ Scenario:
 -	Lead actor is missing and staff are stressing out how to pull off the performance.
 ```
 
-## Partial References
+## References (Used For Ideas)
 - [General Purpose Framework](https://www.linkedin.com/posts/denis-panjuta_the-ultimate-chatgpt-40-guide-roles-activity-7231208824680976384-bdlY/)
 - [General Info](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b88d101-e659-4adc-a63a-560b2b70179a/_FINAL__The_ChatGPT_Cheat_Sheet__1_.png)
 - [Data Visualization](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a928290-8e99-414e-b847-5b2dff35ec55/ChatGPT_-_Code_Interpreter_In_a_Nutshell___1_.png)
+- [Comprehensive Cheatsheet](https://github.com/bg-write/chatGPT-cheatsheet)
 
 <style>
 em { font-size: 0.785em; }
