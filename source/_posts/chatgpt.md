@@ -92,9 +92,7 @@ Common Roles
 - Entrepreneur
 - Proofreader
 - Therapist
-
-List Of Roles
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
+- [List of roles](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
 
 Roleplay
 - Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
@@ -114,9 +112,9 @@ What
 - What events led up to [event]?
 - What [assumptions | risks | constraints] exist for X?
 - What are the critical features of X?
-- [What is done well? What can be improved?]
-- What is the [best | most efficient] way to do X?
-- What are the top 5 X for Y?
+- [What is done well? what can be improved?]
+- What is the best way to do X?
+- What are the top [quantity] X?
 
 When
 - When [did | will] [entity | event] occur?
@@ -136,13 +134,19 @@ Why
 - Why is it important?
 
 How
-- How to do [task | process]?
-- How do I X?
+- How to do X?
 - How does X work?
 - How does X do Y?
 - How to measure [metric] accurately?
 
-### Task (CRUD Operations)
+### Task (Conditional Clauses)
+- [Action] [item number]
+- [Action] the [first | last | random] [quantity] of X
+- [Action] the [first | last | random] [quantity] of X where [condition]
+- [Action] X where [condition]
+- [Action] X where not [condition]
+
+### Task (CRUD-Inspired Operations)
 [verb] [task] [specifics]
 
 Create
@@ -151,47 +155,45 @@ Create
 - Write [content type] to [entity] about [topic]
 - Create [example | analogy]
 - Reverse engineer X
-- Write better
+- [Write better | improve]
 - [Continue | expand]
 - Create image of X
 
 Read
-- [Summarise | key takeaways | write main points]
+- [Summarise | write key takeaways | write main points]
 - [Explain | elaborate]
-- Extract [themes | keywords | info about X] in Y
-- Proofread for [spelling | grammar | punctuation ] errors
-- Get up-to-date [facts | news | data] on X
-- Is this true?
+- Extract [themes | keywords | info] about X
+- Proofread for spelling, grammar, punctuation errors
 - Suggest [media type] [about | similar to] X
 
 Update
-- For all X do [action]
-- For X do [action] if matching [criteria]
 - Reformat as [format]
-- Categorise
 
 Delete
-- Delete [quantity] of X matching [criteria]
-- Delete everything except X
-- Delete [item] [number]
-- Delete duplicate items from X
+- Delete duplicate items
+- Delete items with missing or null values
 
 ### Task (Other)
 [verb] [task] [specifics]
+
+Choose
+- Choose best from [options]
 
 Compare
 - Identify [simlarities | diffirences] between X and Y
 - Identify gaps in X
 - Identify pros and cons of X
-- X [comparison operator] Y
+- Is X [comparison operator] Y? This can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?
+
+Fact-checking
+- Is this true?
 
 Filter
-- Filter X by [criteria]
-- Exclude X by [criteria]
+- Filter X where [condition]
+- Exclude X where [condition]
 
-Choose
-- Choose [quantity] of X based on [criteria | randomly]
-- Choose best from [options]
+Real-time Lookup
+- Get up-to-date [facts | news | data] on X
 
 Simplify
 - [Explain X like I’m 5 | explain in simple terms]
@@ -199,14 +201,15 @@ Simplify
 Sort
 - Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom
 - Sort X by [key] in [order]
+- Categorize
+
+Trivia
+- Give questions about X
 
 Translate
 - Translate [human language A] into [human language B| emojis]
 - Translate [programming language A] into [programming language B]
 - Convert [narrative voice A] to [narrative voice B]
-
-Trivia
-- Give questions about X
 
 ### Tone
 Using [tone] tone
@@ -295,14 +298,13 @@ But [restriction]
 
 Length Constraints
 - Be [extremely detailed | concise]
-- [In N words | in N sentences]
+- In [quantity] [words | sentences]
 
 Language Constraints
 -	No jargon or technical terms
 
 Structural Constraints
-- Show N options
--	Show N examples
+-	Show [quantity] [examples | options]
 -	No headers
 -	No pretext titles
 
@@ -311,7 +313,7 @@ Content Constraints
 - Don't change the wording
 - Permit [minor | major] edits
 - Use pop culture references
-- Ensure goals align with SMART criteria
+- Ensure goals align with SMART condition
 - Only show [changed | unchanged] content
 
 ## Examples
@@ -518,7 +520,7 @@ Extract all numbers from text
 
 Data Filtering
 ```{.wrap}
-Filter list based on [criteria]
+Filter list based on [condition]
 ```
 
 Data Presentation
