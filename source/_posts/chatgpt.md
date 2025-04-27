@@ -79,6 +79,7 @@ General Purpose
 ~~~
 [role] [task] [tone] [format] [restriction]
 ~~~
+
 - Only use prompt components that are relevant for your needs.
 
 ### Role
@@ -98,7 +99,7 @@ List Of Roles
 Roleplay
 - Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
 
-### Task (5Ws & H)
+### Task (5Ws And H)
 [verb] [task] [specifics]
 
 Who
@@ -144,6 +145,7 @@ How
 
 Create
 - Content type examples: title, article, guide, essay, outline, email, social media post, description, SEO keywords, video script, recipe, analysis, program
+- Reverse engineer X
 - Write [content type] about [topic]
 - Write [content type] to [entity] about [topic]
 - [Continue | expand]
@@ -283,16 +285,15 @@ File Format
 But [restriction]
 
 Length Constraints
-- Concise
-- In N words
-- In N sentences
+- Be [extremely detailed | concise]
+- [In N words | in N sentences]
 
 Language Constraints
 -	No jargon or technical terms
 
 Structural Constraints
 - Show N options
--	No examples
+-	Show N examples
 -	No headers
 -	No pretext titles
 
@@ -756,7 +757,9 @@ Scenario:
 ```
 
 # Partial References
+- https://www.linkedin.com/posts/denis-panjuta_the-ultimate-chatgpt-40-guide-roles-activity-7231208824680976384-bdlY/
 - https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b88d101-e659-4adc-a63a-560b2b70179a/_FINAL__The_ChatGPT_Cheat_Sheet__1_.png
+- https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a928290-8e99-414e-b847-5b2dff35ec55/ChatGPT_-_Code_Interpreter_In_a_Nutshell___1_.png
 
 <style>
 em { font-size: 0.785em; }
