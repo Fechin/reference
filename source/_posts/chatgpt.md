@@ -136,6 +136,7 @@ How
 #### Utility
 Generate And Expand Content
 - Write [content type] to [entity] about [topic] should cover [aspects] ***(Content type examples: article, description, documentation, dummy data, email, resume, essay, guide, outline, program, recipe, SEO keywords, story, social media post, study plan, title, video script)***
+- Generate random [names | numbers | words | ideas | X] matching [criteria]
 - [Continue | expand]
 - Create image of X
 
