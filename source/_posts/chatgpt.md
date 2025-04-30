@@ -133,6 +133,81 @@ How
 - How does X do Y?
 - How to measure [metric] accurately?
 
+#### Utility
+Generate And Expand Content
+- Write [content type] to [entity] about [topic] should cover [aspects] ***(Content type examples: article, description, documentation, dummy data, email, resume, essay, guide, outline, program, recipe, SEO keywords, story, social media post, study plan, title, video script)***
+- [Continue | expand]
+- Create image of X
+
+Summarize And Outline
+- [Summarise | write key takeaways | write main points | write main lesson | highlight important info]
+- [Shorten | write concise]
+- Create outline
+
+Modify And Refine Text
+- [Write better | improve]
+- Paraphrase
+- Correct spelling, grammar, punctuation errors
+- Change [narrative voice A] to [narrative voice B]
+
+Explain And Teach
+- [Explain | elaborate]
+- Explain [how to do | each step of] X
+- Explain what X does
+- Explain X [in simple terms | like I’m 5]; Simplify X
+- Teach me about [topic | subject]
+- Provide [example | analogy]
+
+Organize And Structure
+- Sort X by [key] in [order] ***(Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom)***
+- Categorize
+
+Plan And Strategize
+- Plan [strategy for | goals and steps to achieve | milestones for | roadmap for] X
+- Create [schedule | timeline] for X
+
+Recommend And Advise
+- Recommend [media type] [on | similar to] [topic]
+- Recommend [gift ideas | thing] for [entity | occasion]
+- Recommend improvements
+- Provide advice for [situation]
+- Give feedback on idea for X
+
+Analyze And Compare
+- Extract [themes | keywords | info] about X
+- Identify [simlarities | diffirences] between X and Y
+- Analyse the [sentiment | tone] of X
+- Identify gaps in X
+- Evaluate [strengths and weaknesses | pros and cons] of X
+- Is X [comparison operator] Y? ***(Can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?)***
+- Reverse engineer X
+
+Translate And Convert
+- Translate [human language A] into [human language B]
+- Translate [programming language A] into [programming language B]
+- Translate into emojis
+- Convert [unit A] to [unit B]
+- Reformat as [output format]
+
+Filter And Choose
+- Filter X where [condition]
+- Exclude X where [condition]
+- Choose best from [options]
+- Choose [top | lowest | first | last | random] [quantity] from [options]
+
+Real-Time Lookup And Verify
+- Get up-to-date [facts | news | data] on X
+- Is this true?
+- Find [sources | references | citations] for X
+
+Engagement And Trivia
+- Give questions about X
+
+Chat Memory
+- What did you mean by X?
+- What was said earlier about X?
+- Use earlier context to do X
+
 #### Conditional Clauses
 - [Verb] [item number]
 - [Verb] the [first | last | random] [quantity] of X
@@ -140,68 +215,23 @@ How
 - [Verb] X where [condition]
 - [Verb] X where not [condition]
 
-#### CRUD-Inspired Operations
-
+#### Database CRUD Operations
 Create
-- Content type examples: analysis, article, description, documentation, dummy data, email, essay, guide, outline, program, recipe, SEO keywords, social media post, study plan, title, video script.
-- Write [content type] about [topic]
-- Write [content type] to [entity] about [topic]
-- Create [example | analogy]
-- Reverse engineer X
-- [Write better | improve]
-- [Continue | expand]
-- Create image of X
+- Generate [quantity] dummy entries following [fields]
+- Create new entry with [data]
 
 Read
-- [Summarise | write key takeaways | write main points]
-- [Explain | elaborate]
-- Extract [themes | keywords | info] about X
-- Proofread for spelling, grammar, punctuation errors
-- Suggest [media type] [about | similar to] X
+- Select records where [condition]
+- Select the [top | last | random] [quantity] entries
 
 Update
-- Reformat as [output format]
+- Update entries where [condition] with [data]
+- Replace X with Y
 
 Delete
+- Delete entries where [condition]
 - Delete duplicate items
 - Delete items with missing or null values
-
-#### Utility
-
-Choose
-- Choose best from [options]
-
-Compare
-- Identify [simlarities | diffirences] between X and Y
-- Identify gaps in X
-- Identify pros and cons of X
-- Is X [comparison operator] Y? This can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?
-
-Fact Check
-- Is this true?
-
-Filter
-- Filter X where [condition]
-- Exclude X where [condition]
-
-Real-time Lookup
-- Get up-to-date [facts | news | data] on X
-
-Simplify
-- [Explain X like I’m 5 | explain in simple terms]
-
-Sort
-- Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom
-- Sort X by [key] in [order]
-- Categorize
-
-Trivia
-- Give questions about X
-
-Translate
-- Translate [human language A] into [human language B | emojis]
-- Translate [programming language A] into [programming language B]
-- Convert [narrative voice A] to [narrative voice B]
 
 ### Style
 Using [style]
@@ -248,6 +278,7 @@ In [output format]
 List
 - Bullet point list
 - Numbered list
+- Check list
 
 Code
 - Code
@@ -275,8 +306,7 @@ Game
 
 Data Visualization
 - Table
-- Chart type examples: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin
-- [Chart] chart
+- [Chart] chart ***(Chart type examples: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin)***
 
 Creative
 - Emojis
