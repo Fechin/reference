@@ -271,13 +271,6 @@ Game
 - RPG
 - Choose-Your-Own-Adventure
 
-File Format
-- Plain text
-- Markdown
-- CSV
-- XML
-- JSON
-
 #### Visual
 
 Data Visualization
@@ -289,8 +282,13 @@ Creative
 - Emojis
 - Word cloud
 
-File Format
-- PDF (supports both text and images)
+#### File Format
+- Plain text
+- Markdown
+- CSV
+- XML
+- JSON
+- PDF
 
 ### Constraint
 But [constraint]
