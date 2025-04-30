@@ -25,7 +25,7 @@ plugins:
 - Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
 - Jailbreak: exploiting AI model vulnerabilities to bypass ethical guidelines and perform restricted actions.
 
-### Prmopt Tips
+### Prompt Tips
 #### Efficiency
 - Focus on achieving the desired output efficiently with minimal words in the prompt.
 - Specify general instructions at the start of a conversation or when changing direction to avoid constantly restating them in each new prompt.
@@ -71,7 +71,7 @@ Example: “explain our sales" -> "explain a breakdown of our sales performance 
 - Provide sufficient context so the AI model can understand the scenario.
 
 #### Security And Privacy
-- Never share sensitive information with AI model's as you can't be certain how it's stored, whether it will be shared, of if a data breach may occur.
+- Never share sensitive information with AI models as you can't be certain how it's stored, whether it will be shared, of if a data breach may occur.
 
 ## Prompt Engineering
 ### Prompt Frameworks
@@ -176,7 +176,7 @@ Recommend And Advise
 
 Analyze And Compare
 - Extract [themes | keywords | info] about X
-- Identify [simlarities | diffirences] between X and Y
+- Identify [similarities | differences] between X and Y
 - Analyse the [sentiment | tone] of X
 - Identify gaps in X
 - Evaluate [strengths and weaknesses | pros and cons] of X
