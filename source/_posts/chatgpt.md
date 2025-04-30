@@ -15,7 +15,7 @@ plugins:
 ---
 
 ## Overview
-### Terminology
+### Glossary
 - Prompt: input text that guides an AI model’s response.
 - Tokens: the smallest units of text processed by an AI model.
 - Token Limit: the max number of tokens an AI model can process in one request.
@@ -25,8 +25,8 @@ plugins:
 - Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
 - Jailbreak: exploiting AI model vulnerabilities to bypass ethical guidelines and perform restricted actions.
 
-### Tips
-Prompt Efficiency
+### Prmopt Tips
+#### Efficiency
 - Focus on achieving the desired output efficiently with minimal words in the prompt.
 - Specify general instructions at the start of a conversation or when changing direction to avoid constantly restating them in each new prompt.
 ```{.wrap}
@@ -55,7 +55,7 @@ Example: "please do X".
 Example: “thanks”.
 ```
 
-Prompt Clarity
+#### Clarity
 - Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and eliminate comma lists and conjunctions (e.g., and).
 - Avoid vague or close ended questions.
 ```{.wrap}
@@ -66,40 +66,34 @@ Example: “Do you think our site is good" -> "Explain flaws in the designs of e
 Example: “explain our sales" -> "explain a breakdown of our sales performance for the last quarter”.
 ```
 
-Response Refinement
+#### Response Refinement
 - If the AI model misunderstands your request then specify the intended action.
 - Provide sufficient context so the AI model can understand the scenario.
 
-Privacy And Security
+#### Security And Privacy
 - Never share sensitive information with AI model's as you can't be certain how it's stored, whether it will be shared, of if a data breach may occur.
 
 ## Prompt Engineering
 ### Prompt Frameworks
-General Purpose
-~~~
-[role] [task] [tone] [format] [restriction]
-~~~
+- Only use prompt components relevant to your needs
 
-- Only use prompt components that are relevant for your needs.
+#### General Purpose
+~~~
+[role] [task] [style] [output format] [constraint]
+~~~
 
 ### Role
 Standard
 - Act as [occupation]
-
-Common Roles
-- Personal Coach
-- Consultant
-- Entrepreneur
-- Proofreader
-- Therapist
 - [List of roles](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
 
 Roleplay
 - Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
 
-### Task (5Ws And H)
+### Task
 [verb] [task] [specifics]
 
+#### 5W1H Questions
 Who
 - Who is X?
 - Who is [involved | affected | responsible] for X?
@@ -114,7 +108,7 @@ What
 - What are the critical features of X?
 - [What is done well? what can be improved?]
 - What is the best way to do X?
-- What are the top [quantity] X?
+- What are the top 5 X?
 
 When
 - When [did | will] [entity | event] occur?
@@ -139,15 +133,14 @@ How
 - How does X do Y?
 - How to measure [metric] accurately?
 
-### Task (Conditional Clauses)
-- [Action] [item number]
-- [Action] the [first | last | random] [quantity] of X
-- [Action] the [first | last | random] [quantity] of X where [condition]
-- [Action] X where [condition]
-- [Action] X where not [condition]
+#### Conditional Clauses
+- [Verb] [item number]
+- [Verb] the [first | last | random] [quantity] of X
+- [Verb] the [first | last | random] [quantity] of X where [condition]
+- [Verb] X where [condition]
+- [Verb] X where not [condition]
 
-### Task (CRUD-Inspired Operations)
-[verb] [task] [specifics]
+#### CRUD-Inspired Operations
 
 Create
 - Content type examples: analysis, article, description, documentation, dummy data, email, essay, guide, outline, program, recipe, SEO keywords, social media post, study plan, title, video script.
@@ -167,14 +160,13 @@ Read
 - Suggest [media type] [about | similar to] X
 
 Update
-- Reformat as [format]
+- Reformat as [output format]
 
 Delete
 - Delete duplicate items
 - Delete items with missing or null values
 
-### Task (Other)
-[verb] [task] [specifics]
+#### Utility
 
 Choose
 - Choose best from [options]
@@ -185,7 +177,7 @@ Compare
 - Identify pros and cons of X
 - Is X [comparison operator] Y? This can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?
 
-Fact-checking
+Fact Check
 - Is this true?
 
 Filter
@@ -207,22 +199,28 @@ Trivia
 - Give questions about X
 
 Translate
-- Translate [human language A] into [human language B| emojis]
+- Translate [human language A] into [human language B | emojis]
 - Translate [programming language A] into [programming language B]
 - Convert [narrative voice A] to [narrative voice B]
 
-### Tone
-Using [tone] tone
+### Style
+Using [style]
 
-Formality
+#### Imitate
+- Using style of [person | brand | genre | character]
+
+#### Formality
 - Formal
 - Informal
 
-Directness
+#### Directness
 - Direct
 - Indirect
 
-Positive Tones
+#### Tones
+- This is not an exhaustive list of tones
+
+Positive
 - Optimistic
 - Appreciative
 - Assertive
@@ -233,7 +231,7 @@ Positive Tones
 - Humorous
 - Inspirational
 
-Negative Tones
+Negative
 - Pessimistic
 - Accusatory
 - Concerned
@@ -242,8 +240,10 @@ Negative Tones
 - Sarcastic
 - Urgent
 
-### Format (Text)
-In [format]
+### Output Format
+In [output format]
+
+#### Text
 
 List
 - Bullet point list
@@ -278,12 +278,11 @@ File Format
 - XML
 - JSON
 
-### Format (Visual)
-In [format]
+#### Visual
 
 Data Visualization
 - Table
-- Chart types: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin
+- Chart type examples: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin
 - [Chart] chart
 
 Creative
@@ -293,27 +292,27 @@ Creative
 File Format
 - PDF (supports both text and images)
 
-### Restriction
-But [restriction]
+### Constraint
+But [constraint]
 
-Length Constraints
+Length
 - Be [extremely detailed | concise]
 - In [quantity] [words | sentences]
 
-Language Constraints
+Language
 -	No jargon or technical terms
 
-Structural Constraints
+Structure
 -	Show [quantity] [examples | options]
 -	No headers
 -	No pretext titles
 
-Content Constraints
+Content
 - Use [first-person | second-person | third-person] narrative voice
 - Don't change the wording
 - Permit [minor | major] edits
 - Use pop culture references
-- Ensure goals align with SMART condition
+- Ensure goals align with SMART criteria
 - Only show [changed | unchanged] content
 
 ## Examples
@@ -766,7 +765,7 @@ Lore:
 
 Scenario:
 -	Night of a grand performance at the Globe Theatre.
--	Lead actor is missing and staff are stressing out how to pull off the performance.
+-	Lead actor is missing and staff are concerned about how to achieve the performance.
 ```
 
 ## References (Used For Ideas)
