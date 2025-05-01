@@ -276,32 +276,36 @@ In [output format]
 
 #### Text
 
+Paragraphs
+- Paragraphs ***(default)***
+
 List
-- Bullet point list
+- Bulleted list
 - Numbered list
 - Check list
 
 Code
 - Code
 
-Process
+Instructions
 - Step-by-step instructions
 
-Response
-- Question and answer
-- Dialogue
+Questions And Answers
+- Q&A
+- FAQ
 
-Creative
-- Script
-- Comic strip dialogue
+Creative Writing
+- [Joke | humour]
+- [Lyrics | song]
+- [Metaphorical | stylized language]
 - Poetry
-- Music lyrics
-- Riddle
+- [Riddle | puzzle]
+- [Script | screenplay | dialogue]
+- [Story | narrative]
 
-Game
-- Quiz
-- RPG
-- Choose-Your-Own-Adventure
+Interactive And Educational
+- [Quiz | test | flashcards | drills]
+- [Interactive fiction | role-playing game | choose-your-own-adventure]
 
 #### Visual
 
@@ -309,17 +313,28 @@ Data Visualization
 - Table
 - [Chart] chart ***(Chart type examples: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin)***
 
-Creative
+Creative Visual
+- ASCII Art
 - Emojis
 - Word cloud
 
-#### File Format
+#### File Type
+Document
+- PDF
+
+Structured Data And Markup
 - Plain text
 - Markdown
-- CSV
+- HTML
 - XML
+- CSV
 - JSON
-- PDF
+- LaTeX
+
+Programming Code And Scripting
+- [Programming language]
+- Pseudocode
+- Regular expression
 
 ### Constraint
 But [constraint]
