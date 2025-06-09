@@ -515,26 +515,6 @@ for i in {5..50..5}; do
 done
 ```
 
-### Auto increment
-
-```bash
-i=1
-while [[ $i -lt 4 ]]; do
-    echo "Number: $i"
-    ((i++))
-done
-```
-
-### Auto decrement
-
-```bash
-i=3
-while [[ $i -gt 0 ]]; do
-    echo "Number: $i"
-    ((i--))
-done
-```
-
 ### Continue
 
 ```bash {data=3,5}
@@ -566,6 +546,35 @@ count=0
 until [ $count -gt 10 ]; do
     echo "$count"
     ((count++))
+done
+```
+
+### While with increment
+
+```bash
+i=1
+while [[ $i -lt 4 ]]; do
+    echo "Number: $i"
+    ((i++))
+done
+```
+
+### While with decrement
+
+```bash
+i=3
+while [[ $i -gt 0 ]]; do
+    echo "Number: $i"
+    ((i--))
+done
+```
+
+#### Combined with test
+
+```bash
+i=3
+while ((i--)); do
+    echo "Number: $i"
 done
 ```
 
