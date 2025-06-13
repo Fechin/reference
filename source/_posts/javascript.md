@@ -1299,6 +1299,22 @@ Promise.all([promise1, promise2]).then((res) => {
 });
 ```
 
+### Promise.allSettled()
+
+```javascript
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(2);
+  }, 100);
+});
+
+Promise.allSettled([promise1, promise2]).then((res) => {
+  console.log(res[0].status);
+  console.log(res[1].status);
+});
+```
+
 ### Avoiding nested Promise and .then()
 
 ```javascript
