@@ -980,6 +980,59 @@ for key, value in johndict.items():
 # Output: age : : 30
 ````
 
+
+## Python Comprehensions
+
+### Comprehension List {.col-span-2}
+
+```python
+languages = ["html", "go", "rust", "javascript", "python"]
+
+newlist = [x for x in languages if "l" not in x]
+# add language for language in languages if "l" not in language
+
+print(newlist) #Output : [ 'go', 'rust', 'javascript', 'python']
+
+# List comprehension avoid this : 
+oldlist = []
+for x in languages:
+    if  "l" not in x:
+        oldlist.append(x)
+print(oldlist) #Output :  [ 'go', 'rust', 'javascript', 'python']
+
+
+```
+
+### Comprehension Dictionary {.col-span-2}
+
+```python
+languages = ["html", "go", "rust", "javascript", "python"]
+
+language_dict = {lang: ('l' not in lang) for lang in languages}
+# Key is the language & bool is Value (no offense for html..)
+
+print(language_dict)
+# Output: {'html': False, 'go': True, 'rust': True,
+#          'javascript': True, 'python': True}
+
+
+# Dictionary comprehension avoid this : 
+
+language_dict2 = {}
+    
+for e in languages:
+    if "l" not in e:
+        language_dict2[e] = True
+    else:
+        language_dict2[e] = False
+
+print(language_dict2)
+# Output: {'html': False, 'go': True, 'rust': True,
+#          'javascript': True, 'python': True}
+```
+
+
+
 ## Python Functions
 
 ### Basic
