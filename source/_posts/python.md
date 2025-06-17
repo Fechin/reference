@@ -1105,7 +1105,28 @@ add(5, 20)  # => 25
 # => 5
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
 ```
+### @decorator {.col-span-2}
 
+```python
+# Modify or extend behavior of function or class method,
+# without changing their actual code.
+
+# Define decorator that will wrap function or method
+def handle_errors(func):
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            return print(f"Error :  {e}")
+    return wrapper
+
+# Decorate function or method 
+@handle_errors
+def divide(a, b):
+    return a / b
+
+divide(10, 0) # Output : Error : division by zero
+```
 ## Python Modules
 
 ### Import modules
