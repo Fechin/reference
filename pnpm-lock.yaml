@@ -101,9 +101,6 @@ importers:
       markdown-it-ins:
         specifier: ^3.0.1
         version: 3.0.1
-      markdown-it-multimd-table:
-        specifier: ^4.2.3
-        version: 4.2.3
       markdown-it-shortcode-tag:
         specifier: ^1.1.0
         version: 1.1.0
@@ -3120,9 +3117,6 @@ packages:
 
   markdown-it-mark@3.0.1:
     resolution: {integrity: sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==}
-
-  markdown-it-multimd-table@4.2.3:
-    resolution: {integrity: sha512-KepCr2OMJqm7IT6sOIbuqHGe+NERhgy66XMrc5lo6dHW7oaPzMDtYwR1EGwK16/blb6mCSg4jqityOe0o/H7HA==}
 
   markdown-it-shortcode-tag@1.1.0:
     resolution: {integrity: sha512-6qVQHmfVYMYlO2HebbF6ydXoTpOl3jPJvw6RyPnWaGJLSXdxlIJ7ihyzzbXNNHkZlQPfoDehDQYMfqeOv1KwgQ==}
@@ -8482,8 +8476,6 @@ snapshots:
   markdown-it-ins@3.0.1: {}
 
   markdown-it-mark@3.0.1: {}
-
-  markdown-it-multimd-table@4.2.3: {}
 
   markdown-it-shortcode-tag@1.1.0: {}
 

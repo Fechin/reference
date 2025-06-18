@@ -25,11 +25,6 @@ hexo.extend.filter.register('markdown-it:renderer', (md) => {
   md.use(require('markdown-it-sup'), {});
   md.use(require('markdown-it-task-lists'), {});
   md.use(require('markdown-it-emoji'), {});
-  md.use(require('markdown-it-multimd-table'), {
-    multiline: false,
-    rowspan: true,
-    headerless: false
-  });
   md.use(require('markdown-it-attrs'), {});
   md.use(require('markdown-it-highlightjs'), {
     hljs: {
