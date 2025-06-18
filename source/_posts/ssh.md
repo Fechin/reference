@@ -264,6 +264,9 @@ $ ssh-keygen -R <ip/hostname>
 | `-N`   | Do not execute a remote command                         | 
 | `-g`   | Allow remote hosts to connect to local forwarded ports  | 
 
+{.left-text}
+
+more details on flag above with `man ssh`
 
 ### Local Port Forwarding  {.col-span-2}
 ```bash
@@ -309,3 +312,4 @@ ssh -f -N -g -L 8080:example.com:80 -i ~/.ssh/custom_key user@ssh_server
 
 - [OpenSSH Config File Examples](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/) _(cyberciti.biz)_
 - [ssh_config](https://linux.die.net/man/5/ssh_config) _(linux.die.net)_
+- [man-ssh](https://man7.org/linux/man-pages/man1/ssh.1.html)
