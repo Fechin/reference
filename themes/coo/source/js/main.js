@@ -2,7 +2,7 @@ const Utils = (function () {
   return {
     LIBRARY: {
       fuse: {
-        lib: ['/js/fuse_6.4.6.js'],
+        lib: ['/js/fuse_7.1.0.js'],
         instance: 'Fuse',
         attr: { async: true }
       }
@@ -488,14 +488,12 @@ window.addEventListener('load', () => {
   Utils.externalLibrary(Utils.LIBRARY.fuse)
     .then((Fuse) => {
       if (typeof Fuse === 'undefined') {
-        // eslint-disable-next-line no-console
         console.error('Fuse.js library failed to load');
         return;
       }
       new SearchEngine().start();
     })
     .catch((error) => {
-      // eslint-disable-next-line no-console
       console.error('Failed to load search library:', error);
     });
 });

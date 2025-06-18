@@ -45,6 +45,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: # empty to disable built-in syntax highlighting
 highlight:
   enable: false
 
@@ -132,6 +133,7 @@ markdown:
     linkify: false
     typographer: false
     quotes: "“”‘’"
+    langPrefix: "hljs language-"
   anchors:
     level: 2
     collisionSuffix: ""

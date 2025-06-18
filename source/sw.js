@@ -7,7 +7,7 @@ const STATIC_ASSETS = [
   '/',
   '/css/style.css',
   '/js/main.js',
-  '/js/fuse_6.4.6.js',
+  '/js/fuse_7.1.0.js',
   '/manifest.json',
   '/search.json'
 ];
@@ -24,24 +24,20 @@ const CACHE_PATTERNS = [
 
 // Service Worker installevent
 self.addEventListener('install', (event) => {
-  // eslint-disable-next-line no-console
   console.log('Service Worker: Installing...');
 
   event.waitUntil(
     caches
       .open(STATIC_CACHE)
       .then((cache) => {
-        // eslint-disable-next-line no-console
         console.log('Service Worker: Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        // eslint-disable-next-line no-console
         console.log('Service Worker: Static assets cached');
         return self.skipWaiting();
       })
       .catch((error) => {
-        // eslint-disable-next-line no-console
         console.error('Service Worker: Cache failed', error);
       })
   );
@@ -49,7 +45,6 @@ self.addEventListener('install', (event) => {
 
 // Service Worker activate event
 self.addEventListener('activate', (event) => {
-  // eslint-disable-next-line no-console
   console.log('Service Worker: Activating...');
 
   event.waitUntil(
@@ -60,7 +55,6 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             // Delete old cache versions
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              // eslint-disable-next-line no-console
               console.log('Service Worker: Deleting old cache', cacheName);
               return caches.delete(cacheName);
             }
@@ -68,7 +62,6 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
-        // eslint-disable-next-line no-console
         console.log('Service Worker: Activated');
         return self.clients.claim();
       })
@@ -124,7 +117,6 @@ async function handleCacheRequest(request) {
     // 6. Nothing available, return offline page
     return createOfflineResponse(url.pathname);
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Service Worker: Fetch failed', error);
 
     // Network error, try to return cache
@@ -250,7 +242,6 @@ async function doBackgroundSync() {
       cache.put('/search.json', response);
     }
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Background sync failed:', error);
   }
 }
@@ -291,9 +282,6 @@ self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
   if (event.action === 'explore') {
-    event.waitUntil(
-      // eslint-disable-next-line no-undef
-      clients.openWindow('/')
-    );
+    event.waitUntil(clients.openWindow('/'));
   }
 });

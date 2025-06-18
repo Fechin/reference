@@ -1,7 +1,7 @@
 ---
-title: FastAPI  
-date: 2025-06-07 18:40:00  
-background: bg-[#059669]  
+title: FastAPI
+date: 2025-06-07 18:40:00
+background: bg-[#059669]
 tags:
   - web
   - python
@@ -40,8 +40,6 @@ def root():
 uvicorn main:app --reload
 ```
 
-
-
 ## Routing & Parameters {.cols-3}
 
 ### Path Parameter
@@ -67,8 +65,6 @@ def find(q: str = "default"):
 def filter_data(limit: int = 10, active: bool = True):
     return {"limit": limit, "active": active}
 ```
-
-
 
 ## Request Body & Validation {.cols-3}
 
@@ -97,8 +93,6 @@ def create(item: Item):
 def create(item: Item):
     return item
 ```
-
-
 
 ## Forms, Files, Headers {.cols-3}
 
@@ -132,8 +126,6 @@ def info(ua: str = Header(None)):
     return {"UA": ua}
 ```
 
-
-
 ## Middleware & Dependency {.cols-2}
 
 ### Middleware
@@ -159,8 +151,6 @@ def secure(_: bool = Depends(auth)):
     return {"secure": True}
 ```
 
-
-
 ## Errors & JSON API {.cols-2}
 
 ### HTTP Error
@@ -183,8 +173,6 @@ def get_data():
     return {"status": "ok"}
 ```
 
-
-
 ## Templates & Static {.cols-2}
 
 ### Mount Static
@@ -200,8 +188,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 from fastapi.templating import Jinja2Templates
 templates = Jinja2Templates("templates")
 ```
-
-
 
 ## Routers & Structure {.cols-2}
 
@@ -230,14 +216,12 @@ project/
 └── models/
 ```
 
-
-
 ## Docs & Status {.cols-2}
 
 ### Built-in Docs
 
-* Swagger: `/docs`
-* ReDoc: `/redoc`
+- Swagger: `/docs`
+- ReDoc: `/redoc`
 
 ### Custom Status Code
 
@@ -248,4 +232,3 @@ from fastapi import status
 def create():
     return {"msg": "Created"}
 ```
-

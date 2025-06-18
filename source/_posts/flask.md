@@ -1,7 +1,7 @@
 ---
-title: Flask  
-date: 2025-06-07 19:05:00  
-background: bg-[#3598db]  
+title: Flask
+date: 2025-06-07 19:05:00
+background: bg-[#3598db]
 tags:
   - web
   - python
@@ -42,8 +42,6 @@ export FLASK_APP=app.py
 flask run
 ```
 
-
-
 ## App Config & Environment {.cols-3}
 
 ### App Object
@@ -62,13 +60,11 @@ app.config.from_pyfile("config.py")
 
 ### Common Config Keys
 
-| Key          | Description          |
-|  | -- |
-| `DEBUG`      | Enable debug mode    |
+| Key | Description |
+| | -- |
+| `DEBUG` | Enable debug mode |
 | `SECRET_KEY` | For sessions/cookies |
-| `ENV`        | Set to 'development' |
-
-
+| `ENV` | Set to 'development' |
 
 ## Routing & Methods {.cols-3}
 
@@ -96,8 +92,6 @@ def user(name):
     return f"User: {name}"
 ```
 
-
-
 ## Request & Response {.cols-3}
 
 ### Request Object
@@ -112,9 +106,9 @@ def data():
 
 ### Request Attributes
 
-* `request.args`: Query params
-* `request.form`: Form data
-* `request.json`: JSON body
+- `request.args`: Query params
+- `request.form`: Form data
+- `request.json`: JSON body
 
 ### Custom Response
 
@@ -127,8 +121,6 @@ def custom():
     res.headers["X-Test"] = "True"
     return res
 ```
-
-
 
 ## Templates & Static {.cols-3}
 
@@ -146,16 +138,16 @@ def page():
 
 ```html
 <h1>Hello {{ name }}</h1>
-{% if name %}<p>Hi!</p>{% endif %}
+{% if name %}
+<p>Hi!</p>
+{% endif %}
 ```
 
 ### Static Files
 
 ```html
-<link href="{{ url_for('static', filename='style.css') }}">
+<link href="{{ url_for('static', filename='style.css') }}" />
 ```
-
-
 
 ## Sessions & Cookies {.cols-2}
 
@@ -183,8 +175,6 @@ def cookie():
     return resp
 ```
 
-
-
 ## JSON API & Middleware {.cols-2}
 
 ### JSON Response
@@ -210,8 +200,6 @@ def after(res):
     return res
 ```
 
-
-
 ## Error Handling & Blueprints {.cols-2}
 
 ### Error Handling
@@ -235,8 +223,6 @@ def dash():
 
 app.register_blueprint(admin)
 ```
-
-
 
 ## Project Structure {.cols-2}
 

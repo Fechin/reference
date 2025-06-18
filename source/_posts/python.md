@@ -957,8 +957,9 @@ else:
 
 Also see: [Python Tips](https://book.pythontips.com/en/latest/for_-_else.html)
 
-### Over Dictionary 
-````python
+### Over Dictionary
+
+```python
 johndict = {
   "firstname": "John",
   "lastname": "Doe",
@@ -968,18 +969,17 @@ johndict = {
 x = johndict.items()
 print(x)
 
-# Output: dict_items([('firstname', 'John'), 
+# Output: dict_items([('firstname', 'John'),
 #                     ('lastname', 'Doe'),
 #                     ('age', 30)])
 
 for key, value in johndict.items():
-	print(f"{key} : : {value}")		
+	print(f"{key} : : {value}")
 
 # Output: firstname : : John
 # Output: lastname : : Doe
 # Output: age : : 30
-````
-
+```
 
 ## Python Comprehensions
 
@@ -993,7 +993,7 @@ newlist = [x for x in languages if "l" not in x]
 
 print(newlist) #Output : [ 'go', 'rust', 'javascript', 'python']
 
-# List comprehension avoid this : 
+# List comprehension avoid this :
 oldlist = []
 for x in languages:
     if  "l" not in x:
@@ -1016,10 +1016,10 @@ print(language_dict)
 #          'javascript': True, 'python': True}
 
 
-# Dictionary comprehension avoid this : 
+# Dictionary comprehension avoid this :
 
 language_dict2 = {}
-    
+
 for e in languages:
     if "l" not in e:
         language_dict2[e] = True
@@ -1030,8 +1030,6 @@ print(language_dict2)
 # Output: {'html': False, 'go': True, 'rust': True,
 #          'javascript': True, 'python': True}
 ```
-
-
 
 ## Python Functions
 
@@ -1105,6 +1103,7 @@ add(5, 20)  # => 25
 # => 5
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
 ```
+
 ### @decorator {.col-span-2}
 
 ```python
@@ -1120,13 +1119,14 @@ def handle_errors(func):
             return print(f"Error :  {e}")
     return wrapper
 
-# Decorate function or method 
+# Decorate function or method
 @handle_errors
 def divide(a, b):
     return a / b
 
 divide(10, 0) # Output : Error : division by zero
 ```
+
 ## Python Modules
 
 ### Import modules
@@ -1395,8 +1395,7 @@ print(Yoki.legs) # => 4
 Yoki.sound()     # => Woof!
 ```
 
-
-### @staticmethod  {.col-span-2}
+### @staticmethod {.col-span-2}
 
 ```python
 class MyClass:
@@ -1640,24 +1639,20 @@ while (data := values[i]):
 
 # Expected result: 1, "text", True
 ```
-## Date & Time Handling 
 
+## Date & Time Handling
 
 ### Current date and time
 
-          
 ```python
 import datetime
 
 now = datetime.datetime.now()
 print(now)  # e.g., 2024-04-27 14:35:22.123456
 ```
-      
-      
 
-###  Creating specific date/time objects
+### Creating specific date/time objects
 
-          
 ```python
 import datetime
 
@@ -1673,11 +1668,9 @@ print(t)  # 15:30:45
 dt = datetime.datetime(2024, 4, 27, 15, 30, 45)
 print(dt)  # 2024-04-27 15:30:45
 ```
-      
 
-###  Converting between date formats
+### Converting between date formats
 
- 
 ```python
 import datetime
 
@@ -1690,11 +1683,10 @@ print(dt_obj)  # 2024-04-27 14:00:00
 formatted_str = dt_obj.strftime("%d/%m/%Y %H:%M")
 print(formatted_str)  # 27/04/2024 14:00
 ```
-      
 
 ### Timestamps and Unix time
 
-```python       
+```python
 import datetime
 
 # Get current timestamp
@@ -1704,11 +1696,11 @@ print(timestamp)  # e.g., 1714188922.123456
 # Convert timestamp back to datetime
 dt_from_timestamp = datetime.datetime.fromtimestamp(timestamp)
 print(dt_from_timestamp)
-```      
+```
 
 ### Date difference and timedelta {.col-span-2}
 
-```python          
+```python
 import datetime
 
 date1 = datetime.date(2024, 4, 27)
@@ -1721,7 +1713,6 @@ print(delta.days)  # 4
 new_date = date1 + datetime.timedelta(days=10)
 print(new_date)  # 2024-05-07
 ```
-
 
 ## Miscellaneous
 
@@ -1781,7 +1772,7 @@ finally:                 # Execute under all circumstances
     print("We can clean up resources here")
 ```
 
-### Dispatcher Pattern  {.col-span-3}
+### Dispatcher Pattern {.col-span-3}
 
 ```python
 # Dispatcher allows dynamic selection and execution of functions based on user input or other runtime conditions

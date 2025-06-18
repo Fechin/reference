@@ -1,40 +1,104 @@
 const fs = require('fs');
 const path = require('path');
-
-// Create a safe highlight.js wrapper
 const hljs = require('highlight.js');
 
-// Create a custom highlight function
-const customHighlight = function (str, lang) {
-  if (lang && hljs.getLanguage(lang)) {
-    try {
-      return hljs.highlight(str, { language: lang, ignoreIllegals: true }).value;
-    } catch (err) {
-      console.warn(`Highlight.js error for language "${lang}":`, err.message);
-    }
+// Helper function to safely require plugins that might be ES modules
+function safeRequire(moduleName) {
+  const plugin = require(moduleName);
+  let result = plugin.default || plugin;
+
+  // Special handling for markdown-it-emoji v3.0.0+ which exports an object with multiple functions
+  if (moduleName === 'markdown-it-emoji' && typeof result === 'object' && result.full) {
+    result = result.full; // Use the full emoji plugin
   }
-  // If the language is not supported, return an empty string, let markdown-it use the default processor
-  return '';
+
+  // Special handling for other ES modules with default export
+  if (typeof result === 'object' && result.default && typeof result.default === 'function') {
+    result = result.default;
+  }
+
+  return result;
+}
+
+// Create a custom highlight.js instance that handles unknown languages gracefully
+const customHljs = {
+  highlight: function (code, options) {
+    const language = options && options.language ? options.language : '';
+
+    // If no language specified, try auto-detection
+    if (!language) {
+      try {
+        return hljs.highlightAuto(code);
+      } catch {
+        return {
+          value: hljs.util.escapeHTML(code),
+          language: 'plaintext',
+          relevance: 0
+        };
+      }
+    }
+
+    // Check if the language is supported
+    if (hljs.getLanguage(language)) {
+      try {
+        return hljs.highlight(code, {
+          language: language,
+          ignoreIllegals: true
+        });
+      } catch {
+        // If highlighting fails, fall back to plain text without warning
+        return {
+          value: hljs.util.escapeHTML(code),
+          language: 'plaintext',
+          relevance: 0
+        };
+      }
+    } else {
+      // Language not supported, try auto-detection or fall back to plain text
+      try {
+        const autoResult = hljs.highlightAuto(code);
+        // Only use auto-detection if confidence is reasonable
+        if (autoResult.relevance > 3) {
+          return autoResult;
+        }
+      } catch {
+        // Auto-detection failed, ignore
+      }
+
+      // Fall back to plain text without warning
+      return {
+        value: hljs.util.escapeHTML(code),
+        language: 'plaintext',
+        relevance: 0
+      };
+    }
+  },
+
+  // Expose other hljs methods that might be needed
+  getLanguage: hljs.getLanguage.bind(hljs),
+  listLanguages: hljs.listLanguages.bind(hljs),
+  util: hljs.util
 };
 
 hexo.extend.filter.register('markdown-it:renderer', (md) => {
-  md.use(require('markdown-it-abbr'), {});
-  md.use(require('markdown-it-footnote'), {});
-  md.use(require('markdown-it-ins'), {});
-  md.use(require('markdown-it-sub'), {});
-  md.use(require('markdown-it-sup'), {});
-  md.use(require('markdown-it-task-lists'), {});
-  md.use(require('markdown-it-emoji'), {});
-  md.use(require('markdown-it-attrs'), {});
-  md.use(require('markdown-it-highlightjs'), {
-    hljs: {
-      highlight: customHighlight
-    }
+  md.use(safeRequire('markdown-it-abbr'), {});
+  md.use(safeRequire('markdown-it-footnote'), {});
+  md.use(safeRequire('markdown-it-ins'), {});
+  md.use(safeRequire('markdown-it-sub'), {});
+  md.use(safeRequire('markdown-it-sup'), {});
+  md.use(safeRequire('markdown-it-task-lists'), {});
+  md.use(safeRequire('markdown-it-emoji'), {});
+  md.use(safeRequire('markdown-it-attrs'), {});
+  md.use(safeRequire('markdown-it-highlightjs'), {
+    hljs: customHljs,
+    auto: true,
+    code: true,
+    ignoreIllegals: true
   });
-  md.use(require('markdown-it-checkbox'), {});
-  md.use(require('markdown-it-shortcode-tag'), {
+  md.use(safeRequire('markdown-it-checkbox'), {});
+  md.use(safeRequire('markdown-it-shortcode-tag'), {
     widget: {
-      render(attrs, _env) {
+      render(attrs) {
         const widgetPath = path.resolve(`./source/widget/${attrs.name}.html`);
         if (fs.existsSync(widgetPath)) {
           return fs.readFileSync(widgetPath, 'utf8').trim();
@@ -62,6 +126,12 @@ hexo.extend.filter.register('markdown-it:renderer', (md) => {
 
 function headerSections(md, options) {
   const opts = Object.assign({}, options);
+
+  // Check if the rule has already been added to prevent duplicate rules
+  // This is crucial for hexo-renderer-markdown-it v6.0.0+ where the md instance is reused
+  if (md.core.ruler.__rules__.some((rule) => rule.name === 'header_sections')) {
+    return;
+  }
 
   function addSections(state) {
     const tokens = []; // output
@@ -164,7 +234,7 @@ function headerSections(md, options) {
       attrs = [];
     }
     let appended = false;
-    attrs.forEach((x, _i) => {
+    attrs.forEach((x) => {
       if (x[0] === 'class') {
         x[1] = `${cls} ${x[1]}`;
         appended = true;

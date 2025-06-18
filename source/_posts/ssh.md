@@ -249,26 +249,25 @@ $ ssh-keygen -R <ip/hostname>
 - PEM
 - PKCS8
 
-
-
-## SSH Tunneling 
+## SSH Tunneling
 
 ### SSH Tunnel Options {.row-span-2}
 
-| Option | Description                                             | 
-|--------|:--------------------------------------------------------|
-| `-L`   | Local port forwarding                                   | 
-| `-R`   | Remote port forwarding                                  |
-| `-D`   | Dynamic port forwarding                                 | 
-| `-f`   | Run in background                                       | 
-| `-N`   | Do not execute a remote command                         | 
-| `-g`   | Allow remote hosts to connect to local forwarded ports  | 
+| Option | Description                                            |
+| ------ | :----------------------------------------------------- |
+| `-L`   | Local port forwarding                                  |
+| `-R`   | Remote port forwarding                                 |
+| `-D`   | Dynamic port forwarding                                |
+| `-f`   | Run in background                                      |
+| `-N`   | Do not execute a remote command                        |
+| `-g`   | Allow remote hosts to connect to local forwarded ports |
 
 {.left-text}
 
 more details on flag above with `man ssh`
 
-### Local Port Forwarding  {.col-span-2}
+### Local Port Forwarding {.col-span-2}
+
 ```bash
 # Forward a local port to a remote server
 ssh -L local_port:remote_host:remote_port user@ssh_server
@@ -288,6 +287,7 @@ ssh -f -N -D 1080 user@ssh_server
 ```
 
 ### Background Tunnel {.col-span-3}
+
 ```bash
 # Create a local port forwarding tunnel in the background
 ssh -f -N -L local_port:remote_host:remote_port user@ssh_server
@@ -305,8 +305,7 @@ ssh -L 8080:example.com:80 -L 3306:db.example.com:3306 user@ssh_server
 ```bash
 # In background, no command, allow remote host, local port forward, identity_file
 ssh -f -N -g -L 8080:example.com:80 -i ~/.ssh/custom_key user@ssh_server
-``` 
-
+```
 
 ## Also see
 

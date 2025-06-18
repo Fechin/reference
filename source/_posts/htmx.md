@@ -1,7 +1,7 @@
 ---
-title: HTMX  
-date: 2025-06-07 19:30:00  
-background: bg-[#ff5f4d]  
+title: HTMX
+date: 2025-06-07 19:30:00
+background: bg-[#ff5f4d]
 tags:
   - frontend
   - javascript
@@ -14,8 +14,6 @@ plugins:
   - copyCode
 ---
 
-
-
 ## Getting Started {.cols-3}
 
 ### CDN Import
@@ -27,11 +25,7 @@ plugins:
 ### Basic Usage
 
 ```html
-<button 
-  hx-get="/hello" 
-  hx-target="#result">
-  Say Hi
-</button>
+<button hx-get="/hello" hx-target="#result">Say Hi</button>
 <div id="result"></div>
 ```
 
@@ -41,8 +35,6 @@ plugins:
 <!-- /hello response -->
 <p>Hello from server</p>
 ```
-
-
 
 ## Core Attributes {.cols-3}
 
@@ -63,28 +55,24 @@ plugins:
 ### `hx-trigger`
 
 ```html
-<input 
-  hx-get="/search" 
+<input
+  hx-get="/search"
   hx-trigger="keyup changed delay:300ms"
-  hx-target="#results" />
+  hx-target="#results"
+/>
 ```
-
-
 
 ## Swap & Out of Band {.cols-3}
 
 ### `hx-swap`
 
 ```html
-<div 
-  hx-get="/frag" 
-  hx-swap="innerHTML">
-</div>
+<div hx-get="/frag" hx-swap="innerHTML"></div>
 ```
 
-* `outerHTML`
-* `innerHTML`
-* `beforebegin`, `afterbegin`, etc.
+- `outerHTML`
+- `innerHTML`
+- `beforebegin`, `afterbegin`, etc.
 
 ### `hx-swap-oob`
 
@@ -92,15 +80,13 @@ plugins:
 <div hx-swap-oob="true" id="msg"></div>
 ```
 
-*Useful for global updates from partials.*
+_Useful for global updates from partials._
 
 ### Swap Modifiers
 
 ```html
 hx-swap="outerHTML transition:true swap:1s"
 ```
-
-
 
 ## Forms & Events {.cols-3}
 
@@ -118,35 +104,21 @@ hx-swap="outerHTML transition:true swap:1s"
 
 ```html
 <input id="user-id" name="id" />
-<button 
-  hx-post="/update" 
-  hx-include="#user-id">
-  Update
-</button>
+<button hx-post="/update" hx-include="#user-id">Update</button>
 ```
 
 ### `hx-vals`
 
 ```html
-<button 
-  hx-post="/save" 
-  hx-vals='{"id": 42, "active": true}'>
-  Save
-</button>
+<button hx-post="/save" hx-vals='{"id": 42, "active": true}'>Save</button>
 ```
-
-
 
 ## Advanced Features {.cols-3}
 
 ### Loading Indicator
 
 ```html
-<button 
-  hx-get="/load" 
-  hx-indicator="#spinner">
-  Load
-</button>
+<button hx-get="/load" hx-indicator="#spinner">Load</button>
 <div id="spinner" class="htmx-indicator">Loading...</div>
 ```
 
@@ -162,23 +134,21 @@ hx-swap="outerHTML transition:true swap:1s"
 <div hx-get="/time" hx-trigger="every 5s"></div>
 ```
 
-
-
 ## Events & Extensions {.cols-3}
 
 ### Listen to Events
 
 ```js
-document.body.addEventListener('htmx:afterSwap', e => {
-  console.log("Swap complete");
+document.body.addEventListener('htmx:afterSwap', (e) => {
+  console.log('Swap complete');
 });
 ```
 
 ### Event Hooks
 
-* `htmx:beforeRequest`
-* `htmx:afterSwap`
-* `htmx:responseError`
+- `htmx:beforeRequest`
+- `htmx:afterSwap`
+- `htmx:responseError`
 
 ### Extensions
 
@@ -186,8 +156,6 @@ document.body.addEventListener('htmx:afterSwap', e => {
 <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
 <form hx-post="/api" hx-ext="json-enc"></form>
 ```
-
-
 
 ## Example Use Case {.cols-2}
 
@@ -202,11 +170,6 @@ def hello():
 ### HTML Client
 
 ```html
-<button 
-  hx-get="/hello" 
-  hx-target="#msg">
-  Click
-</button>
+<button hx-get="/hello" hx-target="#msg">Click</button>
 <div id="msg"></div>
 ```
-

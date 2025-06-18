@@ -137,12 +137,15 @@ Roleplay
 [verb] [task] [specifics]
 
 #### 5W1H Questions
+
 Who
+
 - Who is X?
 - Who is [involved | affected | responsible] for X?
 - Who should I contact for help with X?
 
 What
+
 - [What is | define | explain | describe] X?
 - What does X do?
 - What did [entity | text] mean by [quote]?
@@ -154,15 +157,18 @@ What
 - What are the top 5 X?
 
 When
+
 - When [did | will] [entity | event] occur?
 - When is X due?
 - When is the best time to initiate X?
 
 Where
+
 - Where did [entity | event] happen?
 - [Where to find X? | where to find resources about X? | suggest websites about X]
 
 Why
+
 - Why did [entity] choose [approach]?
 - Why [did | will] [event] occur?
 - Why is [approach] being implemented?
@@ -171,30 +177,36 @@ Why
 - Why is it important?
 
 How
+
 - How to do X?
 - How does X work?
 - How does X do Y?
 - How to measure [metric] accurately?
 
 #### Utility
+
 Generate And Expand Content
-- Write [content type] to [entity] about [topic] should cover [aspects] ***(Content type examples: article, description, documentation, dummy data, email, resume, essay, guide, outline, program, recipe, SEO keywords, story, social media post, study plan, title, video script)***
+
+- Write [content type] to [entity] about [topic] should cover [aspects] **_(Content type examples: article, description, documentation, dummy data, email, resume, essay, guide, outline, program, recipe, SEO keywords, story, social media post, study plan, title, video script)_**
 - Generate random [names | numbers | words | ideas | X] matching [criteria]
 - [Continue | expand]
 - Create image of X
 
 Summarize And Outline
+
 - [Summarise | write key takeaways | write main points | write main lesson | highlight important info]
 - [Shorten | write concise]
 - Create outline
 
 Modify And Refine Text
+
 - [Write better | improve]
 - Paraphrase
 - Correct spelling, grammar, punctuation errors
 - Change [narrative voice A] to [narrative voice B]
 
 Explain And Teach
+
 - [Explain | elaborate]
 - Explain [how to do | each step of] X
 - Explain what X does
@@ -203,14 +215,17 @@ Explain And Teach
 - Provide [example | analogy]
 
 Organize And Structure
-- Sort X by [key] in [order] ***(Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom)***
+
+- Sort X by [key] in [order] **_(Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom)_**
 - Categorize
 
 Plan And Strategize
+
 - Plan [strategy for | goals and steps to achieve | milestones for | roadmap for] X
 - Create [schedule | timeline] for X
 
 Recommend And Advise
+
 - Recommend [media type] [on | similar to] [topic]
 - Recommend [gift ideas | thing] for [entity | occasion]
 - Recommend improvements
@@ -218,15 +233,17 @@ Recommend And Advise
 - Give feedback on idea for X
 
 Analyze And Compare
+
 - Extract [themes | keywords | info] about X
 - Identify [similarities | differences] between X and Y
 - Analyse the [sentiment | tone] of X
 - Identify gaps in X
 - Evaluate [strengths and weaknesses | pros and cons] of X
-- Is X [comparison operator] Y? ***(Can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?)***
+- Is X [comparison operator] Y? **_(Can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?)_**
 - Reverse engineer X
 
 Translate And Convert
+
 - Translate [human language A] into [human language B]
 - Translate [programming language A] into [programming language B]
 - Translate into emojis
@@ -234,25 +251,30 @@ Translate And Convert
 - Reformat as [output format]
 
 Filter And Choose
+
 - Filter X where [condition]
 - Exclude X where [condition]
 - Choose best from [options]
 - Choose [top | lowest | first | last | random] [quantity] from [options]
 
 Real-Time Lookup And Verify
+
 - Get up-to-date [facts | news | data] on X
 - Is this true?
 - Find [sources | references | citations] for X
 
 Engagement And Trivia
+
 - Give questions about X
 
 Chat Memory
+
 - What did you mean by X?
 - What was said earlier about X?
 - Use earlier context to do X
 
 #### Conditional Clauses
+
 - [Verb] [item number]
 - [Verb] the [first | last | random] [quantity] of X
 - [Verb] the [first | last | random] [quantity] of X where [condition]
@@ -260,6 +282,7 @@ Chat Memory
 - [Verb] X where not [condition]
 
 #### Database CRUD Operations
+
 Create
 
 - [Write content about X|suggest ideas about X|suggest titles about X]
@@ -375,6 +398,7 @@ Presentation
 - Check list
 
 Code
+
 - Code
 
 Process
