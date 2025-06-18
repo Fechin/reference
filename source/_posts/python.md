@@ -980,6 +980,59 @@ for key, value in johndict.items():
 # Output: age : : 30
 ````
 
+
+## Python Comprehensions
+
+### Comprehension List {.col-span-2}
+
+```python
+languages = ["html", "go", "rust", "javascript", "python"]
+
+newlist = [x for x in languages if "l" not in x]
+# add language for language in languages if "l" not in language
+
+print(newlist) #Output : [ 'go', 'rust', 'javascript', 'python']
+
+# List comprehension avoid this : 
+oldlist = []
+for x in languages:
+    if  "l" not in x:
+        oldlist.append(x)
+print(oldlist) #Output :  [ 'go', 'rust', 'javascript', 'python']
+
+
+```
+
+### Comprehension Dictionary {.col-span-2}
+
+```python
+languages = ["html", "go", "rust", "javascript", "python"]
+
+language_dict = {lang: ('l' not in lang) for lang in languages}
+# Key is the language & bool is Value (no offense for html..)
+
+print(language_dict)
+# Output: {'html': False, 'go': True, 'rust': True,
+#          'javascript': True, 'python': True}
+
+
+# Dictionary comprehension avoid this : 
+
+language_dict2 = {}
+    
+for e in languages:
+    if "l" not in e:
+        language_dict2[e] = True
+    else:
+        language_dict2[e] = False
+
+print(language_dict2)
+# Output: {'html': False, 'go': True, 'rust': True,
+#          'javascript': True, 'python': True}
+```
+
+
+
 ## Python Functions
 
 ### Basic
@@ -1052,7 +1105,28 @@ add(5, 20)  # => 25
 # => 5
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
 ```
+### @decorator {.col-span-2}
 
+```python
+# Modify or extend behavior of function or class method,
+# without changing their actual code.
+
+# Define decorator that will wrap function or method
+def handle_errors(func):
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            return print(f"Error :  {e}")
+    return wrapper
+
+# Decorate function or method 
+@handle_errors
+def divide(a, b):
+    return a / b
+
+divide(10, 0) # Output : Error : division by zero
+```
 ## Python Modules
 
 ### Import modules
