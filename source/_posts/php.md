@@ -985,6 +985,93 @@ $currentStatus = Status::Approved;
 echo getStatusMessage($currentStatus); // Output : Your request has been approved.
 ```
 
+## Date & Time Handling 
+
+### Current date and time
+```php
+// DateTime in PHP handles both date and time
+
+<?php
+$now = new DateTime();
+echo $now->format('Y-m-d H:i:s.u'); 
+
+// Output ex: 2024-04-27 14:35:22.123456
+```
+
+
+### Creating specific date/time objects
+```php
+<?php
+// Create a date object
+$d = new DateTime('2024-04-27');
+echo $d->format('Y-m-d'); 
+
+// Output : 2024-04-27
+
+// Create a time object 
+$t = new DateTime('15:30:45');
+echo $t->format('H:i:s'); 
+
+// Output : 15:30:45
+
+// Create a datetime object
+$dt = new DateTime('2024-04-27 15:30:45');
+echo $dt->format('Y-m-d H:i:s'); 
+
+// Output :  2024-04-27 15:30:45
+```
+
+### Converting between date formats
+```php
+<?php
+// Convert a string to a DateTime object
+$date_str = "2024-04-27 14:00";
+$dt_obj = new DateTime($date_str);
+echo $dt_obj->format('Y-m-d H:i:s'); 
+
+// Output : 2024-04-27 14:00:0027
+
+// Convert a DateTime object to a string
+$formatted_str = $dt_obj->format('d/m/Y H:i');
+echo $formatted_str;
+ 
+// Output :  27/04/2024 14:00
+```
+### Timestamps and Unix time {.col-span-2}
+```php
+<?php
+// Get current timestamp
+$timestamp = time();
+echo $timestamp; 
+
+// Output ex:  1750253583
+
+// Convert timestamp back to DateTime
+$dt_from_timestamp = (new DateTime())->setTimestamp($timestamp);
+echo $dt_from_timestamp->format('Y-m-d H:i:s');
+
+// Output ex : 2025-06-18 13:33:03
+```
+
+
+### Date difference and timedelta {.col-span-1}
+```php
+<?php
+$date1 = new DateTime('2024-04-27');
+$date2 = new DateTime('2024-05-01');
+
+$interval = $date1->diff($date2);
+echo $interval->days; 
+
+// Output : 4
+
+// Using DateInterval for date arithmetic
+$new_date = clone $date1;
+$new_date->add(new DateInterval('P10D'));
+echo $new_date->format('Y-m-d'); 
+
+// Output : 2024-05-07
+```
 
 ## Miscellaneous
 
