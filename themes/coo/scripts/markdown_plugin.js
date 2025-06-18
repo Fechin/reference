@@ -1,6 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+// Create a safe highlight.js wrapper
+const hljs = require('highlight.js');
+
+// Create a custom highlight function
+const customHighlight = function (str, lang) {
+  if (lang && hljs.getLanguage(lang)) {
+    try {
+      return hljs.highlight(str, { language: lang, ignoreIllegals: true }).value;
+    } catch (err) {
+      console.warn(`Highlight.js error for language "${lang}":`, err.message);
+    }
+  }
+  // If the language is not supported, return an empty string, let markdown-it use the default processor
+  return '';
+};
+
 hexo.extend.filter.register('markdown-it:renderer', (md) => {
   md.use(require('markdown-it-abbr'), {});
   md.use(require('markdown-it-footnote'), {});
@@ -9,14 +25,18 @@ hexo.extend.filter.register('markdown-it:renderer', (md) => {
   md.use(require('markdown-it-sup'), {});
   md.use(require('markdown-it-task-lists'), {});
   md.use(require('markdown-it-emoji'), {});
-  md.use(require('markdown-it-attrs'), {});
-  md.use(require('markdown-it-highlightjs'), {});
-  md.use(require('markdown-it-checkbox'), {});
   md.use(require('markdown-it-multimd-table'), {
     multiline: false,
     rowspan: true,
     headerless: false
   });
+  md.use(require('markdown-it-attrs'), {});
+  md.use(require('markdown-it-highlightjs'), {
+    hljs: {
+      highlight: customHighlight
+    }
+  });
+  md.use(require('markdown-it-checkbox'), {});
   md.use(require('markdown-it-shortcode-tag'), {
     widget: {
       render(attrs, _env) {

@@ -41,9 +41,6 @@ importers:
       hexo-browsersync:
         specifier: ^0.3.0
         version: 0.3.0
-      hexo-cli:
-        specifier: ^4.3.0
-        version: 4.3.2
       hexo-excerpt:
         specifier: ^1.2.1
         version: 1.3.1
@@ -99,13 +96,13 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       markdown-it-highlightjs:
-        specifier: ^3.5.0
-        version: 3.6.0
+        specifier: ^4.2.0
+        version: 4.2.0
       markdown-it-ins:
         specifier: ^3.0.1
         version: 3.0.1
       markdown-it-multimd-table:
-        specifier: ^4.1.1
+        specifier: ^4.2.3
         version: 4.2.3
       markdown-it-shortcode-tag:
         specifier: ^1.1.0
@@ -2955,9 +2952,6 @@ packages:
   lodash.escape@3.2.0:
     resolution: {integrity: sha512-n1PZMXgaaDWZDSvuNZ/8XOcYO2hOKDqZel5adtR30VKQAtoWs/5AOeFA0vPV8moiPzlqe7F4cP2tzpFewQyelQ==}
 
-  lodash.flow@3.5.0:
-    resolution: {integrity: sha512-ff3BX/tSioo+XojX4MOsOMhJw0nZoUEF011LX8g8d3gvjVbxd89cCio4BCXronjxcTUIJUoqKEUA+n4CqvvRPw==}
-
   lodash.isarguments@3.1.0:
     resolution: {integrity: sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==}
 
@@ -3118,8 +3112,8 @@ packages:
   markdown-it-highlight-lines@1.0.2:
     resolution: {integrity: sha512-9Pyt/B+Ca3QBSXDS/znmojy/k6HDe8FJlJwIj/BKgvxE3MQWK9GHQCJJT5Lb1er23svZT99kJ/YRhLpDK+5GUQ==}
 
-  markdown-it-highlightjs@3.6.0:
-    resolution: {integrity: sha512-ex+Lq3cVkprh0GpGwFyc53A/rqY6GGzopPCG1xMsf8Ya3XtGC8Uw9tChN1rWbpyDae7tBBhVHVcMM29h4Btamw==}
+  markdown-it-highlightjs@4.2.0:
+    resolution: {integrity: sha512-NC7pXE8KkOl6xWJVRNt8p6wgJVznXKsE0HgYGdk6DD2tn1l4L9f0ALf3VIoGVkotNU1uGQatSxfBF1zZPUMmuQ==}
 
   markdown-it-ins@3.0.1:
     resolution: {integrity: sha512-32SSfZqSzqyAmmQ4SHvhxbFqSzPDqsZgMHDwxqPzp+v+t8RsmqsBZRG+RfRQskJko9PfKC2/oxyOs4Yg/CfiRw==}
@@ -8321,8 +8315,6 @@ snapshots:
     dependencies:
       lodash._root: 3.0.1
 
-  lodash.flow@3.5.0: {}
-
   lodash.isarguments@3.1.0: {}
 
   lodash.isarray@3.0.4: {}
@@ -8483,10 +8475,9 @@ snapshots:
 
   markdown-it-highlight-lines@1.0.2: {}
 
-  markdown-it-highlightjs@3.6.0:
+  markdown-it-highlightjs@4.2.0:
     dependencies:
       highlight.js: 11.11.1
-      lodash.flow: 3.5.0
 
   markdown-it-ins@3.0.1: {}
 
