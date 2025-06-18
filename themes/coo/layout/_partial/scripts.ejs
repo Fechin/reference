@@ -389,3 +389,83 @@
         });
     </script>
 <% } %>
+
+<!-- PWA Service Worker Registration -->
+<script>
+// Register Service Worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered successfully:', registration.scope);
+
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available, show update notification
+                showUpdateNotification();
+              }
+            });
+          }
+        });
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+
+// Show update notification
+function showUpdateNotification() {
+  // Create a simple notification banner
+  const notification = document.createElement('div');
+  notification.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #10b981;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      z-index: 9999;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    ">
+      <span>New content is available! </span>
+      <button onclick="window.location.reload()" style="
+        background: rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-left: 8px;
+        cursor: pointer;
+      ">Refresh</button>
+      <button onclick="this.parentElement.parentElement.remove()" style="
+        background: transparent;
+        border: none;
+        color: white;
+        padding: 4px 8px;
+        margin-left: 8px;
+        cursor: pointer;
+        font-size: 18px;
+      ">&times;</button>
+    </div>
+  `;
+  document.body.appendChild(notification);
+}
+
+
+// Hide install button when app is installed
+window.addEventListener('appinstalled', () => {
+  const installBtn = document.getElementById('pwa-install-btn');
+  if (installBtn) {
+    installBtn.remove();
+  }
+  console.log('PWA was installed');
+});
+</script>
