@@ -449,7 +449,7 @@ case input
 # Check for an integer, 19
 when 19
   puts "It's 19"
-  # 检查一个确切的字符串，“Zaman”
+  # Check for an exact string，“Zaman”
 when "Zaman"
   puts "Hi Zaman"
 when 7..11
