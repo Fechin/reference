@@ -100,15 +100,13 @@ $ tmux show-options -g
 | `q`          | Quit copy mode             |
 | `Ctrl+b` `]` | Paste contents of buffer_0 |
 
--------------
-For tmux version 3.5a on MacOS 15.3.1 Sequoia 'Copy Mode' functions lil bit differently
-Below I've written the differences
-| Command            | Description                |
-| ------------       | -------------------------- |
-| `Ctrl + <Space>`   | Start selection            |
-| `Ctrl + w`         | Copy selection             |
+---
 
--------------
+For tmux version 3.5a on MacOS 15.3.1 Sequoia 'Copy Mode' functions lil bit differently Below I've written the
+differences | Command | Description | | ------------ | -------------------------- | | `Ctrl + <Space>` | Start selection
+| | `Ctrl + w` | Copy selection |
+
+---
 
 {.shortcuts}
 

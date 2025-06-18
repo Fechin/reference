@@ -7,8 +7,7 @@ tags:
   - reference
 categories:
   - Other
-intro:
-  This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.
+intro: This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.
 plugins:
   - copyCode
 ---

@@ -2,20 +2,21 @@
 title: GnuPG
 categories:
   - Linux Command
-intro:
-  A cheatsheet for GnuPG, the encryption and signing software.
+intro: A cheatsheet for GnuPG, the encryption and signing software.
 ---
+
 ## Getting Started
 
 ### Software
 
 Gpg4win and the GPG Suite have OS-specific features.
 
-* [GnuPG](https://gnupg.org/)
-* [Gpg4win](https://www.gpg4win.org/) (Windows)
-* [GPG Suite](https://gpgtools.org/) (macOS)
+- [GnuPG](https://gnupg.org/)
+- [Gpg4win](https://www.gpg4win.org/) (Windows)
+- [GPG Suite](https://gpgtools.org/) (macOS)
 
-Sometimes GPG keys are referred as PGP keys. They're interchangeable, as they follow the [OpenPGP Standard](https://www.rfc-editor.org/rfc/rfc9580.html).
+Sometimes GPG keys are referred as PGP keys. They're interchangeable, as they follow the
+[OpenPGP Standard](https://www.rfc-editor.org/rfc/rfc9580.html).
 
 ### Create a key-pair
 
@@ -210,8 +211,8 @@ $ gpg --export --armor <ID>
 
 ### PowerShell Commands
 
-When you do a full restart, the GPG agent might not automatically start. Add
-the GnuPG's IPC tool to Startup Apps using PowerShell:
+When you do a full restart, the GPG agent might not automatically start. Add the GnuPG's IPC tool to Startup Apps using
+PowerShell:
 
 ```shell script
 $ $shell = New-Object -ComObject WScript.Shell

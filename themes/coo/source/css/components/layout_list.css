@@ -3,6 +3,7 @@
   padding-left: 26px;
   position: relative;
   border-bottom: solid 1px #ececec94;
+
   @apply dark:border-slate-700/50;
 }
 
@@ -12,12 +13,12 @@
 }
 
 .mdLayout .h3-wrap > .section ul:not(.marker-none, .collapsible, .marker-timeline) > li::before {
-  content: "";
+  content: '';
   position: absolute;
   display: inline-block;
   width: 5px;
   height: 5px;
-  background: #556677;
+  background: #567;
   border-radius: 50%;
   left: 14px;
   top: 18px;
@@ -28,8 +29,9 @@
 }
 
 .mdLayout .h3-wrap > .section ul.marker-round > li::before {
-  content: "";
+  content: '';
   top: 16px;
+
   @apply inline-block h-2 w-2 rounded-full border border-2 border-emerald-600 bg-white;
 }
 
@@ -45,15 +47,16 @@
   cursor: pointer;
 }
 
-.mdLayout .h3-wrap > .section > ul.collapsible > li > strong.arrow-down:before {
-  content: "▼"; /*▼*/
+.mdLayout .h3-wrap > .section > ul.collapsible > li > strong.arrow-down::before {
+  content: '▼'; /* ▼ */
 }
 
-.mdLayout .h3-wrap > .section > ul.collapsible > li > strong:before {
-  content: "▶"; /*▼*/
+.mdLayout .h3-wrap > .section > ul.collapsible > li > strong::before {
+  content: '▶'; /* ▼ */
   position: absolute;
   left: 10px;
   font-size: 0.825em;
+
   @apply text-emerald-500;
 }
 
@@ -70,11 +73,13 @@
   padding-left: 22px;
   margin-left: 30px;
   border-bottom: 0;
+
   @apply text-slate-900 dark:border-slate-600 dark:text-slate-50;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child {
   padding-bottom: 0.8rem;
+  border-image: linear-gradient(to bottom, #48c78e, rgb(0 0 0 / 0%)) 1 100%;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li > pre {
@@ -87,6 +92,7 @@
   content: counter(stepCount);
   left: -14px;
   border: 2px solid #48c78e;
+
   @apply absolute top-0 h-6 w-6 rounded-full bg-white text-center text-sm;
   @apply dark:border-slate-600 dark:bg-slate-800;
 }
@@ -96,14 +102,11 @@
   color: white;
 }
 
-.mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child {
-  border-image: linear-gradient(to bottom, #48c78e, rgba(0, 0, 0, 0)) 1 100%;
-}
-
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li > h4 {
   color: #2a2839;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 500;
+
   @apply dark:text-slate-300;
 }
 

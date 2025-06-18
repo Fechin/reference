@@ -213,12 +213,12 @@ Begins with `[` and ends with `]`
 
 ```javascript
 let myObject = {
-  name: "Jason",
-  last: "Doe",
+  name: 'Jason',
+  last: 'Doe',
   age: 39,
-  gender: "M",
+  gender: 'M',
   salary: 70000,
-  married: true,
+  married: true
 };
 ```
 
@@ -242,10 +242,10 @@ let myObject = {
     age: 2,
     gender: 3,
     salary: 4,
-    married: 5,
+    married: 5
   },
-  jdoe: ["Jason", "Doe", 39, "M", 70000, true],
-  jsmith: ["Tom", "Smith", 42, "F", 80000, true],
+  jdoe: ['Jason', 'Doe', 39, 'M', 70000, true],
+  jsmith: ['Tom', 'Smith', 42, 'F', 80000, true]
 };
 ```
 
@@ -264,29 +264,29 @@ let myObject = {
 ```javascript
 let myArray = [
   {
-    name: "Jason",
-    last: "Doe",
+    name: 'Jason',
+    last: 'Doe',
     age: 39,
-    gender: "M",
+    gender: 'M',
     salary: 70000,
-    married: true,
+    married: true
   },
   {
-    name: "Tom",
-    last: "Smith",
+    name: 'Tom',
+    last: 'Smith',
     age: 42,
-    gender: "F",
+    gender: 'F',
     salary: 80000,
-    married: true,
+    married: true
   },
   {
-    name: "Amy",
-    last: "Burnquist",
+    name: 'Amy',
+    last: 'Burnquist',
     age: 29,
-    gender: "F",
+    gender: 'F',
     salary: 60000,
-    married: false,
-  },
+    married: false
+  }
 ];
 ```
 
@@ -303,7 +303,7 @@ let myArray = [
 ### Access Array
 
 ```javascript
-let myArray = ["Jason", "Doe", 39, "M", 70000, true];
+let myArray = ['Jason', 'Doe', 39, 'M', 70000, true];
 ```
 
 ---

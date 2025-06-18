@@ -1,0 +1,13 @@
+node_modules/
+public/
+themes/coo/source/js/fuse_6.4.6.js
+themes/coo/scripts/
+*.min.js
+gulpfile.js
+.eslintrc.js
+.prettierrc.js
+.stylelintrc.js
+.commitlintrc.js
+.lintstagedrc.js
+postcss.config.js
+tailwind.config.js

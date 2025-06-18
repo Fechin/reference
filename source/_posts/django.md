@@ -255,8 +255,10 @@ class Customer(models.Model)
 
 #### To access the ChoiceField value in the template, we need to do the following in the template:
 
-- In Django templates you can use the "`get_FOO_display()`" method, that will return the readable alias for the field, where `'FOO'` is the name of the field.
-- If the choices are stored in the variable `CHOICES` and the model field storing the selected choice is `'type'` then you can directly use
+- In Django templates you can use the "`get_FOO_display()`" method, that will return the readable alias for the field,
+  where `'FOO'` is the name of the field.
+- If the choices are stored in the variable `CHOICES` and the model field storing the selected choice is `'type'` then
+  you can directly use
 
 ```html
 <!-- Here, X is the model instance -->
@@ -891,9 +893,8 @@ class ArticleForm(ModelForm):
 
 ```html
 <form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">{% trans 'Submit' %}</button>
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">{% trans 'Submit' %}</button>
 </form>
 ```
 
@@ -955,7 +956,8 @@ messages.error(request, 'Login error')
 
 ```html
 <!-- Display flash messages in template -->
-{% if messages %} {% for message in messages %} {% message %} {% message.tags %} {% endfor %} {% endif %}
+{% if messages %} {% for message in messages %} {% message %} {% message.tags %}
+{% endfor %} {% endif %}
 ```
 
 ## User Model
@@ -1086,7 +1088,8 @@ urlpatterns += path('', include('django.contrib.auth.urls'))
 <a href="{% url 'logout' %}">Logout</a>
 
 <!-- Check if user login -->
-{% if request.user.is_authenticated %} Logged in as: {{ request.user.username }} {% endif %}
+{% if request.user.is_authenticated %} Logged in as: {{ request.user.username }}
+{% endif %}
 ```
 
 #### Authorization: LoginRequiredMixin and login_required

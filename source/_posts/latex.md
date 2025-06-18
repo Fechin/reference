@@ -909,7 +909,6 @@ x = \begin{cases}
 \end{itemize}
 ```
 
-
 ### Ordered List
 
 <!--rehype:style=flex:1;-->

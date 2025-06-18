@@ -34,11 +34,11 @@ plugins:
 - Entry file `index.js` add code:
 
   ```js
-  const express = require("express");
+  const express = require('express');
   const app = express();
   const port = 3000;
-  app.get("/", (req, res) => {
-    res.send("Hello World!");
+  app.get('/', (req, res) => {
+    res.send('Hello World!');
   });
   app.listen(port, () => {
     console.log(`Listening port on ${port}`);
@@ -103,7 +103,7 @@ $ DEBUG=myapp:*npm start
 ### Application
 
 ```js
-var express = require("express");
+var express = require('express');
 var app = express();
 
 console.dir(app.locals.title);
@@ -192,9 +192,9 @@ console.dir(app.locals.email);
 ### Response
 
 ```js
-app.get("/", function (req, res) {
+app.get('/', function (req, res) {
   console.dir(res.headersSent); //false
-  res.send("OK");
+  res.send('OK');
   console.dir(res.headersSent); //true
 });
 ```
@@ -250,7 +250,7 @@ will handle any request ending in `/events`
 
 ```js
 //depends on where the router "use()"
-router.get("/events", (req, res, next) => {
+router.get('/events', (req, res, next) => {
   //..
 });
 ```
@@ -260,8 +260,8 @@ router.get("/events", (req, res, next) => {
 The `res` object represents the HTTP response sent by the `Express` application when it receives an HTTP request
 
 ```js
-app.get("/user/:id", (req, res) => {
-  res.send("user" + req.params.id);
+app.get('/user/:id', (req, res) => {
+  res.send('user' + req.params.id);
 });
 ```
 
@@ -271,8 +271,8 @@ A `req` object represents an `HTTP` request and has properties for the request q
 headers, etc.
 
 ```js
-app.get("/user/:id", (req, res) => {
-  res.send("user" + req.params.id);
+app.get('/user/:id', (req, res) => {
+  res.send('user' + req.params.id);
 });
 ```
 
@@ -290,15 +290,15 @@ End the response process. This method actually comes from the Node core, specifi
 
 ```js
 res.json(null);
-res.json({ user: "tobi" });
-res.status(500).json({ error: "message" });
+res.json({ user: 'tobi' });
+res.status(500).json({ error: 'message' });
 ```
 
 ### app.all
 
 ```js
-app.all("/secret", function (req, res, next) {
-  console.log("access secret section...");
+app.all('/secret', function (req, res, next) {
+  console.log('access secret section...');
   next(); // Pass control to the next handler
 });
 ```
@@ -306,43 +306,43 @@ app.all("/secret", function (req, res, next) {
 ### app.delete
 
 ```js
-app.delete("/", function (req, res) {
-  res.send("DELETE request to homepage");
+app.delete('/', function (req, res) {
+  res.send('DELETE request to homepage');
 });
 ```
 
 ### app.disable(name)
 
 ```js
-app.disable("trust proxy");
-app.get("trust proxy");
+app.disable('trust proxy');
+app.get('trust proxy');
 // => false
 ```
 
 ### app.disabled(name)
 
 ```js
-app.disabled("trust proxy");
+app.disabled('trust proxy');
 // => true
 
-app.enable("trust proxy");
-app.disabled("trust proxy");
+app.enable('trust proxy');
+app.disabled('trust proxy');
 // => false
 ```
 
 ### app.engine(ext, callback)
 
 ```js
-var engines = require("consolidate");
+var engines = require('consolidate');
 
-app.engine("haml", engines.haml);
-app.engine("html", engines.hogan);
+app.engine('haml', engines.haml);
+app.engine('html', engines.hogan);
 ```
 
 ### app.listen([port[, host[, backlog]]][, callback])
 
 ```js
-var express = require("express");
+var express = require('express');
 
 var app = express();
 app.listen(3000);
@@ -351,24 +351,24 @@ app.listen(3000);
 ### Routing
 
 ```js
-const express = require("express");
+const express = require('express');
 const app = express();
 
 //Respond to "hello world" when making a GET request to the homepage
-app.get("/", (req, res) => {
-  res.send("hello world");
+app.get('/', (req, res) => {
+  res.send('hello world');
 });
 ```
 
 ```js
 // GET method routing
-app.get("/", (req, res) => {
-  res.send("GET request to the homepage");
+app.get('/', (req, res) => {
+  res.send('GET request to the homepage');
 });
 
 // POST method routing
-app.post("/", (req, res) => {
-  res.send("POST request to the homepage");
+app.post('/', (req, res) => {
+  res.send('POST request to the homepage');
 });
 ```
 
@@ -376,26 +376,26 @@ app.post("/", (req, res) => {
 
 ```js
 function logOriginalUrl(req, res, next) {
-  console.log("ReqURL:", req.originalUrl);
+  console.log('ReqURL:', req.originalUrl);
   next();
 }
 
 function logMethod(req, res, next) {
-  console.log("Request Type:", req.method);
+  console.log('Request Type:', req.method);
   next();
 }
 
 const log = [logOriginalUrl, logMethod];
 
-app.get("/user/:id", log, (req, res, next) => {
-  res.send("User Info");
+app.get('/user/:id', log, (req, res, next) => {
+  res.send('User Info');
 });
 ```
 
 ### Using templates
 
 ```js
-app.set("view engine", "pug");
+app.set('view engine', 'pug');
 ```
 
 Create a `Pug` template file named `index.pug` in the `views` directory with the following content
@@ -412,10 +412,10 @@ Create a route to render the `index.pug` file. If the view engine property is no
 must be specified
 
 ```js
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Hey",
-    message: "Hello there!",
+app.get('/', (req, res) => {
+  res.render('index', {
+    title: 'Hey',
+    message: 'Hello there!'
   });
 });
 ```

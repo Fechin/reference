@@ -1,5 +1,6 @@
 .note-content ul > li {
   @apply py-2.5 md:px-2.5;
+
   position: relative;
 }
 
@@ -11,23 +12,16 @@
   color: #34495e;
   font-display: swap;
   font-size: 18px;
-  font-family:
-    source sans pro,
-    open sans,
-    helvetica neue,
-    Arial,
-    sans-serif;
+  font-family: 'source sans pro', 'open sans', 'helvetica neue', Arial, sans-serif;
   line-height: 1.8;
-  /*@apply dark:text-slate-300;*/
+  min-height: 100%;
+  overflow-wrap: break-word;
+
+  /* @apply dark:text-slate-300; */
 }
 
 .note-width {
   max-width: 46rem;
-}
-
-.note-content {
-  min-height: 100%;
-  overflow-wrap: break-word;
 }
 
 .note-content ul,
@@ -38,9 +32,6 @@
 .note-content p {
   margin: 4px 0;
   hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
 }
 
 .node-item pre,
@@ -67,13 +58,13 @@
 .note-content h2 {
   font-weight: 500;
   font-size: 1.5rem;
-  margin: 24px 0 2px 0;
+  margin: 24px 0 2px;
 }
 
 .note-content h3 {
   font-weight: 400;
   font-size: 1.3rem;
-  margin: 24px 0 2px 0;
+  margin: 24px 0 2px;
 }
 
 .note-content img,
@@ -113,9 +104,9 @@
   color: #a3a3a3;
 }
 
-.note-content blockquote footer cite:before {
+.note-content blockquote footer cite::before {
   padding: 0 0.5em;
-  content: "â€”";
+  content: 'â€”';
 }
 
 .note-content .h-anchor {
@@ -124,6 +115,7 @@
 
 .note-content ul.popular-posts > li {
   @apply py-2.5;
+
   position: relative;
   border-bottom: solid 1px #ececec94;
 }
@@ -143,10 +135,10 @@
   float: left;
   font-size: 12px;
   margin-right: 10px;
-  background: rgba(102, 128, 153, 0.075);
+  background: rgb(102 128 153 / 7.5%);
   border-radius: 4px;
   padding: 2px 5px;
-  color: rgba(44, 63, 81, 0.5);
+  color: rgb(44 63 81 / 50%);
 }
 
 .post-tags-list-link {

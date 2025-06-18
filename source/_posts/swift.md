@@ -1571,11 +1571,13 @@ enum ShirtSize: String {
 
 ### What are extensions?
 
-Extensions is a way to add new add new functionality to existing classes, structures, enumerations, or protocol types. This includes adding new methods, properties, initializers, and more.
+Extensions is a way to add new add new functionality to existing classes, structures, enumerations, or protocol types.
+This includes adding new methods, properties, initializers, and more.
 
 ### Why use extensions?
 
-Extensions are particularly useful for organizing and modularizing our code without needing to modify the original type, especially when we don't have access to the original source code.
+Extensions are particularly useful for organizing and modularizing our code without needing to modify the original type,
+especially when we don't have access to the original source code.
 
 ### Extension syntax
 
@@ -1657,7 +1659,8 @@ print("Swift"[4]) // Output: t
 
 ### Protocol extensions {.row-span-2}
 
-It works pretty much like abstract classes when regarding a functionality we want to be available in all the classes that implements some protocol (without having to inherit from a base common class).
+It works pretty much like abstract classes when regarding a functionality we want to be available in all the classes
+that implements some protocol (without having to inherit from a base common class).
 
 ```swift
 // Define a protocol
@@ -1701,7 +1704,8 @@ print(employee.describe()) // Output: This is a generic description
 
 ### Constraints for extensions
 
-This is especially useful when we want to add functionality to a type that conforms to a specific protocol or has certain conditions.
+This is especially useful when we want to add functionality to a type that conforms to a specific protocol or has
+certain conditions.
 
 ```swift
 extension Array where Element: Numeric {
@@ -1723,7 +1727,8 @@ print(doubles.sum()) // Output: 7.5
 
 ### Organizing code with extensions
 
-Extensions are not limited to adding functionality; they are also handy for code organization. We can group related methods, properties or views in separate extensions.
+Extensions are not limited to adding functionality; they are also handy for code organization. We can group related
+methods, properties or views in separate extensions.
 
 ```swift
 import SwiftUI
@@ -1752,11 +1757,13 @@ extension HomeView {
 
 ### What are generics?
 
-Generics in Swift are a feature that allows us to create functions, classes, structures, and protocols that can work with any data type.
+Generics in Swift are a feature that allows us to create functions, classes, structures, and protocols that can work
+with any data type.
 
 ### Why use generics?
 
-Generics enable us to write clear and concise code that works with any data type. By using placeholders (like `T`), this reduces the risk of introducing bugs.
+Generics enable us to write clear and concise code that works with any data type. By using placeholders (like `T`), this
+reduces the risk of introducing bugs.
 
 ### Type parameters {.row-span-2}
 
@@ -1831,7 +1838,9 @@ protocol Foo {
 }
 ```
 
-Associated types are used in protocols to define a placeholder for a type that will be specified later. They act as a generic placeholder. The exact type isn't defined in the protocol itself; instead, it's determined when a class, struct, or enum conforms to the protocol.
+Associated types are used in protocols to define a placeholder for a type that will be specified later. They act as a
+generic placeholder. The exact type isn't defined in the protocol itself; instead, it's determined when a class, struct,
+or enum conforms to the protocol.
 
 ### Generic Protocols {.row-span-2}
 

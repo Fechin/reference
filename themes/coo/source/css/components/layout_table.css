@@ -3,12 +3,14 @@
 }
 
 .mdLayout .section > table:last-child::after {
-  content: "";
+  content: '';
+
   @apply block h-2;
 }
 
 .mdLayout table tr + tr {
   border-top: solid 1px #ececec94;
+
   @apply dark:border-slate-700/50;
 }
 
@@ -52,7 +54,7 @@
 .mdLayout table td:first-child > code ~ em {
   font-size: 11px;
   font-style: normal;
-  color: #556677;
+  color: #567;
 }
 
 .mdLayout table thead {
@@ -67,28 +69,24 @@
 .mdLayout ul.shortcuts > li > code,
 kbd {
   letter-spacing: 0.075rem;
-  /*margin: 0px 0.1em;*/
+
+  /* margin: 0px 0.1em; */
   padding: 0.1em 0.54em;
-  border: 1px solid rgb(204, 204, 204);
+  border: 1px solid rgb(204 204 204);
   line-height: 1.6;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   display: inline-block;
+  background-color: rgb(247 247 247);
   box-shadow:
-    0px 1px 0px rgb(0 0 0 / 20%),
-    inset 0px 0px 0px 2px #ffffff;
-  background-color: rgb(247, 247, 247);
-  -moz-box-shadow:
-    0 1px 0px rgba(0, 0, 0, 0.2),
-    0 0 0 2px #ffffff inset;
-  -webkit-box-shadow:
-    0 1px 0px rgb(0 0 0 / 20%),
-    0 0 0 2px #ffffff inset;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  /*text-shadow: 0 1px 0 #fff;*/
+    0 1px 0 rgb(0 0 0 / 20%),
+    0 0 0 2px #fff inset;
+  border-radius: 3px;
+
+  /* text-shadow: 0 1px 0 #fff; */
   color: #303835;
-  @apply dark:border-slate-700 dark:bg-slate-700/50  dark:text-slate-300 dark:shadow-none dark:shadow-slate-500;
+
+  @apply dark:border-slate-700 dark:bg-slate-700/50 dark:text-slate-300 dark:shadow-none dark:shadow-slate-500;
 }
 
 .mdLayout table.left-text tr th,
@@ -105,7 +103,7 @@ kbd {
 
 .mdLayout table.show-header thead {
   display: table-header-group;
-  border-bottom: solid 1px rgba(85, 102, 119, 0.3);
+  border-bottom: solid 1px rgb(85 102 119 / 30%);
 }
 
 .mdLayout table.bold-first tr > td:first-child {
@@ -123,6 +121,7 @@ kbd {
 
 .mdLayout table td em {
   opacity: 0.6;
+
   @apply dark:opacity-90;
 }
 
@@ -138,11 +137,11 @@ kbd {
 }
 
 .mdLayout table.style-list-arrow td:first-child::before,
-ul.style-arrow li:before {
-  content: "";
+ul.style-arrow li::before {
+  content: '';
   display: inline-block;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-right: 6px solid transparent;
   border-top: 5px solid transparent;
   border-left: 6px solid #228e6c;
