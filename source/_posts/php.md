@@ -955,6 +955,37 @@ $user->createUser(); // Output ex: | 2025-06-18 14:06:09 | User created.
 $product = new Product();
 $product->createProduct(); // Output ex: | 2025-06-18 14:06:09 | Product created.
 ```
+
+## PHP Enums (PHP 8.1)
+
+### Enum Declaration & Use case {.col-span-3}
+
+```php
+<?php
+// enum is a data type that allows you to define a set of named constants,
+// representing a fixed group of related values
+
+enum Status {
+    case Pending;
+    case Approved;
+    case Rejected;
+}
+
+// Use case
+
+function getStatusMessage(Status $status): string {
+    return match($status) {
+        Status::Pending => "Waiting for approval.",
+        Status::Approved => "Your request has been approved.",
+        Status::Rejected => "Your request has been rejected.",
+    };
+}
+
+$currentStatus = Status::Approved;
+echo getStatusMessage($currentStatus); // Output : Your request has been approved.
+```
+
+
 ## Miscellaneous
 
 ### Basic error handling
