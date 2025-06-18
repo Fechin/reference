@@ -985,7 +985,7 @@ $currentStatus = Status::Approved;
 echo getStatusMessage($currentStatus); // Output : Your request has been approved.
 ```
 
-## Date & Time Handling 
+## PHP Date & Time Handling 
 
 ### Current date and time
 ```php
@@ -1161,6 +1161,25 @@ See: [Regex in PHP](/regex#regex-in-php)
 | `w+` | Read and write, truncate |
 | `a`  | Write, append            |
 | `a+` | Read and write, append   |
+
+### Super Global Variables {.col-span-2}
+
+| Variable     | Description                                                  |
+|--------------|:-------------------------------------------------------------|
+| `$_SERVER`   | Holds information about headers, paths, and script locations |
+| `$_GET`      | Contains data sent via URL parameters (query string)         |
+| `$_POST`     | Contains data sent via HTTP POST method                      |
+| `$_FILES`    | Contains information about uploaded files                    |
+| `$_COOKIE`   | Contains cookie data                                         |
+| `$_SESSION`  | Stores session variables                                     |
+| `$_REQUEST`  | Contains data from `$_GET`, `$_POST`, and `$_COOKIE`         |
+| `$_ENV`      | Contains environment variables                               |
+| `$GLOBALS`   | References all global variables available in the script      |
+
+{.left-text}
+
+Super Global Variables are built-in variables always available in all scopes.
+
 
 ### Runtime defined Constants
 
