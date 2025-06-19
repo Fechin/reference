@@ -1,5 +1,5 @@
 ---
-title: NetworkPort
+title: NetworkPorts
 date: 2025-06-19 15:00:00
 background: bg-[#71d1f9]
 tags:
@@ -7,7 +7,7 @@ tags:
 categories:
   - Other
 intro: |
-  A network port cheat sheet with non-exhaustive list of ports used according to their field of application.
+  A network ports cheat sheet with non-exhaustive list of ports used according to their field of application.
 plugins:
 ---
 
