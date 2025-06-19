@@ -58,6 +58,185 @@ const Utils = (function () {
   };
 })();
 
+// Simple Timeline TOC - Direct Implementation
+(function () {
+  function initTOC() {
+    const tocContainer = document.getElementById('toc-container');
+    const tocList = document.getElementById('toc-list');
+
+    if (!tocContainer || !tocList) return;
+
+    const headings = document.querySelectorAll('.h2-wrap h2');
+
+    if (headings.length === 0) {
+      tocContainer.style.display = 'none';
+      return;
+    }
+
+    // Generate TOC
+    tocList.innerHTML = '';
+    headings.forEach((heading, index) => {
+      let text = heading.textContent.trim().replace(/^#+\s*/, '');
+      const id = heading.id || `heading-${index}`;
+
+      if (!heading.id) {
+        heading.id = id;
+      }
+
+      const tocItem = document.createElement('a');
+      tocItem.href = `#${id}`;
+      tocItem.className = 'toc-link';
+      tocItem.setAttribute('data-tooltip', text);
+
+      tocItem.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(id);
+        if (targetElement) {
+          const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const viewportHeight = window.innerHeight;
+          const centerOffset = viewportHeight / 2;
+          const scrollToPosition = elementTop - centerOffset;
+
+          window.scrollTo({
+            top: Math.max(0, scrollToPosition),
+            behavior: 'smooth'
+          });
+
+          window.location.hash = id;
+        }
+      });
+
+      tocList.appendChild(tocItem);
+    });
+
+    // Update active heading and progress
+    function updateActiveHeading() {
+      const tocLinks = document.querySelectorAll('.toc-link');
+      let activeIndex = -1;
+      const scrollTop = window.pageYOffset + 100;
+
+      for (let i = headings.length - 1; i >= 0; i--) {
+        if (headings[i].offsetTop <= scrollTop) {
+          activeIndex = i;
+          break;
+        }
+      }
+
+      tocLinks.forEach((link, index) => {
+        link.classList.remove('active');
+        if (index <= activeIndex) {
+          link.classList.add('read');
+        } else {
+          link.classList.remove('read');
+        }
+      });
+
+      if (activeIndex >= 0 && tocLinks[activeIndex]) {
+        tocLinks[activeIndex].classList.add('active');
+      }
+
+      // Update progress
+      let progressPercent = 0;
+      if (activeIndex >= 0) {
+        progressPercent = ((activeIndex + 1) / headings.length) * 100;
+      }
+
+      const scrollPercent =
+        (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      const finalProgress = Math.max(progressPercent, scrollPercent || 0);
+
+      tocList.style.setProperty('--progress-height', `${Math.min(finalProgress, 100)}%`);
+    }
+
+    // Swipe/drag functionality for mobile
+    let isDragging = false;
+
+    function handleTouchStart() {
+      isDragging = true;
+      tocContainer.style.transition = 'none';
+    }
+
+    function handleTouchMove(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+
+      const currentY = e.touches[0].clientY;
+      const containerRect = tocContainer.getBoundingClientRect();
+      const containerHeight = containerRect.height;
+
+      // Calculate which heading should be active based on touch position
+      const relativeY = (currentY - containerRect.top) / containerHeight;
+      const targetIndex = Math.floor(relativeY * headings.length);
+      const clampedIndex = Math.max(0, Math.min(targetIndex, headings.length - 1));
+
+      // Update visual feedback
+      const tocLinks = document.querySelectorAll('.toc-link');
+      tocLinks.forEach((link, index) => {
+        link.classList.remove('active');
+        if (index <= clampedIndex) {
+          link.classList.add('read');
+        } else {
+          link.classList.remove('read');
+        }
+      });
+
+      if (tocLinks[clampedIndex]) {
+        tocLinks[clampedIndex].classList.add('active');
+      }
+    }
+
+    function handleTouchEnd(e) {
+      if (!isDragging) return;
+      isDragging = false;
+      tocContainer.style.transition = '';
+
+      const currentY = e.changedTouches[0].clientY;
+      const containerRect = tocContainer.getBoundingClientRect();
+      const containerHeight = containerRect.height;
+
+      // Calculate target heading
+      const relativeY = (currentY - containerRect.top) / containerHeight;
+      const targetIndex = Math.floor(relativeY * headings.length);
+      const clampedIndex = Math.max(0, Math.min(targetIndex, headings.length - 1));
+
+      // Navigate to the target heading
+      if (headings[clampedIndex]) {
+        const targetHeading = headings[clampedIndex];
+        const elementTop = targetHeading.getBoundingClientRect().top + window.pageYOffset;
+        const viewportHeight = window.innerHeight;
+        const centerOffset = viewportHeight / 2;
+        const scrollToPosition = elementTop - centerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, scrollToPosition),
+          behavior: 'smooth'
+        });
+
+        window.location.hash = targetHeading.id;
+      }
+    }
+
+    // Add touch event listeners
+    tocContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+    tocContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+    tocContainer.addEventListener('touchend', handleTouchEnd, { passive: false });
+
+    // Event listeners
+    window.addEventListener('scroll', updateActiveHeading, { passive: true });
+    window.addEventListener('hashchange', updateActiveHeading);
+
+    // Initial update
+    updateActiveHeading();
+  }
+
+  // Run immediately if DOM is ready, otherwise wait
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTOC);
+  } else {
+    initTOC();
+  }
+})();
+
 window.addEventListener('load', () => {
   const isDarkMode = document.documentElement.classList.contains('dark');
   if (!isDarkMode) {
@@ -211,7 +390,7 @@ window.addEventListener('load', () => {
           _this.closeModal();
           e.preventDefault();
           e.stopPropagation();
-        } else if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        } else if ((e.ctrlKey || e.metaKey) && e.key === 'k' && !e.shiftKey) {
           _this.toggleModal();
           e.preventDefault();
           e.stopPropagation();

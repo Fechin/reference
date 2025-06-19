@@ -12,6 +12,7 @@
 @import "components/custom_tag.css";
 @import "components/code.css";
 @import "components/search.css";
+@import "components/toc.css";
 @import "components/pagination.css";
 @import "components/common.css";
 

@@ -1,0 +1,17 @@
+<!-- Simple Timeline TOC -->
+<% if (is_post()) { %>
+<div id="toc-container" class="toc-container">
+  <nav id="toc-list" class="toc-list" role="navigation" aria-label="Table of Contents">
+    <!-- TOC items will be inserted here by JavaScript -->
+  </nav>
+</div>
+
+<script>
+// TOC functionality will be added to main.js
+window.addEventListener('DOMContentLoaded', function() {
+  if (typeof window.initTOC === 'function') {
+    window.initTOC();
+  }
+});
+</script>
+<% } %>
