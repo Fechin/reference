@@ -96,3 +96,43 @@ namp -p, 80 -T5 -O target
 | `-PS -sn`  | **TCP**  | SYN Ping Scan     | Detecting open TCP ports and live hosts        |
 | `-PA -sn ` | **TCP**  | ACK Ping Scan     | Identifying firewall rules and open ports      |
 | `-PU -sn`  | **ICMP** | Ping Scan         | Finding hosts with open UDP services           |
+
+
+##  Investigation Exemple 
+
+### Verbose Os Quick port scan {.col-span-3}
+
+```bash
+nmap -sV -O -p- -T5 target 
+ 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-02 15:17 CET
+
+Nmap scan report for target (10.10.158.161)
+Host is up (0.021s latency).
+Not shown: 65532 closed tcp ports (reset)
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+8009/tcp open  ajp13   Apache Jserv (Protocol v1.3)
+8080/tcp open  http    Apache Tomcat 8.5.5
+
+Aggressive OS guesses: Linux 3.10 - 3.13 (95%), Linux 5.4 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%),
+Linux 3.16 (95%), Linux 3.1 (93%), Linux 3.2 (93%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (93%), 
+Sony Android TV (Android 5.0) (93%), Android 5.0 - 6.0.1 (Linux 3.4) (93%), Android 5.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 39.94 seconds
+
+
+# you can then use `nmap -A -p 22, 8009, 8080 target` on discovered ports
+```
+Do not use this tool without consent. For educational purposes, this example is coming from a Try Hack Me [machine](https://tryhackme.com/room/bsidesgtthompson).
+
+
+
+## Also See
+
+- [Nmap](https://nmap.org/)
