@@ -323,7 +323,7 @@ Jack:
   hobby:
     - a
     - b
-  location: { country: "A", city: "A-A" }
+  location: { country: 'A', city: 'A-A' }
 ```
 
 #### ↓ Equivalent JSON
@@ -349,7 +349,7 @@ Jack:
 set1: !!set
   ? one
   ? two
-set2: !!set { "one", "two" }
+set2: !!set { 'one', 'two' }
 ```
 
 #### ↓ Equivalent JSON

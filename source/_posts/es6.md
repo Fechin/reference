@@ -79,13 +79,13 @@ Same as: Math.pow(2, 8)
 #### New string methods
 
 ```js
-"hello".repeat(3);
-"hello".includes("ll");
-"hello".startsWith("he");
-"hello".padStart(8); // "hello"
-"hello".padEnd(8); // "hello"
-"hello".padEnd(8, "!"); // hello!!!
-"\u1E9B\u0323".normalize("NFC");
+'hello'.repeat(3);
+'hello'.includes('ll');
+'hello'.startsWith('he');
+'hello'.padStart(8); // "hello"
+'hello'.padEnd(8); // "hello"
+'hello'.padEnd(8, '!'); // hello!!!
+'\u1E9B\u0323'.normalize('NFC');
 ```
 
 #### New Number Methods
@@ -93,7 +93,7 @@ Same as: Math.pow(2, 8)
 ```js
 Number.EPSILON;
 Number.isInteger(Infinity); // false
-Number.isNaN("NaN"); // false
+Number.isNaN('NaN'); // false
 ```
 
 #### New Math methods
@@ -108,7 +108,7 @@ Math.imul(Math.pow(2, 32) - 1, Math.pow(2, 32) - 2); // 2
 
 ```js
 //return a real array
-Array.from(document.querySelectorAll("*"));
+Array.from(document.querySelectorAll('*'));
 //similar to new Array(...), but without the special single-argument behavior
 Array.of(1, 2, 3);
 ```
@@ -171,7 +171,7 @@ class Dog {
   }
 }
 
-const dog = new Dog("putty");
+const dog = new Dog('putty');
 //console.log(this.#name)
 //Private identifiers are not allowed outside class bodies.
 dog.printName();
@@ -256,15 +256,15 @@ async function run () {
 #### Arrays
 
 ```js {1}
-const [first, last] = ["Nikola", "Tesla"];
+const [first, last] = ['Nikola', 'Tesla'];
 ```
 
 #### Objects
 
 ```js {1}
 let { title, author } = {
-  title: "The Silkworm",
-  author: "R. Galbraith",
+  title: 'The Silkworm',
+  author: 'R. Galbraith'
 };
 ```
 
@@ -297,7 +297,7 @@ function greet({ name, greeting }) {
 ---
 
 ```js
-greet({ name: "Larry", greeting: "Ahoy" });
+greet({ name: 'Larry', greeting: 'Ahoy' });
 ```
 
 Destructuring of objects and arrays can also be done in function parameters
@@ -305,7 +305,7 @@ Destructuring of objects and arrays can also be done in function parameters
 ### Defaults
 
 ```js {1}
-function greet({ name = "Rauno" } = {}) {
+function greet({ name = 'Rauno' } = {}) {
   console.log(`Hi ${name}!`);
 }
 ```
@@ -314,7 +314,7 @@ function greet({ name = "Rauno" } = {}) {
 
 ```js
 greet(); // Hi Rauno!
-greet({ name: "Larry" }); // Hi Larry!
+greet({ name: 'Larry' }); // Hi Larry!
 ```
 
 ### Reassign keys
@@ -360,7 +360,7 @@ Use the `rest(...)` operator to extract some keys individually and the rest of t
 ```js {2}
 const options = {
   ...defaults,
-  visible: true,
+  visible: true
 };
 ```
 
@@ -388,7 +388,7 @@ const users = [
 #### No array expansion
 
 ```js
-const users = admins.concat(editors).concat(["rstacruz"]);
+const users = admins.concat(editors).concat(['rstacruz']);
 ```
 
 The spread operator allows you to build new arrays in the same way. See:
@@ -401,7 +401,7 @@ The spread operator allows you to build new arrays in the same way. See:
 #### Default parameters
 
 ```js {1}
-function greet(name = "Jerry") {
+function greet(name = 'Jerry') {
   return `Hello ${name}`;
 }
 ```
@@ -460,13 +460,13 @@ Like a function, but preserves `this`. See: [Arrow functions](https://babeljs.io
 ### Parameter setting default value
 
 ```js
-function log(x, y = "World") {
+function log(x, y = 'World') {
   console.log(x, y);
 }
 
-log("Hello"); // Hello World
-log("Hello", "China"); // Hello China
-log("Hello", ""); // Hello
+log('Hello'); // Hello World
+log('Hello', 'China'); // Hello China
+log('Hello', ''); // Hello
 ```
 
 ### Used in conjunction with destructuring assignment defaults
@@ -506,7 +506,7 @@ same below:
 ```js
 module.exports = {
   hello: hello,
-  bye: bye,
+  bye: bye
 };
 ```
 
@@ -517,8 +517,8 @@ See: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object
 ```js {2}
 const App = {
   start() {
-    console.log("running");
-  },
+    console.log('running');
+  }
 };
 //Same as: App = { start: function () {···} }
 ```
@@ -543,9 +543,9 @@ See: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object
 ### Computed property name
 
 ```js {3}
-let event = "click";
+let event = 'click';
 let handlers = {
-  [`on${event}`]: true,
+  [`on${event}`]: true
 };
 //Same as: handlers = { 'onclick': true }
 ```
@@ -567,35 +567,35 @@ Object.entries(fatherJS)
 ### Imports import
 
 ```js
-import "helpers";
+import 'helpers';
 //aka: require('···')
 ```
 
 ---
 
 ```js
-import Express from "express";
+import Express from 'express';
 //aka: const Express = require('···').default || require('···')
 ```
 
 ---
 
 ```js
-import { indent } from "helpers";
+import { indent } from 'helpers';
 //aka: const indent = require('···').indent
 ```
 
 ---
 
 ```js
-import * as Helpers from "helpers";
+import * as Helpers from 'helpers';
 //aka: const Helpers = require('···')
 ```
 
 ---
 
 ```js
-import { indentSpaces as indent } from "helpers";
+import { indentSpaces as indent } from 'helpers';
 //aka: const indent = require('···').indentSpaces
 ```
 
@@ -625,8 +625,8 @@ export const pi = 3.14159;
 ---
 
 ```js
-const firstName = "Michael";
-const lastName = "Jackson";
+const firstName = 'Michael';
+const lastName = 'Jackson';
 const year = 1958;
 export { firstName, lastName, year };
 ```
@@ -634,7 +634,7 @@ export { firstName, lastName, year };
 ---
 
 ```js
-export * from "lib/math";
+export * from 'lib/math';
 ```
 
 `export` is the new `module.exports`. See: [Module exports](https://babeljs.io/learn-es2015/#modules)
@@ -662,8 +662,8 @@ export {
 ### Dynamically load modules
 
 ```js
-button.addEventListener("click", (event) => {
-  import("./dialogBox.js")
+button.addEventListener('click', (event) => {
+  import('./dialogBox.js')
     .then((dialogBox) => {
       dialogBox.open();
     })
@@ -678,7 +678,7 @@ button.addEventListener("click", (event) => {
 ### import() allows module paths to be dynamically generated
 
 ```js
-const main = document.querySelector("main");
+const main = document.querySelector('main');
 
 import(`./modules/${someVariable}.js`)
   .then((module) => {
@@ -695,7 +695,7 @@ import(`./modules/${someVariable}.js`)
 which returns the meta information of the current module
 
 ```js
-new URL("data.txt", import.meta.url);
+new URL('data.txt', import.meta.url);
 ```
 
 In the Node.js environment, `import.meta.url` always returns a local path, that is, a string of the `file:URL` protocol,
@@ -706,14 +706,14 @@ such as `file:/// home/user/foo.js`
 #### static import
 
 ```js
-import json from "./package.json" assert { type: "json" };
+import json from './package.json' assert { type: 'json' };
 //Import all objects in the json file
 ```
 
 #### Dynamic Import
 
 ```js
-const json = await import("./package.json", { assert: { type: "json" } });
+const json = await import('./package.json', { assert: { type: 'json' } });
 ```
 
 ## Generators
@@ -751,9 +751,9 @@ let fibonacci = {
       next() {
         [pre, cur] = [cur, pre + cur];
         return { done: false, value: cur };
-      },
+      }
     };
-  },
+  }
 };
 
 for (var n of fibonacci) {

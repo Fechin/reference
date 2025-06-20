@@ -30,11 +30,11 @@ npm tsc
 ```ts
 let isDone: boolean = false;
 let age: number = 30;
-let userName: string = "John";
+let userName: string = 'John';
 let list: number[] = [1, 2, 3];
-let tuple: [string, number] = ["hello", 10];
+let tuple: [string, number] = ['hello', 10];
 let notSure: any = 4;
-notSure = "maybe a string instead";
+notSure = 'maybe a string instead';
 ```
 
 ### enums
@@ -43,7 +43,7 @@ notSure = "maybe a string instead";
 enum Color {
   Red,
   Green,
-  Blue,
+  Blue
 }
 let c: Color = Color.Green;
 ```
@@ -58,7 +58,7 @@ interface Person {
 }
 
 function greet(person: Person) {
-  return "Hello, " + person.firstName + " " + person.lastName;
+  return 'Hello, ' + person.firstName + ' ' + person.lastName;
 }
 ```
 
@@ -75,12 +75,12 @@ let myAdd = function (x: number, y: number): number {
 
 let myArrowAdd = (x: number, y: number): number => x + y;
 
-function buildName(firstName: string, lastName = "Smith") {
-  return firstName + " " + lastName;
+function buildName(firstName: string, lastName = 'Smith') {
+  return firstName + ' ' + lastName;
 }
 
 function buildFullName(firstName: string, ...restOfName: string[]) {
-  return firstName + " " + restOfName.join(" ");
+  return firstName + ' ' + restOfName.join(' ');
 }
 ```
 
@@ -93,11 +93,11 @@ class Greeter {
     this.greeting = message;
   }
   greet() {
-    return "Hello, " + this.greeting;
+    return 'Hello, ' + this.greeting;
   }
 }
 
-let greeter = new Greeter("world");
+let greeter = new Greeter('world');
 ```
 
 ### Inheritance
@@ -111,7 +111,7 @@ class Animal {
 
 class Dog extends Animal {
   bark() {
-    console.log("Woof! Woof!");
+    console.log('Woof! Woof!');
   }
 }
 
@@ -128,14 +128,14 @@ function identity<T>(arg: T): T {
   return arg;
 }
 
-let output1 = identity<string>("myString");
+let output1 = identity<string>('myString');
 let output2 = identity<number>(42);
 ```
 
 ### Type Assertions
 
 ```ts
-let someValue: any = "this is a string";
+let someValue: any = 'this is a string';
 let strLength: number = (<string>someValue).length;
 // or
 let strLength2: number = (someValue as string).length;
@@ -160,7 +160,7 @@ export class ZipCodeValidator implements StringValidator {
 ### Import
 
 ```ts
-import { ZipCodeValidator } from "./ZipCodeValidator";
+import { ZipCodeValidator } from './ZipCodeValidator';
 
 let myValidator = new ZipCodeValidator();
 ```
@@ -189,10 +189,10 @@ let validator = new Validation.LettersOnlyValidator();
 
 ```ts
 function padLeft(value: string, padding: string | number) {
-  if (typeof padding === "number") {
-    return Array(padding + 1).join(" ") + value;
+  if (typeof padding === 'number') {
+    return Array(padding + 1).join(' ') + value;
   }
-  if (typeof padding === "string") {
+  if (typeof padding === 'string') {
     return padding + value;
   }
   throw new Error(`Expected string or number, got '${padding}'.`);
@@ -215,7 +215,7 @@ type ArtworksResponse = ArtworksData & ErrorHandling;
 
 const response: ArtworksResponse = {
   success: true,
-  artworks: [{ title: "Mona Lisa" }],
+  artworks: [{ title: 'Mona Lisa' }]
 };
 ```
 
@@ -231,7 +231,7 @@ interface User {
 }
 
 let partialUser: Partial<User> = {
-  name: "Alice",
+  name: 'Alice'
 };
 ```
 
@@ -240,8 +240,8 @@ let partialUser: Partial<User> = {
 ```ts
 let readonlyUser: Readonly<User> = {
   id: 1,
-  name: "Bob",
-  age: 25,
+  name: 'Bob',
+  age: 25
 };
 
 // readonlyUser.age = 26; // Error: cannot reassign a readonly property
@@ -250,21 +250,21 @@ let readonlyUser: Readonly<User> = {
 ### Pick
 
 ```ts
-type UserName = Pick<User, "name">;
+type UserName = Pick<User, 'name'>;
 
 let userName: UserName = {
-  name: "Charlie",
+  name: 'Charlie'
 };
 ```
 
 ### Omit
 
 ```ts
-type UserWithoutAge = Omit<User, "age">;
+type UserWithoutAge = Omit<User, 'age'>;
 
 let userWithoutAge: UserWithoutAge = {
   id: 2,
-  name: "Dave",
+  name: 'Dave'
 };
 ```
 
@@ -285,7 +285,7 @@ class Greeter {
     this.greeting = message;
   }
   greet() {
-    return "Hello, " + this.greeting;
+    return 'Hello, ' + this.greeting;
   }
 }
 ```
@@ -294,7 +294,11 @@ class Greeter {
 
 ```ts
 function enumerable(value: boolean) {
-  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor
+  ) {
     descriptor.enumerable = value;
   };
 }
@@ -307,7 +311,7 @@ class Greeter {
 
   @enumerable(false)
   greet() {
-    return "Hello, " + this.greeting;
+    return 'Hello, ' + this.greeting;
   }
 }
 ```

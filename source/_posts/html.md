@@ -78,7 +78,13 @@ See: [The \<a> Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 ### Image Tag
 
 ```html {.wrap}
-<img loading="lazy" src="https://xxx.png" alt="Describe image here" width="400" height="400" />
+<img
+  loading="lazy"
+  src="https://xxx.png"
+  alt="Describe image here"
+  width="400"
+  height="400"
+/>
 ```
 
 ---
@@ -170,7 +176,7 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 ```html
 <script type="text/javascript">
-  let text = "Hello CheatSheets.zip";
+  let text = 'Hello CheatSheets.zip';
   alert(text);
 </script>
 ```
@@ -277,7 +283,10 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 ```html {.wrap}
 <video controls="" width="100%">
-  <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+  <source
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    type="video/mp4"
+  />
   Sorry, your browser doesn't support embedded videos.
 </video>
 ```
@@ -292,7 +301,10 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 ### HTML5 Audio
 
 ```html {.wrap}
-<audio controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+<audio
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+>
   Your browser does not support the audio element.
 </audio>
 ```
@@ -306,7 +318,9 @@ audio element. </audio>
 ### HTML5 Ruby
 
 ```html {.wrap}
-<ruby> 汉 <rp>(</rp><rt>hàn</rt><rp>)</rp> 字 <rp>(</rp><rt>zì</rt><rp>)</rp> </ruby>
+<ruby>
+  汉 <rp>(</rp><rt>hàn</rt><rp>)</rp> 字 <rp>(</rp><rt>zì</rt><rp>)</rp>
+</ruby>
 ```
 
 #### ↓ Preview

@@ -28,7 +28,10 @@ plugins:
 #### Official CDN
 
 ```html {.wrap}
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  crossorigin="anonymous"
+></script>
 ```
 
 ### jQuery syntax
@@ -40,11 +43,11 @@ $(selector).methodOrFunction();
 #### Example:
 
 ```javascript
-$("#menu").on("click", function () {
+$('#menu').on('click', function () {
   $(this).hide();
 });
 
-$("body").css("background", "red");
+$('body').css('background', 'red');
 ```
 
 ### jQuery document ready
@@ -52,14 +55,14 @@ $("body").css("background", "red");
 ```javascript
 $(document).ready(function () {
   // Runs after the DOM is loaded.
-  alert("DOM fully loaded!");
+  alert('DOM fully loaded!');
 });
 ```
 
 ```javascript
 $(function () {
   // Runs after the DOM is loaded.
-  alert("DOM fully loaded!");
+  alert('DOM fully loaded!');
 });
 ```
 
@@ -68,15 +71,15 @@ $(function () {
 ### Examples {.secondary}
 
 ```javascript
-$("button").click(() => {
-  $(":button").css("color", "red");
+$('button').click(() => {
+  $(':button').css('color', 'red');
 });
 ```
 
 #### Combining selectors
 
 ```javascript
-$("selector1, selector2 ...selectorn");
+$('selector1, selector2 ...selectorn');
 ```
 
 ### Basics
@@ -175,32 +178,32 @@ $("selector1, selector2 ...selectorn");
 ### Examples {.secondary .row-span-2}
 
 ```javascript
-$("h2").css({
-  color: "blue",
-  backgroundColor: "gray",
-  fontSize: "24px",
+$('h2').css({
+  color: 'blue',
+  backgroundColor: 'gray',
+  fontSize: '24px'
 });
 ```
 
 #### jQuery addClass
 
 ```javascript
-$(".button").addClass("active");
+$('.button').addClass('active');
 ```
 
 #### jQuery removeClass
 
 ```javascript
-$(".button").on("mouseleave", (evt) => {
+$('.button').on('mouseleave', (evt) => {
   let e = evt.currentTarget;
-  $(e).removeClass("active");
+  $(e).removeClass('active');
 });
 ```
 
 #### jQuery .toggleClass
 
 ```javascript
-$(".choice").toggleClass("highlighted");
+$('.choice').toggleClass('highlighted');
 ```
 
 ### Attributes
@@ -268,15 +271,15 @@ $(".choice").toggleClass("highlighted");
 
 ```javascript
 /*<span>Span.</span>*/
-$("span").after("<p>Paragraph.</p>");
+$('span').after('<p>Paragraph.</p>');
 /*<span>Span.</span><p>Paragraph.</p>*/
 
 /*<span>Span.</span>*/
-$("<span>Span.</span>").replaceAll("p");
+$('<span>Span.</span>').replaceAll('p');
 /*<p>Span.</p>*/
 
 /*<span>This is span.</span>*/
-$("span").wrap("<p></p>");
+$('span').wrap('<p></p>');
 /*<p><span>This is span.</span></p>*/
 ```
 
@@ -389,25 +392,25 @@ $("span").wrap("<p></p>");
 
 ```javascript
 // A mouse event 'click'
-$("#menu-button").on("click", () => {
-  $("#menu").show();
+$('#menu-button').on('click', () => {
+  $('#menu').show();
 });
 
 // A keyboard event 'keyup'
-$("#textbox").on("keyup", () => {
-  $("#menu").show();
+$('#textbox').on('keyup', () => {
+  $('#menu').show();
 });
 
 // A scroll event 'scroll'
-$("#menu-button").on("scroll", () => {
-  $("#menu").show();
+$('#menu-button').on('scroll', () => {
+  $('#menu').show();
 });
 ```
 
 #### Event object
 
 ```javascript
-$("#menu").on("click", (event) => {
+$('#menu').on('click', (event) => {
   $(event.currentTarget).hide();
 });
 ```
@@ -415,19 +418,19 @@ $("#menu").on("click", (event) => {
 #### Method chaining
 
 ```javascript
-$("#menu-btn")
-  .on("mouseenter", () => {
-    $("#menu").show();
+$('#menu-btn')
+  .on('mouseenter', () => {
+    $('#menu').show();
   })
-  .on("mouseleave", () => {
-    $("#menu").hide();
+  .on('mouseleave', () => {
+    $('#menu').hide();
   });
 ```
 
 #### Prevents the event
 
 ```javascript
-$("p").click(function (event) {
+$('p').click(function (event) {
   event.stopPropagation();
   // Do something
 });
@@ -537,18 +540,18 @@ $("p").click(function (event) {
 ### Examples {.secondary .row-span-2}
 
 ```javascript
-$("#menu-button").on("click", () => {
+$('#menu-button').on('click', () => {
   // $('#menu').fadeIn(400, 'swing')
-  $("#menu").fadeIn();
+  $('#menu').fadeIn();
 });
 ```
 
 #### fadeOut effect
 
 ```javascript
-$("#menu-button").on("click", () => {
+$('#menu-button').on('click', () => {
   // $('#menu').fadeOut(400, 'swing')
-  $("#menu").fadeOut();
+  $('#menu').fadeOut();
 });
 ```
 
@@ -606,13 +609,13 @@ $("#menu-button").on("click", () => {
 $.ajax({
   url: this.action,
   type: this.method,
-  data: $(this).serialize(),
+  data: $(this).serialize()
 })
   .done(function (server_data) {
-    console.log("success" + server_data);
+    console.log('success' + server_data);
   })
   .fail(function (jqXHR, status, err) {
-    console.log("fail" + err);
+    console.log('fail' + err);
   });
 ```
 

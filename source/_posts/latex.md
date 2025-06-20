@@ -200,7 +200,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 
 ### `KaTeX:\LaTeX` math constructs {.col-span-3}
 
-| 预览                    | 方法                         | 预览                    | 方法                         | 预览                         | 方法                              |
+| Preview                 | Method                       | Preview                 | Method                       | Preview                      | Method                            |
 | :---------------------- | :--------------------------- | :---------------------- | :--------------------------- | :--------------------------- | :-------------------------------- |
 | `KaTeX:\frac{abc}{xyz}` | <pur>`\frac{abc}{xyz}`</pur> | `KaTeX:\overline{abc}`  | <pur>`\overline{abc}`</pur>  | `KaTeX:\overrightarrow{abc}` | <pur>`\overrightarrow{abc}`</pur> |
 | `KaTeX:f'`              | <pur>`f'`</pur>              | `KaTeX:\underline{abc}` | <pur>`\underline{abc}`</pur> | `KaTeX:\overleftarrow{abc}`  | <pur>`\overleftarrow{abc}`</pur>  |
@@ -481,7 +481,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.left-align}
 
-### 可扩展箭头 {.col-span-3}
+### Extensible arrows {.col-span-3}
 
 | :-                               | :-                                    | :-                                | :-                                     |
 | :------------------------------- | :------------------------------------ | :-------------------------------- | :------------------------------------- |
@@ -908,7 +908,6 @@ x = \begin{cases}
    \item item3
 \end{itemize}
 ```
-
 
 ### Ordered List
 

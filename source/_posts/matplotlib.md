@@ -1,13 +1,13 @@
 ---
-title: "Matplotlib"
+title: 'Matplotlib'
 date: 06-06-2025
 background: bg-[#1a073e]
 tags:
-  - "data visualization"
-  - "matplotlib"
-  - "plotting"
+  - 'data visualization'
+  - 'matplotlib'
+  - 'plotting'
 categories:
-  - "Python"
+  - 'Python'
 intro: |
   [Matplotlib](https://matplotlib.org/) is a comprehensive library for creating static, animated, and interactive plots in Python.  
   This cheat sheet provides a quick reference from basic to advanced usage, covering essential features for data science, machine learning, and scientific computing.
@@ -15,10 +15,9 @@ plugins:
   - copyCode
 ---
 
-
 ---
 
-##  Getting Started {.cols-2}
+## Getting Started {.cols-2}
 
 ### Importing
 
@@ -38,7 +37,7 @@ plt.show()                       # Display the plot
 
 ---
 
-##  Plot Types {.cols-2}
+## Plot Types {.cols-2}
 
 ### Line Plot
 
@@ -98,7 +97,7 @@ plt.show()
 
 ---
 
-##  Customization {.row-span-2}
+## Customization {.row-span-2}
 
 | Feature         | Code Example                                                                         | Description                                 |
 | --------------- | ------------------------------------------------------------------------------------ | ------------------------------------------- |
@@ -117,7 +116,7 @@ plt.show()
 
 ---
 
-##  Subplots & Layouts
+## Subplots & Layouts
 
 ### Multiple Subplots
 
@@ -139,7 +138,7 @@ plt.figure(figsize=(10, 5))         # Set figure size (width, height in inches)
 
 ---
 
-##  Advanced Visualizations {.cols-2}
+## Advanced Visualizations {.cols-2}
 
 ### Heatmap
 
@@ -174,7 +173,7 @@ plt.show()
 
 ---
 
-##  Working with Images
+## Working with Images
 
 ```python
 import matplotlib.image as mpimg
@@ -233,7 +232,7 @@ plt.show()
 
 ---
 
-##  Saving Plots
+## Saving Plots
 
 ```python
 plt.savefig("figure.png", dpi=300, bbox_inches='tight')  # Save plot to file
@@ -241,7 +240,7 @@ plt.savefig("figure.png", dpi=300, bbox_inches='tight')  # Save plot to file
 
 ---
 
-##  Show & Clear
+## Show & Clear
 
 ```python
 plt.show()     # Show plot window
@@ -251,7 +250,7 @@ plt.close()    # Close figure window (useful in scripts or GUI apps)
 
 ---
 
-##  More Useful Functions
+## More Useful Functions
 
 | Function                       | Use Case                        |
 | ------------------------------ | ------------------------------- |
@@ -265,4 +264,3 @@ plt.close()    # Close figure window (useful in scripts or GUI apps)
 | `plt.gcf()`                    | Get current figure              |
 
 ---
-

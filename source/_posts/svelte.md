@@ -143,12 +143,7 @@ Note: External components should be installed via npm first.
 ### Passing Properties to a Component
 
 ```js
-<Student
-  firstName="Zehan"
-  lastName="Khan"
-  age={23}
-  pro={true}
-/>
+<Student firstName="Zehan" lastName="Khan" age={23} pro={true} />
 ```
 
 ### Assigning the Properties from a Component
@@ -304,6 +299,7 @@ Note: Use `onMount` for side effects like API calls.
 ## Lifecycle Hooks {.cols-1}
 
 ### onMount
+
 ```js
 <script>
   import { onMount } from 'svelte';
@@ -315,6 +311,7 @@ Note: Use `onMount` for side effects like API calls.
 ```
 
 ### beforeUpdate
+
 ```js
 <script>
   import { beforeUpdate } from 'svelte';
@@ -326,6 +323,7 @@ Note: Use `onMount` for side effects like API calls.
 ```
 
 ### afterUpdate
+
 ```js
 <script>
   import { afterUpdate } from 'svelte';
@@ -337,6 +335,7 @@ Note: Use `onMount` for side effects like API calls.
 ```
 
 ### onDestroy
+
 ```js
 <script>
   import { onDestroy } from 'svelte';
@@ -346,8 +345,9 @@ Note: Use `onMount` for side effects like API calls.
   });
 </script>
 ```
-Note: Svelte lifecycle functions are similar to React Hooks, but they are imported individually and used directly in the `<script>` block.
 
+Note: Svelte lifecycle functions are similar to React Hooks, but they are imported individually and used directly in the
+`<script>` block.
 
 ## More Svelte Features {.cols-1}
 
@@ -358,7 +358,7 @@ Note: Svelte lifecycle functions are similar to React Hooks, but they are import
 import { writable, derived } from 'svelte/store';
 
 export const count = writable(0);
-export const double = derived(count, $count => $count * 2);
+export const double = derived(count, ($count) => $count * 2);
 ```
 
 ```js
@@ -402,11 +402,7 @@ export const time = readable(new Date(), function start(set) {
 ### Reactive Statements with Side Effects
 
 ```js
-<script>
-  let name = 'Zehan';
-
-  $: console.log('Name changed to', name);
-</script>
+<script>let name = 'Zehan'; $: console.log('Name changed to', name);</script>
 ```
 
 ### Bind to DOM Properties
@@ -488,4 +484,3 @@ export async function load({ fetch }) {
 ```
 
 Note: Requires SvelteKit setup for SSR routes.
-

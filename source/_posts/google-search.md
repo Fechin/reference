@@ -90,49 +90,49 @@ intro: |
 
 ### Search on emails
 
-| Operator          | Description                                                                                           | Category   |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ---------- |
-| `+`               | Prefix - Force exact match on single phrase                                                           | Basic,Mail |
-| `()`              | Allows grouping of operators and helps dictate order                                                  | Basic,Mail |
-| `-`               | Excludes a word from results                                                                          | Basic,Mail |
-| `""`              | Allows searching for a specific phrase - exact match search. Individual word prevents synonyms        | Basic,Mail |
-| `OR`/`AND`        | Boolean search function for OR searches as Google defaults to AND between words - must be all caps    | Basic,Mail |
-| `after:`          | Allows you to search drive or mail for files modified or mail sent/received anytime after a set date  | Drive,Mail |
-| `before:`         | Allows you to search drive or mail for files modified or mail sent/received before a certain date     | Drive,Mail |
-| `is:starred`      | Searches only items that have been starred in drive                                                   | Drive,Mail |
-| `from:`           | Specify the sender in google mail                                                                     | Mail       |
-| `to:`             | Specify the recipient in google mail                                                                  | Mail       |
-| `cc:`             | Search by a recipient that was copied into an email                                                   | Mail       |
-| `bcc:`            | Search by a recipient that was blind copied into an email                                             | Mail       |
-| `older:`          | Search for messages older than a certain date                                                         | Mail       |
-| `newer:`          | Search for messages newer than a certain date                                                         | Mail       |
-| `Search`          | for a message with a google sheet attached                                                            | Mail       |
-| `Search`          | for a message with a google presentation attached                                                     | Mail       |
-| `AROUND`          | Similar to the normal google search function, allows you to search for keywords near each other.      | Mail       |
-| `subject:`        | Search by keywords featured in the subject line                                                       | Mail       |
-| `{}`              | Use for OR in mail instead of the OR function                                                         | Mail       |
-| `label:`          | Search for messages that have a certain label                                                         | Mail       |
-| `has:attachment`  | Search for messages that have an item attached                                                        | Mail       |
-| `has:drive`       | Search for messages with a google drive attached                                                      | Mail       |
-| `has:document`    | Search for messages with a google doc attached                                                        | Mail       |
-| `has:youtube`     | Search for a message containing a youtube video                                                       | Mail       |
-| `list:`           | Search for all messages from a particular mailing list                                                | Mail       |
-| `in:anywhere`     | Includes all folders in your search, including spam and bin                                           | Mail       |
-| `is:important`    | Search for messages that have been marked as important                                                | Mail       |
-| `label:important` | Same as is:important                                                                                  | Mail       |
-| `is:snoozed`      | Searches for messages that have been snoozed                                                          | Mail       |
-| `is:unread`       | Searches for unread messages                                                                          | Mail       |
-| `is:read`         | searches for read messages only                                                                       | Mail       |
-| `has:yellow-star` | Searches for messages with coloured star icon                                                         | Mail       |
-| `has:blue-info`   | Searches for messages with colourd icon                                                               | Mail       |
-| `is:chat`         | Searches for messagse from chat                                                                       | Mail       |
-| `deliveredto:`    | Search by email address for delivered messages                                                        | Mail       |
-| `category:`       | Searches by messages based on category. Follow the colon with the categoy name, i.e. category:primary | Mail       |
-| `size:`           | Messages larger than a certain size in bytes                                                          | Mail       |
-| `larger:`         | Messages larger than a certain size in bytes                                                          | Mail       |
-| `smaller:`        | Messages smaller than a certain size in bytes                                                         | Mail       |
-| `has:userlabels`  | Search for messages that have custom user labels                                                      | Mail       |
-| `has:nouserlabels`| Search for messages that have no custom user labels                                                   | Mail       |
+| Operator           | Description                                                                                           | Category   |
+| ------------------ | ----------------------------------------------------------------------------------------------------- | ---------- |
+| `+`                | Prefix - Force exact match on single phrase                                                           | Basic,Mail |
+| `()`               | Allows grouping of operators and helps dictate order                                                  | Basic,Mail |
+| `-`                | Excludes a word from results                                                                          | Basic,Mail |
+| `""`               | Allows searching for a specific phrase - exact match search. Individual word prevents synonyms        | Basic,Mail |
+| `OR`/`AND`         | Boolean search function for OR searches as Google defaults to AND between words - must be all caps    | Basic,Mail |
+| `after:`           | Allows you to search drive or mail for files modified or mail sent/received anytime after a set date  | Drive,Mail |
+| `before:`          | Allows you to search drive or mail for files modified or mail sent/received before a certain date     | Drive,Mail |
+| `is:starred`       | Searches only items that have been starred in drive                                                   | Drive,Mail |
+| `from:`            | Specify the sender in google mail                                                                     | Mail       |
+| `to:`              | Specify the recipient in google mail                                                                  | Mail       |
+| `cc:`              | Search by a recipient that was copied into an email                                                   | Mail       |
+| `bcc:`             | Search by a recipient that was blind copied into an email                                             | Mail       |
+| `older:`           | Search for messages older than a certain date                                                         | Mail       |
+| `newer:`           | Search for messages newer than a certain date                                                         | Mail       |
+| `Search`           | for a message with a google sheet attached                                                            | Mail       |
+| `Search`           | for a message with a google presentation attached                                                     | Mail       |
+| `AROUND`           | Similar to the normal google search function, allows you to search for keywords near each other.      | Mail       |
+| `subject:`         | Search by keywords featured in the subject line                                                       | Mail       |
+| `{}`               | Use for OR in mail instead of the OR function                                                         | Mail       |
+| `label:`           | Search for messages that have a certain label                                                         | Mail       |
+| `has:attachment`   | Search for messages that have an item attached                                                        | Mail       |
+| `has:drive`        | Search for messages with a google drive attached                                                      | Mail       |
+| `has:document`     | Search for messages with a google doc attached                                                        | Mail       |
+| `has:youtube`      | Search for a message containing a youtube video                                                       | Mail       |
+| `list:`            | Search for all messages from a particular mailing list                                                | Mail       |
+| `in:anywhere`      | Includes all folders in your search, including spam and bin                                           | Mail       |
+| `is:important`     | Search for messages that have been marked as important                                                | Mail       |
+| `label:important`  | Same as is:important                                                                                  | Mail       |
+| `is:snoozed`       | Searches for messages that have been snoozed                                                          | Mail       |
+| `is:unread`        | Searches for unread messages                                                                          | Mail       |
+| `is:read`          | searches for read messages only                                                                       | Mail       |
+| `has:yellow-star`  | Searches for messages with coloured star icon                                                         | Mail       |
+| `has:blue-info`    | Searches for messages with colourd icon                                                               | Mail       |
+| `is:chat`          | Searches for messagse from chat                                                                       | Mail       |
+| `deliveredto:`     | Search by email address for delivered messages                                                        | Mail       |
+| `category:`        | Searches by messages based on category. Follow the colon with the categoy name, i.e. category:primary | Mail       |
+| `size:`            | Messages larger than a certain size in bytes                                                          | Mail       |
+| `larger:`          | Messages larger than a certain size in bytes                                                          | Mail       |
+| `smaller:`         | Messages smaller than a certain size in bytes                                                         | Mail       |
+| `has:userlabels`   | Search for messages that have custom user labels                                                      | Mail       |
+| `has:nouserlabels` | Search for messages that have no custom user labels                                                   | Mail       |
 
 ### Some other useful search operators
 

@@ -957,6 +957,80 @@ else:
 
 Also see: [Python Tips](https://book.pythontips.com/en/latest/for_-_else.html)
 
+### Over Dictionary
+
+```python
+johndict = {
+  "firstname": "John",
+  "lastname": "Doe",
+  "age": 30
+  }
+
+x = johndict.items()
+print(x)
+
+# Output: dict_items([('firstname', 'John'),
+#                     ('lastname', 'Doe'),
+#                     ('age', 30)])
+
+for key, value in johndict.items():
+	print(f"{key} : : {value}")
+
+# Output: firstname : : John
+# Output: lastname : : Doe
+# Output: age : : 30
+```
+
+## Python Comprehensions
+
+### Comprehension List {.col-span-2}
+
+```python
+languages = ["html", "go", "rust", "javascript", "python"]
+
+newlist = [x for x in languages if "l" not in x]
+# add language for language in languages if "l" not in language
+
+print(newlist) #Output : [ 'go', 'rust', 'javascript', 'python']
+
+# List comprehension avoid this :
+oldlist = []
+for x in languages:
+    if  "l" not in x:
+        oldlist.append(x)
+print(oldlist) #Output :  [ 'go', 'rust', 'javascript', 'python']
+
+
+```
+
+### Comprehension Dictionary {.col-span-2}
+
+```python
+languages = ["html", "go", "rust", "javascript", "python"]
+
+language_dict = {lang: ('l' not in lang) for lang in languages}
+# Key is the language & bool is Value (no offense for html..)
+
+print(language_dict)
+# Output: {'html': False, 'go': True, 'rust': True,
+#          'javascript': True, 'python': True}
+
+
+# Dictionary comprehension avoid this :
+
+language_dict2 = {}
+
+for e in languages:
+    if "l" not in e:
+        language_dict2[e] = True
+    else:
+        language_dict2[e] = False
+
+print(language_dict2)
+# Output: {'html': False, 'go': True, 'rust': True,
+#          'javascript': True, 'python': True}
+```
+
 ## Python Functions
 
 ### Basic
@@ -1028,6 +1102,29 @@ add(5, 20)  # => 25
 
 # => 5
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
+```
+
+### @decorator {.col-span-2}
+
+```python
+# Modify or extend behavior of function or class method,
+# without changing their actual code.
+
+# Define decorator that will wrap function or method
+def handle_errors(func):
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            return print(f"Error :  {e}")
+    return wrapper
+
+# Decorate function or method
+@handle_errors
+def divide(a, b):
+    return a / b
+
+divide(10, 0) # Output : Error : division by zero
 ```
 
 ## Python Modules
@@ -1298,6 +1395,24 @@ print(Yoki.legs) # => 4
 Yoki.sound()     # => Woof!
 ```
 
+### @staticmethod {.col-span-2}
+
+```python
+class MyClass:
+    @staticmethod
+    def greet(name):
+        return f"Hello, {name}!"
+
+# No instantiation nedded
+
+# Call via class
+print(MyClass.greet("Alice"))  # => Hello, Alice!
+
+# Can still call via instance
+obj = MyClass()
+print(obj.greet("Bob"))        # => Hello, Bob!
+```
+
 ## Python Type Hints (Since Python 3.5)
 
 ### Variable & Parameter
@@ -1525,6 +1640,80 @@ while (data := values[i]):
 # Expected result: 1, "text", True
 ```
 
+## Date & Time Handling
+
+### Current date and time
+
+```python
+import datetime
+
+now = datetime.datetime.now()
+print(now)  # e.g., 2024-04-27 14:35:22.123456
+```
+
+### Creating specific date/time objects
+
+```python
+import datetime
+
+# Create a date object
+d = datetime.date(2024, 4, 27)
+print(d)  # 2024-04-27
+
+# Create a time object
+t = datetime.time(15, 30, 45)
+print(t)  # 15:30:45
+
+# Create a datetime object
+dt = datetime.datetime(2024, 4, 27, 15, 30, 45)
+print(dt)  # 2024-04-27 15:30:45
+```
+
+### Converting between date formats
+
+```python
+import datetime
+
+# Convert a string to a datetime object
+date_str = "2024-04-27 14:00"
+dt_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M")
+print(dt_obj)  # 2024-04-27 14:00:00
+
+# Convert a datetime object to a string
+formatted_str = dt_obj.strftime("%d/%m/%Y %H:%M")
+print(formatted_str)  # 27/04/2024 14:00
+```
+
+### Timestamps and Unix time
+
+```python
+import datetime
+
+# Get current timestamp
+timestamp = datetime.datetime.now().timestamp()
+print(timestamp)  # e.g., 1714188922.123456
+
+# Convert timestamp back to datetime
+dt_from_timestamp = datetime.datetime.fromtimestamp(timestamp)
+print(dt_from_timestamp)
+```
+
+### Date difference and timedelta {.col-span-2}
+
+```python
+import datetime
+
+date1 = datetime.date(2024, 4, 27)
+date2 = datetime.date(2024, 5, 1)
+
+delta = date2 - date1
+print(delta.days)  # 4
+
+# Using timedelta for date arithmetic
+new_date = date1 + datetime.timedelta(days=10)
+print(new_date)  # 2024-05-07
+```
+
 ## Miscellaneous
 
 ### Comments
@@ -1581,4 +1770,47 @@ else:                    # Optional clause to the try/except block. Must follow 
     print("All good!")   # Runs only if the code in try raises no exceptions
 finally:                 # Execute under all circumstances
     print("We can clean up resources here")
+```
+
+### Dispatcher Pattern {.col-span-3}
+
+```python
+# Dispatcher allows dynamic selection and execution of functions based on user input or other runtime conditions
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return 'Error: Division by zero'
+    return x / y
+
+# Dispatcher dictionary: maps operation names to their corresponding functions
+operations = {
+    'add': add,
+    'subtract': subtract,
+    'multiply': multiply,
+    'divide': divide
+}
+
+# Function to dispatch operation based on operation name
+# Common use cases include executing different functions dynamically, such as in calculators, command interpreters, or event handling
+def dispatcher(operation_name, x, y):
+    func = operations.get(operation_name)
+    if func:
+        return func(x, y)
+    else:
+        return f"Unknown operation: {operation_name}"
+
+# Usage examples
+print(dispatcher('add', 5, 3))        # Output: 8
+print(dispatcher('multiply', 4, 2))   # Output: 8
+print(dispatcher('divide', 10, 0))    # Output: Error: Division by zero
+print(dispatcher('mod', 10, 3))       # Output: Unknown operation: mod
 ```

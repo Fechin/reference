@@ -1,0 +1,359 @@
+/* stylelint-disable at-rule-no-deprecated */
+
+/* Simple Timeline TOC */
+.toc-container {
+  @apply fixed top-1/2 z-40 -translate-y-1/2;
+  @apply block;
+
+  width: 20px;
+  opacity: 1;
+
+  /* Constrain height to viewport */
+  max-height: 80vh;
+  overflow: visible;
+
+  /* Responsive positioning */
+  right: 1rem; /* 16px on mobile */
+}
+
+/* Larger screens */
+@media (width >= 768px) {
+  .toc-container {
+    right: 1.5rem; /* 24px on tablet+ */
+  }
+}
+
+@media (width >= 1280px) {
+  .toc-container {
+    right: 1.5rem; /* 24px on desktop */
+  }
+}
+
+.toc-list {
+  @apply relative flex flex-col items-center space-y-3 py-4;
+
+  height: 100%;
+}
+
+/* Timeline line - background (unread) */
+.toc-list::before {
+  content: '';
+
+  @apply absolute bottom-0 left-1/2 top-0 w-0.5;
+  @apply bg-indigo-200 dark:bg-indigo-700;
+
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline line - progress (read) */
+.toc-list::after {
+  content: '';
+
+  @apply absolute left-1/2 top-0 w-0.5;
+  @apply bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600;
+
+  transform: translateX(-50%);
+  z-index: 1;
+
+  /* Height controlled by CSS variable */
+  height: var(--progress-height, 0%);
+  transition: height 0.3s ease-out;
+}
+
+/* Timeline dots with larger hover area */
+.toc-link {
+  @apply relative flex cursor-pointer items-center justify-center;
+  @apply transition-all duration-200;
+
+  text-decoration: none;
+  z-index: 2;
+
+  /* Responsive clickable area */
+  width: 32px;
+  height: 32px;
+  margin: 3px 0;
+
+  /* Background for hover effect */
+  border-radius: 50%;
+}
+
+/* Mobile optimizations */
+@media (width <= 767px) {
+  .toc-link {
+    width: 36px;
+    height: 36px;
+    margin: 2px 0;
+  }
+}
+
+/* Add subtle background when hovering over the list */
+.toc-list:hover .toc-link {
+  @apply bg-indigo-50 dark:bg-indigo-900;
+
+  opacity: 0.7;
+}
+
+/* Highlight the currently hovered link */
+.toc-link:hover {
+  @apply bg-indigo-100 dark:bg-indigo-800;
+
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+/* Actual dot using ::before */
+.toc-link::before {
+  content: '';
+
+  @apply rounded-full transition-all duration-200;
+
+  /* Default unread state - responsive size */
+  width: 12px;
+  height: 12px;
+
+  @apply bg-indigo-300 dark:bg-indigo-600;
+}
+
+/* Larger dots on mobile for better visibility */
+@media (width <= 767px) {
+  .toc-link::before {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Hover effects for dots */
+.toc-list:hover .toc-link::before {
+  /* Dim all dots when hovering over the list */
+  @apply bg-indigo-200 dark:bg-indigo-700;
+
+  opacity: 0.6;
+}
+
+.toc-list:hover .toc-link.read::before {
+  /* Dim read dots */
+  @apply bg-indigo-400;
+
+  opacity: 0.6;
+}
+
+.toc-list:hover .toc-link.active::before {
+  /* Dim active dots */
+  @apply bg-indigo-600;
+
+  opacity: 0.6;
+}
+
+/* Highlight the currently hovered dot */
+.toc-link:hover::before {
+  @apply bg-indigo-700 dark:bg-indigo-200;
+
+  opacity: 1 !important;
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 30%);
+}
+
+.toc-link.read:hover::before {
+  @apply bg-indigo-700;
+
+  opacity: 1 !important;
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 30%);
+}
+
+.toc-link.active:hover::before {
+  @apply bg-indigo-800;
+
+  opacity: 1 !important;
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 40%);
+}
+
+/* Active state */
+.toc-link.active::before {
+  @apply bg-indigo-700 ring-2 ring-indigo-300;
+}
+
+/* Tooltip - show all when any link is hovered */
+.toc-link::after {
+  content: attr(data-tooltip);
+
+  @apply absolute top-1/2 -translate-y-1/2;
+  @apply rounded-lg bg-indigo-600 px-3 py-2 text-xs text-white;
+  @apply whitespace-nowrap shadow-lg;
+  @apply dark:bg-indigo-700 dark:text-indigo-100;
+
+  /* Fixed position to the left of the timeline */
+  right: 44px;
+  z-index: 50;
+
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+
+  /* Prevent tooltip from going off screen */
+  max-width: calc(100vw - 80px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile tooltip adjustments */
+@media (width <= 767px) {
+  .toc-link::after {
+    right: 48px;
+
+    @apply px-2 py-1 text-xs;
+
+    max-width: calc(100vw - 100px);
+  }
+}
+
+/* Show all tooltips when any link is hovered */
+.toc-list:hover .toc-link::after {
+  opacity: 1;
+}
+
+/* Highlight the currently hovered tooltip */
+.toc-link:hover::after {
+  @apply bg-indigo-800 text-white;
+  @apply dark:bg-indigo-600 dark:text-indigo-50;
+  @apply font-medium;
+
+  transform: translateY(-50%) scale(1.05);
+  box-shadow:
+    0 8px 25px -3px rgb(0 0 0 / 20%),
+    0 4px 6px -2px rgb(0 0 0 / 10%);
+}
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Mobile touch optimizations */
+@media (width <= 767px) {
+  /* Ensure TOC doesn't interfere with content on very small screens */
+  .toc-container {
+    right: 0.5rem;
+
+    /* Semi-transparent by default on mobile */
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Full opacity when interacting */
+  .toc-container:active,
+  .toc-container:hover,
+  .toc-container:focus-within {
+    opacity: 1;
+  }
+
+  /* Semi-transparent timeline and dots */
+  .toc-list::before {
+    @apply bg-indigo-200/60 dark:bg-indigo-700/60;
+  }
+
+  .toc-list::after {
+    @apply bg-gradient-to-b from-indigo-400/70 via-indigo-500/70 to-indigo-600/70;
+  }
+
+  .toc-link::before {
+    @apply bg-indigo-300/70 dark:bg-indigo-600/70;
+  }
+
+  .toc-link.read::before {
+    @apply bg-indigo-500/80;
+  }
+
+  .toc-link.active::before {
+    @apply bg-indigo-700/90;
+  }
+
+  /* Full opacity when container is active */
+  .toc-container:active .toc-list::before,
+  .toc-container:hover .toc-list::before {
+    @apply bg-indigo-200 dark:bg-indigo-700;
+  }
+
+  .toc-container:active .toc-list::after,
+  .toc-container:hover .toc-list::after {
+    @apply bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600;
+  }
+
+  .toc-container:active .toc-link::before,
+  .toc-container:hover .toc-link::before {
+    @apply bg-indigo-300 dark:bg-indigo-600;
+  }
+
+  .toc-container:active .toc-link.read::before,
+  .toc-container:hover .toc-link.read::before {
+    @apply bg-indigo-500;
+  }
+
+  .toc-container:active .toc-link.active::before,
+  .toc-container:hover .toc-link.active::before {
+    @apply bg-indigo-700;
+  }
+
+  /* Better touch targets */
+  .toc-link {
+    -webkit-tap-highlight-color: rgb(99 102 241 / 30%);
+    /* stylelint-disable-next-line property-no-unknown */
+    tap-highlight-color: rgb(99 102 241 / 30%);
+  }
+
+  /* Show tooltips on touch for mobile */
+  .toc-link:active::after {
+    opacity: 1;
+  }
+
+  /* Reduce animation intensity on mobile for better performance */
+  .toc-link:active {
+    transform: scale(1.05);
+  }
+
+  .toc-link:active::before {
+    transform: scale(1.1);
+  }
+
+  /* Add subtle swipe indicator */
+  .toc-container::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 4px;
+    background: rgb(148 163 184 / 50%);
+    border-radius: 1px;
+    animation: swipe-hint 2s ease-in-out infinite;
+  }
+
+  @keyframes swipe-hint {
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Hide hint when interacting */
+  .toc-container:active::after,
+  .toc-container:hover::after {
+    opacity: 0;
+  }
+}

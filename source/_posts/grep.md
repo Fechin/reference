@@ -1,7 +1,7 @@
 ---
 title: Grep
 date: 2020-11-25 18:28:43
-background: bg-emerald-400
+background: bg-indigo-400
 tags:
   - egrep
   - search

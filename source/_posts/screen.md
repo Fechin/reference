@@ -1,7 +1,7 @@
 ---
 title: Screen
 date: 2021-01-02 20:03:55
-background: bg-emerald-500
+background: bg-indigo-500
 tags:
   - terminal
   - session

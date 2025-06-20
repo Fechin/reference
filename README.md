@@ -12,9 +12,10 @@ sheet that could be improved, feel free to submit a [pull request](#-contributin
 
 ## 👀 Live Demonstration
 
-Note: The original domain for this project was quickref.me, which was acquired by a US-based company. Since then, cheatsheets.zip is the primary and maintained domain (All within the bounds of the agreements).
+Note: The original domain for this project was quickref.me, which was acquired by a US-based company. Since then,
+cheatsheets.zip is the primary and maintained domain (All within the bounds of the agreements).
 
-You can view the most up-to-date cheat sheets live at [https://cheatsheets.zip](https://cheatsheets.zip/). 
+You can view the most up-to-date cheat sheets live at [https://cheatsheets.zip](https://cheatsheets.zip/).
 
 [![Quick reference](https://cheatsheets.zip/assets/image/preview.png?9nd3)](https://cheatsheets.zip)
 
@@ -25,33 +26,58 @@ Reference provides cheat sheets for the following:
 <details>
 <summary>Programming</summary>
 
-- [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with Linux bash shell scripting.
+- [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with Linux bash
+  shell scripting.
 - [C](https://cheatsheets.zip/c.html): C quick reference cheat sheet that provides basic syntax and methods.
 - [C++](https://cheatsheets.zip/cpp.html): C++ quick reference cheat sheet that provides basic syntax and methods.
 - [C#](https://cheatsheets.zip/cs.html): C# quick reference cheat sheet that provides basic syntax and methods.
-- [CSS 3](https://cheatsheets.zip/css.html): This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.
-- [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
-- [Docker](https://cheatsheets.zip/docker.html): This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
-- [ES6](https://cheatsheets.zip/es6.html): A quick reference cheat sheet of what’s new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond
-- [Go](https://cheatsheets.zip/go.html): This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).
-- [GraphQL](https://cheatsheets.zip/graphql.html): This quick reference cheat sheet provides a brief overview of GraphQL.
-- [Hook](https://cheatsheets.zip/hook.html): The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
-- [HTML](https://cheatsheets.zip/html.html): This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.
-- [INI](https://cheatsheets.zip/ini.html): This is a quick reference cheat sheet for understanding and writing INI-format configuration files.
-- [Java](https://cheatsheets.zip/java.html): This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.
-- [JavaScript](https://cheatsheets.zip/javascript.html): A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
-- [jQuery](https://cheatsheets.zip/jquery.html): This [jQuery](https://jquery.com/) cheat sheet is a great reference for both beginners and experienced developers.
-- [Kubernetes](https://cheatsheets.zip/kubernetes.html): This page contains a list of commonly used kubectl commands and flags.
-- [LaTeX](https://cheatsheets.zip/latex.html): This cheat sheet summarizes a reference list of [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of [KaTeX](https://katex.org/).
-- [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. This cheat sheet provides a reference for common commands and features for Laravel 8.
-- [MATLAB](https://cheatsheets.zip/matlab.html): This quick reference cheat sheet provides an example introduction to using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
+- [CSS 3](https://cheatsheets.zip/css.html): This is a quick reference cheat sheet for CSS goodness, listing selector
+  syntax, properties, units and other useful bits of information.
+- [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods,
+  and more. A complete quick reference for beginners.
+- [Docker](https://cheatsheets.zip/docker.html): This is a quick reference cheat sheet for
+  [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
+- [ES6](https://cheatsheets.zip/es6.html): A quick reference cheat sheet of what’s new in JavaScript for ES2015, ES2016,
+  ES2017, ES2018 and beyond
+- [Go](https://cheatsheets.zip/go.html): This cheat sheet provided basic syntax and methods to help you using
+  [Go](https://go.dev/).
+- [GraphQL](https://cheatsheets.zip/graphql.html): This quick reference cheat sheet provides a brief overview of
+  GraphQL.
+- [Hook](https://cheatsheets.zip/hook.html): The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page
+  reference sheet for the Hook programming language.
+- [HTML](https://cheatsheets.zip/html.html): This HTML quick reference cheat sheet lists the common HTML and HTML5 tags
+  in readable layout.
+- [INI](https://cheatsheets.zip/ini.html): This is a quick reference cheat sheet for understanding and writing
+  INI-format configuration files.
+- [Java](https://cheatsheets.zip/java.html): This cheat sheet is a crash course for Java beginners and help review the
+  basic syntax of the Java language.
+- [JavaScript](https://cheatsheets.zip/javascript.html): A JavaScript cheat sheet with the most important concepts,
+  functions, methods, and more. A complete quick reference for beginners.
+- [jQuery](https://cheatsheets.zip/jquery.html): This [jQuery](https://jquery.com/) cheat sheet is a great reference for
+  both beginners and experienced developers.
+- [Kubernetes](https://cheatsheets.zip/kubernetes.html): This page contains a list of commonly used kubectl commands and
+  flags.
+- [LaTeX](https://cheatsheets.zip/latex.html): This cheat sheet summarizes a reference list of
+  [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of
+  [KaTeX](https://katex.org/).
+- [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and
+  progressive web application framework for PHP. This cheat sheet provides a reference for common commands and features
+  for Laravel 8.
+- [MATLAB](https://cheatsheets.zip/matlab.html): This quick reference cheat sheet provides an example introduction to
+  using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
 - [Markdown](https://cheatsheets.zip/markdown.html): This is a quick reference cheat sheet to the Markdown syntax.
-- [PHP](https://cheatsheets.zip/php.html): This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference for quickly looking up the correct syntax for the code you use most frequently.
-- [Python](https://cheatsheets.zip/python.html): The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.
-- [Rust](https://cheatsheets.zip/rust.html): The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
-- [Sass](https://cheatsheets.zip/sass.html): This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
-- [TOML](https://cheatsheets.zip/toml.html): This is a quick reference cheat sheet to the TOML format configuration file syntax.
-- [YAML](https://cheatsheets.zip/yaml.html): This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
+- [PHP](https://cheatsheets.zip/php.html): This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference
+  for quickly looking up the correct syntax for the code you use most frequently.
+- [Python](https://cheatsheets.zip/python.html): The [Python](https://www.python.org/) cheat sheet is a one-page
+  reference sheet for the Python 3 programming language.
+- [Rust](https://cheatsheets.zip/rust.html): The Rust quick reference cheat sheet that aims at providing help on writing
+  basic syntax and methods.
+- [Sass](https://cheatsheets.zip/sass.html): This is a quick reference cheat sheet that lists the most useful features
+  of [SASS](https://sass-lang.com).
+- [TOML](https://cheatsheets.zip/toml.html): This is a quick reference cheat sheet to the TOML format configuration file
+  syntax.
+- [YAML](https://cheatsheets.zip/yaml.html): This is a quick reference cheat sheet for understanding and writing YAML
+  format configuration files.
 
 </details>
 
@@ -116,18 +142,23 @@ Reference provides cheat sheets for the following:
 
 - [NumPy](https://cheatsheets.zip/numpy.html): [NumPy](https://numpy.org/) is the fundamental package for scientific
   computing with Python. This cheat sheet is a quick reference for NumPy beginners.
-- [Pandas](https://cheatsheets.zip/pandas.html): [Pandas](https://pandas.pydata.org/) is a powerful data analysis and manipulation library for Python. This quick reference cheat sheet provides an overview of essential Pandas functions, methods, and DataFrame operations.
+- [Pandas](https://cheatsheets.zip/pandas.html): [Pandas](https://pandas.pydata.org/) is a powerful data analysis and
+  manipulation library for Python. This quick reference cheat sheet provides an overview of essential Pandas functions,
+  methods, and DataFrame operations.
 
 </details>
 
 <details>
 <summary>Database</summary>
 
-- [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.
-- [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.
-- [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.
-- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
-
+- [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL
+  statements for your reference.
+- [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how
+  to query the database with Cypher.
+- [PostgreSQL](https://cheatsheets.zip/postgres.html): The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat
+  sheet provides you with the common PostgreSQL commands and statements.
+- [Redis](https://cheatsheets.zip/redis.html): This is a [Redis](https://redis.io/) quick reference cheat sheet that
+  lists examples of redis commands
 
 </details>
 
@@ -267,28 +298,39 @@ Reference provides cheat sheets for the following:
 
 </details>
 
-
 <details>
 <summary>Shaders</summary>
 
-- [Unity Shader Graph](https://cheatsheets.zip/unity-shader-graph.html): This is a visual cheat-sheet for the Unity Shader Graph. This tool is used to create custom shaders material in Unity, a popular game engine.
+- [Unity Shader Graph](https://cheatsheets.zip/unity-shader-graph.html): This is a visual cheat-sheet for the Unity
+  Shader Graph. This tool is used to create custom shaders material in Unity, a popular game engine.
 
 </details>
-
 
 <details>
 <summary>Other</summary>
 
-- [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with their numbers and names.
-- [Aspect Ratio](https://cheatsheets.zip/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their pixel resolutions. Always confirm your final delivery ratio when shooting.
-- [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on CheatSheets.zip, It’s a good practice for contributors.
-- [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
-- [Google Search](https://cheatsheets.zip/google-search.html): This quick reference cheat sheet lists of Google advanced search operators.
-- [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.
-- [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that conform to the ISO 639-1 standard, it provide reference for multi-language website.
-- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick reference to every HTTP status code.
-- [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
-- [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches
+- [ASCII Code](https://cheatsheets.zip/ascii-code.html): This cheat sheet is a complete list of ASCII Code Table with
+  their numbers and names.
+- [Aspect Ratio](https://cheatsheets.zip/aspect-ratio.html): This cheat sheet lists some common aspect ratios and their
+  pixel resolutions. Always confirm your final delivery ratio when shooting.
+- [CheatSheets](https://cheatsheets.zip/quickref.html): This is the magic syntax variant manual that you can use on
+  CheatSheets.zip, It’s a good practice for contributors.
+- [Emoji](https://cheatsheets.zip/emoji.html): Some of the emoji codes are not super easy to remember, so here is a
+  little cheat sheet.
+- [Google Search](https://cheatsheets.zip/google-search.html): This quick reference cheat sheet lists of Google advanced
+  search operators.
+- [HTML Characters Entities](https://cheatsheets.zip/html-char.html): This cheat sheet is a complete list of HTML
+  entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in
+  HTML.
+- [ISO 639-1 Language Code](https://cheatsheets.zip/iso-639-1.html): This is a list of the ISO language codes that
+  conform to the ISO 639-1 standard, it provide reference for multi-language website.
+- [HTTP Status Code](https://cheatsheets.zip/http-status-code.html): The http status codes cheat sheet. A quick
+  reference to every HTTP status code.
+- [MIME types](https://cheatsheets.zip/mime.html): This cheat sheet lists some common MIME types for the Web. You can
+  look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains
+  all registered MIME types.
+- [Resolutions](https://cheatsheets.zip/resolutions.html): This cheat sheet lists screen sizes, viewport size and CSS
+  media queries for popular Phones, Tablets, Laptops and Watches
 
 </details>
 
@@ -317,10 +359,13 @@ Reference provides cheat sheets for the following:
 
 ## 🤝 Contributing
 
+We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes
+this project a truly resource. Please note that the primary domain for accessing the most up-to-date content is
+[cheatsheets.zip](https://cheatsheets.zip). Feel free to
+[submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
 
-We would like to extend our gratitude to you for considering a contribution to Reference. Your support is what makes this project a truly resource. Please note that the primary domain for accessing the most up-to-date content is [cheatsheets.zip](https://cheatsheets.zip). Feel free to [submit issues](https://github.com/Fechin/reference/issues/new?assignee=Fechin) and enhancement requests.
-
-For consistency, we encourage you to refer to the [https://cheatsheets.zip/quickref](https://cheatsheets.zip/quickref) when creating or editing cheat sheets. To get started with development, follow these steps:
+For consistency, we encourage you to refer to the [https://cheatsheets.zip/quickref](https://cheatsheets.zip/quickref)
+when creating or editing cheat sheets. To get started with development, follow these steps:
 
 1. Clone Github repo `git clone https://github.com/Fechin/reference.git`
 2. Install `npm` package manager (Read
@@ -338,7 +383,7 @@ file should include a front matter section with the following format:
 title: CheatSheets
 date: 2020-11-25 18:28:43
 icon: icon-style
-background: bg-emerald-600
+background: bg-indigo-600
 tags:
 categories:
 - Other
@@ -352,8 +397,6 @@ Only the `title` and `intro` fields are required, and the other options can be l
   <img src="https://contrib.rocks/image?repo=Fechin/reference" />
 </a>
 
-
-
 ## 🐦 Follow us on Twitter
 
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/FechinLi?color=%234a99e9&style=for-the-badge)](https://twitter.com/FechinLi)
@@ -361,9 +404,9 @@ Only the `title` and `intro` fields are required, and the other options can be l
 Stay up-to-date with our project by following us on Twitter! Get all the latest news and updates right in your feed.
 It's the perfect way to stay in the loop.
 
-<a href="https://www.buymeacoffee.com/randy8080"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=randy8080&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
+<a href="https://buymeacoffee.com/cheatsheets.zip"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cheatsheets.zip&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 ## 📃 License
 
-The project is licensed under the [GPL-3.0](https://github.com/Fechin/reference/blob/main/LICENSE) License and is maintained
-by [Fechin](https://github.com/Fechin).
+The project is licensed under the [GPL-3.0](https://github.com/Fechin/reference/blob/main/LICENSE) License and is
+maintained by [Fechin](https://github.com/Fechin).

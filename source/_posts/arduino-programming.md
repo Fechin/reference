@@ -3,8 +3,7 @@ title: Arduino Programming
 date: 2024-05-29 8:58:31
 background: bg-[#387f83]
 label:
-tags: -cpp
-  -I/O
+tags: -cpp -I/O
 categories:
   - Programming
 intro: |
@@ -42,7 +41,8 @@ plugins:
 
 - Select the Port:
 
-- Go to Tools > Port and select the port that the Arduino is connected to (it usually shows as COMx on Windows, /dev/cu.usbmodemxxxx on macOS, and /dev/ttyUSBx on Linux).
+- Go to Tools > Port and select the port that the Arduino is connected to (it usually shows as COMx on Windows,
+  /dev/cu.usbmodemxxxx on macOS, and /dev/ttyUSBx on Linux).
 
 ## Basic Structure
 

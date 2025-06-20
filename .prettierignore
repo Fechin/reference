@@ -1,3 +1,44 @@
-# Minimized files
-**.min.css
-fuse_*.js
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# Build outputs
+public/
+dist/
+.hexo/
+
+# Generated files
+db.json
+themes/coo/source/css/style.css
+
+# Third-party libraries
+themes/coo/source/js/fuse_*.js
+*.min.js
+*.min.css
+
+# Large asset files
+source/assets/image/
+source/assets/icon/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp

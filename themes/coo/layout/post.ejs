@@ -6,6 +6,14 @@
                 <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span>
             </h1>
             <div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><%- page.intro != null ? markdown(page.intro) : "" %></div>
+
+            <!-- Social Buttons (Inline) -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mt-6 mb-8">
+                <%- partial('_partial/buttons/github-star', {variant: 'inline', showLabel: true}) %>
+                <%- partial('_partial/buttons/follow-x', {variant: 'inline', showLabel: true}) %>
+                <%- partial('_partial/buttons/buy-coffee', {variant: 'inline', showLabel: true}) %>
+            </div>
+
             <div class="pt-5" id="carbon_container"></div>
         </div>
     </div>

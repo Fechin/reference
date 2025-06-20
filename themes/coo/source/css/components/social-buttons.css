@@ -1,0 +1,198 @@
+/* Social Buttons Component Styles */
+
+/* Base styles for all social buttons */
+.social-buttons {
+  /* Ensure proper spacing and alignment */
+}
+
+/* Fix icon and text alignment issues */
+.social-buttons a {
+  /* Ensure perfect vertical alignment */
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.social-buttons a > div,
+.social-buttons a > span {
+  /* Remove any default margins that might cause misalignment */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  /* Ensure consistent line height */
+  line-height: 1 !important;
+
+  /* Prevent flex items from growing/shrinking unexpectedly */
+  flex-shrink: 0;
+}
+
+/* Specific fixes for SVG icons */
+.social-buttons svg {
+  /* Ensure SVG icons are properly aligned */
+  vertical-align: middle;
+  display: block;
+
+  /* Override any fixed width/height attributes to match container */
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Ensure icon containers have consistent sizing */
+.social-buttons .w-4 {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.social-buttons .w-5 {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+/* Force all SVG icons to inherit container dimensions */
+.social-buttons .w-4 svg,
+.social-buttons .w-5 svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Hero variant - large buttons for homepage */
+.social-buttons.hero {
+  /* Already handled by Tailwind classes in component */
+}
+
+/* Compact variant - small icons for navbar */
+.social-buttons.compact {
+  /* Hide on mobile to save space */
+  @media (width <= 1023px) {
+    display: none !important;
+  }
+}
+
+/* Inline variant - medium size for detail pages */
+.social-buttons.inline {
+  /* Responsive adjustments for inline variant */
+  @media (width <= 768px) {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (width <= 640px) {
+    /* Stack vertically on small screens */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
+/* GitHub stars counter responsive behavior */
+[id^='github-stars'] {
+  /* Ensure stars counter is readable */
+  min-width: 2rem;
+  text-align: center;
+}
+
+/* Compact variant specific styling for navbar */
+#github-stars-compact {
+  min-width: 2.5rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Ensure proper text color for compact variant */
+#github-stars-compact {
+  color: inherit;
+}
+
+/* Home page compact variant */
+.home #github-stars-compact {
+  color: rgb(255 255 255 / 90%);
+}
+
+/* Non-home page compact variant */
+body:not(.home) #github-stars-compact {
+  color: rgb(71 85 105); /* slate-600 */
+}
+
+.dark body:not(.home) #github-stars-compact {
+  color: rgb(203 213 225); /* slate-300 */
+}
+
+/* Loading animation for stars */
+.loading-dots {
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%,
+  20% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80%,
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* Button hover effects - ensure they work on all variants */
+.social-buttons a {
+  /* Smooth transitions */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Responsive text sizing */
+@media (width <= 640px) {
+  .social-buttons.inline a {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .social-buttons.inline [id^='github-stars'] {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Ensure proper spacing between buttons on all screen sizes */
+.social-buttons.hero {
+  @media (width <= 1024px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .social-buttons.inline a {
+    /* Ensure good contrast in dark mode */
+    border-color: rgb(51 65 85 / 70%);
+  }
+}
+
+/* Focus states for accessibility */
+.social-buttons a:focus {
+  outline: 2px solid rgb(59 130 246);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .social-buttons a {
+    transition: none;
+  }
+
+  .social-buttons a:hover {
+    transform: none !important;
+  }
+
+  .loading-dots {
+    animation: none;
+  }
+}

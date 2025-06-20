@@ -1,12 +1,16 @@
 code {
-  @apply text-emerald-600;
+  @apply text-indigo-600;
   @apply dark:text-slate-300;
 }
 
 pre {
   line-height: 1.5;
+
   @apply overflow-hidden overflow-x-auto bg-white p-4;
-  @apply dark:bg-slate-800;
+}
+
+pre:is(.dark *) {
+  background-color: transparent;
 }
 
 .mdLayout pre + p:not(:last-child) {
@@ -32,7 +36,7 @@ pre > code.wrap {
 
 .mdLayout .line-highlight {
   transform: translate3d(0, 2px, 0);
-  background: linear-gradient(to right, rgba(20, 175, 131, 0.05) 25%, transparent);
+  background: linear-gradient(to right, rgb(20 175 131 / 5%) 25%, transparent);
 }
 
 .mdLayout .line-highlight[data-end] {
