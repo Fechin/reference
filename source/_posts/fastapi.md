@@ -1,7 +1,7 @@
 ---
 title: FastAPI
 date: 2025-06-07 18:40:00
-background: bg-[#059669]
+background: bg-[#3730a3]
 tags:
   - web
   - python

@@ -39,7 +39,7 @@
 .note-content pre,
 .note-content pre > code {
   @apply mt-3 rounded-lg bg-[#f6f6f6];
-  @apply dark:bg-slate-800;
+  @apply dark:bg-indigo-900;
 }
 
 .note-content a {
@@ -52,7 +52,7 @@
 }
 
 .note-content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #2bbc8a 4px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 4px, #6366f1 4px, #6366f1);
 }
 
 .note-content h2 {
@@ -76,7 +76,7 @@
 }
 
 .note-content blockquote {
-  border-left: 3px solid #2bbc8a;
+  border-left: 3px solid #6366f1;
   border-left-width: 6px;
   background-color: #f8f8f8;
   padding: 15px 20px;

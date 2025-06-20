@@ -1,0 +1,489 @@
+/* Modern Navbar Styles */
+
+/* Share Dropdown Styles */
+.share-dropdown {
+  position: relative;
+  z-index: 1000; /* Ensure container has sufficient z-index */
+}
+
+/* Ensure navbar container doesn't clip dropdown menu */
+header .max-container {
+  overflow: visible;
+  position: relative; /* Ensure z-index takes effect */
+}
+
+#share-menu {
+  transform-origin: top right;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Use absolute positioning, follow button position */
+  position: absolute;
+  z-index: 99999; /* Increase z-index to ensure it's on top layer */
+  pointer-events: auto; /* Ensure it can be clicked */
+}
+
+#share-menu.opacity-0 {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95) translateY(-10px);
+}
+
+#share-menu.opacity-100 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+/* Share menu items - Fix alignment and overflow issues */
+.share-item {
+  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto; /* Ensure menu items can be clicked */
+
+  /* Fix icon and text alignment */
+  align-items: center;
+  display: flex;
+}
+
+/* Fix icon container alignment */
+.share-item .flex-shrink-0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Fix SVG icon alignment within container */
+.share-item .flex-shrink-0 svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Fix hover background to not overflow container */
+.share-item:hover {
+  background-color: rgb(148 163 184 / 10%);
+  border-radius: 0.75rem; /* 12px rounded-xl */
+  margin: 0.25rem 0.5rem; /* 4px 8px - ensure margin for rounded corners */
+}
+
+.dark .share-item:hover {
+  background-color: rgb(71 85 105 / 50%);
+}
+
+/* Fix the last item specifically to prevent overflow */
+.share-item:last-child {
+  margin-bottom: 0.25rem; /* Ensure bottom margin */
+}
+
+/* Ensure dropdown menu can be interacted with when visible */
+#share-menu.opacity-100 {
+  pointer-events: auto;
+}
+
+#share-menu.opacity-0 {
+  pointer-events: none;
+}
+
+/* Debug styles - ensure dropdown menu is visible */
+#share-menu {
+  /* Temporary debug: make menu always visible */
+
+  /* opacity: 1 !important; */
+
+  /* visibility: visible !important; */
+
+  /* transform: scale(1) !important; */
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    background-color: rgb(255 255 255 / 80%);
+  }
+
+  .dark .backdrop-blur-sm {
+    background-color: rgb(0 0 0 / 80%);
+  }
+}
+
+/* Professional Flexbox Layout Solution for Home Page */
+body {
+  padding-top: 0;
+  margin: 0;
+}
+
+/* Use modern viewport units with fallback */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh; /* Fallback */
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header positioning for home page - use relative instead of absolute */
+header.home {
+  position: relative; /* Change from absolute to relative for natural flow */
+  z-index: 50;
+  flex-shrink: 0; /* Don't shrink */
+
+  /* Keep all the background styling for hero section */
+}
+
+/* Main content area takes remaining space */
+section.home {
+  flex: 1; /* Take all available space */
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Footer stays at bottom */
+footer {
+  flex-shrink: 0; /* Don't shrink */
+  margin-top: auto; /* Push to bottom if content is short */
+}
+
+/* Content spacing - natural and responsive */
+section.home .max-container {
+  margin-top: 0;
+  padding-top: 2rem; /* Clean visual spacing */
+  flex: 1; /* Take available space in the section */
+}
+
+/* Legacy selector for backward compatibility */
+.home .max-container:last-child {
+  margin-top: 2rem;
+}
+
+/* Mobile optimizations */
+@media (width <= 768px) {
+  /* Adjust header spacing on mobile */
+  header .max-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Make buttons more touch-friendly */
+  #mysearch-trigger,
+  #darkMode,
+  #share-trigger {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Adjust share dropdown position on mobile */
+  #share-menu {
+    right: 0;
+    left: auto;
+    width: 280px;
+    max-width: calc(100vw - 2rem);
+  }
+
+  /* Hero section mobile adjustments */
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-section h2 {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  /* CTA buttons stack on mobile */
+  .hero-cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-cta-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Stats grid on mobile */
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Mobile grid adjustments */
+  body:has(.home) {
+    grid-template-rows: auto 1fr auto; /* Maintain grid structure */
+  }
+
+  /* Fix mobile content spacing */
+  section.home .max-container {
+    padding-top: 1.5rem; /* Responsive spacing */
+  }
+
+  .home .max-container:last-child {
+    margin-top: 1rem;
+    padding-top: 2rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (width >= 769px) and (width <= 1024px) {
+  /* Adjust container width on tablet */
+  .max-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Hero section tablet adjustments */
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Tablet grid adjustments */
+  section.home .max-container {
+    padding-top: 2rem; /* Consistent responsive spacing */
+  }
+}
+
+/* Large screen optimizations */
+@media (width >= 1280px) {
+  /* Add more spacing on large screens */
+  .hero-section {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Large screen grid adjustments */
+  section.home .max-container {
+    padding-top: 3rem; /* Slightly more spacing for large screens */
+  }
+}
+
+/* Animation improvements */
+@media (prefers-reduced-motion: no-preference) {
+  /* Add subtle animations */
+  .fadeIn {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fadeIn:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .fadeIn:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .fadeIn:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .fadeIn:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fadeIn,
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+#mysearch-trigger:focus,
+#darkMode:focus,
+#share-trigger:focus {
+  outline: 2px solid rgb(99 102 241);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  #share-menu {
+    border: 2px solid;
+  }
+
+  .share-item:hover {
+    border: 1px solid;
+  }
+}
+
+/* Hero section specific styles */
+.hero-section {
+  background: linear-gradient(135deg, rgb(99 102 241), rgb(139 92 246));
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header background styles for home page (positioning handled above) */
+header.home .max-container {
+  background: transparent;
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(-50px);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+/* Apply animations */
+header .animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+header .animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+header .animate-drift {
+  animation: drift 20s linear infinite;
+}
+
+/* Background effects */
+.mesh-gradient {
+  background: linear-gradient(
+    135deg,
+    rgb(99 102 241 / 80%),
+    rgb(139 92 246 / 80%),
+    rgb(168 85 247 / 80%)
+  );
+}
+
+/* Search trigger styles */
+#mysearch-trigger {
+  position: relative;
+}
+
+#mysearch-trigger .shortcut-key {
+  opacity: 0.7;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+/* Loading animation for GitHub stars */
+.loading-dots {
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%,
+  20% {
+    color: transparent;
+    text-shadow:
+      0.25em 0 0 currentcolor,
+      0.5em 0 0 transparent;
+  }
+
+  40% {
+    color: currentcolor;
+    text-shadow:
+      0.25em 0 0 transparent,
+      0.5em 0 0 transparent;
+  }
+
+  60%,
+  80% {
+    text-shadow:
+      0.25em 0 0 currentcolor,
+      0.5em 0 0 currentcolor;
+  }
+}
+
+/* GitHub stars counter */
+#github-stars {
+  transition: all 0.2s ease-in-out;
+  min-width: 2rem;
+  text-align: center;
+}
+
+#github-stars.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Donation button styles */
+.donation-button-hero {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.donation-button-hero:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 25px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -2px rgb(0 0 0 / 5%);
+}

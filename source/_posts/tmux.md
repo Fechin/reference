@@ -1,7 +1,7 @@
 ---
 title: Tmux
 date: 2021-02-20 14:31:24
-background: bg-emerald-600
+background: bg-indigo-600
 tags:
   - utility
   - terminal

@@ -1,0 +1,84 @@
+<%
+// Follow on X button component
+// variant: 'hero' | 'compact' | 'inline'
+// showLabel: boolean - whether to show text label
+// className: string - additional CSS class names
+
+const variant = locals.variant || 'inline';
+const showLabel = locals.showLabel !== false; // show label by default
+const className = locals.className || '';
+
+// Set styles based on variant
+const buttonBaseClass = {
+    hero: 'group inline-flex items-center justify-center px-6 py-3 backdrop-blur-sm outline outline-1 rounded-3xl transition-all duration-300 hover:scale-105 hover:shadow-lg',
+    compact: 'group inline-flex items-center justify-center h-9 px-3 backdrop-blur-sm outline outline-1 rounded-3xl transition-colors duration-200',
+    inline: 'group inline-flex items-center justify-center h-9 px-4 backdrop-blur-sm outline outline-1 rounded-3xl transition-all duration-200 hover:scale-105',
+    request: 'group inline-flex items-center justify-center px-6 py-3 backdrop-blur-sm outline outline-1 rounded-3xl transition-all duration-300 hover:scale-105 hover:shadow-lg'
+}[variant];
+
+// X button styles - consistent background colors with GitHub button
+const xClass = {
+    hero: 'bg-white/10 outline-white/20 text-white hover:bg-white/20',
+    compact: is_home() ? 'bg-white/10 outline-white/20 text-white hover:bg-white/20' : 'bg-white outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700',
+    inline: 'bg-white outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700',
+    request: 'bg-blue-600/80 outline-blue-500/50 text-white hover:bg-blue-500/90 dark:bg-blue-500/20 dark:outline-blue-400/30 dark:text-white dark:hover:bg-blue-500/30'
+}[variant];
+
+// Icon size and styles
+const iconClass = {
+    hero: 'w-5 h-5 flex-shrink-0 flex items-center justify-center',
+    compact: 'w-4 h-4 flex-shrink-0 flex items-center justify-center',
+    inline: 'w-4 h-4 flex-shrink-0 flex items-center justify-center',
+    request: 'w-5 h-5 flex-shrink-0 flex items-center justify-center'
+}[variant];
+
+// Text size
+const textSize = {
+    hero: 'font-semibold leading-none',
+    compact: 'text-sm font-medium leading-none',
+    inline: 'text-sm font-medium leading-none',
+    request: 'font-semibold leading-none'
+}[variant];
+
+// Spacing
+const spacing = {
+    hero: 'mr-3',
+    compact: 'mr-2',
+    inline: 'mr-2',
+    request: 'mr-3'
+}[variant];
+%>
+
+<% if (variant === 'request') { %>
+<a href="https://x.com/FechinLi" target="_blank"
+   class="<%= buttonBaseClass %> <%= xClass %> <%= className %>">
+    <div class="<%= iconClass %> <%= spacing %> group-hover:scale-110 transition-transform">
+        <%- icon("x") %>
+    </div>
+    <% if (showLabel) { %>
+        <span class="<%= textSize %>">
+            Follow us on X
+        </span>
+        <div class="ml-2 group-hover:translate-x-1 transition-transform leading-none">
+            →
+        </div>
+    <% } %>
+</a>
+<% } else { %>
+<a href="https://x.com/FechinLi" target="_blank"
+   class="<%= buttonBaseClass %> <%= xClass %> <%= className %>">
+    <div class="<%= iconClass %> <%= spacing %> <% if (variant === 'hero') { %>group-hover:scale-110 transition-transform<% } %>">
+        <%- icon("x") %>
+    </div>
+    <% if (showLabel) { %>
+        <span class="<%= textSize %>">
+            <% if (variant === 'compact') { %>Follow<% } else { %>Follow us on X<% } %>
+        </span>
+        <% if (variant === 'hero') { %>
+            <div class="ml-2 group-hover:translate-x-1 transition-transform leading-none">
+                →
+            </div>
+        <% } %>
+    <% } %>
+</a>
+<% } %> 

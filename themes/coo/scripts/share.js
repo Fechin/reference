@@ -10,7 +10,8 @@ hexo.extend.helper.register('share_link', function (type) {
       link = `https://facebook.com/sharer/sharer.php?u=${url}`;
       break;
     case 'twitter':
-      link = `https://twitter.com/intent/tweet/?text=${description}&url=${url}`;
+    case 'x':
+      link = `https://x.com/intent/tweet/?text=${description}&url=${url}`;
       break;
     case 'linkedin':
       link = `https://www.linkedin.com/shareArticle?url=${url}&title=${title}&summary=${description}`;

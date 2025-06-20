@@ -42,7 +42,7 @@
 }
 
 .mdLayout table td:first-child > code {
-  @apply text-emerald-600;
+  @apply text-indigo-600;
 }
 
 .mdLayout table a,
@@ -86,7 +86,7 @@ kbd {
   /* text-shadow: 0 1px 0 #fff; */
   color: #303835;
 
-  @apply dark:border-slate-700 dark:bg-slate-700/50 dark:text-slate-300 dark:shadow-none dark:shadow-slate-500;
+  @apply dark:border-indigo-700 dark:bg-indigo-700/50 dark:text-indigo-300 dark:shadow-none dark:shadow-indigo-500;
 }
 
 .mdLayout table.left-text tr th,

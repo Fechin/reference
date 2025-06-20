@@ -1,7 +1,7 @@
 ---
 title: Aspect Ratio
 date: 2022-09-21 10:28:43
-background: bg-emerald-600
+background: bg-indigo-600
 tags:
   - photo
   - image

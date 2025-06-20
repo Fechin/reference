@@ -1,0 +1,73 @@
+<%
+// GitHub Star button component
+// variant: 'hero' | 'compact' | 'inline'
+// showLabel: boolean - whether to show text label
+// className: string - additional CSS class names
+
+const variant = locals.variant || 'inline';
+const showLabel = locals.showLabel !== false; // show label by default
+const className = locals.className || '';
+
+// Set styles based on variant
+const buttonBaseClass = {
+    hero: 'group inline-flex items-center justify-center px-6 py-3 backdrop-blur-sm outline outline-1 rounded-3xl transition-all duration-300 hover:scale-105 hover:shadow-lg',
+    compact: 'group inline-flex items-center justify-center h-9 px-3 backdrop-blur-sm outline outline-1 rounded-3xl transition-colors duration-200',
+    inline: 'group inline-flex items-center justify-center h-9 px-4 backdrop-blur-sm outline outline-1 rounded-3xl transition-all duration-200 hover:scale-105'
+}[variant];
+
+// GitHub button styles
+const githubClass = {
+    hero: 'bg-white/10 outline-white/20 text-white hover:bg-white/20',
+    compact: is_home() ? 'bg-white/10 outline-white/20 text-white hover:bg-white/20' : 'bg-white outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700',
+    inline: 'bg-white outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700'
+}[variant];
+
+// Icon size and styles
+const iconClass = {
+    hero: 'w-5 h-5 flex-shrink-0 flex items-center justify-center',
+    compact: 'w-4 h-4 flex-shrink-0 flex items-center justify-center',
+    inline: 'w-4 h-4 flex-shrink-0 flex items-center justify-center'
+}[variant];
+
+// Text size
+const textSize = {
+    hero: 'font-semibold leading-none',
+    compact: 'text-sm font-medium leading-none',
+    inline: 'text-sm font-medium leading-none'
+}[variant];
+
+// Spacing
+const spacing = {
+    hero: 'mr-3',
+    compact: 'mr-2',
+    inline: 'mr-2'
+}[variant];
+%>
+
+<a href="<%- edit_page() %>" target="_blank"
+   class="<%= buttonBaseClass %> <%= githubClass %> <%= className %>">
+    <div class="<%= iconClass %> <%= spacing %>">
+        <%- icon("github") %>
+    </div>
+    <% if (showLabel) { %>
+        <span class="<%= textSize %>">
+            <% if (variant === 'compact') { %>Star<% } else { %>Star on GitHub<% } %>
+        </span>
+    <% } %>
+    <!-- GitHub Stars Counter -->
+    <% if (variant === 'compact') { %>
+        <% if (is_home()) { %>
+            <div id="github-stars-<%= variant %>" class="ml-2 px-2 py-1 bg-white/10 outline outline-1 outline-white/20 rounded-3xl text-xs font-mono leading-none">
+                <span class="loading-dots">...</span>
+            </div>
+        <% } else { %>
+            <div id="github-stars-<%= variant %>" class="ml-2 px-2 py-1 bg-slate-100 dark:bg-slate-700 outline outline-1 outline-slate-200 dark:outline-slate-600 rounded-3xl text-xs font-mono leading-none">
+                <span class="loading-dots">...</span>
+            </div>
+        <% } %>
+    <% } else { %>
+        <div id="github-stars-<%= variant %>" class="ml-3 px-2 py-1 bg-white/20 rounded-3xl text-xs font-mono leading-none">
+            <span class="loading-dots">...</span>
+        </div>
+    <% } %>
+</a> 

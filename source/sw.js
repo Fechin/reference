@@ -174,14 +174,14 @@ function createOfflineResponse(pathname) {
           .offline-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #10b981;
+            color: #6366f1;
           }
           .offline-message {
             margin-bottom: 1.5rem;
             line-height: 1.6;
           }
           .retry-button {
-            background: #10b981;
+            background: #6366f1;
             color: white;
             border: none;
             padding: 0.75rem 1.5rem;
@@ -190,7 +190,7 @@ function createOfflineResponse(pathname) {
             font-size: 1rem;
           }
           .retry-button:hover {
-            background: #059669;
+            background: #3730a3;
           }
         </style>
       </head>

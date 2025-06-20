@@ -237,7 +237,273 @@ const Utils = (function () {
   }
 })();
 
+// Share Dropdown Functionality with Portal Positioning
+function initShareDropdown() {
+  const shareDropdown = document.getElementById('share-dropdown');
+  const shareTrigger = document.getElementById('share-trigger');
+  const shareMenu = document.getElementById('share-menu');
+
+  if (!shareDropdown || !shareTrigger || !shareMenu) return;
+
+  // Toggle dropdown
+  shareTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isOpen = shareTrigger.getAttribute('aria-expanded') === 'true';
+
+    if (isOpen) {
+      closeShareDropdown();
+    } else {
+      openShareDropdown();
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!shareDropdown.contains(e.target) && !shareMenu.contains(e.target)) {
+      closeShareDropdown();
+    }
+  });
+
+  // Close dropdown on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeShareDropdown();
+    }
+  });
+
+  // Update position on scroll and resize
+  function updatePosition() {
+    if (shareTrigger.getAttribute('aria-expanded') === 'true') {
+      positionDropdown();
+    }
+  }
+
+  window.addEventListener('scroll', updatePosition);
+  window.addEventListener('resize', updatePosition);
+
+  function positionDropdown() {
+    const triggerRect = shareTrigger.getBoundingClientRect();
+    const menuWidth = 224; // w-56 = 14rem = 224px
+    const spacing = 8; // mt-2 = 0.5rem = 8px
+
+    // Calculate position
+    let left = triggerRect.right - menuWidth;
+    let top = triggerRect.bottom + spacing;
+
+    // Ensure menu doesn't go off screen
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    if (left < 8) {
+      left = 8;
+    }
+    if (left + menuWidth > viewportWidth - 8) {
+      left = viewportWidth - menuWidth - 8;
+    }
+
+    // Check if there's enough space below, otherwise show above
+    if (top + 300 > viewportHeight) {
+      // Approximate menu height
+      top = triggerRect.top - 300 - spacing;
+    }
+
+    shareMenu.style.left = `${left}px`;
+    shareMenu.style.top = `${top}px`;
+  }
+
+  function openShareDropdown() {
+    shareTrigger.setAttribute('aria-expanded', 'true');
+
+    // Position the dropdown
+    positionDropdown();
+
+    // Enable pointer events and show menu
+    shareMenu.style.pointerEvents = 'auto';
+    shareMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
+    shareMenu.classList.add('opacity-100', 'visible', 'scale-100');
+  }
+
+  function closeShareDropdown() {
+    shareTrigger.setAttribute('aria-expanded', 'false');
+    shareMenu.style.pointerEvents = 'none';
+    shareMenu.classList.remove('opacity-100', 'visible', 'scale-100');
+    shareMenu.classList.add('opacity-0', 'invisible', 'scale-95');
+  }
+}
+
+// Share Functions
+function shareOnX() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(document.title);
+  window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+function shareOnFacebook() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+}
+
+function shareOnReddit() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  window.open(`https://reddit.com/submit/?url=${url}&resubmit=true&title=${title}`, '_blank');
+}
+
+function shareOnPinterest() {
+  const url = encodeURIComponent(window.location.href);
+  const description = encodeURIComponent(document.title);
+  window.open(
+    `https://pinterest.com/pin/create/button/?url=${url}&description=${description}`,
+    '_blank'
+  );
+}
+
+function shareOnLinkedIn() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  window.open(`https://www.linkedin.com/shareArticle?url=${url}&title=${title}`, '_blank');
+}
+
+function shareOnLine() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://social-plugins.line.me/lineit/share?url=${url}`, '_blank');
+}
+
+function shareViaEmail() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  window.location.href = `mailto:?subject=${title}&body=${url}`;
+}
+
+// Copy to clipboard function
+function copyToClipboard() {
+  const url = window.location.href;
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        showCopyNotification('Link copied to clipboard!');
+      })
+      .catch(() => {
+        fallbackCopyToClipboard(url);
+      });
+  } else {
+    fallbackCopyToClipboard(url);
+  }
+}
+
+function fallbackCopyToClipboard(text) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-999999px';
+  textArea.style.top = '-999999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    document.execCommand('copy');
+    showCopyNotification('Link copied to clipboard!');
+  } catch (err) {
+    showCopyNotification('Failed to copy link');
+  }
+
+  document.body.removeChild(textArea);
+}
+
+function showCopyNotification(message) {
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className =
+    'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+  notification.textContent = message;
+
+  document.body.appendChild(notification);
+
+  // Animate in
+  setTimeout(() => {
+    notification.classList.remove('translate-x-full');
+  }, 100);
+
+  // Animate out and remove
+  setTimeout(() => {
+    notification.classList.add('translate-x-full');
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 300);
+  }, 2000);
+}
+
+// GitHub Stars Functionality
+async function fetchGitHubStars() {
+  // Find all GitHub stars elements (support multiple variants)
+  const starsElements = document.querySelectorAll('[id^="github-stars"]');
+  if (starsElements.length === 0) return;
+
+  try {
+    // Try to get from cache first
+    const cached = localStorage.getItem('github-stars');
+    const cacheTime = localStorage.getItem('github-stars-time');
+    const now = Date.now();
+
+    // Use cache if it's less than 5 minutes old
+    if (cached && cacheTime && now - parseInt(cacheTime) < 5 * 60 * 1000) {
+      starsElements.forEach((element) => {
+        element.innerHTML = formatStarCount(parseInt(cached));
+      });
+      return;
+    }
+
+    // Fetch from GitHub API
+    const response = await fetch('https://api.github.com/repos/Fechin/reference');
+    if (!response.ok) throw new Error('Failed to fetch');
+
+    const data = await response.json();
+    const stars = data.stargazers_count;
+
+    // Cache the result
+    localStorage.setItem('github-stars', stars.toString());
+    localStorage.setItem('github-stars-time', now.toString());
+
+    // Update UI with animation
+    starsElements.forEach((element) => {
+      element.innerHTML = formatStarCount(stars);
+      element.classList.add('animate-pulse');
+      setTimeout(() => {
+        element.classList.remove('animate-pulse');
+      }, 1000);
+    });
+  } catch (error) {
+    console.warn('Failed to fetch GitHub stars:', error);
+    // Fallback to cached value or default
+    const cached = localStorage.getItem('github-stars');
+    const fallbackValue = cached ? formatStarCount(parseInt(cached)) : '6.5k';
+
+    starsElements.forEach((element) => {
+      element.innerHTML = fallbackValue;
+    });
+  }
+}
+
+function formatStarCount(count) {
+  if (count >= 1000) {
+    return (count / 1000).toFixed(1) + 'k';
+  }
+  return count.toString();
+}
+
 window.addEventListener('load', () => {
+  // Initialize share dropdown
+  initShareDropdown();
+
+  // Fetch GitHub stars
+  fetchGitHubStars();
+
+  // Dark mode functionality
   const isDarkMode = document.documentElement.classList.contains('dark');
   if (!isDarkMode) {
     const icon = document.querySelector('#darkMode > i').classList;
@@ -602,9 +868,9 @@ window.addEventListener('load', () => {
         const tagStr = tags.join("<span class='text-slate-300 px-1'>•</span>");
         let tagsHTML = '';
         if (tagStr !== '') {
-          tagsHTML = `<div class="w-px h-3 bg-slate-300 mr-2"></div><span class="mr-2">${tagStr}</span>`;
+          tagsHTML = `<div class="w-px h-3 bg-indigo-300 mr-2"></div><span class="mr-2">${tagStr}</span>`;
         }
-        liHtml += `<li class="group ${activeStr} m-3 fadeIn" data-index="${itemIndex}">
+        liHtml += `<li class="group ${activeStr} m-3" data-index="${itemIndex}">
                                 <a href="${hit.path}" class="flex justify-between items-center rounded-lg py-1 px-4 transition-colors duration-100 ease-in-out overflow-hidden">
                                     <div class="flex items-start">
                                         <div class="flex justify-center items-center w-5 mr-5 mt-2 flex-none">
@@ -642,7 +908,7 @@ window.addEventListener('load', () => {
         let h3HTML = '';
         section.h3.forEach((h3) => {
           const anchor = hit.path + h3.anchor;
-          h3HTML += `<a href="${anchor}" class="inline-block mr-1 px-2 p-0.5 transition duration-200 ease-in-out rounded-full hover:bg-emerald-500 text-slate-500 dark:text-slate-300 hover:text-slate-50">${h3.title.toLowerCase()}</a>`;
+          h3HTML += `<a href="${anchor}" class="inline-block mr-1 px-2 p-0.5 transition duration-200 ease-in-out rounded-full hover:bg-indigo-500 text-slate-500 dark:text-slate-300 hover:text-slate-50">${h3.title.toLowerCase()}</a>`;
         });
         const anchor = hit.path + section.h2.anchor;
         olInnerHtml += `<li class="text-slate-700 dark:text-slate-300 hover:underline hover:text-slate-900 mt-3 mb-2">
@@ -653,7 +919,7 @@ window.addEventListener('load', () => {
 
       document.querySelector('.preview-panel').innerHTML = `<section class="w-full py-3 px-5">
                 <div class="flex justify-center pt-1 pb-4">
-                    <div class="flex justify-center items-center w-8 h-8 rounded ${hit.background === undefined ? 'bg-emerald-500' : hit.background} shadow-lg">
+                    <div class="flex justify-center items-center w-8 h-8 rounded ${hit.background === undefined ? 'bg-indigo-500' : hit.background} shadow-lg">
                         <i class="text-2xl text-slate-100">${hit.icon}</i>
                     </div>
                 </div>

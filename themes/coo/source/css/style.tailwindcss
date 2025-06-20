@@ -14,6 +14,8 @@
 @import "components/search.css";
 @import "components/toc.css";
 @import "components/pagination.css";
+@import "components/navbar.css";
+@import "components/social-buttons.css";
 @import "components/common.css";
 
 
@@ -30,23 +32,6 @@ html.scrollbar {
 /***Scrollbars***/
 :root.dark {
     color-scheme: dark;
-}
-
-/* Restrict changes to mouse users */
-@media (pointer: fine) {
-    ::-webkit-scrollbar {
-        @apply bg-slate-200 w-2 h-2 rounded-lg
-    }
-    ::-webkit-scrollbar-thumb {
-        @apply bg-slate-300 rounded-lg
-    }
-
-    :root.dark ::-webkit-scrollbar {
-        @apply bg-slate-700
-    }
-    :root.dark ::-webkit-scrollbar-thumb {
-        @apply bg-slate-500
-    }
 }
 
 .max-container {
@@ -115,16 +100,16 @@ html.scrollbar {
 }
 
 .mdLayout .h2-wrap > h2 {
-    @apply text-emerald-500 pr-2;
+    @apply text-indigo-600 pr-2;
     @apply dark:text-slate-300;
 }
 
 .mdLayout .h2-wrap > h2 > a.h-anchor {
-    @apply text-emerald-500 pr-2;
+    @apply text-indigo-600 pr-2;
 }
 
 .mdLayout .h2-wrap > h2 > a.h-anchor:hover {
-    @apply text-emerald-600 no-underline cursor-pointer;
+    @apply text-indigo-700 no-underline cursor-pointer;
 }
 
 /** Grid layout. */
@@ -167,8 +152,9 @@ html.scrollbar {
 }
 
 .mdLayout .h2-wrap.boxed, .mdLayout .h3-wrap.boxed {
-    box-shadow: 0 0 0 1.6pt #10b981;
+    box-shadow: 0 0 0 1.6pt #6366f1;
     transition: box-shadow 0.4s ease-in-out;
+    padding: 4px;
 }
 
 .mdLayout .h3-wrap.primary.boxed {
@@ -180,7 +166,8 @@ html.scrollbar {
 }
 
 .mdLayout .h3-wrap > h3 {
-    @apply bg-emerald-500 shadow text-white px-3 py-1 tracking-wider text-xs absolute right-0 top-0 rounded-bl-lg z-10;
+    opacity: 0.9;
+    @apply bg-gradient-to-r from-indigo-500 to-purple-600 shadow text-white px-3 py-1 tracking-wider text-xs absolute right-0 top-0 rounded-bl-lg z-10;
     @apply dark:bg-opacity-70 dark:text-slate-200;
 }
 
@@ -238,12 +225,12 @@ html.scrollbar {
     text-decoration: none;
     border-bottom: solid 1px rgba(85, 102, 119, 0.18);
     @apply dark:text-slate-500;
-    @apply hover:underline hover:decoration-emerald-500 hover:underline-offset-2 hover:decoration-1;
+    @apply hover:underline hover:decoration-indigo-500 hover:underline-offset-2 hover:decoration-1;
 }
 
 .mdLayout .h3-wrap > .section p a:hover,
 .intro p a:hover {
-    @apply text-emerald-500;
+    @apply text-indigo-600;
 }
 
 
@@ -291,7 +278,7 @@ html.scrollbar {
     background-size: 100% 6px;
     background-repeat: repeat-x;
     @apply dark:text-sky-600;
-    @apply hover:underline hover:decoration-emerald-500 hover:underline-offset-4 hover:decoration-2;
+    @apply hover:underline hover:decoration-indigo-500 hover:underline-offset-4 hover:decoration-2;
 }
 
 .mdLayout em, .mdLayout sup, .mdLayout sub {
@@ -319,13 +306,13 @@ html.scrollbar {
 
 .mdLayout .local-anchor:target, .mdLayout :target > .local-anchor {
     opacity: 1;
-    @apply text-emerald-500;
+    @apply text-indigo-500;
 }
 
 .mdLayout .local-anchor:hover, .mdLayout .local-anchor:focus {
     opacity: 1;
     text-decoration: inherit;
-    @apply text-white bg-emerald-500;
+    @apply text-white bg-indigo-500;
 }
 
 /* Crosslink (eg, phoenix.md) */
@@ -336,12 +323,12 @@ html.scrollbar {
 .mdLayout.mdLayout p.link-arrow > a {
     box-shadow: none;
     text-decoration: none;
-    @apply text-emerald-500 block -mx-5 -my-3 p-3 border-0 text-center;
-    @apply hover:text-emerald-300 hover:bg-slate-200;
+    @apply text-indigo-500 block -mx-5 -my-3 p-3 border-0 text-center;
+    @apply hover:text-indigo-300 hover:bg-slate-200;
 }
 
 .mdLayout.mdLayout p.link-arrow > a:visited {
-    @apply text-emerald-500;
+    @apply text-indigo-500;
 }
 
 .mdLayout.mdLayout p.link-arrow > a::before {
@@ -356,17 +343,25 @@ html.scrollbar {
     height: 32px;
     line-height: 32px;
     border-radius: 50%;
-    @apply bg-emerald-500;
+    @apply bg-indigo-500;
 }
 
 .mdLayout.mdLayout p.link-arrow > a::before, .mdLayout.mdLayout p.link-arrow > a:visited::before {
-    @apply text-emerald-400 text-white;
+    @apply text-indigo-400 text-white;
 }
 
 .mdLayout.mdLayout p.link-arrow > a:hover, .mdLayout.mdLayout p.link-arrow > a:focus {
-    @apply text-emerald-500;
+    @apply text-indigo-500;
 }
 
 .mdLayout.mdLayout p.link-arrow > a:hover::before, .mdLayout.mdLayout p.link-arrow > a:focus::before {
-    @apply bg-emerald-500;
+    @apply bg-indigo-500;
+}
+
+/* IMPORTANT: Override any conflicting header.home styles */
+header.home {
+    position: relative !important; /* Force relative positioning */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
 }

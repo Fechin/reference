@@ -40,7 +40,7 @@
   content: '';
 
   @apply absolute bottom-0 left-1/2 top-0 w-0.5;
-  @apply bg-slate-300 dark:bg-slate-600;
+  @apply bg-indigo-200 dark:bg-indigo-700;
 
   transform: translateX(-50%);
   z-index: 1;
@@ -51,7 +51,7 @@
   content: '';
 
   @apply absolute left-1/2 top-0 w-0.5;
-  @apply bg-gradient-to-b from-emerald-400 via-emerald-500 to-emerald-600;
+  @apply bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600;
 
   transform: translateX(-50%);
   z-index: 1;
@@ -89,14 +89,14 @@
 
 /* Add subtle background when hovering over the list */
 .toc-list:hover .toc-link {
-  @apply bg-slate-100 dark:bg-slate-800;
+  @apply bg-indigo-50 dark:bg-indigo-900;
 
   opacity: 0.7;
 }
 
 /* Highlight the currently hovered link */
 .toc-link:hover {
-  @apply bg-blue-100 dark:bg-blue-900;
+  @apply bg-indigo-100 dark:bg-indigo-800;
 
   opacity: 1 !important;
   transform: scale(1.1);
@@ -112,7 +112,7 @@
   width: 12px;
   height: 12px;
 
-  @apply bg-slate-400 dark:bg-slate-500;
+  @apply bg-indigo-300 dark:bg-indigo-600;
 }
 
 /* Larger dots on mobile for better visibility */
@@ -126,53 +126,53 @@
 /* Hover effects for dots */
 .toc-list:hover .toc-link::before {
   /* Dim all dots when hovering over the list */
-  @apply bg-slate-300 dark:bg-slate-600;
+  @apply bg-indigo-200 dark:bg-indigo-700;
 
   opacity: 0.6;
 }
 
 .toc-list:hover .toc-link.read::before {
   /* Dim read dots */
-  @apply bg-emerald-400;
+  @apply bg-indigo-400;
 
   opacity: 0.6;
 }
 
 .toc-list:hover .toc-link.active::before {
   /* Dim active dots */
-  @apply bg-emerald-600;
+  @apply bg-indigo-600;
 
   opacity: 0.6;
 }
 
 /* Highlight the currently hovered dot */
 .toc-link:hover::before {
-  @apply bg-slate-700 dark:bg-slate-200;
+  @apply bg-indigo-700 dark:bg-indigo-200;
 
   opacity: 1 !important;
   transform: scale(1.2);
-  box-shadow: 0 0 0 3px rgb(59 130 246 / 30%);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 30%);
 }
 
 .toc-link.read:hover::before {
-  @apply bg-emerald-700;
+  @apply bg-indigo-700;
 
   opacity: 1 !important;
   transform: scale(1.2);
-  box-shadow: 0 0 0 3px rgb(16 185 129 / 30%);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 30%);
 }
 
 .toc-link.active:hover::before {
-  @apply bg-emerald-800;
+  @apply bg-indigo-800;
 
   opacity: 1 !important;
   transform: scale(1.2);
-  box-shadow: 0 0 0 3px rgb(16 185 129 / 40%);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 40%);
 }
 
 /* Active state */
 .toc-link.active::before {
-  @apply bg-emerald-700 ring-2 ring-emerald-300;
+  @apply bg-indigo-700 ring-2 ring-indigo-300;
 }
 
 /* Tooltip - show all when any link is hovered */
@@ -180,9 +180,9 @@
   content: attr(data-tooltip);
 
   @apply absolute top-1/2 -translate-y-1/2;
-  @apply rounded-lg bg-slate-600 px-3 py-2 text-xs text-white;
+  @apply rounded-lg bg-indigo-600 px-3 py-2 text-xs text-white;
   @apply whitespace-nowrap shadow-lg;
-  @apply dark:bg-slate-600 dark:text-slate-300;
+  @apply dark:bg-indigo-700 dark:text-indigo-100;
 
   /* Fixed position to the left of the timeline */
   right: 44px;
@@ -218,8 +218,8 @@
 
 /* Highlight the currently hovered tooltip */
 .toc-link:hover::after {
-  @apply bg-slate-800 text-white;
-  @apply dark:bg-slate-700 dark:text-slate-100;
+  @apply bg-indigo-800 text-white;
+  @apply dark:bg-indigo-600 dark:text-indigo-50;
   @apply font-medium;
 
   transform: translateY(-50%) scale(1.05);
@@ -260,56 +260,56 @@
 
   /* Semi-transparent timeline and dots */
   .toc-list::before {
-    @apply bg-slate-300/60 dark:bg-slate-600/60;
+    @apply bg-indigo-200/60 dark:bg-indigo-700/60;
   }
 
   .toc-list::after {
-    @apply bg-gradient-to-b from-emerald-400/70 via-emerald-500/70 to-emerald-600/70;
+    @apply bg-gradient-to-b from-indigo-400/70 via-indigo-500/70 to-indigo-600/70;
   }
 
   .toc-link::before {
-    @apply bg-slate-400/70 dark:bg-slate-500/70;
+    @apply bg-indigo-300/70 dark:bg-indigo-600/70;
   }
 
   .toc-link.read::before {
-    @apply bg-emerald-500/80;
+    @apply bg-indigo-500/80;
   }
 
   .toc-link.active::before {
-    @apply bg-emerald-700/90;
+    @apply bg-indigo-700/90;
   }
 
   /* Full opacity when container is active */
   .toc-container:active .toc-list::before,
   .toc-container:hover .toc-list::before {
-    @apply bg-slate-300 dark:bg-slate-600;
+    @apply bg-indigo-200 dark:bg-indigo-700;
   }
 
   .toc-container:active .toc-list::after,
   .toc-container:hover .toc-list::after {
-    @apply bg-gradient-to-b from-emerald-400 via-emerald-500 to-emerald-600;
+    @apply bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600;
   }
 
   .toc-container:active .toc-link::before,
   .toc-container:hover .toc-link::before {
-    @apply bg-slate-400 dark:bg-slate-500;
+    @apply bg-indigo-300 dark:bg-indigo-600;
   }
 
   .toc-container:active .toc-link.read::before,
   .toc-container:hover .toc-link.read::before {
-    @apply bg-emerald-500;
+    @apply bg-indigo-500;
   }
 
   .toc-container:active .toc-link.active::before,
   .toc-container:hover .toc-link.active::before {
-    @apply bg-emerald-700;
+    @apply bg-indigo-700;
   }
 
   /* Better touch targets */
   .toc-link {
-    -webkit-tap-highlight-color: rgb(59 130 246 / 30%);
+    -webkit-tap-highlight-color: rgb(99 102 241 / 30%);
     /* stylelint-disable-next-line property-no-unknown */
-    tap-highlight-color: rgb(59 130 246 / 30%);
+    tap-highlight-color: rgb(99 102 241 / 30%);
   }
 
   /* Show tooltips on touch for mobile */

@@ -45,7 +45,7 @@
         codeBlocks.forEach(function (codeBlock) {
             // Create a copy button element
             const copyButton = document.createElement('button');
-            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.className = 'opacity-90 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 p-2 text-white shadow-xl rounded-lg flex items-center absolute top-2 right-2 transition-all duration-200 backdrop-blur-sm';
             copyButton.innerHTML = initInnerHTML;
             copyButton.style.opacity = "0";
             const parent = codeBlock.parentNode;
@@ -94,7 +94,7 @@
 
             // Create a run button element
             const runButton = document.createElement('button');
-            runButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-12 right-2';
+            runButton.className = 'opacity-90 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-2 text-white shadow-xl rounded-lg flex items-center absolute top-12 right-2 transition-all duration-200 backdrop-blur-sm';
             runButton.innerHTML = runInnerHTML;
             runButton.style.opacity = "0";
             const parent = codeBlock.parentNode;
@@ -428,7 +428,7 @@ function showUpdateNotification() {
       top: 0;
       left: 0;
       right: 0;
-      background: #10b981;
+                  background: #6366f1;
       color: white;
       padding: 12px;
       text-align: center;

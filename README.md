@@ -383,7 +383,7 @@ file should include a front matter section with the following format:
 title: CheatSheets
 date: 2020-11-25 18:28:43
 icon: icon-style
-background: bg-emerald-600
+background: bg-indigo-600
 tags:
 categories:
 - Other

@@ -1,16 +1,42 @@
+<%
+// Determine theme based on context
+let logoTheme = 'light'; // default for non-home pages
+if (typeof theme !== 'undefined') {
+    logoTheme = theme; // use passed theme if provided
+} else if (is_home()) {
+    logoTheme = 'dark'; // dark theme for home page (light text on dark background)
+}
+
+// Define color classes based on theme
+let iconColorClass, textColorClass, gradientClass, zipColorClass;
+if (logoTheme === 'dark') {
+    // For dark backgrounds (home page)
+    iconColorClass = 'text-white';
+    textColorClass = 'text-slate-100';
+    gradientClass = 'bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent';
+    zipColorClass = 'text-cyan-300';
+} else {
+    // For light backgrounds (detail pages, footer)
+    iconColorClass = 'text-emerald-600 dark:text-emerald-400';
+    textColorClass = 'text-slate-800 dark:text-slate-200';
+    gradientClass = 'bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent dark:from-slate-200 dark:to-slate-400';
+    zipColorClass = 'text-emerald-600 dark:text-emerald-400';
+}
+%>
 <a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300">
     <% if (icon) { %>
-        <div class="justify-center text-white mr-2 text-3xl md:text-4xl">
+        <div class="justify-center <%= iconColorClass %> mr-3 text-3xl md:text-4xl">
             <div class="self-center">
                 <%- icon("logo") %>
             </div>
         </div>
     <% } %>
-        <span class="hidden md:flex domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">cheatsheets<span
-                class="text-emerald-400">.zip</span></span>
+        <span class="hidden md:flex domain text-xl md:text-2xl lg:text-3xl font-bold tracking-tight">
+            <span class="<%= gradientClass %>">cheatsheets</span><span class="<%= zipColorClass %> font-black">.zip</span>
+        </span>
 </a>
 <% if (page.layout == "note" || page._isNotePagination){ %>
     <a class="hidden md:block" href="/notes/">
-        <span class="flex items-center pl-2 ml-2 text-lg text-slate-600 md:border-l border-slate-400 dark:border-slate-700">Notes</span>
+        <span class="flex items-center pl-2 ml-2 text-lg text-slate-300 md:border-l border-slate-400 dark:border-slate-700 hover:text-white transition-colors">Notes</span>
     </a>
 <% } %>

@@ -32,7 +32,7 @@
   content: '';
   top: 16px;
 
-  @apply inline-block h-2 w-2 rounded-full border border-2 border-emerald-600 bg-white;
+  @apply inline-block h-2 w-2 rounded-full border border-2 border-indigo-600 bg-white;
 }
 
 .mdLayout .h3-wrap > .section > ul.collapsible > li > pre {
@@ -57,7 +57,7 @@
   left: 10px;
   font-size: 0.825em;
 
-  @apply text-emerald-500;
+  @apply text-indigo-500;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline {
@@ -68,7 +68,7 @@
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li {
   padding-top: 2px;
   padding-bottom: 1.25rem;
-  border-left: 2px solid #48c78e;
+  border-left: 2px solid #6366f1;
   position: relative;
   padding-left: 22px;
   margin-left: 30px;
@@ -79,7 +79,7 @@
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li:last-child {
   padding-bottom: 0.8rem;
-  border-image: linear-gradient(to bottom, #48c78e, rgb(0 0 0 / 0%)) 1 100%;
+  border-image: linear-gradient(to bottom, #6366f1, rgb(0 0 0 / 0%)) 1 100%;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li > pre {
@@ -91,14 +91,14 @@
   counter-increment: stepCount;
   content: counter(stepCount);
   left: -14px;
-  border: 2px solid #48c78e;
+  border: 2px solid #6366f1;
 
   @apply absolute top-0 h-6 w-6 rounded-full bg-white text-center text-sm;
-  @apply dark:border-slate-600 dark:bg-slate-800;
+  @apply dark:border-indigo-600 dark:bg-indigo-800;
 }
 
 .mdLayout .h3-wrap > .section > ul.marker-timeline > li:first-child::before {
-  background: #48c78e;
+  background: #6366f1;
   color: white;
 }
 
