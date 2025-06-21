@@ -45,8 +45,13 @@
 
                 <!-- Dark Mode Toggle -->
                 <button id="darkMode" class="inline-flex items-center justify-center flex-shrink-0 h-9 w-9 rounded-3xl ml-2 lg:ml-3 backdrop-blur-sm transition-colors duration-200 group <%- is_home() ? "bg-white/10 outline outline-1 outline-white/20 text-white hover:bg-white/20 hover:outline-white/30" : "bg-white outline outline-1 outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700" %>">
-                    <i class="icon-light <%- is_home() ? "text-white" : "text-slate-600 dark:text-slate-300" %>">
+                    <!-- Sun icon (shown in dark mode) -->
+                    <i class="icon-light transition-all duration-200 <%- is_home() ? "text-white" : "text-slate-600 dark:text-slate-300" %>">
                         <%- icon("light") %>
+                    </i>
+                    <!-- Moon icon (shown in light mode) -->
+                    <i class="icon-dark transition-all duration-200 <%- is_home() ? "text-white" : "text-slate-600 dark:text-slate-300" %>">
+                        <%- icon("dark") %>
                     </i>
                 </button>
 

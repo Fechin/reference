@@ -39,6 +39,14 @@ html.scrollbar {
     @apply mx-auto p-3;
 }
 
+@media (max-width: 768px) {
+    .max-container {
+        @apply px-4;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
 .header-button {
     @apply inline-flex items-center bg-slate-200 text-slate-600 transition duration-200 rounded-full border-0 p-3 ml-1 font-medium;
     @apply hover:bg-slate-300 hover:text-slate-700 hover:shadow-lg;
@@ -84,6 +92,30 @@ html.scrollbar {
 .mdLayout {
     color: #345;
     @apply flex flex-col space-y-14;
+}
+
+@media (max-width: 768px) {
+    .mdLayout {
+        overflow-x: hidden;
+        word-wrap: break-word;
+    }
+}
+
+/* Dark mode toggle icons */
+.icon-light {
+    display: block;
+}
+
+.icon-dark {
+    display: none;
+}
+
+.dark .icon-light {
+    display: none;
+}
+
+.dark .icon-dark {
+    display: block;
 }
 
 .mdLayout h3 a.h-anchor, .mdLayout h4 a.h-anchor, .mdLayout h5 a.h-anchor {

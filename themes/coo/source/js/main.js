@@ -504,18 +504,9 @@ window.addEventListener('load', () => {
   fetchGitHubStars();
 
   // Dark mode functionality
-  const isDarkMode = document.documentElement.classList.contains('dark');
-  if (!isDarkMode) {
-    const icon = document.querySelector('#darkMode > i').classList;
-    icon.toggle('icon-light');
-    icon.toggle('icon-dark');
-  }
   document.querySelector('#darkMode').addEventListener('click', () => {
     const html = document.documentElement.classList;
     html.toggle('dark');
-    const icon = document.querySelector('#darkMode > i').classList;
-    icon.toggle('icon-light');
-    icon.toggle('icon-dark');
     const isDarkMode = html.contains('dark');
     localStorage.theme = isDarkMode ? 'dark' : '';
   });

@@ -1,5 +1,7 @@
 .mdLayout table {
   width: 100%;
+  table-layout: fixed;
+  word-wrap: break-word;
 }
 
 .mdLayout .section > table:last-child::after {
@@ -39,6 +41,13 @@
 
 .mdLayout table td:first-child {
   white-space: nowrap;
+}
+
+@media (width <= 768px) {
+  .mdLayout table td:first-child {
+    white-space: normal;
+    word-wrap: break-word;
+  }
 }
 
 .mdLayout table td:first-child > code {

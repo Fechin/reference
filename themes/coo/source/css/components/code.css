@@ -5,6 +5,8 @@ code {
 
 pre {
   line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 
   @apply overflow-hidden overflow-x-auto bg-white p-4;
 }
@@ -32,6 +34,21 @@ pre > code {
 
 pre > code.wrap {
   @apply whitespace-pre-wrap break-words !important;
+}
+
+@media (width <= 768px) {
+  pre {
+    @apply text-sm;
+
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  pre > code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 }
 
 .mdLayout .line-highlight {
