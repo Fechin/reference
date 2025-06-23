@@ -1,7 +1,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-    <meta http-equiv='content-language' content='en-gb'>
+    <meta http-equiv='content-language' content='<%- config.language || 'en' %>'>
+    <meta name="language" content="<%- config.language || 'en' %>"/>
     <meta name="renderer" content="webkit"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="app:pageurl" content="/"/>
@@ -14,7 +15,7 @@
     <meta name="description" content="<%- page_description() %>"/>
 
     <!-- for social -->
-    <meta property="og:url" content="<%- url_for(url) %>"/>
+    <meta property="og:url" content="<%- clean_url(url) %>"/>
     <meta property="og:title" content="<%- page_title() %>"/>
     <meta property="og:site_name" content="<%- config.title %>"/>
     <meta property="og:description" content="<%- page_description() %>"/>
@@ -48,7 +49,7 @@
     <meta name="msapplication-TileColor" content="#6366f1"/>
 
     <!-- misc -->
-    <link rel="canonical" href="<%- url_for(url) %>"/>
+    <link rel="canonical" href="<%- clean_url(url) %>"/>
     <link rel="prefetch" href="<%- url_for(config.url) %>"/>
     <link rel="prerender" href="<%- url_for(config.url) %>"/>
     <link rel="alternate" href="/atom.xml" title="<%- config.title %>" type="application/atom+xml"/>

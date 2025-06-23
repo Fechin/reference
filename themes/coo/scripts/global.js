@@ -3,6 +3,21 @@ const path = require('path');
 
 hexo.extend.helper.register('icon', (name) => svgIcon(name));
 
+// Register custom clean_url helper function
+hexo.extend.helper.register('clean_url', function (url) {
+  if (!url) return '';
+  // If it's an absolute URL, convert it to a relative URL first
+  const cleanedUrl = this.url_for(url);
+  // Remove .html suffix
+  return cleanedUrl.replace(/(index)?\.html$/, '');
+});
+
+// Register enhanced url_for helper (optional)
+hexo.extend.helper.register('url_for_clean', function (path, options = {}) {
+  const url = this.url_for(path, options);
+  return url.replace(/(index)?\.html$/, '');
+});
+
 hexo.extend.generator.register('json', (locals) => {
   const searchName = 'search.json';
   const datas = locals.posts.sort('date') || [];

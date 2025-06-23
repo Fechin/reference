@@ -49,7 +49,7 @@ hexo.extend.helper.register('page_keywords', function () {
 
 hexo.extend.helper.register('page_image', function () {
   const homePng = 'preview.png';
-  let postPng = '';
+  let postPng = 'preview.png';
   if (this.is_post()) {
     postPng = `${this.page.slug}-preview.png`;
   }
