@@ -142,3 +142,9 @@ markdown:
     permalinkSymbol: "#"
     case: 1
     separator: "-"
+
+# Browsersync configuration
+browsersync:
+  ui: false # disable ui
+  notify: false # disable notification
+  logLevel: silent # set log level to silent
