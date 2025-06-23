@@ -1,12 +1,12 @@
 <% if (page.link){ %>
     <% if (page.title){ %>
-        <h1><a href="<%- page.link %>" target="_blank"><%= page.title || __('no_title') %></a></h1>
+        <h1><a href="<%- page.link %>" target="_blank" title="<%= page.title || 'External Link' %>"><%= page.title || __('no_title') %></a></h1>
     <% } else { %>
-        <h1><a href="<%- page.link %>" target="_blank"><%= page.link || __('no_title') %></a></h1>
+        <h1><a href="<%- page.link %>" target="_blank" title="<%= page.link || 'External Link' %>"><%= page.link || __('no_title') %></a></h1>
     <% } %>
 <% } else { %>
     <% if (false){ %>
-        <h1><a href="<%- url_for(page.path) %>"><%= page.title || __('no_title') %></a></h1>
+        <h1><a href="<%- url_for(page.path) %>" title="<%= page.title || 'Page Title' %>"><%= page.title || __('no_title') %></a></h1>
     <% } else { %>
         <h1><%= page.title || __('no_title') %></h1>
     <% } %>

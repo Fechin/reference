@@ -12,7 +12,7 @@
                         const topPostsData = topPosts(3);
                         topPostsData.forEach(function(post, index) { 
                         %>
-                            <a href="<%- url_for(post.path) %>" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-indigo-300 dark:hover:border-indigo-500 transition-all duration-200 hover:shadow-md">
+                            <a href="<%- url_for(post.path) %>" title="<%= post.title %> Cheatsheet - Popular Quick Reference" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-indigo-300 dark:hover:border-indigo-500 transition-all duration-200 hover:shadow-md">
                                 <div class="w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3 text-indigo-600">
                                     <%- icon(post.slug) %>
                                 </div>
@@ -37,7 +37,7 @@
                         const recentPosts = site.posts.sort('date', -1).filter(post => post.layout !== "note").data.slice(0, 3);
                         recentPosts.forEach(function(post, index) { 
                         %>
-                            <a href="<%- url_for(post.path) %>" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 hover:shadow-md">
+                            <a href="<%- url_for(post.path) %>" title="<%= post.title %> Cheatsheet - Latest Quick Reference" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 hover:shadow-md">
                                 <div class="w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3 text-blue-600">
                                     <%- icon(post.slug) %>
                                 </div>
@@ -52,39 +52,57 @@
                     </div>
                 </div>
 
-                <!-- Our Products -->
+                <!-- Developer Tools -->
                 <div>
                     <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center">
-                        Our <span class="text-slate-500">&nbsp;Products</span>
+                        <svg class="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                        Developer <span class="text-slate-500">&nbsp;Tools</span>
                     </h3>
                     <div class="space-y-3">
-                        <a href="https://tableconvert.com" target="_blank" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200 hover:shadow-md">
+                        <a href="https://tableconvert.com?ref=cheatsheets" target="_blank" data-no-nofollow="true" title="TableConvert - Convert tables between formats instantly for developers" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200 hover:shadow-md">
                             <div class="w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
-                                <img src="/assets/icon/tableconvert.png" alt="TableConvert" class="w-6 h-6 rounded">
+                                <img src="/assets/icon/tableconvert.png" alt="TableConvert logo" class="w-6 h-6 rounded">
                             </div>
                             <div class="min-w-0 flex-1">
                                 <h4 class="font-medium text-sm text-slate-900 dark:text-slate-100 group-hover:text-purple-600 dark:group-hover:text-purple-400">TableConvert</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Convert tables between formats instantly</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Convert tables between formats</p>
+                            </div>
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
                             </div>
                         </a>
                         
-                        <a href="https://dorefer.com" target="_blank" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200 hover:shadow-md">
+                        <a href="https://dorefer.com?ref=cheatsheets" target="_blank" data-no-nofollow="true" title="doRefer - Find the best referral codes and signup bonuses" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200 hover:shadow-md">
                             <div class="w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
-                                <img src="/assets/icon/dorefer.png" alt="doRefer" class="w-6 h-6 rounded">
+                                <img src="/assets/icon/dorefer.png" alt="doRefer logo" class="w-6 h-6 rounded">
                             </div>
                             <div class="min-w-0 flex-1">
                                 <h4 class="font-medium text-sm text-slate-900 dark:text-slate-100 group-hover:text-purple-600 dark:group-hover:text-purple-400">doRefer</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Find Best Referral Code, Link & Signup Bonus</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Best referral codes & bonuses</p>
+                            </div>
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
                             </div>
                         </a>
                         
-                        <a href="https://fionaai.com" target="_blank" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200 hover:shadow-md">
+                        <a href="https://fionaai.com?ref=cheatsheets" target="_blank" data-no-nofollow="true" title="Fiona AI - Your intelligent Chrome AI assistant for productivity" class="group flex items-center p-3 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200 hover:shadow-md">
                             <div class="w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
-                                <img src="/assets/icon/fionaai.png" alt="Fiona AI" class="w-6 h-6 rounded">
+                                <img src="/assets/icon/fionaai.png" alt="Fiona AI logo" class="w-6 h-6 rounded">
                             </div>
                             <div class="min-w-0 flex-1">
                                 <h4 class="font-medium text-sm text-slate-900 dark:text-slate-100 group-hover:text-purple-600 dark:group-hover:text-purple-400">Fiona AI</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Your AI assistant in chrome</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Chrome AI assistant</p>
+                            </div>
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
                             </div>
                         </a>
                     </div>
@@ -99,9 +117,9 @@
                         Share quick reference and cheat sheet for developers.
                     </p>
                     <div class="space-y-2 text-sm">
-                        <div><a href="/about/" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">About</a></div>
-                        <div><a href="/notes/" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Notes</a></div>
-                        <div><a href="/support/" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Support</a></div>
+                        <div><a href="/about/" title="About - Learn more about cheatsheets.zip" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">About</a></div>
+                        <div><a href="/notes/" title="Notes - Browse our developer notes and tutorials" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Notes</a></div>
+                        <div><a href="/support/" title="Support - Get help and support our project" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Support</a></div>
                     </div>
                     <div class="mt-4">
                         <%- partial('share', { extra: 'justify-start' }) %>

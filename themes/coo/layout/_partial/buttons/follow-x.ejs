@@ -50,7 +50,7 @@ const spacing = {
 %>
 
 <% if (variant === 'request') { %>
-<a href="https://x.com/FechinLi" target="_blank"
+<a href="https://x.com/FechinLi" target="_blank" rel="noopener noreferrer" title="Follow @FechinLi on X (Twitter)"
    class="<%= buttonBaseClass %> <%= xClass %> <%= className %>">
     <div class="<%= iconClass %> <%= spacing %> group-hover:scale-110 transition-transform">
         <%- icon("x") %>
@@ -65,7 +65,7 @@ const spacing = {
     <% } %>
 </a>
 <% } else { %>
-<a href="https://x.com/FechinLi" target="_blank"
+<a href="https://x.com/FechinLi" target="_blank" rel="noopener noreferrer" title="Follow @FechinLi on X (Twitter)"
    class="<%= buttonBaseClass %> <%= xClass %> <%= className %>">
     <div class="<%= iconClass %> <%= spacing %> <% if (variant === 'hero') { %>group-hover:scale-110 transition-transform<% } %>">
         <%- icon("x") %>

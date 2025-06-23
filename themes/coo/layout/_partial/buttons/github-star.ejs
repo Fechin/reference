@@ -44,7 +44,7 @@ const spacing = {
 }[variant];
 %>
 
-<a href="<%- edit_page() %>" target="_blank"
+<a href="<%- edit_page() %>" target="_blank" rel="noopener noreferrer" title="Star cheatsheets.zip on GitHub"
    class="<%= buttonBaseClass %> <%= githubClass %> <%= className %>">
     <div class="<%= iconClass %> <%= spacing %>">
         <%- icon("github") %>

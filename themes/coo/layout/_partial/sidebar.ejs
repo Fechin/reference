@@ -14,7 +14,7 @@
         <div class="flex flex-row justify-between text-blue-dark border-b dark:border-slate-700">
             <h2 class="mb-4 text-xl font-medium text-slate-700 dark:text-slate-300">Popular</h2>
             <div class="mt-2 sm:mt-0">
-                <a href="/"
+                <a href="/" title="More Popular Cheatsheets"
                    class="flex items-center text-white bg-blue-600  text-sm rounded px-2 py-1 hover:bg-blue-500 focus:outline-none focus:shadow-outline">
                     <i class="icon icon-placeholder mr-1"></i>
                     <span class="inline">More</span>
@@ -27,7 +27,7 @@
                     <div class="flex justify-center w-10 h-10 text-white p-5 rounded-full mr-4 <%- post.background %>">
                         <i class="self-center icon <%- post.icon %> text-2xl"></i>
                     </div>
-                    <a href="<%- url_for(post.path) %>" class="underline mx-1 font-medium text-slate-700 dark:text-slate-300">
+                    <a href="<%- url_for(post.path) %>" title="<%- post.title %> Cheat sheet" class="underline mx-1 font-medium text-slate-700 dark:text-slate-300">
                         <%- post.title %> <span class="text-sm font-light text-slate-700 dark:text-slate-500">Cheat sheet</span>
                     </a>
                 </li>
@@ -42,7 +42,7 @@
             <div class="flex flex-row justify-between text-blue-dark border-b dark:border-slate-700">
                 <h2 class="mb-4 text-xl font-medium text-slate-700 dark:text-slate-300">Related Posts</h2>
                 <div class="mt-2 sm:mt-0">
-                    <a href="/notes/"
+                    <a href="/notes/" title="More Related Posts and Notes"
                        class="flex items-center text-white bg-blue-600  text-sm rounded px-2 py-1 hover:bg-blue-500 focus:outline-none focus:shadow-outline">
                         <i class="icon icon-placeholder mr-1"></i>
                         <span class="inline">More</span>
@@ -52,7 +52,7 @@
             <ul>
                 <% posts.forEach(function (post){ %>
                     <li class="mt-2">
-                        <a href="<%- url_for(post.path) %>" class="underline mx-1 text-sm text-slate-700 dark:text-slate-300"><%- post.title %></a>
+                        <a href="<%- url_for(post.path) %>" title="<%- post.title %>" class="underline mx-1 text-sm text-slate-700 dark:text-slate-300"><%- post.title %></a>
                     </li>
                 <% }); %>
             </ul>

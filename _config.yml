@@ -97,7 +97,11 @@ nofollow:
   enable: true
   field: site
   exclude:
-    - "exclude1.com"
+    - "tableconvert.com"
+    - "dorefer.com"
+    - "fionaai.com"
+    - "github.com"
+    - "x.com"
 
 excerpt:
   depth: 2
