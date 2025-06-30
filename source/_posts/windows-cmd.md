@@ -147,3 +147,54 @@ plugins:
 | `bootcfg`    | Configures, queries, or changes Boot.ini file settings. |
 | `msconfig`   | Starts the System Configuration utility.                |
 | `regedit`    | Starts the Registry Editor.                             |
+
+## Tips & Tricks
+
+### Miscellaneouss Tips & Tricks {.col-span-3}
+
+| Tip or Trick                                                    | Description                                                                                                                                      |
+|:----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| `wmic path SoftwareLicensingService get OA3xOriginalProductKey` | Get your Windows Product key                                                                                                                     |
+| `cmd /k`                                                        | Opens the command prompt and executes a specified command, keeping the window open.                                                              |
+| `cmd /c`                                                        | Opens the command prompt, executes a specified command, and then closes the window.                                                              |
+| `&&`                                                            | Allows you to run multiple commands in sequence. For example, `command1 && command2`.                                                            |
+| `\|\|`                                                          | Allows you to run a second command only if the first command fails. For example, `command1 `\|\|`  command2`.                                    |
+| `>`                                                             | Redirects the output of a command to a file, overwriting the file if it already exists. For example, `command > output.txt`.                     |
+| `>>`                                                            | Redirects the output of a command to a file, appending the output if the file already exists. For example, `command >> output.txt`.              |
+| `\|`                                                            | Pipes the output of one command to another command. For example, `command1 `\|` command2`.                                                       | 
+| `clip`                                                          | Redirects the output of a command to the Windows clipboard. For example, `dir `\|`  clip`.                                                       |
+| `for %i in (*.txt) do echo %i`                                  | Loops through all `.txt` files in the current directory and echoes their names.                                                                  |
+| `pushd` and `popd`                                              | `pushd` saves the current directory and then changes to a new directory. `popd` returns to the saved directory.                                  |
+| `set`                                                           | Displays, sets, or removes environment variables. For example, `set PATH=C:\newpath`.                                                            |
+| `start "" "C:\Path\To\Program\program.exe"`                     | Starts a program without waiting for it to finish.                                                                                               |
+| `taskkill /IM "process.exe" /F`                                 | Forcefully kills a process by its image name.                                                                                                    |
+| `wmic product get name`                                         | Lists all installed software on the system.                                                                                                      |
+| `wmic logicaldisk get size,freespace,caption`                   | Displays the size, free space, and caption of all logical disks.                                                                                 |
+| `systeminfo` `\|` `findstr /B /C:"OS Name" /C:"OS Version"`     | Displays the OS name and version.                                                                                                                |
+| `schtasks /query /fo LIST /v`                                   | Lists all scheduled tasks in detail.                                                                                                             |
+| `netsh wlan show profiles`                                      | Displays a list of all saved Wi-Fi profiles.                                                                                                     |
+| `netsh wlan show profiles name="ProfileName" key=clear`         | Displays the password for a specific Wi-Fi profile.                                                                                              |
+| `assoc`                                                         | Displays or modifies file extension associations.                                                                                                |
+| `ftype`                                                         | Displays or modifies file types used in file extension associations.                                                                             |
+| `driverquery /v`                                                | Lists all installed drivers with detailed information.                                                                                           |
+| `powercfg /energy`                                              | Generates a detailed energy report for the system.                                                                                               |
+| `powercfg /batteryreport`                                       | Generates a battery life report for laptops.                                                                                                     |
+| `robocopy C:\Source D:\Destination /MIR`                        | Mirrors a directory from one location to another, including subdirectories and files.                                                            |
+| `mklink /D "C:\Path\To\Link" "C:\Path\To\Target"`               | Creates a symbolic link to a directory.                                                                                                          |
+| `mklink /H "C:\Path\To\Link" "C:\Path\To\Target"`               | Creates a hard link to a file.                                                                                                                   |
+| `mklink /J "C:\Path\To\Link" "C:\Path\To\Target"`               | Creates a directory junction.                                                                                                                    |
+| `diskpart /s script.txt`                                        | Runs a DiskPart script to automate disk partitioning tasks.                                                                                      |
+| `shutdown /a`                                                   | Aborts a system shutdown.                                                                                                                        |
+| `chkdsk /f /r`                                                  | Checks a disk and fixes errors, also recovers readable information from bad sectors.                                                             |
+| `sfc /scannow`                                                  | Scans and repairs protected system files.                                                                                                        |
+| `DISM /Online /Cleanup-Image /RestoreHealth`                    | Repairs the Windows image using DISM.                                                                                                            |
+| `bcdboot C:\Windows`                                            | Repairs the boot environment by copying boot files from the Windows directory.                                                                   |
+| `bootrec /fixmbr`                                               | Repairs the Master Boot Record (MBR).                                                                                                            |
+| `bootrec /fixboot`                                              | Writes a new boot sector to the system partition.                                                                                                |
+| `bootrec /scanos`                                               | Scans for installations compatible with Windows and displays the entries that are currently not in the Boot Configuration Data store.            |
+| `bootrec /rebuildbcd`                                           | Scans for installations compatible with Windows and allows you to select the installations you want to add to the Boot Configuration Data store. |
+
+
+## Other
+
+- Also see : [Windows Official Documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
