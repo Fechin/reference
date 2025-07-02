@@ -1,0 +1,57 @@
+<body class="bg-gray-500 flex flex-col items-center justify-center min-h-screen p-4">
+  <!-- Color pickers -->
+  <div class="flex space-x-4 mb-6 items-center justify-center">
+    <div class="flex flex-col items-center">
+      <label class="mb-2 font-medium" for="color1">Color 1</label>
+      <input type="color" id="color1" value="#ff7e5f" class="w-16 h-16 border-2 border-gray-300 rounded-full cursor-pointer"/>
+    </div>
+    <div class="flex flex-col items-center">
+      <label class="mb-2 font-medium" for="color2">Color 2</label>
+      <input type="color" id="color2" value="#feb47b" class="w-16 h-16 border-2 border-gray-300 rounded-full cursor-pointer"/>
+    </div>
+  </div>
+
+  <!-- Gradient display -->
+  <div class="flex justify-center w-full">
+    <div id="gradientBox" class="w-full max-w-xl h-64 rounded-lg shadow-lg border border-gray-300" style="background: linear-gradient(to right,  #8000ff, #feb47b);"></div>
+  </div>
+
+  <!-- CSS code display -->
+  <div class="flex justify-center w-full mt-5">
+    <div class="mt-5 w-full max-w-xl bg-gray-500 p-4 rounded-lg shadow-inner">
+      <div>
+        <h2 class="text-lg font-semibold mb-2 text-white text-center">CSS Code</h2>
+        <pre id="cssCode" class="p-2 rounded overflow-x-auto text-sky-500 bg-gray-100">background: linear-gradient(to right, #ff7e5f, #feb47b);</pre>
+      </div>
+    </div>
+  </div>
+
+<br>
+<br>
+
+  <script>
+    const colorInput1 = document.getElementById('color1');
+    const colorInput2 = document.getElementById('color2');
+    const gradientBox = document.getElementById('gradientBox');
+    const cssCode = document.getElementById('cssCode');
+
+    function updateGradient() {
+      const color1 = colorInput1.value;
+      const color2 = colorInput2.value;
+      const gradientStyle = `linear-gradient(to right, ${color1}, ${color2})`;
+
+      // Update background
+      gradientBox.style.background = gradientStyle;
+
+      // Update CSS code display
+      cssCode.textContent = `background: ${gradientStyle};`;
+    }
+
+    // Event listeners
+    colorInput1.addEventListener('input', updateGradient);
+    colorInput2.addEventListener('input', updateGradient);
+
+    // Initialize
+    updateGradient();
+  </script>
+</body>
