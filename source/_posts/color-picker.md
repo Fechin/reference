@@ -7,7 +7,7 @@ tags:
   - color
 categories:
   - Toolkit
-intro: The Color Picker  cheat sheet provides you basic color choices
+intro: The Color Picker  cheat sheet provides you basic color info and  choices 
 plugins:
   - copyCode
 ---
@@ -50,8 +50,6 @@ plugins:
 
 <widget name="gradient-maker"/>
 
-<br>
-<br>
 
 | Parameter     | Description                       | Example                                        |
 |:--------------|:----------------------------------|:-----------------------------------------------|
