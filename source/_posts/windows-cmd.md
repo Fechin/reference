@@ -1,5 +1,5 @@
 ---
-title: Windows Command
+title: Windows Cmd
 date: 2025-06-30 18:28:43
 background: bg-red-500
 tags:
