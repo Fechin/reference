@@ -9,8 +9,7 @@ tags:
 categories:
   - Linux Command
 intro: |
-  **systemd** is the init system and service manager used by most modern Linux distributions.  
-  It provides a unified suite of tools to manage services, logs, system settings, and more—all from the command line.
+  systemd is the init system and service manager used by most modern Linux distributions.
 plugins:
   - copyCode
 ---
@@ -235,3 +234,9 @@ Example
 ```bash
 systemd-run -p MemoryMax=100M -p CPUQuota=50% scriptFile.sh
 ```
+
+## Also See
+
+- [linux training academy](https://www.linuxtrainingacademy.com/systemd-cheat-sheet/)
+- [linux Audit Cheat Sheet](https://linux-audit.com/cheat-sheets/systemd/)
+- [RedHat Reference](https://www.redhat.com/en/blog/systemd-commands)
