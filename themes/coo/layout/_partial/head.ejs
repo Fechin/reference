@@ -13,6 +13,23 @@
     <meta name="keywords" content="<%- page_keywords() %>"/>
     <!-- description -->
     <meta name="description" content="<%- page_description() %>"/>
+    
+    <!-- Additional SEO meta tags -->
+    <meta name="author" content="<%- config.author %>"/>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    <% if (is_post()) { %>
+    <meta name="article:author" content="<%- config.title %>"/>
+    <meta name="article:published_time" content="<%- page.date.toISOString() %>"/>
+    <meta name="article:modified_time" content="<%- (page.updated || page.date).toISOString() %>"/>
+    <% if (page.categories && page.categories.length > 0) { %>
+    <meta name="article:section" content="<%- page.categories.toArray()[0].name %>"/>
+    <% } %>
+    <% if (page.tags && page.tags.each) { %>
+    <% page.tags.each(function(tag) { %>
+    <meta name="article:tag" content="<%- tag.name %>"/>
+    <% }); %>
+    <% } %>
+    <% } %>
 
     <!-- for social -->
     <meta property="og:url" content="<%- clean_url(url) %>"/>
@@ -22,7 +39,22 @@
     <meta property="og:image" content="<%- page_image() %>"/>
     <meta property="og:image:width" content="2276"/>
     <meta property="og:image:height" content="1240"/>
-    <meta property="og:type" content="website"/>
+    <meta property="og:image:alt" content="<%- page_title() %> - <%- config.title %>"/>
+    <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>"/>
+    <meta property="og:locale" content="en_US"/>
+    <% if (is_post()) { %>
+    <meta property="article:published_time" content="<%- page.date.toISOString() %>"/>
+    <meta property="article:modified_time" content="<%- (page.updated || page.date).toISOString() %>"/>
+    <meta property="article:author" content="<%- config.title %>"/>
+    <% if (page.categories && page.categories.length > 0) { %>
+    <meta property="article:section" content="<%- page.categories.toArray()[0].name %>"/>
+    <% } %>
+    <% if (page.tags && page.tags.each) { %>
+    <% page.tags.each(function(tag) { %>
+    <meta property="article:tag" content="<%- tag.name %>"/>
+    <% }); %>
+    <% } %>
+    <% } %>
 
     <!-- twitter share-->
     <meta name="twitter:card" content="summary_large_image"/>
@@ -31,6 +63,7 @@
     <meta name="twitter:creator" content="@<%- config.author %>">
     <meta name="twitter:description" content="<%- page_description() %>"/>
     <meta name="twitter:image" content="<%- page_image() %>"/>
+    <meta name="twitter:image:alt" content="<%- page_title() %> - <%- config.title %>"/>
 
     <!-- favicon -->
     <link rel="icon" href="/images/favicon.png?v=1"/>
@@ -62,5 +95,8 @@
             html.toggle('dark')
         }
     </script>
+
+    <!-- Structured Data for SEO -->
+    <%- partial('_partial/structured-data') %>
 
 </head>

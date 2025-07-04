@@ -1,0 +1,138 @@
+<body>
+    <div class="container">
+        <h1 class="font-bold text-center">Simple CRON Expression Generator</h1>
+        <div class="input-section">
+            <p class="font-medium mb-2 indent-3">Enter Date and Time Expression:</p>
+            <table class="p-2 text-center">
+                <tbody class="flex justify-center gap-4 mb-2">
+                <tr>
+                    <td><input class="text-center rounded p-2 border border-gray-300" id="from-minute" type="text"
+                               placeholder="Minute : 0-59 or *" aria-label="Minute"/></td>
+                    <td><input class="text-center rounded p-2 border border-gray-300" id="from-hour" type="text"
+                               placeholder="Hour : 0-23 or *" aria-label="Hour"/></td>
+                    <td><input class="text-center rounded p-2 border border-gray-300" id="from-day-of-month" type="text"
+                               placeholder="Day of Month : 1-31 or *" aria-label="Day of Month"/></td>
+                    <td>
+                        <select class="text-center rounded p-2 border border-gray-300" id="from-month"
+                                aria-label="Month">
+                            <option value="*">Any Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="text-center rounded p-2 border border-gray-300"
+                                id="from-day-of-week" aria-label="Day of Week">
+                            <option value="*">Any Day</option>
+                            <option value="0">Sunday</option>
+                            <option value="1">Monday</option>
+                            <option value="2">Tuesday</option>
+                            <option value="3">Wednesday</option>
+                            <option value="4">Thursday</option>
+                            <option value="5">Friday</option>
+                            <option value="6">Saturday</option>
+                        </select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="button-section flex justify-center gap-4">
+                <div>
+                    <button id="generateBtn"
+                            class="btn bg-green-500 text-white py-1 px-3 rounded hover:bg-green-600">Generate
+                    </button>
+                </div>
+                <div>
+                    <button id="clearBtn"
+                            class="btn bg-red-500 text-white py-1 px-3 rounded hover:bg-green-600">Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+        <hr class="mb-2 mt-2">
+        <div class="result-section ">
+            <p class="font-medium mb-2 indent-3">Generated CRON Expression:</p>
+            <div class="cron-expression text-center rounded p-2 border-gray-300 mb-2"
+                 id="cron-expression">* * * * *
+            </div>
+            <div class="flex justify-center">
+                <button id="copyBtn"
+                        class="btn bg-green-500 text-white py-1 px-3 rounded hover:bg-green-600">Copy Cron
+                </button>
+            </div>
+        </div>
+        <hr class="mb-2 mt-2">
+        <div class="description-section">
+            <p class="font-medium indent-3">Description:</p>
+            <p id="cron-description"
+               class="text-center text-sky-500 mb-4">Select values to generate a cron expression.</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/cronstrue@latest/dist/cronstrue.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const minuteInput = document.getElementById('from-minute');
+          const hourInput = document.getElementById('from-hour');
+          const domInput = document.getElementById('from-day-of-month');
+          const monthSelect = document.getElementById('from-month');
+          const dowSelect = document.getElementById('from-day-of-week');
+          const cronExprDiv = document.getElementById('cron-expression');
+          const descriptionPara = document.getElementById('cron-description');
+          const generateBtn = document.getElementById('generateBtn');
+          const clearBtn = document.getElementById('clearBtn');
+          const copyBtn = document.getElementById('copyBtn');
+
+          function generateCron() {
+            const minute = minuteInput.value.trim() || '*';
+            const hour = hourInput.value.trim() || '*';
+            const dom = domInput.value.trim() || '*';
+            const month = monthSelect.value;
+            const dow = dowSelect.value;
+
+            const cronString = `${minute} ${hour} ${dom} ${month} ${dow}`;
+
+            cronExprDiv.textContent = cronString;
+
+            try {
+              const description = cronstrue.toString(cronString);
+              descriptionPara.textContent = description;
+            } catch (e) {
+              descriptionPara.textContent = 'Invalid cron expression.';
+            }
+          }
+
+          function clearInputs() {
+            minuteInput.value = '';
+            hourInput.value = '';
+            domInput.value = '';
+            monthSelect.value = '*';
+            dowSelect.value = '*';
+            cronExprDiv.textContent = '* * * * *';
+            descriptionPara.textContent = 'Select values to generate a cron expression.';
+          }
+
+          function copyToClipboard() {
+            const cronText = cronExprDiv.textContent;
+            navigator.clipboard.writeText(cronText);
+          }
+
+          generateBtn.addEventListener('click', generateCron);
+          clearBtn.addEventListener('click', clearInputs);
+          copyBtn.addEventListener('click', copyToClipboard);
+
+          generateCron();
+        });
+    </script>
+</body>
+

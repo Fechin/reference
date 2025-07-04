@@ -1,0 +1,217 @@
+<script type="application/ld+json">
+<%
+// Basic Organization data
+const orgData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": config.title,
+  "url": config.url,
+  "logo": {
+    "@type": "ImageObject",
+    "url": config.url + "/assets/logo/icon-192x192.png"
+  },
+  "description": config.description,
+  "sameAs": [
+    "https://github.com/Fechin/reference",
+    "https://x.com/Fechin"
+  ]
+};
+
+// Basic Website data
+const websiteData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite", 
+  "name": config.title,
+  "url": config.url,
+  "description": config.description,
+  "publisher": {
+    "@type": "Organization",
+    "name": config.title,
+    "logo": {
+      "@type": "ImageObject", 
+      "url": config.url + "/assets/logo/icon-192x192.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": config.url + "/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+let schemaArray = [];
+
+if (is_home()) {
+  // Homepage: Add Organization and Website schema
+  schemaArray.push(orgData, websiteData);
+  
+  // Add ItemList for category display
+  const itemListData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList", 
+    "name": "Developer Cheat Sheets",
+    "description": "Collection of quick reference guides for developers",
+    "numberOfItems": site.posts.length,
+    "itemListElement": []
+  };
+  
+  let position = 1;
+  site.posts.sort('date', -1).limit(20).each(function(post) {
+    itemListData.itemListElement.push({
+      "@type": "ListItem",
+      "position": position++,
+      "name": post.title + " Cheat Sheet",
+      "url": config.url + url_for(post.path)
+    });
+  });
+  
+  schemaArray.push(itemListData);
+  
+} else if (is_post()) {
+  // Article page: Add TechArticle schema
+  const categoryNames = [];
+  if (page.categories && page.categories.each) {
+    page.categories.each(function(cat) {
+      categoryNames.push(cat.name);
+    });
+  }
+  
+  const keywords = [];
+  if (page.tags && page.tags.each) {
+    page.tags.each(function(tag) {
+      keywords.push(tag.name);
+    });
+  }
+  
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": page.title + " Cheat Sheet & Quick Reference",
+    "name": page.title + " Cheat Sheet", 
+    "description": page_description(),
+    "image": page_image(),
+    "url": clean_url(url),
+    "datePublished": page.date.toISOString(),
+    "dateModified": (page.updated || page.date).toISOString(),
+    "author": {
+      "@type": "Organization",
+      "name": config.title,
+      "url": config.url
+    },
+    "publisher": {
+      "@type": "Organization", 
+      "name": config.title,
+      "logo": {
+        "@type": "ImageObject",
+        "url": config.url + "/assets/logo/icon-192x192.png"
+      },
+      "url": config.url
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": clean_url(url)
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": page.title,
+      "applicationCategory": "DeveloperApplication"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Developers, Programmers, System Administrators"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "learningResourceType": "Quick Reference Guide",
+    "typicalAgeRange": "18-65",
+    "inLanguage": "en"
+  };
+  
+  if (categoryNames.length > 0) {
+    articleData.articleSection = categoryNames;
+  }
+  
+  if (keywords.length > 0) {
+    articleData.keywords = keywords.join(", ");
+  }
+  
+  schemaArray.push(websiteData, articleData);
+  
+  // Add BreadcrumbList
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": config.url
+      }
+    ]
+  };
+  
+  if (categoryNames.length > 0) {
+    breadcrumbData.itemListElement.push({
+      "@type": "ListItem", 
+      "position": 2,
+      "name": categoryNames[0],
+      "item": config.url + "/#" + categoryNames[0].toLowerCase().replace(/\s+/g, '-')
+    });
+    
+    breadcrumbData.itemListElement.push({
+      "@type": "ListItem",
+      "position": 3, 
+      "name": page.title + " Cheat Sheet",
+      "item": clean_url(url)
+    });
+  } else {
+    breadcrumbData.itemListElement.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": page.title + " Cheat Sheet", 
+      "item": clean_url(url)
+    });
+  }
+  
+  schemaArray.push(breadcrumbData);
+  
+} else if (is_page()) {
+  // Normal page
+  const pageData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": page.title,
+    "description": page_description(),
+    "url": clean_url(url),
+    "mainEntity": {
+      "@type": "Organization",
+      "name": config.title,
+      "url": config.url
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home", 
+          "item": config.url
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": page.title,
+          "item": clean_url(url)
+        }
+      ]
+    }
+  };
+  
+  schemaArray.push(websiteData, pageData);
+}
+%>
+<%- JSON.stringify(schemaArray, null, 2) %>
+</script> 
