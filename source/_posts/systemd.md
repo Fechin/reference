@@ -37,7 +37,7 @@ plugins:
 
 ## Utility Commands {.cols-4}
 
-### systemctl {#systemctl} {.col-span-2 .row-span-2}
+### systemctl {#systemctl .col-span-2 .row-span-2}
 
 #### systemctl - System Commands
 
@@ -70,7 +70,7 @@ plugins:
 
 {.left-text}
 
-### journalctl {#journalctl} {.col-span-2}
+### journalctl {#journalctl .col-span-2}
 
 - Query and filter logs from the systemd journal.
 
@@ -89,7 +89,7 @@ plugins:
 
 {.left-text}
 
-### busctl {#busctl}{.col-span-2}
+### busctl {#busctl .col-span-2}
 
 - Inspect and monitor D-Bus (Desktop Bus) for debugging or introspection.
 
@@ -103,7 +103,7 @@ plugins:
 
 {.left-text}
 
-### loginctl{#loginctl}{.col-span-2 .row-span-2}
+### loginctl{#loginctl .col-span-2 .row-span-2}
 
 - Manages user sessions and login-related settings.
 
@@ -120,7 +120,7 @@ plugins:
 
 {.left-text}
 
-### systemd-analyze{#systemd-analyze}{.col-span-2}
+### systemd-analyze{#systemd-analyze .col-span-2}
 
 - Analyze system boot performance and unit dependencies.
 
@@ -132,7 +132,7 @@ plugins:
 
 {.left-text}
 
-### systemd-cgtop{#systemd-cgtop}{.col-span-2}
+### systemd-cgtop{#systemd-cgtop .col-span-2}
 
 - Real-time monitoring of resource usage by cgroups (CPU, memory, I/O).
 
@@ -144,7 +144,7 @@ plugins:
 
 {.left-text}
 
-### timedatectl{#timedatectl} {.col-span-2}
+### timedatectl{#timedatectl .col-span-2}
 
 - Manage system date, time, timezone, and NTP synchronization.
 
@@ -160,7 +160,7 @@ plugins:
 
 {.left-text}
 
-### resolvectl{#resolvectl}{.col-span-2}
+### resolvectl{#resolvectl .col-span-2}
 
 - Interact with systemd-resolved DNS resolver service.
 
@@ -175,7 +175,7 @@ plugins:
 
 {.left-text}
 
-### hostnamectl{#hostnamectl} {.col-span-4}
+### hostnamectl{#hostnamectl .col-span-4}
 
 - Query and set the system hostname (static, transient, pretty) and related metadata.
 
@@ -202,7 +202,7 @@ plugins:
 
 {.left-text}
 
-### systemd-run{#systemd-run}{.col-span-4}
+### systemd-run{#systemd-run .col-span-4}
 
 - Run a command as a transient systemd unit (service, scope, timer, etc.).
 
