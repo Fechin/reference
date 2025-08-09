@@ -1,14 +1,14 @@
 ---
 title: TypeScript
-date: 2024-05-28 22:12:25
-background: bg-[#4476c0]
+date: 2025-08-09 17:12:25
+background: bg-[#3178c6]
 tags:
-  - ts
+  - js
   - web
 categories:
   - Programming
 intro: |
-  A TypeScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  A TypeScript cheat sheet with essential syntax, types, and advanced features. Perfect for beginners coming from JavaScript or learning TypeScript from scratch.
 plugins:
   - copyCode
   - runCode
@@ -23,309 +23,679 @@ npm install typescript --save-dev
 npm tsc
 ```
 
-## Basic DataTypes
+### Introduction
 
-### basic types
+TypeScript is a superset of JavaScript that adds **static typing**, **interfaces**, and **compile-time error checking**. It compiles down to plain JavaScript.
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 
-```ts
-let isDone: boolean = false;
-let age: number = 30;
-let userName: string = 'John';
-let list: number[] = [1, 2, 3];
-let tuple: [string, number] = ['hello', 10];
-let notSure: any = 4;
-notSure = 'maybe a string instead';
+### Basic Types
+
+```typescript
+let age: number = 25;
+let name: string = "Alice";
+let isOnline: boolean = true;
+let notSure: any = "Could be anything";
+let nothingHere: null = null;
+let notDefined: undefined = undefined;
+let symbolValue: symbol = Symbol("unique");
+let bigIntValue: bigint = 9007199254740991n;
 ```
 
-### enums
+### Arrays
 
-```ts
-enum Color {
-  Red,
-  Green,
-  Blue
-}
-let c: Color = Color.Green;
+```typescript
+let numbers: number[] = [1, 2, 3];
+let fruits: Array<string> = ["apple", "banana"];
+let mixed: (string | number)[] = ["one", 2, "three"];
 ```
 
-### interface
+### Tuples
 
-```ts
-interface Person {
-  firstName: string;
-  lastName: string;
-  age?: number; // Optional property
+```typescript
+let person: [string, number];
+person = ["John", 30]; // ✅
+person = [30, "John"]; // ❌ Error
+```
+
+### Enums
+
+```typescript
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right
 }
 
-function greet(person: Person) {
-  return 'Hello, ' + person.firstName + ' ' + person.lastName;
+let move: Direction = Direction.Up;
+
+enum Status {
+  Success = "SUCCESS",
+  Error = "ERROR"
 }
+```
+
+### Type Aliases
+
+```typescript
+type ID = string | number;
+let userId: ID = 123;
+
+type Callback = () => void;
+```
+
+### Interfaces
+
+```typescript
+interface User {
+  name: string;
+  age: number;
+  isAdmin?: boolean; // optional
+  readonly id: number; // readonly
+}
+
+const user: User = { name: "Bob", age: 25, id: 1 };
+```
+
+### Extending Interfaces
+
+```typescript
+interface Animal {
+  name: string;
+}
+
+interface Dog extends Animal {
+  breed: string;
+}
+
+const dog: Dog = { name: "Fido", breed: "Labrador" };
 ```
 
 ### Functions
 
-```ts
-function add(x: number, y: number): number {
-  return x + y;
+```typescript
+function greet(name: string): string {
+  return `Hello, ${name}`;
 }
 
-let myAdd = function (x: number, y: number): number {
-  return x + y;
-};
+const add = (a: number, b: number): number => a + b;
+```
 
-let myArrowAdd = (x: number, y: number): number => x + y;
+### Optional & Default Parameters
 
-function buildName(firstName: string, lastName = 'Smith') {
-  return firstName + ' ' + lastName;
+```typescript
+function log(message: string, userId?: string) {
+  console.log(message, userId ?? "Guest");
 }
 
-function buildFullName(firstName: string, ...restOfName: string[]) {
-  return firstName + ' ' + restOfName.join(' ');
+function multiply(a: number, b: number = 2) {
+  return a * b;
 }
 ```
 
-### Classes
+### Rest Parameters
 
-```ts
-class Greeter {
-  greeting: string;
-  constructor(message: string) {
-    this.greeting = message;
-  }
-  greet() {
-    return 'Hello, ' + this.greeting;
-  }
+```typescript
+function sum(...numbers: number[]): number {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
 }
-
-let greeter = new Greeter('world');
 ```
 
-### Inheritance
+### Function Overloads
 
-```ts
-class Animal {
-  move(distance: number = 0) {
-    console.log(`Animal moved ${distance} meters.`);
-  }
+```typescript
+function combine(a: number, b: number): number;
+function combine(a: string, b: string): string;
+function combine(a: any, b: any): any {
+  return a + b;
 }
+```
 
-class Dog extends Animal {
-  bark() {
-    console.log('Woof! Woof!');
-  }
-}
+### Union & Intersection Types
 
-const dog = new Dog();
-dog.bark();
-dog.move(10);
-dog.bark();
+```typescript
+type Status = "success" | "error" | "loading";
+
+type UserInfo = { name: string };
+type AdminInfo = { admin: boolean };
+
+type AdminUser = UserInfo & AdminInfo;
+```
+
+### Literal Types
+
+```typescript
+type Alignment = "left" | "center" | "right";
+let align: Alignment = "left";
 ```
 
 ### Generics
 
-```ts
-function identity<T>(arg: T): T {
-  return arg;
+```typescript
+function identity<T>(value: T): T {
+  return value;
 }
 
-let output1 = identity<string>('myString');
-let output2 = identity<number>(42);
+let num = identity<number>(42);
+let str = identity("Hello");
+```
+
+### Generic Constraints
+
+```typescript
+interface Lengthwise {
+  length: number;
+}
+
+function logLength<T extends Lengthwise>(arg: T): void {
+  console.log(arg.length);
+}
+```
+
+### Generic Interfaces
+
+```typescript
+interface GenericIdentityFn<T> {
+  (arg: T): T;
+}
+
+const myIdentity: GenericIdentityFn<number> = identity;
+```
+
+### Classes
+
+```typescript
+class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello, I'm ${this.name}`);
+  }
+}
+
+const alice = new Person("Alice");
+alice.greet();
+```
+
+### Access Modifiers
+
+```typescript
+class Car {
+  public brand: string;
+  private speed: number;
+  protected year: number;
+
+  constructor(brand: string, speed: number, year: number) {
+    this.brand = brand;
+    this.speed = speed;
+    this.year = year;
+  }
+}
+```
+
+### Abstract Classes
+
+```typescript
+abstract class Animal {
+  abstract makeSound(): void;
+  move(): void {
+    console.log("Moving...");
+  }
+}
+
+class Dog extends Animal {
+  makeSound() {
+    console.log("Woof!");
+  }
+}
+```
+
+### Implements Interface
+
+```typescript
+interface Vehicle {
+  start(): void;
+}
+
+class Bike implements Vehicle {
+  start() {
+    console.log("Bike starting...");
+  }
+}
 ```
 
 ### Type Assertions
 
-```ts
-let someValue: any = 'this is a string';
-let strLength: number = (<string>someValue).length;
-// or
-let strLength2: number = (someValue as string).length;
+```typescript
+let someValue: unknown = "Hello TypeScript";
+let strLength: number = (someValue as string).length;
 ```
 
-## Modules
+### Nullish Coalescing
 
-### Export
-
-```ts
-export interface StringValidator {
-  isAcceptable(s: string): boolean;
-}
-
-export class ZipCodeValidator implements StringValidator {
-  isAcceptable(s: string) {
-    return s.length === 5;
-  }
-}
+```typescript
+let input: string | null = null;
+let result = input ?? "Default";
 ```
 
-### Import
+### Optional Chaining
 
-```ts
-import { ZipCodeValidator } from './ZipCodeValidator';
-
-let myValidator = new ZipCodeValidator();
+```typescript
+const user = { profile: { name: "Alice" } };
+console.log(user.profile?.name); // Alice
+console.log(user.address?.street); // undefined
 ```
 
 ### Namespaces
 
-```ts
-namespace Validation {
-  export interface StringValidator {
-    isAcceptable(s: string): boolean;
-  }
-
-  export class LettersOnlyValidator implements StringValidator {
-    isAcceptable(s: string) {
-      return /^[A-Za-z]+$/.test(s);
-    }
+```typescript
+namespace Utils {
+  export function log(msg: string) {
+    console.log(msg);
   }
 }
 
-let validator = new Validation.LettersOnlyValidator();
+Utils.log("Hello");
 ```
 
-## Union and Intersection Types
+### Modules
 
-### Union Types
-
-```ts
-function padLeft(value: string, padding: string | number) {
-  if (typeof padding === 'number') {
-    return Array(padding + 1).join(' ') + value;
-  }
-  if (typeof padding === 'string') {
-    return padding + value;
-  }
-  throw new Error(`Expected string or number, got '${padding}'.`);
+```typescript
+// math.ts
+export function add(a: number, b: number) {
+  return a + b;
 }
+
+// app.ts
+import { add } from "./math";
+console.log(add(2, 3));
 ```
 
-### Intersection Types
+### Export Default
 
-```ts
-interface ErrorHandling {
-  success: boolean;
-  error?: { message: string };
+```typescript
+// logger.ts
+export default class Logger {
+  log(msg: string) {
+    console.log(msg);
+  }
 }
 
-interface ArtworksData {
-  artworks: { title: string }[];
-}
-
-type ArtworksResponse = ArtworksData & ErrorHandling;
-
-const response: ArtworksResponse = {
-  success: true,
-  artworks: [{ title: 'Mona Lisa' }]
-};
+// main.ts
+import Logger from "./logger";
+const logger = new Logger();
+logger.log("Info");
 ```
 
-## Utility Types
+### Promises & Async/Await
 
-### Partial
+```typescript
+async function fetchData(): Promise<string> {
+  return "Data loaded";
+}
 
-```ts
+fetchData().then(console.log);
+```
+
+### Typing Async Functions
+
+```typescript
 interface User {
   id: number;
+  name: string;
+}
+
+async function getUser(id: number): Promise<User> {
+  // Simulate fetch
+  return { id, name: "User" };
+}
+```
+
+### Readonly & Record
+
+```typescript
+interface Config {
+  readonly apiKey: string;
+}
+
+type Point = Record<"x" | "y", number>;
+const origin: Point = { x: 0, y: 0 };
+```
+
+## Advanced Features
+
+### Type Guards
+
+```typescript
+function isString(value: any): value is string {
+  return typeof value === "string";
+}
+
+function process(value: string | number) {
+  if (isString(value)) {
+    console.log(value.toUpperCase());
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
+```
+
+### Index Signatures
+
+```typescript
+interface Dictionary {
+  [key: string]: string;
+}
+
+const dict: Dictionary = { hello: "world" };
+```
+
+### Mapped Types
+
+```typescript
+type Flags = { [K in "option1" | "option2"]: boolean };
+const flags: Flags = { option1: true, option2: false };
+```
+
+### Conditional Types
+
+```typescript
+type NonNullable<T> = T extends null | undefined ? never : T;
+type SafeString = NonNullable<string | null>; // string
+```
+
+### Unknown vs Any
+
+```typescript
+let value: unknown;
+value = 5; // OK
+// console.log(value.length); // Error
+
+let anyValue: any;
+anyValue = 5;
+console.log(anyValue.length); // No error, but risky
+```
+
+### Never Type
+
+```typescript
+function throwError(msg: string): never {
+  throw new Error(msg);
+}
+```
+
+### Decorators (Experimental)
+
+```typescript
+function sealed(target: any) {
+  Object.seal(target);
+  Object.seal(target.prototype);
+}
+
+@sealed
+class SealedClass {}
+```
+
+### Utility Types
+
+```typescript
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+
+// Partial
+type PartialTodo = Partial<Todo>;
+
+// Required
+type RequiredTodo = Required<PartialTodo>;
+
+// Pick
+type TodoPreview = Pick<Todo, "title" | "completed">;
+
+// Omit
+type TodoWithoutDesc = Omit<Todo, "description">;
+
+// ReturnType
+function f() { return { x: 10, y: 3 }; }
+type P = ReturnType<typeof f>;
+
+// Parameters
+type Params = Parameters<(a: number, b: string) => void>;
+```
+
+### Keyof and Typeof
+
+```typescript
+interface Person {
   name: string;
   age: number;
 }
 
-let partialUser: Partial<User> = {
-  name: 'Alice'
+type PersonKeys = keyof Person; // "name" | "age"
+
+const person = { name: "Alice", age: 30 };
+type PersonType = typeof person; // { name: string; age: number }
+```
+
+### Infer Keyword
+
+```typescript
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+```
+
+## Conditionals and Loops
+
+### if Statement
+
+```typescript
+const max: number = 100;
+if (max > 50) {
+  console.log("Large");
+}
+```
+
+### Ternary Operator
+
+```typescript
+const isEven: boolean = (10 % 2 === 0) ? true : false;
+```
+
+### Switch Statement
+
+```typescript
+const color: string = "red";
+switch (color) {
+  case "red":
+    console.log("Stop");
+    break;
+  default:
+    console.log("Go");
+}
+```
+
+### For Loop
+
+```typescript
+for (let i: number = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+### While Loop
+
+```typescript
+let count: number = 0;
+while (count < 5) {
+  console.log(count++);
+}
+```
+
+### For...of Loop
+
+```typescript
+const arr: number[] = [1, 2, 3];
+for (const num of arr) {
+  console.log(num);
+}
+```
+
+### For...in Loop
+
+```typescript
+const obj = { a: 1, b: 2 };
+for (const key in obj) {
+  console.log(key);
+}
+```
+
+## Arrays and Iterables
+
+### Array Methods
+
+```typescript
+const nums: number[] = [1, 2, 3];
+
+// Map
+const doubled: number[] = nums.map(n => n * 2);
+
+// Filter
+const evens: number[] = nums.filter(n => n % 2 === 0);
+
+// Reduce
+const sum: number = nums.reduce((acc, curr) => acc + curr, 0);
+```
+
+### Readonly Arrays
+
+```typescript
+const readOnlyNums: ReadonlyArray<number> = [1, 2, 3];
+// readOnlyNums.push(4); // Error
+```
+
+### Sets
+
+```typescript
+const set: Set<number> = new Set([1, 2, 3]);
+set.add(4);
+set.delete(1);
+```
+
+### Maps
+
+```typescript
+const map: Map<string, number> = new Map();
+map.set("one", 1);
+map.get("one"); // 1
+```
+
+## Objects
+
+### Object Types
+
+```typescript
+const car: { type: string, mileage?: number } = {
+  type: "Toyota"
 };
 ```
 
-### Readonly
+### Indexable Types
 
-```ts
-let readonlyUser: Readonly<User> = {
-  id: 1,
-  name: 'Bob',
-  age: 25
-};
-
-// readonlyUser.age = 26; // Error: cannot reassign a readonly property
-```
-
-### Pick
-
-```ts
-type UserName = Pick<User, 'name'>;
-
-let userName: UserName = {
-  name: 'Charlie'
-};
-```
-
-### Omit
-
-```ts
-type UserWithoutAge = Omit<User, 'age'>;
-
-let userWithoutAge: UserWithoutAge = {
-  id: 2,
-  name: 'Dave'
-};
-```
-
-## Decorators
-
-### Class Decorator
-
-```ts
-function sealed(constructor: Function) {
-  Object.seal(constructor);
-  Object.seal(constructor.prototype);
+```typescript
+interface StringArray {
+  [index: number]: string;
 }
 
-@sealed
-class Greeter {
-  greeting: string;
+const myArray: StringArray = ["Bob", "Fred"];
+```
+
+### Excess Property Checks
+
+```typescript
+interface Square {
+  color: string;
+  width: number;
+}
+
+// const redSquare = { color: "red", width: 100, height: 100 }; // Error if strict
+```
+
+## Modules and Namespaces
+
+### Namespace with Internal Modules
+
+```typescript
+namespace Geometry {
+  export interface Point {
+    x: number;
+    y: number;
+  }
+  export function distance(p1: Point, p2: Point): number {
+    return Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+  }
+}
+```
+
+### Module Resolution
+
+// tsconfig.json
+{
+  "compilerOptions": {
+    "moduleResolution": "node"
+  }
+}
+
+## Error Handling
+
+### Try Catch
+
+```typescript
+try {
+  throw new Error("Oops");
+} catch (e: unknown) {
+  if (e instanceof Error) {
+    console.log(e.message);
+  }
+}
+```
+
+### Custom Errors
+
+```typescript
+class CustomError extends Error {
   constructor(message: string) {
-    this.greeting = message;
-  }
-  greet() {
-    return 'Hello, ' + this.greeting;
+    super(message);
   }
 }
 ```
 
-### Method Decorator
+## TypeScript with JavaScript Features
 
-```ts
-function enumerable(value: boolean) {
-  return function (
-    target: any,
-    propertyKey: string,
-    descriptor: PropertyDescriptor
-  ) {
-    descriptor.enumerable = value;
-  };
-}
+### Destructuring
 
-class Greeter {
-  greeting: string;
-  constructor(message: string) {
-    this.greeting = message;
-  }
-
-  @enumerable(false)
-  greet() {
-    return 'Hello, ' + this.greeting;
-  }
-}
+```typescript
+const [first, second]: [number, number] = [1, 2];
+const { name: userName, age }: { name: string, age: number } = { name: "Alice", age: 30 };
 ```
 
-### Async/Await
+### Spread Operator
 
-```ts
-async function fetchData(url: string) {
-  let response = await fetch(url);
-  let data = await response.json();
-  return data;
-}
+```typescript
+const arr1: number[] = [1, 2];
+const arr2: number[] = [...arr1, 3, 4];
 ```
 
-## Also read
+### Template Literals
 
-- [TypeScript](https://www.typescriptlang.org/docs/)
+```typescript
+const greeting: string = `Hello, ${name}`;
+```
+
+### Arrow Functions
+
+```typescript
+const square = (x: number): number => x * x;
+```
