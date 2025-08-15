@@ -550,7 +550,7 @@ fun main() {
 ### Default Parameters
 
 ```kotlin {.wrap}
-fun favoriteLanguage(name, language = "Kotlin") {
+fun favoriteLanguage(name: String, language: String = "Kotlin") {
   println("Hello, $name. Your favorite programming language is $language")
 }
 
