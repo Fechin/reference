@@ -1,6 +1,6 @@
 ---
 title: Svelte
-date: 2025-04-08 19:45:00
+date: 2025-08-16 10:30:00
 background: bg-[#FF3E00]
 tags:
   - svelte
@@ -87,7 +87,7 @@ Note: Svelte components must always return a root element or content.
 
 ```js
 <script>
-  export let name = "User";
+  let { name = "User" } = $props();
 </script>
 
 <div class="UserProfile">
@@ -127,8 +127,7 @@ Note: External components should be installed via npm first.
 
 ```js
 <script>
-  export let firstName;
-  export let lastName;
+  let { firstName, lastName } = $props();
 
   function fullName() {
     return `${firstName} ${lastName}`;
@@ -150,9 +149,7 @@ Note: External components should be installed via npm first.
 
 ```js
 <script>
-  export let firstName;
-  export let lastName;
-  export let age;
+  let { firstName, lastName, age } = $props();
 </script>
 
 <h1>{firstName} {lastName} is {age}.</h1>
@@ -164,7 +161,7 @@ Note: External components should be installed via npm first.
 
 ```js
 <script>
-  let name = "Zehan";
+  let name = $state("Zehan");
 
   function updateName() {
     name = prompt("What is your name?") || name;
@@ -172,7 +169,7 @@ Note: External components should be installed via npm first.
 </script>
 
 <h1>{name}</h1>
-<button on:click={updateName}>Update name</button>
+<button onclick={updateName}>Update name</button>
 ```
 
 ## Events {.cols-1}
@@ -187,12 +184,12 @@ Note: External components should be installed via npm first.
   }
 </script>
 
-<a href="#" on:click|preventDefault={handleClick}>
+<a href="#" onclick|preventDefault={handleClick}>
   Say Hi
 </a>
 ```
 
-Note: The most common event listeners are `on:click` and `on:submit`.
+Note: The most common event listeners are `onclick` and `onsubmit`.
 
 ## Loops {.cols-2}
 
@@ -236,8 +233,8 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 
 ```js
 <script>
-  let username = "";
-  let password = "";
+  let username = $state("");
+  let password = $state("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -245,7 +242,7 @@ Note: The most common event listeners are `on:click` and `on:submit`.
   }
 </script>
 
-<form on:submit={handleSubmit}>
+<form onsubmit={handleSubmit}>
   <input type="text" placeholder="Username" bind:value={username} />
   <input type="password" placeholder="Password" bind:value={password} />
   <input type="submit" value="Login" />
@@ -274,7 +271,7 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 <script>
   import { onMount } from 'svelte';
   let notifications = [];
-  let loading = true;
+  let loading = $state(true);
 
   onMount(async () => {
     const res = await fetch("https://notifications.com");
@@ -391,9 +388,9 @@ export const time = readable(new Date(), function start(set) {
 
 ```js
 <script>
-  let a = 2;
-  let b = 3;
-  $: sum = a + b;
+  let a = $state(2);
+  let b = $state(3);
+  let sum = $derived(a + b);
 </script>
 
 <p>{sum}</p>
@@ -402,14 +399,17 @@ export const time = readable(new Date(), function start(set) {
 ### Reactive Statements with Side Effects
 
 ```js
-<script>let name = 'Zehan'; $: console.log('Name changed to', name);</script>
+<script>
+  let name = 'Zehan';
+  $effect(() => console.log('Name changed to', name));
+</script>
 ```
 
 ### Bind to DOM Properties
 
 ```js
 <script>
-  let text = '';
+  let text = $state('');
 </script>
 
 <textarea bind:value={text} />
@@ -420,7 +420,7 @@ export const time = readable(new Date(), function start(set) {
 
 ```js
 <script>
-  let selected = 'apple';
+  let selected = $state('apple');
 </script>
 
 <label><input type="radio" bind:group={selected} value="apple" /> Apple</label>
@@ -477,7 +477,7 @@ export async function load({ fetch }) {
 ```js
 // +page.svelte
 <script>
-  export let data;
+  let { data } = $props();
 </script>
 
 <h1>{data.title}</h1>
