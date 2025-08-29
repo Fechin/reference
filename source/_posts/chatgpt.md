@@ -45,6 +45,21 @@ plugins:
 - Chain of thought: prompt guiding the model to break down complex reasoning into intermediate
   steps.[[s]](https://cloud.google.com/discover/what-is-prompt-engineering?hl=en)
 
+### Modes
+
+- Study and learn: interactive learning that encourages step by step problem solving instead of giving direct
+  answers.[[s]](https://openai.com/index/chatgpt-study-mode/)
+- Create image: generate images from text
+  prompts.[[s]](https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview)
+- Think longer: performs deeper reasoning and generates more accurate, thoughtful, and detailed
+  responses.[[s]](https://openai.com/index/introducing-gpt-5)
+- Deep research: reads and synthesizes content across multiple online sources and produces cited structured
+  outputs.[[s]](https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview)
+- Web search: finds recent and real-time information
+  online.[[s]](https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview)
+- Canvas: separate interface for collaborative writing and coding that provides inline editing, suggestions, and
+  feedback.[[s]](https://openai.com/index/introducing-canvas/)
+
 ## Prompt Tips
 
 ### Efficiency
