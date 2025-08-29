@@ -18,15 +18,24 @@ plugins:
 
 ### Glossary
 
-- Prompt: input text that guides an AI model’s response.
-- Tokens: the smallest units of text processed by an AI model.
-- Token Limit: the max number of tokens an AI model can process in one request.
-- Artificial intelligence (AI): machines that imitate human intelligence.
-- AI Model: a program trained on datasets to recognize patterns and make decisions without human intervention.
-- Large language model (LLM): a transformer-based AI model trained on large text datasets to understand and generate
-  human-like language.
-- Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
-- Jailbreak: exploiting AI model vulnerabilities to bypass ethical guidelines and perform restricted actions.
+- Prompt: input or query that guides an AI model in generating a
+  response.[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273982/definition-of-prompt-ai-prompt)
+- Tokens: the smallest units of text processed by an AI model (e.g., words, subwords, characters, and punctuation marks)
+  that varies depending on the model and the tokenization
+  method[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273998/definition-of-token/)
+- Token Limit: the maximum number of tokens an AI model can process in one
+  interaction.[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273998/definition-of-token/)
+- Artificial intelligence (AI): technology that enables machines to simulate human cognition (e.g., human learning,
+  comprehension, problem solving, decision making, creativity, and
+  autonomy).[[s]](https://www.ibm.com/think/topics/artificial-intelligence)
+- AI Model: program trained on a set of data to recognize patterns or make decisions without further human
+  intervention.[[s]](https://www.ibm.com/think/topics/ai-model)
+- Large language model (LLM): transformer-based AI model trained on large text datasets to understand and generate
+  natural language.[[s]](https://www.ibm.com/think/topics/large-language-models)
+- Hallucination: AI response that detects nonexistent patterns and creates outputs that are nonsensical and
+  inaccurate.[[s]](https://www.ibm.com/think/topics/ai-hallucinations)
+- Jailbreak: exploiting vulnerabilities in AI systems to bypass their ethical guidelines and perform restricted
+  actions.[[s]](https://www.ibm.com/think/insights/ai-jailbreak)
 
 ## Prompt Tips
 
