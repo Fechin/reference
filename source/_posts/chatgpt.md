@@ -356,7 +356,7 @@ Creative Writing
 Interactive And Educational
 
 - [Quiz|test|flashcards|drills]
-- [Interactive fiction|role-playing game|choose-your-own-adventure]
+- [rpg|choose-your-own-adventure]
 
 #### Visual
 
@@ -412,13 +412,15 @@ Structure
 - No headers
 - No pretext titles
 
-Content
+Voice And Style
 
 - Use [first-person|second-person|third-person] narrative voice
 - Don't change the wording
-- Permit [minor|major] edits
 - Use pop culture references
-- Ensure goals align with SMART criteria
+
+Edits
+
+- Do [minor|major] edits
 - Only show [changed|unchanged] content
 
 ## Examples
