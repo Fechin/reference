@@ -49,7 +49,7 @@ CSS is rich in capabilities and is more than simply laying out pages.
 
 ```html
 <div class="classname"></div>
-<div class="class1 ... classn"></div>
+<div class="class1 classn ..."></div>
 ```
 
 Support multiple classes on one element.
@@ -94,8 +94,8 @@ See: [Colors](#css-colors)
 
 ```css
 background-color: blue;
-background-image: url("nyan-cat.gif");
-background-image: url("../image.png");
+background-image: url('nyan-cat.gif');
+background-image: url('../image.png');
 ```
 
 See: [Backgrounds](#css-backgrounds)
@@ -106,7 +106,7 @@ See: [Backgrounds](#css-backgrounds)
 .page-title {
   font-weight: bold;
   font-size: 30px;
-  font-family: "Courier New";
+  font-family: 'Courier New';
 }
 ```
 
@@ -216,7 +216,7 @@ h3.section-heading {
 #### Attribute Selector
 
 ```css
-div[attribute="SomeValue"] {
+div[attribute='SomeValue'] {
   background-color: red;
 }
 ```
@@ -395,8 +395,8 @@ text-transform: lowercase;
 
 ```css
 @font-face {
-  font-family: "Glegoo";
-  src: url("../Glegoo.woff");
+  font-family: 'Glegoo';
+  src: url('../Glegoo.woff');
 }
 ```
 
@@ -484,7 +484,12 @@ background:
   url(paper.gif) left top repeat;
 
 background: rgb(2, 0, 36);
-background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 232, 230, 1) 35%, rgba(0, 212, 255, 1) 100%);
+background: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(13, 232, 230, 1) 35%,
+  rgba(0, 212, 255, 1) 100%
+);
 ```
 
 ## CSS The Box Model
@@ -914,8 +919,8 @@ Any legal length value, like px or %. 0 is the default value
 .grid-container {
   display: grid;
   grid-template-areas:
-    "nav nav . ."
-    "nav nav . .";
+    'nav nav . .'
+    'nav nav . .';
 }
 ```
 
@@ -1003,7 +1008,7 @@ body {
 
 h3::before {
   counter-increment: section;
-  content: "Section." counter(section);
+  content: 'Section.' counter(section);
 }
 ```
 
@@ -1015,7 +1020,7 @@ ol {
 
 li::before {
   counter-increment: section;
-  content: counters(section, ".") " ";
+  content: counters(section, '.') ' ';
 }
 ```
 

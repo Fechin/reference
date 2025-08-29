@@ -1030,7 +1030,9 @@ func main() {
 ## Go File I/O {.cols-2}
 
 ### Reading a File
+
 Read the contents of a file into memory.
+
 ```go
 data, err := os.ReadFile("file.txt")
 if err != nil {
@@ -1039,7 +1041,9 @@ if err != nil {
 ```
 
 ### Writing to a File
+
 Write data to a file with specific permissions (e.g., 0644 for read-write).
+
 ```go
 err := os.WriteFile("file.txt", []byte("Hello, Go!"), 0644)
 ```
@@ -1047,7 +1051,9 @@ err := os.WriteFile("file.txt", []byte("Hello, Go!"), 0644)
 ## Go Testing {.cols-2}
 
 ### Unit Test
+
 Unit Test: A basic unit test follows the below naming convention and uses t.Errorf() to report failures.
+
 ```go
 func TestAdd(t *testing.T) {
     result := add(2, 3)
@@ -1058,7 +1064,9 @@ func TestAdd(t *testing.T) {
 ```
 
 ### Unit Test
+
 Benchmark: Benchmark tests measure performance, using b.N to control iterations.
+
 ```go
 func BenchmarkAdd(b *testing.B) {
     for i := 0; i < b.N; i++ {
@@ -1069,15 +1077,18 @@ func BenchmarkAdd(b *testing.B) {
 
 ## Go JSON Handling {.cols-2}
 
+### JSON Encoding
 
-### JSON Encoding 
 Convert a Go struct to JSON.
+
 ```go
 data, _ := json.Marshal(person)
 ```
 
 ### JSON Decoding
+
 Parse JSON data into a Go struct.
+
 ```go
 json.Unmarshal(data, &person)
 ```
@@ -1085,6 +1096,7 @@ json.Unmarshal(data, &person)
 ## Go Server {.cols-2}
 
 ### net/http (Standard Library)
+
 ```go
 package main
 
@@ -1107,6 +1119,7 @@ func main() {
 ```
 
 ### gorilla/mux
+
 ```go
 package main
 
@@ -1130,6 +1143,7 @@ func main() {
 ```
 
 ### chi
+
 ```go
 package main
 
@@ -1152,6 +1166,7 @@ func main() {
 ```
 
 ### gin
+
 ```go
 package main
 
@@ -1172,6 +1187,7 @@ func main() {
 ```
 
 ### fiber
+
 ```go
 package main
 
@@ -1190,7 +1206,9 @@ func main() {
     app.Listen(":8084")
 }
 ```
+
 ### beego
+
 ```go
 package main
 

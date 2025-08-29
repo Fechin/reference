@@ -2,7 +2,7 @@
     <%
         var cats = [];
         page.categories.forEach(function (cat) {
-            cats.push('<a class="breadcrumb" href="' + config.root + cat.path + '">' + cat.name + '</a>');
+            cats.push('<a class="breadcrumb" href="' + config.root + cat.path + '" title="' + cat.name + ' category">' + cat.name + '</a>');
         });
     %>
 

@@ -1,7 +1,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-    <meta http-equiv='content-language' content='en-gb'>
+    <meta http-equiv='content-language' content='<%- config.language || 'en' %>'>
+    <meta name="language" content="<%- config.language || 'en' %>"/>
     <meta name="renderer" content="webkit"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="app:pageurl" content="/"/>
@@ -12,16 +13,48 @@
     <meta name="keywords" content="<%- page_keywords() %>"/>
     <!-- description -->
     <meta name="description" content="<%- page_description() %>"/>
+    
+    <!-- Additional SEO meta tags -->
+    <meta name="author" content="<%- config.author %>"/>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    <% if (is_post()) { %>
+    <meta name="article:author" content="<%- config.title %>"/>
+    <meta name="article:published_time" content="<%- page.date.toISOString() %>"/>
+    <meta name="article:modified_time" content="<%- (page.updated || page.date).toISOString() %>"/>
+    <% if (page.categories && page.categories.length > 0) { %>
+    <meta name="article:section" content="<%- page.categories.toArray()[0].name %>"/>
+    <% } %>
+    <% if (page.tags && page.tags.each) { %>
+    <% page.tags.each(function(tag) { %>
+    <meta name="article:tag" content="<%- tag.name %>"/>
+    <% }); %>
+    <% } %>
+    <% } %>
 
     <!-- for social -->
-    <meta property="og:url" content="<%- url_for(url) %>"/>
+    <meta property="og:url" content="<%- clean_url(url) %>"/>
     <meta property="og:title" content="<%- page_title() %>"/>
     <meta property="og:site_name" content="<%- config.title %>"/>
     <meta property="og:description" content="<%- page_description() %>"/>
     <meta property="og:image" content="<%- page_image() %>"/>
     <meta property="og:image:width" content="2276"/>
     <meta property="og:image:height" content="1240"/>
-    <meta property="og:type" content="website"/>
+    <meta property="og:image:alt" content="<%- page_title() %> - <%- config.title %>"/>
+    <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>"/>
+    <meta property="og:locale" content="en_US"/>
+    <% if (is_post()) { %>
+    <meta property="article:published_time" content="<%- page.date.toISOString() %>"/>
+    <meta property="article:modified_time" content="<%- (page.updated || page.date).toISOString() %>"/>
+    <meta property="article:author" content="<%- config.title %>"/>
+    <% if (page.categories && page.categories.length > 0) { %>
+    <meta property="article:section" content="<%- page.categories.toArray()[0].name %>"/>
+    <% } %>
+    <% if (page.tags && page.tags.each) { %>
+    <% page.tags.each(function(tag) { %>
+    <meta property="article:tag" content="<%- tag.name %>"/>
+    <% }); %>
+    <% } %>
+    <% } %>
 
     <!-- twitter share-->
     <meta name="twitter:card" content="summary_large_image"/>
@@ -30,13 +63,26 @@
     <meta name="twitter:creator" content="@<%- config.author %>">
     <meta name="twitter:description" content="<%- page_description() %>"/>
     <meta name="twitter:image" content="<%- page_image() %>"/>
+    <meta name="twitter:image:alt" content="<%- page_title() %> - <%- config.title %>"/>
 
     <!-- favicon -->
     <link rel="icon" href="/images/favicon.png?v=1"/>
     <link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"/>
 
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json"/>
+    <meta name="theme-color" content="#6366f1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="apple-mobile-web-app-title" content="CheatSheets"/>
+    <link rel="apple-touch-icon" href="/assets/logo/icon-192x192.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/logo/icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/icon-192x192.png"/>
+    <meta name="msapplication-TileImage" content="/assets/logo/icon-144x144.png"/>
+    <meta name="msapplication-TileColor" content="#6366f1"/>
+
     <!-- misc -->
-    <link rel="canonical" href="<%- url_for(url) %>"/>
+    <link rel="canonical" href="<%- clean_url(url) %>"/>
     <link rel="prefetch" href="<%- url_for(config.url) %>"/>
     <link rel="prerender" href="<%- url_for(config.url) %>"/>
     <link rel="alternate" href="/atom.xml" title="<%- config.title %>" type="application/atom+xml"/>
@@ -49,5 +95,8 @@
             html.toggle('dark')
         }
     </script>
+
+    <!-- Structured Data for SEO -->
+    <%- partial('_partial/structured-data') %>
 
 </head>

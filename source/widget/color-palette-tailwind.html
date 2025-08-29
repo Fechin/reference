@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto p-4">
+    <div class="flex items-center justify-center flex-row space-x-4">
+        <!-- Color Picker Section -->
+        <div class="me-25">
+            <div class="flex flex-col space-y-1 me-25 ">
+                <!-- RED -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(255, 245, 245)', '#fff5f5','bg-red-50')" class="w-14 h-10  me-2 rounded-md me-2 rounded-md bg-red-50 cursor-pointer " title="Red 5%"></div>
+                    <div onclick="getColor('rgb(255, 230, 230)', '#ffebee', 'bg-red-100')" class="w-14 h-10  me-2 rounded-md bg-red-100 cursor-pointer" title="Red 10%"></div>
+                    <div onclick="getColor('rgb(255, 205, 205)', '#ffcdcd', 'bg-red-200')" class="w-14 h-10  me-2 rounded-md bg-red-200 cursor-pointer" title="Red 20%"></div>
+                    <div onclick="getColor('rgb(255, 180, 180)', '#ffb4b4', 'bg-red-300')" class="w-14 h-10  me-2 rounded-md bg-red-300 cursor-pointer" title="Red 30%"></div>
+                    <div onclick="getColor('rgb(255, 107, 107)', '#ff6b6b', 'bg-red-400')" class="w-14 h-10  me-2 rounded-md bg-red-400 cursor-pointer" title="Red 40%"></div>
+                    <div onclick="getColor('rgb(255, 51, 51)', '#ff3333', 'bg-red-500')" class="w-14 h-10  me-2 rounded-md bg-red-500 cursor-pointer" title="Red 50%"></div>
+                    <div onclick="getColor('rgb(220, 38, 38)', '#dc2626', 'bg-red-600')" class="w-14 h-10  me-2 rounded-md bg-red-600 cursor-pointer" title="Red 60%"></div>
+                    <div onclick="getColor('rgb(180, 25, 25)', '#b41919', 'bg-red-700')" class="w-14 h-10  me-2 rounded-md bg-red-700 cursor-pointer" title="Red 70%"></div>
+                    <div onclick="getColor('rgb(153, 27, 27)', '#991b1b', 'bg-red-800')" class="w-14 h-10  me-2 rounded-md bg-red-800 cursor-pointer" title="Red 80%"></div>
+                    <div onclick="getColor('rgb(127, 29, 29)', '#7f1d1d', 'bg-red-900')" class="w-14 h-10  me-2 rounded-md bg-red-900 cursor-pointer" title="Red 90%"></div>
+                </div>
+
+                <!-- ORANGE -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(255, 247, 237)', '#fff7ed', 'bg-orange-50')" class="w-14 h-10  me-2 rounded-md bg-orange-50 cursor-pointer" title="Orange 5%"></div>
+                    <div onclick="getColor('rgb(255, 237, 213)', '#ffedd5', 'bg-orange-100')" class="w-14 h-10  me-2 rounded-md bg-orange-100 cursor-pointer" title="Orange 10%"></div>
+                    <div onclick="getColor('rgb(254, 215, 170)', '#fed7aa', 'bg-orange-200')" class="w-14 h-10  me-2 rounded-md bg-orange-200 cursor-pointer" title="Orange 20%"></div>
+                    <div onclick="getColor('rgb(253, 186, 116)', '#fdba74', 'bg-orange-300')" class="w-14 h-10  me-2 rounded-md bg-orange-300 cursor-pointer" title="Orange 30%"></div>
+                    <div onclick="getColor('rgb(251, 146, 60)', '#fb923c', 'bg-orange-400')" class="w-14 h-10  me-2 rounded-md bg-orange-400 cursor-pointer" title="Orange 40%"></div>
+                    <div onclick="getColor('rgb(249, 115, 22)', '#f97316', 'bg-orange-500')" class="w-14 h-10  me-2 rounded-md bg-orange-500 cursor-pointer" title="Orange 50%"></div>
+                    <div onclick="getColor('rgb(234, 88, 12)', '#ea580c', 'bg-orange-600')" class="w-14 h-10  me-2 rounded-md bg-orange-600 cursor-pointer" title="Orange 60%"></div>
+                    <div onclick="getColor('rgb(194, 65, 12)', '#c2410c', 'bg-orange-700')" class="w-14 h-10  me-2 rounded-md bg-orange-700 cursor-pointer" title="Orange 70%"></div>
+                    <div onclick="getColor('rgb(154, 52, 18)', '#9a3412', 'bg-orange-800')" class="w-14 h-10  me-2 rounded-md bg-orange-800 cursor-pointer" title="Orange 80%"></div>
+                    <div onclick="getColor('rgb(124, 45, 18)', '#7c2d12', 'bg-orange-900')" class="w-14 h-10  me-2 rounded-md bg-orange-900 cursor-pointer" title="Orange 90%"></div>
+                </div>
+
+                <!-- AMBER -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(255, 251, 235)', '#fffbeb', 'bg-amber-50')" class="w-14 h-10  me-2 rounded-md bg-amber-50 cursor-pointer" title="Amber 5%"></div>
+                    <div onclick="getColor('rgb(254, 243, 199)', '#fef3c7', 'bg-amber-100')" class="w-14 h-10  me-2 rounded-md bg-amber-100 cursor-pointer" title="Amber 10%"></div>
+                    <div onclick="getColor('rgb(253, 230, 138)', '#fde68a', 'bg-amber-200')" class="w-14 h-10  me-2 rounded-md bg-amber-200 cursor-pointer" title="Amber 20%"></div>
+                    <div onclick="getColor('rgb(252, 211, 77)', '#fcd34d', 'bg-amber-300')" class="w-14 h-10  me-2 rounded-md bg-amber-300 cursor-pointer" title="Amber 30%"></div>
+                    <div onclick="getColor('rgb(251, 191, 36)', '#fbbf24', 'bg-amber-400')" class="w-14 h-10  me-2 rounded-md bg-amber-400 cursor-pointer" title="Amber 40%"></div>
+                    <div onclick="getColor('rgb(245, 158, 11)', '#f59e0b', 'bg-amber-500')" class="w-14 h-10  me-2 rounded-md bg-amber-500 cursor-pointer" title="Amber 50%"></div>
+                    <div onclick="getColor('rgb(217, 119, 6)', '#d97706', 'bg-amber-600')" class="w-14 h-10  me-2 rounded-md bg-amber-600 cursor-pointer" title="Amber 60%"></div>
+                    <div onclick="getColor('rgb(180, 83, 9)', '#b45309', 'bg-amber-700')" class="w-14 h-10  me-2 rounded-md bg-amber-700 cursor-pointer" title="Amber 70%"></div>
+                    <div onclick="getColor('rgb(146, 64, 14)', '#92400e', 'bg-amber-800')" class="w-14 h-10  me-2 rounded-md bg-amber-800 cursor-pointer" title="Amber 80%"></div>
+                    <div onclick="getColor('rgb(120, 53, 15)', '#78350f', 'bg-amber-900')" class="w-14 h-10  me-2 rounded-md bg-amber-900 cursor-pointer" title="Amber 90%"></div>
+                </div>
+
+                <!-- YELLOW -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(255, 254, 239)', '#fefce8', 'bg-yellow-50')" class="w-14 h-10  me-2 rounded-md bg-yellow-50 cursor-pointer" title="Yellow 5%"></div>
+                    <div onclick="getColor('rgb(254, 252, 219)', '#fefcdb', 'bg-yellow-100')" class="w-14 h-10  me-2 rounded-md bg-yellow-100 cursor-pointer" title="Yellow 10%"></div>
+                    <div onclick="getColor('rgb(254, 249, 195)', '#fef9c3', 'bg-yellow-200')" class="w-14 h-10  me-2 rounded-md bg-yellow-200 cursor-pointer" title="Yellow 20%"></div>
+                    <div onclick="getColor('rgb(254, 240, 138)', '#fef08a', 'bg-yellow-300')" class="w-14 h-10  me-2 rounded-md bg-yellow-300 cursor-pointer" title="Yellow 30%"></div>
+                    <div onclick="getColor('rgb(253, 224, 71)', '#fde047', 'bg-yellow-400')" class="w-14 h-10  me-2 rounded-md bg-yellow-400 cursor-pointer" title="Yellow 40%"></div>
+                    <div onclick="getColor('rgb(252, 205, 38)', '#fccd26', 'bg-yellow-500')" class="w-14 h-10  me-2 rounded-md bg-yellow-500 cursor-pointer" title="Yellow 50%"></div>
+                    <div onclick="getColor('rgb(251, 191, 36)', '#fbbf24', 'bg-yellow-600')" class="w-14 h-10  me-2 rounded-md bg-yellow-600 cursor-pointer" title="Yellow 60%"></div>
+                    <div onclick="getColor('rgb(249, 168, 37)', '#f9a825', 'bg-yellow-700')" class="w-14 h-10  me-2 rounded-md bg-yellow-700 cursor-pointer" title="Yellow 70%"></div>
+                    <div onclick="getColor('rgb(245, 146, 40)', '#f59228', 'bg-yellow-800')" class="w-14 h-10  me-2 rounded-md bg-yellow-800 cursor-pointer" title="Yellow 80%"></div>
+                    <div onclick="getColor('rgb(234, 128, 38)', '#ea8026', 'bg-yellow-900')" class="w-14 h-10  me-2 rounded-md bg-yellow-900 cursor-pointer" title="Yellow 90%"></div>
+                </div>
+
+                <!-- LIME -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(247, 254, 231)', '#f7fee7', 'bg-lime-50')" class="w-14 h-10  me-2 rounded-md bg-lime-50 cursor-pointer" title="Lime 5%"></div>
+                    <div onclick="getColor('rgb(236, 252, 203)', '#ecfccb', 'bg-lime-100')" class="w-14 h-10  me-2 rounded-md bg-lime-100 cursor-pointer" title="Lime 10%"></div>
+                    <div onclick="getColor('rgb(217, 249, 157)', '#d9f99d', 'bg-lime-200')" class="w-14 h-10  me-2 rounded-md bg-lime-200 cursor-pointer" title="Lime 20%"></div>
+                    <div onclick="getColor('rgb(190, 242, 100)', '#bef264', 'bg-lime-300')" class="w-14 h-10  me-2 rounded-md bg-lime-300 cursor-pointer" title="Lime 30%"></div>
+                    <div onclick="getColor('rgb(163, 230, 53)', '#a3e635', 'bg-lime-400')" class="w-14 h-10  me-2 rounded-md bg-lime-400 cursor-pointer" title="Lime 40%"></div>
+                    <div onclick="getColor('rgb(132, 204, 22)', '#84cc16', 'bg-lime-500')" class="w-14 h-10  me-2 rounded-md bg-lime-500 cursor-pointer" title="Lime 50%"></div>
+                    <div onclick="getColor('rgb(101, 163, 13)', '#65a30d', 'bg-lime-600')" class="w-14 h-10  me-2 rounded-md bg-lime-600 cursor-pointer" title="Lime 60%"></div>
+                    <div onclick="getColor('rgb(77, 124, 15)', '#4d7c0f', 'bg-lime-700')" class="w-14 h-10  me-2 rounded-md bg-lime-700 cursor-pointer" title="Lime 70%"></div>
+                    <div onclick="getColor('rgb(63, 98, 18)', '#3f6212', 'bg-lime-800')" class="w-14 h-10  me-2 rounded-md bg-lime-800 cursor-pointer" title="Lime 80%"></div>
+                    <div onclick="getColor('rgb(54, 83, 20)', '#365314', 'bg-lime-900')" class="w-14 h-10  me-2 rounded-md bg-lime-900 cursor-pointer" title="Lime 90%"></div>
+                </div>
+
+                <!-- GREEN -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(240, 253, 244)', '#f0fdf4', 'bg-green-50')" class="w-14 h-10  me-2 rounded-md bg-green-50 cursor-pointer" title="Green 5%"></div>
+                    <div onclick="getColor('rgb(220, 252, 231)', '#dcfce7', 'bg-green-100')" class="w-14 h-10  me-2 rounded-md bg-green-100 cursor-pointer" title="Green 10%"></div>
+                    <div onclick="getColor('rgb(187, 247, 208)', '#bbf7d0', 'bg-green-200')" class="w-14 h-10  me-2 rounded-md bg-green-200 cursor-pointer" title="Green 20%"></div>
+                    <div onclick="getColor('rgb(134, 239, 172)', '#86efac', 'bg-green-300')" class="w-14 h-10  me-2 rounded-md bg-green-300 cursor-pointer" title="Green 30%"></div>
+                    <div onclick="getColor('rgb(74, 222, 128)', '#4ade80', 'bg-green-400')" class="w-14 h-10  me-2 rounded-md bg-green-400 cursor-pointer" title="Green 40%"></div>
+                    <div onclick="getColor('rgb(34, 197, 94)', '#22c55e', 'bg-green-500')" class="w-14 h-10  me-2 rounded-md bg-green-500 cursor-pointer" title="Green 50%"></div>
+                    <div onclick="getColor('rgb(22, 163, 74)', '#16a34a', 'bg-green-600')" class="w-14 h-10  me-2 rounded-md bg-green-600 cursor-pointer" title="Green 60%"></div>
+                    <div onclick="getColor('rgb(21, 128, 61)', '#15803d', 'bg-green-700')" class="w-14 h-10  me-2 rounded-md bg-green-700 cursor-pointer" title="Green 70%"></div>
+                    <div onclick="getColor('rgb(22, 101, 52)', '#166534', 'bg-green-800')" class="w-14 h-10  me-2 rounded-md bg-green-800 cursor-pointer" title="Green 80%"></div>
+                    <div onclick="getColor('rgb(20, 83, 45)', '#14532d', 'bg-green-900')" class="w-14 h-10  me-2 rounded-md bg-green-900 cursor-pointer" title="Green 90%"></div>
+                </div>
+
+                <!-- EMERALD -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(236, 253, 245)', '#ecfdf5', 'bg-emerald-50')" class="w-14 h-10  me-2 rounded-md bg-emerald-50 cursor-pointer" title="Emerald 5%"></div>
+                    <div onclick="getColor('rgb(209, 250, 229)', '#d1fae5', 'bg-emerald-100')" class="w-14 h-10  me-2 rounded-md bg-emerald-100 cursor-pointer" title="Emerald 10%"></div>
+                    <div onclick="getColor('rgb(167, 243, 208)', '#a7f3d0', 'bg-emerald-200')" class="w-14 h-10  me-2 rounded-md bg-emerald-200 cursor-pointer" title="Emerald 20%"></div>
+                    <div onclick="getColor('rgb(110, 231, 183)', '#6ee7b7', 'bg-emerald-300')" class="w-14 h-10  me-2 rounded-md bg-emerald-300 cursor-pointer" title="Emerald 30%"></div>
+                    <div onclick="getColor('rgb(52, 211, 153)', '#34d399', 'bg-emerald-400')" class="w-14 h-10  me-2 rounded-md bg-emerald-400 cursor-pointer" title="Emerald 40%"></div>
+                    <div onclick="getColor('rgb(16, 185, 129)', '#10b981', 'bg-emerald-500')" class="w-14 h-10  me-2 rounded-md bg-emerald-500 cursor-pointer" title="Emerald 50%"></div>
+                    <div onclick="getColor('rgb(5, 150, 105)', '#059669', 'bg-emerald-600')" class="w-14 h-10  me-2 rounded-md bg-emerald-600 cursor-pointer" title="Emerald 60%"></div>
+                    <div onclick="getColor('rgb(4, 120, 87)', '#047857', 'bg-emerald-700')" class="w-14 h-10  me-2 rounded-md bg-emerald-700 cursor-pointer" title="Emerald 70%"></div>
+                    <div onclick="getColor('rgb(6, 95, 70)', '#065f46', 'bg-emerald-800')" class="w-14 h-10  me-2 rounded-md bg-emerald-800 cursor-pointer" title="Emerald 80%"></div>
+                    <div onclick="getColor('rgb(6, 78, 59)', '#064e3b', 'bg-emerald-900')" class="w-14 h-10  me-2 rounded-md bg-emerald-900 cursor-pointer" title="Emerald 90%"></div>
+                </div>
+
+                <!-- TEAL -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(240, 253, 250)', '#f0fdfa', 'bg-teal-50')" class="w-14 h-10  me-2 rounded-md bg-teal-50 cursor-pointer" title="Teal 5%"></div>
+                    <div onclick="getColor('rgb(204, 251, 241)', '#ccfbf1', 'bg-teal-100')" class="w-14 h-10  me-2 rounded-md bg-teal-100 cursor-pointer" title="Teal 10%"></div>
+                    <div onclick="getColor('rgb(153, 246, 228)', '#99f6e4', 'bg-teal-200')" class="w-14 h-10  me-2 rounded-md bg-teal-200 cursor-pointer" title="Teal 20%"></div>
+                    <div onclick="getColor('rgb(94, 234, 212)', '#5eead4', 'bg-teal-300')" class="w-14 h-10  me-2 rounded-md bg-teal-300 cursor-pointer" title="Teal 30%"></div>
+                    <div onclick="getColor('rgb(45, 212, 191)', '#2dd4bf', 'bg-teal-400')" class="w-14 h-10  me-2 rounded-md bg-teal-400 cursor-pointer" title="Teal 40%"></div>
+                    <div onclick="getColor('rgb(20, 184, 166)', '#14b8a6', 'bg-teal-500')" class="w-14 h-10  me-2 rounded-md bg-teal-500 cursor-pointer" title="Teal 50%"></div>
+                    <div onclick="getColor('rgb(13, 148, 136)', '#0d9488', 'bg-teal-600')" class="w-14 h-10  me-2 rounded-md bg-teal-600 cursor-pointer" title="Teal 60%"></div>
+                    <div onclick="getColor('rgb(15, 118, 110)', '#0f766e', 'bg-teal-700')" class="w-14 h-10  me-2 rounded-md bg-teal-700 cursor-pointer" title="Teal 70%"></div>
+                    <div onclick="getColor('rgb(17, 94, 89)', '#115e59', 'bg-teal-800')" class="w-14 h-10  me-2 rounded-md bg-teal-800 cursor-pointer" title="Teal 80%"></div>
+                    <div onclick="getColor('rgb(19, 78, 74)', '#134e4a', 'bg-teal-900')" class="w-14 h-10  me-2 rounded-md bg-teal-900 cursor-pointer" title="Teal 90%"></div>
+                </div>
+
+                <!-- CYAN -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(236, 254, 255)', '#ecfeff', 'bg-cyan-50')" class="w-14 h-10  me-2 rounded-md bg-cyan-50 cursor-pointer" title="Cyan 5%"></div>
+                    <div onclick="getColor('rgb(207, 250, 254)', '#cffafe', 'bg-cyan-100')" class="w-14 h-10  me-2 rounded-md bg-cyan-100 cursor-pointer" title="Cyan 10%"></div>
+                    <div onclick="getColor('rgb(165, 243, 252)', '#a5f3fc', 'bg-cyan-200')" class="w-14 h-10  me-2 rounded-md bg-cyan-200 cursor-pointer" title="Cyan 20%"></div>
+                    <div onclick="getColor('rgb(103, 232, 249)', '#67e8f9', 'bg-cyan-300')" class="w-14 h-10  me-2 rounded-md bg-cyan-300 cursor-pointer" title="Cyan 30%"></div>
+                    <div onclick="getColor('rgb(34, 211, 238)', '#22d3ee', 'bg-cyan-400')" class="w-14 h-10  me-2 rounded-md bg-cyan-400 cursor-pointer" title="Cyan 40%"></div>
+                    <div onclick="getColor('rgb(6, 182, 212)', '#06b6d4', 'bg-cyan-500')" class="w-14 h-10  me-2 rounded-md bg-cyan-500 cursor-pointer" title="Cyan 50%"></div>
+                    <div onclick="getColor('rgb(8, 145, 178)', '#0891b2', 'bg-cyan-600')" class="w-14 h-10  me-2 rounded-md bg-cyan-600 cursor-pointer" title="Cyan 60%"></div>
+                    <div onclick="getColor('rgb(14, 116, 144)', '#0e7490', 'bg-cyan-700')" class="w-14 h-10  me-2 rounded-md bg-cyan-700 cursor-pointer" title="Cyan 70%"></div>
+                    <div onclick="getColor('rgb(21, 94, 117)', '#155e75', 'bg-cyan-800')" class="w-14 h-10  me-2 rounded-md bg-cyan-800 cursor-pointer" title="Cyan 80%"></div>
+                    <div onclick="getColor('rgb(22, 78, 99)', '#164e63', 'bg-cyan-900')" class="w-14 h-10  me-2 rounded-md bg-cyan-900 cursor-pointer" title="Cyan 90%"></div>
+                </div>
+
+                <!-- SKY -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(240, 249, 255)', '#f0f9ff', 'bg-sky-50')" class="w-14 h-10  me-2 rounded-md bg-sky-50 cursor-pointer" title="Sky 5%"></div>
+                    <div onclick="getColor('rgb(224, 242, 254)', '#e0f2fe', 'bg-sky-100')" class="w-14 h-10  me-2 rounded-md bg-sky-100 cursor-pointer" title="Sky 10%"></div>
+                    <div onclick="getColor('rgb(186, 230, 253)', '#bae6fd', 'bg-sky-200')" class="w-14 h-10  me-2 rounded-md bg-sky-200 cursor-pointer" title="Sky 20%"></div>
+                    <div onclick="getColor('rgb(125, 211, 252)', '#7dd3fc', 'bg-sky-300')" class="w-14 h-10  me-2 rounded-md bg-sky-300 cursor-pointer" title="Sky 30%"></div>
+                    <div onclick="getColor('rgb(56, 182, 255)', '#38bdf8', 'bg-sky-400')" class="w-14 h-10  me-2 rounded-md bg-sky-400 cursor-pointer" title="Sky 40%"></div>
+                    <div onclick="getColor('rgb(14, 165, 233)', '#0ea5e9', 'bg-sky-500')" class="w-14 h-10  me-2 rounded-md bg-sky-500 cursor-pointer" title="Sky 50%"></div>
+                    <div onclick="getColor('rgb(2, 132, 199)', '#0284c7', 'bg-sky-600')" class="w-14 h-10  me-2 rounded-md bg-sky-600 cursor-pointer" title="Sky 60%"></div>
+                    <div onclick="getColor('rgb(3, 105, 161)', '#0369a1', 'bg-sky-700')" class="w-14 h-10  me-2 rounded-md bg-sky-700 cursor-pointer" title="Sky 70%"></div>
+                    <div onclick="getColor('rgb(7, 89, 133)', '#075985', 'bg-sky-800')" class="w-14 h-10  me-2 rounded-md bg-sky-800 cursor-pointer" title="Sky 80%"></div>
+                    <div onclick="getColor('rgb(12, 74, 110)', '#0c4a6e', 'bg-sky-900')" class="w-14 h-10  me-2 rounded-md bg-sky-900 cursor-pointer" title="Sky 90%"></div>
+                </div>
+
+                <!-- BLUE -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(239, 246, 255)', '#eff6ff', 'bg-blue-50')" class="w-14 h-10  me-2 rounded-md bg-blue-50 cursor-pointer" title="Blue 5%"></div>
+                    <div onclick="getColor('rgb(219, 234, 254)', '#dbeafe', 'bg-blue-100')" class="w-14 h-10  me-2 rounded-md bg-blue-100 cursor-pointer" title="Blue 10%"></div>
+                    <div onclick="getColor('rgb(191, 219, 254)', '#bfdbfe', 'bg-blue-200')" class="w-14 h-10  me-2 rounded-md bg-blue-200 cursor-pointer" title="Blue 20%"></div>
+                    <div onclick="getColor('rgb(147, 197, 253)', '#93c5fd', 'bg-blue-300')" class="w-14 h-10  me-2 rounded-md bg-blue-300 cursor-pointer" title="Blue 30%"></div>
+                    <div onclick="getColor('rgb(96, 165, 250)', '#60a5fa', 'bg-blue-400')" class="w-14 h-10  me-2 rounded-md bg-blue-400 cursor-pointer" title="Blue 40%"></div>
+                    <div onclick="getColor('rgb(59, 130, 246)', '#3b82f6', 'bg-blue-500')" class="w-14 h-10  me-2 rounded-md bg-blue-500 cursor-pointer" title="Blue 50%"></div>
+                    <div onclick="getColor('rgb(37, 99, 235)', '#2563eb', 'bg-blue-600')" class="w-14 h-10  me-2 rounded-md bg-blue-600 cursor-pointer" title="Blue 60%"></div>
+                    <div onclick="getColor('rgb(29, 78, 216)', '#1d4ed8', 'bg-blue-700')" class="w-14 h-10  me-2 rounded-md bg-blue-700 cursor-pointer" title="Blue 70%"></div>
+                    <div onclick="getColor('rgb(30, 64, 175)', '#1e40af', 'bg-blue-800')" class="w-14 h-10  me-2 rounded-md bg-blue-800 cursor-pointer" title="Blue 80%"></div>
+                    <div onclick="getColor('rgb(30, 58, 138)', '#1e3a8a', 'bg-blue-900')" class="w-14 h-10  me-2 rounded-md bg-blue-900 cursor-pointer" title="Blue 90%"></div>
+                </div>
+
+                <!-- INDIGO -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(238, 242, 255)', '#eef2ff', 'bg-indigo-50')" class="w-14 h-10  me-2 rounded-md bg-indigo-50 cursor-pointer" title="Indigo 5%"></div>
+                    <div onclick="getColor('rgb(224, 231, 255)', '#e0e7ff', 'bg-indigo-100')" class="w-14 h-10  me-2 rounded-md bg-indigo-100 cursor-pointer" title="Indigo 10%"></div>
+                    <div onclick="getColor('rgb(199, 210, 254)', '#c7d2fe', 'bg-indigo-200')" class="w-14 h-10  me-2 rounded-md bg-indigo-200 cursor-pointer" title="Indigo 20%"></div>
+                    <div onclick="getColor('rgb(165, 180, 252)', '#a5b4fc', 'bg-indigo-300')" class="w-14 h-10  me-2 rounded-md bg-indigo-300 cursor-pointer" title="Indigo 30%"></div>
+                    <div onclick="getColor('rgb(129, 140, 248)', '#818cf8', 'bg-indigo-400')" class="w-14 h-10  me-2 rounded-md bg-indigo-400 cursor-pointer" title="Indigo 40%"></div>
+                    <div onclick="getColor('rgb(99, 102, 241)', '#6366f1', 'bg-indigo-500')" class="w-14 h-10  me-2 rounded-md bg-indigo-500 cursor-pointer" title="Indigo 50%"></div>
+                    <div onclick="getColor('rgb(79, 70, 229)', '#4f46e5', 'bg-indigo-600')" class="w-14 h-10  me-2 rounded-md bg-indigo-600 cursor-pointer" title="Indigo 60%"></div>
+                    <div onclick="getColor('rgb(67, 56, 202)', '#4338ca', 'bg-indigo-700')" class="w-14 h-10  me-2 rounded-md bg-indigo-700 cursor-pointer" title="Indigo 70%"></div>
+                    <div onclick="getColor('rgb(55, 48, 163)', '#3730a3', 'bg-indigo-800')" class="w-14 h-10  me-2 rounded-md bg-indigo-800 cursor-pointer" title="Indigo 80%"></div>
+                    <div onclick="getColor('rgb(49, 46, 129)', '#312e81', 'bg-indigo-900')" class="w-14 h-10  me-2 rounded-md bg-indigo-900 cursor-pointer" title="Indigo 90%"></div>
+                </div>
+
+                <!-- VIOLET -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(245, 243, 255)', '#f5f3ff', 'bg-violet-50')" class="w-14 h-10  me-2 rounded-md bg-violet-50 cursor-pointer" title="Violet 5%"></div>
+                    <div onclick="getColor('rgb(237, 233, 254)', '#ede9fe', 'bg-violet-100')" class="w-14 h-10  me-2 rounded-md bg-violet-100 cursor-pointer" title="Violet 10%"></div>
+                    <div onclick="getColor('rgb(221, 214, 254)', '#ddd6fe', 'bg-violet-200')" class="w-14 h-10  me-2 rounded-md bg-violet-200 cursor-pointer" title="Violet 20%"></div>
+                    <div onclick="getColor('rgb(196, 181, 253)', '#c4b5fd', 'bg-violet-300')" class="w-14 h-10  me-2 rounded-md bg-violet-300 cursor-pointer" title="Violet 30%"></div>
+                    <div onclick="getColor('rgb(167, 139, 250)', '#a78bfa', 'bg-violet-400')" class="w-14 h-10  me-2 rounded-md bg-violet-400 cursor-pointer" title="Violet 40%"></div>
+                    <div onclick="getColor('rgb(139, 92, 246)', '#8b5cf6', 'bg-violet-500')" class="w-14 h-10  me-2 rounded-md bg-violet-500 cursor-pointer" title="Violet 50%"></div>
+                    <div onclick="getColor('rgb(124, 58, 237)', '#7c3aed', 'bg-violet-600')" class="w-14 h-10  me-2 rounded-md bg-violet-600 cursor-pointer" title="Violet 60%"></div>
+                    <div onclick="getColor('rgb(109, 40, 217)', '#6d28d9', 'bg-violet-700')" class="w-14 h-10  me-2 rounded-md bg-violet-700 cursor-pointer" title="Violet 70%"></div>
+                    <div onclick="getColor('rgb(91, 33, 182)', '#5b21b6', 'bg-violet-800')" class="w-14 h-10  me-2 rounded-md bg-violet-800 cursor-pointer" title="Violet 80%"></div>
+                    <div onclick="getColor('rgb(76, 29, 149)', '#4c1d95', 'bg-violet-900')" class="w-14 h-10  me-2 rounded-md bg-violet-900 cursor-pointer" title="Violet 90%"></div>
+                </div>
+
+                <!-- PURPLE -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(245, 244, 255)', '#f5f3ff', 'bg-purple-50')" class="w-14 h-10  me-2 rounded-md bg-purple-50 cursor-pointer" title="Purple 5%"></div>
+                    <div onclick="getColor('rgb(237, 233, 254)', '#ede9fe', 'bg-purple-100')" class="w-14 h-10  me-2 rounded-md bg-purple-100 cursor-pointer" title="Purple 10%"></div>
+                    <div onclick="getColor('rgb(221, 214, 254)', '#ddd6fe', 'bg-purple-200')" class="w-14 h-10  me-2 rounded-md bg-purple-200 cursor-pointer" title="Purple 20%"></div>
+                    <div onclick="getColor('rgb(196, 181, 253)', '#c4b5fd', 'bg-purple-300')" class="w-14 h-10  me-2 rounded-md bg-purple-300 cursor-pointer" title="Purple 30%"></div>
+                    <div onclick="getColor('rgb(168, 85, 247)', '#a855f7', 'bg-purple-400')" class="w-14 h-10  me-2 rounded-md bg-purple-400 cursor-pointer" title="Purple 40%"></div>
+                    <div onclick="getColor('rgb(147, 51, 234)', '#9333ea', 'bg-purple-500')" class="w-14 h-10  me-2 rounded-md bg-purple-500 cursor-pointer" title="Purple 50%"></div>
+                    <div onclick="getColor('rgb(139, 92, 246)', '#8b5cf6', 'bg-purple-600')" class="w-14 h-10  me-2 rounded-md bg-purple-600 cursor-pointer" title="Purple 60%"></div>
+                    <div onclick="getColor('rgb(128, 49, 216)', '#8031d4', 'bg-purple-700')" class="w-14 h-10  me-2 rounded-md bg-purple-700 cursor-pointer" title="Purple 70%"></div>
+                    <div onclick="getColor('rgb(109, 40, 217)', '#6d28d9', 'bg-purple-800')" class="w-14 h-10  me-2 rounded-md bg-purple-800 cursor-pointer" title="Purple 80%"></div>
+                    <div onclick="getColor('rgb(88, 28, 135)', '#581c87', 'bg-purple-900')" class="w-14 h-10  me-2 rounded-md bg-purple-900 cursor-pointer" title="Purple 90%"></div>
+                </div>
+
+                <!-- FUCHSIA -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(253, 244, 255)', '#fdf4ff', 'bg-fuchsia-50')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-50 cursor-pointer" title="Fuchsia 5%"></div>
+                    <div onclick="getColor('rgb(250, 232, 255)', '#fae8ff', 'bg-fuchsia-100')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-100 cursor-pointer" title="Fuchsia 10%"></div>
+                    <div onclick="getColor('rgb(245, 208, 254)', '#f5d0fe', 'bg-fuchsia-200')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-200 cursor-pointer" title="Fuchsia 20%"></div>
+                    <div onclick="getColor('rgb(240, 171, 252)', '#f0abfc', 'bg-fuchsia-300')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-300 cursor-pointer" title="Fuchsia 30%"></div>
+                    <div onclick="getColor('rgb(232, 121, 249)', '#e879f9', 'bg-fuchsia-400')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-400 cursor-pointer" title="Fuchsia 40%"></div>
+                    <div onclick="getColor('rgb(217, 70, 239)', '#d946ef', 'bg-fuchsia-500')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-500 cursor-pointer" title="Fuchsia 50%"></div>
+                    <div onclick="getColor('rgb(192, 38, 211)', '#c026d3', 'bg-fuchsia-600')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-600 cursor-pointer" title="Fuchsia 60%"></div>
+                    <div onclick="getColor('rgb(162, 28, 175)', '#a21caf', 'bg-fuchsia-700')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-700 cursor-pointer" title="Fuchsia 70%"></div>
+                    <div onclick="getColor('rgb(134, 25, 143)', '#86198f', 'bg-fuchsia-800')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-800 cursor-pointer" title="Fuchsia 80%"></div>
+                    <div onclick="getColor('rgb(112, 26, 116)', '#701a75', 'bg-fuchsia-900')" class="w-14 h-10  me-2 rounded-md bg-fuchsia-900 cursor-pointer" title="Fuchsia 90%"></div>
+                </div>
+
+                <!-- PINK -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(253, 242, 248)', '#fdf2f8', 'bg-pink-50')" class="w-14 h-10  me-2 rounded-md bg-pink-50 cursor-pointer" title="Pink 5%"></div>
+                    <div onclick="getColor('rgb(252, 231, 243)', '#fce7f3', 'bg-pink-100')" class="w-14 h-10  me-2 rounded-md bg-pink-100 cursor-pointer" title="Pink 10%"></div>
+                    <div onclick="getColor('rgb(251, 207, 232)', '#fbced0', 'bg-pink-200')" class="w-14 h-10  me-2 rounded-md bg-pink-200 cursor-pointer" title="Pink 20%"></div>
+                    <div onclick="getColor('rgb(249, 168, 212)', '#f9a8d4', 'bg-pink-300')" class="w-14 h-10  me-2 rounded-md bg-pink-300 cursor-pointer" title="Pink 30%"></div>
+                    <div onclick="getColor('rgb(244, 114, 182)', '#f472b6', 'bg-pink-400')" class="w-14 h-10  me-2 rounded-md bg-pink-400 cursor-pointer" title="Pink 40%"></div>
+                    <div onclick="getColor('rgb(236, 72, 153)', '#ec4899', 'bg-pink-500')" class="w-14 h-10  me-2 rounded-md bg-pink-500 cursor-pointer" title="Pink 50%"></div>
+                    <div onclick="getColor('rgb(219, 39, 119)', '#db2777', 'bg-pink-600')" class="w-14 h-10  me-2 rounded-md bg-pink-600 cursor-pointer" title="Pink 60%"></div>
+                    <div onclick="getColor('rgb(190, 24, 93)', '#be185d', 'bg-pink-700')" class="w-14 h-10  me-2 rounded-md bg-pink-700 cursor-pointer" title="Pink 70%"></div>
+                    <div onclick="getColor('rgb(157, 23, 77)', '#9d174d', 'bg-pink-800')" class="w-14 h-10  me-2 rounded-md bg-pink-800 cursor-pointer" title="Pink 80%"></div>
+                    <div onclick="getColor('rgb(131, 24, 67)', '#831843', 'bg-pink-900')" class="w-14 h-10  me-2 rounded-md bg-pink-900 cursor-pointer" title="Pink 90%"></div>
+                </div>
+
+                <!-- ROSE -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(255, 241, 242)', '#fff1f2', 'bg-rose-50')" class="w-14 h-10  me-2 rounded-md bg-rose-50 cursor-pointer" title="Rose 5%"></div>
+                    <div onclick="getColor('rgb(255, 228, 230)', '#ffe4e6', 'bg-rose-100')" class="w-14 h-10  me-2 rounded-md bg-rose-100 cursor-pointer" title="Rose 10%"></div>
+                    <div onclick="getColor('rgb(254, 205, 211)', '#fecdd3', 'bg-rose-200')" class="w-14 h-10  me-2 rounded-md bg-rose-200 cursor-pointer" title="Rose 20%"></div>
+                    <div onclick="getColor('rgb(253, 164, 175)', '#fd9fa8', 'bg-rose-300')" class="w-14 h-10  me-2 rounded-md bg-rose-300 cursor-pointer" title="Rose 30%"></div>
+                    <div onclick="getColor('rgb(251, 113, 133)', '#fb7185', 'bg-rose-400')" class="w-14 h-10  me-2 rounded-md bg-rose-400 cursor-pointer" title="Rose 40%"></div>
+                    <div onclick="getColor('rgb(244, 63, 94)', '#f43f5e', 'bg-rose-500')" class="w-14 h-10  me-2 rounded-md bg-rose-500 cursor-pointer" title="Rose 50%"></div>
+                    <div onclick="getColor('rgb(225, 29, 72)', '#e11d48', 'bg-rose-600')" class="w-14 h-10  me-2 rounded-md bg-rose-600 cursor-pointer" title="Rose 60%"></div>
+                    <div onclick="getColor('rgb(190, 18, 60)', '#be123c', 'bg-rose-700')" class="w-14 h-10  me-2 rounded-md bg-rose-700 cursor-pointer" title="Rose 70%"></div>
+                    <div onclick="getColor('rgb(159, 18, 57)', '#9f1239', 'bg-rose-800')" class="w-14 h-10  me-2 rounded-md bg-rose-800 cursor-pointer" title="Rose 80%"></div>
+                    <div onclick="getColor('rgb(136, 19, 55)', '#881337', 'bg-rose-900')" class="w-14 h-10  me-2 rounded-md bg-rose-900 cursor-pointer" title="Rose 90%"></div>
+                </div>
+
+                <!-- SLATE -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(248, 250, 252)', '#f8fafc', 'bg-slate-50')" class="w-14 h-10  me-2 rounded-md bg-slate-50 cursor-pointer" title="Slate 5%"></div>
+                    <div onclick="getColor('rgb(241, 245, 249)', '#f1f5f9', 'bg-slate-100')" class="w-14 h-10  me-2 rounded-md bg-slate-100 cursor-pointer" title="Slate 10%"></div>
+                    <div onclick="getColor('rgb(226, 232, 240)', '#e2e8f0', 'bg-slate-200')" class="w-14 h-10  me-2 rounded-md bg-slate-200 cursor-pointer" title="Slate 20%"></div>
+                    <div onclick="getColor('rgb(203, 213, 225)', '#cbd5e0', 'bg-slate-300')" class="w-14 h-10  me-2 rounded-md bg-slate-300 cursor-pointer" title="Slate 30%"></div>
+                    <div onclick="getColor('rgb(148, 163, 184)', '#94a3b8', 'bg-slate-400')" class="w-14 h-10  me-2 rounded-md bg-slate-400 cursor-pointer" title="Slate 40%"></div>
+                    <div onclick="getColor('rgb(100, 116, 139)', '#64748b', 'bg-slate-500')" class="w-14 h-10  me-2 rounded-md bg-slate-500 cursor-pointer" title="Slate 50%"></div>
+                    <div onclick="getColor('rgb(71, 85, 105)', '#475569', 'bg-slate-600')" class="w-14 h-10  me-2 rounded-md bg-slate-600 cursor-pointer" title="Slate 60%"></div>
+                    <div onclick="getColor('rgb(51, 65, 85)', '#334155', 'bg-slate-700')" class="w-14 h-10  me-2 rounded-md bg-slate-700 cursor-pointer" title="Slate 70%"></div>
+                    <div onclick="getColor('rgb(30, 41, 59)', '#1e293b', 'bg-slate-800')" class="w-14 h-10  me-2 rounded-md bg-slate-800 cursor-pointer" title="Slate 80%"></div>
+                    <div onclick="getColor('rgb(15, 23, 42)', '#0f172a', 'bg-slate-900')" class="w-14 h-10  me-2 rounded-md bg-slate-900 cursor-pointer" title="Slate 90%"></div>
+                </div>
+
+                <!-- GRAY -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(249, 250, 251)', '#f9fafb', 'bg-gray-50')" class="w-14 h-10  me-2 rounded-md bg-gray-50 cursor-pointer" title="Gray 5%"></div>
+                    <div onclick="getColor('rgb(243, 244, 246)', '#f3f4f6', 'bg-gray-100')" class="w-14 h-10  me-2 rounded-md bg-gray-100 cursor-pointer" title="Gray 10%"></div>
+                    <div onclick="getColor('rgb(229, 231, 235)', '#e5e7eb', 'bg-gray-200')" class="w-14 h-10  me-2 rounded-md bg-gray-200 cursor-pointer" title="Gray 20%"></div>
+                    <div onclick="getColor('rgb(209, 213, 219)', '#d1d5db', 'bg-gray-300')" class="w-14 h-10  me-2 rounded-md bg-gray-300 cursor-pointer" title="Gray 30%"></div>
+                    <div onclick="getColor('rgb(156, 163, 175)', '#9ca3af', 'bg-gray-400')" class="w-14 h-10  me-2 rounded-md bg-gray-400 cursor-pointer" title="Gray 40%"></div>
+                    <div onclick="getColor('rgb(107, 114, 128)', '#6b7280', 'bg-gray-500')" class="w-14 h-10  me-2 rounded-md bg-gray-500 cursor-pointer" title="Gray 50%"></div>
+                    <div onclick="getColor('rgb(75, 85, 99)', '#4b5563', 'bg-gray-600')" class="w-14 h-10  me-2 rounded-md bg-gray-600 cursor-pointer" title="Gray 60%"></div>
+                    <div onclick="getColor('rgb(55, 65, 81)', '#374151', 'bg-gray-700')" class="w-14 h-10  me-2 rounded-md bg-gray-700 cursor-pointer" title="Gray 70%"></div>
+                    <div onclick="getColor('rgb(31, 41, 55)', '#1f2937', 'bg-gray-800')" class="w-14 h-10  me-2 rounded-md bg-gray-800 cursor-pointer" title="Gray 80%"></div>
+                    <div onclick="getColor('rgb(17, 24, 39)', '#111827', 'bg-gray-900')" class="w-14 h-10  me-2 rounded-md bg-gray-900 cursor-pointer" title="Gray 90%"></div>
+                </div>
+
+                <!-- ZINC -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(250, 250, 250)', '#fafafa', 'bg-zinc-50')" class="w-14 h-10  me-2 rounded-md bg-zinc-50 cursor-pointer" title="Zinc 5%"></div>
+                    <div onclick="getColor('rgb(244, 244, 245)', '#f4f4f5', 'bg-zinc-100')" class="w-14 h-10  me-2 rounded-md bg-zinc-100 cursor-pointer" title="Zinc 10%"></div>
+                    <div onclick="getColor('rgb(228, 228, 231)', '#e4e4e7', 'bg-zinc-200')" class="w-14 h-10  me-2 rounded-md bg-zinc-200 cursor-pointer" title="Zinc 20%"></div>
+                    <div onclick="getColor('rgb(212, 212, 216)', '#d4d4d8', 'bg-zinc-300')" class="w-14 h-10  me-2 rounded-md bg-zinc-300 cursor-pointer" title="Zinc 30%"></div>
+                    <div onclick="getColor('rgb(161, 161, 170)', '#a1a1aa', 'bg-zinc-400')" class="w-14 h-10  me-2 rounded-md bg-zinc-400 cursor-pointer" title="Zinc 40%"></div>
+                    <div onclick="getColor('rgb(113, 113, 122)', '#71717a', 'bg-zinc-500')" class="w-14 h-10  me-2 rounded-md bg-zinc-500 cursor-pointer" title="Zinc 50%"></div>
+                    <div onclick="getColor('rgb(82, 82, 91)', '#52525b', 'bg-zinc-600')" class="w-14 h-10  me-2 rounded-md bg-zinc-600 cursor-pointer" title="Zinc 60%"></div>
+                    <div onclick="getColor('rgb(63, 63, 70)', '#3f3f46', 'bg-zinc-700')" class="w-14 h-10  me-2 rounded-md bg-zinc-700 cursor-pointer" title="Zinc 70%"></div>
+                    <div onclick="getColor('rgb(39, 39, 42)', '#27272a', 'bg-zinc-800')" class="w-14 h-10  me-2 rounded-md bg-zinc-800 cursor-pointer" title="Zinc 80%"></div>
+                    <div onclick="getColor('rgb(24, 24, 27)', '#18181b', 'bg-zinc-900')" class="w-14 h-10  me-2 rounded-md bg-zinc-900 cursor-pointer" title="Zinc 90%"></div>
+                </div>
+
+                <!-- NEUTRAL -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(250, 250, 250)', '#fafafa', 'bg-neutral-50')" class="w-14 h-10  me-2 rounded-md bg-neutral-50 cursor-pointer" title="Neutral 5%"></div>
+                    <div onclick="getColor('rgb(245, 245, 245)', '#f5f5f5', 'bg-neutral-100')" class="w-14 h-10  me-2 rounded-md bg-neutral-100 cursor-pointer" title="Neutral 10%"></div>
+                    <div onclick="getColor('rgb(229, 229, 229)', '#e5e5e5', 'bg-neutral-200')" class="w-14 h-10  me-2 rounded-md bg-neutral-200 cursor-pointer" title="Neutral 20%"></div>
+                    <div onclick="getColor('rgb(212, 212, 212)', '#d4d4d4', 'bg-neutral-300')" class="w-14 h-10  me-2 rounded-md bg-neutral-300 cursor-pointer" title="Neutral 30%"></div>
+                    <div onclick="getColor('rgb(163, 163, 163)', '#a3a3a3', 'bg-neutral-400')" class="w-14 h-10  me-2 rounded-md bg-neutral-400 cursor-pointer" title="Neutral 40%"></div>
+                    <div onclick="getColor('rgb(115, 115, 115)', '#737373', 'bg-neutral-500')" class="w-14 h-10  me-2 rounded-md bg-neutral-500 cursor-pointer" title="Neutral 50%"></div>
+                    <div onclick="getColor('rgb(82, 82, 82)', '#525252', 'bg-neutral-600')" class="w-14 h-10  me-2 rounded-md bg-neutral-600 cursor-pointer" title="Neutral 60%"></div>
+                    <div onclick="getColor('rgb(64, 64, 64)', '#404040', 'bg-neutral-700')" class="w-14 h-10  me-2 rounded-md bg-neutral-700 cursor-pointer" title="Neutral 70%"></div>
+                    <div onclick="getColor('rgb(38, 38, 38)', '#262626', 'bg-neutral-800')" class="w-14 h-10  me-2 rounded-md bg-neutral-800 cursor-pointer" title="Neutral 80%"></div>
+                    <div onclick="getColor('rgb(23, 23, 23)', '#171717', 'bg-neutral-900')" class="w-14 h-10  me-2 rounded-md bg-neutral-900 cursor-pointer" title="Neutral 90%"></div>
+                </div>
+
+                <!-- STONE -->
+                <div class="color-row block w-full m-0 p-0 flex">
+                    <div onclick="getColor('rgb(250, 250, 249)', '#fafaf9', 'bg-stone-50')" class="w-14 h-10  me-2 rounded-md bg-stone-50 cursor-pointer" title="Stone 5%"></div>
+                    <div onclick="getColor('rgb(245, 245, 244)', '#f5f5f4', 'bg-stone-100')" class="w-14 h-10  me-2 rounded-md bg-stone-100 cursor-pointer" title="Stone 10%"></div>
+                    <div onclick="getColor('rgb(231, 229, 228)', '#e7e5e4', 'bg-stone-200')" class="w-14 h-10  me-2 rounded-md bg-stone-200 cursor-pointer" title="Stone 20%"></div>
+                    <div onclick="getColor('rgb(214, 211, 209)', '#d6d3d1', 'bg-stone-300')" class="w-14 h-10  me-2 rounded-md bg-stone-300 cursor-pointer" title="Stone 30%"></div>
+                    <div onclick="getColor('rgb(168, 162, 158)', '#a8a29e', 'bg-stone-400')" class="w-14 h-10  me-2 rounded-md bg-stone-400 cursor-pointer" title="Stone 40%"></div>
+                    <div onclick="getColor('rgb(120, 113, 108)', '#78716c', 'bg-stone-500')" class="w-14 h-10  me-2 rounded-md bg-stone-500 cursor-pointer" title="Stone 50%"></div>
+                    <div onclick="getColor('rgb(87, 83, 78)', '#57534e', 'bg-stone-600')" class="w-14 h-10  me-2 rounded-md bg-stone-600 cursor-pointer" title="Stone 60%"></div>
+                    <div onclick="getColor('rgb(68, 64, 60)', '#44403c', 'bg-stone-700')" class="w-14 h-10  me-2 rounded-md bg-stone-700 cursor-pointer" title="Stone 70%"></div>
+                    <div onclick="getColor('rgb(41, 37, 36)', '#292524', 'bg-stone-800')" class="w-14 h-10  me-2 rounded-md bg-stone-800 cursor-pointer" title="Stone 80%"></div>
+                    <div onclick="getColor('rgb(28, 25, 23)', '#1c1917', 'bg-stone-900')" class="w-14 h-10  me-2 rounded-md bg-stone-900 cursor-pointer" title="Stone 90%"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Result Section -->
+        <div class=" flex items-center justify-center">
+            <div id="colorInfo" class="p-4 bg-gray-500 rounded shadow w-full text-center">
+                <p class="text-lg font-semibold text-sky-500">Select a color to see its details</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function getColor(rgb, hex, tailwindcss) {
+        const colorInfo = document.getElementById('colorInfo');
+        colorInfo.innerHTML = `
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <div class="w-32 h-32 rounded-full border-4 border-gray-300 shadow-lg" style="background-color: ${hex};"></div>
+                <div class="flex flex-col space-y-2">
+                    <p class="text-xl font-semibold text-gray-700">RGB: <br> <span class="text-neutral-900">${rgb}</span></p>
+                    <p class="text-xl font-semibold text-gray-700">HEX: <br> <span class="text-neutral-900">${hex}</span></p>
+                    <p class="text-xl font-semibold text-gray-700">Tailwindcss: <br> <span class="text-neutral-900">${tailwindcss}</span></p>
+                </div>
+            </div>
+        `;
+    }
+</script>
+</body>
+</html>

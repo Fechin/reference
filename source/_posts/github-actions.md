@@ -61,7 +61,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: '14'
       - run: npm install -g bats
       - run: bats -v
 ```
@@ -192,7 +192,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '14'
 
       # step 3
       - name: Install dependencies
@@ -242,7 +242,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CUSTOM_VARIABLE: "Hello, World!" # Custom variable defined using env:
+      CUSTOM_VARIABLE: 'Hello, World!' # Custom variable defined using env:
     steps:
       - name: Check environment variable
         run: echo "Value of CUSTOM_VAR is $CUSTOM_VAR"

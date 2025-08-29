@@ -7,9 +7,9 @@ title: CheatSheets.zip
 subtitle: "Ultimate Cheat for Developers"
 description: "Share quick reference and cheat sheet for developers"
 keywords: cheat,sheet,cheatsheets,reference,programming,code table,snippets,linux,command,shortcuts,developers
-author: CheatSheets.zip
+author: Fechin
 language: en
-timezone: ""
+timezone: "UTC"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -45,6 +45,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: # empty to disable built-in syntax highlighting
 highlight:
   enable: false
 
@@ -59,12 +60,28 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: {}
+tag_map: {}
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: false
+
+# SEO configuration
+seo:
+  # Default image for social sharing
+  default_image: "/assets/image/preview.png"
+  # Author information
+  author_name: "Fechin"
+  author_url: "https://cheatsheets.zip"
+  # Social media configuration
+  social:
+    twitter: "Fechin"
+    github: "Fechin/reference"
+  # Site type
+  site_type: "Educational Technology Platform"
+  # Target audience
+  target_audience: "Developers, Programmers, System Administrators"
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -82,10 +99,10 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
+include: []
 exclude:
   - ".github"
-ignore:
+ignore: []
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -96,7 +113,11 @@ nofollow:
   enable: true
   field: site
   exclude:
-    - "exclude1.com"
+    - "tableconvert.com"
+    - "dorefer.com"
+    - "fionaai.com"
+    - "github.com"
+    - "x.com"
 
 excerpt:
   depth: 2
@@ -107,7 +128,6 @@ excerpt:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  #  - type: cjh_google_url_submitter
   - type: cjh_bing_url_submitter
   - type: cjh_baidu_url_submitter
 
@@ -132,6 +152,7 @@ markdown:
     linkify: false
     typographer: false
     quotes: "“”‘’"
+    langPrefix: "hljs language-"
   anchors:
     level: 2
     collisionSuffix: ""
@@ -140,3 +161,9 @@ markdown:
     permalinkSymbol: "#"
     case: 1
     separator: "-"
+
+# Browsersync configuration
+browsersync:
+  ui: false # disable ui
+  notify: false # disable notification
+  logLevel: silent # set log level to silent

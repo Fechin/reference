@@ -38,7 +38,7 @@ Hook features a modern syntax similar to `C`.
 ### Hello, world!
 
 ```js
-println("Hello, World!");
+println('Hello, World!');
 // Hello, World!
 ```
 
@@ -99,9 +99,9 @@ Numbers can be integers or floating-point.
 ### Strings
 
 ```js
-let empty = "";
+let empty = '';
 
-let name = "John";
+let name = 'John';
 
 let message = 'Hello, "John"!';
 ```
@@ -122,7 +122,7 @@ Ranges are a sequence of integers.
 ### Arrays
 
 ```js
-let fruits = ["apple", "banana", "cherry"];
+let fruits = ['apple', 'banana', 'cherry'];
 
 println(fruits);
 // ["apple", "banana", "cherry"]
@@ -200,9 +200,9 @@ Semi-colons are required and empty statements are not allowed.
 
 ```js
 {
-  println("Hello");
+  println('Hello');
   {
-    println("World");
+    println('World');
   }
 }
 ```
@@ -242,7 +242,7 @@ Identifiers are case-sensitive.
 ```js
 var x; // x contains nil
 x = 5; // now, x contains a number
-x = "foo"; // a string
+x = 'foo'; // a string
 
 println(x);
 ```
@@ -380,7 +380,7 @@ In Hook, the ternary operator is `if else`.
 let x = 10;
 
 if (x > 5) {
-  println("x is greater than 5");
+  println('x is greater than 5');
 }
 // x is greater than 5
 ```
@@ -393,11 +393,11 @@ The `if` statement.
 let x = 11;
 
 if (x == 5) {
-  println("x is 5");
+  println('x is 5');
 } else if (x == 10) {
-  println("x is 10");
+  println('x is 10');
 } else {
-  println("x is neither 5 nor 10");
+  println('x is neither 5 nor 10');
 }
 // x is neither 5 nor 10
 ```
@@ -514,7 +514,7 @@ Use `continue` to skip the rest of the loop body.
 ### Indexing a string
 
 ```js
-let s = "Hello";
+let s = 'Hello';
 
 println(s[0]); // H
 println(s[1]); // e
@@ -537,7 +537,7 @@ Pass a range to slice a string.
 ### Concatening strings
 
 ```js
-let greeting = "Hi" + " there!";
+let greeting = 'Hi' + ' there!';
 
 println(greeting);
 // Hi there!
@@ -731,9 +731,9 @@ Recursion is supported.
 ```js
 println(type(5));
 // number
-println("1" + to_string(2));
+println('1' + to_string(2));
 // 12
-println(len("foo"));
+println(len('foo'));
 // 3
 ```
 
@@ -922,7 +922,7 @@ import hashing as h;
 ```
 
 ```js
-let d = h.sha256("Hello, world!");
+let d = h.sha256('Hello, world!');
 
 println(hex(d));
 // 315f5bdb76d078c43b8ac0064e4a...
@@ -953,7 +953,7 @@ Use `json` module for working with JSON.
 ### Errors {.col-span-2}
 
 ```js
-println(to_int("foo"));
+println(to_int('foo'));
 
 // runtime error: type error: argument #1 is not a convertible string
 //   at to_int() in <native>
@@ -965,7 +965,7 @@ Hook uses panic mode for error handling. When an error occurs, the interpreter s
 ### Syntax error
 
 ```js
-println("Hello, World!");
+println('Hello, World!');
 
 // syntax error: unexpected end of file
 //   at main() in example.hk:1,25
@@ -976,7 +976,7 @@ Hook has a strict syntax.
 ### Panic
 
 ```js
-panic("Something went wrong");
+panic('Something went wrong');
 
 // panic: Something went wrong
 //   at main() in example.hk:1
@@ -987,7 +987,7 @@ Use the `panic` built-in function to raise an error.
 ### Assert {.col-span-2}
 
 ```js
-assert(5 > 10, "5 is not greater than 10");
+assert(5 > 10, '5 is not greater than 10');
 
 // assert: 5 is not greater than 10
 //   at main() in example.hk:1

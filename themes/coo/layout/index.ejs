@@ -1,12 +1,11 @@
-<%- partial('_partial/index/hero') %>
 <section class="home max-container">
-    <div class="w-full lg:w-2/3 flex flex-col mx-auto justify-center mt-10">
+    <div class="w-full lg:w-4/5 flex flex-col mx-auto justify-center mt-10">
         <%- partial('_partial/index/recommend') %>
         <div class="mt-6">
             <% theme.index_categories.forEach(function (category) { %>
                 <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300"><%- category %></h2>
                 <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
-                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                    <div class="w-24 h-full bg-gradient-to-r from-indigo-500 to-purple-600 dark:bg-slate-800"></div>
                 </div>
                 <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
                     <% site.categories.findOne({name: category}).posts.sort('date').map(function(post){ %>
@@ -15,7 +14,7 @@
                             title: post.title,
                             label: post.label,
                             slug: post.slug,
-                            background: post.background == undefined ? 'bg-emerald-500' : post.background
+                            background: post.background == undefined ? 'bg-gradient-to-r from-indigo-500 to-purple-600' : post.background
                         }) %>
                     <% }) %>
                 </div>

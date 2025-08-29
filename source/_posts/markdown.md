@@ -143,7 +143,7 @@ ___
 
 ````markdown
 ```javascript
-console.log("This is a block code");
+console.log('This is a block code');
 ```
 ````
 
@@ -228,7 +228,7 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 ```markdown
 ![alt text][logo]
 
-[logo]: /images/logo.png "Logo Title"
+[logo]: /images/logo.png 'Logo Title'
 ```
 
 ### Backslash escapes

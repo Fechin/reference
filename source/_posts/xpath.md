@@ -20,7 +20,7 @@ plugins:
 
 - [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
 
-Test in Firefox or Chrome console:
+Test in Firefox or Chromium based browser console:
 
 ```console
 $x('/html/body')

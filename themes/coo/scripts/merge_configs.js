@@ -3,6 +3,6 @@
  * This fixes an issue with hexo-renderer-stylus, which otherwise ignores these
  * configuration overrides.
  */
-hexo.on("generateBefore", function () {
+hexo.on('generateBefore', () => {
   hexo.theme.config = Object.assign({}, hexo.theme.config, hexo.config.theme_config);
 });

@@ -29,13 +29,13 @@ let emptyHeading = <h1 />;
 ### JSX Expressions
 
 ```javascript
-let name = "Josh Perez";
+let name = 'Josh Perez';
 let element = <h1>Hello, {name}</h1>;
 
 function fullName(firstName, lastName) {
-  return firstName + " " + lastName;
+  return firstName + ' ' + lastName;
 }
-let element = <h1>Hello, {fullName("Julie", "Johnson")}</h1>;
+let element = <h1>Hello, {fullName('Julie', 'Johnson')}</h1>;
 ```
 
 ### JSX Attributes
@@ -62,7 +62,7 @@ return (
 ### JSX Conditional Rendering {.col-span-2}
 
 ```javascript
-import React from "react";
+import React from 'react';
 function Weather(props) {
   if (props.temperature >= 20) {
     return (
@@ -89,7 +89,7 @@ Note: A component must always return something.
 ### Functional Component
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 export default function UserProfile() {
   return (
@@ -106,8 +106,8 @@ Note: Every component needs one root element
 ### Embed an internal Component
 
 ```javascript
-import React from "react";
-import UserAvatar from "./UserAvatar";
+import React from 'react';
+import UserAvatar from './UserAvatar';
 
 export default function UserProfile() {
   return (
@@ -124,8 +124,8 @@ Note: Assuming UserAvatar is declared in UserAvatar.js
 ### Embed an external Component
 
 ```javascript
-import React from "react";
-import ComponentName from "component-name";
+import React from 'react';
+import ComponentName from 'component-name';
 
 export default function UserProfile() {
   return (
@@ -141,7 +141,7 @@ Note: External components are found on npmjs.com and need to be imported first.
 ### Advanced Functional Components
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 function Hello(props) {
   function fullName() {
@@ -170,7 +170,7 @@ export default () => <Hello firstName="Matt" lastName="Delac" />;
 ### Assigning the Properties from a Component
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 export default function Student(props) {
   return (
@@ -186,12 +186,12 @@ export default function Student(props) {
 ### React State
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function Hello(props) {
-  let [name, setName] = useState("Julie");
+  let [name, setName] = useState('Julie');
   function updateName() {
-    let newName = prompt("What is your name?");
+    let newName = prompt('What is your name?');
     setName(newName);
   }
 
@@ -209,12 +209,12 @@ export default function Hello(props) {
 ### Event Listener
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 export default function Hello() {
   function handleClick(event) {
     event.preventDefault();
-    alert("Hello World");
+    alert('Hello World');
   }
 
   return (
@@ -232,7 +232,7 @@ Note: The most common event listeners are onClick for links/buttons and onSubmit
 ### Looping through an Array
 
 ```javascript
-let elements = ["one", "two", "three"];
+let elements = ['one', 'two', 'three'];
 
 return (
   <ul>
@@ -250,17 +250,17 @@ Note: Each list item inside a map loop needs a key attribute with a unique value
 ```javascript
 let elements = [
   {
-    name: "one",
-    value: 1,
+    name: 'one',
+    value: 1
   },
   {
-    name: "two",
-    value: 2,
+    name: 'two',
+    value: 2
   },
   {
-    name: "three",
-    value: 3,
-  },
+    name: 'three',
+    value: 3
+  }
 ];
 return (
   <ul>
@@ -282,11 +282,11 @@ Note: Each list item inside a map loop needs a key attribute with a unique value
 ### React Forms
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function LoginForm() {
-  let [username, setUsername] = useState("");
-  let [password, setPassword] = useState("");
+  let [username, setUsername] = useState('');
+  let [password, setPassword] = useState('');
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -316,8 +316,8 @@ export default function LoginForm() {
 ### CSS in a React Component
 
 ```javascript
-import React from "react";
-import "./Student.css";
+import React from 'react';
+import './Student.css';
 
 export default function Student() {
   return <div className="Student">Julie Johnson</div>;
@@ -331,8 +331,8 @@ Note: You'll then have to crate a css file called Student.css
 ### AJAX Request with Axios
 
 ```javascript
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 
 export default function Weather(props) {
   function handleResponse(response) {
@@ -356,7 +356,7 @@ Note: Make sure to import Axios first to your project.
 ### useState Hook
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -378,11 +378,11 @@ way to declare state variables and update them within a functional component. Ex
 ### Multiple State Variable Declaration
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function Counter() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [isCompleted, setIsCompleted] = useState(false);
 
   const handleIncrement = () => {
@@ -402,10 +402,19 @@ function Counter() {
       <p>Count: {count}</p>
       <button onClick={handleIncrement}>Increment</button>
 
-      <input type="text" value={name} onChange={handleNameChange} placeholder="Enter your name" />
+      <input
+        type="text"
+        value={name}
+        onChange={handleNameChange}
+        placeholder="Enter your name"
+      />
 
       <label>
-        <input type="checkbox" checked={isCompleted} onChange={toggleCompletion} />
+        <input
+          type="checkbox"
+          checked={isCompleted}
+          onChange={toggleCompletion}
+        />
         Completed
       </label>
     </div>
@@ -421,10 +430,14 @@ component. Each call to useState manages a separate piece of state.
 ### Input State Management
 
 ```javascript
-import { useState } from "react";
+import { useState } from 'react';
 
 function FormExample() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -433,19 +446,38 @@ function FormExample() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`);
+    alert(
+      `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
+    );
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
-      <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+      />
 
       <label htmlFor="email">Email:</label>
-      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+      />
 
       <label htmlFor="message">Message:</label>
-      <textarea id="message" name="message" value={formData.message} onChange={handleChange} />
+      <textarea
+        id="message"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+      />
 
       <button type="submit">Submit</button>
     </form>
@@ -458,7 +490,7 @@ export default FormExample;
 ### useEffect Hook
 
 ```javascript
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 function Timer() {
   const [seconds, setSeconds] = useState(0);
@@ -483,20 +515,20 @@ code based on component lifecycle events like mounting, updating, and unmounting
 ### Fetch API using useEffect
 
 ```javascript
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function UserList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
         setUsers(response.data);
       })
       .catch((error) => {
-        console.error("Error fetching users:", error);
+        console.error('Error fetching users:', error);
       });
   }, []);
 
@@ -520,7 +552,7 @@ Note: Make sure to import Axios first to your project.
 ### Custom Hook creation useLocalStorage
 
 ```javascript
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 function useLocalStorage(key, initialValue) {
   const [value, setValue] = useState(() => {
@@ -544,7 +576,7 @@ to extract stateful logic from components into standalone functions.
 ### Creating Refs in Class Components
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class MyComponent extends Component {
   constructor(props) {
@@ -567,7 +599,7 @@ export default MyComponent;
 ### Using Refs in Functional Components
 
 ```javascript
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
 function MyComponent() {
   const myRef = useRef(null);
@@ -585,7 +617,7 @@ export default MyComponent;
 ### Callback Refs
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class MyComponent extends Component {
   constructor(props) {
@@ -628,7 +660,7 @@ const ref = React.createRef();
 ### Accessing DOM Elements with Refs
 
 ```javascript
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
 function FocusInput() {
   const inputRef = useRef(null);
@@ -643,19 +675,21 @@ function FocusInput() {
 
 export default FocusInput;
 ```
-Note: Refs are often used to access and interact with DOM elements directly. Here's an example where we focus an input element using a ref.
+
+Note: Refs are often used to access and interact with DOM elements directly. Here's an example where we focus an input
+element using a ref.
 
 ### Managing Focus with Refs
 
 ```javascript
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
 function Form() {
   const firstInputRef = useRef(null);
   const secondInputRef = useRef(null);
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       secondInputRef.current.focus();
     }
   };
@@ -670,4 +704,5 @@ function Form() {
 
 export default Form;
 ```
+
 Note: You can also manage focus between multiple elements using refs.

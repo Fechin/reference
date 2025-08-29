@@ -1,0 +1,36 @@
+# <type>[optional scope]: <description>
+#
+# [optional body]
+#
+# [optional footer(s)]
+#
+# Commit Types:
+# feat:     New feature
+# fix:      Bug fix
+# docs:     Documentation update
+# style:    Code formatting, no logic changes
+# refactor: Code refactoring, neither new feature nor bug fix
+# perf:     Performance optimization
+# test:     Add tests
+# chore:    Build process or auxiliary tool changes
+# ci:       CI/CD related changes
+# build:    Build system or external dependency changes
+# revert:   Revert commit
+#
+# Scope Examples:
+# search, theme, css, js, content, build, deps, config, docs
+# layout, widget, gulp, hexo, markdown, seo, a11y, perf
+#
+# Examples:
+# feat(search): add fuzzy search with highlighting
+# fix(css): resolve mobile layout overflow issue
+# docs(readme): update installation instructions
+# chore(deps): upgrade tailwindcss to v3.4.0
+# perf(js): optimize search performance with debouncing
+# style(css): format tailwind classes according to prettier
+#
+# Guidelines:
+# - Use imperative mood: "add" not "added" or "adds"
+# - Start with lowercase
+# - No period at the end
+# - Keep description concise, under 50 characters

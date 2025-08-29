@@ -1,8 +1,7 @@
 ---
 title: MongoDB
 date: 2023-04-05
-background:
-  bg-gradient-to-r from-green-900 via-green-600 to-green-400 hover:from-green-900 hover:via-green-700 hover:to-green-500
+background: bg-gradient-to-r from-green-900 via-green-600 to-green-400 hover:from-green-900 hover:via-green-700 hover:to-green-500
 tags:
   - NoSQL
   - DB
@@ -91,14 +90,14 @@ db.coll.findOneAndDelete({"name": "Max"})
 
 ```mongosh
 db.coll.updateMany({"_id": 1}, {$set: {"year": 2016}}) // WARNING! Replaces the entire document where "_id" = 1
-db.coll.updateOne({"_id": 1}, {$set: {"year": 2016, name: "Max"}})   
-db.coll.updateOne({"_id": 1}, {$unset: {"year": 1}})  
-db.coll.updateOne({"_id": 1}, {$rename: {"year": "date"} }) 
-db.coll.updateOne({"_id": 1}, {$inc: {"year": 5}}) 
-db.coll.updateOne({"_id": 1}, {$mul: {price: 2}})  
+db.coll.updateOne({"_id": 1}, {$set: {"year": 2016, name: "Max"}})
+db.coll.updateOne({"_id": 1}, {$unset: {"year": 1}})
+db.coll.updateOne({"_id": 1}, {$rename: {"year": "date"} })
+db.coll.updateOne({"_id": 1}, {$inc: {"year": 5}})
+db.coll.updateOne({"_id": 1}, {$mul: {price: 2}})
 db.coll.updateOne({"_id": 1}, {$min: {"imdb": 5}})
-db.coll.updateOne({"_id": 1}, {$max: {"imdb": 8}}) 
-db.coll.updateMany({"_id": {$lt: 10}}, {$set: {"lastModified": ISODate()}})  
+db.coll.updateOne({"_id": 1}, {$max: {"imdb": 8}})
+db.coll.updateMany({"_id": {$lt: 10}}, {$set: {"lastModified": ISODate()}})
 ```
 
 ### Array {.row-span-2}

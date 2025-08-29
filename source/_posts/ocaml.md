@@ -53,7 +53,7 @@ $ opam install hex
 #### Global Open
 
 ```ml
-open Hex 
+open Hex
 ```
 
 #### Local Open
@@ -61,7 +61,7 @@ open Hex
 ```ml
 Hex.of_string "hex string"
 
-let open Hex in 
+let open Hex in
   of_string "to hex"
 ```
 
@@ -73,7 +73,7 @@ let open Hex in
 (* A single line comment *)
 
 (* A multi-line comment
-* where we want to explain 
+* where we want to explain
 * something complex *)
 
 (* Outer comment
@@ -201,7 +201,7 @@ Lists are immutable
 Bundle related data
 
 ```ml
-type person = { 
+type person = {
   name: string;
   age: int
 }
@@ -215,7 +215,7 @@ val zeno : person = {name = "Zeno"; age = 30}
 Several different, but related types
 
 ```ml
-type shape = 
+type shape =
   | Circle of float
   | Rectangle of float * float
 
@@ -225,8 +225,7 @@ type shape =
 
 #### Aliases
 
-Provide meaningful name
-to complex or commonly used types
+Provide meaningful name to complex or commonly used types
 
 ```ml
 type point = float * float
@@ -242,7 +241,7 @@ val origin : point = (0., 0.)
 #### Single parameter
 
 ```ml
-let add_one x = 
+let add_one x =
   let result = x + 1 in
   result
 
@@ -265,10 +264,10 @@ let sum x y =
 
 ```ml
 let str_concat (x, y) =
-  x ^ " " ^ y 
+  x ^ " " ^ y
 
 # str_concat ("Hello", "OCaml") ;;
-- : string = "Hello Ocaml"  
+- : string = "Hello Ocaml"
 ```
 
 ### Recursive Functions
@@ -278,7 +277,7 @@ let str_concat (x, y) =
 All recusive functions use the rec keyword
 
 ```ml
-let rec factorial n = 
+let rec factorial n =
   if n < 1 then 1 else n * factorial (n - 1)
 ```
 
@@ -289,7 +288,7 @@ The above can cause stackoverflow.
 Makes use of a helper function and the acc argument.
 
 ```ml
-let rec factorial_helper n acc = 
+let rec factorial_helper n acc =
   if n = 0 then acc
   else factorial_helper (n - 1) (n * acc)
 ```
@@ -316,7 +315,7 @@ Read from right to left, the first operation is `sum 2 3`
 
 ```ml
 (* find log((x + y)!) *)
-# sum 2 3 
+# sum 2 3
   |> factorial
   |> float_of_int
   |> log ;;
@@ -332,26 +331,26 @@ Read from right to left, the first operation is `sum 2 3`
 #### If Statement
 
 ```ml
-let is_pos x = 
+let is_pos x =
   if x > 0 then "positive" else "negative"
 ```
 
 #### If else if
 
 ```ml
-let f x = 
+let f x =
   if x > 3 then "gt 3"
   else if x < 3 then "lt 3"
-  else "eq 3" 
+  else "eq 3"
 ```
 
 #### Pattern Matching
 
 ```ml
-let is_pos x = 
-  match x > 0 with 
+let is_pos x =
+  match x > 0 with
   | true  -> "positive"
-  | false -> "negative" 
+  | false -> "negative"
 ```
 
 ### Loops
@@ -360,7 +359,7 @@ let is_pos x =
 
 ```ml
 for i = 1 to 5 do
-  print_int i 
+  print_int i
 done
 ```
 
@@ -369,7 +368,7 @@ done
 Notice the `ref` is needed to have the while condition eventually become false.
 
 ```ml
-let i = ref 0 in 
+let i = ref 0 in
   while !i < 5 do
     print_int !i;
     i := !i + 1
@@ -393,7 +392,7 @@ let i = ref 0 in
 
 ```ml
 (* int operator   float operator *)
-+                 +.  (* addition *) 
++                 +.  (* addition *)
 -                 -.  (* subtraction *)
 *                 *.  (* multiplication *)
 /                 /.  (* division *)
@@ -440,7 +439,7 @@ List.fold_left (+) 0 lst
 #### Definition and Access
 
 ```ml
-let scores = 
+let scores =
   [("math", 91); ("phil", 89); ("stats", 94)]
 
 # List.assoc "stats" scores;;
@@ -499,7 +498,7 @@ Maps are immutable key-value association tables.
 (* the Map.Make functor creates the custom map module *)
 # module StringMap = Map.Make(String);;
 
-let books = 
+let books =
   StringMap.empty
   |> StringMap.add "Dune" ("Herbet", 1965)
   |> StringMap.add "Neuromancer" ("Gibson", 1984)
@@ -522,17 +521,17 @@ let books =
 Creates a new map since maps are immutable
 
 ```ml
-let more_books = books 
+let more_books = books
   |> StringMap.add "Foundation" ("Isaac Asimov", 1951)
 
-let less_books = 
+let less_books =
   |> StringMap.remove "Dune"
 ```
 
 Filtering
 
 ```ml
-let eighties_books = 
+let eighties_books =
     StringMap.filter
       (fun _ (_, year) -> year > 1980 & number < 1990) books
 ```

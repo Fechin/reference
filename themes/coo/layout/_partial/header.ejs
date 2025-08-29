@@ -1,56 +1,140 @@
 <% let postPage = (page['layout'] === 'post' || page._isNotePagination || page['layout'] === 'note') ? true : false; %>
-<header class="<% if (is_home()){ %>home bg-blue-500 dark:bg-slate-800<% } %>">
-    <div class="max-container z-10">
-        <div class="flex flex-row justify-between md:justify-start items-center py-3">
-            <%- partial('index/logo', {icon: true}) %>
+<header class="<% if (is_home()){ %>home<% } %> relative z-10 <% if (is_home()){ %>w-full overflow-visible<% } %>">
+    <% if (is_home()){ %>
+    <!-- Modern Hero Background with Clean Gradient Design -->
+    <!-- Main Background Gradient Layer -->
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-600 to-indigo-800 pointer-events-none"></div>
+
+    <!-- Subtle Geometric Pattern Overlay -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none" 
+         style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.2) 1px, transparent 1px),
+                radial-gradient(circle at 80% 50%, rgba(255,255,255,0.2) 1px, transparent 1px);
+                background-size: 60px 60px, 90px 90px;
+                background-position: 0 0, 30px 45px;"></div>
+
+    <!-- Floating Orbs for Visual Interest -->
+    <div class="absolute top-20 left-1/4 w-32 h-32 bg-gradient-to-r from-pink-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+    
+    <!-- Code Elements (Simplified) -->
+    <div class="absolute top-24 right-12 opacity-20 font-mono text-white/60 text-sm animate-bounce" style="animation-delay: 1s; animation-duration: 3s;">
+        &lt;/&gt;
+    </div>
+    <div class="absolute bottom-32 left-16 opacity-20 font-mono text-white/60 text-lg animate-bounce" style="animation-delay: 2s; animation-duration: 3s;">
+        { }
+    </div>
+
+    <!-- Gradient Overlay for Better Text Readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 pointer-events-none"></div>
+    <% } %>
+
+    <!-- Navbar Section -->
+    <div class="max-container z-20 relative">
+        <div class="flex flex-row justify-between md:justify-start items-center py-4">
+            <%- partial('index/logo', {icon: true, theme: is_home() ? 'dark' : 'light'}) %>
             <div class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <!-- Search Button -->
                 <button id="mysearch-trigger" type="button"
-                        class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 <%- is_home() ? "text-white" : "text-slate-700"  %>  md:hover:opacity-80">
-                    <div class="md:text-xl text-slate-700 dark:text-slate-300 <%- is_home() ? "md:text-white" : "" %> md:mr-2">
+                        class="inline-flex h-9 items-center backdrop-blur-sm rounded-3xl px-3 md:px-4 lg:px-6 py-2 transition-colors duration-200 group <%- is_home() ? "bg-white/10 outline outline-1 outline-white/20 text-white hover:bg-white/20 hover:outline-white/30" : "bg-white outline outline-1 outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700" %>">
+                    <div class="md:text-xl md:mr-2 <%- is_home() ? "text-white" : "text-slate-700 dark:text-slate-300" %>">
                         <%- icon("search") %>
                     </div>
-                    <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span>
-                    <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border <%- postPage ? "border-slate-400" : "border-slate-300" %> rounded-md">
-                        <span class="font-sans">⌘</span>
-                        <span class="font-sans">K</span>
-                    </span>
+                    <span class="hidden md:inline font-medium <%- is_home() ? "text-white" : "text-slate-700 dark:text-slate-300" %>">Search for cheatsheet</span>
+                    <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-300 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span>
                 </button>
-                <a href="<%- edit_page() %>" target="_blank">
-                    <img alt="GitHub Repo stars" style="height: 26px; opacity: 0.8;" src="https://img.shields.io/github/stars/Fechin/reference?style=social">
-                </a>
-                <a href="https://twitter.com/FechinLi" target="_blank">
-                    <button type="button"
-                            class="fadeIn inline-flex h-8 items-center rounded-full  bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
-                        <div class="md:mr-2">
-                            <%- icon("twitter") %>
-                        </div>
-                        <span class="hidden md:inline text-sm">Follow Me</span>
-                    </button>
-                </a>
-                <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900">
-                    <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white">
+
+                <!-- Dark Mode Toggle -->
+                <button id="darkMode" class="inline-flex items-center justify-center flex-shrink-0 h-9 w-9 rounded-3xl ml-2 lg:ml-3 backdrop-blur-sm transition-colors duration-200 group <%- is_home() ? "bg-white/10 outline outline-1 outline-white/20 text-white hover:bg-white/20 hover:outline-white/30" : "bg-white outline outline-1 outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700" %>">
+                    <!-- Sun icon (shown in dark mode) -->
+                    <i class="icon-light transition-all duration-200 <%- is_home() ? "text-white" : "text-slate-600 dark:text-slate-300" %>">
                         <%- icon("light") %>
                     </i>
+                    <!-- Moon icon (shown in light mode) -->
+                    <i class="icon-dark transition-all duration-200 <%- is_home() ? "text-white" : "text-slate-600 dark:text-slate-300" %>">
+                        <%- icon("dark") %>
+                    </i>
                 </button>
-                <a href="<%- share_link("facebook") %>" target="_blank">
-                    <button type="button"
-                            class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
-                        <span class="text-md">
-                            <%- icon("facebook") %>
-                        </span>
-                        <span class="hidden">Facebook</span>
+
+                <!-- Share Dropdown -->
+                <div class="relative ml-2 lg:ml-3" id="share-dropdown">
+                    <button type="button" id="share-trigger"
+                            class="inline-flex h-9 items-center rounded-3xl backdrop-blur-sm ml-0 px-3 py-2 transition-colors duration-200 group <%- is_home() ? "bg-white/10 outline outline-1 outline-white/20 text-white hover:bg-white/20 hover:outline-white/30" : "bg-white outline outline-1 outline-slate-200 dark:bg-slate-800 dark:outline-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700" %>"
+                            aria-expanded="false" aria-haspopup="true">
+                        <div class="mr-2 <%- is_home() ? "text-white" : "text-slate-700 dark:text-slate-300" %>">
+                            <%- icon("share") %>
+                        </div>
+                        <span class="hidden md:inline text-sm font-medium <%- is_home() ? "text-white" : "text-slate-700 dark:text-slate-300" %>">Share</span>
+                        <div class="hidden md:inline ml-2 <%- is_home() ? "text-white" : "text-slate-700 dark:text-slate-300" %>">
+                            <%- icon("chevron-down") %>
+                        </div>
                     </button>
-                </a>
-                <a href="<%- share_link("twitter") %>" target="_blank">
-                    <button type="button"
-                            class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
-                        <span class="text-md">
-                            <%- icon("twitter") %>
-                        </span>
-                        <span class="hidden">Twitter</span>
-                    </button>
-                </a>
+
+                    <!-- Dropdown Menu Portal Target -->
+                    <div id="share-menu-portal"></div>
+
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Hero Section (only on home page) -->
+    <% if (is_home()){ %>
+    <%- partial('index/hero-content') %>
+    <% } %>
+
 </header>
+
+<!-- Share Dropdown Menu (Portal) - Outside header to avoid overflow issues -->
+<div id="share-menu" class="fixed z-[9999] w-56 rounded-3xl bg-white dark:bg-slate-800 shadow-xl outline outline-1 outline-slate-200 dark:outline-slate-700 opacity-0 invisible transform scale-95 transition-all duration-200 pointer-events-none">
+    <div class="py-2">
+        <a href="#" onclick="shareOnX()" title="Share on X (Twitter)" aria-label="Share this page on X (Twitter)" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-[#000000]">
+                <%- icon("x") %>
+            </div>
+            <span class="font-medium">Share on X</span>
+        </a>
+        <a href="#" onclick="shareOnFacebook()" title="Share on Facebook" aria-label="Share this page on Facebook" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-[#1877f2]">
+                <%- icon("facebook") %>
+            </div>
+            <span class="font-medium">Share on Facebook</span>
+        </a>
+        <a href="#" onclick="shareOnReddit()" title="Share on Reddit" aria-label="Share this page on Reddit" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-[#ff4500]">
+                <%- icon("reddit") %>
+            </div>
+            <span class="font-medium">Share on Reddit</span>
+        </a>
+        <a href="#" onclick="shareOnPinterest()" title="Share on Pinterest" aria-label="Share this page on Pinterest" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-[#bd081c]">
+                <%- icon("pinterest") %>
+            </div>
+            <span class="font-medium">Share on Pinterest</span>
+        </a>
+        <a href="#" onclick="shareOnLinkedIn()" title="Share on LinkedIn" aria-label="Share this page on LinkedIn" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-[#0a66c2]">
+                <%- icon("linkedin") %>
+            </div>
+            <span class="font-medium">Share on LinkedIn</span>
+        </a>
+        <a href="#" onclick="shareOnLine()" title="Share on Line" aria-label="Share this page on Line" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-[#00c300]">
+                <%- icon("line") %>
+            </div>
+            <span class="font-medium">Share on Line</span>
+        </a>
+        <div class="border-t border-slate-200 dark:border-slate-600 my-2 mx-2"></div>
+        <a href="#" onclick="shareViaEmail()" title="Share via Email" aria-label="Share this page via Email" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-slate-500">
+                <%- icon("mail") %>
+            </div>
+            <span class="font-medium">Share via Email</span>
+        </a>
+        <a href="#" onclick="copyToClipboard(); return false;" title="Copy Link to Clipboard" aria-label="Copy page link to clipboard" role="button" rel="nofollow" class="share-item flex items-center px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors rounded-xl mx-2 my-1">
+            <div class="flex-shrink-0 w-5 h-5 mr-3 text-slate-500">
+                <%- icon("copy") %>
+            </div>
+            <span class="font-medium">Copy Link</span>
+        </a>
+    </div>
+</div>

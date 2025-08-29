@@ -64,23 +64,23 @@ This is a quick cheat sheet to getting started with regular expressions.
 | `a*+`    | Possessive quantifier |
 
 ### Common Metacharacters
-| Pattern  | Description                                |
-| -------- | :----------------------------------------- |
-| `^`     | Matches the start of a string.             |
-| `{`     | Starts a quantifier for the number of occurrences. |
-| `+`     | Matches one or more of the preceding element. |
-| `<`     | Not a standard regex meta character (commonly used in HTML). |
-| `[`     | Starts a character class.                  |
-| `*`     | Matches zero or more of the preceding element. |
-| `)`     | Ends a capturing group.                    |
-| `>`     | Not a standard regex meta character (commonly used in HTML). |
-| `.`     | Matches any character except a newline.    |
-| `(`     | Starts a capturing group.                  |
-| `|`     | Acts as a logical OR within a regex pattern. |
-| `$`     | Matches the end of a string.               |
-| `\`     | Escapes a meta character, giving it literal meaning. |
-| `?`     | Matches zero or one of the preceding element. |
 
+| Pattern | Description                                                  |
+| ------- | :----------------------------------------------------------- | -------------------------------------------- |
+| `^`     | Matches the start of a string.                               |
+| `{`     | Starts a quantifier for the number of occurrences.           |
+| `+`     | Matches one or more of the preceding element.                |
+| `<`     | Not a standard regex meta character (commonly used in HTML). |
+| `[`     | Starts a character class.                                    |
+| `*`     | Matches zero or more of the preceding element.               |
+| `)`     | Ends a capturing group.                                      |
+| `>`     | Not a standard regex meta character (commonly used in HTML). |
+| `.`     | Matches any character except a newline.                      |
+| `(`     | Starts a capturing group.                                    |
+| `       | `                                                            | Acts as a logical OR within a regex pattern. |
+| `$`     | Matches the end of a string.                                 |
+| `\`     | Escapes a meta character, giving it literal meaning.         |
+| `?`     | Matches zero or one of the preceding element.                |
 
 {.cols-3 .marker-none}
 
@@ -530,8 +530,8 @@ False
 ### test()
 
 ```javascript
-let textA = "I like APPles very much";
-let textB = "I like APPles";
+let textA = 'I like APPles very much';
+let textB = 'I like APPles';
 let regex = /apples$/i;
 
 // Output: false
@@ -544,7 +544,7 @@ console.log(regex.test(textB));
 ### search()
 
 ```javascript
-let text = "I like APPles very much";
+let text = 'I like APPles very much';
 let regexA = /apples/;
 let regexB = /apples/i;
 
@@ -558,7 +558,7 @@ console.log(text.search(regexB));
 ### exec()
 
 ```javascript
-let text = "Do you like apples?";
+let text = 'Do you like apples?';
 let regex = /apples/;
 
 // Output: apples
@@ -571,7 +571,7 @@ console.log(regex.exec(text).input);
 ### match()
 
 ```javascript
-let text = "Here are apples and apPleS";
+let text = 'Here are apples and apPleS';
 let regex = /apples/gi;
 
 // Output: [ "apples", "apPleS" ]
@@ -581,7 +581,7 @@ console.log(text.match(regex));
 ### split() {.col-span-2}
 
 ```javascript
-let text = "This 593 string will be brok294en at places where d1gits are.";
+let text = 'This 593 string will be brok294en at places where d1gits are.';
 let regex = /\d+/g;
 
 // Output: [ "This ", " string will be brok", "en at places where d", "gits are." ]
@@ -592,7 +592,7 @@ console.log(text.split(regex));
 
 ```javascript
 let regex = /t(e)(st(\d?))/g;
-let text = "test1test2";
+let text = 'test1test2';
 let array = [...text.matchAll(regex)];
 
 // Output: ["test1", "e", "st1", "1"]
@@ -605,11 +605,11 @@ console.log(array[1]);
 ### replace()
 
 ```javascript {.wrap}
-let text = "Do you like aPPles?";
+let text = 'Do you like aPPles?';
 let regex = /apples/i;
 
 // Output: Do you like mangoes?
-let result = text.replace(regex, "mangoes");
+let result = text.replace(regex, 'mangoes');
 console.log(result);
 ```
 
@@ -617,10 +617,10 @@ console.log(result);
 
 ```javascript
 let regex = /apples/gi;
-let text = "Here are apples and apPleS";
+let text = 'Here are apples and apPleS';
 
 // Output: Here are mangoes and mangoes
-let result = text.replaceAll(regex, "mangoes");
+let result = text.replaceAll(regex, 'mangoes');
 console.log(result);
 ```
 

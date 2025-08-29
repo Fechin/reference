@@ -8,8 +8,7 @@ tags:
   - Framework
 categories:
   - Programming
-intro:
-  EJS(Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.
+intro: EJS(Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.
 plugins:
   - copyCode
   - runCode
@@ -45,9 +44,9 @@ $ ejs hello.ejs -o hello.html
 ### Render with Data
 
 ```js
-let ejs = require("ejs");
+let ejs = require('ejs');
 
-let people = ["geddy", "neil", "alex"];
+let people = ['geddy', 'neil', 'alex'];
 let tpl = '<%= people.join(", "); %>';
 
 let html = ejs.render(tpl, { people: people });
@@ -61,7 +60,7 @@ Pass EJS a template string and some data.
 ```html
 <script src="https://unpkg.com/ejs"></script>
 <script>
-  let people = ["geddy", "neil", "alex"];
+  let people = ['geddy', 'neil', 'alex'];
   let html = ejs.render('<%= people.join(", "); %>', { people: people });
   console.log(html);
 </script>
@@ -110,7 +109,7 @@ $ ejs hello.ejs -f data.json -o hello.html
 ### Method {.col-span-2}
 
 ```js
-let ejs = require("ejs");
+let ejs = require('ejs');
 let template = ejs.compile(str, options);
 
 template(data);
@@ -176,15 +175,15 @@ To include a template, needs a file name option, paths are relative
 ### Custom delimiters
 
 ```js
-let ejs = require("ejs"),
-  users = ["geddy", "neil", "alex"];
+let ejs = require('ejs'),
+  users = ['geddy', 'neil', 'alex'];
 
 // Just one template
-ejs.render('<?= users.join(" | "); ?>', { users: users }, { delimiter: "?" });
+ejs.render('<?= users.join(" | "); ?>', { users: users }, { delimiter: '?' });
 // => 'geddy | neil | alex'
 
 // Or globally
-ejs.delimiter = "$";
+ejs.delimiter = '$';
 ejs.render('<$= users.join(" | "); $>', { users: users });
 // => 'geddy | neil | alex'
 ```
@@ -192,8 +191,8 @@ ejs.render('<$= users.join(" | "); $>', { users: users });
 ### Caching
 
 ```js
-let ejs = require("ejs"),
-  LRU = require("lru-cache");
+let ejs = require('ejs'),
+  LRU = require('lru-cache');
 
 // LRU cache with 100-item limit
 ejs.cache = LRU(100);
@@ -202,9 +201,9 @@ ejs.cache = LRU(100);
 ### Custom file loader
 
 ```js
-let ejs = require("ejs");
+let ejs = require('ejs');
 let myFileLoader = function (filePath) {
-  return "myFileLoader: " + fs.readFileSync(filePath);
+  return 'myFileLoader: ' + fs.readFileSync(filePath);
 };
 
 ejs.fileLoader = myFileLoader;
@@ -232,12 +231,12 @@ ejs.fileLoader = myFileLoader;
 <div id="output"></div>
 <script src="ejs.min.js"></script>
 <script>
-  let people = ["geddy", "neil", "alex"],
+  let people = ['geddy', 'neil', 'alex'],
     html = ejs.render('<%= people.join(", "); %>', { people: people });
   // With jQuery:
-  $("#output").html(html);
+  $('#output').html(html);
   // Vanilla JS:
-  document.getElementById("output").innerHTML = html;
+  document.getElementById('output').innerHTML = html;
 </script>
 ```
 

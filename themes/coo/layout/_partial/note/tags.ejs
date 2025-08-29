@@ -2,7 +2,7 @@
     <ul class="post-tags-list" itemprop="keywords">
         <% page.tags.each(function(tag) { %>
             <li class="post-tags-list-item">
-                <a class="post-tags-list-link dark:text-slate-300" href="javascript:void(0)" rel="tag"><%- tag.name %></a>
+                <a class="post-tags-list-link dark:text-slate-300" href="javascript:void(0)" rel="tag" title="<%- tag.name %> tag"><%- tag.name %></a>
             </li>
         <% }) %>
     </ul>

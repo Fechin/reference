@@ -8,32 +8,82 @@
 ehthumbs.db
 Thumbs.db
 nohup.out
+*.tmp
+*.temp
 
-# Python files #
+# Environment files #
 ######################
-.python-version
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.python-version
 .venv
 .ipynb_checkpoints
+
+# Logs #
+######################
 *.log
-
-# Editor files #
-######################
-.idea
-.vscode
-
-# Node files #
-######################
-node_modules/
-dist/
+logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Editor files #
+######################
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.vim/
+.emacs.d/
+.sublime-*
+
+# Node.js #
+######################
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
 package-lock.json
 
+# Testing #
+######################
+.jest/
+.coverage/
+junit.xml
+test-results/
 
-# Other files #
+# Build artifacts #
 ######################
 themes/coo/source/css/style.css
 public/
 db.json
+*.tgz
+*.tar.gz
+
+# Security #
+######################
+.npmrc
+.yarnrc
+.pnpm-store/
+
+# Misc #
+######################
+.eslintcache
+.stylelintcache
+.prettierignore

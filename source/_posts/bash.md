@@ -515,26 +515,6 @@ for i in {5..50..5}; do
 done
 ```
 
-### Auto increment
-
-```bash
-i=1
-while [[ $i -lt 4 ]]; do
-    echo "Number: $i"
-    ((i++))
-done
-```
-
-### Auto decrement
-
-```bash
-i=3
-while [[ $i -gt 0 ]]; do
-    echo "Number: $i"
-    ((i--))
-done
-```
-
 ### Continue
 
 ```bash {data=3,5}
@@ -569,6 +549,35 @@ until [ $count -gt 10 ]; do
 done
 ```
 
+### While with increment
+
+```bash
+i=1
+while [[ $i -lt 4 ]]; do
+    echo "Number: $i"
+    ((i++))
+done
+```
+
+### While with decrement
+
+```bash
+i=3
+while [[ $i -gt 0 ]]; do
+    echo "Number: $i"
+    ((i--))
+done
+```
+
+#### Combined with test
+
+```bash
+i=3
+while ((i--)); do
+    echo "Number: $i"
+done
+```
+
 ### Forever
 
 ```bash
@@ -588,9 +597,9 @@ done
 ### Reading lines
 
 ```bash
-cat file.txt | while read line; do
+while read line; do
     echo $line
-done
+done < file.txt
 ```
 
 ## Bash Functions

@@ -89,6 +89,7 @@ print(upperCase); //Print: NICOLA
 
 /* Comments like these are also supported. */
 ```
+
 ### multiline String
 
 ```dart
@@ -98,7 +99,6 @@ print('''My long string''');
 //this will show long string
 //this will help for only long strings
 ```
-
 
 ### Imports
 
@@ -227,7 +227,6 @@ for(var number in numbers){
 }
 ```
 
-
 ### for in loop
 
 ```dart
@@ -247,7 +246,6 @@ for(var number in numbers){
     print(fruit);
   }
 ```
-
 
 ## Collections {.cols-2}
 
@@ -286,7 +284,7 @@ Set<String> names = {}; // This works, too.
 // a map is an object that associates keys and values
 var person = Map<String, String>();
 // To initialize the map, do this:
- 
+
 person['lastName'] = 'Tesla';
 
 print(person); //Print: {firstName: Nicola, lastName: Tesla}
@@ -664,7 +662,9 @@ userObject?.userName?.toString()
 
 // The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null
 ```
+
 ### enum in dart
+
 ```dart
 defination: An enum (short for "enumeration") is a special data type that enables a variable to be a set of predefined constants. Enums are used to define variables that can only take one out of a small set of possible values. They help make code more readable and less error-prone by providing meaningful names to these sets of values.
 
@@ -700,5 +700,3 @@ void main() {
 
 
 ```
-
-

@@ -45,7 +45,7 @@
         codeBlocks.forEach(function (codeBlock) {
             // Create a copy button element
             const copyButton = document.createElement('button');
-            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.className = 'opacity-90 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 p-2 text-white shadow-xl rounded-lg flex items-center absolute top-2 right-2 transition-all duration-200 backdrop-blur-sm';
             copyButton.innerHTML = initInnerHTML;
             copyButton.style.opacity = "0";
             const parent = codeBlock.parentNode;
@@ -94,7 +94,7 @@
 
             // Create a run button element
             const runButton = document.createElement('button');
-            runButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-12 right-2';
+            runButton.className = 'opacity-90 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-2 text-white shadow-xl rounded-lg flex items-center absolute top-12 right-2 transition-all duration-200 backdrop-blur-sm';
             runButton.innerHTML = runInnerHTML;
             runButton.style.opacity = "0";
             const parent = codeBlock.parentNode;
@@ -389,3 +389,83 @@
         });
     </script>
 <% } %>
+
+<!-- PWA Service Worker Registration -->
+<script>
+// Register Service Worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered successfully:', registration.scope);
+
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available, show update notification
+                showUpdateNotification();
+              }
+            });
+          }
+        });
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+
+// Show update notification
+function showUpdateNotification() {
+  // Create a simple notification banner
+  const notification = document.createElement('div');
+  notification.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+                  background: #6366f1;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      z-index: 9999;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    ">
+      <span>New content is available! </span>
+      <button onclick="window.location.reload()" style="
+        background: rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-left: 8px;
+        cursor: pointer;
+      ">Refresh</button>
+      <button onclick="this.parentElement.parentElement.remove()" style="
+        background: transparent;
+        border: none;
+        color: white;
+        padding: 4px 8px;
+        margin-left: 8px;
+        cursor: pointer;
+        font-size: 18px;
+      ">&times;</button>
+    </div>
+  `;
+  document.body.appendChild(notification);
+}
+
+
+// Hide install button when app is installed
+window.addEventListener('appinstalled', () => {
+  const installBtn = document.getElementById('pwa-install-btn');
+  if (installBtn) {
+    installBtn.remove();
+  }
+  console.log('PWA was installed');
+});
+</script>

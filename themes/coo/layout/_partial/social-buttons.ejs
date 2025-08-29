@@ -1,0 +1,42 @@
+<%
+// Social buttons component - compatibility wrapper, directly uses independent button components
+// variant: 'hero' | 'compact' | 'inline'
+// showLabels: boolean - whether to show text labels
+// className: string - additional CSS class names
+// buttons: array - button types to display ['github', 'x', 'coffee']
+
+const variant = locals.variant || 'hero';
+const showLabels = locals.showLabels !== false; // show labels by default
+const className = locals.className || '';
+const buttons = locals.buttons || ['github', 'x', 'coffee']; // show all buttons by default
+
+// Set container styles based on variant
+const containerClass = {
+    hero: 'flex flex-col lg:flex-row items-center justify-center gap-4 mb-16 max-w-4xl mx-auto',
+    compact: 'hidden lg:flex items-center ml-3',
+    inline: 'flex flex-wrap items-center justify-center gap-3 mt-6 mb-8'
+}[variant];
+%>
+
+<div class="<%= containerClass %> <%= className %>">
+    <% if (buttons.includes('github')) { %>
+        <%- partial('_partial/buttons/github-star', {
+            variant: variant,
+            showLabel: showLabels
+        }) %>
+    <% } %>
+
+    <% if (buttons.includes('x')) { %>
+        <%- partial('_partial/buttons/follow-x', {
+            variant: variant,
+            showLabel: showLabels
+        }) %>
+    <% } %>
+
+    <% if (buttons.includes('coffee')) { %>
+        <%- partial('_partial/buttons/buy-coffee', {
+            variant: variant,
+            showLabel: showLabels
+        }) %>
+    <% } %>
+</div>

@@ -108,11 +108,11 @@ text: {
 ### @import
 
 ```scss
-@import "./other_sass_file";
-@import "/code", "lists";
+@import './other_sass_file';
+@import '/code', 'lists';
 
 // Plain CSS @imports
-@import "theme.css";
+@import 'theme.css';
 @import url(theme);
 ```
 
@@ -349,7 +349,7 @@ $menu-items: home about contact;
 
 @each $item in $menu-items {
   .photo-#{$item} {
-    background: url("#{$item}.jpg");
+    background: url('#{$item}.jpg');
   }
 }
 ```
@@ -357,7 +357,7 @@ $menu-items: home about contact;
 ### Each loops (nested)
 
 ```scss
-$backgrounds: (home, "home.jpg"), (about, "about.jpg");
+$backgrounds: (home, 'home.jpg'), (about, 'about.jpg');
 
 @each $id, $image in $backgrounds {
   .photo-#{$id} {
@@ -383,10 +383,10 @@ $i: 6;
 ### Conditionals {.row-span-2}
 
 ```scss
-@if $position == "left" {
+@if $position == 'left' {
   position: absolute;
   left: 0;
-} @else if $position == "right" {
+} @else if $position == 'right' {
   position: absolute;
   right: 0;
 } @else {
