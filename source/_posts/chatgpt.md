@@ -276,21 +276,21 @@ How
 
 Using [style]
 
-#### Imitate
+Imitate
 
 - Using style of [person|brand|genre|character]
 
-#### Formality
+Formality
 
 - Formal
 - Informal
 
-#### Directness
+Directness
 
 - Direct
 - Indirect
 
-#### Tones
+Tones
 
 Positive
 
@@ -314,11 +314,9 @@ Negative
 - Sarcastic
 - Urgent
 
-### Output Format
+### Output Format (Text) {.secondary}
 
 In [output format]
-
-#### Text
 
 Paragraphs
 
@@ -338,7 +336,7 @@ Instructions
 
 - Step-by-step instructions
 
-Questions And Answers
+Knowledge Base
 
 - Q&A
 - FAQ
@@ -349,16 +347,16 @@ Creative Writing
 - [Lyrics|song]
 - [Metaphorical|stylized language]
 - Poetry
-- [Riddle|puzzle]
 - [Script|screenplay|dialogue]
 - [Story|narrative]
 
-Interactive And Educational
+Games
 
 - [Quiz|test|flashcards|drills]
+- [Riddle|puzzle]
 - [rpg|choose-your-own-adventure]
 
-#### Visual
+### Output Format (Visual) {.secondary}
 
 Data Visualization
 
@@ -371,7 +369,7 @@ Creative Visual
 - Emojis
 - Word cloud
 
-#### File Type
+### Output Format (File Type) {.secondary}
 
 Document
 
