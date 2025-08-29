@@ -105,182 +105,172 @@ General Purpose
 Standard
 
 - Act as [occupation] with [specifications]
-- [List of roles](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
+- [List of roles](https://github.com/f/awesome-chatgpt-prompts)
 
 Roleplay
 
 - Act as [name] with [visual description] [personality] [behaviour examples] [lore] in [scenario]
 
-### Task (5W1H Questions) {.secondary}
+### Tasks (Language And Text) {.secondary}
 
 [verb] [task] [specifics]
+
+Generate
+
+- Generate [content type] to [entity] about [topic] and cover [aspects]
+- Generate random [names|numbers|words|ideas|X] matching [criteria]
+- [Continue|extend|lengthen]
+
+Summarise
+
+- [Summarise|shorten|write concise|write key points|write main lesson]
+- Create outline
+
+Refine
+
+- [Write better|improve]
+- Paraphrase
+- Correct spelling, grammar, and punctuation errors
+- Change [narrative voice A] to [narrative voice B]
+- Replace X with Y
+
+Explain
+
+- [Explain|elaborate]
+- Explain [how to do|each step of] X
+- Explain what X does
+- Explain X [in simple terms|like I’m 5|simplify]; Simplify X
+- Teach me about [topic|subject]
+- Provide [example|analogy]
+
+Organize
+
+- Sort X by [key] in [order]
+- Categorize
+
+Advise
+
+- Create [strategy|goals|milestones|roadmap|schedule|timeline] for X
+- Recommend [media type] [on|similar to] [topic]
+- Recommend [gifts|X] for [entity|occasion]
+- Recommend improvements
+- Provide [advice|feedback] for X
+
+Analyze
+
+- Extract [themes|keywords|info] about X
+- Identify [similarities|differences] between X and Y
+- Analyse the [sentiment|tone] of X
+- Identify gaps in X
+- Evaluate [strengths and weaknesses|pros and cons] of X
+- Is X [comparison] Y?
+
+Translate
+
+- Translate [language A] into [language B]
+- Convert [unit A] to [unit B]
+- Reformat as [output format]
+
+Filter
+
+- Filter items where [condition]
+- Choose best from [options]
+- Choose [top|lowest|first|last|random] [quantity] from [options]
+
+Engage
+
+- Provide questions about X
+
+Research
+
+- Get up-to-date [facts|news|data] on X
+- Find [sources|references|citations] for X
+- Is this true?
+
+### Tasks (Meta) {.secondary}
+
+Chat Memory
+
+- Based on [previous context] do X
+
+### Tasks (Code) {.secondary}
+
+Generate
+
+- Generate code in [programming language] to do X
+
+Translate
+
+- Translate [programming language A] into [programming language B]
+
+Optimize
+
+- Optimize X for [benefit]
+
+Debug
+
+- Debug X and explain why it's doing Y
+
+### Tasks (Image) {.secondary}
+
+Generate
+
+- Generate image of X in [style]
+
+Edit
+
+- Edit image to have X
+
+### Tasks (File And Image Upload) {.secondary}
+
+Explain
+
+- Question what is shown
+- Interpet visuals
+
+Analysis
+
+- Extract data
+
+### Task (5W1H Questions) {.secondary}
 
 Who
 
 - Who is X?
-- Who is [involved | affected | responsible] for X?
+- Who is [involved|affected by|responsible] for X?
 - Who should I contact for help with X?
 
 What
 
-- [What is | define | explain | describe] X?
-- What does X do?
-- What did [entity | text] mean by [quote]?
-- What events led up to [event]?
-- What [assumptions | risks | constraints] exist for X?
-- What are the critical features of X?
-- [What is done well? | what can be improved?]
+- [What is|define|explain|describe] X?
+- What are the key topics of X?
+- What does [quote] mean?
+- [What is done well?|what can be improved?]
 - What is the best way to do X?
-- What are the top 5 X?
 
 When
 
-- When [did | will] [entity | event] occur?
-- When is X due?
-- When is the best time to initiate X?
+- When [did|will] X happen?
+- When is the best time to do X?
 
 Where
 
-- Where did [entity | event] happen?
-- [Where to find X? | where to find resources about X? | suggest websites about X]
+- Where did X take place?
+- Where to find X?
 
 Why
 
-- Why did [entity] choose [approach]?
-- Why [did | will] [event] occur?
-- Why is [approach] being implemented?
+- Why did X happen?
+- Why is this approach used?
+- Why is X important?
 - Why might X succeed or fail?
-- Why is [solution] preferable to [alternative]?
-- Why is it important?
+- Why is X preferable to Y?
 
 How
 
 - How to do X?
 - How does X work?
-- How does X do Y?
-- How to measure [metric] accurately?
-
-### Tasks (Core Functions) {.secondary}
-
-Generate And Expand Content
-
-- Write [content type] to [entity] about [topic] should cover [aspects]
-- Generate random [names | numbers | words | ideas | X] matching [criteria]
-- [Continue | extend | lengthen]
-- Create image of X
-
-Summarize And Outline
-
-- [Summarise | write key takeaways | write main points | write main lesson | highlight important info]
-- [Shorten | write concise]
-- Create outline
-
-Modify And Refine Text
-
-- [Write better | improve]
-- Paraphrase
-- Correct spelling, grammar, punctuation errors
-- Change [narrative voice A] to [narrative voice B]
-
-Explain And Teach
-
-- [Explain | elaborate]
-- Explain [how to do | each step of] X
-- Explain what X does
-- Explain X [in simple terms | like I’m 5]; Simplify X
-- Teach me about [topic | subject]
-- Provide [example | analogy]
-
-Organize And Structure
-
-- Sort X by [key] in [order] **_(Sort order examples: alphabetical, chronological, ascending, descending,
-  lexicographical, custom)_**
-- Categorize
-
-Plan And Strategize
-
-- Plan [strategy for | goals and steps to achieve | milestones for | roadmap for] X
-- Create [schedule | timeline] for X
-
-Recommend And Advise
-
-- Recommend [media type] [on | similar to] [topic]
-- Recommend [gift ideas | thing] for [entity | occasion]
-- Recommend improvements
-- Provide advice for [situation]
-- Give feedback on idea for X
-
-Analyze And Compare
-
-- Extract [themes | keywords | info] about X
-- Identify [similarities | differences] between X and Y
-- Analyse the [sentiment | tone] of X
-- Identify gaps in X
-- Evaluate [strengths and weaknesses | pros and cons] of X
-- Is X [comparison] Y?
-- Reverse engineer X
-
-Translate And Convert
-
-- Translate [human language A] into [human language B]
-- Translate [programming language A] into [programming language B]
-- Translate into emojis
-- Convert [unit A] to [unit B]
-- Reformat as [output format]
-
-Filter And Choose
-
-- Filter X where [condition]
-- Exclude X where [condition]
-- Choose best from [options]
-- Choose [top | lowest | first | last | random] [quantity] from [options]
-
-Real-Time Lookup And Verify
-
-- Get up-to-date [facts | news | data] on X
-- Is this true?
-- Find [sources | references | citations] for X
-
-Engagement And Trivia
-
-- Give questions about X
-
-Chat Memory
-
-- What did you mean by X?
-- What was said earlier about X?
-- Use earlier context to do X
-
-### Task (Conditional Clauses) {.secondary}
-
-- [Verb] [item number]
-- [Verb] the [first | last | random] [quantity] of X
-- [Verb] the [first | last | random] [quantity] of X where [condition]
-- [Verb] X where [condition]
-- [Verb] X where not [condition]
-
-### Task (Database CRUD Operations) {.secondary}
-
-Create
-
-- Generate [quantity] dummy entries following [fields]
-- Create new entry with [data]
-
-Read
-
-- Select records where [condition]
-- Select the [top | last | random] [quantity] entries
-
-Update
-
-- Update entries where [condition] with [data]
-- Replace X with Y
-
-Delete
-
-- Delete entries where [condition]
-- Delete duplicate items
-- Delete items with missing or null values
+- How did this happen?
 
 ### Style
 
@@ -288,7 +278,7 @@ Using [style]
 
 #### Imitate
 
-- Using style of [person | brand | genre | character]
+- Using style of [person|brand|genre|character]
 
 #### Formality
 
@@ -355,18 +345,18 @@ Questions And Answers
 
 Creative Writing
 
-- [Joke | humour]
-- [Lyrics | song]
-- [Metaphorical | stylized language]
+- [Joke|humour]
+- [Lyrics|song]
+- [Metaphorical|stylized language]
 - Poetry
-- [Riddle | puzzle]
-- [Script | screenplay | dialogue]
-- [Story | narrative]
+- [Riddle|puzzle]
+- [Script|screenplay|dialogue]
+- [Story|narrative]
 
 Interactive And Educational
 
-- [Quiz | test | flashcards | drills]
-- [Interactive fiction | role-playing game | choose-your-own-adventure]
+- [Quiz|test|flashcards|drills]
+- [Interactive fiction|role-playing game|choose-your-own-adventure]
 
 #### Visual
 
@@ -409,8 +399,8 @@ But [constraint]
 
 Length
 
-- Be [extremely detailed | concise]
-- In [quantity] [words | sentences]
+- Be [extremely detailed|concise]
+- In [quantity] [words|sentences]
 
 Language
 
@@ -418,18 +408,18 @@ Language
 
 Structure
 
-- Show [quantity] [examples | options]
+- Show [quantity] [examples|options]
 - No headers
 - No pretext titles
 
 Content
 
-- Use [first-person | second-person | third-person] narrative voice
+- Use [first-person|second-person|third-person] narrative voice
 - Don't change the wording
-- Permit [minor | major] edits
+- Permit [minor|major] edits
 - Use pop culture references
 - Ensure goals align with SMART criteria
-- Only show [changed | unchanged] content
+- Only show [changed|unchanged] content
 
 ## Examples
 
