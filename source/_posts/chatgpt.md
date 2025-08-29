@@ -16,13 +16,13 @@ plugins:
 
 ## Glossary
 
-### Glossary
+### AI
 
 - Prompt: input or query that guides an AI model in generating a
   response.[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273982/definition-of-prompt-ai-prompt)
 - Tokens: the smallest units of text processed by an AI model (e.g., words, subwords, characters, and punctuation marks)
   that varies depending on the model and the tokenization
-  method[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273998/definition-of-token/)
+  method.[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273998/definition-of-token/)
 - Token Limit: the maximum number of tokens an AI model can process in one
   interaction.[[s]](https://time.com/collections/the-ai-dictionary-from-allbusiness-com/7273998/definition-of-token/)
 - Artificial intelligence (AI): technology that enables machines to simulate human cognition (e.g., human learning,
@@ -37,78 +37,60 @@ plugins:
 - Jailbreak: exploiting vulnerabilities in AI systems to bypass their ethical guidelines and perform restricted
   actions.[[s]](https://www.ibm.com/think/insights/ai-jailbreak)
 
+### Prompt Engineering Techniques
+
+- Zero-shot: prompt with no examples.[[s]](https://www.ibm.com/think/topics/zero-shot-prompting)
+- One-shot: prompt with one example.[[s]](https://www.ibm.com/think/topics/one-shot-prompting)
+- Few-shot: prompt with multiple examples.[[s]](https://www.ibm.com/think/topics/few-shot-prompting)
+- Chain of thought: prompt guiding the model to break down complex reasoning into intermediate
+  steps.[[s]](https://cloud.google.com/discover/what-is-prompt-engineering?hl=en)
+
 ## Prompt Tips
 
 ### Efficiency
 
-- Focus on achieving the desired output efficiently with minimal words in the prompt.
-- Specify general instructions at the start of a conversation or when changing direction to avoid constantly restating
-  them in each new prompt.
-
-```{.wrap}
-Example: specify the role once at the start of a conversation.
-```
-
-- Restructure text to eliminate filler words that don’t add meaning:
-
-```{.wrap}
-Example: “provide a breakdown" -> "provide sales breakdown”.
-```
-
-- Do not explicitly refer to the item being processed unless addressing a specific part of it as what you provide will
-  typically speak for itself:
-
-```{.wrap}
-Example: “Filter this piece of text" -> "Filter text”
-```
-
-- Do not explicitly ask the AI for help:
-
-```{.wrap}
-Example: “can you help me x”.
-```
-
-- Do not explicitly reference yourself unless clarifying multiple entities:
-
-```{.wrap}
-Example: "do X for me".
-Example: ”I want to x”.
-```
-
-- Do not be polite to the AI:
-
-```{.wrap}
-Example: "please do X".
-Example: “thanks”.
-```
+- Use the latest model as it's generally more capable and easier to
+  prompt.[[s]](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
+- Provide general instructions at the start of conversations or when changing direction to avoid repeating them.
+- Don't say polite phrases to the AI (e.g., please, thank you) as it adds unecessary computational
+  costs.[[s]](https://www.techradar.com/computing/artificial-intelligence/chatgpt-spends-tens-of-millions-of-dollars-on-people-playing-please-and-thank-you-but-sam-altman-says-its-worth-it?utm_source=chatgpt.com)
+- Don't explicitly ask the AI for help (e.g., can you help me do x?).
+- Don't explicitly reference yourself unless clarifying multiple entities (e.g., I want to, do x for me).
 
 ### Clarity
 
-- Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and
-  eliminate comma lists and conjunctions (e.g., and).
-- Avoid vague or close ended questions.
+- Be clear, specific, and provide enough context for the model to understand what you are
+  asking.[[s]](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt)
+- Prompt engineering often requires iterative refinement by adjusting wording, adding context, and simplifying
+  requests.[[s]](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt)
+- Break complex tasks into smaller focused
+  prompts.[[s]](https://help.openai.com/en/articles/4936848-how-do-i-create-a-good-prompt-for-an-ai-model)
+- Specify focus areas, highlight important aspects, and ask for multiple
+  options.[[s]](https://help.openai.com/en/articles/4936848-how-do-i-create-a-good-prompt-for-an-ai-model)
+- Provide examples of the desired output format to improve
+  accuracy.[[s]](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
+- Focus on specifying what to do and not just what to
+  avoid.[[s]](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
+- Before writing a prompt, identify the goal and expected
+  output.[[s]](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
+- Provide important keywords or phrases where possible to faciliate SEO and communicate term preferences to the AI
+  model.[[s]](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
+- Keep prompts precise and clean by omitting unnecessary or redundant
+  information.[[s]](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
+- Avoid conflicting terms that might confuse the
+  AI.[[s]](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
+- Open-ended questions usually provide more detailed responses than [closed-ended questions] and yes/no
+  questions.[[s]](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
+- When in doubt, ask AI to generate prompts for
+  you.[[s]](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
 
-```{.wrap}
-Example: “Do you think our site is good" -> "Explain flaws in the designs of each webpage”
-```
+### Security
 
-- Ensure prompts are specific
+- Don't share sensitive information with AI as you can't be certain how it's stored, if it will be shared, of if it's
+  vulnerable to data
+  breaches.[[s]](https://www.grantthornton.com/insights/articles/advisory/2023/anticipate-cybersecurity-and-privacy-risks-in-ai)
 
-```{.wrap}
-Example: “explain our sales" -> "explain a breakdown of our sales performance for the last quarter”.
-```
-
-### Response Refinement
-
-- If the AI model misunderstands your request then specify the intended action.
-- Provide sufficient context so the AI model can understand the scenario.
-
-### Security And Privacy
-
-- Never share sensitive information with AI models as you can't be certain how it's stored, whether it will be shared,
-  of if a data breach may occur.
-
-## Prompt Engineering
+## Prompt Structure
 
 ### Prompt Frameworks
 
