@@ -440,6 +440,38 @@ See also: [More Aliases](https://gist.github.com/johnpolacek/69604a1f6861129ef08
 
 ## Advanced Git
 
+### Worktrees
+
+Create a new working tree at the specified path. If a branch is specified, it checks out that branch. If no branch is given, a new one is created based on HEAD and named after the new directory.
+
+```shell script
+$ git worktree add <path> [<branch>]
+```
+
+List all of the active working trees associated with the repository.
+
+```shell script
+$ git worktree list
+```
+
+Remove the specified working tree.
+
+```shell script
+$ git worktree remove <path>
+```
+
+Clean up stale or manually deleted working trees.
+
+```shell script
+$ git worktree prune
+```
+
+Relocate the working tree to a new path.
+
+```shell script
+$  git worktree move <old_path> <new_path>
+```
+
 ### Submodules
 
 Create a new submodule within your repository:
