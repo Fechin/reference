@@ -60,11 +60,17 @@ console.log(a); // => undefined
 ### Strings
 
 ```javascript
-let single = 'Wheres my bandit hat?';
-let double = 'Wheres my bandit hat?';
+let singleQuotes = 'Wheres my bandit hat?';
+let doubleQuotes = 'Wheres my bandit hat?';
+// this is used to embed expressions or for creating multi-line strings
+let backTicks = `Wheres my bandit hat? ${some_value}`;
+
+// they can also be mixed,
+// NOTE: if you need the functionality of the backticks, use it as the surrounding quotes
+let mixedQuotes = `hello ${'dear' + name}, "let's have a great day today`;
 
 // => 21
-console.log(single.length);
+console.log(singleQuotes.length);
 ```
 
 ### Arithmetic Operators
