@@ -154,6 +154,66 @@ not true       --> false
 
 ```
 
+## Conditionals
+
+### if-else {.col-span-3 .row-span-2}
+
+```lua
+num = 15
+if num > 10 then
+  print("num is greater than 10")
+elseif num < 10 then
+  print("num is smaller than 10")
+else
+  print("num is 10")
+end
+```
+
+## Loops
+
+### While loop
+
+```lua
+i = 1
+while i <= 5 do
+  print(i)
+  i = i + 1
+end
+```
+
+### For loop
+
+```lua
+-- Numeric for loop (start, end, step)
+for i = 1, 5, 1 do
+  print(i)
+end
+
+-- Generic for loop for tables
+t = {10, 20, 30}
+for k, v in ipairs(t) do
+  print(k, v) -- prints 1 10, 2 20, 3 30
+end
+```
+
+### Repeat-until loop
+
+```lua
+i = 1
+repeat
+  print(i)
+  i = i + 1
+until i > 5
+```
+
+### Breaking out
+
+```lua
+while x do
+  if condition then break end
+end
+```
+
 ## Data Type APIs
 
 ### Strings
