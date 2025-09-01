@@ -254,7 +254,7 @@ end
 
 ## Functions
 
-### Creating fns {.col-span-2}
+### Creating fns
 
 ```lua
 function myFunction()
@@ -295,7 +295,7 @@ end
 
 ```
 
-### Invoking fns
+### Invoking fns {.col-span-2}
 
 ```lua
 myFunction()
