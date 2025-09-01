@@ -363,3 +363,29 @@ s:byte()
 s:format()
 
 ```
+
+## Misc
+
+### Meta-tables
+
+A metatable is simply a table with functions in it.
+
+```lua
+mt = {}
+
+mt.__tostring = function() return "lol" end
+mt.__add      = function(b) ... end       -- a + b
+mt.__mul      = function(b) ... end       -- a * b
+mt.__index    = function(k) ... end       -- Lookups (a[k] or a.k)
+mt.__newindex = function(k, v) ... end    -- Setters (a[k] = v)
+```
+
+Metatables allow you to override behavior of another table.
+
+```lua
+
+mytable = {}
+setmetatable(mytable, mt)
+
+print(myobject)
+```
