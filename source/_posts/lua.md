@@ -522,9 +522,144 @@ local fruit_string = table.concat(fruit, ", ")
 print(fruit_string) -- apple, banana, cherry
 ```
 
-### Tables
+### Math
 
 ```lua
+math.abs(-5) -- => 5
+-- Returns the absolute value of x.
+```
+
+---
+
+```lua
+math.acos(1) -- => 0
+-- Returns the arc cosine of x in radians.
+```
+
+---
+
+```lua
+math.asin(0) -- => 0
+-- Returns the arc sine of x in radians.
+```
+
+---
+
+```lua
+math.atan(y, x)` -- => arctangent of y/x
+-- Returns the arctangent of `y/x` in radians, using the signs of both arguments to determine the correct quadrant.
+```
+
+---
+
+```lua
+math.ceil(x)` -- => smallest integer greater than or equal to x
+-- Returns the smallest integer value not less than `x`.
+```
+
+---
+
+```lua
+math.cos(x)` -- => cosine of x
+-- Returns the cosine of `x` (assumed to be in radians).
+```
+
+---
+
+```lua
+math.deg(x)` -- => radians to degrees
+-- Returns the angle `x` (in radians) converted to degrees.
+```
+
+---
+
+```lua
+math.exp(x)` -- => e^x
+-- Returns the value of $e^x$, where $e$ is the base of natural logarithms.
+```
+
+---
+
+```lua
+math.floor(x)` -- => largest integer less than or equal to x
+-- Returns the largest integer value not greater than `x`.
+```
+
+---
+
+```lua
+math.fmod(x, y)` -- => remainder of x divided by y
+-- Returns the remainder of `x` divided by `y`, with the same sign as `x`.
+```
+
+---
+
+```lua
+math.log(x, base)` -- => logarithm of x
+-- Returns the logarithm of `x` in the given `base`. If `base` is not provided, it defaults to the natural logarithm.
+```
+
+---
+
+```lua
+math.max(x, ...)` -- => largest argument
+-- Returns the largest among its arguments.
+```
+
+---
+
+```lua
+math.min(x, ...)` -- => smallest argument
+-- Returns the smallest among its arguments.
+```
+
+---
+
+```lua
+math.modf(x)` -- => integer and fractional parts
+-- Returns two numbers: the integer part of `x` and the fractional part.
+```
+
+---
+
+```lua
+math.pow(x, y)` -- => x^y
+-- Returns `x` raised to the power of `y`.
+```
+
+---
+
+```lua
+math.rad(x)` -- => degrees to radians
+-- Returns the angle `x` (in degrees) converted to radians.
+```
+
+---
+
+```lua
+math.random(m, n)` -- => random number
+-- Returns a pseudo-random number. When called without arguments, returns a float in the range $[0, 1)$. With one argument `n`, returns an integer in the range $[1, n]$. With two arguments `m` and `n`, returns an integer in the range $[m, n]$.
+```
+
+---
+
+```lua
+math.sin(x)` -- => sine of x
+-- Returns the sine of `x` (assumed to be in radians).
+```
+
+---
+
+```lua
+math.sqrt(x)` -- => square root of x
+-- Returns the non-negative square root of `x`.
+```
+
+---
+
+```lua
+math.tan(x)` -- => tangent of x
+-- Returns the tangent of `x` (assumed to be in radians).
 
 ```
 
