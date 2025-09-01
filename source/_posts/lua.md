@@ -47,6 +47,9 @@ The famous "Hello World" program in Lua
 local age = 18 -- local variable
 boys, girls = 2, 3 -- global variables
 
+-- Now x = 1, y = 2, z = 3, and 4 is thrown away.
+x, y, z = 1, 2, 3, 4
+
 -- Undefined variables return nil.
 -- This is not an error:
 foo = anUnknownVariable  -- Now foo = nil.
