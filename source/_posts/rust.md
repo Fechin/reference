@@ -427,7 +427,7 @@ let case1: i32 = 81;
 let case2: i32 = 82;
 
 if case1 < case2 {
-  println!("case1 is greater than case2");
+  println!("case1 is less than case2");
 }
 ```
 
