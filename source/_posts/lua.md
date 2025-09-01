@@ -47,6 +47,10 @@ The famous "Hello World" program in Lua
 local age = 18 -- local variable
 boys, girls = 2, 3 -- global variables
 
+-- Undefined variables return nil.
+-- This is not an error:
+foo = anUnknownVariable  -- Now foo = nil.
+
 -- Variables are global by default unless declared with local.
 
 ```
@@ -166,6 +170,8 @@ not true       --> false
 
 ```
 
+Only nil and false are falsy; 0 and '' are true!
+
 ## Conditionals
 
 ### if-else {.col-span-3 .row-span-2}
@@ -237,6 +243,69 @@ for i=1,10 do
    print(i)
    ::continue::
 end
+```
+
+## Functions
+
+### Creating fns {.col-span-2}
+
+```lua
+function myFunction()
+  return 1
+end
+
+function myFunctionWithArgs(a, b)
+  -- ...
+end
+
+-- function as arg
+function operate(a, b, func)
+    return func(a, b)
+end
+
+
+
+-- anonymous function
+function (parameters)
+    -- body of the function
+end
+
+
+local greet = function(name)
+    return "Hello, " .. name
+end
+
+
+-- Not exported in the module
+local function myPrivateFunction()
+end
+
+
+-- Splats
+function doAction(action, ...)
+  print("Doing '"..action.."' to", ...)
+end
+
+```
+
+### Invoking fns
+
+```lua
+myFunction()
+
+print(greet("Lua")) -- Output: Hello, Lua
+
+
+-- function as arg
+local result = operate(5, 3, function(x, y)
+    return x + y
+end)
+
+print(result) -- Output: 8
+
+
+doAction('write', "Shirley", "Abed")
+--> Doing 'write' to Shirley Abed
 ```
 
 ## Data Type APIs
