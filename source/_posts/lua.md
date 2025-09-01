@@ -228,7 +228,9 @@ until i > 5
 
 ```lua
 while x do
-  if condition then break end
+  if condition then
+    break
+  end
 end
 ```
 
