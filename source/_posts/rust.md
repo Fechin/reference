@@ -321,7 +321,7 @@ println!("{hi}");
 | `e == f` | `e` is equal to `f`              |
 | `e != f` | `e` is NOT equal to `f`          |
 | `e < f`  | `e` is less than `f`             |
-| `e > f`  | `e` is greater `f`               |
+| `e > f`  | `e` is greater than `f`          |
 | `e <= f` | `e` is less than or equal to `f` |
 | `e >= f` | `e` is greater or equal to `f`   |
 
