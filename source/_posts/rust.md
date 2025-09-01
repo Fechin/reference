@@ -270,7 +270,7 @@ println!("Share {cs} for developers");
 let my_string = String::new();
 
 // Converting to a string object
-let S_string = a_string.to_string()
+let S_string = a_string.to_string();
 
 // Creating an initialized string object
 let lang = String::from("Rust");
