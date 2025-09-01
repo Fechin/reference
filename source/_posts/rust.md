@@ -596,7 +596,7 @@ for (v, c) in (0..10 + 1).enumerate() {
         println!("Here we go continue?");
         continue;
     }
-    println! {"The value of v is : {v}"};
+    println!("The value of v is : {v}");
 }
 ```
 
