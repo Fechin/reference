@@ -335,7 +335,7 @@ type{}                  -->     type({})
 
 ## Data Type APIs
 
-### Global functions
+### Global functions {.col-span-2 .row-span-2}
 
 Assert
 
@@ -471,58 +471,9 @@ s:dump()
 s:byte()
 ```
 
-### Table basics
+### placeholder
 
-```lua
--- Array-like table (one-indexed)
-local colors = {"red", "green", "blue"}
-print(colors[1]) -- "red"
-
--- Dictionary-like table
-local user = {name = "Jane", age = 25}
-print(user.name) -- "Jane"
-print(user["age"]) -- 25
-
--- Mixed table
-local mixed = {1, "two", key = "value"}
-print(mixed[1]) -- 1
-print(mixed.key) -- "value"
-
--- Getting the length of an array-like table
-print(#colors) -- 3
-```
-
-### Tables
-
-```lua
-local my_table = {10, 20}
-
--- insert (appends 30 to the end)
-table.insert(my_table, 30)
-
--- insertion (inserts 2 in position 1)
-table.insert(my_table, 1, 2)
-
--- remove (remove item in position 3)
-table.remove(my_table, 3)
-
--- Default numerical sort
-local numbers = {5, 2, 8, 1}
-table.sort(numbers) -- {1, 2, 5, 8}
-
--- Custom sort for descending order
-local numbers_desc = {5, 2, 8, 1}
-table.sort(numbers_desc, function(a, b)
-  return a > b
-end) -- {8, 5, 2, 1}
-
--- concat
-local fruit = {"apple", "banana", "cherry"}
-local fruit_string = table.concat(fruit, ", ")
-print(fruit_string) -- apple, banana, cherry
-```
-
-### Math
+### Math {.col-span-2 .row-span-2}
 
 ```lua
 math.abs(-5) -- => 5
@@ -661,6 +612,57 @@ math.sqrt(x)` -- => square root of x
 math.tan(x)` -- => tangent of x
 -- Returns the tangent of `x` (assumed to be in radians).
 
+```
+
+### Table basics
+
+```lua
+-- Array-like table (one-indexed)
+local colors = {"red", "green", "blue"}
+print(colors[1]) -- "red"
+
+-- Dictionary-like table
+local user = {name = "Jane", age = 25}
+print(user.name) -- "Jane"
+print(user["age"]) -- 25
+
+-- Mixed table
+local mixed = {1, "two", key = "value"}
+print(mixed[1]) -- 1
+print(mixed.key) -- "value"
+
+-- Getting the length of an array-like table
+print(#colors) -- 3
+```
+
+### Tables
+
+```lua
+local my_table = {10, 20}
+
+-- insert (appends 30 to the end)
+table.insert(my_table, 30)
+
+-- insertion (inserts 2 in position 1)
+table.insert(my_table, 1, 2)
+
+-- remove (remove item in position 3)
+table.remove(my_table, 3)
+
+-- Default numerical sort
+local numbers = {5, 2, 8, 1}
+table.sort(numbers) -- {1, 2, 5, 8}
+
+-- Custom sort for descending order
+local numbers_desc = {5, 2, 8, 1}
+table.sort(numbers_desc, function(a, b)
+  return a > b
+end) -- {8, 5, 2, 1}
+
+-- concat
+local fruit = {"apple", "banana", "cherry"}
+local fruit_string = table.concat(fruit, ", ")
+print(fruit_string) -- apple, banana, cherry
 ```
 
 ## Misc
