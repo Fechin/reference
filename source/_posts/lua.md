@@ -335,60 +335,200 @@ type{}                  -->     type({})
 
 ## Data Type APIs
 
+### Global functions
+
+Assert
+
+```lua
+local my_table = {}
+assert(my_table, "my_table should exist!") -- This will not fail
+
+local a = nil
+-- This will cause a runtime error with the message "a is nil"
+assert(a, "a is nil")
+```
+
+Type
+
+```lua
+local my_var = 10
+print(type(my_var)) -- "number"
+
+local my_str = "hello"
+print(type(my_str)) -- "string"
+
+local my_func = function() end
+print(type(my_func)) -- "function"
+```
+
+Dofile & Loadfile
+
+```lua
+-- Using dofile
+dofile("my_file.lua") -- Executes my_file.lua immediately
+
+-- Using loadfile
+local my_func = loadfile("my_file.lua")
+if my_func then
+  -- my_file.lua is valid, now execute it
+  my_func()
+else
+  print("Error loading file.")
+end
+```
+
+Pairs
+
+```lua
+local my_table = {10, "hello", 20, name = "Lua"}
+
+print("Using pairs:")
+for key, value in pairs(my_table) do
+  print(key, value)
+end
+
+print("Using ipairs:")
+for key, value in ipairs(my_table) do
+  print(key, value)
+end
+```
+
+To number
+
+```lua
+local num1 = tonumber("34")
+print(num1, type(num1)) -- 34 number
+
+local num2 = tonumber("34.5")
+print(num2, type(num2)) -- 34.5 number
+
+local num3 = tonumber("abc")
+print(num3) -- nil (conversion failed)
+
+local hex_num = tonumber("8f", 16)
+print(hex_num) -- 143 (8 * 16 + 15)
+```
+
 ### Strings
 
 ```lua
 s = "Hello"
+```
 
--- concatenation
+Concatenation
+
+```lua
 s .. " there" -- => Hello there
+```
 
+Commonly used methods
+
+```lua
 s:upper() -- => HELLO
 s:lower() -- => hello
 s:len()   -- => 5
 s:find("o") -- => 5
 s:reverse() -- => olleH
+```
 
--- others
+Sub
+
+```lua
+local s = "programming"
+s:sub(3, 7) -- (extracts substring) => "ogram"
+```
+
+Gsub
+
+```lua
+s:gsub() --> (substitutes all matches)
+```
+
+Char
+
+```lua
+s = "ha"
+s:rep(3) -- // repeats 3 times -> "hahaha"
+local s_char = string.char(72, 101, 108, 108, 111)
+print(s_char) -- "Hello"
+```
+
+Format
+
+```lua
+local name = "Alice"
+local age = 30
+local formatted = string.format("My name is %s and I am %d years old.", name, age)
+print(formatted) -- "My name is Alice and I am 30 years old."
+```
+
+Others
+
+```lua
 s:match()
 s:gmatch()
-
-s:sub()
-s:gsub()
-
-s:rep()
-s:char()
 s:dump()
 s:byte()
-s:format()
+```
+
+### Table basics
+
+```lua
+-- Array-like table (one-indexed)
+local colors = {"red", "green", "blue"}
+print(colors[1]) -- "red"
+
+-- Dictionary-like table
+local user = {name = "Jane", age = 25}
+print(user.name) -- "Jane"
+print(user["age"]) -- 25
+
+-- Mixed table
+local mixed = {1, "two", key = "value"}
+print(mixed[1]) -- 1
+print(mixed.key) -- "value"
+
+-- Getting the length of an array-like table
+print(#colors) -- 3
+```
+
+### Tables
+
+```lua
+local my_table = {10, 20}
+
+-- insert (appends 30 to the end)
+table.insert(my_table, 30)
+
+-- insertion (inserts 2 in position 1)
+table.insert(my_table, 1, 2)
+
+-- remove (remove item in position 3)
+table.remove(my_table, 3)
+
+-- Default numerical sort
+local numbers = {5, 2, 8, 1}
+table.sort(numbers) -- {1, 2, 5, 8}
+
+-- Custom sort for descending order
+local numbers_desc = {5, 2, 8, 1}
+table.sort(numbers_desc, function(a, b)
+  return a > b
+end) -- {8, 5, 2, 1}
+
+-- concat
+local fruit = {"apple", "banana", "cherry"}
+local fruit_string = table.concat(fruit, ", ")
+print(fruit_string) -- apple, banana, cherry
+```
+
+### Tables
+
+```lua
 
 ```
 
 ## Misc
-
-### Meta-tables
-
-A metatable is simply a table with functions in it.
-
-```lua
-mt = {}
-
-mt.__tostring = function() return "lol" end
-mt.__add      = function(b) ... end       -- a + b
-mt.__mul      = function(b) ... end       -- a * b
-mt.__index    = function(k) ... end       -- Lookups (a[k] or a.k)
-mt.__newindex = function(k, v) ... end    -- Setters (a[k] = v)
-```
-
-Metatables allow you to override behavior of another table.
-
-```lua
-
-mytable = {}
-setmetatable(mytable, mt)
-
-print(myobject)
-```
 
 ### Classes {.col-span-2 .row-span-2}
 
@@ -458,4 +598,45 @@ end
 
 a = Account:new(9000)
 a:withdraw(200)    -- method call
+```
+
+### Meta-tables
+
+A metatable is simply a table with functions in it.
+
+```lua
+mt = {}
+
+mt.__tostring = function() return "lol" end
+mt.__add      = function(b) ... end       -- a + b
+mt.__mul      = function(b) ... end       -- a * b
+mt.__index    = function(k) ... end       -- Lookups (a[k] or a.k)
+mt.__newindex = function(k, v) ... end    -- Setters (a[k] = v)
+```
+
+Metatables allow you to override behavior of another table.
+
+```lua
+
+mytable = {}
+setmetatable(mytable, mt)
+
+print(myobject)
+```
+
+### Files
+
+```lua
+local file = io.open("test.txt", "w")
+if file then
+  file:write("Hello from Lua!")
+  io.close(file)
+end
+
+local file = io.open("test.txt", "r")
+if file then
+  local content = file:read("*a") -- read all content
+  print(content)
+  io.close(file)
+end
 ```
