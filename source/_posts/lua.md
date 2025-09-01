@@ -315,6 +315,21 @@ doAction('write', "Shirley", "Abed")
 --> Doing 'write' to Shirley Abed
 ```
 
+You can omit parentheses if the argument is one string or table literal
+
+```lua
+print "Hello World"     -->     print("Hello World")
+
+dofile 'a.lua'          -->     dofile ('a.lua')
+
+print [[a multi-line    -->     print([[a multi-line
+ message]]                        message]])
+
+f{x=10, y=20}           -->     f({x=10, y=20})
+
+type{}                  -->     type({})
+```
+
 ## Data Type APIs
 
 ### Strings
