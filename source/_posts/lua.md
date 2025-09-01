@@ -185,6 +185,11 @@ elseif num < 10 then
 else
   print("num is 10")
 end
+
+-- making a ternary operator
+-- This is similar to the a?b:c operator in C/js:
+ans = aBoolValue and 'yes' or 'no'  --> 'no'
+
 ```
 
 ## Loops
