@@ -78,6 +78,8 @@ Lua is a dynamically typed language and hence only the values will have types no
 | `thread`   | Represents independent threads of execution    |
 | `table`    | key-value pair, or array.                      |
 
+See: [Data Types](#data-types)
+
 ## Operators
 
 ### Arithmetic
@@ -149,5 +151,36 @@ true or false  --> true
 
   -- not
 not true       --> false
+
+```
+
+## Data Type APIs
+
+### Strings
+
+```lua
+s = "Hello"
+
+-- concatenation
+s .. " there" -- => Hello there
+
+s:upper() -- => HELLO
+s:lower() -- => hello
+s:len()   -- => 5
+s:find("o") -- => 5
+s:reverse() -- => olleH
+
+-- others
+s:match()
+s:gmatch()
+
+s:sub()
+s:gsub()
+
+s:rep()
+s:char()
+s:dump()
+s:byte()
+s:format()
 
 ```
