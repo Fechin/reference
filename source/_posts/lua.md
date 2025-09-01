@@ -389,3 +389,73 @@ setmetatable(mytable, mt)
 
 print(myobject)
 ```
+
+### Classes {.col-span-2 .row-span-2}
+
+Classes aren't built in; there are different ways to make them using tables and metatables.
+
+```lua
+
+```
+
+Short explanation; what we are trying to do is basically making a table that can hold data and functions
+
+```lua
+
+Dog = {}
+
+function Dog:new()
+  newObj = {sound = 'woof'}
+  self.__index = self
+  return setmetatable(newObj, self)
+end
+
+function Dog:makeSound()
+  print('I say ' .. self.sound)
+end
+
+mrDog = Dog:new()
+mrDog:makeSound()  -- 'I say woof'
+
+```
+
+Inheritance
+
+```lua
+LoudDog = Dog:new()
+
+function LoudDog:makeSound()
+  s = self.sound .. ' '
+  print(s .. s .. s)
+end
+
+seymour = LoudDog:new()
+seymour:makeSound()  -- 'woof woof woof'
+```
+
+Another example
+
+```lua
+Account = {}
+
+function Account:new(balance)
+  local t = setmetatable({}, { __index = Account })
+
+  -- Your constructor stuff
+  t.balance = (balance or 0)
+  return t
+end
+
+function Account:withdraw(amount)
+  print("Withdrawing " .. amount .. "...")
+  self.balance = self.balance - amount
+  self:report()
+end
+
+function Account:report()
+  print("Your current balance is: "..self.balance)
+end
+
+a = Account:new(9000)
+a:withdraw(200)    -- method call
+```
