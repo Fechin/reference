@@ -226,6 +226,19 @@ while x do
 end
 ```
 
+### Continue
+
+```lua
+-- prints even numbers in [|1,10|]
+for i=1,10 do
+   if i % 2 == 1 then
+    goto continue
+  end
+   print(i)
+   ::continue::
+end
+```
+
 ## Data Type APIs
 
 ### Strings
