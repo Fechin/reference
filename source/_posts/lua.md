@@ -73,7 +73,7 @@ Lua is a dynamically typed language and hence only the values will have types no
 | `thread`   | Represents independent threads of execution    |
 | `table`    | key-value pair, or array.                      |
 
-See: [Data Types](#data-types)
+See: [Data Type APIs](#data-type-apis)
 
 ### IO
 
