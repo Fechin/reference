@@ -133,3 +133,21 @@ print(a >= b) -- false
 -- less than or equals
 print(a <= b) -- true
 ```
+
+### Logical
+
+```lua
+-- and
+false and nil  --> false
+0 and 20       --> 20
+10 and 20      --> 20
+
+-- or
+true or false  --> true
+10 or 0        --> 10
+12 or 4        --> 12
+
+  -- not
+not true       --> false
+
+```
