@@ -53,18 +53,6 @@ boys, girls = 2, 3 -- global variables
 
 Lua is a dynamically typed language and hence only the values will have types not the variables.
 
-### Comments
-
-```lua
--- This is a single line comments
-```
-
-```lua
---[[
- Comments (multi-line) could also be written like this
---]]
-```
-
 ### Data Types {.col-span-2 .row-span-2}
 
 | Value Type | Description                                    |
@@ -79,6 +67,30 @@ Lua is a dynamically typed language and hence only the values will have types no
 | `table`    | key-value pair, or array.                      |
 
 See: [Data Types](#data-types)
+
+### IO
+
+```lua
+-- Writes data to the standard output or a file.
+io.write("Enter your name: ")
+-- Reads input from the user or a file. You can specify formats like "*l" (line), "*n" (number), or "*a" (all).
+name = io.read()
+
+io.write("Enter your age: ")
+age = io.read()
+```
+
+### Comments
+
+```lua
+-- This is a single line comments
+```
+
+```lua
+--[[
+ Comments (multi-line) could also be written like this
+--]]
+```
 
 ## Operators
 
