@@ -152,9 +152,11 @@ if (isMailSent) {
 ### Ternary Operator
 
 ```javascript
+// The ternary operator is a concise way to write an if-else statement in a single line: condition ? exprIfTrue : exprIfFalse.
+
 var x = 1;
 
-// => true
+// true, (condition) ? value_if_true : value_if_false
 result = x == 1 ? true : false;
 ```
 
