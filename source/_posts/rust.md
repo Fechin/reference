@@ -54,7 +54,7 @@ println!("{} {}", 1, 3);
 
 // Positional Arguments
 println!(
-    "{0} is {1} {2}, also {0} is a {3} programming language",
+    "{0} is a {1} {2}, also {0} is a {3} programming language",
     "Rust", "cool", "language", "safe"
 );
 
@@ -270,7 +270,7 @@ println!("Share {cs} for developers");
 let my_string = String::new();
 
 // Converting to a string object
-let S_string = a_string.to_string()
+let S_string = a_string.to_string();
 
 // Creating an initialized string object
 let lang = String::from("Rust");
@@ -321,7 +321,7 @@ println!("{hi}");
 | `e == f` | `e` is equal to `f`              |
 | `e != f` | `e` is NOT equal to `f`          |
 | `e < f`  | `e` is less than `f`             |
-| `e > f`  | `e` is greater `f`               |
+| `e > f`  | `e` is greater than `f`          |
 | `e <= f` | `e` is less than or equal to `f` |
 | `e >= f` | `e` is greater or equal to `f`   |
 
@@ -412,9 +412,9 @@ let mut l = k;
 
 | Operator             | Description                             |
 | -------------------- | --------------------------------------- |
-| `k += l`             | Add a value and assign, then k=9        |
-| `k -= l`             | Substrate a value and assign, then k=18 |
-| `k /= l`             | Divide a value and assign, then k=9     |
+| `k += l`             | Add a value and assign, then k=18       |
+| `k -= l`             | Subtract a value and assign, then k=0   |
+| `k /= l`             | Divide a value and assign, then k=1     |
 | `k *= l`             | Multiply a value and assign, then k=81  |
 | <code>k \|= l</code> | Bitwise OR and assign, then k=89        |
 
@@ -427,7 +427,7 @@ let case1: i32 = 81;
 let case2: i32 = 82;
 
 if case1 < case2 {
-  println!("case1 is greater than case2");
+  println!("case1 is less than case2");
 }
 ```
 
@@ -596,7 +596,7 @@ for (v, c) in (0..10 + 1).enumerate() {
         println!("Here we go continue?");
         continue;
     }
-    println! {"The value of v is : {v}"};
+    println!("The value of v is : {v}");
 }
 ```
 
