@@ -203,7 +203,7 @@ let numberOfToys: Int = 8
 let isMorning: Bool = true
 ```
 
-Constants are immutable. Their values be changed:
+Constants are immutable. Their values can not be changed:
 
 ```swift
 let numberOfToys: Int = 8
