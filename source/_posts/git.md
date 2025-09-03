@@ -385,6 +385,84 @@ Print out a cool visualization of your log
 $ git log --pretty=oneline --graph --decorate --all
 ```
 
+List files changed in a commit 
+
+```shell script
+$ git log --name-only <commit-id>
+```
+
+List files changed in commits excluding merges
+
+```shell script
+$ git log --no-merges --name-only
+```
+
+Limit commits to the last N entries 
+
+```shell script
+$ git log -<number>
+```
+
+Limit commits to the last N entries (alternate syntax) 
+
+```shell script
+$ git log -n <number>
+```
+
+Limit commits to a maximum of N entries 
+
+```shell script
+$ git log --max-count=<number>
+```
+
+Show commits more recent than a specific date 
+
+```shell script
+$ git log --after="YYYY-MM-DD HH:MM:SS ±HHMM"
+```
+
+Show commits older than a specific date 
+
+```shell script
+$ git log --before="YYYY-MM-DD HH:MM:SS ±HHMM"
+```
+
+Filter commits by author matching a pattern 
+
+```shell script
+$ git log --author=<pattern>
+```
+
+Filter commits by commit message matching a pattern 
+
+```shell script
+$ git log --grep=<pattern>
+```
+
+Show commit graph of the current branch with reference decorations
+
+```shell script
+$ git log --graph --decorate
+```
+
+Show commit graph of a specific branch without switching to it
+
+```shell script
+$ git log --graph --decorate <branch>
+```
+
+Show commit graph for commits in one branch not in another
+
+```shell script
+$ git log --graph --decorate <branchB>..<branchA>
+```
+
+Show commit graph of all branches
+
+```shell script
+$ git log --graph --decorate --all
+```
+
 ### Branch {.row-span-2}
 
 List all branches and their upstreams
