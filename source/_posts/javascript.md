@@ -742,12 +742,31 @@ for (let i = 0; i < 2; i += 1) {
 ```javascript
 const fruits = ['apple', 'orange', 'banana'];
 
+// 1. Print only indexes
 for (let index in fruits) {
   console.log(index);
 }
 // => 0
 // => 1
 // => 2
+
+
+// 2. Print only values
+for (let index in fruits) {
+  console.log(fruits[index]);
+}
+// => apple
+// => orange
+// => banana
+
+
+// 3. Print index with value
+for (let index in fruits) {
+  console.log(index, fruits[index]);
+}
+// => 0 apple
+// => 1 orange
+// => 2 banana
 ```
 
 ### for...of loop
