@@ -761,6 +761,13 @@ for (let fruit of fruits) {
 // => apple
 // => orange
 // => banana
+
+for (let [index, value] of fruits.entries()) {
+  console.log(index, value);
+}
+// => 0 apple
+// => 1 orange
+// => 2 banana
 ```
 
 ## JavaScript Iterators {.cols-2}
