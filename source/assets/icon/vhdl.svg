@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em">
+  <g>
+    <!-- Main chip body -->
+    <rect x="256" y="256" width="512" height="512" rx="32" fill="currentColor" stroke="currentColor" stroke-width="16"/>
+    
+    <!-- Inner circuit pattern -->
+    <rect x="320" y="320" width="384" height="384" rx="16" fill="none" stroke="currentColor" stroke-width="8"/>
+    <rect x="384" y="384" width="256" height="256" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
+    
+    <!-- Circuit lines -->
+    <line x1="448" y1="448" x2="576" y2="448" stroke="currentColor" stroke-width="6"/>
+    <line x1="448" y1="512" x2="576" y2="512" stroke="currentColor" stroke-width="6"/>
+    <line x1="448" y1="576" x2="576" y2="576" stroke="currentColor" stroke-width="6"/>
+    <line x1="512" y1="448" x2="512" y2="576" stroke="currentColor" stroke-width="6"/>
+    
+    <!-- Left pins -->
+    <rect x="128" y="320" width="128" height="24" fill="currentColor"/>
+    <rect x="128" y="384" width="128" height="24" fill="currentColor"/>
+    <rect x="128" y="448" width="128" height="24" fill="currentColor"/>
+    <rect x="128" y="512" width="128" height="24" fill="currentColor"/>
+    <rect x="128" y="576" width="128" height="24" fill="currentColor"/>
+    <rect x="128" y="640" width="128" height="24" fill="currentColor"/>
+    <rect x="128" y="704" width="128" height="24" fill="currentColor"/>
+    
+    <!-- Right pins -->
+    <rect x="768" y="320" width="128" height="24" fill="currentColor"/>
+    <rect x="768" y="384" width="128" height="24" fill="currentColor"/>
+    <rect x="768" y="448" width="128" height="24" fill="currentColor"/>
+    <rect x="768" y="512" width="128" height="24" fill="currentColor"/>
+    <rect x="768" y="576" width="128" height="24" fill="currentColor"/>
+    <rect x="768" y="640" width="128" height="24" fill="currentColor"/>
+    <rect x="768" y="704" width="128" height="24" fill="currentColor"/>
+    
+    <!-- Top pins -->
+    <rect x="320" y="128" width="24" height="128" fill="currentColor"/>
+    <rect x="384" y="128" width="24" height="128" fill="currentColor"/>
+    <rect x="448" y="128" width="24" height="128" fill="currentColor"/>
+    <rect x="512" y="128" width="24" height="128" fill="currentColor"/>
+    <rect x="576" y="128" width="24" height="128" fill="currentColor"/>
+    <rect x="640" y="128" width="24" height="128" fill="currentColor"/>
+    <rect x="704" y="128" width="24" height="128" fill="currentColor"/>
+    
+    <!-- Bottom pins -->
+    <rect x="320" y="768" width="24" height="128" fill="currentColor"/>
+    <rect x="384" y="768" width="24" height="128" fill="currentColor"/>
+    <rect x="448" y="768" width="24" height="128" fill="currentColor"/>
+    <rect x="512" y="768" width="24" height="128" fill="currentColor"/>
+    <rect x="576" y="768" width="24" height="128" fill="currentColor"/>
+    <rect x="640" y="768" width="24" height="128" fill="currentColor"/>
+    <rect x="704" y="768" width="24" height="128" fill="currentColor"/>
+    
+    <!-- Center identifier dot -->
+    <circle cx="512" cy="512" r="24" fill="currentColor"/>
+  </g>
+</svg>
