@@ -58,5 +58,11 @@
     "title": "PostgreSQL",
     "path": "postgres.html",
     "background": "bg-[#3d6488]"
+  },
+  {
+    "icon": "icon-vhdl",
+    "title": "VHDL",
+    "path": "vhdl.html",
+    "background": "bg-[#5c4a7a]"
   }
 ]
