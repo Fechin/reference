@@ -123,6 +123,10 @@
   @apply fadeIn no-underline;
 }
 
+.mdLayout .h3-wrap > .section > ul.icon-list > li a {
+  @apply dark:text-slate-200 dark:hover:bg-slate-700;
+}
+
 .mdLayout .h3-wrap > .section > ul.icon-list > li a img {
   @apply mr-4 h-6;
 }
