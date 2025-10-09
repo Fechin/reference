@@ -44,7 +44,7 @@ plugins:
 
 - feat: add jwt support
 - feat!: breaking change in API
-- feat!(ui): redesign user profile page
+- feat(ui)!: redesign user profile page
 - fix: fix SQL injection vulnerability
 - fix(database): resolve data race condition
 - docs: update setup section of README
