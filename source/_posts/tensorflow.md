@@ -7,7 +7,8 @@ tags:
   - Python
 categories:
   - Other
-intro: This is a quick reference list of cheat sheets for Tensorflow. See also [PyTorch website](https://pytorch.org/)
+intro: This is a quick reference list of cheat sheets for Tensorflow. See also [Tensorflow website](https://tensorflow.org/). This docs will
+also include the usage of keras for the high-level models
 ---
 
 ## Imports { .cols-1 }
@@ -15,8 +16,9 @@ intro: This is a quick reference list of cheat sheets for Tensorflow. See also [
 ### General
 
 ```
-import torch                                        # root package
-from torch.utils.data import Dataset, DataLoader    # dataset representation and loading
+import tensorflow as tf                             # root package
+import tensorflow_datasets as tfds                  # dataset representation and loading
+tfds.load("mnist")                                  # data here could be 
 ```
 
 ### Neural Network API
