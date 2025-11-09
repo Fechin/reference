@@ -127,7 +127,7 @@ tf.keras.losses.X                   # where X is BinaryCrossentropy, BinaryFocal
 ### Activation Functions
 
 ```
-nn.X                                  # where X is ReLU, ReLU6, ELU, SELU, PReLU, LeakyReLU,
+tf.keras.activations.X                # where X is ReLU, ReLU6, ELU, SELU, PReLU, LeakyReLU,
                                       # RReLu, CELU, GELU, Threshold, Hardshrink, HardTanh,
                                       # Sigmoid, LogSigmoid, Softplus, SoftShrink,
                                       # Softsign, Tanh, TanhShrink, Softmin, Softmax,
