@@ -13,54 +13,54 @@ plugins:
 
 ## Getting Started
 
-### Helloworld.nim
+### helloworld.nim
 
 ```nim
 echo "Hello World!"
-#---------------------------#
+
 # This is a comment
 echo "What's your name? "
-var name: string = readLine(stdin)
+var name: string = readLine(stdin) 
+# readLine(stdin) asks you to type in a string.
+
 echo "Hi, ", name, "!"
 ```
 
-#### Compiling and Running
+Compile `helloworld.nim` with `nim compile`
 
-```shell
-$ nim c helloworld.nim
-# if os is windows then
-$ helloworld.exe
-# if os is linux then
-$ ./Hello_World
-# output
+```bash
+$ nim compile helloworld.nim
+```
+Run the compiled binary `helloworld` (or `helloworld.exe` if you're on Windows)
+ 
+```
+./helloworld
 Hello, World!
-
-# There is also a possibility
-# to both compile and run the
-# program with just one command.
-# We need to type:
-$ nim c -r helloworld.nim
-
+What's your name?
+Hi, <name>!
 ```
 
-### comment
+There is also a possibility
+to both compile and run the
+program with just one command.
+We need to type:
+`$ nim c -r helloworld.nim`
+
+### Comments
 
 ```nim
 # This is a comment
-
 
 #[
   This is a multiline comment.
   In Nim, multiline comments can be nested, beginning with #[
   ... and ending with ]#
 ]#
-
 ```
 
-### Variable declaration
+### Variable Declaration
 
 ```nim
-
 var
   letter: char = 'n'
   lang = "N" & "im"
@@ -72,19 +72,19 @@ var
   d = "Hello"
   e = '!'
 ```
-
-### Let
-
-```nim
-# Use let to declare and bind variables
-let
-  legs = 400
- #legs is immutable.
-  arms = 2_000
-  # are ignored and are useful for long numbers.
-  aboutPi = 3.15
-  let input = readLine(stdin)  # works
-```
+  
+  ### Let
+  
+  ```nim
+  # Use let to declare and bind variables
+  let
+    legs = 400
+    # the variable legs is immutable.
+    arms = 2_000
+    # are ignored and are useful for long numbers.
+    aboutPi = 3.15
+    let input = readLine(stdin)  # works
+  ```
 
 ### Const
 
@@ -96,12 +96,7 @@ const
   compileBadCode = false
 ```
 
-Basic data types
-
----
-
-### Integers
-
+### Basic data types: Integers
 ```nim
 let
   a = 11
@@ -113,16 +108,22 @@ echo "a * b = ", a * b
 echo "a / b = ", a / b
 echo "a div b = ", a div b
 echo "a mod b = ", a mod b
-#output
-#a + b = 15
-#a - b = 7
-#a * b = 44
-#a / b = 2.75
-#a div b = 2
-#a mod b = 3
 ```
+#### Output:
 
-### Floats
+`a + b = 1`
+
+`a - b = 7`
+
+`a * b = 44`
+
+`a / b = 2.75`
+
+`a div b = 2`
+
+`a mod b = 3`
+
+### Basic data types: Floats
 
 ```nim
 let
@@ -140,8 +141,7 @@ echo "c / d = ", c / d
 #c / d = 3.0
 ```
 
-### Strings
-
+### Basic data types: Strings
 ```nim
 #Strings can be described
 #as a series of characters.
@@ -154,8 +154,7 @@ let
   q = "!"
 ```
 
-### Characters
-
+### Basic data types: Characters
 ```nim
 #Characters are single
 #characters. They are
@@ -185,8 +184,7 @@ echo r"some\nim\tips"
 #some\nim\tips
 ```
 
-### Boolean
-
+### Basic data types: Booleans
 ```nim
 #A boolean (or just bool)
 # data type can only have
