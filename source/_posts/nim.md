@@ -13,14 +13,14 @@ plugins:
 
 ## Getting Started
 
-### helloworld.nim
+### helloworld.nim {.row-span-3}
 
 ```nim
 echo "Hello World!"
 
 # This is a comment
 echo "What's your name? "
-var name: string = readLine(stdin) 
+var name: string = readLine(stdin)
 # readLine(stdin) asks you to type in a string.
 
 echo "Hi, ", name, "!"
@@ -31,8 +31,9 @@ Compile `helloworld.nim` with `nim compile`
 ```bash
 $ nim compile helloworld.nim
 ```
+
 Run the compiled binary `helloworld` (or `helloworld.exe` if you're on Windows)
- 
+
 ```
 ./helloworld
 Hello, World!
@@ -46,6 +47,77 @@ program with just one command.
 We need to type:
 `$ nim c -r helloworld.nim`
 
+### Useful Resources {.col-span-2}
+
+- [Nim](https://www.nim-lang.org/) _(nim-lang.org)_
+- [The Nim Manual](https://nim-lang.org/docs/manual.html) _(../docs/manual.html)_
+- [Nim Basics](https://narimiran.github.io/nim-basics/) _(narimiran.github.io)_
+- [Learn X in Y minutes](https://learnxinyminutes.com/docs/nim/) _(learnxinyminutes.com)_
+
+### Variables {.row-span-2}
+
+```nim
+# 'var' declares mutable variables.
+
+var number: int = 100 # Single line declaration
+
+# A 'var' block can declarate multiple variables at once.
+
+var
+  letter: char = 'n'
+  lang = "N" & "im"
+  length = len(lang)
+  counter: int = 7
+  boat: float
+  truth = true
+```
+
+### Inmutable Variables (let)
+
+```nim
+# 'let' declares inmutable variables.
+let
+  salute: string = "Hello!"
+  x: int = 10
+  y = x + 5
+
+let z = 20
+z = 500   # Error: 'y' is immutable
+```
+
+### Constants {.row-span-1}
+
+```nim
+const
+  debug = true
+  compileBadCode = false
+
+# Constants are declared at compile time and cannot be changed.
+```
+
+### Procedures / Functions
+
+```nim
+proc myFunction() =
+  echo "Hello, this is my function"
+
+myFunction()
+```
+
+See: [Procedures](#procedures)
+
+### "For" Loops
+
+```nim
+for item in (1 ..< 6):
+  if item == 3: break
+  echo item
+
+echo "All done!"
+```
+
+See: [Loops](#loops)
+
 ### Comments
 
 ```nim
@@ -58,161 +130,53 @@ We need to type:
 ]#
 ```
 
-### Variable Declaration
+## Data Types
 
-```nim
-var
-  letter: char = 'n'
-  lang = "N" & "im"
-  nLength: int = len(lang)
-  boat: float
-  truth: bool = false
-  b = 7
-  c = -11
-  d = "Hello"
-  e = '!'
-```
-  
-  ### Let
-  
-  ```nim
-  # Use let to declare and bind variables
-  let
-    legs = 400
-    # the variable legs is immutable.
-    arms = 2_000
-    # are ignored and are useful for long numbers.
-    aboutPi = 3.15
-    let input = readLine(stdin)  # works
-  ```
+### Integers
 
-### Const
-
-```nim
-# Constants are computed at compile
-const
-  debug = true
-   # performance and is useful in compile time expressions.
-  compileBadCode = false
-```
-
-### Basic data types: Integers
 ```nim
 let
   a = 11
   b = 4
 
-echo "a + b = ", a + b
-echo "a - b = ", a - b
-echo "a * b = ", a * b
-echo "a / b = ", a / b
-echo "a div b = ", a div b
-echo "a mod b = ", a mod b
+echo "a + b = ", a + b # 15
+echo "a - b = ", a - b # 7
+echo "a * b = ", a * b # 44
+echo "a / b = ", a / b # 2.75
+echo "a div b = ", a div b # 2
+echo "a mod b = ", a mod b # 3
 ```
-#### Output:
 
-`a + b = 1`
-
-`a - b = 7`
-
-`a * b = 44`
-
-`a / b = 2.75`
-
-`a div b = 2`
-
-`a mod b = 3`
-
-### Basic data types: Floats
+### Floats
 
 ```nim
 let
   c = 6.75
   d = 2.25
 
-echo "c + d = ", c + d
-echo "c - d = ", c - d
-echo "c * d = ", c * d
-echo "c / d = ", c / d
-#output
-#c + d = 9.0
-#c - d = 4.5
-#c * d = 15.1875
-#c / d = 3.0
+echo "c + d = ", c + d # 9.0
+echo "c - d = ", c - d # 4.5
+echo "c * d = ", c * d # 15.1875
+echo "c / d = ", c / d # 3.0
 ```
 
-### Basic data types: Strings
+### Strings {.row-span-3}
+
 ```nim
-#Strings can be described
-#as a series of characters.
-#Their content is written between two double quotes (").
 let
   m = "word"
   n = "A sentence with interpunction."
   o = ""
   p = "32"
   q = "!"
+
+echo m
+# prints "word"
+echo p, " is a string."
+# prints "32 is a string."
 ```
 
-### Basic data types: Characters
-```nim
-#Characters are single
-#characters. They are
-#written between two single quotes (').
-let
-  h = 'z'
-  i = '+'
-  j = '2'
-  k = '35' # error
-  l = 'xy' # error
-```
-
-### Special characters
-
-```nim
-#\n is a newline character
-#\t is a tab character
-#\\ is a backslash (since one \ is used as the escape character)
-
-echo "some\nim\tips"
-echo "some\\nim\\tips"
-echo r"some\nim\tips"
-#output
-#some
-#im	ips
-#some\nim\tips
-#some\nim\tips
-```
-
-### Basic data types: Booleans
-```nim
-#A boolean (or just bool)
-# data type can only have
-#two values: true or false.
-let isEmpty = true
-let isFull = false
-```
-
-### Converting floats and integers
-
-```nim
-let
-  e = 5
-  f = 23.987
-echo e + f   # error
-echo float(e)
-echo int(f)
-
-echo float(e) + f
-echo e + int(f)
-#output
-#5.0
-#23
-#28.987
-#28
-```
-
-### String concatenation
+#### String Concatenation
 
 ```nim
 var
@@ -220,108 +184,361 @@ var
   q = "xy"
   r = 'z'
 
-p.add("def")
-echo "p is now: ", p
+p.add("def")   # modifies p
+q.add(r)       # chars can be added to strings
 
-q.add(r)
-echo "q is now: ", q
+echo p         # "abcdef"
+echo q         # "xyz"
 
-echo "concat: ", p & q
-
-echo "p is still: ", p
-echo "q is still: ", q
-#output
-#p is now: abcdef
-#q is now: xyz
-#concat: abcdefxyz
-#p is still: abcdef
-#q is still: xyz
+# `&` creates a new string:
+echo p & q     # "abcdefxyz"
 ```
 
-## Opatators
+#### Special Escape Sequences
 
-### Relational operators
+```nim
+echo "line1\nline2"     # newline
+echo "col1\tcol2"       # tab
+echo "A\\B\\C"          # backslash
+
+# Raw strings ignore escapes:
+echo r"line1\nline2"
+```
+
+### Characters
 
 ```nim
 let
-  g = 31
-  h = 99
-
-echo "g is greater than h: ", g > h
-echo "g is smaller than h: ", g < h
-echo "g is equal to h: ", g == h
-echo "g is not equal to h: ", g != h
-echo "g is greater or equal to h: ", g >= h
-echo "g is smaller or equal to h: ", g <= h
-#output
-g is greater than h: false
-g is smaller than h: true
-g is equal to h: false
-g is not equal to h: true
-g is greater or equal to h: false
-g is smaller or equal to h: true
-
-#example
-let
-  i = 'a'
-  j = 'd'
-  k = 'Z'
-
-echo i < j
-echo i < k
-
-let
-  m = "axyb"
-  n = "axyz"
-  o = "ba"
-  p = "ba "
-
-echo m < n
-echo n < o
-echo o < p
-#output
-#false
-#true
-#true
-#true
-#true
+  h = 'z'
+  i = '+'
+  j = '2'
+  k = '35'   # error: too many characters
+  l = 'xy'   # error: too many characters
 ```
 
-### Logical operators
+### Booleans
 
 ```nim
-echo "T and T: ", true and true
-echo "T and F: ", true and false
-echo "F and F: ", false and false
-echo "---"
-echo "T or T: ", true or true
-echo "T or F: ", true or false
-echo "F or F: ", false or false
-echo "---"
-echo "T xor T: ", true xor true
-echo "T xor F: ", true xor false
-echo "F xor F: ", false xor false
-echo "---"
-echo "not T: ", not true
-echo "not F: ", not false
-#output
-#T and T: true
-#T and F: false
-#F and F: false
----
-#T or T: true
-#T or F: true
-#F or F: false
----
-#T xor T: false
-#T xor F: true
-#F xor F: false
----
-#not T: false
-#not F: true
+let x = true
+let y = false
+
+# Boolean literals are lowercase.
 ```
 
-## Control flow
+### Type Conversion {.col-span-2}
+
+```nim
+
+let e = 5
+let f = 23.987
+
+# Converting between ints and floats:
+echo float(e)    # 5.0
+echo int(f)      # 23
+
+# Mixed operations require explicit conversion:
+echo float(e) + f    # 28.987
+echo e + int(f)      # 28
+```
+
+## Compound Types
+
+### Arrays
+
+```nim
+type IntArray = array[0..3, int]
+
+let a: IntArray = [10, 20, 30, 40]
+
+echo a[0]      # 10
+echo a.len     # 4
+```
+
+### Sequences
+
+```nim
+var s: seq[int] = @[1, 2, 3]
+s.add(4)
+
+echo s         # @[1, 2, 3, 4]
+echo s.len     # 4
+```
+
+### Tuples
+
+```nim
+var person = (name: "Sophie", age: 18)
+
+echo person.name # Sophie
+echo person.age  # 18
+
+# swapping values:
+var (x, y) = (1, 2)
+(x, y) = (y, x)
+echo x, " ", y     # 2 1
+```
+
+### Sets
+
+```nim
+type CharSet = set[char]
+
+let letters: CharSet = {'a'..'z'}
+
+echo 'a' in letters    # true
+echo 'Z' in letters    # false
+```
+
+### Objects
+
+```nim
+type Person = object
+  name: string
+  age: int
+
+let p = Person(name: "Ana", age: 20)
+echo p.name
+```
+
+### Reference Objects
+
+```nim
+type Node = ref object
+  value: int
+  next: Node     # linked list style
+
+var n = Node(value: 10)
+echo n.value
+```
+
+Needed for Object Oriented Programming within Nim.
+
+## Operators
+
+### Arithmetic Operators {.row-span-3}
+
+```nim
+var
+  a = 10
+  b = 3
+
+echo a + b      # 13
+echo a - b      # 7
+echo a * b      # 30
+echo a / b      # 3.333333
+echo a div b    # 3
+echo a mod b    # 1
+echo a ^ b      # 1000
+```
+
+---
+
+| Operator | Name           | Example   |
+| -------- | -------------- | --------- |
+| `+`      | Add            | `x + y`   |
+| `-`      | Subtract       | `x - y`   |
+| `*`      | Multiply       | `x * y`   |
+| `/`      | Float Divide   | `x / y`   |
+| `div`    | Integer Divide | `x div y` |
+| `mod`    | Modulo         | `x mod y` |
+| `^`      | Power          | `x ^ y`   |
+
+#### Update operations
+
+Nim does _not_ support C-style `+=`, `-=`, `*=`, etc. Use these instead:
+
+```nim
+var x = 5
+x = x + 3         # valid
+inc(x)            # equivalent to x += 1
+dec(x)            # equivalent to x -= 1
+```
+
+### Assignment
+
+```nim
+var value = 1990
+echo value # 1990
+
+value = 2
+echo value # 2
+```
+
+---
+
+| Operator | Description  | Example |
+| -------- | ------------ | ------- |
+| `=`      | Assign value | `x = y` |
+
+### Comparison Operators {.row-span-3}
+
+```nim
+let
+  x = 5
+  y = 3
+
+echo x > y
+# prints "true" because 5 is greater than 3
+```
+
+---
+
+| Symbol | Name                     | Example  |
+| ------ | ------------------------ | -------- |
+| `==`   | equals                   | x `==` y |
+| `!=`   | not equal to             | x `!=` y |
+| `>`    | greater than             | x `>` y  |
+| `<`    | less than                | x `<` y  |
+| `>=`   | greater than or equal to | x `>=` y |
+| `<=`   | less than or equal to    | x `<=` y |
+
+Comparison operators are used to compare two values.
+
+#### Lexicographical Comparison
+
+They also work on `char` and `string` values via lexicographic order.
+
+```nim
+echo "apple" < "banana"  # true
+echo "axyz" < "axyb"     # true
+echo "ooooo" > "o"       # true
+echo "abc" < "ab"        # false
+
+echo 'a' < 'd'           # true
+echo 'a' < 'Z'           # false
+```
+
+### Logical Operators {.row-span-2}
+
+| Operator | Name        | Example |
+| -------- | ----------- | ------- |
+| `and`    | Logical AND | a and b |
+| `or`     | Logical OR  | a or b  |
+| `not`    | Logical NOT | not a   |
+| `xor`    | Logical XOR | a xor b |
+
+Logical operators work on `bool`.
+
+#### Extra Bitwise Operators
+
+These use the **same keywords**, but operate on **integers**, not booleans.
+
+| Operator | Name        | Example |
+| -------- | ----------- | ------- |
+| `and`    | Bitwise AND | x and y |
+| `or`     | Bitwise OR  | x or y  |
+| `xor`    | Bitwise XOR | x xor y |
+| `not`    | Invert      | not x   |
+| `shl`    | Shift Left  | x shl 2 |
+| `shr`    | Shift Right | x shr 2 |
+
+## Flow Control
+
+### Basic If-ElseIf-Else
+
+```nim
+let num = 5
+
+if num > 10:
+  echo "num is bigger than 10"
+elif num < 10:
+  echo "num is smaller than 10"
+else:
+  echo "num is exactly 10"
+```
+
+### One Liners
+
+```nim
+let
+  a = 330
+  b = 200
+
+var r = ""
+
+r = if a > b: "a" else: "b"
+
+echo r
+
+```
+
+### Match Case {.row-span-3}
+
+```nim
+let x = 5
+case x:
+of 0, 1:
+  echo "small"
+of 2, 3, 4:
+  echo "medium"
+else:
+  echo "large"
+```
+
+---
+
+`case of` can look for ranges too.
+
+```nim
+let age = 17
+
+case age:
+of 0..12:
+  echo "child"
+of 13..19:
+  echo "teen"
+else:
+  echo "adult"
+```
+
+---
+
+...and `strings` and `chars`, too
+
+```nim
+let cmd = "quit"
+
+case cmd:
+of "help":
+  echo "show help"
+of "quit", "exit":
+  echo "bye!"
+else:
+  echo "unknown command"
+```
+
+---
+
+```nim
+let ch = 'g'
+case ch:
+of {'a', 'e', 'i', 'o', 'u'}:
+  echo "vowel"
+else:
+  echo "consonant or symbol"
+```
+
+## Loops
+
+### Basic For Loops
+
+```nim
+for i in 1..5:
+  echo i
+# 1 2 3 4 5
+
+for i in 0..<3:
+  echo i
+# 0 1 2
+```
+
+**Keep in mind**: \
+1..5 = Inclusive (1 2 3 4 5) \
+1..<5 = Exclusive (1 2 3 4)
+
+### WORK IN PROGRESS
+
+## Fake Flow Control[IN A MINUTE] [EVERYTHING DOWN FROM HERE HAS NOT BEEN TOUCHED BY MY PAW]
 
 ### If statement
 
@@ -1307,7 +1524,3 @@ myAssert(a != b)
 myAssert(a == b)
 
 ```
-
-## Also see
-
-- [Nim Cheat sheet](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_
