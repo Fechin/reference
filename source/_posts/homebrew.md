@@ -39,7 +39,6 @@ Install Homebrew :
 | `brew upgrade git`         | Upgrade package                        |
 | `brew unlink git`          | Unlink                                 |
 | `brew link git`            | Link                                   |
-| `brew switch git  1.0.0`   | Switch package version                 |
 | `brew list --versions git` | List the installed versions of package |
 
 ### Help
