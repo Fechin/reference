@@ -47,6 +47,14 @@ program with just one command.
 We need to type:
 `$ nim c -r helloworld.nim`
 
+#### Common compile commands (terminal)
+
+```sh
+nim c -r main.nim          # debug build, run after compile
+nim c -d:release main.nim  # optimized release build
+nim c --mm:arc main.nim    # ARC memory management (Nim 2 default)
+```
+
 ### Useful Resources {.col-span-2}
 
 - [Nim](https://www.nim-lang.org/) _(nim-lang.org)_
@@ -348,7 +356,7 @@ echo n.value
 
 Needed for Object Oriented Programming within Nim.
 
-### Slicing Sequences and Strings {.col-span-3}
+### Slicing Sequences and Strings {.col-span-2}
 
 ```nim
 let xs = @[10, 20, 30, 40]
@@ -365,6 +373,22 @@ let s = "abcdef"
 echo s[0..2]     # "abc"
 echo s[3..^1]    # "def" (^1 = last char)
 echo s[1..<4]    # "bcd"
+```
+
+### Tables/Dictionaries
+
+```nim
+import std/tables
+
+var ages = initTable[string, int]()
+ages["Ana"] = 20
+ages["Sophie"] = 18
+
+echo ages["Ana"]                 # 20
+echo ages.getOrDefault("X", -1)  # -1
+
+for name, age in ages:
+  echo name, ": ", age
 ```
 
 ## Operators
@@ -476,7 +500,7 @@ echo 'a' < 'Z'           # false
 
 | Operator | Example                | Meaning                  |
 | -------- | ---------------------- | ------------------------ |
-| `and`    | `if a > 0 and a < 10:` | Between 1 and 9          |
+| `and`    | `if a > 0 and a < 10:` | From 1 to 9              |
 | `or`     | `if x == 0 or y == 0:` | Either one of them is 0  |
 | `not`    | `if not isValid:`      | If `isValid` is not true |
 | `xor`    | `if flagA xor flagB:`  | Only one of them is true |
@@ -578,8 +602,7 @@ let
   a = 330
   b = 200
 
-var r: int =
-r = if a > b: a else: b
+let r = if a > b: a else: b
 
 echo r # 330
 ```
@@ -779,6 +802,87 @@ proc doSomething(): int {.discardable.} =
 doSomething()      # allowed now
 ```
 
+## Object-Oriented Programming
+
+### Ref Objects and Inheritance {.row-span-2}
+
+```nim
+type
+  Animal = ref object of RootObj
+    name: string
+
+  Dog = ref object of Animal
+    breed: string
+
+method speak(a: Animal) {.base.} =
+  echo a.name, " makes a sound."
+
+method speak(d: Dog) =
+  echo d.name, " barks!"
+
+var
+  a: Animal = Animal(name: "Creature")
+  d: Animal = Dog(name: "Fido", breed: "Mutt")  # Dog upcasted to Animal
+
+speak(a)  # Creature makes a sound.
+speak(d)  # Fido barks!
+```
+
+Use `ref object of RootObj` + `method` when you need runtime polymorphism.
+
+### Procs as Methods
+
+```nim
+type
+  Counter = ref object
+    value: int
+
+proc inc(c: var Counter) =
+  inc c.value
+
+var c = Counter(value: 0)
+inc(c)
+echo c.value  # 1
+```
+
+### Constructor Procs
+
+```nim
+type
+  Dog = ref object
+    name: string
+    age: int
+
+proc newDog(name: string; age: int): Dog =
+  Dog(name: name, age: age)
+
+let d = newDog("Fido", 3)
+echo d.name, " is ", d.age, " years old"
+```
+
+### Type tests and Downcasting {.col-span-2}
+
+```nim
+type
+  Animal = ref object of RootObj
+    name: string
+
+  Dog = ref object of Animal
+    breed: string
+
+proc newDog(name, breed: string): Dog =
+  Dog(name: name, breed: breed)
+
+var a: Animal = newDog("Fido", "mutt")
+
+if a of Dog:                       # runtime type check
+  let d = Dog(a)                   # downcast
+  echo d.name, " is a ", d.breed
+
+```
+
+`x of Type` checks the dynamic type; `Type(x)` downcasts (unsafe if you lie).
+
 ## Imports and Modules
 
 ### Basic Imports
@@ -870,6 +974,21 @@ import utils
 echo "hi".toUpperAscii()
 ```
 
+### Prelude Module {.col-span-3}
+
+```nim
+import std/prelude
+include std/prelude
+  # same as:
+  # import std/[os, strutils, times, parseutils, hashes, tables, sets, sequtils, parseopt, strformat]
+let x = 1
+assert "foo $# $#" % [$x, "bar"] == "foo 1 bar"
+assert toSeq(1..3) == @[1, 2, 3]
+when not defined(js) or defined(nodejs):
+  assert getCurrentDir().len > 0
+  assert ($now()).startsWith "20"
+```
+
 ## Error Handling
 
 ### Try - Except - Finally {.row-span-2}
@@ -951,24 +1070,21 @@ if d == north:
 ### Enums and `case`
 
 ```nim
-type
-  Direction = enum
-    north, east, south, west
+# with the same Direction enum:
+
+var d = north
 
 case d:
-of north: echo "N"
-of south: echo "S"
-of east:  echo "E"
-of west:  echo "W"
+  of north: echo "N"
+  of south: echo "S"
+  of east:  echo "E"
+  of west:  echo "W"
 ```
 
 ### Enum as an Ordinal
 
 ```nim
-type
-  Direction = enum
-    north, east, south, west
-
+# with the same Direction enum:
 echo ord(north)   # 0
 echo succ(north)  # east
 echo pred(south)  # east
@@ -1015,7 +1131,22 @@ for e in evensUpTo(10):
 
 ## Files & IO
 
-### Read / Write Whole File {.row-span-2}
+### Check Paths and Existence {.row-span-2}
+
+```nim
+import std/os
+
+if fileExists("data.txt"):
+  echo "File exists!"
+
+if dirExists("configs"):
+  echo "Directory exists!"
+
+echo getCurrentDir()
+echo absolutePath("data.txt")
+```
+
+### Read / Write Whole File {.row-span-1}
 
 ```nim
 # Write whole file
@@ -1026,7 +1157,7 @@ let text = readFile("out.txt")
 echo text
 ```
 
-### Manual Open/Close with `defer`
+### Manual Open/Close with `defer` {.row-span-2}
 
 ```nim
 import std/syncio
@@ -1048,19 +1179,46 @@ for line in lines("data.txt"):
   echo line
 ```
 
-### Check Paths and Existence {.row-span-2}
+## Generics
+
+### Generic Types and Procedures {.col-span-3}
 
 ```nim
-import std/os
+type
+  Box[T] = object
+    value: T
 
-if fileExists("data.txt"):
-  echo "File exists!"
+proc wrap[T](x: T): Box[T] =
+  Box[T](value: x)
 
-if dirExists("configs"):
-  echo "Directory exists!"
+let a = wrap(10)        # Box[int]
+let b = wrap("hello")   # Box[string]
 
-echo getCurrentDir()
-echo absolutePath("data.txt")
+echo a.value            # 10
+echo b.value            # hello
 ```
 
 ## Templates and Macros
+
+### Templates
+
+```nim
+# Template = macro-like, expanded at compile time
+template times2(x: untyped): untyped = (x) * 2
+echo times2(21)  # 42
+```
+
+### Macros {.row-span-2} {.col-span-2}
+
+```nim
+import std/macros
+
+macro dbg(expr: untyped): untyped =
+  # prints both the expression and its value
+  result = quote do:
+    echo astToStr(`expr`), " = ", `expr`
+
+let x = 10
+dbg(x * 2)
+# prints: x * 2 = 20
+```
