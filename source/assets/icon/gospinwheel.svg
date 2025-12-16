@@ -1,0 +1,50 @@
+<svg width="512" height="512" viewBox="10 10 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full drop-shadow-lg filter"><style>
+            @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+            @keyframes dash { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+            @keyframes glitch-skew {
+                0% { transform: skew(0deg); }
+                20% { transform: skew(-2deg); }
+                40% { transform: skew(2deg); }
+                60% { transform: skew(0deg); }
+                80% { transform: skew(1deg); }
+                100% { transform: skew(0deg); }
+            }
+            .tech-line { stroke-dasharray: 100; stroke-dashoffset: 100; animation: dash 3s ease-in-out infinite alternate; }
+        </style>
+              <defs>
+                <linearGradient id="grad-red" x1="60" y1="10" x2="103" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF5F7E"/>
+                  <stop offset="100%" stop-color="#D12646"/>
+                </linearGradient>
+                <linearGradient id="grad-orange" x1="60" y1="10" x2="103" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FDBA74"/>
+                  <stop offset="100%" stop-color="#EA580C"/>
+                </linearGradient>
+                <linearGradient id="grad-yellow" x1="60" y1="10" x2="103" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FDE68A"/>
+                  <stop offset="100%" stop-color="#F59E0B"/>
+                </linearGradient>
+                <linearGradient id="grad-green" x1="60" y1="10" x2="103" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#34D399"/>
+                  <stop offset="100%" stop-color="#059669"/>
+                </linearGradient>
+                <linearGradient id="grad-blue" x1="60" y1="10" x2="103" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#60A5FA"/>
+                  <stop offset="100%" stop-color="#2563EB"/>
+                </linearGradient>
+                 <linearGradient id="grad-purple" x1="60" y1="10" x2="103" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#A78BFA"/>
+                  <stop offset="100%" stop-color="#7C3AED"/>
+                </linearGradient>
+                <path id="blade-soft" d="M60 60 L60 10 A50 50 0 0 1 103.3 35 Z"/>
+              </defs>
+              <g>
+                <use href="#blade-soft" fill="url(#grad-red)"/>
+                <use href="#blade-soft" fill="url(#grad-orange)" transform="rotate(60 60 60)"/>
+                <use href="#blade-soft" fill="url(#grad-yellow)" transform="rotate(120 60 60)"/>
+                <use href="#blade-soft" fill="url(#grad-green)" transform="rotate(180 60 60)"/>
+                <use href="#blade-soft" fill="url(#grad-blue)" transform="rotate(240 60 60)"/>
+                <use href="#blade-soft" fill="url(#grad-purple)" transform="rotate(300 60 60)"/>
+              </g>
+            </svg>
