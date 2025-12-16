@@ -97,7 +97,7 @@ $('selector1, selector2 ...selectorn');
 - [:parent](https://api.jquery.com/parent-selector/){data-tooltip="Select all elements that have at least one child node (either an element or text)."}
 - [parent &gt; child](https://api.jquery.com/child-selector/){data-tooltip="Selects all direct child elements specified by child of elements specified by parent."}
 - [ancestor descendant](https://api.jquery.com/descendant-selector/){data-tooltip="Selects all elements that are descendants of a given ancestor."}
-- [prev + next](https://api.jquery.com/next-adjacent-Selector/){data-tooltip="Selects all next elements matching next that are immediately preceded by a sibling prev."}
+- [prev + next](https://api.jquery.com/next-adjacent-selector/){data-tooltip="Selects all next elements matching next that are immediately preceded by a sibling prev."}
 - [prev ~ siblings](https://api.jquery.com/next-siblings-selector/){data-tooltip="Selects all sibling elements that follow after the prev element, have the same parent, and match the filtering siblings selector."}
 
 {.marker-none .cols-3}

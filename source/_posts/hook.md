@@ -360,7 +360,7 @@ x--; // 15
 
 The assignment operators.
 
-### Teh ternary operator
+### The ternary operator
 
 ```js
 let x = 5;

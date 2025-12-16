@@ -81,7 +81,7 @@ $ tmux info
 Reload config
 
 ```shell script
-$ tmux source-file ~/.tmu­x.conf
+$ tmux source-file ~/.tmux.conf
 ```
 
 Show config
@@ -102,9 +102,12 @@ $ tmux show-options -g
 
 ---
 
-For tmux version 3.5a on MacOS 15.3.1 Sequoia 'Copy Mode' functions lil bit differently Below I've written the
-differences | Command | Description | | ------------ | -------------------------- | | `Ctrl + <Space>` | Start selection
-| | `Ctrl + w` | Copy selection |
+For tmux version 3.5a on macOS 15.3.1 Sequoia, "Copy Mode" functions a bit differently:
+
+| Command          | Description     |
+| ---------------- | --------------- |
+| `Ctrl + <Space>` | Start selection |
+| `Ctrl + w`       | Copy selection  |
 
 ---
 
