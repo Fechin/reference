@@ -8,7 +8,7 @@ tags:
   - Streaming
 categories:
   - Web Tools
-intro: A quick reference guide for GoSpinWheel, the modern and fair online random decision maker.
+intro: Quick-reference cheatsheet for GoSpinWheel — a modern random wheel spinner, name picker, and decision maker.
 plugins:
   - copyCode
 ---
@@ -17,12 +17,11 @@ plugins:
 
 ### What is GoSpinWheel?
 
-**[GoSpinWheel](https://gospinwheel.com)** is a free, modern online tool for random selection. It replaces outdated alternatives with a sleek, privacy-focused experience.
+**[GoSpinWheel random wheel spinner](https://gospinwheel.com)** is a free, modern online tool for random selection and decision making. It’s a privacy-focused alternative to older “wheel spinner” sites, with a clean UI made for everyday use.
 
-- **URL**: [gospinwheel.com](https://gospinwheel.com)
-- **Core Use**: Giveaways, classroom pickers, party games, decision making.
-- **Login**: Not required (Local storage).
-- **Cost**: Free.
+- **Core use cases**: Giveaways, classroom name picking, party games, quick decisions.
+- **Login**: Not required (uses local browser storage).
+- **Cost**: Free to use.
 
 ### Unique Features {.col-span-2}
 
@@ -31,6 +30,9 @@ plugins:
 | **Multi-Wheel Sync** | Run up to 6 wheels at once (e.g., one for names, one for prizes).                      |
 | **True Randomness**  | Uses `crypto.getRandomValues()` instead of `Math.random()` for cryptographic fairness. |
 | **Elimination Mode** | Option to temporarily remove a winner from the wheel after they are picked.            |
+| **Share Links**      | Generate a shareable link to publish a wheel and send it to friends.                   |
+| **Auto-Save & Sync** | Auto-saves to Local Storage and keeps your wheel state in sync on the same device.     |
+| **Import / Export**  | Export wheel configurations for backup, then import them later to restore.             |
 | **Streamer Mode**    | Optimized for OBS/Zoom with a clean UI and fullscreen capabilities.                    |
 | **Privacy**          | Data is stored locally in your browser, not on external servers.                       |
 
@@ -52,13 +54,19 @@ plugins:
 - **Themes**: Switch between light/dark, or custom color palettes.
 - **Sound**: Toggle spin sounds and winning fanfares.
 
+### Sharing & Backup
+
+- **Share publicly**: Generate a share link and send it to friends (great for games, raffles, or classroom use).
+- **Local Storage sync**: Changes are auto-saved and stay consistent on the same device/browser.
+- **Export / import**: Save your wheel configuration locally (backup/transfer), then import it back anytime.
+
 ### Randomness Audit
 
 **Fairness Tech**: Uses `crypto.getRandomValues()` (CSPRNG) instead of predictable `Math.random()`.
 
 **Verification**:
 
-- Visit [`/randomness-audit`](https://gospinwheel.com/randomness-audit).
+- Visit the [GoSpinWheel randomness audit tool](https://gospinwheel.com/randomness-audit).
 - Use the **Audit Tool** to run 10,000+ simulations.
 - Verify the deviation is statistically insignificant.
 
