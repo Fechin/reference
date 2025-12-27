@@ -210,6 +210,17 @@ false ?? 'I lose'; //  false
 '' ?? 'Damn it'; //  ''
 ```
 
+#### Optional Chaining ?.
+
+```javascript
+const obj = {
+  name: 'John Doe',
+  age: 8
+};
+
+console.log(obj?.address);
+```
+
 ### else if
 
 ```javascript
@@ -242,6 +253,19 @@ switch (food) {
   default:
     console.log('Enjoy your meal');
 }
+```
+
+### Object Lookup
+
+```javascript
+const food = 'salad';
+
+const foods = {
+  oyster: 'The taste of the sea',
+  pizza: 'A delicious pie'
+};
+
+console.log(foods[food] || 'Enjoy your meal');
 ```
 
 ### == vs ===
@@ -491,10 +515,10 @@ console.log(myArray[1]); // 200
 
 |           | add | remove | start | end |
 | :-------- | :-: | :----: | :---: | :-: |
-| `push`    | ✔  |        |       | ✔  |
-| `pop`     |     |   ✔   |       | ✔  |
-| `unshift` | ✔  |        |  ✔   |     |
-| `shift`   |     |   ✔   |  ✔   |     |
+| `push`    |  ✔  |        |       |  ✔  |
+| `pop`     |     |   ✔    |       |  ✔  |
+| `unshift` |  ✔  |        |   ✔   |     |
+| `shift`   |     |   ✔    |   ✔   |     |
 
 {.show-header}
 
@@ -561,6 +585,15 @@ numbers.concat(newFirstNumber);
 ```
 
 If you want to avoid mutating your original array, you can use concat.
+
+### Destructuring
+
+```javascript
+const [name, age] = ['John Doe', 8];
+
+console.log(name);
+console.log(age);
+```
 
 ## JavaScript Set
 
@@ -750,7 +783,6 @@ for (let index in fruits) {
 // => 1
 // => 2
 
-
 // 2. Print only values
 for (let index in fruits) {
   console.log(fruits[index]);
@@ -758,7 +790,6 @@ for (let index in fruits) {
 // => apple
 // => orange
 // => banana
-
 
 // 3. Print index with value
 for (let index in fruits) {
@@ -1053,6 +1084,20 @@ console.log(myCat.name);
 
 // Assignment invokes the setter
 myCat.name = 'Yankee';
+```
+
+### Destructuring
+
+```javascript
+const obj = {
+  name: 'John Doe',
+  age: 8
+};
+
+const { name, age } = obj;
+
+console.log(name);
+console.log(age);
 ```
 
 ## JavaScript Classes
