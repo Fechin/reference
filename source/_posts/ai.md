@@ -56,6 +56,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/befunky.com) Befunky](https://befunky.com)
 - [![Favicon](https://icon.horse/icon/topazlabs.com/topaz-photo-ai) Topaz photo ai](https://topazlabs.com/topaz-photo-ai)
 - [![Favicon](https://icon.horse/icon/photoroom.com) Photoroom](https://photoroom.com)
+- [![Favicon](https://icon.horse/icon/igly.ai) Igly.ai](https://igly.ai)
 - [![Favicon](https://icon.horse/icon/erase.bg) Erase.bg](https://erase.bg)
 
 {.icon-list .marker-none}
