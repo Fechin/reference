@@ -1220,6 +1220,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/giftastic.ai) Giftastic.ai](https://giftastic.ai)
 - [![Favicon](https://icon.horse/icon/coolgiftideas.io) Cool gift ideas](https://coolgiftideas.io)
 - [![Favicon](https://icon.horse/icon/elfhelp.ai) Elf help](https://elfhelp.ai)
+- [![Favicon](https://icon.horse/icon/bestbuyclues.com) BestBuyClues](https://bestbuyclues.com)
 
 {.icon-list .marker-none}
 
