@@ -227,6 +227,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/languagetool.org) Languagetool](https://languagetool.org)
 - [![Favicon](https://icon.horse/icon/wordtune.com) Wordtune](https://wordtune.com)
 - [![Favicon](https://icon.horse/icon/kickresume.com) Kickresume](https://kickresume.com)
+- [![Favicon](https://icon.horse/icon/withresumeai.com) ResumeAI](https://withresumeai.com/)
 - [![Favicon](https://icon.horse/icon/nichesss.com) Nichess](https://nichesss.com)
 - [![Favicon](https://icon.horse/icon/wordai.com) Wordai](https://wordai.com)
 - [![Favicon](https://icon.horse/icon/corrector.app) Corrector app](https://corrector.app)
