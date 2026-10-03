@@ -59,6 +59,22 @@ Compresses and downloads from a server
 $ ssh root@192.168.1.5 "tar cvzf - ~/source" > output.tgz
 ```
 
+### Public IP
+
+Check this machine's public IP
+
+```shell script
+$ curl myip.dog
+```
+
+Check a remote server's public IP (requires curl on the server)
+
+```shell script
+$ ssh user@server 'curl myip.dog'
+```
+
+More IP tools: [myip.dog](https://myip.dog/)
+
 ### SCP {.row-span-2}
 
 Copies from remote to local

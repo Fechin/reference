@@ -118,6 +118,16 @@ ip route show
 vi /etc/network/interfaces
 ```
 
+Check this machine's public IP
+
+```bash
+# Install curl if needed
+apk add --no-cache curl
+curl myip.dog
+```
+
+More IP tools: [myip.dog](https://myip.dog/)
+
 ### User Management
 
 ```bash

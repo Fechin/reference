@@ -62,6 +62,16 @@ $ netstat -h
 | `netstat -i`  | Show network interfaces               |
 | `netstat -ie` | Show network interfaces extended info |
 
+### Public IP
+
+Check this machine's public IP
+
+```shell script
+$ curl myip.dog
+```
+
+More IP tools: [myip.dog](https://myip.dog/)
+
 ### Routing
 
 | Option        | Example                                 |

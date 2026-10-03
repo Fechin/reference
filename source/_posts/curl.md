@@ -162,6 +162,7 @@ curl -sSL https://get.rvm.io | bash
 
 | command                                                                                     | description                    |
 | :------------------------------------------------------------------------------------------ | :----------------------------- |
+| `curl myip.dog`                                                                             | get this machine's public `IP` |
 | `curl -L -s http://ipecho.net/plain, curl -L -s http://whatismijnip.nl`                     | get my public `IP`             |
 | `curl -u $username:$password http://repo.dennyzhang.com/README.txt`                         | `curl` with credentials        |
 | `curl -v -F key1=value1 -F upload=@localfilename <URL>`                                     | `curl` upload                  |
@@ -169,6 +170,8 @@ curl -sSL https://get.rvm.io | bash
 | `curl -T cryptopp552.zip -u test:test ftp://10.32.99.187/`                                  | curl `ftp` upload              |
 | `curl -u test:test ftp://10.32.99.187/cryptopp552.zip -o cryptopp552.zip`                   | curl `ftp` download            |
 | `curl -v -u admin:admin123 --upload-file package1.zip http://mysever:8081/dir/package1.zip` | upload with credentials `curl` |
+
+More IP tools: [myip.dog](https://myip.dog/)
 
 ### Check website response time {.col-span-4}
 

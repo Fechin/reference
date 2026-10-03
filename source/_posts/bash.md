@@ -861,6 +861,19 @@ if ping -c 1 google.com; then
 fi
 ```
 
+### Public IP
+
+```bash
+# Show this machine's public IP
+curl myip.dog
+
+# Save the IP for use in a script
+public_ip=$(curl -fsS myip.dog)
+printf '%s\n' "$public_ip"
+```
+
+More IP tools: [myip.dog](https://myip.dog/)
+
 ### Special variables {.row-span-2}
 
 | Expression | Description                  |
