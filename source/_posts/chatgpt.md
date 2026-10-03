@@ -908,14 +908,19 @@ Provide key details about French Revolution
 Explain history of Byzantine Empire
 ```
 
-Science Reseearch
+Science Research
 
 ```{.wrap}
 Explain quantum computing in simple terms
 ```
+Verified University Papers
 
 ```{.wrap}
-Explain rocket science like i'm five
+Get me top university research papers with verified direct links
+
+
+```{.wrap}
+Explain rocket science like I'm five
 ```
 
 ### SEO
