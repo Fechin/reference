@@ -153,13 +153,13 @@ $ git branch -av
 Switch to my_branch, and update working directory
 
 ```shell script
-$ git checkout my_branch
+$ git switch my_branch
 ```
 
 Create a new branch called new_branch
 
 ```shell script
-$ git checkout -b new_branch
+$ git switch -c new_branch
 ```
 
 Delete the branch called my_branch
