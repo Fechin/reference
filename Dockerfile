@@ -1,9 +1,9 @@
 # Stage 1: build the application
-FROM node:19 AS build-app
+FROM node:24 AS build-app
 WORKDIR /app
 COPY . .
 RUN npm install -g pnpm
-RUN pnpm install
+RUN pnpm install --allow-build=hexo-util --allow-build=javascript-obfuscator
 RUN pnpm run build
 
 # Stage 2: Build nginx
