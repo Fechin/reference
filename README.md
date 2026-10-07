@@ -87,6 +87,7 @@ Reference provides cheat sheets for the following:
 
 - [ChatGPT](https://cheatsheets.zip/chatgpt.html): This cheat sheet lists out prompts and tips from all over the world
   on how to use ChatGPT effectively
+- [Ollama](https://cheatsheets.zip/ollama.html): A quick reference cheat sheet for running, customizing, and building applications with local AI models using Ollama.
 - [VSCode](https://cheatsheets.zip/vscode.html): This VSCode (Visual Studio Code) quick reference cheat sheet shows its
   keyboard shortcuts and commands.
 - [Mitmproxy](https://cheatsheets.zip/mitmproxy.html): [Mitmproxy](https://mitmproxy.org/) is a free and open source
