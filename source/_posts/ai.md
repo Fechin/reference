@@ -263,6 +263,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/patentpal.com) Patentpal](https://patentpal.com)
 - [![Favicon](https://icon.horse/icon/legalrobot.com) Legal robot](https://legalrobot.com)
 - [![Favicon](https://icon.horse/icon/detangle.ai) Detangle.ai](https://detangle.ai)
+- [![Favicon](https://icon.horse/icon/courtrules.app) Court Rules](https://www.courtrules.app)
 
 {.icon-list .marker-none}
 
