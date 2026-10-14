@@ -1220,13 +1220,11 @@ void main() {
 
 ```c{8}
 #include <stdio.h>
-#include <conio.h>
 
 void main() {
   FILE *fp;
   char c;
 
-  clrscr();
 
   fp = fopen("myfile.txt", "r");
 
@@ -1235,7 +1233,6 @@ void main() {
   }
   fclose(fp);
 
-  getch();
 }
 ```
 
@@ -1243,18 +1240,15 @@ void main() {
 
 ```c {8}
 #include<stdio.h>
-#include<conio.h>
 
 void main() {
   FILE *fp;
 
-  clrscr();
 
   fp = fopen("myfile2.txt","w");
   fputs("hello c programming",fp);
   fclose(fp);
 
-  getch();
 }
 ```
 
@@ -1262,19 +1256,16 @@ void main() {
 
 ```c {10}
 #include<stdio.h>
-#include<conio.h>
 
 void main() {
   FILE *fp;
   char text[300];
 
-  clrscr();
 
   fp = fopen("myfile2.txt", "r");
   printf("%s", fgets(text, 200, fp));
   fclose(fp);
 
-  getch();
 }
 ```
 
@@ -1303,13 +1294,11 @@ Set the file pointer to the given position
 
 ```c{11}
 #include <stdio.h>
-#include <conio.h>
 
 void main() {
   FILE *fp;
   char c;
 
-  clrscr();
 
   fp = fopen("file.txt", "r");
 
@@ -1324,7 +1313,6 @@ void main() {
   }
   fclose(fp);
 
-  getch();
 }
 // output
 // Hello World! Hello World!
@@ -1334,13 +1322,11 @@ void main() {
 
 ```c{11}
 #include <stdio.h>
-#include <conio.h>
 
 void main () {
    FILE *fp;
    int length;
 
-   clrscr();
 
    fp = fopen("file.txt", "r");
 
@@ -1350,7 +1336,6 @@ void main () {
 
    printf("File size: %d bytes", length);
 
-   getch();
 }
 // output
 // file size: 18 bytes
