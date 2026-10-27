@@ -566,6 +566,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/smokingrobot.ai) Smoking robot ai](https://smokingrobot.ai)
 - [![Favicon](https://icon.horse/icon/allthingsai.com) All things ai](https://allthingsai.com)
 - [![Favicon](https://icon.horse/icon/aitogrow.com) Aitogrow](https://aitogrow.com)
+- [![Favicon](https://icon.horse/icon/respawnstack.com) Respawnstack](https://respawnstack.com)
 
 {.icon-list .marker-none}
 
