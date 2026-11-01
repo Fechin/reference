@@ -24,6 +24,24 @@ You can view the most up-to-date cheat sheets live at [https://cheatsheets.zip](
 Reference provides cheat sheets for the following:
 
 <details>
+<summary>AI</summary>
+
+- [AI Directory](https://cheatsheets.zip/ai): A quick reference list for the AI Navigation Directory to discover exciting AI tools.
+- [Alan AI](https://cheatsheets.zip/alan-ai): This cheat sheet covers major script concepts, client API methods, handlers, and tools to create conversational experiences with Alan AI.
+- [Antigravity CLI](https://cheatsheets.zip/antigravity-cli): Antigravity CLI (agy) is an AI-first terminal development assistant and agentic coding CLI.
+- [ChatGPT](https://cheatsheets.zip/chatgpt): This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively.
+- [Claude Code](https://cheatsheets.zip/claude-code): An agentic AI coding tool by Anthropic that reads your codebase, edits files, runs commands, and integrates with development tools.
+- [Codex CLI](https://cheatsheets.zip/codex-cli): An open-source AI coding agent that reads, edits, and runs code directly in your terminal.
+- [Cursor CLI](https://cheatsheets.zip/cursor-cli): The terminal interface for Cursor's AI coding agent to run agentic tasks, scripts, and CI pipelines from the command line.
+- [Gemini CLI](https://cheatsheets.zip/gemini-cli): Brings Google Gemini models directly into your terminal for code understanding, task automation, and workflow building.
+- [Gemma 4](https://cheatsheets.zip/gemma4): Google DeepMind's open-weights multimodal LLM family with frontier intelligence across four sizes, from mobile-edge to server-grade deployment.
+- [Grok CLI](https://cheatsheets.zip/grok-cli): A conversational AI terminal tool powered by xAI's Grok models with file operations, code analysis, Plan Mode, and MCP support.
+- [OpenClaw](https://cheatsheets.zip/openclaw): A self-hosted AI gateway that bridges WhatsApp, Telegram, Discord, iMessage, and more to AI coding agents.
+- [OpenCode](https://cheatsheets.zip/opencode): An open-source AI coding agent with a TUI, CLI, and desktop app supporting any LLM provider, plugins, and MCP.
+
+</details>
+
+<details>
 <summary>Programming</summary>
 
 - [Bash](https://cheatsheets.zip/bash.html): This is a quick reference cheat sheet to getting started with Linux bash
