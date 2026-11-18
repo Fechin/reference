@@ -87,3 +87,4 @@ db.json
 .eslintcache
 .stylelintcache
 .prettierignore
+.seo-cache/
