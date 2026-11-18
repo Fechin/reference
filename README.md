@@ -35,10 +35,15 @@ Reference provides cheat sheets for the following:
   syntax, properties, units and other useful bits of information.
 - [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods,
   and more. A complete quick reference for beginners.
+- [Django](https://cheatsheets.zip/django): A quick reference cheat sheet for the Django web framework.
 - [Docker](https://cheatsheets.zip/docker.html): This is a quick reference cheat sheet for
   [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
+- [EJS](https://cheatsheets.zip/ejs): EJS (Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.
 - [ES6](https://cheatsheets.zip/es6.html): A quick reference cheat sheet of what’s new in JavaScript for ES2015, ES2016,
   ES2017, ES2018 and beyond
+- [Express](https://cheatsheets.zip/express): A quick reference cheatsheet for Express, a flexible and streamlined web framework for Node.js.
+- [FastAPI](https://cheatsheets.zip/fastapi): A concise cheatsheet for FastAPI, a fast and modern web framework for building APIs with Python.
+- [Flask](https://cheatsheets.zip/flask): A concise cheatsheet for Flask, a lightweight WSGI web application framework for Python.
 - [Go](https://cheatsheets.zip/go.html): This cheat sheet provided basic syntax and methods to help you using
   [Go](https://go.dev/).
 - [GraphQL](https://cheatsheets.zip/graphql.html): This quick reference cheat sheet provides a brief overview of
@@ -47,6 +52,7 @@ Reference provides cheat sheets for the following:
   reference sheet for the Hook programming language.
 - [HTML](https://cheatsheets.zip/html.html): This HTML quick reference cheat sheet lists the common HTML and HTML5 tags
   in readable layout.
+- [HTMX](https://cheatsheets.zip/htmx): A modern, minimal JavaScript library that allows you to create dynamic web interfaces using HTML attributes.
 - [INI](https://cheatsheets.zip/ini.html): This is a quick reference cheat sheet for understanding and writing
   INI-format configuration files.
 - [Java](https://cheatsheets.zip/java.html): This cheat sheet is a crash course for Java beginners and help review the
@@ -55,6 +61,7 @@ Reference provides cheat sheets for the following:
   functions, methods, and more. A complete quick reference for beginners.
 - [jQuery](https://cheatsheets.zip/jquery.html): This [jQuery](https://jquery.com/) cheat sheet is a great reference for
   both beginners and experienced developers.
+- [Kotlin](https://cheatsheets.zip/kotlin): A quick reference cheatsheet for Kotlin that includes usage, examples, and more.
 - [Kubernetes](https://cheatsheets.zip/kubernetes.html): This page contains a list of commonly used kubectl commands and
   flags.
 - [LaTeX](https://cheatsheets.zip/latex.html): This cheat sheet summarizes a reference list of
@@ -63,20 +70,32 @@ Reference provides cheat sheets for the following:
 - [Laravel](https://cheatsheets.zip/laravel.html): [Laravel](https://laravel.com/docs/8.x/) is an expressive and
   progressive web application framework for PHP. This cheat sheet provides a reference for common commands and features
   for Laravel 8.
+- [Lua](https://cheatsheets.zip/lua): The [Lua](https://www.lua.org/) cheat sheet is a one-page reference sheet for the Lua 5.4 programming language.
 - [MATLAB](https://cheatsheets.zip/matlab.html): This quick reference cheat sheet provides an example introduction to
   using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly
 - [Markdown](https://cheatsheets.zip/markdown.html): This is a quick reference cheat sheet to the Markdown syntax.
+- [Nim](https://cheatsheets.zip/nim): The Nim quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
+- [Nix](https://cheatsheets.zip/nix): The Nix quick reference cheat sheet that aims at providing help on writing basic nix code.
+- [OCaml](https://cheatsheets.zip/ocaml): The [OCaml](https://www.ocaml.org/) cheat sheet is a one-page reference sheet for the OCaml programming language.
+- [Perl](https://cheatsheets.zip/perl): The perl quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
 - [PHP](https://cheatsheets.zip/php.html): This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference
   for quickly looking up the correct syntax for the code you use most frequently.
 - [Python](https://cheatsheets.zip/python.html): The [Python](https://www.python.org/) cheat sheet is a one-page
   reference sheet for the Python 3 programming language.
+- [React](https://cheatsheets.zip/react): A React cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+- [Ruby](https://cheatsheets.zip/ruby): The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.
 - [Rust](https://cheatsheets.zip/rust.html): The Rust quick reference cheat sheet that aims at providing help on writing
   basic syntax and methods.
 - [Sass](https://cheatsheets.zip/sass.html): This is a quick reference cheat sheet that lists the most useful features
   of [SASS](https://sass-lang.com).
+- [Svelte](https://cheatsheets.zip/svelte): A Svelte cheat sheet with the most important concepts, functions, reactivity, and more. A complete quick reference for beginners.
+- [Swift](https://cheatsheets.zip/swift): This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.
+- [Symfony](https://cheatsheets.zip/symfony): This Symfony Cheat Sheet is a reference of main symfony basics that you can use or need.
 - [TOML](https://cheatsheets.zip/toml.html): This is a quick reference cheat sheet to the TOML format configuration file
   syntax.
+- [TypeScript](https://cheatsheets.zip/typescript): A TypeScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
 - [VHDL](https://cheatsheets.zip/vhdl.html): VHDL (VHSIC Hardware Description Language) cheat sheet - A comprehensive reference for digital hardware design and simulation.
+- [Vue](https://cheatsheets.zip/vue): A Vue 3 cheat sheet with the most important concepts, reactivity, component system, routing, and more.
 - [YAML](https://cheatsheets.zip/yaml.html): This is a quick reference cheat sheet for understanding and writing YAML
   format configuration files.
 
@@ -136,22 +155,31 @@ Reference provides cheat sheets for the following:
 - [Netcat](https://cheatsheets.zip/nc.html): This cheat sheet provides various for using netcat on both Linux and Unix.
 - [Taskset](https://cheatsheets.zip/taskset): This quick reference cheat sheet for tasket command.
 - [GnuPG](https://cheatsheets.zip/gnupg): A cheatsheet for GnuPG, the encryption and signing software.
+- [Nginx](https://cheatsheets.zip/nginx): A quick reference cheat sheet for Nginx web server configuration, commands, and common setups.
+- [Nmap](https://cheatsheets.zip/nmap): The [Nmap](https://nmap.org/) cheat sheet is a one-page reference sheet for the famous Network Mapper tool.
+- [OpenSSL](https://cheatsheets.zip/openssl): This is a reference of OpenSSL commands to generate and interact with digital certificates and keys.
+- [Systemd](https://cheatsheets.zip/systemd): Systemd is the init system and service manager used by most modern Linux distributions.
+- [Telnet](https://cheatsheets.zip/telnet): This cheat sheet is intended to be a quick reminder for the main concepts involved in using the telnet command.
 </details>
 
 <details>
 <summary>Python</summary>
 
+- [Matplotlib](https://cheatsheets.zip/matplotlib): Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 - [NumPy](https://cheatsheets.zip/numpy.html): [NumPy](https://numpy.org/) is the fundamental package for scientific
   computing with Python. This cheat sheet is a quick reference for NumPy beginners.
 - [Pandas](https://cheatsheets.zip/pandas.html): [Pandas](https://pandas.pydata.org/) is a powerful data analysis and
   manipulation library for Python. This quick reference cheat sheet provides an overview of essential Pandas functions,
   methods, and DataFrame operations.
+- [PyTorch](https://cheatsheets.zip/pytorch): This is a quick reference cheat sheet for PyTorch, an open-source machine learning framework.
+- [TensorFlow](https://cheatsheets.zip/tensorflow): This is a quick reference cheat sheet for TensorFlow, an open-source platform for machine learning.
 
 </details>
 
 <details>
 <summary>Database</summary>
 
+- [MongoDB](https://cheatsheets.zip/mongodb): The MongoDB cheat sheet provides you with the most commonly used MongoDB commands and queries for your reference.
 - [MySQL](https://cheatsheets.zip/mysql.html): The SQL cheat sheet provides you with the most commonly used SQL
   statements for your reference.
 - [Neo4j](https://cheatsheets.zip/neo4j.html): A Neo4j cheat sheet with getting started resources and information on how
