@@ -134,6 +134,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/assemblyai.com) Assemblyai](https://assemblyai.com)
 - [![Favicon](https://icon.horse/icon/httpie.io) Httpie ai](https://httpie.io)
 - [![Favicon](https://icon.horse/icon/runpod.io) Runpod](https://runpod.io)
+- [![Favicon](https://icon.horse/icon/bestllmfor.com) BestLLMFor quantization calculator](https://bestllmfor.com/recommandeur-quantification/)
 
 {.icon-list .marker-none}
 
