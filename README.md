@@ -170,6 +170,7 @@ Reference provides cheat sheets for the following:
   found in Adobe Photoshop
 - [Apex Legends](https://cheatsheets.zip/apex-legends.html): A visual cheat-sheet for the 27 default keyboard shortcuts
   found in Apex Legends
+- [Canva](https://cheatsheets.zip/canva.html): A visual cheat-sheet for the keyboard shortcuts found in Canva
 - [Figma](https://cheatsheets.zip/figma.html): A visual cheat-sheet for the 119 keyboard shortcuts found in Figma
 - [Microsoft Teams](https://cheatsheets.zip/microsoft-teams.html): A visual cheat-sheet for the 38 keyboard shortcuts
   found in Microsoft Teams
