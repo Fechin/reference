@@ -166,7 +166,7 @@ To include a template, needs a file name option, paths are relative
 <!-- prettier-ignore -->
 ```html
 <ul>
-  <% for(i=0; i < users.length; i++) { %>
+  <% for (let i = 0; i < users.length; i++) { %>
     <li><%= users[i].username %></li>
   <% } %>
 </ul>
