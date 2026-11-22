@@ -134,6 +134,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/assemblyai.com) Assemblyai](https://assemblyai.com)
 - [![Favicon](https://icon.horse/icon/httpie.io) Httpie ai](https://httpie.io)
 - [![Favicon](https://icon.horse/icon/runpod.io) Runpod](https://runpod.io)
+- [![Favicon](https://icon.horse/icon/vostride.com) agent-qa](https://vostride.com "Web/mobile QA with advanced memory and self-improving tests")
 
 {.icon-list .marker-none}
 
