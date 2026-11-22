@@ -252,6 +252,7 @@ intro:
 - [![Favicon](https://icon.horse/icon/movio.la) Movio](https://movio.la)
 - [![Favicon](https://icon.horse/icon/hourone.ai) Hourone](https://hourone.ai)
 - [![Favicon](https://icon.horse/icon/colossyan.com) Colossyan](https://colossyan.com)
+- [![Favicon](https://icon.horse/icon/nereo.io) Nereo](https://www.nereo.io)
 
 {.icon-list .marker-none}
 
