@@ -31,6 +31,8 @@ Reference provides cheat sheets for the following:
 - [C](https://cheatsheets.zip/c.html): C quick reference cheat sheet that provides basic syntax and methods.
 - [C++](https://cheatsheets.zip/cpp.html): C++ quick reference cheat sheet that provides basic syntax and methods.
 - [C#](https://cheatsheets.zip/cs.html): C# quick reference cheat sheet that provides basic syntax and methods.
+- [Codex CLI](https://cheatsheets.zip/codex.html): A quick reference cheat sheet for Codex CLI keyboard shortcuts,
+  slash commands, and terminal workflows.
 - [CSS 3](https://cheatsheets.zip/css.html): This is a quick reference cheat sheet for CSS goodness, listing selector
   syntax, properties, units and other useful bits of information.
 - [Dart](https://cheatsheets.zip/dart.html): A Dart cheat sheet with the most important concepts, functions, methods,
